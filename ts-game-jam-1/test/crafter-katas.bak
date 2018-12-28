@@ -1,0 +1,167 @@
+#lang scribble/manual
+
+@title{Crafter Katas - @italic{(Day 6)}
+
+@(require 2htdp/image)
+@(require ts-game-jam-1)
+
+@(define (meta-kata)     (circle 10 'outline 'black))
+@(define (crafter-kata)   (circle 10 'solid   'blue))
+
+@section{Paper Crafter Kata}
+
+To earn this kata @(meta-kata) they need to:
+
+@italic{Recite the amount of points they get from Crafters in their game, in less than 1 minute.}
+
+@itemlist[@item{Crafter points:   
+           @itemlist[@item{Each Crafter                                @bold{1 point, max 5}}
+                     @item{Any Crafter within 25 minutes
+                                 @italic{(Sprint Bonus)                @bold{5 points}}}
+                     @item{For each crafting recipe                    @bold{1 point, max 15}}
+                     @item{For each crafting recipe matching theme     @bold{1 point, max 15}}]}]
+
+@; ------ CRAFTER BRONZE
+
+@section{Bronze Crafter Kata}
+
+To earn this kata @(crafter-kata) they need to:
+
+Within five minutes, translate an English sentence of this type:
+
+@italic{Make a game that has an avatar, a coin, a food item, an NPC, and a crafter.}
+
+To code of this type:
+
+@codeblock{
+ #lang ts-game-jam-1
+
+ (survival-game
+  #:avatar       (custom-avatar)
+  #:coin-list    (list (custom-coin))
+  #:food-list    (list (custom-food #:amount-in-world 10))
+  #:npc-list     (list (custom-npc))
+  #:crafter-list (list (custom-crafter)))}
+
+@; ------ CRAFTER SILVER
+
+@section{Silver Crafter Kata}
+
+To earn this kata @(crafter-kata) they need to:
+
+Within ten minutes, translate an English sentence of this type:
+
+@italic{Make a game that has an avatar, a coin, an NPC, a crafter, a carrot, and
+ new food item that has a custom sprite, name, healing power, and 1 in the world.}
+
+To code of this type:
+
+@codeblock{
+ #lang ts-game-jam-1
+
+ (define (carrot-cake)
+  (custom-food #:sprite          (rectangle 40 20 "solid" "brown")
+               #:name            "Carrot Cake"
+               #:heals-by        25
+               #:amount-in-world 1))
+
+ (survival-game
+  #:avatar       (custom-avatar)
+  #:coin-list    (list (custom-coin))
+  #:food-list    (list (custom-food #:amount-in-world 10)
+                       (carrot-cake))
+  #:npc-list     (list (custom-npc))
+  #:crafter-list (list (custom-crafter)))}
+
+@; ------ CRAFTER GOLD
+
+@section{Gold Crafter Kata}
+
+To earn this kata @(crafter-kata) they need to:
+
+Within fifteen minutes, translate an English sentence of this type:
+
+@italic{Make a game that has an avatar, a coin, an NPC, a crafter, a carrot, and
+ new food item that has: a custom sprite, name, and healing power, a custom recipe,
+ and a crafter that uses this recipe.}
+
+To code of this type:
+
+@codeblock{
+#lang ts-game-jam-1
+
+(define (carrot-cake)
+  (custom-food #:sprite   (rectangle 40 20 "solid" "brown")
+               #:name     "Carrot Cake"
+               #:heals-by 25))
+
+(define carrot-cake-recipe
+  (recipe #:product     (carrot-cake)
+          #:build-time  5
+          #:ingredients (list "Carrot")
+         ))
+
+(define (my-oven)
+  (custom-crafter #:menu (crafting-menu-set! #:recipes carrot-cake-recipe))) 
+
+(survival-game
+ #:avatar       (custom-avatar)
+ #:coin-list    (list (custom-coin))
+ #:food-list    (list (custom-food #:amount-in-world 10)
+                      (carrot-cake))
+ #:npc-list     (list (custom-npc))
+ #:crafter-list (list (my-oven)))}
+
+@; ------ CRAFTER PLATINUM
+
+@section{Platinum Crafter Kata}
+
+@margin-note*{Teaching Tip: Remember, there is no number of "required" katas by day.}
+
+To earn this kata @(crafter-kata) they need to:
+
+Within fifteen minutes, translate an English sentence of this type:
+
+@italic{Make a game that has an avatar, a coin, an NPC, two food items with their two
+ recipes and a custom crafter that uses these recipes.}
+
+To code of this type:
+
+@codeblock{
+#lang ts-game-jam-1
+
+(define (carrot-cake)
+  (custom-food #:sprite   (rectangle 40 20 "solid" "brown")
+               #:name     "Carrot Cake"
+               #:heals-by 25))
+
+(define carrot-cake-recipe
+  (recipe #:product     (carrot-cake)
+          #:build-time  5
+          #:ingredients (list "Carrot")
+         ))
+
+(define (carrot-cupcake)
+  (custom-food #:sprite   (square 10 "solid" "brown")
+               #:name     "Carrot Cupcake"
+               #:heals-by 15))
+
+(define carrot-cupcake-recipe
+  (recipe #:product     (carrot-cupcake)
+          #:build-time  10
+          #:ingredients (list "Carrot Cake")
+         ))
+
+(define (my-oven)
+  (custom-crafter #:menu (crafting-menu-set! #:recipes carrot-cake-recipe
+                                                       carrot-cupcake-recipe))) 
+
+(survival-game
+ #:avatar       (custom-avatar)
+ #:coin-list    (list (custom-coin))
+ #:food-list    (list (custom-food #:amount-in-world 10)
+                      (carrot-cake))
+ #:npc-list     (list (custom-npc))
+ #:crafter-list (list (my-oven)))}
+
+

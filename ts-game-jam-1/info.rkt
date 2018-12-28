@@ -4,5 +4,5 @@
 
 (define deps '(
   "https://github.com/thoughtstem/ts-kata-util.git"
-  "battle-arena"))
+  "survival"))
 
