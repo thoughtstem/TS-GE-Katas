@@ -1,0 +1,13 @@
+#lang info
+(define collection "ts-kata-util")
+(define deps '("base" "lang-file"))
+(define build-deps '("scribble-lib" "racket-doc" "rackunit-lib"))
+(define scribblings '(("scribblings/ts-kata-util.scrbl" ())))
+(define pkg-desc "Description Here")
+(define version "0.0")
+(define pkg-authors '(thoughtstem))
+
+(define raco-commands
+  '(("build-examples" ts-kata-util/raco-build-katas "runs kata-definition files, runs tests, builds documentation" 100)
+
+))
