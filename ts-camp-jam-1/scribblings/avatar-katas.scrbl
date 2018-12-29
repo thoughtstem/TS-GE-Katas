@@ -7,6 +7,9 @@
 @;====== AVATAR KATAS =======
 @title{Avatar Katas}
 
+Depending on the day; Avatar Katas can be a great "starter" Kata set to run through with @bold{all teams}
+ before moving on to more challenging katas.
+
 @;----- Air AVATAR ------
 
 @camp-jam-kata[#:document-level section
@@ -44,15 +47,20 @@
  Students should be able to identify each of the following as either
  avatars or players:
 
- @image{scribblings/imgs/avatars/tomato-dance.gif}
+ @(image "scribblings/imgs/avatars/tomato-dance.gif"
+         #:scale .5)
 
- @image{scribblings/imgs/players/players2.jpg} 
+ @(image "scribblings/imgs/players/players2.jpg"
+         #:scale .02) 
 
- @image{scribblings/imgs/avatars/avatar-dance.gif}
+ @(image "scribblings/imgs/avatars/avatar-dance.gif"
+         #:scale .8) 
 
- @image{scribblings/imgs/players/players.jpg} 
+ @(image "scribblings/imgs/players/players.jpg"
+         #:scale .5) 
 
- @image{scribblings/imgs/avatars/bear-dance.gif} 
+ @(image "scribblings/imgs/avatars/bear-dance.gif"
+         #:scale .6) 
  }
 
 
@@ -70,10 +78,10 @@
                #:time-limit 5
                #:dollars 1
                #:health-bar COLOR-BAR
-               #:review/introduce "meaning of #lang battle-arena, battle-arena-game, avatar, keyword."
+               #:review/introduce "meaning of #lang ts-camp-jam-1, battle-arena-game, avatar, keyword."
                #:extra-dollars-for "helping teammates."]{
  @(student-should-translate #:english "Make a game with an avatar."
-                            #:lang    'battle-arena
+                            #:lang 'battle-arena
                             #:code 'avatar-1)
 }
 
@@ -92,7 +100,7 @@
   2 numbers), ellipse (needs 2 numbers).}
   
  @student-should-translate[#:english "Make a game with a blue circle avatar."
-                           #:lang    'battle-arena
+                           #:lang 'battle-arena
                            #:code 'avatar-2]
 }
 
@@ -105,13 +113,12 @@
                #:time-limit 10
                #:dollars 5
                #:health-bar ADD-HEART
-               #:review/introduce "(my-avatar) can be renamed to anything, draw simple -- nothing is saved for later."
-               #:extra-dollars-for "helping teammates, creativity."]{
+               #:review/introduce "(my-avatar) can be renamed to anything, the (random-character-sprite) will choose a random sprite each time you run the game."
+               #:extra-dollars-for "helping teammates."]{
                                                                                             
- @side-note["Tip"]{Give students the piskel cheat sheet.}
 
- @(student-should-translate #:english "Make a game with a simple custom avatar created in Piskel."
-                            #:lang    'battle-arena
+ @(student-should-translate #:english "Make a game with a random-character-sprite as your avatar."
+                            #:lang 'battle-arena
                             #:code 'avatar-3)
 }
 
@@ -122,11 +129,26 @@
                #:difficulty    'platinum
                #:title "Avatar"
                #:time-limit 10
-               #:dollars 1
+               #:dollars 7
                #:health-bar ADD-HEART
-               #:review/introduce "what do new keywords mean? what does sheet->sprite mean?"
-               #:extra-dollars-for "helping teammates, creativity."]{
- @(student-should-translate #:english "Make a game with a custom avatar that uses a sprite sheet created in Piskel and adds additional customizations to (custom-avatar) including key-mode and mouse-aim."
-                            #:lang    'battle-arena
+               #:review/introduce "interactions window, sheet->sprite, columns (number of images in the row)"
+               #:extra-dollars-for "helping teammates."]{
+
+ @side-note["Tip"]{The interactions window is the right side of DrRacket where all the code spits
+ out when you run a program.}
+                                                                     
+ Students should type the following code into the interactions window:
+
+ @codeblock{(random-character-row)}
+
+ and hit enter to run. Students then can use @bold{ctrl + up arrow} and @bold{enter} to rerun this line
+ multiple times.
+
+ Once a student finds an avatar they want to use, @bold{highlight the image} and @bold{copy} using ctrl + c
+ or right-click, copy. Paste the image (represented by STUDENT_IMAGE_HERE) into the code as seen below.
+                                                                     
+ @(student-should-translate #:english "Make a game with a defined custom avatar that has a
+                                       sprite you chose from the random-character-row list."
+                            #:lang 'battle-arena
                             #:code 'avatar-4)
 }

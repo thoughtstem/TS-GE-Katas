@@ -7,6 +7,9 @@
 @;====== ENEMY KATAS ======
 @title{Enemy Katas}
 
+Depending on the day; Enemy Katas can be a great "starter" Kata set to run through with @bold{all teams}
+ before moving on to more challenging katas.
+
 
 @camp-jam-kata[#:document-level section
                #:difficulty    'air
@@ -37,10 +40,10 @@
                #:time-limit 5
                #:dollars 1
                #:health-bar COLOR-BAR
-               #:review/introduce "meaning of #lang battle-arena, battle-arena-game, keyword, enemy."
+               #:review/introduce "meaning of #lang ts-camp-jam-1, battle-arena-game, keyword, enemy."
                #:extra-dollars-for "helping teammates."]{
  @(student-should-translate #:english "Make a game with an enemy."
-                            #:lang    'battle-arena
+                            #:lang 'battle-arena
                             #:code 'enemy-1)
 }
 
@@ -59,7 +62,7 @@
  @side-note["Hint"]{AI levels are: 'easy, 'medium, 'hard.}
   
  @(student-should-translate #:english "Make a game with a defined and customized enemy."
-                            #:lang    'battle-arena
+                            #:lang 'battle-arena
                             #:code 'enemy-2)
 }
 
@@ -72,12 +75,14 @@
                #:time-limit 10
                #:dollars 5
                #:health-bar ADD-HEART
-               #:review/introduce "draw simple -- nothing is saved for later."
-               #:extra-dollars-for "helping teammates, creativity."]{
- @side-note["Hint"]{Use the piskel cheat sheet!}
+               #:review/introduce "shapes, the requirements for building a shape."
+               #:extra-dollars-for "helping teammates."]{
+                                                         
+ @side-note["Additional shapes"]{triangle, square, star, rectangle (needs
+  2 numbers), ellipse (needs 2 numbers).}                                                        
                                                                                  
- @(student-should-translate #:english "Make a game with an enemy using a custom image."
-                            #:lang    'battle-arena
+ @(student-should-translate #:english "Make a game with an enemy that is one of the basic shapes."
+                            #:lang 'battle-arena
                             #:code 'enemy-3)
 }
 
@@ -90,9 +95,25 @@
                #:time-limit 10
                #:dollars 1
                #:health-bar ADD-HEART
-               #:review/introduce "what does sheet->sprite mean?"
-               #:extra-dollars-for "helping teammates, creativity."]{
- @(student-should-translate #:english "Make a game with a custom enemy that uses a sprite sheet created in Piskel."
-                            #:lang    'battle-arena
+               #:review/introduce "interactions window, sheet->sprite, columns (number of images in the row)"
+               #:extra-dollars-for "helping teammates."]{
+
+ @side-note["Tip"]{The interactions window is the right side of DrRacket where all the code spits
+ out when you run a program.}
+                                                                     
+ Students should type the following code into the interactions window:
+
+ @codeblock{(random-character-row)}
+
+ and hit enter to run. Students then can use @bold{ctrl + up arrow} and @bold{enter} to rerun this line
+ multiple times.
+
+ Once a student finds a sprite they want to use for their enemy, @bold{highlight the image} and @bold{copy}
+ using ctrl + c or right-click, copy. Paste the image (represented by STUDENT_IMAGE_HERE)
+ into the code as seen below.
+                                                                     
+ @(student-should-translate #:english "Make a game with a defined custom enemy that has a
+                                       sprite you chose from the random-character-row list."
+                            #:lang 'battle-arena
                             #:code 'enemy-4)
 }

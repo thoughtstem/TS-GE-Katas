@@ -2,14 +2,14 @@
 
 (require raco/command-name)
 
-(define kata-collection-name
+(define ts-language-name
  (last (explode-path (current-directory)))
  #;(command-line
    #:program (short-program+command-name)
    #:args (kata-collection-name) 
    kata-collection-name))
 
-(displayln (~a "Building " kata-collection-name))
+(displayln (~a "Building " ts-language-name))
 
 (displayln "Deleting kata compilation data")
 
@@ -18,8 +18,8 @@
 
 (displayln "Testing Katas and building API docs")
 
-(system (~a "raco test -p " kata-collection-name " && "
-            "raco setup " kata-collection-name))
+(system (~a "raco test -p " ts-language-name " && "
+            "raco setup " ts-language-name))
 
 (displayln "Done")
 

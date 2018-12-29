@@ -15,8 +15,13 @@
          2htdp/image)
 
 (provide define-kata-code
-         (rename-out [define-kata-code define-example-code])
+         (rename-out [define-kata-code define-example-code])  ;This is technically correct.  Examples are in TS-Languages, Katas are in TS-Kata-Collections
+
+         
          show-kata-code
+         (rename-out [show-kata-code show-example-code]) ;This is technically correct.  Examples are in TS-Languages, Katas are in TS-Kata-Collections
+
+         
          kata
          side-note
          student-should-translate
@@ -96,7 +101,8 @@
   (local-require pkg/lib)
   (define folder (pkg-directory (~a pkg-name)))
   
-  (define kata-file (build-path folder "examples" (~a kata-name ".rkt")))
+  (define kata-file
+    (build-path folder "examples" "compiled-kata-data" (~a kata-name ".rkt")))
 
   (typeset-code #:keep-lang-line? #t (kata-file->code-string kata-file)))
 
