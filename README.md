@@ -31,7 +31,7 @@ example
 # Development
 
 Adhere to our `dev/master` workflow.  Pushing to `master` makes the Kata Collections
-live to the world.
+live to the world at http://katas.thoughtstem.com.
 
 # TODO
 
