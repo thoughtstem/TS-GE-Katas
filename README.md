@@ -28,6 +28,11 @@ example
 @(show-kata-code 'battle-arena 'avatar-1) 
 ```
 
+# Development
+
+Adhere to our `dev/master` workflow.  Pushing to `master` makes the Kata Collections
+live to the world.
+
 # TODO
 
 Scribble docs for ts-kata-util
