@@ -1,7 +1,5 @@
 # TS-Kata-Collections
 
--Test-
-
 These kata collections form the basis for various educational offerings.
 Each teaches a programming language in a gamified way.
 
