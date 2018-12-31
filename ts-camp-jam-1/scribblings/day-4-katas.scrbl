@@ -20,7 +20,7 @@
                #:review/introduce "meaning of #lang ts-camp-jam-1, battle-arena-game, keyword, list, dart."
                #:extra-dollars-for "helping teammates."]{
 
- @side-note["Tip"]{In addition to @italic{sword} you can use any of these: paint, spear, lava-builer, spike-mine-builder, or spear-tower-builder.}
+ @side-note["Tip"]{In addition to @italic{sword} you can use any of these: paint, spear, lava-builder, spike-mine-builder, or spear-tower-builder.}
   
  @(student-should-translate #:english "Make a game that has a an enemy and give it a custom weapon."
                             #:lang 'battle-arena
