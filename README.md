@@ -16,10 +16,15 @@ This can be run in any TS-Language repo.  It runs tests and compiles out data
 that can be used in TS-Kata-Definitions.  
 
 ```
-raco build-examples
+raco build-lang-examples
 ```
 
-# Documenting Katas
+Examples are always stored in a folder called `examples`.  These examples must all
+be defined with the syntactic form `(define-example-code ...)`.  A file that does this
+is called an `example file`.  See below for how these example files are used in 
+the documentation of kata collections.
+
+# Documenting Kata Collections
 
 In any scribble doc in a TS-Kata-Collection, this would display the code for that
 example
@@ -27,6 +32,24 @@ example
 ```
 @(show-kata-code 'battle-arena 'avatar-1) 
 ```
+
+Then, to build the docs, use:
+
+```
+raco build-kata-docs
+```
+
+This can be run in any TS-Kata-Collection repo.  Note that this will insert code from
+example any files referenced with `(show-kata-code ...)`.  
+
+(One potential gotcha:
+The code that is inserted into the Scribble doc is not pulled directly from the
+example file, but rather from a file that is produced whenever the example file
+is run in DrRacket or by `raco build-lang-examples`.  So if you're noticing that
+your example code isn't getting placed into your docs, you probably need to re-run
+your example code file.  This is to ensure that you're only ever documenting code
+that really does run.  In the future, we could probably make this process smoother
+without sacrificing this safety guarantee.)
 
 # Development
 

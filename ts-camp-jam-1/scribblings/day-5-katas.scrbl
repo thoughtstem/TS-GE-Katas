@@ -7,7 +7,6 @@
 @;============== DAY 5 ================
 @title{Offensive Base Katas}
 
-@include-section["avatar-katas.scrbl"]
 
 @section{Rocket Tower}
 
@@ -31,14 +30,12 @@
                #:title "Rocket Tower"
                #:time-limit 5
                #:dollars 3
-               #:health-bar ADD-STAR
-               #:review/introduce "..."
-               #:extra-dollars-for "helping teammates."]{
+               #:health-bar ADD-STAR]{
 
 
- @;@(student-should-translate #:english "Make a game that has a custom weapon that deploys a lava pit with custom damage and size."
-                            @;#:lang    'battle-arena
-                            @;#:code 'lava-2)
+ @(student-should-translate #:english "Make a game that has a custom weapon that deploys a slow shooting, homing Rocket Tower."
+                            #:lang    'battle-arena
+                            #:code    'rocket-tower-2) 
 }
 
 @camp-jam-kata[#:document-level subsection
@@ -46,13 +43,11 @@
                #:title "Rocket Tower"
                #:time-limit 5
                #:dollars 5
-               #:health-bar ADD-HEART
-               #:review/introduce "..."
-               #:extra-dollars-for "helping teammates, creativity."]{
+               #:health-bar ADD-HEART]{
   
- @;@(student-should-translate #:english "Make a game that has a custom weapon that deploys a lava pit with custom damage, size, sprite, and range."
-                            @;#:lang    'battle-arena
-                            @;#:code 'lava-3)
+ @(student-should-translate #:english "Make a game that has a custom weapon that deploys a slow shooting, homing Rocket Tower that shoots a custom rocket."
+                            #:lang    'battle-arena
+                            #:code    'rocket-tower-3) 
 }
 
 
@@ -66,9 +61,7 @@
                #:title "Repeater Tower"
                #:time-limit 5
                #:dollars 1
-               #:health-bar COLOR-BAR
-               #:review/introduce "meaning of #lang battle-arena, battle-arena-game, keyword, icon, dart, list."
-               #:extra-dollars-for "helping teammates."]{
+               #:health-bar COLOR-BAR]{
   
  @(student-should-translate #:english "Make a game that has a weapon that deploys a Repeater Tower."
                             #:lang    'battle-arena
@@ -82,13 +75,11 @@
                #:title "Repeater Tower"
                #:time-limit 5
                #:dollars 3
-               #:health-bar ADD-STAR
-               #:review/introduce "..."
-               #:extra-dollars-for "helping teammates."]{
+               #:health-bar ADD-STAR]{
   
- @;@(student-should-translate #:english "Make a game that has a weapon that deploys a spike mine with a large range and speed"
-                            @;#:lang    'battle-arena
-                            @;#:code 'spike-mine-2)
+ @(student-should-translate #:english "Make a game that has a weapon that deploys a Repeater Tower with slow bullets but a fast fire rate."
+                            #:lang    'battle-arena
+                            #:code    'repeater-tower-2)
 }
 
 @camp-jam-kata[#:document-level subsection
@@ -96,13 +87,11 @@
                #:title "Repeater Tower"
                #:time-limit 5
                #:dollars 5
-               #:health-bar ADD-HEART
-               #:review/introduce "..."
-               #:extra-dollars-for "helping teammates, creativity"]{
+               #:health-bar ADD-HEART]{
 
- @;@(student-should-translate #:english "Make a game that has a weapon that deploys a spike mine with a large range and speed, high damage, and non-default sprite"
-                            @;#:lang    'battle-arena
-                            @;#:code 'spike-mine-3)
+ @(student-should-translate #:english "Make a game that has a weapon that deploys a Repeater Tower with a slow fire rate, but extremely powerful, fast bullets (e.g. a sniper tower).  Also add a custom bullet sprite."
+                            #:lang    'battle-arena
+                            #:code    'repeater-tower-3)
 }
 
 
@@ -129,13 +118,11 @@
                #:title "Dagger Tower"
                #:time-limit 5
                #:dollars 3
-               #:health-bar ADD-STAR
-               #:review/introduce "..."
-               #:extra-dollars-for "helping teammates."]{
+               #:health-bar ADD-STAR]{
   
- @;@(student-should-translate #:english "Make a game that has a custom weapon that deploys a spear tower with a speed of 10 and a range of 20."
-                            @;#:lang    'battle-arena
-                            @;#:code 'spear-tower-2)
+ @(student-should-translate #:english "Make a game that has a custom weapon that deploys a fast, spread shooting dagger tower."
+                            #:lang    'battle-arena
+                            #:code    'dagger-tower-2)
 }
 
 @camp-jam-kata[#:document-level subsection
@@ -143,17 +130,15 @@
                #:title "Dagger Tower"
                #:time-limit 5
                #:dollars 5
-               #:health-bar ADD-HEART
-               #:review/introduce "..."
-               #:extra-dollars-for "helping teammates."]{
+               #:health-bar ADD-HEART]{
     
- @;@(student-should-translate #:english "Make a game that has a custom weapon that deploys a spear tower with a custom spear image, damage level, range and speed"
-                            @;#:lang    'battle-arena
-                            @;#:code 'spear-tower-3)
+ @(student-should-translate #:english "Make a game that has a custom weapon that deploys a fast, spread shooting dagger tower with a custom dagger."
+                            #:lang    'battle-arena
+                            #:code    'dagger-tower-3)
 }
 
 
-
+@include-section["avatar-katas.scrbl"]
 @include-section["enemy-katas.scrbl"]
 
 
