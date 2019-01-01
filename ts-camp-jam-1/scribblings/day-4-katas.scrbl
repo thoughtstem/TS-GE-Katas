@@ -20,7 +20,7 @@
                #:review/introduce "meaning of #lang ts-camp-jam-1, battle-arena-game, keyword, list, dart."
                #:extra-dollars-for "helping teammates."]{
 
- @side-note["Tip"]{In addition to @italic{sword} you can use any of these: paint, spear, lava-builer, spike-mine-builder, or spear-tower-builder.}
+ @side-note["Tip"]{In addition to @italic{sword} you can use any of these: paint, spear, lava-builder, spike-mine-builder, or spear-tower-builder.}
   
  @(student-should-translate #:english "Make a game that has a an enemy and give it a custom weapon."
                             #:lang 'battle-arena
@@ -177,29 +177,30 @@ This is an example of how all the components come together during camp-jam into 
 
 @codeblock{#lang battle-arena}
 @racketblock[
- (define (cool-guy)
-   (custom-avatar
-    #:sprite (circle 30 'solid 'blue)))
+ (define (my-avatar)
+   (custom-avatar #:sprite (random-character-sprite)))
 
-(define (my-weapon)
-  (custom-weapon
-   #:name        "Sword"
-   #:dart        (sword)
-   #:fire-rate   10
-   #:rapid-fire? #t))
+ (define (badguy-weapon)
+   (custom-weapon #:name        "Sword"
+                  #:dart        (sword #:damage 40)))
   
- (define (bad-guy)
-   (custom-enemy
-    #:ai              'easy
-    #:health          200
-    #:shield          100
-    #:amount-in-world 10
-    #:weapon          (my-weapon)))
+ (define (badguy)
+   (custom-enemy #:ai              'easy
+                 #:health          200
+                 #:shield          100
+                 #:amount-in-world 10
+                 #:weapon          (badguy-weapon)))
 
- (battle-arena-game
-  #:avatar (cool-guy)
-  #:enemy-list (list (bad-guy))
- )
+ (define (my-armor)
+   (custom-armor #:name          "Sword Armor"
+                 #:sprite        (make-icon "SA")
+                 #:protects-from "Sword"
+                 #:change-damage (subtract-by 30)
+                 #:rarity        'rare))
+
+ (battle-arena-game #:avatar     (my-avatar)
+                    #:enemy-list (list (badguy))
+                    #:item-list  (list (my-armor)))
  ]
 
 @section{Example Camp Jam code (w/in-line)}
@@ -208,19 +209,22 @@ This is an example of how all the components come together during camp-jam into 
 
 @codeblock{#lang battle-arena}
 @racketblock[
-
  (battle-arena-game
-  #:avatar (custom-avatar
-            #:sprite (circle 30 'solid 'blue))
+  #:avatar     (custom-avatar
+                #:sprite (random-character-sprite))
   #:enemy-list (list (custom-enemy
                       #:ai              'easy
                       #:health          200
                       #:shield          100
                       #:amount-in-world 10
-                      #:weapon   (custom-weapon
-                                  #:name        "Sword"
-                                  #:dart        (sword)
-                                  #:fire-rate   10
-                                  #:rapid-fire? #t))))
+                      #:weapon          (custom-weapon
+                                         #:name        "Sword"
+                                         #:dart        (sword #:damage 50))))
+  #:item-list (list (custom-armor
+                     #:name          "Sword Armor"
+                     #:sprite        (make-icon "SA")
+                     #:protects-from "Sword"
+                     #:change-damage (subtract-by 30)
+                     #:rarity        'rare)))
 
  ]
