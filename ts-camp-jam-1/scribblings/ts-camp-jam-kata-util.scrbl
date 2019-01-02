@@ -29,8 +29,8 @@
                         #:time-limit (time-limit 10)
                         #:dollars    (num-dollars 1)
                         #:health-bar (health-bar empty-image)
-                        #:review/introduce (review-introduce "concepts to review...")
-                        #:extra-dollars-for (extra-dollars-for "helping teammates...")
+                        #:review/introduce (review-introduce #f)
+                        #:extra-dollars-for (extra-dollars-for #f)
                         . body)
 
    @kata[#:document-level level
@@ -42,9 +42,17 @@
 
  @health-bar
   
- @side-note["Review/Introduce" review-introduce]
+ @(if review-introduce
+      @side-note["Review/Introduce" review-introduce]
+      "")
 
- @side-note["Extra Dollars for" extra-dollars-for]
+ @(if extra-dollars-for
+      @side-note["Extra Dollars for" extra-dollars-for]
+      "")
                                
  @body
- })
+ }
+
+
+
+   )

@@ -95,8 +95,10 @@
 
   )
 
-(define (show-kata-code pkg-name kata-name)
-  ;(displayln (~a "Showing code " pkg-name " " kata-name))
+
+;Takes something like: 'battle-arena 'rocket-tower-1
+(define/contract (show-kata-code pkg-name kata-name)
+  (-> symbol? symbol? any/c)
 
   (local-require pkg/lib)
   (define folder (pkg-directory (~a pkg-name)))
@@ -106,7 +108,33 @@
 
   (typeset-code #:keep-lang-line? #t (kata-file->code-string kata-file)))
 
-(define (kata-file->code-string file )
+(define example-file-exists?
+  (flat-contract-with-explanation
+   (λ (val)
+     (cond
+       [(file-exists? val) #t]
+       [else
+        (λ (blame)
+          (define pkg-name (list-ref (reverse (explode-path val)) 3))
+          (define file-name (list-ref (reverse (explode-path val)) 0))
+
+          ;Should we actually run the file and generate the example instead
+          ; of just telling peole they need to do it manually?
+          
+          (define more-information
+            (~a "Make sure you've pulled the latest code from " pkg-name
+                ".  And either run 'raco setup " pkg-name
+                "'.  Or open the file " file-name
+                " and run it to generate the missing example file."))
+          (raise-blame-error blame val
+                             '(expected: "an example file" given: "a path to a file that doesn't exist: ~e"
+                                         "\n\n~a")
+                             val more-information))])))
+  )
+
+(define/contract (kata-file->code-string file)
+  (-> example-file-exists? string?)
+
   (file->string file))
 
 (define-syntax (define-kata-code stx)

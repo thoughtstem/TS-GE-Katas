@@ -8,6 +8,7 @@
 (define pkg-authors '(thoughtstem))
 
 (define raco-commands
-  '(("build-examples" ts-kata-util/raco-build-katas "runs kata-definition files, runs tests, builds documentation" 100)
+  '(("build-lang-examples" ts-kata-util/raco-build-katas "runs kata-definition files, runs tests, builds documentation" 100)
+    ("build-kata-docs" ts-kata-util/raco-build-docs "(re)builds the docs for a kata collection" 100)
 
 ))
