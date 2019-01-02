@@ -1,6 +1,6 @@
 #lang info
 (define collection "ts-kata-util")
-(define deps '("base" "lang-file"))
+(define deps '("base" "lang-file" "rsvg"))
 (define build-deps '("scribble-lib" "racket-doc" "rackunit-lib"))
 (define scribblings '(("scribblings/ts-kata-util.scrbl" ())))
 (define pkg-desc "Description Here")
