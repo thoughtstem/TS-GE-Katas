@@ -8,7 +8,7 @@
 @title{Offensive Base Katas}
 
 
-@section{Rocket Tower Katas}
+@section{Rocket Tower}
 
 @camp-jam-kata[#:document-level subsection
                #:difficulty    'bronze

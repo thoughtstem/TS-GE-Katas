@@ -46,20 +46,20 @@ Depending on the day; Avatar Katas can be a great "starter" Kata set to run thro
  Students should be able to identify each of the following as either
  avatars or players:
 
- @(image "scribblings/imgs/avatars/tomato-dance.gif"
-         #:scale .5)
+ @(image "scribblings/imgs/avatars/tomato-dance.gif")
+         @;#:scale .5)
 
- @(image "scribblings/imgs/players/players2.jpg"
-         #:scale .02) 
+ @(image "scribblings/imgs/players/players2.jpg")
+         @;#:scale .02) 
 
- @(image "scribblings/imgs/avatars/avatar-dance.gif"
-         #:scale .8) 
+ @(image "scribblings/imgs/avatars/avatar-dance.gif")
+         @;#:scale .8) 
 
- @(image "scribblings/imgs/players/players.jpg"
-         #:scale .5) 
+ @(image "scribblings/imgs/players/players.jpg")
+         @;#:scale .5) 
 
- @(image "scribblings/imgs/avatars/bear-dance.gif"
-         #:scale .6) 
+ @(image "scribblings/imgs/avatars/bear-dance.gif")
+         @;#:scale .6) 
  }
 
 @;----- BRONZE AVATAR ------
