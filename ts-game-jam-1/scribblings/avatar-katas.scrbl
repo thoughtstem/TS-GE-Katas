@@ -1,44 +1,42 @@
 #lang scribble/manual
+
+@(require "ts-game-jam-kata-util.scrbl")
 @(require ts-kata-util)
 
-@(define (game-jam-kata #:document-level level
-                        #:badge-type     badge-type
-                        #:difficulty     difficulty
-                        #:title title
-                        #:time-limit time-limit
-                        . body)
-
-   @kata[#:document-level level
-         #:difficulty    difficulty
-         #:title title
-         #:time-limit time-limit]{
-
- @badge-type
-        
- @body
- })
-
-
+@;====== AVATAR KATAS =======
 @title{Avatar Katas - @italic{(Day 2)}}
 
-
 @(require 2htdp/image)
-@(require survival)
+@;@(require survival)
+
+@;----- Air AVATAR ------
+
+@game-jam-kata[#:document-level section
+               #:badge-type     @META-KATA
+               #:difficulty    'air
+               #:title "Avatar"
+               #:time-limit 1
+               #:dollars 1
+               #:review/introduce "core values"
+               #:extra-dollars-for "lively discussion"]{
+
+ Game design vocab!
+
+ @(student-should-know-difference-between
+   '("Player" "A human being playing a game")
+   '("Avatar" "A player's represetation in the game"))
+
+ The are NOT the same!  (Lots of people in the world don't know this)
 
 
-@(define (meta-kata)     (circle 10 'outline 'black))
-@(define (avatar-kata)   (circle 10 'solid   'orange))
+ @side-note["Tip"]{Start class reciting the first two ThoughtSTEM core values.}
 
+ @side-note["Tip"]{This is a good kata to learn as a team or in small groups.}
+}
 
-@margin-note*{Teaching Tip: Start class reciting the first two ThoughtSTEM core values.}
-
-@section{Paper Avatar Kata}
-
-To earn this kata @(meta-kata) they need to:
+To earn this kata @META-KATA they need to:
 
 @italic{Recite the amount of points they get from an Avatar in their game. in less than 1 minute.}
-
-@margin-note*{Teaching Tip: This is a good kata to learn as a team or in small groups.}
 
 @itemlist[@item{Avatar points:
            @itemlist[@item{Having an avatar              @bold{1 points}}
@@ -49,56 +47,47 @@ To earn this kata @(meta-kata) they need to:
 
 @; ------ AVATAR BRONZE
 
-@section{Avatar Katas}
-
-
-@game-jam-kata[#:document-level subsection
-               #:badge-type     @(avatar-kata)
+@game-jam-kata[#:document-level section
+               #:badge-type     @AVATAR-KATA
                #:difficulty    'bronze
                #:title "Avatar"
-               #:time-limit 5]{
+               #:time-limit 5
+               #:dollars 1]{
 
  @(student-should-translate #:english "Write the shortest program that creates a game with a custom avatar."
                             #:lang 'survival
-                            #:code 'basic-avatar)
+                            #:code 'avatar-1)
 }
 
 @; ------ AVATAR SILVER
 
-@section{Silver Avatar Kata}
-
-@game-jam-kata[#:document-level subsection
-               #:badge-type     @(avatar-kata)
-               #:difficulty    'bronze
+@game-jam-kata[#:document-level section
+               #:badge-type     @AVATAR-KATA
+               #:difficulty    'silver
                #:title "Avatar"
-               #:time-limit 5]{
+               #:time-limit 5
+               #:dollars 3]{
 
- @(student-should-translate #:english "Make a game that has a red circle that is 80 pixels across as an avatar."
+ @(student-should-translate #:english "Make a game that has a different colored shape as an avatar."
                             #:lang 'survival
-                            #:code 'avatar-red-circle-80)
+                            #:code 'avatar-2)
 }
 
 @; ------ AVATAR GOLD
 
-@section{Gold Avatar Kata}
+@game-jam-kata[#:document-level section
+               #:badge-type     @AVATAR-KATA
+               #:difficulty    'gold
+               #:title "Avatar"
+               #:time-limit 5
+               #:dollars 5]{
+ @side-note["Tip"]{Not including drawing time, but do include exporting time.}
 
-@margin-note*{Not including drawing time, but do include exporting time.}
-
-To earn this kata @(avatar-kata) they need to:
-
-Within five minutes, translate an English sentence of this type:
-
-@italic{Make a game that has a custom image as an avatar.}
-
-To code of this type:
-
-@(define (major-triumph) (bitmap "imgs/major-triumph.png"))
+ @side-note["Tip"]{Replace bat-sprite with your actual image.}
+ 
+ @(student-should-translate #:english "Make a game that has your drawing as the avatar."
+                            #:lang 'survival
+                            #:code 'avatar-3)
 
 
-@codeblock{#lang survival}
-@racketblock[
- (define (my-avatar)
-   (custom-avatar #:sprite #, (major-triumph) ))
-  
- (survival-game
-  #:avatar (my-avatar))]
+  }
