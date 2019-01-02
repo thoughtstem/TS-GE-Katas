@@ -81,10 +81,13 @@ To earn this kata @META-KATA they need to:
                #:title "Avatar"
                #:time-limit 5
                #:dollars 5]{
+ @side-note["Tip"]{Not including drawing time, but do include exporting time.}
 
+ @side-note["Tip"]{Replace bat-sprite with your actual image.}
+ 
  @(student-should-translate #:english "Make a game that has your drawing as the avatar."
                             #:lang 'survival
                             #:code 'avatar-3)
 
- @side-note["Tip"]{Not including drawing time, but do include exporting time.}
+
   }
