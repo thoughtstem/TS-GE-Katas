@@ -3,7 +3,6 @@
 @(require "ts-camp-jam-kata-util.scrbl")
 @(require ts-kata-util)
 
-
 @;====== AVATAR KATAS =======
 @title{Avatar Katas}
 
@@ -62,13 +61,6 @@ Depending on the day; Avatar Katas can be a great "starter" Kata set to run thro
  @(image "scribblings/imgs/avatars/bear-dance.gif"
          #:scale .6) 
  }
-
-
-
-
-
-
-
 
 @;----- BRONZE AVATAR ------
 
