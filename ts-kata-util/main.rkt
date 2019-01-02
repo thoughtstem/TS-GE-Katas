@@ -27,6 +27,7 @@
          student-should-translate
          student-should-know-difference-between
 
+         define/contract/doc
          )
 
 (define (student-should-know-difference-between . things)
@@ -94,6 +95,46 @@
    )
 
   )
+
+(require scribble/srcdoc)
+
+(define-for-syntax (extract-defaults arguments)
+  (define (keyword? d)
+    (string-prefix? (~a d) "#:"))
+  
+  (define args-datums (syntax->datum arguments))
+
+  (define no-keywords (map second (filter-not keyword? args-datums)))
+
+  (datum->syntax #f no-keywords))
+
+;For in a TS-Lang.  Automates documentation.
+(define-syntax (define/contract/doc stx)
+  (syntax-case stx ()
+    ([_ (f-name args ... . rest) contract doc body ...]
+     (with-syntax ([temp/defaults (extract-defaults #'(args ...))])
+       #'(begin
+           (provide (proc-doc
+                     f-name
+                     contract
+                     temp/defaults ;Fix this.  docs out...
+                     doc)) 
+         
+           (define/contract (f-name args ... . rest)
+             contract
+             body ...))))
+    ([_ (f-name args ... ) contract doc body ...]
+     (with-syntax ([temp/defaults (extract-defaults #'(args ...))])
+       #'(begin
+           (provide (proc-doc
+                     f-name
+                     contract
+                     temp/defaults ;Fix this.  docs out...
+                     doc)) 
+         
+           (define/contract (f-name args ... )
+             contract
+             body ...))))))
 
 
 ;Takes something like: 'battle-arena 'rocket-tower-1
