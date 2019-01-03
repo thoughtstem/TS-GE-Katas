@@ -14,42 +14,44 @@
 @camp-jam-kata[#:document-level subsection
                #:difficulty    'bronze
                #:title "Grow Potion"
-               #:time-limit 3
-               #:dollars 2
+               #:time-limit 5
+               #:dollars 1
                #:health-bar COLOR-BAR
-               #:review/introduce "meaning of #lang battle-arena, battle-arena-game, keyword, list, icon, on-use."
+               #:review/introduce "meaning of #lang battle-arena, battle-arena-game, keyword, list, icon, ..."
                #:extra-dollars-for "helping teammates."]{
 
   
- @(student-should-translate #:english "Make a game that has a potion that makes you big."
+ @(student-should-translate #:english "Make a game that has a ..."
                             #:lang    'battle-arena
-                            #:code    'grow-1)
+                            #:code    'single-shot-1)
 }
 
 @camp-jam-kata[#:document-level subsection
                #:difficulty    'silver
-               #:title "Shrink Potion"
-               #:time-limit 3
-               #:dollars 2
-               #:health-bar ADD-STAR]{
+               #:title "..."
+               #:time-limit 5
+               #:dollars 3
+               #:health-bar ADD-STAR
+               #:review/introduce "..."]{
   
- @(student-should-translate #:english "Make a game that has a potion that makes you small."
+ @(student-should-translate #:english "Make a game that has ..."
                             #:lang    'battle-arena
-                            #:code    'shrink-1) 
+                            #:code    'single-shot-2) 
 }
 
 @camp-jam-kata[#:document-level subsection
                #:difficulty    'gold
-               #:title "Grow and Shrink"
-               #:time-limit 8
+               #:title "..."
+               #:time-limit 5
                #:dollars 5
-               #:health-bar ADD-HEART]{
+               #:health-bar ADD-HEART
+               #:review/introduce "..."]{
 
- @side-note["TIP"]{For an extra challenge have students add multiple potions and have them complete it in less time.}
+ @side-note["..."]{...}
   
  @(student-should-translate #:english "Make a game that has ..."
                             #:lang    'battle-arena
-                            #:code    'grow-and-shrink) 
+                            #:code    'single-shot-3) 
 }
 
 
