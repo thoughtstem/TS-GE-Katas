@@ -41,3 +41,4 @@ even better ones!
 @include-section["day-4-katas.scrbl"]
 @include-section["day-5-katas.scrbl"]
 @include-section["day-6-katas.scrbl"]
+@include-section["day-7-katas.scrbl"]
