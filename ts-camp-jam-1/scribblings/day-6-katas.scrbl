@@ -7,6 +7,7 @@
 @;============== DAY 6 ================
 @title{Range Battle Katas}
 
+@include-section["avatar-katas.scrbl"]
 
 @section{Single Shot Katas}
 
@@ -16,7 +17,7 @@
                #:time-limit 5
                #:dollars 1
                #:health-bar COLOR-BAR
-               #:review/introduce "meaning of #lang battle-arena, battle-arena-game, keyword, list, icon, dart."
+               #:review/introduce "meaning of #lang battle-arena, battle-arena-game, keyword, list, icon, fire-mode."
                #:extra-dollars-for "helping teammates."]{
 
   
@@ -30,9 +31,10 @@
                #:title "Single Shot"
                #:time-limit 5
                #:dollars 3
-               #:health-bar ADD-STAR]{
+               #:health-bar ADD-STAR
+               #:review/introduce "meaning of dart, damage, speed, range."]{
 
- @side-note["Tip"]{All the dart's keywords optional.}
+ @side-note["Tip"]{All the dart's keywords are optional.}
   
  @(student-should-translate #:english "Make a game that has a custom weapon that has a normal fire mode and a customized dart."
                             #:lang    'battle-arena
@@ -44,11 +46,13 @@
                #:title "Single Shot"
                #:time-limit 5
                #:dollars 5
-               #:health-bar ADD-HEART]{
+               #:health-bar ADD-HEART
+               #:review/introduce "meaning of sprite, rarity."]{
 
- @side-note["Tip"]{Remove the rectangle function and insert your own image.}
+ @side-note["Food Sprites"]{fish-sprite, apples-sprite, cherry-sprite, steak-sprite, carrot-sprite, 
+                            carrot-stew-sprite, smores-sprite, toasted-marshmallow-sprite.}
   
- @(student-should-translate #:english "Make a game that has a custom weapon that has a normal fire mode and a customized dart with your own image."
+ @(student-should-translate #:english "Make a game that has a custom weapon that has a normal fire mode and a customized dart with a food sprite."
                             #:lang    'battle-arena
                             #:code    'single-shot-3) 
 }
@@ -65,7 +69,7 @@
                #:time-limit 5
                #:dollars 1
                #:health-bar COLOR-BAR
-               #:review/introduce "meaning of #lang battle-arena, battle-arena-game, keyword, list, icon, dart."
+               #:review/introduce "meaning of #lang battle-arena, battle-arena-game, keyword, list, icon, fire-mode."
                #:extra-dollars-for "helping teammates."]{
   
  @(student-should-translate #:english "Make a game that has a weapon that has a spread fire mode."
@@ -80,9 +84,11 @@
                #:title "Spread Shot"
                #:time-limit 5
                #:dollars 3
-               #:health-bar ADD-STAR]{
+               #:health-bar ADD-STAR
+               #:review/introduce "meaning of damage, durability, speed, dart."
+]{
 
- @side-note["Tip"]{All the dart's keywords optional.}
+ @side-note["Tip"]{All the dart's keywords are optional.}
   
  @(student-should-translate #:english "Make a game that has a weapon that has a spread fire mode and a customized dart."
                             #:lang    'battle-arena
@@ -94,11 +100,12 @@
                #:title "Spread Shot"
                #:time-limit 5
                #:dollars 5
-               #:health-bar ADD-HEART]{
+               #:health-bar ADD-HEART
+               #:review/introduce "meaning of sprite, rarity."]{
 
- @side-note["Tip"]{Remove the rectangle function and insert your own image.}                                       
+ @side-note["Object Sprites"]{chest-sprite, slime-sprite, coin-sprite, bowl-sprite, wood-table-sprite.}                                       
 
- @(student-should-translate #:english "Make a game that has a weapon that has a spread fire mode and a customized dart with your own image."
+ @(student-should-translate #:english "Make a game that has a weapon that has a spread fire mode and a customized dart with an object sprite."
                             #:lang    'battle-arena
                             #:code    'spread-shot-3)
 }
@@ -114,7 +121,7 @@
                #:time-limit 5
                #:dollars 1
                #:health-bar COLOR-BAR
-               #:review/introduce "meaning of #lang battle-arena, battle-arena-game, keyword, list, icon, dart."
+               #:review/introduce "meaning of #lang battle-arena, battle-arena-game, keyword, list, icon, fire-mode."
                #:extra-dollars-for "helping teammates."]{
   
  @(student-should-translate #:english "Make a game that has a weapon that has a hoaming fire mode."
@@ -127,9 +134,10 @@
                #:title "Homing Repeater"
                #:time-limit 5
                #:dollars 3
-               #:health-bar ADD-STAR]{
+               #:health-bar ADD-STAR
+               #:review/introduce "meaning of damage, speed, range, dart."]{
 
- @side-note["Tip"]{All the dart's keywords optional.}
+ @side-note["Tip"]{All the dart's keywords are optional.}
   
  @(student-should-translate #:english "Make a game that has a weapon that has a hoaming fire mode and a customized dart."
                             #:lang    'battle-arena
@@ -141,17 +149,17 @@
                #:title "Homing Repeater"
                #:time-limit 5
                #:dollars 5
-               #:health-bar ADD-HEART]{
+               #:health-bar ADD-HEART
+               #:review/introduce "meaning of sprite, rarity."]{
 
- @side-note["Tip"]{Remove the rectangle function and insert your own image.}                                       
+ @side-note["Animal Sprites"]{cat-sprite, white-cat-sprite, black-cat-sprite, bat-sprite, snake-sprite.}                                     
     
- @(student-should-translate #:english "Make a game that has a weapon that has a hoaming fire mode and a customized dart with your own image."
+ @(student-should-translate #:english "Make a game that has a weapon that has a hoaming fire mode and a customized dart with an animal sprite."
                             #:lang    'battle-arena
                             #:code    'homing-repeater-3)
 }
 
 
-@include-section["avatar-katas.scrbl"]
 @include-section["enemy-katas.scrbl"]
 
 
