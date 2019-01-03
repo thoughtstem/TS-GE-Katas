@@ -45,13 +45,13 @@
 @camp-jam-kata[#:document-level subsection
                #:difficulty    'gold
                #:title "Grow and Shrink"
-               #:time-limit 8
+               #:time-limit 5
                #:dollars 5
                #:health-bar ADD-HEART]{
 
  @side-note["TIP"]{For an extra challenge have students add multiple potions and have them complete it in less time.}
   
- @(student-should-translate #:english "Make a game that has ..."
+ @(student-should-translate #:english "Make a game that has two potions one to make you big and one to make you small."
                             #:lang    'battle-arena
                             #:code    'grow-and-shrink) 
 }
@@ -59,58 +59,54 @@
 
 
 
-@section{... Katas}
+@section{Health Katas}
 
 
 @camp-jam-kata[#:document-level subsection
                #:difficulty    'bronze
-               #:title "..."
-               #:time-limit 5
-               #:dollars 1
+               #:title "Health Potion"
+               #:time-limit 3
+               #:dollars 2
                #:health-bar COLOR-BAR
-               #:review/introduce "meaning of #lang battle-arena, battle-arena-game, keyword, list, icon, ..."
+               #:review/introduce "meaning of #lang battle-arena, battle-arena-game, keyword, list, icon, on-use."
                #:extra-dollars-for "helping teammates."]{
 
  @side-note["Remember"]{You can shift the length of time of any Kata to make it the right amount of challenging!}
  @side-note["Break it Down"]{Discuss the meaning of the last keyword's code. What will happen?}
   
- @(student-should-translate #:english "Make a game that has ..."
+ @(student-should-translate #:english "Make a game that has a potion that gives you some health."
                             #:lang    'battle-arena
-                            #:code    'spread-shot-1)
+                            #:code    'health-1)
 }
 
 
 
 @camp-jam-kata[#:document-level subsection
                #:difficulty    'silver
-               #:title "..."
-               #:time-limit 5
-               #:dollars 3
-               #:health-bar ADD-STAR
-               #:review/introduce "..."]{
+               #:title "Max Health Potion"
+               #:time-limit 3
+               #:dollars 2
+               #:health-bar ADD-STAR]{
 
  @side-note["Break it Down"]{Discuss the meaning of the last keyword's code. What will happen?}
-
- @side-note["Tip"]{All the dart's keywords are optional.}
   
- @(student-should-translate #:english "Make a game that has ..."
+ @(student-should-translate #:english "Make a game that has a potion that fills your health bar."
                             #:lang    'battle-arena
-                            #:code    'spread-shot-2)
+                            #:code    'health-2)
 }
 
 @camp-jam-kata[#:document-level subsection
                #:difficulty    'gold
-               #:title "..."
+               #:title "Health and Max Health"
                #:time-limit 5
                #:dollars 5
-               #:health-bar ADD-HEART
-               #:review/introduce "..."]{
+               #:health-bar ADD-HEART]{
 
- @side-note["..."]{...}                                       
+ @side-note["TIP"]{For an extra challenge have students add multiple potions and have them complete it in less time.}                                      
 
  @(student-should-translate #:english "Make a game that has ..."
                             #:lang    'battle-arena
-                            #:code    'spread-shot-3)
+                            #:code    'health-3)
 }
 
 
