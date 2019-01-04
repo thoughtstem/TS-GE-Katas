@@ -14,10 +14,10 @@
 @camp-jam-kata[#:document-level subsection
                #:difficulty    'bronze
                #:title "Grow Potion"
-               #:time-limit 3
-               #:dollars 2
+               #:time-limit 5
+               #:dollars 1
                #:health-bar COLOR-BAR
-               #:review/introduce "meaning of #lang battle-arena, battle-arena-game, keyword, list, icon, on-use."
+               #:review/introduce "meaning of #lang battle-arena, battle-arena-game, keyword."
                #:extra-dollars-for "helping teammates."]{
                                                          
  @side-note["Remember"]{You can shift the length of time of any Kata to make it the right amount of challenging!}
@@ -32,7 +32,7 @@
                #:difficulty    'silver
                #:title "Shrink Potion"
                #:time-limit 3
-               #:dollars 2
+               #:dollars 3
                #:health-bar ADD-STAR]{
 
  @side-note["Break it Down"]{Discuss the meaning of the last keyword's code. What will happen?}                                     
@@ -51,7 +51,7 @@
 
  @side-note["TIP"]{For an extra challenge have students add multiple potions and have them complete it in less time.}
   
- @(student-should-translate #:english "Make a game that has two potions one to make you big and one to make you small."
+ @(student-should-translate #:english "Make a game that has both Grow and Shrink Potions, defined outside battle-arena-game."
                             #:lang    'battle-arena
                             #:code    'grow-and-shrink) 
 }
@@ -65,10 +65,10 @@
 @camp-jam-kata[#:document-level subsection
                #:difficulty    'bronze
                #:title "Health Potion"
-               #:time-limit 3
-               #:dollars 2
+               #:time-limit 5
+               #:dollars 1
                #:health-bar COLOR-BAR
-               #:review/introduce "meaning of #lang battle-arena, battle-arena-game, keyword, list, icon, on-use."
+               #:review/introduce "meaning of #lang battle-arena, battle-arena-game, keyword."
                #:extra-dollars-for "helping teammates."]{
 
  @side-note["Remember"]{You can shift the length of time of any Kata to make it the right amount of challenging!}
@@ -85,7 +85,7 @@
                #:difficulty    'silver
                #:title "Max Health Potion"
                #:time-limit 3
-               #:dollars 2
+               #:dollars 3
                #:health-bar ADD-STAR]{
 
  @side-note["Break it Down"]{Discuss the meaning of the last keyword's code. What will happen?}
@@ -104,7 +104,7 @@
 
  @side-note["TIP"]{For an extra challenge have students add multiple potions and have them complete it in less time.}                                      
 
- @(student-should-translate #:english "Make a game that has ..."
+ @(student-should-translate #:english "Make a game that has both Health and Max Health Potions, defined outside battle-arena-game."
                             #:lang    'battle-arena
                             #:code    'health-3)
 }
@@ -120,7 +120,7 @@
                #:time-limit 5
                #:dollars 1
                #:health-bar COLOR-BAR
-               #:review/introduce "meaning of #lang battle-arena, battle-arena-game, keyword, list, icon."
+               #:review/introduce "meaning of #lang battle-arena, battle-arena-game, keyword."
                #:extra-dollars-for "helping teammates."]{
 
  @side-note["Remember"]{You can shift the length of time of any Kata to make it the right amount of challenging!}
@@ -148,7 +148,7 @@
 @camp-jam-kata[#:document-level subsection
                #:difficulty    'gold
                #:title "Boost"
-               #:time-limit 7
+               #:time-limit 5
                #:dollars 5
                #:health-bar ADD-HEART
                #:review/introduce "definitions, why we use them, rarity."]{                                 
@@ -168,7 +168,7 @@
                #:time-limit 5
                #:dollars 1
                #:health-bar COLOR-BAR
-               #:review/introduce "meaning of #lang battle-arena, battle-arena-game, keyword, list, icon."
+               #:review/introduce "meaning of #lang battle-arena, battle-arena-game, keyword."
                #:extra-dollars-for "helping teammates."]{
                                                          
  @side-note["Remember"]{You can shift the length of time of any Kata to make it the right amount of challenging!}
@@ -196,7 +196,7 @@
 @camp-jam-kata[#:document-level subsection
                #:difficulty    'gold
                #:title "Shield Potion"
-               #:time-limit 7
+               #:time-limit 5
                #:dollars 5
                #:health-bar ADD-HEART
                #:review/introduce "definitions, rarity, respawn."]{
@@ -214,6 +214,8 @@ This is an example of how all the components come together during camp-jam into 
 ---------------------
 
 @; Do we want to put ALL options in here? Or simplify?
+
+@side-note["Note:"]{This is just an example of some potions and power-ups. Students could have up to 8 or more!}
 
 @codeblock{#lang battle-arena}
 @racketblock[
@@ -259,6 +261,8 @@ This is an example of how all the components come together during camp-jam into 
 This is an example of how all the components come together during camp-jam into one piece of code:
 
 @; Do we want to put ALL options in here? Or simplify?
+
+@side-note["Note:"]{This is just an example of some potions and power-ups. Students could have up to 8 or more!}
 
 @codeblock{#lang battle-arena}
 @racketblock[
