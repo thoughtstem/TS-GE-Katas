@@ -3,6 +3,7 @@
 @(require "ts-camp-jam-kata-util.scrbl")
 @(require ts-kata-util)
 
+<<<<<<< HEAD
 @;====== RANGE BATTLE KATAS ======
 @;============== DAY 7 ================
 @title{Range Battle Katas}
@@ -22,12 +23,34 @@
 
   
  @(student-should-translate #:english "Make a game that has a custom weapon that has a normal fire mode."
+=======
+@;====== POTIONS AND POWER-UPS KATAS ======
+@;============== DAY 7 ================
+@title{Potions and Power-Ups Katas}
+
+@include-section["avatar-katas.scrbl"]
+
+@section{Size Katas}
+
+@camp-jam-kata[#:document-level subsection
+               #:difficulty    'bronze
+               #:title "Grow Potion"
+               #:time-limit 5
+               #:dollars 1
+               #:health-bar COLOR-BAR
+               #:review/introduce "meaning of #lang battle-arena, battle-arena-game, keyword, list, icon, ..."
+               #:extra-dollars-for "helping teammates."]{
+
+  
+ @(student-should-translate #:english "Make a game that has a ..."
+>>>>>>> dev
                             #:lang    'battle-arena
                             #:code    'single-shot-1)
 }
 
 @camp-jam-kata[#:document-level subsection
                #:difficulty    'silver
+<<<<<<< HEAD
                #:title "Single Shot"
                #:time-limit 5
                #:dollars 3
@@ -37,12 +60,22 @@
  @side-note["Tip"]{All the dart's keywords are optional.}
   
  @(student-should-translate #:english "Make a game that has a custom weapon that has a normal fire mode and a customized dart."
+=======
+               #:title "..."
+               #:time-limit 5
+               #:dollars 3
+               #:health-bar ADD-STAR
+               #:review/introduce "..."]{
+  
+ @(student-should-translate #:english "Make a game that has ..."
+>>>>>>> dev
                             #:lang    'battle-arena
                             #:code    'single-shot-2) 
 }
 
 @camp-jam-kata[#:document-level subsection
                #:difficulty    'gold
+<<<<<<< HEAD
                #:title "Single Shot"
                #:time-limit 5
                #:dollars 5
@@ -53,6 +86,17 @@
                             carrot-stew-sprite, smores-sprite, toasted-marshmallow-sprite.}
   
  @(student-should-translate #:english "Make a game that has a custom weapon that has a normal fire mode and a customized dart with a food sprite."
+=======
+               #:title "..."
+               #:time-limit 5
+               #:dollars 5
+               #:health-bar ADD-HEART
+               #:review/introduce "..."]{
+
+ @side-note["..."]{...}
+  
+ @(student-should-translate #:english "Make a game that has ..."
+>>>>>>> dev
                             #:lang    'battle-arena
                             #:code    'single-shot-3) 
 }
@@ -60,11 +104,16 @@
 
 
 
+<<<<<<< HEAD
 @section{Spread Shot Katas}
+=======
+@section{... Katas}
+>>>>>>> dev
 
 
 @camp-jam-kata[#:document-level subsection
                #:difficulty    'bronze
+<<<<<<< HEAD
                #:title "Spread Shot"
                #:time-limit 5
                #:dollars 1
@@ -73,6 +122,16 @@
                #:extra-dollars-for "helping teammates."]{
   
  @(student-should-translate #:english "Make a game that has a weapon that has a spread fire mode."
+=======
+               #:title "..."
+               #:time-limit 5
+               #:dollars 1
+               #:health-bar COLOR-BAR
+               #:review/introduce "meaning of #lang battle-arena, battle-arena-game, keyword, list, icon, ..."
+               #:extra-dollars-for "helping teammates."]{
+  
+ @(student-should-translate #:english "Make a game that has ..."
+>>>>>>> dev
                             #:lang    'battle-arena
                             #:code    'spread-shot-1)
 }
@@ -81,22 +140,35 @@
 
 @camp-jam-kata[#:document-level subsection
                #:difficulty    'silver
+<<<<<<< HEAD
                #:title "Spread Shot"
                #:time-limit 5
                #:dollars 3
                #:health-bar ADD-STAR
                #:review/introduce "meaning of damage, durability, speed, dart."
+=======
+               #:title "..."
+               #:time-limit 5
+               #:dollars 3
+               #:health-bar ADD-STAR
+               #:review/introduce "..."
+>>>>>>> dev
 ]{
 
  @side-note["Tip"]{All the dart's keywords are optional.}
   
+<<<<<<< HEAD
  @(student-should-translate #:english "Make a game that has a weapon that has a spread fire mode and a customized dart."
+=======
+ @(student-should-translate #:english "Make a game that has ..."
+>>>>>>> dev
                             #:lang    'battle-arena
                             #:code    'spread-shot-2)
 }
 
 @camp-jam-kata[#:document-level subsection
                #:difficulty    'gold
+<<<<<<< HEAD
                #:title "Spread Shot"
                #:time-limit 5
                #:dollars 5
@@ -106,17 +178,33 @@
  @side-note["Object Sprites"]{chest-sprite, slime-sprite, coin-sprite, bowl-sprite, wood-table-sprite.}                                       
 
  @(student-should-translate #:english "Make a game that has a weapon that has a spread fire mode and a customized dart with an object sprite."
+=======
+               #:title "..."
+               #:time-limit 5
+               #:dollars 5
+               #:health-bar ADD-HEART
+               #:review/introduce "..."]{
+
+ @side-note["..."]{...}                                       
+
+ @(student-should-translate #:english "Make a game that has ..."
+>>>>>>> dev
                             #:lang    'battle-arena
                             #:code    'spread-shot-3)
 }
 
 
+<<<<<<< HEAD
 @section{Homing Repeater Katas}
+=======
+@section{... Katas}
+>>>>>>> dev
 
  
 
 @camp-jam-kata[#:document-level subsection
                #:difficulty    'bronze
+<<<<<<< HEAD
                #:title "Homing Repeater"
                #:time-limit 5
                #:dollars 1
@@ -125,12 +213,23 @@
                #:extra-dollars-for "helping teammates."]{
   
  @(student-should-translate #:english "Make a game that has a weapon that has a hoaming fire mode."
+=======
+               #:title "..."
+               #:time-limit 5
+               #:dollars 1
+               #:health-bar COLOR-BAR
+               #:review/introduce "meaning of #lang battle-arena, battle-arena-game, keyword, list, icon, ..."
+               #:extra-dollars-for "helping teammates."]{
+  
+ @(student-should-translate #:english "Make a game that has ..."
+>>>>>>> dev
                             #:lang    'battle-arena
                             #:code    'homing-repeater-1)
 }
 
 @camp-jam-kata[#:document-level subsection
                #:difficulty    'silver
+<<<<<<< HEAD
                #:title "Homing Repeater"
                #:time-limit 5
                #:dollars 3
@@ -140,12 +239,22 @@
  @side-note["Tip"]{All the dart's keywords are optional.}
   
  @(student-should-translate #:english "Make a game that has a weapon that has a hoaming fire mode and a customized dart."
+=======
+               #:title "..."
+               #:time-limit 5
+               #:dollars 3
+               #:health-bar ADD-STAR
+               #:review/introduce "..."]{
+  
+ @(student-should-translate #:english "Make a game that has ..."
+>>>>>>> dev
                             #:lang    'battle-arena
                             #:code    'homing-repeater-2)
 }
 
 @camp-jam-kata[#:document-level subsection
                #:difficulty    'gold
+<<<<<<< HEAD
                #:title "Homing Repeater"
                #:time-limit 5
                #:dollars 5
@@ -155,13 +264,72 @@
  @side-note["Animal Sprites"]{cat-sprite, white-cat-sprite, black-cat-sprite, bat-sprite, snake-sprite.}                                     
     
  @(student-should-translate #:english "Make a game that has a weapon that has a hoaming fire mode and a customized dart with an animal sprite."
+=======
+               #:title "..."
+               #:time-limit 5
+               #:dollars 5
+               #:health-bar ADD-HEART
+               #:review/introduce "..."]{
+
+ @side-note["..."]{....}                                     
+    
+ @(student-should-translate #:english "Make a game that has ..."
+>>>>>>> dev
                             #:lang    'battle-arena
                             #:code    'homing-repeater-3)
 }
 
+<<<<<<< HEAD
 
 @include-section["enemy-katas.scrbl"]
 
+=======
+@section{... Katas}
+
+ 
+
+@camp-jam-kata[#:document-level subsection
+               #:difficulty    'bronze
+               #:title "..."
+               #:time-limit 5
+               #:dollars 1
+               #:health-bar COLOR-BAR
+               #:review/introduce "meaning of #lang battle-arena, battle-arena-game, keyword, list, icon, ..."
+               #:extra-dollars-for "helping teammates."]{
+  
+ @(student-should-translate #:english "Make a game that has ..."
+                            #:lang    'battle-arena
+                            #:code    'homing-repeater-1)
+}
+
+@camp-jam-kata[#:document-level subsection
+               #:difficulty    'silver
+               #:title "..."
+               #:time-limit 5
+               #:dollars 3
+               #:health-bar ADD-STAR
+               #:review/introduce "..."]{
+  
+ @(student-should-translate #:english "Make a game that has ..."
+                            #:lang    'battle-arena
+                            #:code    'homing-repeater-2)
+}
+
+@camp-jam-kata[#:document-level subsection
+               #:difficulty    'gold
+               #:title "..."
+               #:time-limit 5
+               #:dollars 5
+               #:health-bar ADD-HEART
+               #:review/introduce "..."]{
+
+ @side-note["..."]{....}                                     
+    
+ @(student-should-translate #:english "Make a game that has ..."
+                            #:lang    'battle-arena
+                            #:code    'homing-repeater-3)
+}
+>>>>>>> dev
 
 @section{Example Camp Jam code (w/definitions)}
 
@@ -181,6 +349,7 @@ This is an example of how all the components come together during camp-jam into 
                  #:amount-in-world 10
                  #:weapon          (badguy-weapon)))
 
+<<<<<<< HEAD
  (define (single-shot)
    (custom-weapon #:name "Single Shot"
                   #:sprite (make-icon "SS")
@@ -208,6 +377,11 @@ This is an example of how all the components come together during camp-jam into 
                     #:weapon-list (list (single-shot)
                                         (spread-shot)
                                         (hoaming-repeater)))
+=======
+ (battle-arena-game #:avatar      (my-avatar)
+                    #:enemy-list  (list (badguy))
+                    )
+>>>>>>> dev
  ]
 
 @section{Example Camp Jam code (w/in-line)}
@@ -223,6 +397,7 @@ This is an example of how all the components come together during camp-jam into 
                       #:ai              'easy
                       #:health          200
                       #:shield          100
+<<<<<<< HEAD
                       #:amount-in-world 10))
   #:weapon-list    (list (custom-weapon #:name "Single Shot"
                                         #:sprite (make-icon "SS")
@@ -255,5 +430,8 @@ This is an example of how all the components come together during camp-jam into 
                                                 #:range 40)
                                         #:rarity 'epic)
                          ))
+=======
+                      #:amount-in-world 10)))
+>>>>>>> dev
 
  ]
