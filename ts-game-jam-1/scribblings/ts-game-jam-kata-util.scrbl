@@ -17,8 +17,8 @@
 @(define AVATAR-KATA  (circle 10 'solid   'orange))
 @(define COIN-KATA    (circle 10 'solid   'green))
 @(define FOOD-KATA    (circle 10 'solid   'pink))
-@(define NPC-KATA     (circle 10 'solid 'black))
-@(define CRAFTER-KATA (circle 10 'solid 'black))
+@(define NPC-KATA     (circle 10 'solid   'black))
+@(define CRAFTER-KATA (circle 10 'solid   'blue))
 
 @(define DOLLAR (image "scribblings/imgs/ts-dollar.png"
                        #:scale .15))
@@ -27,7 +27,7 @@
    (map (thunk* DOLLAR) (range n)))
 
 @(define (game-jam-kata #:document-level (level subsubsection)
-                        #:difficulty (difficulty 'bronze)
+                        #:difficulty (difficulty 'air)
                         #:title (title "???")
                         #:time-limit (time-limit 10)
                         #:dollars    (num-dollars 1)

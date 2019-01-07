@@ -1,79 +1,72 @@
 #lang scribble/manual
 
-@title{Practice Game Jam Katas - @italic{(Day 7)}}
+@(require "ts-game-jam-kata-util.scrbl")
+@(require ts-kata-util)
 
 @(require 2htdp/image)
-@(require survival)
 
-@(define (meta-kata)     (circle 10 'outline 'black))
-@(define (avatar-kata)   (circle 10 'solid   'orange))
-@(define (coin-kata)     (circle 10 'solid   'green))
-@(define (food-kata)     (circle 10 'solid   'pink))
-@(define (npc-kata)      (circle 10 'solid   'black))
-@(define (crafter-kata)   (circle 10 'solid   'blue))
+@;====== PRACTICE JAM KATAS =======
+@title{Practice Game Jam Katas}@; - @italic{(Day 7)}}
+
 
 @; ------ PRACTICE JAM
 
-@section{Paper Practice Kata}
+@game-jam-kata[#:document-level section
+               #:difficulty    'air
+               #:title "Game Jam"
+               #:time-limit 25
+               #:dollars 1]{
 
-@margin-note*{Teaching Tip: Students should start coding this first and then they can customize their game.}
+ @side-note["Tip"]{Students should start coding this first and then they can customize their game.}
 
-To earn this kata @(meta-kata) they need to:
-
-@italic{Code a simple survival game in under 25 minutes.}
-
-@codeblock{
- #lang survival
-
- (survival-game
-  #:avatar       (custom-avatar)
-  #:coin-list    (list (custom-coin))
-  #:food-list    (list (custom-food #:amount-in-world 10))
-  #:npc-list     (list (custom-npc))
-  #:crafter-list (list (custom-crafter)))}
+ @(to-earn-this-code-kata #:english    "Code a simple survival game."
+                          #:lang       'survival
+                          #:code       'game-jam-1
+                          #:badge-type @META-KATA)
+}
 
 If they complete this in less than 25 minutes during game jam they would
 earn the following number of points:
 
 @itemlist[@item{Avatar:  @bold{+1} Having an avatar 
-                         @bold{+5} in less than 5 minutes 
-                         @bold{= 6 points.}} 
+           @bold{+5} in less than 5 minutes 
+           @bold{= 6 points.}} 
           @item{Coin:    @bold{+1} Having a coin 
-                         @bold{+5} in less than 10 minutes  
-                         @bold{= 6 points.}} 
+           @bold{+5} in less than 10 minutes  
+           @bold{= 6 points.}} 
           @item{Food:    @bold{+1} Having a food item 
-                         @bold{+5} in less than 15 minutes
-                         @bold{= 6 points.}} 
+           @bold{+5} in less than 15 minutes
+           @bold{= 6 points.}} 
           @item{NPC:     @bold{+1} Having an NPC  
-                         @bold{+5} in less than 20 minutes
-                         @bold{= 6 points.}} 
+           @bold{+5} in less than 20 minutes
+           @bold{= 6 points.}} 
           @item{Crafter: @bold{+1} Having a crafter 
-                         @bold{+5} in less than 25 minutes
-                         @bold{= 6 points.}}
+           @bold{+5} in less than 25 minutes
+           @bold{= 6 points.}}
           @item{@bold{Total so far: @italic{+30} points.} }]
 
 @; ------ CUSTOMIZE AVATAR
 
 @section{Avatar Practice}
 
-To earn this kata @(avatar-kata) they need to:
+To earn this kata @AVATAR-KATA they need to:
 
 @italic{Customize their avatar.}
 
 @(define (running-guy) (bitmap "imgs/running-guy.png"))
 
-@codeblock{#lang survival}
+@;codeblock{#lang survival}
 @racketblock[
  (define (my-avatar)
    (custom-avatar #:sprite (sheet->sprite #,(running-guy)
                                           #:columns 4)))
  
- (survival-game
-  #:avatar       (my-avatar)
-  #:coin-list    (list (custom-coin))
-  #:food-list    (list (custom-food #:amount-in-world 10))
-  #:npc-list     (list (custom-npc))
-  #:crafter-list (list (custom-crafter)))]
+ #;(survival-game
+    #:avatar       (my-avatar)
+    #:coin-list    (list (custom-coin))
+    #:food-list    (list (custom-food #:amount-in-world 10))
+    #:npc-list     (list (custom-npc))
+    #:crafter-list (list (custom-crafter)))]
 
 With this new code you would get the following points:
 
@@ -84,15 +77,14 @@ With this new code you would get the following points:
 
 @section{Coin Practice}
 
-To earn this kata @(coin-kata) they need to:
+To earn this kata @COIN-KATA they need to:
 
 @italic{Code and customize additional coins.}
 
-@codeblock{
- #lang survival
- 
- (define (my-avatar)
-   (...))
+@;codeblock{#lang survival}
+@racketblock[
+ #;(define (my-avatar)
+     (...))
  
  (define (red-coin)
    (custom-coin #:sprite (circle 5 'solid 'red)
@@ -116,14 +108,14 @@ To earn this kata @(coin-kata) they need to:
                 #:value 60
                 ))
 
- (survival-game
-  #:avatar       (my-avatar)
-  #:coin-list    (list (red-coin)
-                       (blue-coin)
-                       (green-coin))
-  #:food-list    (list (custom-food #:amount-in-world 10))
-  #:npc-list     (list (custom-npc))
-  #:crafter-list (list (custom-crafter)))}
+ #;(survival-game
+    #:avatar       (my-avatar)
+    #:coin-list    (list (red-coin)
+                         (blue-coin)
+                         (green-coin))
+    #:food-list    (list (custom-food #:amount-in-world 10))
+    #:npc-list     (list (custom-npc))
+    #:crafter-list (list (custom-crafter)))]
 
 With this new code you would get the following points:
 
@@ -136,24 +128,23 @@ With this new code you would get the following points:
 
 @section{Food Practice}
 
-To earn this kata @(food-kata) they need to:
+To earn this kata @FOOD-KATA they need to:
 
 @italic{Code and customize additional food items.}
 
-@codeblock{
- #lang survival
+@;codeblock{#lang survival}
+@racketblock[
+ #;(define (my-avatar)
+     (...))
 
- (define (my-avatar)
-   (...))
+ #;(define (red-coin)
+     (...))
 
- (define (red-coin)
-   (...))
+ #;(define (blue-coin)
+     (...))
 
- (define (blue-coin)
-   (...))
-
- (define (green-coin)
-   (...))
+ #;(define (green-coin)
+     (...))
 
  (define (pineapple)
    (custom-food #:sprite          (star 5 'solid 'yellow)
@@ -168,15 +159,15 @@ To earn this kata @(food-kata) they need to:
                 #:amount-in-world 1
                 #:respawn?        #f))
 
- (survival-game
-   #:avatar       (my-avatar)
-   #:coin-list    (list (red-coin)
-                        (blue-coin)
-                        (green-coin))
-   #:food-list    (list (pineapple)
-                        (mango))
-   #:npc-list     (list (custom-npc))
-   #:crafter-list (list (custom-crafter)))}
+ #;(survival-game
+    #:avatar       (my-avatar)
+    #:coin-list    (list (red-coin)
+                         (blue-coin)
+                         (green-coin))
+    #:food-list    (list (pineapple)
+                         (mango))
+    #:npc-list     (list (custom-npc))
+    #:crafter-list (list (custom-crafter)))]
 
 With this new code you would get the following points:
 
@@ -190,58 +181,46 @@ With this new code you would get the following points:
 
 @section{NPC Practice Kata}
 
-To earn this kata @(npc-kata) they need to:
+To earn this kata @NPC-KATA they need to:
 
 @italic{Code and customize additional NPCs.}
 
-@codeblock{
- #lang survival
+@;codeblock{#lang survival}
+@racketblock[
+ #;(define (my-avatar)
+     (...))
 
- (define (my-avatar)
-   (...))
+ #;(define (red-coin)
+     (...))
 
- (define (red-coin)
-   (...))
+ #;(define (blue-coin)
+     (...))
 
- (define (blue-coin)
-   (...))
+ #;(define (green-coin)
+     (...))
 
- (define (green-coin)
-   (...))
+ #;(define (pineapple)
+     (...))
 
- (define (pineapple)
-   (...))
+ #;(define (mango)
+     (...))
 
- (define (mango)
-   (...))
-
- (define(my-npc-1)
-  (custom-npc #:position (posn 100 100)
-              #:tile     1
-              #:name     "Sara"
-              #:mode     'pace
-              #:dialog   (list "Hello!"
-                               "I'm busy right now."
-                               "Bye!")))
+ (define(my-enemy-1)
+   (custom-enemy ...))
               
-(define(my-npc-2)
-  (custom-npc #:position (posn 100 200)
-              #:tile     2
-              #:name     "Sonny"
-              #:mode     'wander
-              #:dialog   (list "I'm hungry!"
-                               "I can't find any food.")))
+ (define(my-enemy-2)
+   (custom-enemy ...))
 
-(survival-game
- #:avatar       (my-avatar)
- #:coin-list    (list (red-coin)
-                      (blue-coin)
-                      (green-coin))
- #:food-list    (list (pineapple)
-                      (mango))
- #:npc-list     (list (my-npc-1)
-                      (my-npc-2))
- #:crafter-list (list (custom-crafter)))}
+ #;(survival-game
+    #:avatar       (my-avatar)
+    #:coin-list    (list (red-coin)
+                         (blue-coin)
+                         (green-coin))
+    #:food-list    (list (pineapple)
+                         (mango))
+    #:npc-list     (list (my-npc-1)
+                         (my-npc-2))
+    #:crafter-list (list (custom-crafter)))]
 
 With this new code you would get the following points:
 
@@ -257,89 +236,88 @@ With this new code you would get the following points:
 
 @section{Crafter Practice Kata}
 
-To earn this kata @(crafter-kata) they need to:
+To earn this kata @CRAFTER-KATA they need to:
 
 @italic{Code and customize additional crafters.}
 
-@codeblock{
- #lang survival
+@;codeblock{#lang survival}
+@racketblock[
+ #;(define (my-avatar)
+ (...))
 
- (define (my-avatar)
-   (...))
+ #;(define (red-coin)
+ (...))
 
- (define (red-coin)
-   (...))
+ #;(define (blue-coin)
+ (...))
 
- (define (blue-coin)
-   (...))
+ #;(define (green-coin)
+ (...))
 
- (define (green-coin)
-   (...))
+ #;(define (pineapple)
+ (...))
 
- (define (pineapple)
-   (...))
+ #;(define (mango)
+ (...))
 
- (define (mango)
-   (...))
-
- (define(my-npc-1)
-   (...))
+ #;(define(my-npc-1)
+ (...))
               
-(define(my-npc-2)
-   (...))
+ #;(define(my-npc-2)
+ (...))
 
-(define (kiwi)
-  (custom-food #:sprite (star 5 'solid 'brown)
-               #:name "kiwi"
-               #:heals-by 50
-               ))
+ (define (kiwi)
+   (custom-food #:sprite (star 5 'solid 'brown)
+                #:name "kiwi"
+                #:heals-by 50
+                ))
 
-(define (frozen-pineapple)
-  (custom-food #:sprite (star 10 'solid 'yellow)
-               #:name "frozen pineapple"
-               #:heals-by 15
-               ))
+ (define (frozen-pineapple)
+   (custom-food #:sprite (star 10 'solid 'yellow)
+                #:name "frozen pineapple"
+                #:heals-by 15
+                ))
 
-(define kiwi-recipe
-  (recipe #:product     (kiwi)
-          #:build-time  5
-          #:ingredients (list "pineapple" "mango")
-         ))
+ (define kiwi-recipe
+   (recipe #:product     (kiwi)
+           #:build-time  5
+           #:ingredients (list "pineapple" "mango")
+           ))
  
-(define mango-recipe
-  (recipe #:product     (mango)
-          #:build-time  10
-          #:ingredients (list "pineapple")
-         ))
+ (define mango-recipe
+   (recipe #:product     (mango)
+           #:build-time  10
+           #:ingredients (list "pineapple")
+           ))
 
-(define frozen-pineapple-recipe
-  (recipe #:product     (frozen-pineapple)
-          #:build-time  15
-          #:ingredients (list "pineapple")
-         ))
+ (define frozen-pineapple-recipe
+   (recipe #:product     (frozen-pineapple)
+           #:build-time  15
+           #:ingredients (list "pineapple")
+           ))
  
-(define (oven-crafter)
-  (custom-crafter #:menu (crafting-menu-set! #:recipes kiwi-recipe
-                                                       mango-recipe)
-                  #:tile 1))
+ (define (oven-crafter)
+   (custom-crafter #:menu (crafting-menu-set! #:recipes kiwi-recipe
+                                              mango-recipe)
+                   #:tile 1))
 
-(define (freezer-crafter)
-  (custom-crafter #:menu (crafting-menu-set! #:recipes frozen-pineapple-recipe)
-                  #:tile 2))
+ (define (freezer-crafter)
+   (custom-crafter #:menu (crafting-menu-set! #:recipes frozen-pineapple-recipe)
+                   #:tile 2))
 
-(survival-game
- #:avatar       (my-avatar)
- #:coin-list    (list (red-coin)
-                      (blue-coin)
-                      (green-coin))
- #:food-list    (list (pineapple)
-                      (mango)
-                      (kiwi)
-                      (frozen-pineapple))
- #:npc-list     (list (my-npc-1)
-                      (my-npc-2))
- #:crafter-list (list (oven-crafter)
-                      (freezer-crafter)))}
+ #;(survival-game
+    #:avatar       (my-avatar)
+    #:coin-list    (list (red-coin)
+                         (blue-coin)
+                         (green-coin))
+    #:food-list    (list (pineapple)
+                         (mango)
+                         (kiwi)
+                         (frozen-pineapple))
+    #:npc-list     (list (my-npc-1)
+                         (my-npc-2))
+    #:crafter-list (list (oven-crafter)
+                         (freezer-crafter)))]
 
 With this new code you would get the following points:
 
@@ -351,3 +329,23 @@ With this new code you would get the following points:
           @item{@bold{Total so far: @italic{+61} points.}}
           @item{@italic{Additional possible points: @bold{+27}; code 3 additional crafter, and add 12 more
             theme matching recipes.} }]
+
+@section{Complete (survival-game)}
+
+This is what the @italic{(survival-game)} function would look like:
+
+@;codeblock{#lang survival}
+@racketblock[
+ (survival-game
+  #:avatar       (my-avatar)
+  #:coin-list    (list (red-coin)
+                       (blue-coin)
+                       (green-coin))
+  #:food-list    (list (pineapple)
+                       (mango)
+                       (kiwi)
+                       (frozen-pineapple))
+  #:enemy-list   (list (my-enemy-1)
+                       (my-enemy-2))
+  #:crafter-list (list (oven-crafter)
+                       (freezer-crafter)))]

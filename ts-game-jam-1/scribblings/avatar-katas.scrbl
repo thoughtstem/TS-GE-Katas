@@ -4,7 +4,7 @@
 @(require ts-kata-util)
 
 @;====== AVATAR KATAS =======
-@title{Avatar Katas - @italic{(Day 2)}}
+@title{Avatar Katas}@; - @italic{(Day 2)}}
 
 @;----- AVATAR AIR ------
 

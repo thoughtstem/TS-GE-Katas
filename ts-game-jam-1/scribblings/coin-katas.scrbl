@@ -4,9 +4,9 @@
 @(require ts-kata-util)
 
 @;====== COIN KATAS =======
-@title{Coin Katas - @italic{(Day 3)}}
+@title{Coin Katas} 2} @; - @italic{(Day 3)}}
 
-@;----- Air COIN ------
+@;----- COIN AIR ------
 
 @game-jam-kata[#:document-level section
                #:difficulty    'air
@@ -16,10 +16,12 @@
                #:review/introduce "core values"
                #:extra-dollars-for "lively discussion"]{
 
+ @side-note["Tip"]{This is a good kata to learn as a team or in small groups.}
+
  @(to-earn-this-rubric-kata #:badge-type    @META-KATA
                             #:game-element  "Coin"
                             #:elements-list (list "Each coin item (max 10)"
-                                                  "Any coin within 10 minutes (sprint bonus)"
+                                                  "Any coin item within 10 minutes (sprint bonus)"
                                                   "For each coin item matching the theme (max 10)")
                             #:points-list   (list 1
                                                   5

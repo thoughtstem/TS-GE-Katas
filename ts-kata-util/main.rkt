@@ -28,6 +28,7 @@
          student-should-know-difference-between
          to-earn-this-code-kata
          to-earn-this-rubric-kata
+         to-earn-this-meta-kata
 
          define/contract/doc
          )
@@ -78,22 +79,24 @@ the amount of points they get from having a custom " game-element " in their gam
 
 
 (define (show-rubric element points)
-  (para "*" element " - "
+  (para "* " element " - "
         (bold (number->string points)
               (if (= points 1)
                   " point."
                   " points."))))
 
 ;;;TODO
-(define (to-earn-this-meta-kata   #:badge-type    badge-type
-                                  #:game-element  game-element
-                                  #:bullet-list   [list '()])
+(define (to-earn-this-meta-kata   #:badge-type         badge-type
+                                  #:learning-objective learning-objective
+                                  #:objectives         [l '()]
+                                  )
 
   (list
-   (para "To earn this Kata " badge-type  " students should be able to recite
-the amount of points they get from having a custom " game-element " in their game.")
-   (para (bold game-element " points:"))
-   (map show-rubric elements-list points-list)))
+   (para "To earn this Kata " badge-type  " students should be able to recite " learning-objective)
+   (map list-points l)))
+
+(define (list-points l)
+  (para "* " l))
 
 
 (define difficulties

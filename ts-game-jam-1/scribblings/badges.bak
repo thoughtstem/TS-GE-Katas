@@ -53,4 +53,10 @@ Kata key:
 @(crafter-kata)   - @bold{Crafter Katas} - for skills related to creating crafters and recipes
 
 
-
+@include-section["intro-katas.scrbl"]
+@include-section["avatar-katas.scrbl"]
+@include-section["coin-katas.scrbl"]
+@include-section["food-katas.scrbl"]
+@include-section["npc-katas.scrbl"]
+@include-section["crafter-katas.scrbl"]
+@include-section["practice-game-jam.scrbl"]

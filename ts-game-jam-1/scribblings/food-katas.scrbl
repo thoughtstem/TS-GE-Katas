@@ -1,140 +1,97 @@
 #lang scribble/manual
 
-@title{Food Katas - @italic{(Day 4)}}
+@(require "ts-game-jam-kata-util.scrbl")
+@(require ts-kata-util)
 
-@(require 2htdp/image)
-@(require survival)
+@;====== FOOD KATAS =======
+@title{Food Katas}@; - @italic{(Day 4)}}
 
+@;----- FOOD AIR ------
 
-@(define (meta-kata)     (circle 10 'outline 'black))
-@(define (food-kata)     (circle 10 'solid   'pink))
+@game-jam-kata[#:document-level section
+               #:difficulty    'air
+               #:title "Food"
+               #:time-limit 1
+               #:dollars 1
+               #:review/introduce "core values"
+               #:extra-dollars-for "lively discussion"]{
+                                                        
+ @side-note["Tip"]{This is a good kata to learn as a team or in small groups.}
 
-@section{Paper Food Kata}
-
-To earn this kata @(meta-kata) they need to:
-
-@italic{Recite the amount of points they get from food items in their game, in less than 1 minute.}
-
-@itemlist[@item{Food points:   
-           @itemlist[@item{Each food item                    @bold{1 point, max 10}}
-                     @item{Any food within 15 minutes
-                                 @italic{(Sprint Bonus)      @bold{5 points}}}
-                     @item{For each food item matching theme @bold{1 point, max 10}}]}]
+ @(to-earn-this-rubric-kata #:badge-type    @META-KATA
+                            #:game-element  "Food"
+                            #:elements-list (list "Each food item (max 10)"
+                                                  "Any food item within 15 minutes (sprint bonus)"
+                                                  "For each food item matching the theme (max 10)")
+                            #:points-list   (list 1
+                                                  5
+                                                  1))
+}
 
 @; ------ FOOD BRONZE
 
-@section{Bronze Food Kata}
+@game-jam-kata[#:document-level section
+               #:difficulty    'bronze
+               #:title "Food"
+               #:time-limit 5
+               #:dollars 1]{
 
-To earn this kata @(food-kata) they need to:
-
-Within five minutes, translate an English sentence of this type:
-
-@italic{Make a game that has an avatar, a coin, and a food item.}
-
-To code of this type:
-
-@codeblock{
- #lang survival
-
- (survival-game
-  #:avatar     (custom-avatar)
-  #:coin-list  (list (custom-coin))
-  #:food-list  (list (custom-food #:amount-in-world 10)))}
+ @(to-earn-this-code-kata #:english    "Write the shortest program that creates a game with an avatar, a coin, and a food item."
+                          #:lang       'survival
+                          #:code       'food-1
+                          #:badge-type @FOOD-KATA)
+}
 
 @; ------ FOOD SILVER
 
-@section{Silver Food Kata}
+@game-jam-kata[#:document-level section
+               #:difficulty    'silver
+               #:title "Food"
+               #:time-limit 5
+               #:dollars 3]{
 
-To earn this kata @(food-kata) they need to:
-
-Within five minutes, translate an English sentence of this type:
-
-@italic{Make a game that has an avatar, a coin, and a food that heals by 20 points.}
-
-To code of this type:
-
-@codeblock{
- #lang survival
-
- (define (my-food)
-  (custom-food #:amount-in-world 2
-               #:heals-by        20))
- 
- (survival-game
-  #:avatar     (custom-avatar)
-  #:coin-list  (list (custom-coin))
-  #:food-list  (list (my-food)))}
+ @(to-earn-this-code-kata #:english "Make a game that has an avatar, and a food that heals by 20 points."
+                          #:lang 'survival
+                          #:code 'food-2
+                          #:badge-type @FOOD-KATA)
+}
 
 @; ------ FOOD GOLD
 
-@section{Gold Food Kata}
+@game-jam-kata[#:document-level section
+               #:difficulty    'gold
+               #:title "Food"
+               #:time-limit 5
+               #:dollars 5]{
+                            
+ @side-note["Tip"]{Students should run the function (show-food-sprites) on the
+  interactions window to see a list of coin sprites.}
 
-@margin-note*{Students should run the function (show-food-sprites) on the interactions window to
- see a list of food sprites.}
+ @side-note["Tip"]{The order of the keywords does not matter.}
 
-To earn this kata @(food-kata) they need to:
-
-Within five minutes, translate an English sentence of this type:
-
-@italic{Make a game that has an avatar, a coin, and a food item with a custom sprite,
- name, amount in world, and healing power.}
-
-@margin-note*{Teaching Tip: Remember, the order of the keywords does not matter.}
-
-To code of this type:
-
-@codeblock{
- #lang survival
-
- (define (my-food)
-  (custom-food #:sprite          apple-sprite
-               #:name            "apple food"
-               #:amount-in-world 2
-               #:heals-by        20))
-
- (survival-game
-  #:avatar     (custom-avatar)
-  #:coin-list  (list (custom-coin))
-  #:food-list  (list (my-food)))}
-
-
+ @(to-earn-this-code-kata #:english "Make a game that has an avatar, a coin, and a food item with a custom sprite,
+ name, amount in world, and healing power."
+                          #:lang 'survival
+                          #:code 'food-3
+                          #:badge-type @FOOD-KATA)
+ }
 
 @; ------ FOOD PLATINUM
 
-@section{Platinum Food Kata}
-
-@margin-note*{Teaching Tip: Remember, there is no number of "required" katas by day.}
-
-To earn this kata @(food-kata) they need to:
-
-Within ten minutes, translate an English sentence of this type:
-
-@italic{Make a game that has an avatar, a coin, and more than one food item with a custom
- sprite, name, amount in world, healing power, and respawn value.}
-
-@margin-note*{Teaching Tip: Any mix of keywords here is okay, as long as they
+ @game-jam-kata[#:document-level section
+               #:difficulty    'platinum
+               #:title "Food"
+               #:time-limit 10
+               #:dollars 5]{
+                            
+ @side-note["Tip"]{Any mix of keywords here is okay, as long as they
  all have the required sprite and name, and at least one of them does not respawn.}
 
-To code of this type:
+ @side-note["Tip"]{There is no number of "required" katas by day.}
 
-@codeblock{
- #lang survival
-
- (define (my-food)
-  (custom-food #:sprite          apples-sprite
-               #:name            "apple"
-               #:amount-in-world 2
-               #:heals-by        20))
-
- (define (special-food)
-  (custom-food #:sprite          salad-sprite
-               #:name            "salad food"
-               #:amount-in-world 1
-               #:heals-by        50
-               #:respawn?        #f))
-
- (survival-game
-  #:avatar     (custom-avatar)
-  #:coin-list  (list (custom-coin))
-  #:food-list  (list (my-food)
-                     (special-food)))}
+ @(to-earn-this-code-kata #:english "Make a game that has an avatar, a coin, and more than one food item with a custom
+ sprite, name, amount in world, healing power, and respawn value."
+                          #:lang 'survival
+                          #:code 'food-4
+                          #:badge-type @FOOD-KATA)
+ }
