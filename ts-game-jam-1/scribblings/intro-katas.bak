@@ -1,10 +1,11 @@
 #lang scribble/manual
 
-@(require "ts-game-jam-kata-util.scrbl")
-@(require ts-kata-util)
-
-@;====== INTRO KATAS =======
 @title{Intro Katas - @italic{(Day 1)}}
+
+@(require 2htdp/image)
+@(require survival)
+@(define (meta-kata)     (circle 10 'outline 'black))
+
 
 We recommend students earn these Intro Katas before earning any other ones.
 They help reinforce team values and help orient the competitors toward the
@@ -20,7 +21,7 @@ challenges that face them.
              to rattle these off 1 by 1, in pairs or small groups, or as an entire
              class.}
 
-To earn this kata @META-KATA they need to:
+To earn this kata @(meta-kata) they need to:
 
 @italic{Recite the first two ThoughtSTEM core values, in less than 1 minute.}
 
@@ -31,7 +32,7 @@ To earn this kata @META-KATA they need to:
 
 @section{Game Jam Specs Kata}
 
-To earn this kata @META-KATA) they need to:
+To earn this kata @(meta-kata) they need to:
 
 @italic{Recite the specs for the upcoming Game Jam, in less than 1 minute.}
 
@@ -55,7 +56,7 @@ The specs do change from time to time.  (And that in itself is a valuable lesson
 @margin-note*{This kata might be too many "repeat after me" katas. Feel free to share
              the info more informally.}
 
-To earn this kata @META-KATA they need to:
+To earn this kata @(meta-kata) they need to:
 
 @italic{Recite answer to: What is a Kata?, in less than 1 minute.}
 
@@ -71,7 +72,7 @@ A Kata is a small piece of code that I memorize and can write:
 @margin-note*{Teaching Tip: Start with all the code projected/written on the board.
               Remove the lines one by one, testing the students each time.}
 
-To earn this kata @META-KATA) they need to:
+To earn this kata @(meta-kata) they need to:
 
 Within five minutes, translate an English sentence of this type:
 

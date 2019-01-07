@@ -1,135 +1,96 @@
 #lang scribble/manual
 
+@(require "ts-game-jam-kata-util.scrbl")
+@(require ts-kata-util)
+
+@;====== COIN KATAS =======
 @title{Coin Katas - @italic{(Day 3)}}
 
-@(require 2htdp/image)
-@(require survival)
+@;----- Air COIN ------
 
+@game-jam-kata[#:document-level section
+               #:difficulty    'air
+               #:title "Coin"
+               #:time-limit 1
+               #:dollars 1
+               #:review/introduce "core values"
+               #:extra-dollars-for "lively discussion"]{
 
-@(define (meta-kata)     (circle 10 'outline 'black))
-@(define (coin-kata)     (circle 10 'solid   'green))
-
-@section{Paper Coin Kata}
-
-To earn this kata @(meta-kata) they need to:
-
-@italic{Recite the amount of points they get from coin items in their game, in less than 1 minute.}
-
-@itemlist[@item{Coin points:   
-           @itemlist[@item{Each coin item                    @bold{1 point, max 10}}
-                     @item{Any coin within 10 minutes
-                                 @italic{(Sprint Bonus)      @bold{5 points}}}
-                     @item{For each coin item matching theme @bold{1 point, max 10}}]}]
+ @(to-earn-this-rubric-kata #:badge-type    @META-KATA
+                            #:game-element  "Coin"
+                            #:elements-list (list "Each coin item (max 10)"
+                                                  "Any coin within 10 minutes (sprint bonus)"
+                                                  "For each coin item matching the theme (max 10)")
+                            #:points-list   (list 1
+                                                  5
+                                                  1))
+  }
 
 @; ------ COIN BRONZE
 
-@section{Bronze Coin Kata}
+@game-jam-kata[#:document-level section
+               #:difficulty    'bronze
+               #:title "Coin"
+               #:time-limit 5
+               #:dollars 1]{
 
-To earn this kata @(coin-kata) they need to:
-
-Within five minutes, translate an English sentence of this type:
-
-@italic{Make a game that has an avatar and a coin.}
-
-To code of this type:
-
-@codeblock{
- #lang survival
-
- (survival-game
-  #:avatar     (custom-avatar)
-  #:coin-list  (list (custom-coin)))}
+ @(to-earn-this-code-kata #:english    "Write the shortest program that creates a game with an avatar and a coin."
+                          #:lang       'survival
+                          #:code       'coin-1
+                          #:badge-type @COIN-KATA)
+}
 
 @; ------ COIN SILVER
 
-@section{Silver Coin Kata}
+@game-jam-kata[#:document-level section
+               #:difficulty    'silver
+               #:title "Coin"
+               #:time-limit 5
+               #:dollars 3]{
 
-To earn this kata @(coin-kata) they need to:
-
-Within five minutes, translate an English sentence of this type:
-
-@italic{Make a game that has an avatar and a coin worth 500 points.}
-
-To code of this type:
-
-@codeblock{
- #lang survival
-
- (define (my-coin)
-  (custom-coin #:value 500))
- 
- (survival-game
-  #:avatar     (custom-avatar)
-  #:coin-list  (list (my-coin)))}
+ @(to-earn-this-code-kata #:english "Make a game that has an avatar and a coin worth 500 points."
+                          #:lang 'survival
+                          #:code 'coin-2
+                          #:badge-type @COIN-KATA)
+}
 
 @; ------ COIN GOLD
 
-@section{Gold Coin Kata}
+@game-jam-kata[#:document-level section
+               #:difficulty    'gold
+               #:title "Coin"
+               #:time-limit 5
+               #:dollars 5]{
+                            
+ @side-note["Tip"]{Students should run the function (show-coin-sprites) on the
+  interactions window to see a list of coin sprites.}
 
-@margin-note*{Students should run the function (show-coin-sprites) on the interactions window to
- see a list of coin sprites.}
+ @side-note["Tip"]{The order of the keywords does not matter.}
 
-To earn this kata @(coin-kata) they need to:
-
-Within five minutes, translate an English sentence of this type:
-
-@italic{Make a game that has an avatar and a coin with a custom sprite,
- name, value, and amount in world.}
-
-@margin-note*{Teaching Tip: The order of the keywords does not matter.}
-
-To code of this type:
-
-@codeblock{
- #lang survival
-
- (define (my-coin)
-  (custom-coin #:sprite          copper-coin-sprite
-               #:name            "copper coin"
-               #:value           500
-               #:amount-in-world 20))
-
- (survival-game
-  #:avatar     (custom-avatar)
-  #:coin-list  (list (my-coin)))}
-
+ @(to-earn-this-code-kata #:english "Make a game that has an avatar and a coin with
+a custom sprite, name, value, and amount in world."
+                          #:lang 'survival
+                          #:code 'coin-3
+                          #:badge-type @COIN-KATA)
+}
 
 @; ------ COIN PLATINUM
 
-@section{Platinum Coin Kata}
+@game-jam-kata[#:document-level section
+               #:difficulty    'platinum
+               #:title "Coin"
+               #:time-limit 5
+               #:dollars 5]{
+                            
+ @side-note["Tip"]{As with any kata, there is not a "daily number of required katas",
+  so you can always leave off a kata or return to it another day.}
 
-@margin-note*{Teaching Tip: As with any kata, there is not a "daily
- number of required katas", so you can always leave off a kata or return
- to it another day.}
-
-To earn this kata @(coin-kata) they need to:
-
-Within five minutes, translate an English sentence of this type:
-
-@italic{Make a game that has an avatar, and more than one coin with a custom
- sprite, name, value, amount in world, and respawn value.}
-
-
-@margin-note*{Teaching Tip: Any mix of keywords here is okay, as long as they
+ @side-note["Tip"]{Any mix of keywords here is okay, as long as they
  all have the required sprite and name, and at least one of them does not respawn.}
 
-To code of this type:
-
-@codeblock{
- #lang survival
-
- (define (my-coin)
-  (custom-coin #:sprite copper-coin-sprite
-               #:name   "copper coin"))
-
- (define (special-coin)
-  (custom-coin #:sprite          bat-sprite
-               #:name            "bat coin"
-               #:value           1000
-               #:amount-in-world 1
-               #:respawn?        #f))
-
- (survival-game
-  #:avatar     (custom-avatar)
-  #:coin-list  (list (my-coin)
-                     (special-coin)))}
+ @(to-earn-this-code-kata #:english "Make a game that has an avatar, and more than one
+coin with a custom sprite, name, value, amount in world, and respawn value."
+                          #:lang 'survival
+                          #:code 'coin-3
+                          #:badge-type @COIN-KATA)
+ }

@@ -26,8 +26,6 @@
          side-note
          student-should-translate
          student-should-know-difference-between
-         to-earn-this-code-kata
-         to-earn-this-rubric-kata
 
          define/contract/doc
          )
@@ -53,52 +51,9 @@
    (para "To corresponding code of this type:")
    (show-kata-code lang kata-code-name)))
 
-(define (to-earn-this-code-kata #:english    sentence
-                                #:code       kata-code-name
-                                #:lang       lang
-                                #:badge-type badge-type)
-
-  (list
-   (para "To earn this Kata " badge-type  " students should be able to translate any sentence of this type:")
-   (para (italic sentence))
-   (para "To corresponding code of this type:")
-   (show-kata-code lang kata-code-name)))
-
-
-(define (to-earn-this-rubric-kata #:badge-type    badge-type
-                                  #:game-element  game-element
-                                  #:elements-list elements-list
-                                  #:points-list   points-list)
-
-  (list
-   (para "To earn this Kata " badge-type  " students should be able to recite
-the amount of points they get from having a custom " game-element " in their game.")
-   (para (bold game-element " points:"))
-   (map show-rubric elements-list points-list)))
-
-
-(define (show-rubric element points)
-  (para "*" element " - "
-        (bold (number->string points)
-              (if (= points 1)
-                  " point."
-                  " points."))))
-
-;;;TODO
-(define (to-earn-this-meta-kata   #:badge-type    badge-type
-                                  #:game-element  game-element
-                                  #:bullet-list   [list '()])
-
-  (list
-   (para "To earn this Kata " badge-type  " students should be able to recite
-the amount of points they get from having a custom " game-element " in their game.")
-   (para (bold game-element " points:"))
-   (map show-rubric elements-list points-list)))
-
-
 (define difficulties
   (hash 'air    (text "AIR" 24 'cyan)
-        'stone  (text "STONE" 24 'gray)
+        'stone    (text "STONE" 24 'gray)
         'bronze (text "BRONZE" 24 'orange)
         'silver (text "SILVER" 24 'darkgray)
         'gold   (text "GOLD" 24 'gold)
