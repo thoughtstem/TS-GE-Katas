@@ -4,7 +4,7 @@
 @(require ts-kata-util)
 
 @;====== COIN KATAS =======
-@title{Coin Katas} 2} @; - @italic{(Day 3)}}
+@title{Coin Katas} @; - @italic{(Day 3)}}
 
 @;----- COIN AIR ------
 

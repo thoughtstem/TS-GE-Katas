@@ -34,11 +34,19 @@ even better ones!
 
 
 @include-section["materials.scrbl"]
- 
-@include-section["day-1-katas.scrbl"]
-@include-section["day-2-katas.scrbl"]
-@include-section["day-3-katas.scrbl"]
-@include-section["day-4-katas.scrbl"]
-@include-section["day-5-katas.scrbl"]
-@include-section["day-6-katas.scrbl"]
-@include-section["day-7-katas.scrbl"]
+
+@;why is this showing up on page???
+@include-section["avatar-katas.scrbl"]
+@include-section["enemy-katas.scrbl"]
+
+@include-section["spear-katas.scrbl"]
+@include-section["sword-katas.scrbl"]
+@include-section["paint-thrower-katas.scrbl"]
+
+@;@include-section["day-1-katas.scrbl"]
+@;@include-section["day-2-katas.scrbl"]
+@;@include-section["day-3-katas.scrbl"]
+@;@include-section["day-4-katas.scrbl"]
+@;@include-section["day-5-katas.scrbl"]
+@;@include-section["day-6-katas.scrbl"]
+@;@include-section["day-7-katas.scrbl"]

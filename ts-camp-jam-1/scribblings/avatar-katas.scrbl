@@ -6,9 +6,6 @@
 @;====== AVATAR KATAS =======
 @title{Avatar Katas}
 
-Depending on the day; Avatar Katas can be a great "starter" Kata set to run through with @bold{all teams}
- before moving on to more challenging katas.
-
 @;----- Air AVATAR ------
 
 @camp-jam-kata[#:document-level section
