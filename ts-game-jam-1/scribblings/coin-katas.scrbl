@@ -6,6 +6,8 @@
 @;====== COIN KATAS =======
 @title{Coin Katas} @; - @italic{(Day 3)}}
 
+These Katas will allow you to have collectibles in your game.
+
 @;----- COIN AIR ------
 
 @game-jam-kata[#:document-level section
