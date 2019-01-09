@@ -5,7 +5,7 @@
 
 (require "./main.rkt" scribble/manual)
 
-(define (response->scribble r)
+(define (response:code->scribble r)
   ;(second (response-data ))
   ;Gross......  Fix this
   (list
@@ -13,14 +13,38 @@
    (codeblock (second
                (response-data r)))))
 
-(define (stimulus->scribble s)
-  ;(second (stimulus-data ))
-  ;Gross......  Fix this
+(define (response:say->scribble r)
+  (define data (response-data r))
+  (list
+   (para (~a "You recite this:"))
+   (if (list? data)
+       (itemlist (map item data))
+       (bold data))))
+
+(define (stimulus:read->scribble s)
   (list
    (~a "When given this " (first (stimulus-data s)) " phrase: ")
    (bold
     (second
      (stimulus-data s)))))
+
+(define (stimulus:hear->scribble s)
+  (list
+   (~a "When hearing this: ")
+   (bold
+    (stimulus-data s))))
+
+(define (response->scribble r)
+  (cond [(response:code? r) (response:code->scribble r)]
+        [(response:say? r)  (response:say->scribble r)]
+        [else (error "Unknown response type")]))
+
+(define (stimulus->scribble s)
+  ;(second (stimulus-data ))
+  ;Gross......  Fix this
+  (cond [(stimulus:read? s) (stimulus:read->scribble s)]
+        [(stimulus:hear? s) (stimulus:hear->scribble s)]
+        [else (error "Unknown stimulus type")]))
 
 (define (kata->scribble k
                         #:befores (befores (list)))

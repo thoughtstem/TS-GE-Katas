@@ -2,7 +2,9 @@
 
 @(require ts-kata-util/katas/rendering
           ts-kata-util/katas/main
-           "../main.rkt" (except-in racket read))
+           "../katas.rkt"
+           "../rendering.rkt"
+           (except-in racket read))
 
 @title{Game Design through Fortnite}
 
@@ -37,11 +39,9 @@ even better ones!
 @table-of-contents[]
 
 
+
 @include-section["materials.scrbl"]
 
-@section{All Katas}
-
-@(scribblify-collection battle-arena-katas)
 
 @section{Balance Katas}
 
@@ -56,6 +56,20 @@ even better ones!
   (merge-collections spear-tower-katas
                      dagger-tower-katas
                      repeater-tower-katas))
+
+@section{Defensive Base Katas}
+
+@(scribblify-collection
+  (merge-collections spike-mine-katas
+                     lava-katas
+                     spear-tower-katas))
+
+@section{Armor Katas}
+
+@(scribblify-collection
+  (merge-collections repeater-armor-katas
+                     sword-armor-katas
+                     enemy-weapon-katas))
 
 @section{Ranged Weapon Katas}
 
@@ -128,4 +142,23 @@ even better ones!
 
 @(scribblify-collection dagger-tower-katas)
 
+@section{Bronze Katas}
+
+@(scribblify-collection bronze-katas)
+
+@section{Silver Katas}
+
+@(scribblify-collection silver-katas)
+
+@section{Gold Katas}
+
+@(scribblify-collection gold-katas)
+
+@section{Platinum Katas}
+
+@(scribblify-collection platinum-katas)
+
+@section{All Katas}
+
+@(scribblify-collection battle-arena-katas)
 

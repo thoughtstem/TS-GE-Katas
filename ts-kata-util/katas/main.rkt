@@ -1,5 +1,6 @@
 #lang at-exp racket
 
+;Split out kata lang, and kata collection name
 (provide example->kata
          lang->kata-collection
          merge-collections
@@ -8,11 +9,28 @@
          num-expressions
          find-by-id
          fill-in-stimuli
-         read
+         
+         kata-name
+         name-contains?
+         
          (struct-out response)
          (struct-out stimulus)
          (struct-out kata)
-         (struct-out kata-collection))
+         (struct-out kata-collection)
+         (struct-out response:code)
+         (struct-out response:say)
+         (struct-out stimulus:read)
+         (struct-out stimulus:hear)
+         
+         within
+         recite
+         read
+
+         define-sub-collection
+         define-sub-collections
+
+         ;This is too general for here...
+         define/provide)
 
 ;(require scribble/manual)
 
@@ -256,6 +274,58 @@
         (pairify ps))))
 
 
+;For organizing katas into sub collections...
+
+(define-syntax (define-sub-collection stx)
+  (syntax-case stx ()
+    [(_ base (category-name stipulation ...))
+     #'(begin
+         (provide category-name)
+         (define category-name
+           (filter-collection
+            (and/c
+             (curryr name-contains? (regexp-replace #rx" Katas"
+                                                   (titleify 'category-name)
+                                                   ""
+                                                   ))
+             stipulation ...)
+            base)))]
+    [(_ base category-name) 
+     #'(begin
+         (provide category-name)
+         (define category-name
+           (filter-collection
+            (and/c
+             (curryr name-contains? (regexp-replace #rx" Katas"
+                                                   (titleify 'category-name)
+                                                   ""
+                                                   )))
+            base)))]))
+
+(define-syntax-rule (define-sub-collections base name ...)
+  (begin
+    (define-sub-collection base name)
+    ...))
+
+(define (titleify s)
+  (string-titlecase
+   (regexp-replace*
+    #rx"[0-9]*"
+    (regexp-replace*
+     #rx"-"
+     (~a s)
+     " ")
+    "")))
+
+
+(define (kata-name k)
+  (titleify (kata-id k)))
+
+
+(define (name-contains? k s)
+  (string-contains? (kata-name k) s))
+
+
 
 ;Easy way to get an overview of kata collection.
 ;  E.g. Distribution over num expressions.
@@ -299,7 +369,10 @@
 
 ;Next level up, rendering....
 
-
+(define-syntax-rule (define/provide id stuff ...)
+  (begin
+    (provide id)
+    (define id stuff ...)))
 
 
 

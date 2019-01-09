@@ -201,74 +201,53 @@
 
   (file->string file))
 
+
+(define-syntax (convert-require-if-necessary stx)
+  (syntax-case stx (require)
+    [(_ (require thing ...))
+     #'(local-require thing ...)]
+    [(_ not-a-require-expression)
+     #'not-a-require-expression]))
+
+
+;Need to strip this down a bunch.
+;Should do 3 things:
+;  * Compile out the text for later scribble inclusion
+;  * Create a test that runs when you setup the package
+;  * Create a function so you can run your code snippet 
 (define-syntax (define-kata-code stx)
 
   (syntax-case stx ()
     [(define-kata-code lang kata-name expr ... (run-game-with entity ...))
      (with-syntax ([run:kata-name (format-id #'kata-name "run:~a" #'kata-name)]
                    [syntaxes:kata-name (format-id #'kata-name "syntaxes:~a" #'kata-name)]
-                   [code-image:kata-name (format-id #'kata-name "code-image:~a" #'kata-name)]
-                   [initial-game:kata-name (format-id #'kata-name "initial-game:~a" #'kata-name)]
-                   [screenshot:kata-name (format-id #'kata-name "screenshot:~a" #'kata-name)]
                    [lang-req (format-id #'lang "~a/jam-lang" #'lang)]
-                   [req #'(require (only-in game-engine tick draw-entities game-entities game-has-entity-named/c))]
+                   ;[req #'(require (only-in game-engine tick draw-entities game-entities game-has-entity-named/c))]
                    [full stx]
                    [save-path (apply build-path
                                      (append
                                       (reverse (rest (reverse (explode-path (syntax-source stx)))))
                                       (list "compiled-kata-data")))])
+
+
        #`(begin
-           (require lang-req)
-           req
-           
+
            (provide run:kata-name
-                    syntaxes:kata-name
-                    code-image:kata-name
-                    initial-game:kata-name
-                    screenshot:kata-name)
+                    syntaxes:kata-name)
 
            (define syntaxes:kata-name (drop (syntax-e #,(syntax #'full)) 3) )
-           
-           (define (code-image:kata-name)
-             (local-require pict pict/code )
-             (apply (curry vl-append 10)
-                    (codeblock-pict (~a "#lang " 'lang))
-                    (map typeset-code syntaxes:kata-name)))
 
+           
+           
            (define (run:kata-name)
+             (local-require lang) ;Works as long as langs don't need to be #lang ___'ed in
              
-             expr ...
+             (convert-require-if-necessary expr) ...
              (run-game-with entity ...))
-
-           (define (initial-game:kata-name)
-             
-             expr ...
-             (run-game-with #:headless #t
-                            entity ...))
-
-           (define (screenshot:kata-name #:after (ticks 20))
-             
-             (draw-entities
-              (game-entities
-               (tick #:ticks ticks
-                     (initial-game:kata-name)))))
-
-
-
-           
-
 
            ;And some basic unit testing
            (module+ test
-             (require rackunit
-                      (only-in 2htdp/image save-image)
-                      (only-in pict pict->bitmap))
-             
-
-             (check-pred (game-has-entity-named/c "player")
-                         (initial-game:kata-name))
-             (displayln "Basic test pass")
-
+             (require rackunit)
              
              ;Saves out some data for docs whenever tests pass
              (begin
@@ -283,11 +262,10 @@
                (with-output-to-file f-name #:exists 'replace 
                  (thunk*
                   (displayln (~a "#lang " 'lang))
-                  (displayln #;(syntax->string #'full)
-                             (string-join (map (compose (λ(s) (~a "(" s ")")) syntax->string)
-                                               syntaxes:kata-name) "\n\n"))))))
-           
-           ))]))
+                  (displayln (string-join (map (compose (λ(s) (~a "(" s ")")) syntax->string)
+                                               syntaxes:kata-name) "\n\n")))))
+
+             )))]))
 
 
 

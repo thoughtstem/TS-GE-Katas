@@ -35,75 +35,15 @@ A clipboard containing the following materials should be put together for each c
 
 @subsection{Core Values Cheat Sheet}
 
-Highlight the core values cheat sheets below and print. Cut into strips and put one on each instructor's clipboard.
+Highlight the core values below and print if necessary.  Cut into strips and put one on each instructor's clipboard.  (Or just memorize them...)
 
 @bold{Core Values}
 
-@italic{Hand motions can make these easier to remember, repeat as needed:}
+@(require ts-kata-util/katas/rendering ts-fundamentals/katas)
+@(kata->scribble
+  core-values-kata)
 
-@itemlist[
- @item{It’s not about my CODE (point to computer).
-       
-  It’s about what I CAN code (point to brain).}
- @item{It’s not about ME (point to self).
-       
-  It’s about my TEAM (air-draw a flat circle with finger pointing up).}]
 
----------------------------
-
-@bold{Core Values}
-
-@italic{Hand motions can make these easier to remember, repeat as needed:}
-
-@itemlist[
- @item{It’s not about my CODE (point to computer).
-       
-  It’s about what I CAN code (point to brain).}
- @item{It’s not about ME (point to self).
-       
-  It’s about my TEAM (air-draw a flat circle with finger pointing up).}]
-
----------------------------
-
-@bold{Core Values}
-
-@italic{Hand motions can make these easier to remember, repeat as needed:}
-
-@itemlist[
- @item{It’s not about my CODE (point to computer).
-       
-  It’s about what I CAN code (point to brain).}
- @item{It’s not about ME (point to self).
-       
-  It’s about my TEAM (air-draw a flat circle with finger pointing up).}]
-
----------------------------
-
-@bold{Core Values}
-
-@italic{Hand motions can make these easier to remember, repeat as needed:}
-
-@itemlist[
- @item{It’s not about my CODE (point to computer).
-       
-  It’s about what I CAN code (point to brain).}
- @item{It’s not about ME (point to self).
-       
-  It’s about my TEAM (air-draw a flat circle with finger pointing up).}]
-
----------------------------
-
-@bold{Core Values}
-
-@italic{Hand motions can make these easier to remember, repeat as needed:}
-
-@itemlist[
- @item{It’s not about my CODE (point to computer).
-       
-  It’s about what I CAN code (point to brain).}
- @item{It’s not about ME (point to self).
-       
-  It’s about my TEAM (air-draw a flat circle with finger pointing up).}]
 
 @subsection{Schedule}
 
