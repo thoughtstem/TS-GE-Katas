@@ -20,7 +20,8 @@
          
          show-kata-code
          (rename-out [show-kata-code show-example-code]) ;This is technically correct.  Examples are in TS-Languages, Katas are in TS-Kata-Collections
-
+         get-example-code
+         get-example-names
          
          kata
          side-note
@@ -148,6 +149,28 @@
     (build-path folder "examples" "compiled-kata-data" (~a kata-name ".rkt")))
 
   (typeset-code #:keep-lang-line? #t (kata-file->code-string kata-file)))
+
+(define (get-example-code pkg-name kata-name)
+  (local-require pkg/lib)
+  (define folder (pkg-directory (~a pkg-name)))
+  
+  (define kata-file
+    (build-path folder "examples" "compiled-kata-data" (~a kata-name ".rkt")))
+
+  (kata-file->code-string kata-file))
+
+(define (get-example-names pkg-name)
+  (local-require pkg/lib)
+  (define folder (pkg-directory (~a pkg-name)))
+  
+  (define example-folder
+    (build-path folder "examples" "compiled-kata-data"))
+
+  (map (compose string->symbol
+                (curryr string-replace ".rkt" ""))
+       (filter (and/c (curryr string-suffix? ".rkt")
+                      (not/c (curryr string-suffix? "bak.rkt")))
+               (map ~a (directory-list example-folder)))))
 
 (define example-file-exists?
   (flat-contract-with-explanation

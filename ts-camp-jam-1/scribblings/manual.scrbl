@@ -1,6 +1,8 @@
 #lang scribble/manual
 
-@(require ts-kata-util racket)
+@(require ts-kata-util/katas/rendering
+          ts-kata-util/katas/main
+           "../main.rkt" (except-in racket read))
 
 @title{Game Design through Fortnite}
 
@@ -32,12 +34,98 @@ you're able to make.  One day, you'll be able to
 make games like Fortnite.  Or perhaps...
 even better ones!
 
+@table-of-contents[]
+
 
 @include-section["materials.scrbl"]
- 
-@include-section["day-1-katas.scrbl"]
-@include-section["day-2-katas.scrbl"]
-@include-section["day-3-katas.scrbl"]
-@include-section["day-4-katas.scrbl"]
-@include-section["day-5-katas.scrbl"]
-@include-section["day-6-katas.scrbl"]
+
+@section{All Katas}
+
+@(scribblify-collection battle-arena-katas)
+
+@section{Balance Katas}
+
+@(scribblify-collection
+  (merge-collections magic-balance-katas
+                     melee-balance-katas
+                     repeater-balance-katas))
+
+@section{Tower Katas}
+
+@(scribblify-collection
+  (merge-collections spear-tower-katas
+                     dagger-tower-katas
+                     repeater-tower-katas))
+
+@section{Ranged Weapon Katas}
+
+@(scribblify-collection
+  (merge-collections single-shot-katas
+                     spread-shot-katas
+                     homing-repeater-katas))
+
+@section{Melee Weapon Katas}
+
+@(scribblify-collection
+  (merge-collections spear-katas
+                     sword-katas
+                     paint-thrower-katas))
+         
+
+@section{Avatar Katas}
+
+@(scribblify-collection avatar-katas)
+
+@section{Enemy Katas}
+
+@(scribblify-collection enemy-katas)
+
+@section{Magic Balance Katas}
+
+@(scribblify-collection magic-balance-katas)
+
+@section{Melee Balance Katas}
+
+@(scribblify-collection melee-balance-katas)
+
+@section{Repeater Balance Katas}
+
+@(scribblify-collection repeater-balance-katas)
+
+@section{Spear Katas}
+
+@(scribblify-collection spear-katas)
+
+@section{Sword Katas}
+
+@(scribblify-collection sword-katas)
+
+@section{Paint Thrower Katas}
+
+@(scribblify-collection paint-thrower-katas)
+
+@section{Spear Tower Katas}
+
+@(scribblify-collection spear-tower-katas)
+
+@section{Repeater Tower Katas}
+
+@(scribblify-collection repeater-tower-katas)
+
+@section{Dagger Tower Katas}
+
+@(scribblify-collection dagger-tower-katas)
+
+@section{Single Shot Katas}
+
+@(scribblify-collection spear-tower-katas)
+
+@section{Spread Shot Katas}
+
+@(scribblify-collection repeater-tower-katas)
+
+@section{Homing Repeater Katas}
+
+@(scribblify-collection dagger-tower-katas)
+
+
