@@ -38,7 +38,7 @@
                #:time-limit 5
                #:dollars 1]{
 
- @(to-earn-this-code-kata #:english    "Make a game that has an avatar, a coin, a food item, an enemy, and a crafter."
+ @(to-earn-this-code-kata #:english    "Make a game that has an avatar and a crafter."
                           #:lang       'survival
                           #:code       'crafter-1
                           #:badge-type @CRAFTER-KATA)
@@ -52,8 +52,8 @@
                #:time-limit 8
                #:dollars 3]{
 
- @(to-earn-this-code-kata #:english "Make a game that has an avatar, a coin, an NPC, a crafter, a carrot, and
- new food item that has a custom sprite, name, healing power, and 1 in the world."
+ @(to-earn-this-code-kata #:english "Make a game that has an avatar, a crafter, a carrot, and one more 
+ food item with a custom sprite, name, healing power."
                           #:lang 'survival
                           #:code 'crafter-2
                           #:badge-type @CRAFTER-KATA)
@@ -69,8 +69,8 @@
                             
  @side-note["Tip"]{The order of the keywords does not matter.}
 
- @(to-earn-this-code-kata #:english "Make a game that has an avatar, a coin, an NPC, a crafter, a carrot, and
- new food item that has: a custom sprite, name, and healing power, a custom recipe,
+ @(to-earn-this-code-kata #:english "Make a game that has an avatar, a crafter, a carrot, and one more 
+ food item with a custom sprite, name, healing power, a custom recipe,
  and a crafter that uses this recipe."
                           #:lang 'survival
                           #:code 'crafter-3
@@ -87,7 +87,7 @@
 
  @side-note["Tip"]{There is no number of "required" katas by day.}
 
- @(to-earn-this-code-kata #:english "Make a game that has an avatar, a coin, an NPC, two food items with their two
+ @(to-earn-this-code-kata #:english "Make a game that has an avatar, two food items with their two
  recipes and a custom crafter that uses these recipes."
                           #:lang 'survival
                           #:code 'crafter-4

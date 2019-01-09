@@ -53,6 +53,6 @@ So to sum up:
 @include-section["avatar-katas.scrbl"]
 @include-section["coin-katas.scrbl"]
 @include-section["food-katas.scrbl"]
-@include-section["npc-katas.scrbl"]
+@include-section["enemy-katas.scrbl"]
 @include-section["crafter-katas.scrbl"]
 @include-section["practice-game-jam.scrbl"]

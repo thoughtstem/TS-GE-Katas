@@ -36,7 +36,9 @@
                #:time-limit 5
                #:dollars 1]{
 
- @(to-earn-this-code-kata #:english    "Write the shortest program that creates a game with an avatar, a coin, and a food item."
+ @side-note["Tip"]{Students should be encouraged to add other game attributes; e.g. coins.}
+
+ @(to-earn-this-code-kata #:english    "Write the shortest program that creates a game with an avatar and a food item."
                           #:lang       'survival
                           #:code       'food-1
                           #:badge-type @FOOD-KATA)
@@ -50,7 +52,7 @@
                #:time-limit 5
                #:dollars 3]{
 
- @(to-earn-this-code-kata #:english "Make a game that has an avatar, and a food that heals by 20 points."
+ @(to-earn-this-code-kata #:english "Make a game that has an avatar and a food that heals by 20 points."
                           #:lang 'survival
                           #:code 'food-2
                           #:badge-type @FOOD-KATA)
@@ -69,7 +71,7 @@
 
  @side-note["Tip"]{The order of the keywords does not matter.}
 
- @(to-earn-this-code-kata #:english "Make a game that has an avatar, a coin, and a food item with a custom sprite,
+ @(to-earn-this-code-kata #:english "Make a game that has an avatar and a food item with a custom sprite,
  name, amount in world, and healing power."
                           #:lang 'survival
                           #:code 'food-3
@@ -89,7 +91,7 @@
 
  @side-note["Tip"]{There is no number of "required" katas by day.}
 
- @(to-earn-this-code-kata #:english "Make a game that has an avatar, a coin, and more than one food item with a custom
+ @(to-earn-this-code-kata #:english "Make a game that has an avatar and more than one food item with a custom
  sprite, name, amount in world, healing power, and respawn value."
                           #:lang 'survival
                           #:code 'food-4

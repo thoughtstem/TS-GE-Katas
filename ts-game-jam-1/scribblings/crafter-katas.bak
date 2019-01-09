@@ -1,167 +1,95 @@
 #lang scribble/manual
 
-@title{Crafter Katas - @italic{(Day 6)}}
+@(require "ts-game-jam-kata-util.scrbl")
+@(require ts-kata-util)
 
-@(require 2htdp/image)
-@(require survival)
+@;====== CRAFTER KATAS =======
+@title{Crafter Katas}@; - @italic{(Day 6)}}
 
-@(define (meta-kata)     (circle 10 'outline 'black))
-@(define (crafter-kata)   (circle 10 'solid   'blue))
+@;----- CRAFTER AIR ------
 
-@section{Paper Crafter Kata}
+@game-jam-kata[#:document-level section
+               #:difficulty    'air
+               #:title "Crafter"
+               #:time-limit 1
+               #:dollars 1
+               #:review/introduce "core values"
+               #:extra-dollars-for "lively discussion"]{
+                                                        
+ @side-note["Tip"]{This is a good kata to learn as a team or in small groups.}
 
-To earn this kata @(meta-kata) they need to:
-
-@italic{Recite the amount of points they get from Crafters in their game, in less than 1 minute.}
-
-@itemlist[@item{Crafter points:   
-           @itemlist[@item{Each Crafter                                @bold{1 point, max 5}}
-                     @item{Any Crafter within 25 minutes
-                                 @italic{(Sprint Bonus)                @bold{5 points}}}
-                     @item{For each crafting recipe                    @bold{1 point, max 15}}
-                     @item{For each crafting recipe matching theme     @bold{1 point, max 15}}]}]
+ @(to-earn-this-rubric-kata #:badge-type    @META-KATA
+                            #:game-element  "Crafter"
+                            #:elements-list (list "Each crafter (max 5)"
+                                                  "Any crafter within 25 minutes (sprint bonus)"
+                                                  "For each crafting recipe (max 15)"
+                                                  "For each crafting matching the theme (max 15)")
+                            #:points-list   (list 1
+                                                  5
+                                                  1
+                                                  1))
+}
 
 @; ------ CRAFTER BRONZE
 
-@section{Bronze Crafter Kata}
+@game-jam-kata[#:document-level section
+               #:difficulty    'bronze
+               #:title "Crafter"
+               #:time-limit 5
+               #:dollars 1]{
 
-To earn this kata @(crafter-kata) they need to:
-
-Within five minutes, translate an English sentence of this type:
-
-@italic{Make a game that has an avatar, a coin, a food item, an NPC, and a crafter.}
-
-To code of this type:
-
-@codeblock{
- #lang survival
-
- (survival-game
-  #:avatar       (custom-avatar)
-  #:coin-list    (list (custom-coin))
-  #:food-list    (list (custom-food #:amount-in-world 10))
-  #:npc-list     (list (custom-npc))
-  #:crafter-list (list (custom-crafter)))}
+ @(to-earn-this-code-kata #:english    "Make a game that has an avatar, a coin, a food item, an enemy, and a crafter."
+                          #:lang       'survival
+                          #:code       'crafter-1
+                          #:badge-type @CRAFTER-KATA)
+}
 
 @; ------ CRAFTER SILVER
 
-@section{Silver Crafter Kata}
+@game-jam-kata[#:document-level section
+               #:difficulty    'silver
+               #:title "Crafter"
+               #:time-limit 8
+               #:dollars 3]{
 
-To earn this kata @(crafter-kata) they need to:
-
-Within ten minutes, translate an English sentence of this type:
-
-@italic{Make a game that has an avatar, a coin, an NPC, a crafter, a carrot, and
- new food item that has a custom sprite, name, healing power, and 1 in the world.}
-
-To code of this type:
-
-@codeblock{
- #lang survival
-
- (define (carrot-cake)
-  (custom-food #:sprite          (rectangle 40 20 "solid" "brown")
-               #:name            "Carrot Cake"
-               #:heals-by        25
-               #:amount-in-world 1))
-
- (survival-game
-  #:avatar       (custom-avatar)
-  #:coin-list    (list (custom-coin))
-  #:food-list    (list (custom-food #:amount-in-world 10)
-                       (carrot-cake))
-  #:npc-list     (list (custom-npc))
-  #:crafter-list (list (custom-crafter)))}
+ @(to-earn-this-code-kata #:english "Make a game that has an avatar, a coin, an NPC, a crafter, a carrot, and
+ new food item that has a custom sprite, name, healing power, and 1 in the world."
+                          #:lang 'survival
+                          #:code 'crafter-2
+                          #:badge-type @CRAFTER-KATA)
+}
 
 @; ------ CRAFTER GOLD
 
-@section{Gold Crafter Kata}
+@game-jam-kata[#:document-level section
+               #:difficulty    'gold
+               #:title "Crafter"
+               #:time-limit 15
+               #:dollars 5]{
+                            
+ @side-note["Tip"]{The order of the keywords does not matter.}
 
-To earn this kata @(crafter-kata) they need to:
-
-Within fifteen minutes, translate an English sentence of this type:
-
-@italic{Make a game that has an avatar, a coin, an NPC, a crafter, a carrot, and
+ @(to-earn-this-code-kata #:english "Make a game that has an avatar, a coin, an NPC, a crafter, a carrot, and
  new food item that has: a custom sprite, name, and healing power, a custom recipe,
- and a crafter that uses this recipe.}
-
-To code of this type:
-
-@codeblock{
-#lang survival
-
-(define (carrot-cake)
-  (custom-food #:sprite   (rectangle 40 20 "solid" "brown")
-               #:name     "Carrot Cake"
-               #:heals-by 25))
-
-(define carrot-cake-recipe
-  (recipe #:product     (carrot-cake)
-          #:build-time  5
-          #:ingredients (list "Carrot")
-         ))
-
-(define (my-oven)
-  (custom-crafter #:menu (crafting-menu-set! #:recipes carrot-cake-recipe))) 
-
-(survival-game
- #:avatar       (custom-avatar)
- #:coin-list    (list (custom-coin))
- #:food-list    (list (custom-food #:amount-in-world 10)
-                      (carrot-cake))
- #:npc-list     (list (custom-npc))
- #:crafter-list (list (my-oven)))}
+ and a crafter that uses this recipe."
+                          #:lang 'survival
+                          #:code 'crafter-3
+                          #:badge-type @CRAFTER-KATA)
+ }
 
 @; ------ CRAFTER PLATINUM
 
-@section{Platinum Crafter Kata}
+ @game-jam-kata[#:document-level section
+               #:difficulty    'platinum
+               #:title "Crafter"
+               #:time-limit 15
+               #:dollars 5]{
 
-@margin-note*{Teaching Tip: Remember, there is no number of "required" katas by day.}
+ @side-note["Tip"]{There is no number of "required" katas by day.}
 
-To earn this kata @(crafter-kata) they need to:
-
-Within fifteen minutes, translate an English sentence of this type:
-
-@italic{Make a game that has an avatar, a coin, an NPC, two food items with their two
- recipes and a custom crafter that uses these recipes.}
-
-To code of this type:
-
-@codeblock{
-#lang survival
-
-(define (carrot-cake)
-  (custom-food #:sprite   (rectangle 40 20 "solid" "brown")
-               #:name     "Carrot Cake"
-               #:heals-by 25))
-
-(define carrot-cake-recipe
-  (recipe #:product     (carrot-cake)
-          #:build-time  5
-          #:ingredients (list "Carrot")
-         ))
-
-(define (carrot-cupcake)
-  (custom-food #:sprite   (square 10 "solid" "brown")
-               #:name     "Carrot Cupcake"
-               #:heals-by 15))
-
-(define carrot-cupcake-recipe
-  (recipe #:product     (carrot-cupcake)
-          #:build-time  10
-          #:ingredients (list "Carrot Cake")
-         ))
-
-(define (my-oven)
-  (custom-crafter #:menu (crafting-menu-set! #:recipes carrot-cake-recipe
-                                                       carrot-cupcake-recipe))) 
-
-(survival-game
- #:avatar       (custom-avatar)
- #:coin-list    (list (custom-coin))
- #:food-list    (list (custom-food #:amount-in-world 10)
-                      (carrot-cake))
- #:npc-list     (list (custom-npc))
- #:crafter-list (list (my-oven)))}
-
-
+ @(to-earn-this-code-kata #:english "Make a game that has an avatar, a coin, an NPC, two food items with their two
+ recipes and a custom crafter that uses these recipes."
+                          #:lang 'survival
+                          #:code 'crafter-4
+                          #:badge-type @CRAFTER-KATA)
+ }

@@ -37,7 +37,7 @@ earn the following number of points:
           @item{Food:    @bold{+1} Having a food item 
            @bold{+5} in less than 15 minutes
            @bold{= 6 points.}} 
-          @item{NPC:     @bold{+1} Having an NPC  
+          @item{Enemy:     @bold{+1} Having an Enemy  
            @bold{+5} in less than 20 minutes
            @bold{= 6 points.}} 
           @item{Crafter: @bold{+1} Having a crafter 
@@ -55,23 +55,12 @@ To earn this kata @AVATAR-KATA they need to:
 
 @(define (running-guy) (bitmap "imgs/running-guy.png"))
 
-@;codeblock{#lang survival}
+@side-note["Score"]{Avatar:  @bold{+4} for animation frames @italic{(1 point per frame)}.}
+
 @racketblock[
  (define (my-avatar)
    (custom-avatar #:sprite (sheet->sprite #,(running-guy)
-                                          #:columns 4)))
- 
- #;(survival-game
-    #:avatar       (my-avatar)
-    #:coin-list    (list (custom-coin))
-    #:food-list    (list (custom-food #:amount-in-world 10))
-    #:npc-list     (list (custom-npc))
-    #:crafter-list (list (custom-crafter)))]
-
-With this new code you would get the following points:
-
-@itemlist[@item{Avatar:  @bold{+4} for animation frames @italic{(1 point per frame)}.}
-          @item{@bold{Total so far: @italic{+34} points.} }]
+                                          #:columns 4)))]
 
 @; ------ CUSTOMIZE COIN
 
@@ -81,10 +70,9 @@ To earn this kata @COIN-KATA they need to:
 
 @italic{Code and customize additional coins.}
 
-@;codeblock{#lang survival}
+@side-note["Score"]{{Coin:  @bold{+2} for coins, @bold{+3} for coins matching theme}}
+
 @racketblock[
- #;(define (my-avatar)
-     (...))
  
  (define (red-coin)
    (custom-coin #:sprite (circle 5 'solid 'red)
@@ -106,23 +94,7 @@ To earn this kata @COIN-KATA they need to:
                 #:amount-in-world 2
                 #:respawn? #f
                 #:value 60
-                ))
-
- #;(survival-game
-    #:avatar       (my-avatar)
-    #:coin-list    (list (red-coin)
-                         (blue-coin)
-                         (green-coin))
-    #:food-list    (list (custom-food #:amount-in-world 10))
-    #:npc-list     (list (custom-npc))
-    #:crafter-list (list (custom-crafter)))]
-
-With this new code you would get the following points:
-
-@itemlist[@item{Coin:  @bold{+2} for coins  @italic{(1 point per coin; we already had points for one coin)}.}
-          @item{Coin:  @bold{+3} for coins matching theme  @italic{(1 point per coin)}.}
-          @item{@bold{Total so far: @italic{+39} points.}}
-          @item{@italic{Additional possible points: @bold{+14}; code 7 additional theme matching coins.} }]
+                ))]
 
 @; ------ CUSTOMIZE FOOD
 
@@ -132,19 +104,9 @@ To earn this kata @FOOD-KATA they need to:
 
 @italic{Code and customize additional food items.}
 
-@;codeblock{#lang survival}
+@side-note["Score"]{Food:  @bold{+1} for food item, @bold{+2} for food items matching theme}
+
 @racketblock[
- #;(define (my-avatar)
-     (...))
-
- #;(define (red-coin)
-     (...))
-
- #;(define (blue-coin)
-     (...))
-
- #;(define (green-coin)
-     (...))
 
  (define (pineapple)
    (custom-food #:sprite          (star 5 'solid 'yellow)
@@ -157,80 +119,32 @@ To earn this kata @FOOD-KATA they need to:
                 #:name            "mango"
                 #:heals-by        50
                 #:amount-in-world 1
-                #:respawn?        #f))
+                #:respawn?        #f))]
 
- #;(survival-game
-    #:avatar       (my-avatar)
-    #:coin-list    (list (red-coin)
-                         (blue-coin)
-                         (green-coin))
-    #:food-list    (list (pineapple)
-                         (mango))
-    #:npc-list     (list (custom-npc))
-    #:crafter-list (list (custom-crafter)))]
+@; ------ CUSTOMIZE Enemy
 
-With this new code you would get the following points:
+@section{Enemy Practice Kata}
 
-@itemlist[@item{Food:  @bold{+1} for food item  @italic{(1 point per food; we already had points for one food item)}.}
-          @item{Food:  @bold{+2} for food items matching theme  @italic{(1 point per food item)}.}
-          @item{@bold{Total so far: @italic{+42} points.}}
-          @item{@italic{Additional possible points: @bold{+16}; code 8 additional theme matching food items.} }]
+To earn this kata @ENEMY-KATA they need to:
 
+@italic{Code and customize additional Enemies.}
 
-@; ------ CUSTOMIZE NPC
+@side-note["Score"]{Enemy:  @bold{+1} for an Enemy, @bold{+2} for Enemies matching theme}
 
-@section{NPC Practice Kata}
-
-To earn this kata @NPC-KATA they need to:
-
-@italic{Code and customize additional NPCs.}
-
-@;codeblock{#lang survival}
 @racketblock[
- #;(define (my-avatar)
-     (...))
 
- #;(define (red-coin)
-     (...))
-
- #;(define (blue-coin)
-     (...))
-
- #;(define (green-coin)
-     (...))
-
- #;(define (pineapple)
-     (...))
-
- #;(define (mango)
-     (...))
-
- (define(my-enemy-1)
-   (custom-enemy ...))
-              
- (define(my-enemy-2)
-   (custom-enemy ...))
-
- #;(survival-game
-    #:avatar       (my-avatar)
-    #:coin-list    (list (red-coin)
-                         (blue-coin)
-                         (green-coin))
-    #:food-list    (list (pineapple)
-                         (mango))
-    #:npc-list     (list (my-npc-1)
-                         (my-npc-2))
-    #:crafter-list (list (custom-crafter)))]
-
-With this new code you would get the following points:
-
-@itemlist[@item{NPC:  @bold{+1} for an NPC  @italic{(1 point per NPC; we already had points for one NPC)}.}
-          @item{NPC:  @bold{+2} for NPCs matching theme  @italic{(1 point per NPC)}.}
-          @item{NPC:  @bold{+5} for lines of dialog  @italic{(1 point per line)}.}
-          @item{NPC:  @bold{+5} for lines of dialog matching theme  @italic{(1 point per line)}.}
-          @item{@bold{Total so far: @italic{+50} points.}}
-          @item{@italic{Additional possible points: @bold{+33}; code 3 additional NPCs, and add 15 lines of
-            theme matching dialog.} }]
+ (define (my-enemy-1)
+   (custom-enemy #:ai              'easy
+                 #:sprite          snake-sprite
+                 #:amount-in-world 5))
+ 
+ (define (my-enemy-2)
+   (custom-enemy #:ai              'medium
+                 #:sprite          bat-sprite
+                 #:amount-in-world 2
+                 #:weapon          (custom-weapon #:name "Acidtron"
+                                                  #:dart (custom-dart #:damage 50
+                                                                      #:speed  20))))]
 
 @; ------ CUSTOMIZE CRAFTER
 
@@ -240,31 +154,10 @@ To earn this kata @CRAFTER-KATA they need to:
 
 @italic{Code and customize additional crafters.}
 
-@;codeblock{#lang survival}
+@side-note["Score"]{Food:  @bold{+2} for food item, @bold{+2} for food items matching theme.
+         Crafter:  @bold{+1} for a crafter,  @bold{+3} for recipes, @bold{+3} for recipes matching theme}
+
 @racketblock[
- #;(define (my-avatar)
- (...))
-
- #;(define (red-coin)
- (...))
-
- #;(define (blue-coin)
- (...))
-
- #;(define (green-coin)
- (...))
-
- #;(define (pineapple)
- (...))
-
- #;(define (mango)
- (...))
-
- #;(define(my-npc-1)
- (...))
-              
- #;(define(my-npc-2)
- (...))
 
  (define (kiwi)
    (custom-food #:sprite (star 5 'solid 'brown)
@@ -303,38 +196,13 @@ To earn this kata @CRAFTER-KATA they need to:
 
  (define (freezer-crafter)
    (custom-crafter #:menu (crafting-menu-set! #:recipes frozen-pineapple-recipe)
-                   #:tile 2))
+                   #:tile 2))]
 
- #;(survival-game
-    #:avatar       (my-avatar)
-    #:coin-list    (list (red-coin)
-                         (blue-coin)
-                         (green-coin))
-    #:food-list    (list (pineapple)
-                         (mango)
-                         (kiwi)
-                         (frozen-pineapple))
-    #:npc-list     (list (my-npc-1)
-                         (my-npc-2))
-    #:crafter-list (list (oven-crafter)
-                         (freezer-crafter)))]
-
-With this new code you would get the following points:
-
-@itemlist[@item{Food:  @bold{+2} for food item  @italic{(1 point per food item)}.}
-          @item{Food:  @bold{+2} for food items matching theme  @italic{(1 point per food item)}.}
-          @item{Crafter:  @bold{+1} for a crafter  @italic{(1 point per crafter; we already had points for one crafter)}.}
-          @item{Crafter:  @bold{+3} for recipes  @italic{(1 point per recipe)}.}
-          @item{Crafter:  @bold{+3} for recipes matching theme  @italic{(1 point per recipe)}.}
-          @item{@bold{Total so far: @italic{+61} points.}}
-          @item{@italic{Additional possible points: @bold{+27}; code 3 additional crafter, and add 12 more
-            theme matching recipes.} }]
 
 @section{Complete (survival-game)}
 
 This is what the @italic{(survival-game)} function would look like:
 
-@;codeblock{#lang survival}
 @racketblock[
  (survival-game
   #:avatar       (my-avatar)

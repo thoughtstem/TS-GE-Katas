@@ -46,6 +46,13 @@ So to sum up:
 @itemlist[@item{Local competitions will be organized by your coach and will be held at your school.}
           @item{Regional competitions may be entered by invitation only.}]
 
-@include-section["scoring.scrbl"]
-@include-section["tech-docs.scrbl"]
+@;@include-section["scoring.scrbl"]
+@;@include-section["tech-docs.scrbl"]
 @include-section["badges.scrbl"]
+@include-section["intro-katas.scrbl"]
+@include-section["avatar-katas.scrbl"]
+@include-section["coin-katas.scrbl"]
+@include-section["food-katas.scrbl"]
+@include-section["npc-katas.scrbl"]
+@include-section["crafter-katas.scrbl"]
+@include-section["practice-game-jam.scrbl"]
