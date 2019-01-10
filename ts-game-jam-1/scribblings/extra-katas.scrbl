@@ -31,16 +31,16 @@
 
 @; ------ Day and Night Cycle
 
-@game-jam-kata[#:document-level section
-               #:difficulty    'air
-               #:title "Day and Night Cycle"
-               #:time-limit 3
-               #:dollars 1]{
-                                                        
- @side-note["Tip"]{This is an optinal Kata.}
-
- @(to-earn-this-code-kata #:english    "Write a game with an avatar and a custom day and night cycle."
-                          #:lang       'survival
-                          #:code       'starvation-rate
-                          #:badge-type @META-KATA)
-}
+@;@game-jam-kata[#:document-level section
+@;               #:difficulty    'air
+@;               #:title "Day and Night Cycle"
+@;               #:time-limit 3
+@;               #:dollars 1]{
+@;                                                        
+@; @side-note["Tip"]{This is an optinal Kata.}
+@;
+@; @(to-earn-this-code-kata #:english    "Write a game with an avatar and a custom day and night cycle."
+@;                          #:lang       'survival
+@;                          #:code       'starvation-rate
+@;                          #:badge-type @META-KATA)
+@;}
