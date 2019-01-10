@@ -146,7 +146,7 @@
   (define folder (pkg-directory (~a pkg-name)))
   
   (define kata-file
-    (build-path folder "examples" "compiled-kata-data" (~a kata-name ".rkt")))
+    (build-path folder "examples" "compiled-example-data" (~a kata-name ".rkt")))
 
   (typeset-code #:keep-lang-line? #t (kata-file->code-string kata-file)))
 
@@ -155,7 +155,7 @@
   (define folder (pkg-directory (~a pkg-name)))
   
   (define kata-file
-    (build-path folder "examples" "compiled-kata-data" (~a kata-name ".rkt")))
+    (build-path folder "examples" "compiled-example-data" (~a kata-name ".rkt")))
 
   (kata-file->code-string kata-file))
 
@@ -164,7 +164,7 @@
   (define folder (pkg-directory (~a pkg-name)))
   
   (define example-folder
-    (build-path folder "examples" "compiled-kata-data"))
+    (build-path folder "examples" "compiled-example-data"))
 
   (map (compose string->symbol
                 (curryr string-replace ".rkt" ""))
@@ -222,12 +222,11 @@
      (with-syntax ([run:kata-name (format-id #'kata-name "run:~a" #'kata-name)]
                    [syntaxes:kata-name (format-id #'kata-name "syntaxes:~a" #'kata-name)]
                    [lang-req (format-id #'lang "~a/jam-lang" #'lang)]
-                   ;[req #'(require (only-in game-engine tick draw-entities game-entities game-has-entity-named/c))]
                    [full stx]
                    [save-path (apply build-path
                                      (append
                                       (reverse (rest (reverse (explode-path (syntax-source stx)))))
-                                      (list "compiled-kata-data")))])
+                                      (list "compiled-example-data")))])
 
 
        #`(begin

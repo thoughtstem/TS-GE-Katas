@@ -21,7 +21,8 @@
          (struct-out response:say)
          (struct-out stimulus:read)
          (struct-out stimulus:hear)
-         
+
+         set-id
          within
          recite
          read
@@ -69,7 +70,9 @@
 (struct response:code response () #:transparent)
 (struct response:say  response () #:transparent)
 
-
+(define (set-id i k )
+  (struct-copy kata k
+               [id i]))
 
 (define (code c #:lang (l 'racket))
   (response:code (list l c)))
@@ -126,9 +129,7 @@
   (within #:minutes 1
           (recite #:in   "The Core Values"
                   #:out  (list "It's not about my code; it's about what I can code."
-                               "It's not about me; it's about my team.")))
-
-  )
+                               "It's not about me; it's about my team."))) )
 
 ; ======= COLLECTIONS =======
 
