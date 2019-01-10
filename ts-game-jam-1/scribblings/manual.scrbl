@@ -56,3 +56,4 @@ So to sum up:
 @include-section["enemy-katas.scrbl"]
 @include-section["crafter-katas.scrbl"]
 @include-section["practice-game-jam.scrbl"]
+@include-section["extra-katas.scrbl"]
