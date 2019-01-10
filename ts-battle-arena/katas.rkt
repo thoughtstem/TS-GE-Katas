@@ -264,20 +264,3 @@
    (not/c (curryr name-contains? "Tower"))))
 
 
-(require "./rendering.rkt") ; For bronze?, silver?, etc.
-(define/provide bronze-katas (filter-collection
-                              bronze?
-                              battle-arena-katas))
-
-(define/provide silver-katas (filter-collection
-                              silver?
-                              battle-arena-katas))
-
-(define/provide gold-katas (filter-collection
-                            gold?
-                            battle-arena-katas))
-
-(define/provide platinum-katas (filter-collection
-                                platinum?
-                                battle-arena-katas))
-

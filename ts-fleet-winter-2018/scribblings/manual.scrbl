@@ -142,21 +142,6 @@ even better ones!
 
 @(scribblify-collection dagger-tower-katas)
 
-@section{Bronze Katas}
-
-@(scribblify-collection bronze-katas)
-
-@section{Silver Katas}
-
-@(scribblify-collection silver-katas)
-
-@section{Gold Katas}
-
-@(scribblify-collection gold-katas)
-
-@section{Platinum Katas}
-
-@(scribblify-collection platinum-katas)
 
 @section{All Katas}
 

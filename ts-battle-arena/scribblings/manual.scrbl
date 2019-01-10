@@ -6,42 +6,12 @@
            "../rendering.rkt"
            (except-in racket read))
 
-@title{Game Design through Fortnite}
+@title{Battle Arena Katas}
 
-Game design is an art.  Two of the best ways
-of learning that art are:
-
-@itemlist[@item{Studying a great game (like Fortnite).}
-          @item{Trying to build similar games.}]
-
-Keep in mind, though, that great games (like Fortnite)
-take many years and hundreds of talented people to make.
-
-As a beginning programmer, you must remember that
-you'll be able to make games like that @emph{one day}.
-But you'll have to work your way up.  You'll have
-to acquire new skills.  You'll have to practice.
-You'll have to work hard.
-
-Take heart, though!
-
-The road to learning the art of game design
-is a beautiful road.  You'll start learning cool
-things right away.  And even though you won't
-be able to make Fortnite right away, you'll
-be able to make cool things right away. 
-
-Just keep practicing.  Keep taking joy in the things
-you're able to make.  One day, you'll be able to
-make games like Fortnite.  Or perhaps...
-even better ones!
+These @(~a (length (kata-collection-katas battle-arena-katas))) katas pertain to @racket[battle-arena].
+They can be browsed in various ways using the table of contents below.
 
 @table-of-contents[]
-
-
-
-@include-section["materials.scrbl"]
-
 
 @section{Balance Katas}
 
@@ -141,22 +111,6 @@ even better ones!
 @section{Homing Repeater Katas}
 
 @(scribblify-collection dagger-tower-katas)
-
-@section{Bronze Katas}
-
-@(scribblify-collection bronze-katas)
-
-@section{Silver Katas}
-
-@(scribblify-collection silver-katas)
-
-@section{Gold Katas}
-
-@(scribblify-collection gold-katas)
-
-@section{Platinum Katas}
-
-@(scribblify-collection platinum-katas)
 
 @section{All Katas}
 
