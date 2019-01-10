@@ -1,7 +1,9 @@
 # TS-Kata-Collections
 
 These kata collections form the basis for various educational offerings.
-Each teaches a programming language in a gamified way.
+Each teaches a programming language in a gamified way.  Everything in this
+repo is public.  It can be viewed at katas.thoughtstem.com.  (Obviously, only put
+stuff in here that ought to be public on the web.)
 
 The common package between kata collections is `ts-kata-util`, which
 contains utilities for making the documentation of katas faster.  It can
@@ -9,6 +11,12 @@ be required in any TS-Kata-Collection or any TS-Language.  It can serve
 as a bridge or interface between language and kata collection.
 
 Common operations:
+
+# Make a new collection
+
+```
+raco new-kata-collection COLLECTION-NAME
+```
 
 # Running tests
 

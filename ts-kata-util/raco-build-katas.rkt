@@ -3,11 +3,7 @@
 (require raco/command-name)
 
 (define ts-language-name
- (last (explode-path (current-directory)))
- #;(command-line
-   #:program (short-program+command-name)
-   #:args (kata-collection-name) 
-   kata-collection-name))
+ (last (explode-path (current-directory))))
 
 (displayln (~a "Building " ts-language-name))
 

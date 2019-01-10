@@ -232,17 +232,13 @@
        #`(begin
 
            (provide run:kata-name
-                    syntaxes:kata-name)
+                    #;syntaxes:kata-name)
 
            (define syntaxes:kata-name (drop (syntax-e #,(syntax #'full)) 3) )
 
-           
-           
-           (define (run:kata-name)
-             (local-require lang) ;Works as long as langs don't need to be #lang ___'ed in
-             
-             (convert-require-if-necessary expr) ...
-             (run-game-with entity ...))
+           (define (run:kata-name)            
+            (convert-require-if-necessary expr) ...
+            (run-game-with entity ...))
 
            ;And some basic unit testing
            (module+ test
@@ -256,15 +252,15 @@
 
                (require syntax/to-string)
              
-               (define f-name (build-path save-path (~a (symbol->string 'kata-name) ".rkt")))
+               (define f-name
+                 (build-path save-path
+                             (~a (symbol->string 'kata-name) ".rkt")))
 
                (with-output-to-file f-name #:exists 'replace 
                  (thunk*
                   (displayln (~a "#lang " 'lang))
                   (displayln (string-join (map (compose (λ(s) (~a "(" s ")")) syntax->string)
-                                               syntaxes:kata-name) "\n\n")))))
-
-             )))]))
+                                               syntaxes:kata-name) "\n\n"))))))))]))
 
 
 
