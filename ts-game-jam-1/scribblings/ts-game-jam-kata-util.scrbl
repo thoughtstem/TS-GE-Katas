@@ -10,14 +10,14 @@
           AVATAR-KATA
           COIN-KATA
           FOOD-KATA
-          NPC-KATA
+          ENEMY-KATA
           CRAFTER-KATA)
 
 @(define META-KATA    (circle 10 'outline 'black))
 @(define AVATAR-KATA  (circle 10 'solid   'orange))
 @(define COIN-KATA    (circle 10 'solid   'green))
 @(define FOOD-KATA    (circle 10 'solid   'pink))
-@(define NPC-KATA     (circle 10 'solid   'black))
+@(define ENEMY-KATA   (circle 10 'solid   'black))
 @(define CRAFTER-KATA (circle 10 'solid   'blue))
 
 @(define DOLLAR (image "scribblings/imgs/ts-dollar.png"
