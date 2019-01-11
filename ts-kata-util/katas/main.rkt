@@ -16,16 +16,20 @@
          (struct-out response)
          (struct-out stimulus)
          (struct-out kata)
+         make-kata
          (struct-out kata-collection)
          (struct-out response:code)
          (struct-out response:say)
          (struct-out stimulus:read)
          (struct-out stimulus:hear)
+         (struct-out expression)
 
          set-id
          within
          recite
          read
+         say
+         translate
 
          define-sub-collection
          define-sub-collections
@@ -57,6 +61,11 @@
 ;  Start tagging things and they'll get out of sync quickly...
 (struct kata (id stimulus response tests) #:transparent)
 
+(define (make-kata s r)
+  (kata 'TODO-id s r '()))
+
+(struct expression (language data) #:transparent)
+
 (struct test ()         #:transparent)
 (struct response (data) #:transparent)
 (struct stimulus (data) #:transparent)
@@ -75,10 +84,10 @@
                [id i]))
 
 (define (code c #:lang (l 'racket))
-  (response:code (list l c)))
+  (response:code (expression l c)))
 
 (define (read c #:lang (l 'English))
-  (stimulus:read (list l c)))
+  (stimulus:read (expression l c)))
 
 (define (say s)
   (response:say s))
@@ -169,12 +178,12 @@
   (cond [(response:code? r)
          (codeblock-pict
           #:keep-lang-line? #t
-          (second (response-data r)))]
+          (expression-data (response-data r)))]
         [else (error "TODO")]))
 
 (define (stimulus->pict r)
   (cond [(stimulus:read? r)
-         (text (second (stimulus-data r)))]
+         (text (expression-data (stimulus-data r)))]
         [else (error "TODO")]))
 
 (define (kata->pict k)
@@ -205,7 +214,7 @@
 (define (num-expressions k)
   (sub1
    (length (string-split
-           (second (response-data (kata-response k))) "("))))
+           (expression-data (response-data (kata-response k))) "("))))
 
 (define (with-expression-count f n)
   (lambda (k)

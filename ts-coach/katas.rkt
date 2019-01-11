@@ -1,0 +1,26 @@
+#lang racket
+
+(provide my-katas)
+
+(require ts-kata-util/katas/main
+         ts-fundamentals/katas)
+
+(define my-katas
+  (merge-collections
+   (kata-collection
+    (list
+     (within #:minutes 5
+             (make-kata
+              (read core-values-kata)
+              (say core-values-kata)))
+     ))
+   
+    ;Many katas begin by pulling in examples
+    ; from some TS-Language
+    (lang->kata-collection 'fundamentals)
+
+    ;You can also import katas from other kata collections
+    (kata-collection
+      (list core-values-kata))))
+
+

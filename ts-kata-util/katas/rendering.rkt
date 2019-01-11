@@ -5,34 +5,53 @@
 
 (require "./main.rkt" scribble/manual)
 
+(define (known-languages)
+  '(racket battle-arena))
+
+(define (data->scribble d)
+  (cond [(string? d)       d]
+        [(list? d)         (~a d) #;(itemlist (map item d))]
+        [(kata? d)         (kata->scribble d)]
+        [(expression? d)   (expression->scribble d)]
+        [else              (error (~a "Unknown data type" d))]))
+
+(define (expression->scribble d)
+
+  (if (member (expression-language d) (known-languages))
+      (list
+       (para (~a "This " (expression-language d) " expression"))
+       (data->scribble (expression-data d)))
+      (list
+       (para (~a "This " (expression-language d) " expression"))
+       (~a (expression-data d))
+       #;(codeblock (~a (expression-data d))))
+      ))
+
 (define (response:code->scribble r)
-  ;(second (response-data ))
-  ;Gross......  Fix this
   (list
-   (para (~a "You can write this " (first (response-data r)) " code:"))
-   (codeblock (second
-               (response-data r)))))
+   (bold "CODE:")
+
+   (data->scribble (response-data r))
+   
+   #;(codeblock
+      (~a (expression-data
+           (response-data r))))))
 
 (define (response:say->scribble r)
-  (define data (response-data r))
   (list
-   (para (~a "You recite this:"))
-   (if (list? data)
-       (itemlist (map item data))
-       (bold data))))
+   (bold (~a "RECITE:"))
+   
+   (data->scribble (response-data r))))
 
 (define (stimulus:read->scribble s)
   (list
-   (~a "When given this " (first (stimulus-data s)) " phrase: ")
-   (bold
-    (second
-     (stimulus-data s)))))
+   (bold "READ:")
+   (data->scribble (stimulus-data s))))
 
 (define (stimulus:hear->scribble s)
   (list
-   (~a "When hearing this: ")
-   (bold
-    (stimulus-data s))))
+   (bold (~a "HEAR: "))
+   (data->scribble (stimulus-data s))))
 
 (define (response->scribble r)
   (cond [(response:code? r) (response:code->scribble r)]
