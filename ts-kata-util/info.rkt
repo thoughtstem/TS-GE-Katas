@@ -12,7 +12,9 @@
 (define pkg-authors '(thoughtstem))
 
 (define compile-omit-paths '(
-  "badge-maker"))
+  "badge-maker" 
+  "raco-tools/prototype-kata-collection" 
+  "raco-tools/prototype-lang"))
 
 (define raco-commands
   '(("build-lang-examples" ts-kata-util/raco-build-katas "runs kata-definition files, runs tests, builds documentation" 100)
