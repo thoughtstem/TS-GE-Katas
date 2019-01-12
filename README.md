@@ -17,7 +17,11 @@ git clone https://github.com/thoughtstem/TS-Kata-Collections.git
 cd ts-kata-util
 raco pkg config --set git-checkout-credentials "GITHUB-NAME:GITHUB-PASSWORD"
 raco pkg install
+cd ..
+raco install-all-here
 ```
+
+This installs all the katas as racket packages. 
 
 # Common operations:
 
