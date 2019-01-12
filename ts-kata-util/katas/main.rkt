@@ -20,6 +20,7 @@
          (struct-out kata-collection)
          (struct-out response:code)
          (struct-out response:say)
+         (struct-out response:do)
          (struct-out stimulus:read)
          (struct-out stimulus:hear)
          (struct-out expression)
@@ -28,8 +29,11 @@
          within
          recite
          read
+         teach
          say
+         do
          translate
+         teachback
 
          define-sub-collection
          define-sub-collections
@@ -71,13 +75,17 @@
 (struct stimulus (data) #:transparent)
 
 ;TODO: Other kinds of tests, e.g. response gets score X on test T
-(struct test:within     test   (minutes)      #:transparent)
+(struct test:within        test   (amount units)      #:transparent)
+(struct test:with-material test   (type)              #:transparent)
 
 (struct stimulus:read stimulus () #:transparent)
 (struct stimulus:hear stimulus () #:transparent)
 
 (struct response:code response () #:transparent)
 (struct response:say  response () #:transparent)
+(struct response:do   response () #:transparent)
+
+(struct response:teach response () #:transparent)
 
 (define (set-id i k )
   (struct-copy kata k
@@ -92,8 +100,14 @@
 (define (say s)
   (response:say s))
 
+(define (do s)
+  (response:do s))
+
 (define (hear s)
   (stimulus:hear s))
+
+(define (teach s)
+  (response:teach s))
 
 
 ;====== Kata CONSTRUCTORS ======
@@ -113,6 +127,15 @@
          #:lang in-lang)
    '()))
 
+(define (teachback #:id (id 'TODO-id)
+                   #:in k
+                   #:with-materials (materials '()))
+  (kata
+   id
+   (read k #:lang 'katas)
+   (do  "Whatever you need to in order to teach this kata.")
+   (map test:with-material materials)))
+
 
 (define (recite #:in  kw
                 #:out p)
@@ -126,7 +149,7 @@
   (-> #:minutes number? kata? kata?)
 
   (struct-copy kata t
-               [tests (cons (test:within time) (kata-tests t))]))
+               [tests (cons (test:within time "minutes") (kata-tests t))]))
 
 
 
@@ -169,41 +192,6 @@
 
 
 
-
-
-;Ways of displaying kata collections
-;  Gross use of (second ...)
-(require pict/code pict)
-(define (response->pict r)
-  (cond [(response:code? r)
-         (codeblock-pict
-          #:keep-lang-line? #t
-          (expression-data (response-data r)))]
-        [else (error "TODO")]))
-
-(define (stimulus->pict r)
-  (cond [(stimulus:read? r)
-         (text (expression-data (stimulus-data r)))]
-        [else (error "TODO")]))
-
-(define (kata->pict k)
-  (match-define (kata id
-                      stim
-                      resp
-                      tests)
-    k)
-  
-  (vl-append 10
-             (text (~a (kata-id k)))
-             (stimulus->pict stim)
-             (response->pict resp))
-
-  )
-
-(define (display-collection kc)
-  (map kata->pict
-       (kata-collection-katas kc)))
-
 (define (filter-collection pred kc)
   ;Use lenses?
   (kata-collection
@@ -221,19 +209,7 @@
     (f (num-expressions k)
        n)))
 
-(module+ test
-  (require rackunit)
-  
-  (check-equal? 3
-   (num-expressions (example->kata 'battle-arena 'enemy-1)))
 
-  (display-collection
-   (filter-collection
-    (with-expression-count <= 3)
-    (lang->kata-collection 'battle-arena)))
-
-  )
- 
 
 ;Another query: has-keyword?
 ;  Can combine with with-expression-count

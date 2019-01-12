@@ -2,7 +2,7 @@
 
 (provide scribblify-collection)
 
-(require ts-kata-util/katas/rendering
+(require ts-kata-util/katas/rendering/scribble
          ts-kata-util/katas/main)
 
 (define (scribblify-collection kc)
