@@ -38,6 +38,8 @@
          define-sub-collection
          define-sub-collections
 
+         kata-id->kata-name
+         
          ;This is too general for here...
          define/provide)
 
@@ -108,6 +110,12 @@
 
 (define (teach s)
   (response:teach s))
+
+(define (kata-id->kata-name id)
+  (string-titlecase
+   (string-replace (~a id)
+                  "-"
+                  " ")))
 
 
 ;====== Kata CONSTRUCTORS ======

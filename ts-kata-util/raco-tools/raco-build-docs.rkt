@@ -1,6 +1,7 @@
 #lang racket
 
-(require raco/command-name)
+(require raco/command-name
+         net/sendurl)
 
 (define ts-kata-collection-name
  (last (explode-path (current-directory))))
@@ -15,6 +16,9 @@
 
 (system "raco pkg install")
 (system (~a "raco setup " ts-kata-collection-name))
+
+(send-url (~a "file://"
+              (build-path (current-directory) "doc/manual/index.html")))
 
 (displayln "Done")
 

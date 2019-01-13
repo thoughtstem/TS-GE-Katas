@@ -3,7 +3,8 @@
 @(require ts-kata-util/katas/main
           ts-kata-util/katas/rendering
           "../katas.rkt"
-          "../rendering.rkt")
+          "../rendering.rkt"
+          (except-in racket read do))
 
 @title{Unnamed Kata Collection}
 
@@ -30,4 +31,4 @@ Edit the kata definitions there.
 
 For custom rendering edit @racket[rendering.rkt].
 
-@(scribblify-collection my-katas)
+@(scribblify-collection katas)

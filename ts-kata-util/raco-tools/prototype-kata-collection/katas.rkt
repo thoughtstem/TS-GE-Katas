@@ -1,11 +1,11 @@
 #lang racket
 
-(provide my-katas)
+(provide katas)
 
 (require ts-kata-util/katas/main
          ts-fundamentals/katas)
 
-(define my-katas
+(define katas
   (merge-collections
     ;Many katas begin by pulling in examples
     ; from some TS-Language

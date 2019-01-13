@@ -232,7 +232,33 @@
 
    'homing-repeater-3
    (read "Make a game that has a weapon that has a hoaming fire mode and a customized dart with an animal sprite.")
+
+
+   'grow-1
+   (read "Make a game with a potion that makes you grow.")
+   'grow-and-shrink
+   (read "Make a game with a potion that makes you grow and then shrink")
+
+   'health-1
+   (read "Make a game that has a potion that gives you some health.")
+   'health-2
+   (read "Make a game that has a potion that fills your health bar.")
+   'health-3
+   (read "Make a game that has both Health and Max Health Potions, defined outside battle-arena-game.")
    
+   'boost-1
+   (read "Make a game that has a powerup that temporarily boosts your health.")
+   'boost-2
+   (read "Make a game that has a powerup that temporarily boosts your speed.")
+   'boost-3
+   (read "Make a game that has both Damage and Speed Boost Powerups, defined outside battle-arena-game.")
+
+   'shield-1
+   (read "Make a game that has a potion that increases your shield by 50.")
+   'shield-2
+   (read "Make a game that has a potion that recovers your shield to 100.")
+   'shield-3
+   (read "Make a game that has both a Shield and Max Shield Potion, defined outside battle-arena-game.")
    ))
 
 
@@ -255,6 +281,11 @@
   repeater-armor-katas
   sword-armor-katas
   enemy-weapon-katas
+  rocket-tower-katas
+  grow-katas
+  shield-katas
+  boost-katas
+  health-katas
   ;A few special ones require us to filter out certain other katas.
   (enemy-katas
    (not/c (curryr name-contains? "Weapon")))

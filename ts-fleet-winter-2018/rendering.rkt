@@ -7,10 +7,12 @@
          silver?
          gold?
          platinum?
-         scribblify-collection)
+         scribblify-collection
+         kata-section)
 
 (require ts-kata-util/katas/rendering
-         ts-kata-util/katas/main)
+         ts-kata-util/katas/main
+         scribble/manual)
 
 (define (scribblify-collection kc)
   (kata-collection->scribble
@@ -78,3 +80,9 @@
   (subsection (~a (kata->difficulty-name k) " "
                   (kata-name k) " "
                   "Kata")))
+
+(define (kata-section kind collection)
+  (list
+   (section (kata-id->kata-name kind))
+   (scribblify-collection collection)))
+
