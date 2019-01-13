@@ -1,14 +1,18 @@
-* Fix up fleet winter scribble layout.  Use #:befores appropriately
+* Start ts-coaches, put in meta katas.  Leave in a state for us to make more later.
+  > Might need to rewrite the rendering system.  Abstractions are breaking down.
+    -> Give make-stimulus->X?
+  > Get rendering of meta katas to make sense.  Broken now.   Weirdness with section/subsection/etc
+    > Be careful not to break regular kata rendering
+  > Define the various kinds of meta katas we might want
+    > ts-coaches      : Meta katas -> 1) How to teach a kata, 2) How to make a kata, 3) What is a kata?
+  > Define some useful example katas (using above types)
+
+
 * Get installation to be perfect (Kata collections & Languages)
 * Recreate ts-fundamentals
   > Put in some unplugged activities (will be prototypes for K-2 classes...)
     - Also prototypes for examples in Don't Teach Coding book
-* Start ts-coaches, put in meta katas.  Leave in a state for us to make more later.
-  > Define the various kinds of meta katas we might want
 * Make sure all renderings of katas look good and are clear:
-  > ts-battle-arena : Internal
-  > ts-fleet...     : External, gamified camp
-  > ts-coaches      : Meta katas -> 1) How to teach a kata, 2) How to make a kata, 3) What is a kata?
   > ts-fundamentals : 
   >   Unplugged katas, Core vals, picture puzzles
 

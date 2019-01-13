@@ -137,34 +137,38 @@
              contract
              body ...))))))
 
+(define (get-kata-file pkg-name (kata-name #f))
+  
+  (local-require pkg/lib)
+  (define folder (pkg-directory (~a pkg-name)))
+
+  (and (not folder)
+       (error (~a "Couldn't find a folder for language '" pkg-name "'.  Either install it with 'raco pkg install " pkg-name "'.  Or, if you have it on your computer somewhere already (perhaps in TS-Languages/), tell me where it is by navigating to it and running 'raco pkg install'")))
+  
+  (define kata-file
+    (build-path folder "examples" "compiled-example-data" (if kata-name
+                                                              (~a kata-name ".rkt")
+                                                              ".")))
+
+  kata-file)
+
 
 ;Takes something like: 'battle-arena 'rocket-tower-1
 (define/contract (show-kata-code pkg-name kata-name)
   (-> symbol? symbol? any/c)
 
-  (local-require pkg/lib)
-  (define folder (pkg-directory (~a pkg-name)))
-  
-  (define kata-file
-    (build-path folder "examples" "compiled-example-data" (~a kata-name ".rkt")))
+  (define kata-file (get-kata-file pkg-name kata-name))
 
   (typeset-code #:keep-lang-line? #t (kata-file->code-string kata-file)))
 
 (define (get-example-code pkg-name kata-name)
-  (local-require pkg/lib)
-  (define folder (pkg-directory (~a pkg-name)))
-  
-  (define kata-file
-    (build-path folder "examples" "compiled-example-data" (~a kata-name ".rkt")))
+
+  (define kata-file (get-kata-file pkg-name kata-name))
 
   (kata-file->code-string kata-file))
 
 (define (get-example-names pkg-name)
-  (local-require pkg/lib)
-  (define folder (pkg-directory (~a pkg-name)))
-  
-  (define example-folder
-    (build-path folder "examples" "compiled-example-data"))
+  (define example-folder (get-kata-file pkg-name))
 
   (map (compose string->symbol
                 (curryr string-replace ".rkt" ""))

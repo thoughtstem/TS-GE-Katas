@@ -15,10 +15,10 @@
 (displayln (~a "Rebuilding the docs with 'raco setup " ts-kata-collection-name "'"))
 
 (system "raco pkg install")
-(system (~a "raco setup " ts-kata-collection-name))
+(and (system (~a "raco setup " ts-kata-collection-name))
 
-(send-url (~a "file://"
-              (build-path (current-directory) "doc/manual/index.html")))
+     (send-url (~a "file://"
+                   (build-path (current-directory) "doc/manual/index.html"))))
 
 (displayln "Done")
 

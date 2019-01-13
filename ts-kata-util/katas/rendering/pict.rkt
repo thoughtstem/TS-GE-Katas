@@ -1,5 +1,7 @@
 #lang racket
 
+(provide kata->pict)
+
 (require "../main.rkt"
          "./main.rkt")
 

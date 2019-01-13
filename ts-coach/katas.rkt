@@ -5,14 +5,16 @@
 (require ts-kata-util/katas/main
          ts-fundamentals/katas)
 
+
 (define my-katas
   (merge-collections
    (kata-collection
     (list
-     (within #:minutes 5
-             (make-kata
-              (read core-values-kata)
-              (say core-values-kata)))
+     (set-id 'meta-1
+             (within #:minutes 5
+                     (teachback #:in core-values-kata
+                                #:with-materials
+                                '(whiteboard))))
      ))
    
     ;Many katas begin by pulling in examples
