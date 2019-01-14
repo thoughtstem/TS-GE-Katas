@@ -1,19 +1,18 @@
 
 * Github ticket(s) for ts-fundamentals
-  - make some cool examples of pictographic katas (see picture, write code)...
-    - primitives:
-      Code to picture of evaluation... (Easy with images...)
-      Code to picture of code... As tree.  As flow diagram.
-    - Leave in a state for others to make more...
-    - Functions that randomly generate katas... Easy to make more of them.
+  - refactor for ids in image-to-code katas
+  - Fix the scribble layout
+  - Try a "see this picture of the code structure", "Write the code" type katas.
   > Put in some unplugged activities (will be prototypes for K-2 classes...)
     - Also prototypes for examples in Don't Teach Coding book
 
 
 * Doc ts-kata-util.  Not hard.  Necessary.  Do it.
   > Philosophically/And for docs: Katas: Stimulus,verb response,verb tests,adjectives?preps?rules? data,language?
+    
      - I think our investment in meta will pay off.  We can start teaching kids how  to each other kids.  And then we instantly win...
      - One thing that's unspecified that I'd like to know (one day) is how often people need to redo certain katas.  Some are more important than others and need refreshing.  Others maybe don't.  And it may be student-specific.
+         - Probably need to shift from -- "student has done a kata" to "student is expected to be able to do type T katas in under S seconds" etc.  Expressing learning in terms of performance on a type of kata is the best way to test for "mastery of concept."
      - What's the design process for taking a body of knowledge and creating kata-based curriculum?
      - Katas written down are like source code.  Teachers, students, training, etc.  That's the running machine.
 

@@ -39,8 +39,8 @@
          define-sub-collections
 
          kata-id->kata-name
-         
-         
+
+
          define/provide ;This is too general for here...
          define-kata
          define-kata-collection)
@@ -70,7 +70,8 @@
 (struct kata (id stimulus response tests) #:transparent)
 
 (define (make-kata s r)
-  (kata 'TODO-id s r '()))
+  (kata 'TODO-id
+        s r '()))
 
 (struct expression (language data) #:transparent)
 
