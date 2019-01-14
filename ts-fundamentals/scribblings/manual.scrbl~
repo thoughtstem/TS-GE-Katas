@@ -1,0 +1,10 @@
+#lang scribble/manual
+
+@(require ts-kata-util/katas/main
+          ts-kata-util/katas/rendering
+          "../katas.rkt"
+          "../rendering.rkt")
+
+@title{Fundamentals}
+
+@(scribblify-collection katas)

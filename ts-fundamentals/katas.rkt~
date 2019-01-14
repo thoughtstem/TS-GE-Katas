@@ -1,0 +1,11 @@
+#lang racket
+
+(provide core-values-kata)
+
+(require ts-kata-util/katas/main)
+
+(define core-values-kata
+  (recite
+   #:in "What are our core values?"
+   #:out (list "It's not about my code, it's about what I can code!"  
+               "It's not about me; it's about my team!"))
