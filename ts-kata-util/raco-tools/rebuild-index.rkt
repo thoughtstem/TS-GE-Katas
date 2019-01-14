@@ -2,8 +2,9 @@
 
 (require TS-HomeSite/widgets)
 
-(and (not (file-exists? "./index.rktd"))
-     (error "index.rktd file not found.  Are you in the root directory of a collection of kata collections?  (e.g. TS-Kata-Collections/)"))
+(if (not (file-exists? "./index.rktd"))
+   (error "index.rktd file not found.  Are you in the root directory of a collection of kata collections?  (e.g. TS-Kata-Collections/)")
+   (void))
 
 (define ns (make-base-namespace))
 
@@ -34,3 +35,4 @@
           "<h1>Unlisted Collections</h1>"
           (map (curry apply collection-link) private-data)) ))))
 
+(displayln "Done")
