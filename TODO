@@ -1,7 +1,6 @@
 
 * Github ticket(s) for ts-fundamentals
-  - refactor for ids in image-to-code katas
-  - Fix the scribble layout
+  - Fix up the sub repo bug
   - Try a "see this picture of the code structure", "Write the code" type katas.
   > Put in some unplugged activities (will be prototypes for K-2 classes...)
     - Also prototypes for examples in Don't Teach Coding book
