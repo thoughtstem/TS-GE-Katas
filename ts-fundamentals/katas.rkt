@@ -4,7 +4,8 @@
          core-values)
 
 (require ts-kata-util/katas/main
-         "./katas/image-to-code.rkt")
+         "./katas/image-to-code.rkt"
+         "./katas/simple-pictures.rkt")
 
 (define-kata core-values
   (recite
@@ -32,6 +33,7 @@
 (define-kata-collection katas
   unplugged
   fundamentals
-  image->code-katas)
+  image->code-katas
+  simple-pictures)
 
 

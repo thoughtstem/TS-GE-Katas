@@ -54,6 +54,11 @@
   )
 
 (define (kata-collection->scribble kc #:befores (before-each (list )))
-  (map (curry kata->scribble #:befores before-each)
-       (kata-collection-katas kc)))
+
+  (if (kata? kc)
+      (kata->scribble kc #:befores before-each)
+      (map (curry kata->scribble #:befores before-each)
+           (kata-collection-katas kc)))
+
+  )
 

@@ -20,19 +20,7 @@
          
          get-example-code
          get-example-names
-         
-<<<<<<< HEAD
-         kata
-         side-note
-         student-should-translate
-         student-should-know-difference-between
-         to-earn-this-code-kata
-         to-earn-this-rubric-kata
-         to-earn-this-meta-kata
-
-=======
-      
->>>>>>> meta-kata-rendering
+        
          define/contract/doc
          )
 

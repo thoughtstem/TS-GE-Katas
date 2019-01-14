@@ -1,14 +1,14 @@
 '(
   ;/index.html data
   ( 
-    (ts-fleet-winter-2018 "FLEET SCIENCE CENTER")
     (ts-game-jam-1        "WINTER AFTER SCHOOL")
+    (ts-fundamentals      "FUNDAMENTALS")
   )
 
   ;/unlisted.html data
   ( 
-    (ts-fundamentals "FUNDAMENTALS")
     (ts-battle-arena "BATTLE ARENA")
     (ts-coaches "COACH TRAINING KATAS")
+    (ts-fleet-winter-2018 "(ARCHIVED) FLEET SCIENCE CENTER WINTER 2018")
   )
 )
