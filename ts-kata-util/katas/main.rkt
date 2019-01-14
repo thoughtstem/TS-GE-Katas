@@ -33,15 +33,17 @@
          say
          do
          translate
-         teachback
+         coach
 
          define-sub-collection
          define-sub-collections
 
          kata-id->kata-name
          
-         ;This is too general for here...
-         define/provide)
+         
+         define/provide ;This is too general for here...
+         define-kata
+         define-kata-collection)
 
 ;(require scribble/manual)
 
@@ -93,6 +95,18 @@
   (struct-copy kata k
                [id i]))
 
+(define-syntax-rule (define-kata id def)
+  (begin (provide id)
+         (define id
+           (set-id 'id
+                   def))))
+
+(define-syntax-rule (define-kata-collection id kata ...)
+  (begin (provide id)
+         (define id
+           (merge-collections
+            kata ...))))
+
 (define (code c #:lang (l 'racket))
   (response:code (expression l c)))
 
@@ -111,13 +125,6 @@
 (define (teach s)
   (response:teach s))
 
-(define (kata-id->kata-name id)
-  (string-titlecase
-   (string-replace (~a id)
-                  "-"
-                  " ")))
-
-
 ;====== Kata CONSTRUCTORS ======
 
 ;A kata that defines translating from a high level natural language
@@ -135,13 +142,12 @@
          #:lang in-lang)
    '()))
 
-(define (teachback #:id (id 'TODO-id)
-                   #:in k
-                   #:with-materials (materials '()))
+(define (coach k #:id (id 'TODO-id)
+               #:with-materials (materials '()))
   (kata
    id
    (read k #:lang 'katas)
-   (do  "Whatever you need to in order to teach this kata.")
+   (do  "Whatever is necessary to guide your fellow coach(es) through the four phases with this kata.")
    (map test:with-material materials)))
 
 
@@ -153,11 +159,17 @@
    (say  p)
    '()))
 
-(define/contract (within #:minutes time t)
-  (-> #:minutes number? kata? kata?)
+(define/contract (within #:minutes (minutes #f)
+                         #:seconds (seconds #f)
+                         t)
+  (->* (kata?) (#:minutes positive?
+                #:seconds positive?)
+       kata?)
+
+  (define time (or minutes seconds))
 
   (struct-copy kata t
-               [tests (cons (test:within time "minutes") (kata-tests t))]))
+               [tests (cons (test:within time (if minutes "minutes" "seconds")) (kata-tests t))]))
 
 
 
@@ -249,9 +261,19 @@
   
   ret)
 
-(define (merge-collections . kcs)
-  (kata-collection
-   (apply append (map kata-collection-katas kcs))))
+(define/contract (merge-collections . kcs)
+  (->* () () #:rest (or/c kata-collection? kata? (listof kata?) (listof kata-collection?)) kata-collection?)
+
+  ;Unpack to get down to bare katas and lists (of lists) thereof
+  (define (f x)
+    (cond
+      [(kata-collection? x) (kata-collection-katas x)]
+      [(list? x) (map f x)]
+      [else x]))
+  
+  (define l (flatten (map f kcs)))
+  
+  (kata-collection l))
 
 (define (fill-in-stimuli kc . ps)
   (define (pairify ps)
@@ -279,7 +301,7 @@
            (filter-collection
             (and/c
              (curryr name-contains? (regexp-replace #rx" Katas"
-                                                   (titleify 'category-name)
+                                                   (kata-id->kata-name 'category-name)
                                                    ""
                                                    ))
              stipulation ...)
@@ -291,7 +313,7 @@
            (filter-collection
             (and/c
              (curryr name-contains? (regexp-replace #rx" Katas"
-                                                   (titleify 'category-name)
+                                                   (kata-id->kata-name 'category-name)
                                                    ""
                                                    )))
             base)))]))
@@ -301,7 +323,7 @@
     (define-sub-collection base name)
     ...))
 
-(define (titleify s)
+(define (kata-id->kata-name s)
   (string-titlecase
    (regexp-replace*
     #rx"[0-9]*"
@@ -311,9 +333,8 @@
      " ")
     "")))
 
-
 (define (kata-name k)
-  (titleify (kata-id k)))
+  (kata-id->kata-name (kata-id k)))
 
 
 (define (name-contains? k s)

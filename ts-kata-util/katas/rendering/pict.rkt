@@ -22,13 +22,20 @@
     #:Xs->X     (curry vl-append 10)) k))
 
 (define (_expr->pict k)
+  (define  (f d l)
+    (cond [(kata? d) ((compose frame (curryr inset 10))
+                      (_kata->pict d))]
+          [(and (eq? l 'English)
+                (list? d))
+           (apply (curry vl-append 5)
+                  (map (curryr f l) d))]
+          [(and (eq? l 'English)
+                (not (list? d)))
+           (text d)]
+          [else (codeblock-pict #:keep-lang-line? #t (~a d))]))
+  
   ((make-expression->X
-    #:data+lang->X 
-    (λ(d l)
-      (cond [(kata? d) (_kata->pict d)]
-            [(eq? l 'English) (text d)]
-            [else (codeblock-pict #:keep-lang-line? #t (~a d))]
-            )))
+    #:data+lang->X f)
     k))
 
 (define (kata->pict k)
@@ -49,9 +56,9 @@
 
   (define k3
     (within #:minutes 5
-            (teachback #:in k1
-                       #:with-materials
-                       '(whiteboard)))
+            (coach k1
+                   #:with-materials
+                   '(whiteboard)))
 
     )
 

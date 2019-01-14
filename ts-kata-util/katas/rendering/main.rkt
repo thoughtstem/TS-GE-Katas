@@ -2,9 +2,15 @@
 
 (provide make-kata->X
          make-data->X
-         make-expression->X)
+         make-expression->X
+         handle-kata-id)
 
 (require "../main.rkt")
+
+;S->S
+(define handle-kata-id
+  (make-parameter identity))
+
 
 (define (struct->name s)
   (define struct-name (~a
@@ -49,9 +55,11 @@
           ts)))
 
 (define (_make-kata->X string->X string2->X data->X Xs->X stimulus->X response->X)
+  ;Is this where it's failing? Wrong? stimulus->X
   (lambda(k)
-    (Xs->X
-     (string->X (~a (kata-id k)))
+    (Xs->X 
+     (string->X ((compose (handle-kata-id) ~a)
+                 (kata-id k)))
      (tests->X string2->X Xs->X (kata-tests k))
      (stimulus->X (kata-stimulus k))
      (response->X (kata-response k)))))

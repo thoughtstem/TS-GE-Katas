@@ -8,12 +8,6 @@
 
 (require scribble/manual)
 
-(define (kata-table stim resp)
-  @tabular[#:sep @hspace[1]
-           (list (list @bold{Stim} @bold{Resp})
-                 (list stim       resp))])
-
-
 
 (define (_kata->scribble k (befores (list )))
   (define extras (map (λ(b) (b k)) befores))
@@ -26,27 +20,38 @@
     #:data->X   _data->scribble
     #:Xs->X     list) k))
 
-(define (_data->scribble d (befores '()))
+(define (_data->scribble d)
   ((make-data->X
-    #:Xs->X    list
-    #:string->X para
+    #:Xs->X         list
+    #:string->X     para
     #:expression->X _expr->scribble
-    #:kata->X   _kata->scribble) d))
+    #:kata->X       _kata->scribble) d))
 
 
 
 (require "./pict.rkt" pict)
-(define (_expr->scribble k (befores '()))
+(define (_expr->scribble k)
+
+  (define  (f d l)
+    (cond [(kata? d) ((compose frame (curryr inset 10))
+                      (kata->pict d))]
+          [(and (eq? l 'English)
+                (list? d))
+           (map (curryr f l) d)]
+          [(and (eq? l 'English)
+                (not (list? d)))
+           (para d)]
+          [else (codeblock #:keep-lang-line? #t (~a d))]))
+  
   ((make-expression->X
-    #:data+lang->X 
-    (λ(d l)
-      (cond [(kata? d) (frame (kata->pict #;_kata->scribble d))]
-            [(eq? l 'English) (para d)]
-            [else (codeblock #:keep-lang-line? #t (~a d))])))
+    #:data+lang->X f)
     k))
 
 (define (kata->scribble k #:befores (before-each (list )))
-  (_kata->scribble k before-each))
+  (parameterize ([handle-kata-id kata-id->kata-name])
+    (_kata->scribble k before-each))
+
+  )
 
 (define (kata-collection->scribble kc #:befores (before-each (list )))
   (map (curry kata->scribble #:befores before-each)

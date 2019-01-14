@@ -1,6 +1,6 @@
 #lang racket
 
-(provide scribblify-collection)
+(provide render)
 
 (require ts-kata-util/katas/rendering
          ts-kata-util/katas/main)
@@ -10,13 +10,12 @@
 ;  has some kind of special gamification scheme, or special
 ;  badges, or something like that.
 ;If there are no special renderings, don't add anything to this file.
-(define (scribblify-collection kc)
+(define (render #:level (level subsection) kc)
   (kata-collection->scribble
-   #:befores (list kata->title)
+   #:befores (list (curry kata->title level))
    kc))
 
 (require (only-in scribble/manual image para subsection))
 
-(define (kata->title k)
-  (subsection (~a (kata-name k) " "
-                  "Kata")))
+(define (kata->title level k)
+  (level (~a (kata-name k) " Kata")))
