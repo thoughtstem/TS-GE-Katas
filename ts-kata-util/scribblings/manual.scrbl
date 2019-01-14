@@ -7,11 +7,6 @@
 
 @defmodule[ts-kata-util]
 
-@defproc[(make-sandwich [ingredients (listof ingredient?)])
-         sandwich?]{
-  Returns a sandwich given the right ingredients.
-}
-
 These are the utilities that help language designers craft a language
 that is suitable for building a kata collection on top of it.
 
@@ -40,16 +35,21 @@ organized.
 }
 
 
+@defproc[(get-example-code [lang symbol?]
+                           [example-name symbol?])
+         string?]{
+  Returns a code string suitable for passing into, say, @racket[pict]'s @racket[codeblock] function.
+  Or @racket[scribble]'s @racket[codeblock] function.
+}
+
+@defproc[(get-example-names [lang symbol?])
+         (listof symbol?)]{
+  Returns a list of symbols that correspond to all example names in a collection of examples.
+}
+
 To doc or clean up:
 
-(provide define-kata-code
-         (rename-out [define-kata-code define-example-code])  ;This is technically correct.  Examples are in TS-Languages, Katas are in TS-Kata-Collections
-
-         
-         show-kata-code
-         (rename-out [show-kata-code show-example-code]) ;This is technically correct.  Examples are in TS-Languages, Katas are in TS-Kata-Collections
-         get-example-code
-         get-example-names
+(provide 
          
          kata
          side-note

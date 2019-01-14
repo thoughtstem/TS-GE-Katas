@@ -1,30 +1,9 @@
-
-* Github ticket(s) for ts-fundamentals
-  - Fix up the sub repo bug
-  - Try a "see this picture of the code structure", "Write the code" type katas.
-  > Put in some unplugged activities (will be prototypes for K-2 classes...)
-    - Also prototypes for examples in Don't Teach Coding book
-
-
 * Doc ts-kata-util.  Not hard.  Necessary.  Do it.
+  > Get installation to be perfect
   > Philosophically/And for docs: Katas: Stimulus,verb response,verb tests,adjectives?preps?rules? data,language?
-    
-     - I think our investment in meta will pay off.  We can start teaching kids how  to each other kids.  And then we instantly win...
-     - One thing that's unspecified that I'd like to know (one day) is how often people need to redo certain katas.  Some are more important than others and need refreshing.  Others maybe don't.  And it may be student-specific.
-         - Probably need to shift from -- "student has done a kata" to "student is expected to be able to do type T katas in under S seconds" etc.  Expressing learning in terms of performance on a type of kata is the best way to test for "mastery of concept."
-     - What's the design process for taking a body of knowledge and creating kata-based curriculum?
-     - Katas written down are like source code.  Teachers, students, training, etc.  That's the running machine.
-
-     - Noticing 2 kata types:
-       - Response is clear "(+ 2 2)", but connection between stim and response is takes time to internalize
-       - Response is vague "Whatever you need to do to teach this kata", but it's still clear WHAT to do.  The doing it is the point.
-       - Meditate on this duality.  Is there some interesting symmetry?  Or is it an ugly thing we must accept
-
-     - Encounter phase: See stim and response together 
-     - Train phase: Begin seeing less information but still able to perform response
-     - Test phase: Don't get to see the response...  So any sequence of katas with a similar "type" or "structure" is naturally going to teach the abstraction -- the part that changes from the part that is the same.  
-
-  -  Cool property if we could show it.  If certain kata systems have certain (algebraic? compuational?) properties, it lets us generate certain kind of automated tutoring automatically from a kata system...
+    - docs for langauge tools
+    - docs for kata creation tools
+    - docs for kata collection creation/management tools
 
     
 MONDAY MORNING AT WORK

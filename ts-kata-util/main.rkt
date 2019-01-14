@@ -18,16 +18,10 @@
          (rename-out [define-kata-code define-example-code])  ;This is technically correct.  Examples are in TS-Languages, Katas are in TS-Kata-Collections
 
          
-         show-kata-code
-         (rename-out [show-kata-code show-example-code]) ;This is technically correct.  Examples are in TS-Languages, Katas are in TS-Kata-Collections
          get-example-code
          get-example-names
          
-         kata
-         side-note
-         student-should-translate
-         student-should-know-difference-between
-
+      
          define/contract/doc
          )
 
@@ -86,16 +80,6 @@
    body))
 
 
-(define (side-note header . body)
-  ;@margin-note*{@bold{Review/Introduce:} meaning of #lang ts-camp-jam-1, battle-arena-game, avatar, keyword.}
-
-  (list
-   (margin-note* (bold (~a header ": "))
-                 body)
-
-   )
-
-  )
 
 (require scribble/srcdoc)
 
