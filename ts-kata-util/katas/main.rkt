@@ -369,11 +369,6 @@
 ;Next level up, gamification...
 
 
-
-
-
-
-
 ;Next level up, rendering....
 
 (define-syntax-rule (define/provide id stuff ...)

@@ -12,8 +12,11 @@
 
 (displayln (~a "Found collections " collections))
 
+(define original (current-directory))
+
 (define (try-then f1 f2)
   (lambda(x)
+    (current-directory (build-path original x))
     (with-handlers ([exn:fail? (thunk*
                                 (displayln (~a "Couldn't update " x ", trying to install..."))
                                 (f2 x))])

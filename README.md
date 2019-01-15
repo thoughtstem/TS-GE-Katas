@@ -12,12 +12,27 @@ as a bridge or interface between language and kata collection.
 
 # Installation
 
+First install `ts-kata-util` (and grant yourself access to any private repos)
 ```
 git clone https://github.com/thoughtstem/TS-Kata-Collections.git
 cd ts-kata-util
 raco pkg config --set git-checkout-credentials "GITHUB-NAME:GITHUB-PASSWORD"
 raco pkg install
-cd ..
+```
+
+If you're going to be working on any `TS-Languages`, get that repo and install 
+all of them:
+
+```
+git clone https://github.com/thoughtstem/TS-Languages.git
+cd TS-Languages
+raco install-all-here
+```
+
+Now, with langs installed, you can install the kata collections
+
+```
+cd TS-Kata-Collections
 raco install-all-here
 ```
 
