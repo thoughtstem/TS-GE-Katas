@@ -18,18 +18,13 @@
          (struct-out kata)
          make-kata
          (struct-out kata-collection)
-         (struct-out response:code)
-         (struct-out response:say)
-         (struct-out response:do)
-         (struct-out stimulus:read)
-         (struct-out stimulus:hear)
          (struct-out expression)
 
          set-id
          within
          recite
          read
-         teach
+
          say
          do
          translate
@@ -90,8 +85,6 @@
 (struct response:say  response () #:transparent)
 (struct response:do   response () #:transparent)
 
-(struct response:teach response () #:transparent)
-
 (define (set-id i k )
   (struct-copy kata k
                [id i]))
@@ -123,9 +116,6 @@
 (define (hear s)
   (stimulus:hear s))
 
-(define (teach s)
-  (response:teach s))
-
 ;====== Kata CONSTRUCTORS ======
 
 ;A kata that defines translating from a high level natural language
@@ -143,7 +133,8 @@
          #:lang in-lang)
    '()))
 
-(define (coach k #:id (id 'TODO-id)
+(define (coach k
+               #:id (id 'TODO-id)
                #:with-materials (materials '()))
   (kata
    id
