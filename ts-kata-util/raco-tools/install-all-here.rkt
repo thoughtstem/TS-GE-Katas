@@ -12,13 +12,18 @@
 
 (displayln (~a "Found collections " collections))
 
+(define original (current-directory))
+
 (define (try-then f1 f2)
   (lambda(x)
+    (current-directory (build-path original x))
+
     (with-handlers ([exn:fail? (thunk*
                                 (displayln (~a "Couldn't update " x ", trying to install..."))
-                                (f2 x))])
+                                (displayln (~a "Current dir " (current-directory)))
+                                (f2 (~a "../" x)))])
       (displayln (~a "Trying to update " x))
-      (f1 x))))
+      (f1 (~a "../" x)))))
 
 (require pkg)
 (map (compose (try-then (curry pkg-update-command  #:link #t #:update-deps #t #:deps 'search-auto)
