@@ -14,7 +14,6 @@
 
 (displayln (~a "Rebuilding the docs with 'raco setup " ts-kata-collection-name "'"))
 
-(system "raco pkg install")
 (and (system (~a "raco setup " ts-kata-collection-name))
 
      (send-url (~a "file://"

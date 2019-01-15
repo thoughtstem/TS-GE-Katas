@@ -1,1 +1,5 @@
+<<<<<<< HEAD
 ("7.1" ("6fffb877c0468a0d230ff266b0cc9bd798222547" . "ed337ac0760af311adc24203a4ec22d17784a2c5") (collects #"racket" #"main.rkt") (collects #"racket" #"runtime-config.rkt") (collects #"ts-coach" #"katas" #"meta.rkt") (collects #"ts-coach" #"katas" #"teaching.rkt") (collects #"ts-fundamentals" #"katas.rkt") (collects #"ts-kata-util" #"katas" #"main.rkt"))
+=======
+("7.0" ("6fffb877c0468a0d230ff266b0cc9bd798222547" . "e2e38691084f23b8c7d0f0778c9cf3618e11f206") (collects #"racket" #"main.rkt") (collects #"racket" #"runtime-config.rkt") (collects #"ts-coach" #"katas" #"meta.rkt") (collects #"ts-coach" #"katas" #"teaching.rkt") (collects #"ts-fundamentals" #"katas.rkt") (collects #"ts-kata-util" #"katas" #"main.rkt"))
+>>>>>>> 7e207c08251e2029c853ccaada54671e60a0e45b

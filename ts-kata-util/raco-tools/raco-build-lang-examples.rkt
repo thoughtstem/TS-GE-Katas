@@ -14,7 +14,6 @@
 
 (displayln "Testing Katas and building API docs")
 
-(system "raco pkg install")
 (system (~a 
             "raco test -p " ts-language-name 
             " && "
