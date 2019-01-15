@@ -1,5 +1,8 @@
 #lang at-exp racket
 
+(require scribble/srcdoc)
+(require (for-doc racket/base scribble/manual ))
+
 (require ts-kata-util 2htdp/image)
 
 (define/contract/doc (custom-circle #:color (color "red"))

@@ -32,14 +32,20 @@
 
   (define files
     (filter (lambda(f)
-              (file-exists? (build-path dest f))) 
-              (directory-list dest)))
+              (file-exists? (build-path folder f))) 
+              (directory-list folder)))
 
   (for ([file (in-list files)])
     ;(displayln (~a "Found replacement? " file))
     (string-sub file find replace)))
 
 (string-sub-all! dest
+  "LANGUAGE-NAME" ts-language)
+
+(string-sub-all! (build-path dest "examples")
+  "LANGUAGE-NAME" ts-language)
+
+(string-sub-all! (build-path dest "scribblings")
   "LANGUAGE-NAME" ts-language)
 
 

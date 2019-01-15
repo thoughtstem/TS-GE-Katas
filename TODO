@@ -1,24 +1,26 @@
-* Doc ts-kata-util.  Not hard.  Necessary.  Do it.
-  > Get installation to be perfect
-  > Philosophically/And for docs: Katas: Stimulus,verb response,verb tests,adjectives?preps?rules? data,language?
-    - docs for langauge tools
-    - docs for kata creation tools
-    - docs for kata collection creation/management tools
+Instead of learning new things: Catch up to yourself.  Faster.
 
-    
-MONDAY MORNING AT WORK
-* Push to master. Start delegating work
-   * ts-fundamentals
-   * ts-coach
-   * ts-survival
-   * ts-adventure
-   * survival
-   * adventure
-* Get installation to be perfect (Kata collections & Languages)
+require with prefix
+  > that's fine
+start aliasing
+  > make an (alias ...) form
+  > need syntax for altering keyword defaults.  Note that this will need to propagate into the srcdoc submodule, call define/contract/provide?
+don't forget to provide
+  > alias will provide (and do srcsdoc).  will also keep track of aliases, so examples can use...
+write example
+  > nope, will declare (like lang->examples ...)  Use that?
+  > (import-examples battle-arena #:with-aliases "../lang/main.rkt")
 
-TUESDAY
-  -  Start working on skinned lang tools
-  -  Doc them
+In a skinned language, do we do define/contract/doc (or auto docs at all?)
+  Currently breaks [Errors on build with default scribble files...] if we don't...
+
+Skinned langs:
+  Begin hand-crafting a skinned lang
+  Create tools
+  Write code
+  Doc things
+  Make the second time easier. 
+
 
 WEDNESDAY
   - Stephen pivots to online course stuff 
