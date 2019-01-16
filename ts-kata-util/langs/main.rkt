@@ -37,26 +37,6 @@
   (file->string file))
 
 
-(define/contract (replace* s subs)
-  (-> string? (listof (listof string?)) string?)
-  (foldl
-   (λ(next accum)
-     (define find    (first next))
-     (define replace (second next))
-     (string-replace accum find replace))
-   s
-   subs))
-
-(define (examples-with-substitutions lang subs)
-  (define examples
-    (map (curry get-example-code lang)
-         (get-example-names lang)))
-
-  (define new-examples
-    (map (curryr replace* subs) examples))
-
-  new-examples)
-
 
 
 

@@ -16,6 +16,7 @@
          define/contract/doc
 
          define-mapping
+         with-mappings-from
          )
 
 (require scribble/srcdoc)
@@ -94,13 +95,14 @@
      #'not-a-require-expression]))
 
 (define-syntax (define-example-code/from* stx)
-  (define lang (second (syntax->datum stx)))
+  (define lang        (second (syntax->datum stx)))
+  (define target-lang (third (syntax->datum stx)))
 
   (define example-ids
     (get-example-names lang))
 
   (define (from id)
-    `(define-example-code/from ,lang ,id))
+    `(define-example-code/from ,lang ,target-lang ,id))
 
   (define froms
     (map from example-ids))
@@ -109,14 +111,61 @@
                  `(begin ,@froms)
                  stx))
 
-(define-syntax (define-example-code/from stx)
+
+(define mappings (make-parameter (list)))
+
+(define (replace* s subs)
+  (foldl
+   (λ(next accum)
+     (define find    (first next))
+     (define replace (second next))
+     (string-replace accum
+                     (~a find)
+                     (~a replace)))
+   s
+   subs))
+
+
+(define (mapping-module->mappings m)
+  (define-values
+    (exports idk)
+    (module->exports m))
+
+  (define tos
+    (map first (rest (first exports))))
+
+  (define froms
+    (map (λ(f) (dynamic-require m f)) tos))
+
+  (map list
+       froms
+       tos))
+
+
+(define-syntax (with-mappings-from stx)
+
   (syntax-case stx ()
-    [(_ lang kata-name)
+    [(_ module-path body ...)
+     #'(begin
+         (require (prefix-in map: module-path))
+         (parameterize ([mappings (mapping-module->mappings 'module-path)])
+           body ...)
+         )]))
+
+(define-syntax (define-example-code/from stx)
+  
+  
+  (syntax-case stx ()
+    [(_ lang target-lang kata-name)
      (with-syntax ([text (get-example-code (syntax->datum #'lang)
                                            (syntax->datum #'kata-name))]
-                   [save-path (compiled-examples-data-path stx)])
+                   [save-path (compiled-examples-data-path stx)]
+                   [run:kata-name (format-id #'kata-name "run:~a" #'kata-name)]
+                   #;[run-def (datum->syntax (read (open-input-string text)))])
 
-       #'(begin
+       #`(begin
+           (define (run:kata-name)
+             (displayln 'kata-name))
 
            (make-directory* save-path)
              
@@ -125,9 +174,17 @@
                          (~a (symbol->string 'kata-name) ".rkt")))
 
            (displayln (~a "Writing out " 'kata-name " from " 'lang))
+
+           (define lang-line (~a "#lang " 'lang))
+           (define target-lang-line (~a "#lang " 'target-lang))
+
+           
+           
            (with-output-to-file f-name #:exists 'replace 
              (thunk*
-              (displayln text)))))]))
+              (displayln (replace* text (cons
+                                         (list lang-line target-lang-line)
+                                         (mappings))))))))]))
 
 
 (define-for-syntax (compiled-examples-data-path stx)

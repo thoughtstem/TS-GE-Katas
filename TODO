@@ -1,4 +1,8 @@
 
+auto-gen (run:...) from /from*
+
+#lang line on generated examples is wrong (battle-arena instead of starwars-battle-arena).   How to specify the current lang?
+
 (define/contract/doc )
 (require lang-name/mappings )
 
@@ -23,6 +27,7 @@ Generate .gitignore files for prototype-langs
 
 
 
+define/contract/doc needs some work, it requires a keyword for some reason...
 Instead of learning new things: Catch up to yourself.  Faster.
 
 WEDNESDAY
