@@ -7,15 +7,12 @@
 
 (displayln (~a "Building " ts-language-name))
 
-(displayln "Deleting kata compilation data")
-
 (delete-directory/files	(build-path (current-directory) "examples" "compiled") #:must-exist? #f)
 (delete-directory/files	(build-path (current-directory) "examples" "compiled-kata-data") #:must-exist? #f)
 
-(displayln "Testing Katas and building API docs")
+(displayln "Compiling Examples, Running Examples as Tests, and building API docs...")
 
-(system (~a 
-            "raco test -p " ts-language-name 
+(system (~a "raco test examples " #;ts-language-name 
             " && "
             "raco setup " ts-language-name 
             ))

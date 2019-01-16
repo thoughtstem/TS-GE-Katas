@@ -17,6 +17,8 @@
 
          define-mapping
          with-mappings-from
+         define-run:*
+         define-run:
          )
 
 (require scribble/srcdoc)
@@ -96,9 +98,20 @@
     [(_ not-a-require-expression)
      #'not-a-require-expression]))
 
+
+(define-syntax (with-mappings-from stx)
+  (syntax-case stx ()
+    [(_ module-path body ...)
+     #`(begin
+         (require (prefix-in map: module-path))
+         (parameterize ([mappings (mapping-module->mappings 'module-path)])
+           body ...)
+         )]))
+
+
 (define-syntax (define-example-code/from* stx)
   (define lang        (second (syntax->datum stx)))
-  (define target-lang (third (syntax->datum stx)))
+  (define target-lang (third  (syntax->datum stx)))
 
   (define example-ids
     (get-example-names lang))
@@ -110,8 +123,85 @@
     (map from example-ids))
 
   (datum->syntax stx
-                 `(begin ,@froms)
-                 stx))
+                 `(begin
+                    
+                    ,@froms
+                    )
+                 stx
+                 ))
+
+(define-syntax (define-run: stx)
+  (define id (second (syntax->datum stx)))
+  (define body (third (syntax->datum stx)))
+
+  
+  (define run:id (string->symbol (~a "run:" id)))
+  (datum->syntax stx
+   `(begin
+      (define (,run:id)
+        ,@body)
+      (module+ test
+        (require rackunit game-engine)
+        (let ()
+          (displayln (~a "Running (" ,run:id ") as a test"))
+          
+          (define g
+            (with-handlers ([exn:fail? (thunk*
+                                        (error (~a "Game did not start:\n\n"
+                                                   (pretty-format ',body 20)
+                                                   "\n\n")))])
+                (headless
+                 (,run:id))))
+
+          (define ticked-g  ;Catches a LOT of errors just by running the game for a bit
+            (with-handlers ([exn:fail? (thunk*
+                                        (error (~a "Game did not start:\n\n"
+                                                   (pretty-format ',body 20)
+                                                   "\n\n")))])
+                (tick g #:ticks 10)))
+
+          (check-equal? #t (game? ticked-g)) ;Can add something more meaningful here if necessary
+          )))))
+
+(define-syntax (define-run:* stx)
+  (define root (compiled-examples-data-path stx))
+  
+  (define (file->kata-name f)
+    (string->symbol
+     (string-replace (~a f)
+                     ".rkt"
+                     "")))
+
+  (define (file->kata-body f)
+    (define lines
+      (string-split (file->string (build-path root f))
+                    "\n"))
+
+    (define body-string (~a "("
+                            (string-join (rest lines) "\n")
+                            ")"))
+
+    (define body (read (open-input-string body-string)))
+
+    body)
+
+  (define files
+    (directory-list root))
+  
+  (define example-ids
+    (map file->kata-name files))
+
+  (define example-bodies
+    (map file->kata-body files))
+
+  (datum->syntax stx
+                 `(begin ,@(map (λ(i b) `(define-run: ,i ,b))
+                                example-ids
+                                example-bodies)
+                         
+                         ))
+
+  )
 
 
 (define mappings (make-parameter (list)))
@@ -144,15 +234,10 @@
        tos))
 
 
-(define-syntax (with-mappings-from stx)
 
-  (syntax-case stx ()
-    [(_ module-path body ...)
-     #'(begin
-         (require (prefix-in map: module-path))
-         (parameterize ([mappings (mapping-module->mappings 'module-path)])
-           body ...)
-         )]))
+
+
+
 
 (define-syntax (define-example-code/from stx)
   
@@ -166,27 +251,24 @@
                    #;[run-def (datum->syntax (read (open-input-string text)))])
 
        #`(begin
-           (define (run:kata-name)
-             (displayln 'kata-name))
-
+           
            (make-directory* save-path)
              
            (define f-name
              (build-path save-path
                          (~a (symbol->string 'kata-name) ".rkt")))
 
-           (displayln (~a "Writing out " 'kata-name " from " 'lang))
+           ;(displayln (~a "Writing out " 'kata-name " from " 'lang))
 
            (define lang-line (~a "#lang " 'lang))
            (define target-lang-line (~a "#lang " 'target-lang))
-
-           
-           
+ 
            (with-output-to-file f-name #:exists 'replace 
              (thunk*
               (displayln (replace* text (cons
                                          (list lang-line target-lang-line)
                                          (mappings))))))))]))
+
 
 
 (define-for-syntax (compiled-examples-data-path stx)
