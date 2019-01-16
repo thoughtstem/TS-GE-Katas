@@ -44,9 +44,9 @@
 (require (for-syntax syntax/parse))
 ;For in a TS-Lang.  Automates documentation.
 (define-syntax (define/contract/doc stx)
-  #;(define to-map
+  (define to-map
     (syntax-parse stx
-      #;[(_ (f-name args ... )
+      [(_ (f-name args ... )
           contract
           doc
           (other-f-name other-args ...))
@@ -62,7 +62,7 @@
   (syntax-case stx ()
     ([_ (f-name args ... . rest) contract doc body ...]
      #`(begin
-        ; #,to-map
+         #,to-map
            
          (provide (proc-doc
                    f-name
@@ -75,7 +75,7 @@
            body ...)))
     ([_ (f-name args ... ) contract doc body ...]
      #`(begin
-          ; #,to-map
+           #,to-map
            
            (provide (proc-doc
                      f-name

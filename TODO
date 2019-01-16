@@ -1,7 +1,17 @@
 
+
+Can't install starwars-battle-arena
+
+On pkg install for starwars (why??)
+  require: unknown module
+    module name: #<resolved-module-path:(submod "/Users/thoughtstem/Dev/TS/TS-Languages/starwars-battle-arena/lang/main.rkt" mappings)>
+    compilation context...:
+
+
 auto-gen (run:...) from /from*
 
-#lang line on generated examples is wrong (battle-arena instead of starwars-battle-arena).   How to specify the current lang?
+Think long and hard about the string substitution... Is it going to get us into trouble later?
+  --> If it seems safeish just start building and see where it breaks down.
 
 (define/contract/doc )
 (require lang-name/mappings )
