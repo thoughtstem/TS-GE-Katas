@@ -3,7 +3,6 @@
 (define scribblings '(("scribblings/manual.scrbl" (multi-page))))
 
 (define deps '(
-  "../ts-fundamentals"
-  "../ts-kata-util"
-  ))
+  "ts-fundamentals"
+  "ts-kata-util"))
 

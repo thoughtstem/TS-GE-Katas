@@ -1,7 +1,8 @@
 #lang racket
 
 (provide katas
-         core-values)
+         core-values
+         image->code-katas)
 
 (require ts-kata-util/katas/main
          "./katas/image-to-code.rkt"

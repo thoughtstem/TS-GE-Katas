@@ -17,6 +17,7 @@
 
 (require scribble/srcdoc)
 
+
 (define-for-syntax (extract-defaults arguments)
   (define (keyword? d)
     (string-prefix? (~a d) "#:"))
@@ -54,7 +55,6 @@
            (define/contract (f-name args ... )
              contract
              body ...))))))
-
 
 
 

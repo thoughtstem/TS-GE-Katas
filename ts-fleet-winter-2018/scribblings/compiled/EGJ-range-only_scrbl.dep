@@ -1,1 +1,1 @@
-("7.0" ("676de125fadddce435d0fb7c644ad8ce3bbdc9c5" . "f78390a8b01dd5acf215c91852d96f2117260a51") (collects #"racket" #"runtime-config.rkt") (collects #"scribble" #"manual" #"lang" #"reader.rkt") (collects #"scribble" #"manual" #"lang.rkt") (collects #"ts-kata-util" #"main.rkt"))
+("7.1" ("676de125fadddce435d0fb7c644ad8ce3bbdc9c5" . "1d0ebf76e453451b8d3ca444995219ecbc22f36f") (collects #"racket" #"runtime-config.rkt") (collects #"scribble" #"manual" #"lang" #"reader.rkt") (collects #"scribble" #"manual" #"lang.rkt") (collects #"ts-kata-util" #"main.rkt"))
