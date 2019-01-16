@@ -1,5 +1,20 @@
 
-Make sure build-l still works in non-skinned repos
+Embed image into scribble automatically
+  ts-kata-util/assets/main
+
+  Working but need to: find . | grep compiled/ | xargs rm 
+
+Make a way to credit the authors/artists...
+
+Change scribbles to include-extracted from the direct path, no intermediate provide-extracted
+
+People can just assets get with (require battle-arena/assets)
+  > But should provide all out
+  
+Do this in starwars-battle-arena/
+  Propagate to prototye-language/
+
+
 
 Think long and hard about the string substitution... Is it going to get us into trouble later?
   --> If it seems safeish just start building and see where it breaks down.
@@ -29,7 +44,6 @@ Generate .gitignore files for prototype-langs
 
 
 
-define/contract/doc needs some work, it requires a keyword for some reason...
 Instead of learning new things: Catch up to yourself.  Faster.
 
 WEDNESDAY

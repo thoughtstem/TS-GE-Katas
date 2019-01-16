@@ -197,9 +197,7 @@
   (datum->syntax stx
                  `(begin ,@(map (λ(i b) `(define-run: ,i ,b))
                                 example-ids
-                                example-bodies)
-                         
-                         ))
+                                example-bodies)))
 
   )
 
@@ -320,12 +318,4 @@
                   (displayln (~a "#lang " 'lang))
                   (displayln (string-join (map (compose (λ(s) (~a "(" s ")")) syntax->string)
                                                syntaxes:kata-name) "\n\n"))))))))]))
-
-
-
-
-
-
-
-
 

@@ -3,9 +3,17 @@
 @require[scribble/extract]
 @require[@for-label["../main.rkt" racket/base]]
 
-@title{My TS-Language}
+@title{LANGUAGE-NAME docs}
 @author{thoughtstem}
 
-@defmodulelang[language-pkg-name-here]
+@defmodulelang[LANGUAGE-NAME]
 
-@(include-previously-extracted "../main.rkt" #rx".*")
+@section{Functions}
+
+@(include-extracted "../lang/main.rkt")
+
+@section{Image Assets}
+
+@(include-extracted "../assets.rkt")
+
+
