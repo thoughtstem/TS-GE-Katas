@@ -1,129 +1,19 @@
 #lang racket
 
-(module+ test
-  (require rackunit))
-
-
-(module+ test
-  ;; Tests to be run with raco test
-  )
-
-
-
-(require (for-syntax racket/syntax racket)
+(require (for-syntax racket/syntax racket "./langs/main.rkt")
          scribble/manual
-         2htdp/image)
+         2htdp/image
+         "./langs/main.rkt")
 
 (provide define-kata-code
          (rename-out [define-kata-code define-example-code])  ;This is technically correct.  Examples are in TS-Languages, Katas are in TS-Kata-Collections
-
+         define-example-code/from
          
          get-example-code
          get-example-names
         
          define/contract/doc
          )
-
-(define (student-should-know-difference-between . things)
-  (define (show-thing t)
-    (item (bold (first t)) ": "
-          (second t)))
-  
-  (list
-   (para "Students should be able to recite the following definitions from memory:")
-   (apply itemlist (map show-thing things))))
-
-
-
-(define (student-should-translate #:english sentence
-                                  #:code    kata-code-name
-                                  #:lang    lang)
-
-  (list
-   (para "Students should be able to translate any sentence of this type:")
-   (para (italic sentence))
-   (para "To corresponding code of this type:")
-   (show-kata-code lang kata-code-name)))
-
-(define (to-earn-this-code-kata #:english    sentence
-                                #:code       kata-code-name
-                                #:lang       lang
-                                #:badge-type badge-type)
-
-  (list
-   (para "To earn this Kata " badge-type  " students should be able to translate any sentence of this type:")
-   (para (italic sentence))
-   (para "To corresponding code of this type:")
-   (show-kata-code lang kata-code-name)))
-
-
-(define (to-earn-this-rubric-kata #:badge-type    badge-type
-                                  #:game-element  game-element
-                                  #:elements-list elements-list
-                                  #:points-list   points-list)
-
-  (list
-   (para "To earn this Kata " badge-type  " students should be able to recite
-the amount of points they get from having a custom " game-element " in their game.")
-   (para (bold game-element " points:"))
-   (map show-rubric elements-list points-list)))
-
-
-(define (show-rubric element points)
-  (para "* " element " - "
-        (bold (number->string points)
-              (if (= points 1)
-                  " point."
-                  " points."))))
-
-;;;TODO
-(define (to-earn-this-meta-kata   #:badge-type         badge-type
-                                  #:learning-objective learning-objective
-                                  #:objectives         [l '()]
-                                  )
-
-  (list
-   (para "To earn this Kata " badge-type  " students should be able to recite " learning-objective)
-   (map list-points l)))
-
-(define (list-points l)
-  (para "* " l))
-
-
-(define difficulties
-  (hash 'air    (text "AIR" 24 'cyan)
-        'stone  (text "STONE" 24 'gray)
-        'bronze (text "BRONZE" 24 'orange)
-        'silver (text "SILVER" 24 'darkgray)
-        'gold   (text "GOLD" 24 'gold)
-        'platnum   (text "PLATNUM" 24 'blue)))
-
-(define (kata #:document-level (level subsubsection)
-              #:difficulty (difficulty 'bronze)
-              #:title (title "Avatar")
-
-              #:time-limit (time-limit 10)
-              . body)
-
-  (define (render-difficulty d)
-    (string-titlecase (~a d))
-    
-    ;Not working
-    #;(if (hash-has-key? difficulties d)
-        (hash-ref difficulties d)
-        (string-titlecase (~a d))))
-
-  (list
-   
-   (level 
-          (~a (render-difficulty difficulty)
-              " "
-              title
-              " Kata "
-              "(" time-limit " minutes)"))
-   body))
-
-
 
 (require scribble/srcdoc)
 
@@ -165,73 +55,7 @@ the amount of points they get from having a custom " game-element " in their gam
              contract
              body ...))))))
 
-(define (get-kata-file pkg-name (kata-name #f))
-  
-  (local-require pkg/lib)
-  (define folder (pkg-directory (~a pkg-name)))
 
-  (and (not folder)
-       (error (~a "Couldn't find a folder for language '" pkg-name "'.  Either install it with 'raco pkg install " pkg-name "'.  Or, if you have it on your computer somewhere already (perhaps in TS-Languages/), tell me where it is by navigating to it and running 'raco pkg install'")))
-  
-  (define kata-file
-    (build-path folder "examples" "compiled-example-data" (if kata-name
-                                                              (~a kata-name ".rkt")
-                                                              ".")))
-
-  kata-file)
-
-
-;Takes something like: 'battle-arena 'rocket-tower-1
-(define/contract (show-kata-code pkg-name kata-name)
-  (-> symbol? symbol? any/c)
-
-  (define kata-file (get-kata-file pkg-name kata-name))
-
-  (typeset-code #:keep-lang-line? #t (kata-file->code-string kata-file)))
-
-(define (get-example-code pkg-name kata-name)
-
-  (define kata-file (get-kata-file pkg-name kata-name))
-
-  (kata-file->code-string kata-file))
-
-(define (get-example-names pkg-name)
-  (define example-folder (get-kata-file pkg-name))
-
-  (map (compose string->symbol
-                (curryr string-replace ".rkt" ""))
-       (filter (and/c (curryr string-suffix? ".rkt")
-                      (not/c (curryr string-suffix? "bak.rkt")))
-               (map ~a (directory-list example-folder)))))
-
-(define example-file-exists?
-  (flat-contract-with-explanation
-   (λ (val)
-     (cond
-       [(file-exists? val) #t]
-       [else
-        (λ (blame)
-          (define pkg-name (list-ref (reverse (explode-path val)) 3))
-          (define file-name (list-ref (reverse (explode-path val)) 0))
-
-          ;Should we actually run the file and generate the example instead
-          ; of just telling peole they need to do it manually?
-          
-          (define more-information
-            (~a "Make sure you've pulled the latest code from " pkg-name
-                ".  And either run 'raco setup " pkg-name
-                "'.  Or open the file " file-name
-                " and run it to generate the missing example file."))
-          (raise-blame-error blame val
-                             '(expected: "an example file" given: "a path to a file that doesn't exist: ~e"
-                                         "\n\n~a")
-                             val more-information))])))
-  )
-
-(define/contract (kata-file->code-string file)
-  (-> example-file-exists? string?)
-
-  (file->string file))
 
 
 (define-syntax (convert-require-if-necessary stx)
@@ -240,6 +64,14 @@ the amount of points they get from having a custom " game-element " in their gam
      #'(local-require thing ...)]
     [(_ not-a-require-expression)
      #'not-a-require-expression]))
+
+
+(define-syntax (define-example-code/from stx)
+  (syntax-case stx ()
+    [(_ lang id)
+     (with-syntax ([text (get-example-code (syntax->datum #'lang)
+                                           (syntax->datum #'id))])
+       #`(displayln text))]))
 
 
 ;Need to strip this down a bunch.

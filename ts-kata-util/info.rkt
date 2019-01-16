@@ -3,7 +3,6 @@
 (define deps '("base" 
                "lang-file" 
                "rsvg" 
-               "https://github.com/thoughtstem/TS-HomeSite.git" ;For rebuilding the index page
                ))
 (define build-deps '("scribble-lib" "racket-doc" "rackunit-lib"))
 (define scribblings '(("scribblings/manual.scrbl" ())))
@@ -13,6 +12,7 @@
 
 (define compile-omit-paths '(
   "badge-maker" 
+  "raco-tools"
   "raco-tools/prototype-kata-collection" 
   "raco-tools/prototype-lang"))
 
