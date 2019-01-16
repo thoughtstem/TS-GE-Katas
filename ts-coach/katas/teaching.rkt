@@ -13,9 +13,15 @@
          #:with-materials
          '(whiteboard)))
 
+(define-kata teaching-hello-world-2
+  (coach (first (kata-collection-katas image->code-katas))
+         #:with-materials
+         '(index-cards)))
+
 (define-kata-collection teaching-katas
   teaching-core-values-1
-  teaching-hello-world-1)
+  teaching-hello-world-1
+  teaching-hello-world-2)
 
 
 

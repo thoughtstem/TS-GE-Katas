@@ -12,8 +12,6 @@ This is an example of how all the components come together during camp-jam into 
 ---------------------
 
 
-@side-note["Note:"]{This is just an example of some potions and power-ups. Students could have up to 8 or more!}
-
 @codeblock{#lang battle-arena}
 @racketblock[
  (define (my-avatar)
@@ -57,8 +55,6 @@ This is an example of how all the components come together during camp-jam into 
 
 This is an example of how all the components come together during camp-jam into one piece of code:
 
-
-@side-note["Note:"]{This is just an example of some potions and power-ups. Students could have up to 8 or more!}
 
 @codeblock{#lang battle-arena}
 @racketblock[

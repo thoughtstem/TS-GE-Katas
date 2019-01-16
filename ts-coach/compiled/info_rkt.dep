@@ -1,5 +1,1 @@
-<<<<<<< HEAD
-("7.1" ("4472ee9e1488b0f87fc644ce1efcdda67f446bed" . "18f5abd1bd93fa4d523d0d8bbfc506fd8b5043bd") (collects #"info" #"main.rkt") (collects #"setup" #"infotab.rkt"))
-=======
-("7.0" ("d960a8560a3a5ad979a365c2cdba2630175e2ebb" . "dd3ec3c85598295a41cb5e09ff61b57c6e95db70") (collects #"info" #"main.rkt") (collects #"setup" #"infotab.rkt"))
->>>>>>> 7e207c08251e2029c853ccaada54671e60a0e45b
+("7.1" ("930bf1b58118de660354e6ad8e64abe0d9c8bcd9" . "18f5abd1bd93fa4d523d0d8bbfc506fd8b5043bd") (collects #"info" #"main.rkt") (collects #"setup" #"infotab.rkt"))
