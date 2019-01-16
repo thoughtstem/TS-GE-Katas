@@ -25,7 +25,6 @@ Be loud.  Be proud.  Be a coach.
 @section{Training Katas}
 
 @(require 2htdp/image)
-@(require survival)
 
 Coaches will train competitors by helping them acquire the necessary skills to excel
 at the Game Jam competition.  Competitors who have mastered these skills will earn katas.

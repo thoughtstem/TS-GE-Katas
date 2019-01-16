@@ -1,5 +1,1 @@
-<<<<<<< HEAD
 ("7.1" ("57ad5baa12ce7313f62d866500120c2aac6d7967" . "36ffac94d7329d2fc8236b7cc4bb235a49cf0b1f") (collects #"racket" #"main.rkt") (collects #"racket" #"runtime-config.rkt") (collects #"scribble" #"manual.rkt") (collects #"ts-kata-util" #"katas" #"main.rkt") (collects #"ts-kata-util" #"katas" #"rendering.rkt"))
-=======
-("7.0" ("57ad5baa12ce7313f62d866500120c2aac6d7967" . "9c548dc49e09416712387b7207f98be4ef983fde") (collects #"racket" #"main.rkt") (collects #"racket" #"runtime-config.rkt") (collects #"scribble" #"manual.rkt") (collects #"ts-kata-util" #"katas" #"main.rkt") (collects #"ts-kata-util" #"katas" #"rendering.rkt"))
->>>>>>> 7e207c08251e2029c853ccaada54671e60a0e45b
