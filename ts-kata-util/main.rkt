@@ -8,11 +8,14 @@
 (provide define-kata-code
          (rename-out [define-kata-code define-example-code])  ;This is technically correct.  Examples are in TS-Languages, Katas are in TS-Kata-Collections
          define-example-code/from
+         define-example-code/from*
          
          get-example-code
          get-example-names
         
          define/contract/doc
+
+         define-mapping
          )
 
 (require scribble/srcdoc)
@@ -28,33 +31,58 @@
 
   (datum->syntax #f no-keywords))
 
+(define-syntax (define-mapping stx)
+  (define d (syntax->datum stx))
+  
+  (datum->syntax
+   stx
+   `(module+ mappings
+      (provide ,(second d))
+      (define ,(second d) ',(third d)))))
+
+(require (for-syntax syntax/parse))
 ;For in a TS-Lang.  Automates documentation.
 (define-syntax (define/contract/doc stx)
+  (define to-map
+    (syntax-parse stx
+      [(_ (f-name args ... )
+          contract
+          doc
+          (other-f-name other-args ...))
+       #'(define-mapping f-name other-f-name)]
+      [else #'(void)]))
+
+  (define temp/defaults (syntax-parse stx
+                          [(_ (f-name args ...) contract doc body ...)
+                           (extract-defaults #'(args ...))]))
+  
   (syntax-case stx ()
     ([_ (f-name args ... . rest) contract doc body ...]
-     (with-syntax ([temp/defaults (extract-defaults #'(args ...))])
-       #'(begin
-           (provide (proc-doc
-                     f-name
-                     contract
-                     temp/defaults ;Fix this.  docs out...
-                     doc)) 
+     #`(begin
+         #,to-map
+           
+         (provide (proc-doc
+                   f-name
+                   contract
+                   #,temp/defaults ;Fix this.  docs out...
+                   doc)) 
          
-           (define/contract (f-name args ... . rest)
-             contract
-             body ...))))
+         (define/contract (f-name args ... . rest)
+           contract
+           body ...)))
     ([_ (f-name args ... ) contract doc body ...]
-     (with-syntax ([temp/defaults (extract-defaults #'(args ...))])
-       #'(begin
+     #`(begin
+           #,to-map
+           
            (provide (proc-doc
                      f-name
                      contract
-                     temp/defaults ;Fix this.  docs out...
+                     #,temp/defaults ;Fix this.  docs out...
                      doc)) 
          
            (define/contract (f-name args ... )
              contract
-             body ...))))))
+             body ...)))))
 
 
 
@@ -65,20 +93,49 @@
     [(_ not-a-require-expression)
      #'not-a-require-expression]))
 
+(define-syntax (define-example-code/from* stx)
+  (define lang (second (syntax->datum stx)))
+
+  (define example-ids
+    (get-example-names lang))
+
+  (define (from id)
+    `(define-example-code/from ,lang ,id))
+
+  (define froms
+    (map from example-ids))
+
+  (datum->syntax stx
+                 `(begin ,@froms)
+                 stx))
 
 (define-syntax (define-example-code/from stx)
   (syntax-case stx ()
-    [(_ lang id)
+    [(_ lang kata-name)
      (with-syntax ([text (get-example-code (syntax->datum #'lang)
-                                           (syntax->datum #'id))])
-       #`(displayln text))]))
+                                           (syntax->datum #'kata-name))]
+                   [save-path (compiled-examples-data-path stx)])
+
+       #'(begin
+
+           (make-directory* save-path)
+             
+           (define f-name
+             (build-path save-path
+                         (~a (symbol->string 'kata-name) ".rkt")))
+
+           (displayln (~a "Writing out " 'kata-name " from " 'lang))
+           (with-output-to-file f-name #:exists 'replace 
+             (thunk*
+              (displayln text)))))]))
 
 
-;Need to strip this down a bunch.
-;Should do 3 things:
-;  * Compile out the text for later scribble inclusion
-;  * Create a test that runs when you setup the package
-;  * Create a function so you can run your code snippet 
+(define-for-syntax (compiled-examples-data-path stx)
+  (apply build-path
+         (append
+          (reverse (rest (reverse (explode-path (syntax-source stx)))))
+          (list "compiled-example-data"))))
+
 (define-syntax (define-kata-code stx)
 
   (syntax-case stx ()
@@ -87,10 +144,7 @@
                    [syntaxes:kata-name (format-id #'kata-name "syntaxes:~a" #'kata-name)]
                    [lang-req (format-id #'lang "~a/jam-lang" #'lang)]
                    [full stx]
-                   [save-path (apply build-path
-                                     (append
-                                      (reverse (rest (reverse (explode-path (syntax-source stx)))))
-                                      (list "compiled-example-data")))])
+                   [save-path (compiled-examples-data-path stx)])
 
 
        #`(begin

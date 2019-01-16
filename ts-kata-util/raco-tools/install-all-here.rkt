@@ -10,8 +10,6 @@
 
 (define original (current-directory))
 
-(define original (current-directory))
-
 (define (try-then f1 f2)
   (lambda(x)
     (current-directory (build-path original x))

@@ -1,21 +1,20 @@
 
-require with prefix
-  > that's fine
-start aliasing
-  > make an (alias ...) form
-  > need syntax for altering keyword defaults.  Note that this will need to propagate into the srcdoc submodule, call define/contract/provide?
-don't forget to provide
-  > alias will provide (and do srcsdoc).  will also keep track of aliases, so examples can use...
-write example
-  > nope, will declare (like lang->examples ...)  Use that?
-  > (import-examples battle-arena #:with-aliases "../lang/main.rkt")
+(define/contract/doc )
+(require lang-name/mappings )
 
-In a skinned language, do we do define/contract/doc (or auto docs at all?)
-  Currently breaks [Errors on build with default scribble files...] if we don't...
+[???WHAT BRIDGES THE GAP???]
+[substitutions...]
+
+(define-example-code/from ...)
+(define-example-code/from* ...)
 
 Skinned langs:
   Begin hand-crafting a skinned lang
+    - Have starwars battle arena prototype 
   Create tools
+    - Have language tools for making a skinned lang
+    - Add to prototype-lang (so all langs have mappings by default; all langs are skinned; who knows what you're skinning...?)  
+       [could auto-generate that mapping file and first example]
   Write code
   Doc things
   Make the second time easier. 
