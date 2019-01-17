@@ -5,8 +5,8 @@
          2htdp/image
          "./langs/main.rkt")
 
-(provide define-kata-code
-         (rename-out [define-kata-code define-example-code])  ;This is technically correct.  Examples are in TS-Languages, Katas are in TS-Kata-Collections
+(provide define-example-code
+         (rename-out [define-example-code define-kata-code])
          define-example-code/from
          define-example-code/from*
          
@@ -19,7 +19,8 @@
          with-mappings-from
          define-run:*
          define-run:
-         )
+
+         reprovide-all-from)
 
 (require scribble/srcdoc)
 
@@ -277,12 +278,18 @@
           (reverse (rest (reverse (explode-path (syntax-source stx)))))
           (list "compiled-example-data"))))
 
-(define-syntax (define-kata-code stx)
+
+(define-syntax (capture-as-module stx)
+  (syntax-case stx ()
+    [(_ (define-example-code lang id expr ...))
+     #'(syntax (module id lang expr ...))]))
+
+(define-syntax (define-example-code stx)
 
   (syntax-case stx ()
     [(define-kata-code lang kata-name expr ... (run-game-with entity ...))
      (with-syntax ([run:kata-name (format-id #'kata-name "run:~a" #'kata-name)]
-                   [syntaxes:kata-name (format-id #'kata-name "syntaxes:~a" #'kata-name)]
+                   [syntax:kata-name (format-id #'kata-name "syntax:~a" #'kata-name)]
                    [lang-req (format-id #'lang "~a/jam-lang" #'lang)]
                    [full stx]
                    [save-path (compiled-examples-data-path stx)])
@@ -291,33 +298,48 @@
        #`(begin
 
            (provide run:kata-name
-                    #;syntaxes:kata-name)
+                    syntax:kata-name)
 
-           (define syntaxes:kata-name (drop (syntax-e #,(syntax #'full)) 3) )
+           (define syntax:kata-name (capture-as-module full))
 
            (define (run:kata-name)            
             (convert-require-if-necessary expr) ...
             (run-game-with entity ...))
 
-           ;And some basic unit testing
-           (module+ test
-             (require rackunit)
-             
-             ;Saves out some data for docs whenever tests pass
-             (begin
-               (displayln "Saving out compiled data...")
-             
-               (make-directory* save-path)
 
-               (require syntax/to-string)
-             
-               (define f-name
-                 (build-path save-path
-                             (~a (symbol->string 'kata-name) ".rkt")))
 
-               (with-output-to-file f-name #:exists 'replace 
-                 (thunk*
-                  (displayln (~a "#lang " 'lang))
-                  (displayln (string-join (map (compose (λ(s) (~a "(" s ")")) syntax->string)
-                                               syntaxes:kata-name) "\n\n"))))))))]))
+           ))])
+  )
+
+
+
+
+
+(define-syntax (reprovide-all-from stx)
+  (define root-parts (explode-path
+                      (syntax-source stx)))
+  (define root (apply build-path
+                (take root-parts (sub1 (length root-parts)))))
+  (define path (second (syntax->datum stx)))
+  (define full (build-path root path))
+
+  (define files (filter
+                 (λ(f) (string-suffix? (~a f) ".rkt"))
+                 (directory-list full)))
+
+  (define (req/prov f)
+    (define file-path (~a path f))
+    `(begin
+       (require ,file-path)
+       (provide (all-from-out ,file-path))))
+
+  (datum->syntax stx
+   `(begin
+      (provide ids)
+      (define ids '(,@(map (compose string->symbol
+                                  (curryr string-replace ".rkt" "")
+                                  ~a)
+                         files)))
+      ,@(map req/prov files))))
+
 

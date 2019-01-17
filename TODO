@@ -1,12 +1,29 @@
-Crap... didn't commit headless... (reimplement??)
+
+Convert all lang repos -- no more example/ folder
+  example.rkt instead
+
+(define-example-code ...) is exporting syntax:kata-name now.
+  Use that as a channel for (get-example-code ...) (get-example-names ...) [DONE??]
+    and (define-example-code/from ...) [MAYBE DONE??]
+  Others?
+
+ 
+URGENT: Why is building examples taking so damn long.
+  > Lots of files?
+  > Something slow about my macro?
+  > Dynamic requires?
+
+Fix major design flaw before handoff...
+  Dumb compiled example folders
 
 Make end-to-end demo 
   --> battle-arena
-  --> starwars-battle-arena  (should swap to battle-arena-starwars)
+  --> battle-arena-starwars
   --> ts-battle-arena
-  --> ts-starwars-battle-arena (same)
-  --> ts-starwars-battle-arena-summer-camps-2019 
+  --> ts-battle-arena-starwars
+  --> ts-battle-arena-starwars-summer-camps-2019 
 
+Why is game-engine-* always subject to dumb linklets.  Refactor and see if it goes away...
 
 Doc this so it 
   works as an example for the rest of the repos/langs we need to make
