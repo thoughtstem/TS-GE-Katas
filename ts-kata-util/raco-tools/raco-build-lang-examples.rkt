@@ -14,7 +14,9 @@
 
 (system (~a "raco test examples " #;ts-language-name 
             " && "
-            "raco setup -c " ts-language-name 
+            "raco setup --fast-clean " ts-language-name 
+            " && "
+            "raco setup  " ts-language-name 
             ))
 
 (displayln "Done")

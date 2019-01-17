@@ -1,4 +1,4 @@
-
+Crap... didn't commit headless... (reimplement??)
 
 Make end-to-end demo 
   --> battle-arena
@@ -12,6 +12,9 @@ Doc this so it
   works as an example for the rest of the repos/langs we need to make
 
 
+Should we be getting rid of the compiled-example-data folders now that
+  requiring works fine?
+  --> Would solve the caching problem, right?
 
 Make a run examples raco tool
   Maybe a list examples?

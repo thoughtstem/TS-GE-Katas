@@ -185,6 +185,8 @@
 
     body)
 
+  (make-directory* root)
+
   (define files
     (directory-list root))
   
