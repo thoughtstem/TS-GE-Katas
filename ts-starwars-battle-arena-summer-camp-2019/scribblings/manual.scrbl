@@ -23,10 +23,11 @@ we teach students to code by teaching them a 3 step design process:
           @item{Step by step, convert the work into a transformative work}]
 
 By the end of the camp, students will have created many, many of their very own
-video games.  They will also have mastered key concepts in computer science.  They'll
+video games.  They will also have mastered key concepts in coding, computer science,
+and digital citizenship.  They'll
 even know a thing or two about copyright law!
 
-That last part sounds boring, but trust us: this camp is insanely awesome.
+That last part probably sounds boring, but trust us: this camp is insanely awesome.
  
 @table-of-contents[]
 
