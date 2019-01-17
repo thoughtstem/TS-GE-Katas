@@ -13,6 +13,6 @@
 
     ;You can also import katas from other kata collections
     (kata-collection
-      (list core-values-kata))))
+      (list core-values))))
 
 

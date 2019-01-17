@@ -1,13 +1,23 @@
 
+
+Make end-to-end demo 
+  --> battle-arena
+  --> starwars-battle-arena  (should swap to battle-arena-starwars)
+  --> ts-battle-arena
+  --> ts-starwars-battle-arena (same)
+  --> ts-starwars-battle-arena-summer-camps-2019 
+
+
+Doc this so it 
+  works as an example for the rest of the repos/langs we need to make
+
+
+
 Make a run examples raco tool
   Maybe a list examples?
 
 
 
-Embed image into scribble automatically
-  ts-kata-util/assets/main
-
-  Working but need to: find . | grep compiled/ | xargs rm 
 
 Make a way to credit the authors/artists...
 

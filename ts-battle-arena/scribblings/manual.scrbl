@@ -11,6 +11,11 @@
 These @(~a (length (kata-collection-katas battle-arena-katas))) katas pertain to @racket[battle-arena].
 They can be browsed in various ways using the table of contents below.
 
+@racketblock[
+             (require ts-battle-arena/katas)
+ ]
+
+
 @table-of-contents[]
 
 @section{Balance Katas}
