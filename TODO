@@ -1,13 +1,7 @@
 
-
 Separate into 
   ts-survival 
     Add stimuli
-  ts-survival-asp-winter-2019
-    Remove health bars
-    Put back other sections... (game jam, e.g.)
-    Fix "Unknown ___ Kata", looks silly
-
 
 Survival:
   Redo assets+docs
@@ -15,8 +9,6 @@ Survival:
       bat-sprite?
 
   Any broken examples? (get run: working again...)
-
-
 
 Don't hardcode the battle-arena string sub in ts-kata-util
 
