@@ -4,12 +4,17 @@
          get-example-names)
 
 (define (syntax->program-string stx)
-  (string-join
-   (map (compose (curryr substring 1)
-                 (curryr pretty-format 10))
-        (drop (syntax->datum stx) 3) )
-   "\n\n")
-  )
+  (define lang
+    (third (syntax->datum stx)))
+  
+  (string-append
+   (~a "#lang " lang "\n\n")
+   (string-join
+    (map (compose (curryr substring 1)
+                  (curryr pretty-format 50))
+         (drop (syntax->datum stx) 3) )
+    "\n\n")))
+
 
 (define (get-example-code pkg-name kata-name)
   (define stx
@@ -17,8 +22,7 @@
                      (~a pkg-name "/examples"))
                     (string->symbol
                      (~a "syntax:" kata-name))))
-  (syntax->program-string stx)
-  )
+  (syntax->program-string stx))
 
 
 

@@ -53,7 +53,7 @@ coaches and students.
 
 A coach's job is to help students master katas, one by one, with the following @bold{Four Phases of Kata Mastery}:
 
-@itemlist[@item{@bold{Encounter.}  The coach will show the entire kata (stimulus, response, and refinements) to the student.}
+@itemlist[@item{@bold{Encounter.}  The coach will introduce the student to the kata.  At minimum, the student should be "shown" the stimulus.  However, it is also fine to "show" the entire kata.}
           @item{@bold{Training.}   The coach will help the student train for the testing phase.  This may involve having the student do other, simpler katas.}
           @item{@bold{Testing.}    The coach will show the stimulus only.  The student must produce the correct response.  The student should not receive assistance during the test.}
           @item{@bold{Praise.}     The coach will praise the student.

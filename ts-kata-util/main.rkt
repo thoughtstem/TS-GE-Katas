@@ -15,9 +15,9 @@
         
          define/contract/doc
 
-         define-mapping
-         with-mappings-from
-         define-run:*
+      ;   define-mapping
+         define-mappings-from
+      ;   define-run:*
          define-run:
 
          reprovide-all-from)
@@ -35,26 +35,18 @@
 
   (datum->syntax #f no-keywords))
 
-(define-syntax (define-mapping stx)
-  (define d (syntax->datum stx))
-  
-  (datum->syntax
-   stx
-   `(module+ mappings
-      (provide ,(second d))
-      (define ,(second d) ',(third d)))))
 
 (require (for-syntax syntax/parse))
 ;For in a TS-Lang.  Automates documentation.
 (define-syntax (define/contract/doc stx)
-  (define to-map
-    (syntax-parse stx
-      [(_ (f-name args ... )
-          contract
-          doc
-          (other-f-name other-args ...))
-       #'(define-mapping f-name other-f-name)]
-      [else #'(void)]))
+  #;(define to-map
+      (syntax-parse stx
+        [(_ (f-name args ... )
+            contract
+            doc
+            (other-f-name other-args ...))
+         #'(define-mapping f-name other-f-name)]
+        [else #'(void)]))
 
   (define temp/defaults (syntax-parse stx
                           [(_ (f-name args ...) contract doc body ...)
@@ -65,7 +57,7 @@
   (syntax-case stx ()
     ([_ (f-name args ... . rest) contract doc body ...]
      #`(begin
-         #,to-map
+        ; #,to-map
            
          (provide (proc-doc
                    f-name
@@ -78,7 +70,7 @@
            body ...)))
     ([_ (f-name args ... ) contract doc body ...]
      #`(begin
-           #,to-map
+         ;  #,to-map
            
            (provide (proc-doc
                      f-name
@@ -100,14 +92,27 @@
      #'not-a-require-expression]))
 
 
-(define-syntax (with-mappings-from stx)
-  (syntax-case stx ()
-    [(_ module-path body ...)
+(define-syntax (define-mappings-from stx)
+  (datum->syntax stx
+   `(define-syntax (battle-arena-game stx)
+      (syntax-case stx (battle-arena-game)
+        [(battle-arena-game)          #'(starwars-game)]
+        [(battle-arena-game expr ...) #'(starwars-game expr ...)])
+      ))
+
+
+  #;(syntax-case stx ()
+    [(_ module-path)
      #`(begin
-         (require (prefix-in map: module-path))
-         (parameterize ([mappings (mapping-module->mappings 'module-path)])
-           body ...)
-         )]))
+         (require  (prefix-in map: module-path))
+
+         (mappings (mapping-module->mappings 'module-path))
+
+         body
+         ...
+         )])
+
+  )
 
 
 (define-syntax (define-example-code/from* stx)
@@ -123,13 +128,16 @@
   (define froms
     (map from example-ids))
 
+  (define lang/examples (string->symbol
+                         (~a lang "/examples")))
+
   (datum->syntax stx
                  `(begin
-                    
-                    ,@froms
-                    )
-                 stx
-                 ))
+                    (local-require (prefix-in other: ,lang/examples))
+                    ,@froms)
+                 stx))
+
+
 
 (define-syntax (define-run: stx)
   (define id (second (syntax->datum stx)))
@@ -164,7 +172,7 @@
           (check-equal? #t (game? ticked-g)) ;Can add something more meaningful here if necessary
           )))))
 
-(define-syntax (define-run:* stx)
+#;(define-syntax (define-run:* stx)
   (define root (compiled-examples-data-path stx))
   
   (define (file->kata-name f)
@@ -241,42 +249,39 @@
 
 
 (define-syntax (define-example-code/from stx)
+  (define d (syntax->datum stx))
+  (define lang        (second d))
+  (define target-lang (third d))
+  (define kata-name   (fourth d))
   
+  (define other-example-syntax
+    (dynamic-require (string->symbol
+                      (~a lang "/examples"))
+                     (string->symbol
+                      (~a "syntax:" kata-name))))
+
+  (define converted-example-syntax other-example-syntax)
   
   (syntax-case stx ()
     [(_ lang target-lang kata-name)
      (with-syntax ([text (get-example-code (syntax->datum #'lang)
                                            (syntax->datum #'kata-name))]
-                   [save-path (compiled-examples-data-path stx)]
-                   [run:kata-name (format-id #'kata-name "run:~a" #'kata-name)]
-                   #;[run-def (datum->syntax (read (open-input-string text)))])
+                   
+                   [other:run:kata-name    (format-id #'kata-name "other:run:~a" #'kata-name)]
+                   [other:syntax:kata-name (format-id #'kata-name "other:syntax:~a" #'kata-name)]
+                   [run:kata-name          (format-id #'kata-name "run:~a" #'kata-name)]
+                   [syntax:kata-name       (format-id #'kata-name "syntax:~a" #'kata-name)])
 
        #`(begin
-           
-           (make-directory* save-path)
-             
-           (define f-name
-             (build-path save-path
-                         (~a (symbol->string 'kata-name) ".rkt")))
 
-           ;(displayln (~a "Writing out " 'kata-name " from " 'lang))
+           (define (run:kata-name)
+               #,@(drop (syntax-e other-example-syntax) 3)) 
 
-           (define lang-line (~a "#lang " 'lang))
-           (define target-lang-line (~a "#lang " 'target-lang))
- 
-           (with-output-to-file f-name #:exists 'replace 
-             (thunk*
-              (displayln (replace* text (cons
-                                         (list lang-line target-lang-line)
-                                         (mappings))))))))]))
+           (define syntax:kata-name
+             (syntax #,other-example-syntax)) 
 
+           ))]))
 
-
-(define-for-syntax (compiled-examples-data-path stx)
-  (apply build-path
-         (append
-          (reverse (rest (reverse (explode-path (syntax-source stx)))))
-          (list "compiled-example-data"))))
 
 
 (define-syntax (capture-as-module stx)
@@ -290,9 +295,7 @@
     [(define-kata-code lang kata-name expr ... (run-game-with entity ...))
      (with-syntax ([run:kata-name (format-id #'kata-name "run:~a" #'kata-name)]
                    [syntax:kata-name (format-id #'kata-name "syntax:~a" #'kata-name)]
-                   [lang-req (format-id #'lang "~a/jam-lang" #'lang)]
-                   [full stx]
-                   [save-path (compiled-examples-data-path stx)])
+                   [full stx])
 
 
        #`(begin
