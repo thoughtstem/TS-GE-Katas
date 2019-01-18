@@ -1,40 +1,22 @@
 
-Convert all lang repos -- no more example/ folder
-  example.rkt instead
 
-(define-example-code ...) is exporting syntax:kata-name now.
-  Use that as a channel for (get-example-code ...) (get-example-names ...) [DONE??]
-    and (define-example-code/from ...) [MAYBE DONE??]
-  Others?
+Fix up raco build-lang-examples.  Probably doesn't need to do much for now
+  (later can help ensure consistency across langs/katas, etc...
+     Can build the lang, and check to see if any katas broke, etc...)
 
- 
-URGENT: Why is building examples taking so damn long.
-  > Lots of files?
-  > Something slow about my macro?
-  > Dynamic requires?
+Don't hardcode the battle-arena string sub in ts-kata-util
 
-Fix major design flaw before handoff...
-  Dumb compiled example folders
+Don't generate run:*, but do make a run-example function...
+   We've lost the identifier checking
+     but that's okay?  Generate unit test with (run-example ...) ;But don't do (headless ...) game engine specific...
+   Also it's broken... fix???
 
-Make end-to-end demo 
+Document end-to-end demo 
   --> battle-arena
   --> battle-arena-starwars
   --> ts-battle-arena
   --> ts-battle-arena-starwars
   --> ts-battle-arena-starwars-summer-camps-2019 
-
-Why is game-engine-* always subject to dumb linklets.  Refactor and see if it goes away...
-
-Doc this so it 
-  works as an example for the rest of the repos/langs we need to make
-
-
-Should we be getting rid of the compiled-example-data folders now that
-  requiring works fine?
-  --> Would solve the caching problem, right?
-
-Make a run examples raco tool
-  Maybe a list examples?
 
 
 
