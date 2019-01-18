@@ -1,11 +1,13 @@
 #lang racket
 
-(provide scribblify-collection)
+(provide render
+         kata-section)
 
 (require ts-kata-util/katas/rendering/scribble
-         ts-kata-util/katas/main)
+         ts-kata-util/katas/main
+         scribble/manual)
 
-(define (scribblify-collection kc)
+(define (render kc)
   (kata-collection->scribble
    #:befores (list kata->title)
    kc))
@@ -15,3 +17,8 @@
 (define (kata->title k)
   (subsection (~a (kata-name k) " "
                   "Kata (" (kata-id k) ")")))
+
+(define (kata-section kind collection)
+  (list
+   (section (kata-id->kata-name kind))
+   (render collection)))

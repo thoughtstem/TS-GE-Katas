@@ -271,19 +271,27 @@
   
   (kata-collection l))
 
-(define (fill-in-stimuli kc . ps)
-  (define (pairify ps)
+(define (pairify ps)
     (if (empty? ps)
         '()
         (cons (take ps 2)
               (pairify (drop ps 2)))))
-  
-  (kata-collection
-   (map (λ(p) (struct-copy kata (find-by-id (first p) kc)
-                           [stimulus (second p)]
-                           ))
 
-        (pairify ps))))
+(define (fill-in-stimuli kc . ps)
+  (define pairs (pairify ps))
+
+  (kata-collection
+   (map
+    (λ(k)
+      (define p (findf (λ(p)
+                         (eq? (first p)
+                              (kata-id k)))
+                       pairs))
+      (if p
+          (struct-copy kata k
+                       [stimulus (second p)])
+          k))
+    (kata-collection-katas kc))))
 
 
 ;For organizing katas into sub collections...

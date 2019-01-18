@@ -1,6 +1,6 @@
 #lang scribble/manual
 
-@(require ts-kata-util/katas/rendering/scribble
+@(require ts-kata-util/katas/rendering
           ts-kata-util/katas/main
           "../katas.rkt"
           "../rendering.rkt"
@@ -20,28 +20,16 @@ They can be browsed in various ways using the table of contents below.
 
 @table-of-contents[]
 
+@(sections-for kata-section
+               avatar-katas
+               food-katas
+               enemy-katas
+               coin-katas
+               crafter-katas
+               day-night-katas)
+
 @section{All Katas}
 
-@(scribblify-collection survival-katas)
-
-@section{Food}
-
-@(scribblify-collection food-katas)
-
-@section{Coin}
-
-@(scribblify-collection coin-katas)
-
-@section{Enemy}
-
-@(scribblify-collection enemy-katas)
-
-@section{Crafter}
-
-@(scribblify-collection crafter-katas)
-
-@section{Day Night}
-
-@(scribblify-collection day-night-katas)
+@(render survival-katas)
 
 

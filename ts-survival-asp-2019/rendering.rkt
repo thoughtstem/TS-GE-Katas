@@ -24,6 +24,11 @@
          #:scale .15))
 
 (define (kata->num-dollars k)
+  1
+  ;haha, okay we just give one dollar always now :)
+  )
+
+(define (kata->difficulty k)
   (min 10
        (max 1 (floor (/ (num-expressions k) 3)))))
 
@@ -36,7 +41,7 @@
 (define (kata->title k)
   (subsection (~a (kata-name k) " "
                   "Kata "
-                  "(difficulty = "(kata->num-dollars k)")")))
+                  "(difficulty = " (kata->difficulty k) ")")))
 
 (define (kata-section kind collection)
   (list
