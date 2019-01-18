@@ -1,5 +1,11 @@
 
 
+Tidy up all repos ./example.rkt
+  Prototype too
+
+  Fuck, why is survival not building
+
+
 Fix up raco build-lang-examples.  Probably doesn't need to do much for now
   (later can help ensure consistency across langs/katas, etc...
      Can build the lang, and check to see if any katas broke, etc...)

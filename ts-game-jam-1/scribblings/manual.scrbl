@@ -50,10 +50,10 @@ So to sum up:
 @include-section["intro-katas.scrbl"]
 
 @include-section["avatar-katas.scrbl"]
-@include-section["coin-katas.scrbl"]
+@;include-section["coin-katas.scrbl"]
 
-@include-section["food-katas.scrbl"]
-@include-section["enemy-katas.scrbl"]
-@include-section["crafter-katas.scrbl"]
-@include-section["practice-game-jam.scrbl"]
-@include-section["extra-katas.scrbl"]
+@;include-section["food-katas.scrbl"]
+@;include-section["enemy-katas.scrbl"]
+@;include-section["crafter-katas.scrbl"]
+@;include-section["practice-game-jam.scrbl"]
+@;include-section["extra-katas.scrbl"]

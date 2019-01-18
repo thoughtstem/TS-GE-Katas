@@ -1,4 +1,4 @@
-#lang scribble/manual
+lang scribble/manual
 
 @(require racket
           ts-kata-util
@@ -43,36 +43,6 @@
    (apply itemlist (map show-thing things))))
 
 
-@(define (get-kata-file pkg-name (kata-name #f))
-  
-   (local-require pkg/lib)
-   (define folder (pkg-directory (~a pkg-name)))
-
-   (and (not folder)
-        (error (~a "Couldn't find a folder for language '" pkg-name "'.  Either install it with 'raco pkg install " pkg-name "'.  Or, if you have it on your computer somewhere already (perhaps in TS-Languages/), tell me where it is by navigating to it and running 'raco pkg install'")))
-  
-   (define kata-file
-     (build-path folder "examples" "compiled-example-data" (if kata-name
-                                                               (~a kata-name ".rkt")
-                                                               ".")))
-
-   kata-file)
-
-
-@(define (kata-file->code-string file)
-
-   (file->string file))
-
-@(define/contract (show-kata-code pkg-name kata-name)
-  (-> symbol? symbol? any/c)
-
-  (define kata-file (get-kata-file pkg-name kata-name))
-
-  (typeset-code #:keep-lang-line? #t (kata-file->code-string kata-file)))
-
-@(define (student-should-translate #:english sentence
-                                  #:code    kata-code-name
-                                  #:lang    lang)
 
   (list
    (para "Students should be able to translate any sentence of this type:")
