@@ -1,5 +1,7 @@
 #lang racket
 
+(provide sequence2)
+
 (require "util.rkt" pict)
 
 (define (safe f)

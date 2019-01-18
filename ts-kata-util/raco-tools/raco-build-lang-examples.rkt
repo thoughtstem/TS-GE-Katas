@@ -7,12 +7,9 @@
 
 (displayln (~a "Building " ts-language-name))
 
-(delete-directory/files	(build-path (current-directory) "examples" "compiled") #:must-exist? #f)
-(delete-directory/files	(build-path (current-directory) "examples" "compiled-example-data") #:must-exist? #f)
-
 (displayln "Compiling Examples, Running Examples as Tests, and building API docs...")
 
-(system (~a "raco test examples " #;ts-language-name 
+(system (~a "raco test examples.rkt " 
             " && "
             "raco setup --fast-clean " ts-language-name 
             " && "

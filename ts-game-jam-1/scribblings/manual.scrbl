@@ -5,8 +5,7 @@
 Welcome to ThoughtSTEM's official Scholastic Game Jam rules.
 
 What is the Scholastic Game Jam?  It's a competition in which
-players have a limited amount of time to create a
-video game on a theme announced on the day of the
+players have a limited amount of time to create a video game on a theme announced on the day of the
 competition.
 
 Winning teams usually receive some kind of prize.

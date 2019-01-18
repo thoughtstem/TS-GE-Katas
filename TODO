@@ -1,14 +1,22 @@
 
 
-Tidy up all repos ./example.rkt
-  Prototype too
+Separate into 
+  ts-survival 
+    Add stimuli
+  ts-survival-asp-winter-2019
+    Remove health bars
+    Put back other sections... (game jam, e.g.)
+    Fix "Unknown ___ Kata", looks silly
 
-  Fuck, why is survival not building
+
+Survival:
+  Redo assets+docs
+    survival
+      bat-sprite?
+
+  Any broken examples? (get run: working again...)
 
 
-Fix up raco build-lang-examples.  Probably doesn't need to do much for now
-  (later can help ensure consistency across langs/katas, etc...
-     Can build the lang, and check to see if any katas broke, etc...)
 
 Don't hardcode the battle-arena string sub in ts-kata-util
 

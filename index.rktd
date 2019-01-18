@@ -9,7 +9,7 @@
   ( 
     (ts-battle-arena "BATTLE ARENA")
     (ts-coach "COACH TRAINING KATAS")
-    (ts-fleet-winter-2018 "(ARCHIVED) FLEET SCIENCE CENTER WINTER 2018")
+    (ts-battle-arena-fleet-winter-2018 "FLEET WINTER 2018")
     (ts-kata-util "Docs for ts-kata-util")
   )
 )
