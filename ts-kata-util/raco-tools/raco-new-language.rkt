@@ -42,9 +42,6 @@
 (string-sub-all! dest
   "LANGUAGE-NAME" ts-language)
 
-(string-sub-all! (build-path dest "examples")
-  "LANGUAGE-NAME" ts-language)
-
 (string-sub-all! (build-path dest "scribblings")
   "LANGUAGE-NAME" ts-language)
 

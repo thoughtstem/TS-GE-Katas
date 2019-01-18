@@ -1,9 +1,7 @@
 #lang racket
 
 (require ts-kata-util
-  ;You probably want to require your language here...
-  LANGUAGE-NAME
-  )
+  LANGUAGE-NAME)
 
 ;And you probably want your lang, not racket below.
 ;  But technically you can make examples for any language
@@ -11,3 +9,5 @@
   (require 2htdp/image)
 
   (circle 40 'solid 'red))
+
+;You can define as many examples as you want in this file

@@ -32,6 +32,7 @@
                    ))
 
        (displayln (~a "Defining assets " ',i))
+
        
        (define ,i
          (bitmap/file ,p))))
@@ -39,6 +40,8 @@
   (datum->syntax stx
    `(begin
       (require 2htdp/image scribble/srcdoc)
+
+      
       ,@(map define-asset ids))))
 
 

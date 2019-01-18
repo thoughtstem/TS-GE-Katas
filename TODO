@@ -1,10 +1,8 @@
 
-Survival:
-  Redo assets+docs
-    survival
-      bat-sprite?
 
-  Any broken examples? (get run: working again...)
+Any broken examples? (get run: working again...)
+
+
 
 Don't hardcode the battle-arena string sub in ts-kata-util
 
