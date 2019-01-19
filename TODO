@@ -1,8 +1,5 @@
 
-
-Any broken examples? (get run: working again...)
-
-
+Make sure tests defined in ./examples.rkt get run with raco build-l
 
 Don't hardcode the battle-arena string sub in ts-kata-util
 
@@ -10,6 +7,17 @@ Don't generate run:*, but do make a run-example function...
    We've lost the identifier checking
      but that's okay?  Generate unit test with (run-example ...) ;But don't do (headless ...) game engine specific...
    Also it's broken... fix???
+
+
+
+Document:
+  A typical lang
+  A typical kata collection
+
+  -> In generated README.md
+  -> In a more general place -- e.g. TS-Kata-Collections and/or TS-Langauges
+
+
 
 Document end-to-end demo 
   --> battle-arena

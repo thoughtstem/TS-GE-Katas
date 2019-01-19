@@ -1,7 +1,10 @@
 #lang racket
 
 (provide get-example-code
-         get-example-names)
+         get-example-names
+         module->example-ids
+
+         get-example-syntax)
 
 (define (syntax->program-string stx)
   (define lang
@@ -16,15 +19,33 @@
     "\n\n")))
 
 
+(define (module->example-ids m)
+  (dynamic-require m #f)
+  
+  (define-values (raw-example-ids dont-care)
+    (module->exports m))
+
+  (define example-ids
+    (map first (rest (first raw-example-ids))))
+
+  (define syntax-ids
+    (filter
+     (compose (curryr string-prefix? "syntax:") ~a)
+     example-ids))
+
+  syntax-ids)
+
 (define (get-example-code pkg-name kata-name)
+  (syntax->program-string
+   (get-example-syntax pkg-name kata-name)))
+
+(define (get-example-syntax pkg-name kata-name)
   (define stx
     (dynamic-require (string->symbol
                      (~a pkg-name "/examples"))
                     (string->symbol
                      (~a "syntax:" kata-name))))
-  (syntax->program-string stx))
-
-
+  stx)
 
 (define (get-example-names pkg-name)
 

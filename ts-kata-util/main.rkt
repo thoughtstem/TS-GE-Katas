@@ -14,8 +14,11 @@
          
          get-example-code
          get-example-names
-        
-         define/contract/doc)
+         get-example-syntax
+
+         define/contract/doc
+
+         test-all-examples-as-games)
 
 (require scribble/srcdoc)
 
@@ -103,23 +106,51 @@
      (replace* (~a (syntax->datum stx))
                (string-mappings))))))
 
+
+
+(define (run-example stx ns)
+  (begin
+    (define d (syntax->datum stx))
+    (eval `(begin ,@(drop d 3)) ns)))
+
+
+(define-syntax (define-example-code stx)
+
+  (define captured-module
+    (syntax-case stx ()
+      [(_ lang kata-name expr ...)
+       #'(module kata-name lang expr ...)]))
+
+
+  (syntax-case stx ()
+    [(_ lang kata-name expr ...)
+     (with-syntax ([syntax:kata-name
+                    (format-id #'kata-name "syntax:~a" #'kata-name)]
+                   [run:kata-name
+                    (format-id #'kata-name "run:~a" #'kata-name)])
+
+
+       #`(begin
+
+           (provide syntax:kata-name)
+
+           (define syntax:kata-name
+             (syntax #,captured-module))
+
+
+           ))]))
+
+
+
+
+
 (provide define-example-code/from*)
 (define-syntax (define-example-code/from* stx)
   (define d (syntax->datum stx))
   (define lang/examples (second d))
 
-  (dynamic-require lang/examples #f)
-
-  (define-values (raw-example-ids dont-care)
-    (module->exports lang/examples))
-
-  (define example-ids
-    (map first (rest (first raw-example-ids))))
-
   (define syntax-ids
-    (filter
-     (compose (curryr string-prefix? "syntax:") ~a)
-     example-ids))
+    (module->example-ids lang/examples))
   
   (define mappings
     (dynamic-require
@@ -140,42 +171,34 @@
   (datum->syntax stx
                  `(begin
                     (require (prefix-in other: ,lang/examples))
-                    
 
                     ,@define/transform/provides
-                    ))
-  )
-
-(define (run-example example-syntax)
-  (define d (syntax->datum example-syntax))
-  (eval (append
-         d
-         `(dynamic-require ',(second d) #f))))
-
-(define-syntax (capture-as-module stx)
-  (syntax-case stx ()
-    [(_ (define-example-code lang id expr ...))
-     #'(syntax (module id lang expr ...))]))
-
-(define-syntax (define-example-code stx)
-
-  (syntax-case stx ()
-    [(define-kata-code lang kata-name expr ... (run-game-with entity ...))
-     (with-syntax ([syntax:kata-name (format-id #'kata-name "syntax:~a" #'kata-name)]
-                   [full stx])
-
-
-       #`(begin
-
-           (provide syntax:kata-name)
-
-           (define syntax:kata-name (capture-as-module full))
-
-           ))])
-  )
+                    )))
 
 
 
 
+(define-syntax (test-all-examples-as-games stx)
+  (define lang-id (second (syntax->datum stx)))
+  (datum->syntax stx
+                 `(module+ test
+                    (require rackunit)
+                    (define-namespace-anchor a)
+                    (define ns (namespace-anchor->namespace a))
+  
+                    (define (test id)
+                      (define g
+                        (headless
+                         (run-example
+                          (get-example-syntax ,lang-id
+                                              id)
+                          ns)))
+
+                      (define ticked-g (tick g #:ticks 10))
+
+                      (check-pred game? ticked-g))
+
+                    (map test
+                         (get-example-names ,lang-id)))))
 
 
