@@ -79,7 +79,8 @@
          (module+ #,(datum->syntax stx 'mappings )
            (provide mappings)
            (define mappings
-             '((from to)
+             '((src-lang tgt-lang)
+               (from to)
                ...))))]))
 
 
@@ -92,9 +93,9 @@
    (λ(next accum)
      (define find    (first next))
      (define replace (second next))
-     (string-replace accum
-                     (~a find)
-                     (~a replace)))
+     (regexp-replace* (regexp (~a "([ \\(])" find "([\\) ])"))
+                      accum
+                      (~a "\\1" replace "\\2")))
    s
    subs))
 
@@ -103,15 +104,21 @@
   (datum->syntax stx
    (read
     (open-input-string
-     (replace* (~a (syntax->datum stx))
+     (replace* (~s (syntax->datum stx))
                (string-mappings))))))
 
 
 
 (define (run-example stx ns)
-  (begin
-    (define d (syntax->datum stx))
-    (eval `(begin ,@(drop d 3)) ns)))
+
+  (with-handlers [(exn:fail?
+                   (lambda(e)
+                     (error (~a "Error running example! " stx "\n\n" e))))]
+    (begin
+      (define d (syntax->datum stx))
+      (eval `(begin ,@(drop d 3)) ns)))
+
+  )
 
 
 (define-syntax (define-example-code stx)
@@ -135,10 +142,7 @@
            (provide syntax:kata-name)
 
            (define syntax:kata-name
-             (syntax #,captured-module))
-
-
-           ))]))
+             (syntax #,captured-module))))]))
 
 
 
@@ -163,7 +167,7 @@
           (provide ,id)
           
           (define ,id
-            (parameterize [(string-mappings (cons '(" battle-arena" " battle-arena-starwars") ',mappings))]
+            (parameterize [(string-mappings ',mappings)]
               (transform-mappings ,(string->symbol (~a "other:" id)))))
           (void)))
      syntax-ids))
@@ -196,7 +200,9 @@
 
                       (define ticked-g (tick g #:ticks 10))
 
-                      (check-pred game? ticked-g))
+                      (check-pred game? ticked-g)
+
+                      )
 
                     (map test
                          (get-example-names ,lang-id)))))

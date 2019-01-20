@@ -1,4 +1,20 @@
-Don't hardcode the battle-arena string sub in ts-kata-util
+
+Running into predictable bullshit with replace*, make it focus on identifiers.
+  Working, but... quotes are being stripped from strings, ~a problem? 
+
+Make that custom twilik avatar actually work...
+
+Don't throw away args in battle-arena-game
+
+
+Make tickets for different kinds of katas:
+  Coding katas
+  Lore katas
+  Law katas
+
+
+
+Better errors if you run build-l or build-k in the wrong kind of dir
 
 Document:
   A typical lang
