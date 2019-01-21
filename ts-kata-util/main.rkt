@@ -9,6 +9,7 @@
          (rename-out [define-example-code define-kata-code])
 
          run-example
+         eval-example
 
          language-mappings
          
@@ -108,8 +109,22 @@
                (string-mappings))))))
 
 
+(define-syntax (run-example stx)
+  (syntax-case stx ()
+    [(_ kata-name)
+     (with-syntax ([syntax:kata-name
+                    (format-id #'kata-name "syntax:~a" #'kata-name)])
 
-(define (run-example stx ns)
+
+       #`(begin
+           (define-namespace-anchor a)
+           (define ns (namespace-anchor->namespace a))
+           
+           (eval-example syntax:kata-name ns)
+           ))]))
+
+
+(define (eval-example stx ns)
 
   (with-handlers [(exn:fail?
                    (lambda(e)
@@ -132,9 +147,7 @@
   (syntax-case stx ()
     [(_ lang kata-name expr ...)
      (with-syntax ([syntax:kata-name
-                    (format-id #'kata-name "syntax:~a" #'kata-name)]
-                   [run:kata-name
-                    (format-id #'kata-name "run:~a" #'kata-name)])
+                    (format-id #'kata-name "syntax:~a" #'kata-name)])
 
 
        #`(begin
@@ -193,7 +206,7 @@
                     (define (test id)
                       (define g
                         (headless
-                         (run-example
+                         (eval-example
                           (get-example-syntax ,lang-id
                                               id)
                           ns)))
@@ -204,7 +217,7 @@
 
                       )
 
-                    (map test
+                    #;(map test
                          (get-example-names ,lang-id)))))
 
 

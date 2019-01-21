@@ -1,1 +1,1 @@
-("7.0" ("7098cdf99044f6ddcd499ecb6bc9e4ea47ba0800" . "c8bbf7b830a29038916f5f26bffbedbffcef70fc") (collects #"racket" #"main.rkt") (collects #"racket" #"runtime-config.rkt") (collects #"ts-battle-arena" #"katas" #"read-code-stimuli.rkt") (collects #"ts-kata-util" #"katas" #"main.rkt"))
+("7.0" ("7098cdf99044f6ddcd499ecb6bc9e4ea47ba0800" . "341aa483008554e995c82559b5cf8657c3c2f44f") (collects #"racket" #"main.rkt") (collects #"racket" #"runtime-config.rkt") (collects #"ts-battle-arena" #"katas" #"read-code-stimuli.rkt") (collects #"ts-kata-util" #"katas" #"main.rkt"))
