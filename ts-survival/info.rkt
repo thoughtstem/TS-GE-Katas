@@ -4,5 +4,6 @@
 
 (define deps '(
   "ts-kata-util"
-  "battle-arena"))
+  "battle-arena"
+  "ts-fundamentals"))
 

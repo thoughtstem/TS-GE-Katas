@@ -4,7 +4,8 @@
          survival-proto-katas)
 
 (require ts-kata-util/katas/main
-         "./katas/read-code-stimuli.rkt")
+         "./katas/read-code-stimuli.rkt"
+         ts-fundamentals/katas)
 
 
 (define survival-proto-katas

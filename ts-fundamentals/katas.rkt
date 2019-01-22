@@ -2,7 +2,8 @@
 
 (provide katas
          core-values
-         image->code-katas)
+         image->code-katas
+         hello-world)
 
 (require ts-kata-util/katas/main
          "./katas/image-to-code.rkt"
