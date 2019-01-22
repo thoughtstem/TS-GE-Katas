@@ -1,1 +1,0 @@
-("7.0" ("7682090349dc709e82952a28b7840a85da37fe4c" . "c5b95735d27740698f1526fd79a88f7709ad1b2a") (collects #"2htdp" #"image.rkt") (collects #"pkg" #"lib.rkt") (collects #"racket" #"main.rkt") (collects #"racket" #"runtime-config.rkt") (collects #"scribble" #"manual" #"lang" #"reader.rkt") (collects #"scribble" #"manual" #"lang.rkt") (collects #"ts-kata-util" #"main.rkt"))

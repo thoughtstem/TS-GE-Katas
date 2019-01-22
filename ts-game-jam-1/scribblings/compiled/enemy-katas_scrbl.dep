@@ -1,1 +1,0 @@
-("7.0" ("15aa5b94b1ef2c7f8ce5b7a5343e27690256fddb" . "a20677e81bf1827f7a48a6e07ed061f0f6f2ea28") (collects #"racket" #"runtime-config.rkt") (collects #"scribble" #"manual" #"lang" #"reader.rkt") (collects #"scribble" #"manual" #"lang.rkt") (collects #"ts-game-jam-1" #"scribblings" #"ts-game-jam-kata-util.scrbl") (collects #"ts-kata-util" #"main.rkt"))

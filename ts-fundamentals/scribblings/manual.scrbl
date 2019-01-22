@@ -85,7 +85,8 @@ Students have a short but reasonable amount of time to come up with a picture th
 make with the shapes and combos they have learned. A @bold{theme} can help students
 focus and find something quickly!
 
-@margin-note[@bold{Tip}]
+@margin-note[@bold{Tip:} "If you have access to scrap paper and pencils, the students
+             can actually draw out their ideas!"]
 
 Encourage students to:
 @itemlist[@item{think simple!}
@@ -97,3 +98,22 @@ only to end up frustrated when they can't even code a fraction of it. Giving exa
 (trees! houses! smiley faces! snowman!), a simple theme can help or limiting the
 number of shapes they can use can help.
 
+@subsection{Code!}
+The majority of the class is spent coding! Keep the energy positive, encourage students
+to help each other, and be a supportive guide throughout the process.
+
+Encourage student to:
+@itemlist[@item{Break it down into the smallest combos first.}
+          @item{Keep thinking simple!}
+          @item{Celebrate any success, even if they don't finish.}]
+
+@subsection{Show and Tell}
+In the last few minutes, "open the museum" and let students see each other's work! You
+can also delay cleanup so parents can have a chance to see work, if possible!
+
+@subsection{REMEMBER!}
+@bold{Excitement!!!}
+
+@larger{FUN!}
+
+@italic[@bold{Any success is a success worth celebrating!}]

@@ -121,15 +121,18 @@
 ;A kata that defines translating from a high level natural language
 ;  to code
 (define (translate #:id (id 'TODO-id)
-                   #:in           p
-                   #:in-lang      (from-lang 'English)
-                   #:out          c
-                   #:out-lang     (in-lang 'racket))
+                            #:in           p
+                            #:in-lang      (from-lang 'English)
+                            #:out          c
+                            #:out-lang     (in-lang 'racket))
   (kata
    id
    (read p
          #:lang from-lang)
-   (code c
+   (code (if (string? c)
+             c
+             (~a "#lang " in-lang "\n\n"
+                 (substring (pretty-format c 20) 1)))
          #:lang in-lang)
    '()))
 
