@@ -217,7 +217,7 @@
 
                       )
 
-                    #;(map test
+                    (map test
                          (get-example-names ,lang-id)))))
 
 

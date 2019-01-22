@@ -1,7 +1,30 @@
 # New Kata Collection
 
-This is a new kata collection.  Use the following to generate
-kata web page from kata collection defined in `katas.rkt`.
+This is a ThoughtSTEM Kata Collection.  It can be installed as a Racket package with: 
+
+```
+raco pkg install
+```
+
+The cannonical structure of this ThoughtSTEM Kata Collection is as follows:
+
+```
+KATA-COLLECTION-NAME/
+  - README.md
+  - info.rkt
+  - katas.rkt 
+  - katas/
+  - rendering.rkt
+  - scribblings/
+    - manual.scrbl
+  - doc/
+```
+
+Keep your actual kata definitions in `katas.rkt` (whether you write them there
+or `require/provide` them from another collection).  Use `scribblings/manual.scrbl`
+to organize katas on a web page.  Custom renderings (e.g. for gamification) should go in `rendering.rkt`.
+
+Use the following to generate the katas:
 
 ```
 raco build-kata-docs
@@ -12,12 +35,3 @@ Index page will be in:
 ```
 doc/manual/index.html
 ```
-
-Use this `README.md` for developer notes.  It gets displayed nicely on github, so 
-phrase things here like you're talking to developers.
-
-But this file is mostly for installation notes, gotchas, etc.  Things that differ from the norm.
-
-For more detailed documentation, use Scribble.
-
-For todos, use Github tickets.

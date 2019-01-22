@@ -49,24 +49,27 @@ raco new-kata-collection COLLECTION-NAME
 Will create the following skeleton directory structure:
 
 ```
-COLLECTION-NAME/
-   info.rkt
-   katas.rkt
-   rendering.rkt
-   scribblings/
-     manual.scribl
+KATA-COLLECTION-NAME/
+  - README.md
+  - info.rkt
+  - katas.rkt 
+  - katas/
+  - rendering.rkt
+  - scribblings/
+    - manual.scrbl
+  - doc/
 ```
 
 At any time, you can run `raco build-kata-docs`, which will read your
-`manual.scribl` file and produce a `doc` folder that contains the
+`scribblings/manual.scribl` file and produce a `doc` folder that contains the
 compiled HTML.
 
-All kata data code should go in `katas.rkt`.  Any custom rendering code for 
+All kata definition code should go in `katas.rkt`.  Any custom rendering code for 
 your katas should go in `renering.rkt`.  Finally, any code for organizing
 katas into a website, should go in `scribblings/manual.scribl`.
 
 Remember that kata collections are also Racket packages,
-so you can share kata data between different collections.
+so you can share katas between different collections.
 
 For example:
 
@@ -77,24 +80,6 @@ For example:
 This gives you access to the katas defined in the ts-fundamentals collection.
 Whenever possible, share katas between collections rather than duplicating
 them.  
-
-## Running tests
-
-If you've cloned `TS-Kata-Collections`, you may also have cloned `TS-Langauges`.
-If so, you may need to rebuild a langauge's library of examples in order
-to make katas based on them.  
-
-This can be run in any TS-Language repo.  It runs tests and compiles out data
-that can be used in TS-Kata-Definitions.  
-
-```
-raco build-lang-examples
-```
-
-Examples are always stored in a folder called `examples`.  These examples must all
-be defined with the syntactic form `(define-example-code ...)`.  A file that does this
-is called an `example file`.  See below for how these example files are used in 
-the documentation of kata collections.
 
 ## Releasing to the world
 
