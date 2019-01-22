@@ -30,7 +30,8 @@
            (apply (curry vl-append 5)
                   (map (curryr f l) d))]
           [(and (eq? l 'English)
-                (not (list? d)))
+                (not (list? d))
+                (string? d))
            (text d)]
           [else (codeblock-pict #:keep-lang-line? #t (~a d))]))
   
