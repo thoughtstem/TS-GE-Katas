@@ -1,8 +1,8 @@
 '(
   ;/index.html data
   ( 
-    (ts-game-jam-1        "WINTER AFTER SCHOOL")
-    (ts-fundamentals      "FUNDAMENTALS")
+    (ts-survival-asp-2019   "WINTER AFTER SCHOOL")
+    (ts-fundamentals        "FUNDAMENTALS")
   )
 
   ;/unlisted.html data
