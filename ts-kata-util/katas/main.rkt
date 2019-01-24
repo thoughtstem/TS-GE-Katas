@@ -199,10 +199,11 @@
 
 (define (lang->kata-collection lang)
   (kata-collection
-   (sort
+   ;(sort
     (map (curry example->kata lang)
          (get-example-names lang))
-    kata-size>?)))
+   ;kata-size>?)
+    ))
 
 
 
@@ -260,15 +261,19 @@
   
   ret)
 
+
+
 (define/contract (merge-collections . kcs)
-  (->* () () #:rest (or/c kata-collection? kata? (listof kata?) (listof kata-collection?)) kata-collection?)
+  (->* () () #:rest
+       (listof any/c) kata-collection?)
 
   ;Unpack to get down to bare katas and lists (of lists) thereof
   (define (f x)
     (cond
       [(kata-collection? x) (kata-collection-katas x)]
       [(list? x) (map f x)]
-      [else x]))
+      [(kata? x) (list x)]
+      [else (error "What was that? Make the contract better.")]))
   
   (define l (flatten (map f kcs)))
   

@@ -1,5 +1,1 @@
-<<<<<<< HEAD
-("7.1" ("ac533a3acfcb76b43a939e1f94b8848d5ce24d41" . "67212f7ca29d34ac297c7fe8bc4cad10b7b7bafa") (collects #"racket" #"main.rkt") (collects #"racket" #"runtime-config.rkt") (collects #"ts-fundamentals" #"katas" #"image-to-code.rkt") (collects #"ts-fundamentals" #"katas" #"simple-pictures.rkt") (collects #"ts-kata-util" #"katas" #"main.rkt"))
-=======
-("7.0" ("066198de802e233cce3837838d6d8cafb977bf82" . "b4100a1bf5ae3f243f23ef4f3558b7478dd4c512") (collects #"racket" #"main.rkt") (collects #"racket" #"runtime-config.rkt") (collects #"ts-fundamentals" #"katas" #"image-to-code.rkt") (collects #"ts-fundamentals" #"katas" #"simple-pictures.rkt") (collects #"ts-kata-util" #"katas" #"main.rkt"))
->>>>>>> afc884f2deb45503a476159a3f01c4af981aa2ad
+("7.1" ("d0092dea14eda3febd3dcb188000a6c356aabc28" . "dafd37ee0e512524ca0716f680e8f3779f9c66f2") (collects #"racket" #"main.rkt") (collects #"racket" #"runtime-config.rkt") (collects #"ts-fundamentals" #"katas" #"image-to-code.rkt") (collects #"ts-fundamentals" #"katas" #"simple-pictures.rkt") (collects #"ts-kata-util" #"katas" #"main.rkt"))

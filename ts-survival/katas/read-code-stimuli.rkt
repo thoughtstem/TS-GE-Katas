@@ -13,17 +13,13 @@
    (read-template "a basic avatar")
 
    'avatar-2
-   (read-template "an avatar that looks like a bat")
-
-   'avatar-3
    (read-template "an avatar that looks like a solid yellow star")
 
+   'avatar-3
+   (read-template "an avatar that is a random-character")
 
    'avatar-4
-   (read-template "an avatar that looks like a solid red circle")
-
-   'avatar-5
-   (read-template "an avatar that has a custom image")
+   (read-template "an avatar that has a custom drawing made in Piskel")
 
    'food-1
    (read-template "an avatar and some custom food")
