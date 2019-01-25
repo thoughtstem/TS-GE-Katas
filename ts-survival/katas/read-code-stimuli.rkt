@@ -21,6 +21,9 @@
    'avatar-4
    (read-template "an avatar that has a custom drawing made in Piskel")
 
+   'avatar-5
+   (read-template "an avatar that has a custom animation made in Piskel")
+
    'food-1
    (read-template "an avatar and some custom food")
 
@@ -51,10 +54,10 @@
    (read-template "an avatar and a collectable coin worth 500")
 
    'coin-3
-   (read-template "an avatar and 20 copper coins worth 500")
+   (read-template "an avatar and 20 silver coins worth 500")
 
    'coin-4
-   (read-template "an avatar, a copper coin, and a singe epic coin that: never respawns, looks like a bat, and is worth 1000")
+   (read-template "an avatar, a silver coin, and a single epic gold coin that never respawns and is worth 1000")
 
 
 
@@ -62,12 +65,12 @@
    (read-template "an avatar and a basic crafter")
 
    'crafter-2
-   (read-template "an avatar, a basic crafter, and carrot cake that heals you by 25")
+   (read-template "an avatar, carrots, and a crafter that makes carrot stew from carrots")
 
    'crafter-3
-   (read-template "an avatar and a crafter that takes a carrot and produces carrot cake that heals you by 25")
+   (read-template "an avatar, fish, and a crafter that makes fish stew that heals you by 50")
 
    'crafter-4
-   (read-template "an avatar and a crafter that: 1) takes a carrot and produces carrot cake that heals you by 25, and 2) takes a carrot cake and produces a carrot cupcake ")
+   (read-template "an avatar, carrots, fish, and a crafter on tile 2 (posn 200 200) that makes both carrot-stew and fish-stew")
 
    ))
