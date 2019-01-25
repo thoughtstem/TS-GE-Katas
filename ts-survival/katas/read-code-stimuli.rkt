@@ -5,7 +5,7 @@
 (require ts-kata-util/katas/main)
 
 (define (read-template noun)
-  (read (~a "Make survival game with " noun)))
+  (read (~a "Make a survival game with " noun ".")))
 
 (define stimuli
   (list
@@ -41,11 +41,16 @@
    (read-template "an avatar and an enemy")
 
    'enemy-2
-   (read-template "an avatar and 5 bat enemies with medium AI.")
+   (read-template "an avatar and 10 random enemies")
 
    'enemy-3
-   (read-template "an avatar and 5 bat enemies with medium AI that shoot dangerous acid.")
+   (read-template "an avatar and 5 bat enemies with medium AI")
 
+   'enemy-4
+   (read-template "an avatar, 5 easy slime enemies, and 5 medium bat enemies that only come out at night")
+
+   'enemy-5
+   (read-template "an avatar and 5 hard bat enemies that spit acid with 50 damage")
 
    'coin-1
    (read-template "an avatar and a basic collectable coin")
