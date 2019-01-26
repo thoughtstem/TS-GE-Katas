@@ -20,7 +20,7 @@
   coin-katas
   enemy-katas
   crafter-katas
-  day-night-katas
+  sky-katas
   starvation-rate-katas
   game-jam-katas)
 
