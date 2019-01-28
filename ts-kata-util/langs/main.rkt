@@ -6,17 +6,25 @@
 
          get-example-syntax)
 
+(define (add-line-breaks str)
+  (string-replace str "#:" "\n    #:"))
+
 (define (syntax->program-string stx)
   (define lang
     (third (syntax->datum stx)))
-  
+  ;(pretty-print-depth 1)
   (string-append
    (~a "#lang " lang "\n\n")
+   ;(~a (syntax->datum stx))
    (string-join
-    (map (compose (curryr substring 1)
-                  (curryr pretty-format 50))
+     (map (compose (curryr substring 1)
+                   add-line-breaks
+                   (curryr pretty-format 'infinity) ; original 50
+                   ) 
          (drop (syntax->datum stx) 3) )
-    "\n\n")))
+    "\n\n")
+
+   ))
 
 
 (define (module->example-ids m)

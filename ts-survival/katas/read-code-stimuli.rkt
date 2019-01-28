@@ -78,4 +78,20 @@
    'crafter-4
    (read-template "an avatar, carrots, fish, and a crafter on tile 2 (posn 200 200) that makes both carrot-stew and fish-stew")
 
+   
+   'sky-1
+   (read-template "an avatar and a slow changing sky")
+
+   'sky-2
+   (read-template "an avatar and a fast changing sky with max-darkness")
+
+   'sky-3
+   (read-template "an avatar and a darkmagenta night-sky with 150 darkness")
+
+   'sky-4
+   (read-template "an avatar, a very short night-time, and an enemy that only comes out at night")
+
+   'starvation-rate
+   (read-template "an avatar and the fastest starvation rate")
+
    ))

@@ -26,7 +26,8 @@ They can be browsed in various ways using the table of contents below.
                enemy-katas
                coin-katas
                crafter-katas
-               day-night-katas)
+               sky-katas
+               starvation-rate-katas)
 
 @section{All Katas}
 
