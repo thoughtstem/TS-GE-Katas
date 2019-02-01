@@ -3,7 +3,7 @@
 (provide katas)
 
 (require ts-kata-util/katas/main
-         ts-battle-arena/katas/read-code-stimuli
+         "./katas/read-code-stimuli.rkt"
          )
 
 ;Katas start as examples in some langauge.
@@ -18,5 +18,33 @@
 (define katas
   (apply fill-in-stimuli battle-arena-proto-katas stimuli))
 
-
-
+(define-sub-collections katas
+  hero-katas
+  avatar-katas
+  paint-thrower-katas
+  magic-balance-katas
+  melee-balance-katas
+  repeater-balance-katas
+  spear-tower-katas
+  dagger-tower-katas
+  repeater-tower-katas
+  single-shot-katas
+  spread-shot-katas
+  homing-repeater-katas
+  spike-mine-katas
+  lava-katas
+  repeater-armor-katas
+  sword-armor-katas
+  enemy-weapon-katas
+  rocket-tower-katas
+  grow-katas
+  shield-katas
+  boost-katas
+  health-katas
+  ;A few special ones require us to filter out certain other katas.
+  (enemy-katas
+   (not/c (curryr name-contains? "Weapon")))
+  (sword-katas
+   (not/c (curryr name-contains? "Tower")))
+  (spear-katas
+   (not/c (curryr name-contains? "Tower"))))

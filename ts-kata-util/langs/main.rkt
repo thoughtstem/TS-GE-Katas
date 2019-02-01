@@ -27,10 +27,11 @@
 
   (define example-ids
     (map first (rest (first raw-example-ids))))
-
+  
   (define syntax-ids
     (filter
      (compose (curryr string-prefix? "syntax:") ~a)
+     
      example-ids))
 
   syntax-ids)

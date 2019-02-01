@@ -1,1 +1,1 @@
-("7.0" ("628ff3914e3cf6c97b9100d56a5fe3ecbb21995c" . "519e19522c2aa3956e5ca0fa0f66cf0f92c0bcab") (collects #"2htdp" #"image.rkt") (collects #"racket" #"main.rkt") (collects #"racket" #"runtime-config.rkt") (collects #"ts-kata-util" #"katas" #"main.rkt"))
+("7.0" ("628ff3914e3cf6c97b9100d56a5fe3ecbb21995c" . "0422b48710fe7c09927982b3d115ded335ea143a") (collects #"2htdp" #"image.rkt") (collects #"racket" #"main.rkt") (collects #"racket" #"runtime-config.rkt") (collects #"ts-kata-util" #"katas" #"main.rkt"))

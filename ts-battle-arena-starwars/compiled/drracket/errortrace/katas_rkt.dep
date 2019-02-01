@@ -1,0 +1,1 @@
+("7.0" ("50779b9125abeee9b72bf874b6efa5207b130d6b" . "3de728233882f3a70182854934ba859624dddfda") (collects #"errortrace" #"errortrace-key.rkt") (collects #"racket" #"main.rkt") (collects #"racket" #"runtime-config.rkt") (collects #"ts-battle-arena-starwars" #"katas" #"read-code-stimuli.rkt") (collects #"ts-kata-util" #"katas" #"main.rkt"))
