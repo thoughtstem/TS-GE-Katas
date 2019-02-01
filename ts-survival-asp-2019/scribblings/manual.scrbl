@@ -30,7 +30,7 @@ Welcome to the kata collection for @bold{Survival Games}.  This is for students 
 
 @section{Extra Practice}
 
-@(render day-night-katas)
+@(render sky-katas)
 @(render starvation-rate-katas)
 
 @include-section["practice-game-jam.scrbl"]
