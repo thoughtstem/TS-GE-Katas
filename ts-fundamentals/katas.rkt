@@ -3,7 +3,8 @@
 (provide katas
          core-values
          image->code-katas
-         hello-world)
+         hello-world
+         simple-pictures)
 
 (require ts-kata-util/katas/main
          "./katas/image-to-code.rkt"
@@ -49,7 +50,13 @@
   (fill-in-stimuli proto-fundamentals
 
                    'hello-world
-                   (read "Make a circle that is red and size 40.")))
+                   (read "Make a circle that is red and size 40.")
+ 
+                   'target
+                   (read "Make a target using circles of different sizes and overlay.")))
+
+(define-kata target
+  (second (kata-collection-katas fundamentals)))
 
 (define-kata hello-world
   (first (kata-collection-katas fundamentals)))
@@ -59,9 +66,10 @@
 
 (define-kata-collection katas
   unplugged
-  fundamentals
+  hello-world
   fundamentals-shapes
   image->code-katas
+  target
   simple-pictures)
 
 

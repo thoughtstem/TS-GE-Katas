@@ -1,7 +1,3 @@
-<<<<<<< HEAD
-# ts-fundamentals
-# ts-fundamentals
-=======
 # New Kata Collection
 
 This is a new kata collection.  Use the following to generate
@@ -25,4 +21,3 @@ But this file is mostly for installation notes, gotchas, etc.  Things that diffe
 For more detailed documentation, use Scribble.
 
 For todos, use Github tickets.
->>>>>>> meta-kata-rendering

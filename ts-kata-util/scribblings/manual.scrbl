@@ -267,6 +267,8 @@ This is especially true for unplugged katas, meta katas, teaching katas, and oth
 
 @section{Working with Kata Collections}
 
+@defmodule[ts-kata-util/katas/main]
+
 @defproc[(merge-collections [a (or/c kata? kata-collection?)]
                             [b (or/c kata? kata-collection?)]
                             ...)
@@ -344,9 +346,9 @@ This is especially true for unplugged katas, meta katas, teaching katas, and oth
   Defines something and provides it.
 }
 
-@defform[(define-kata-collection name kata ...)]{
+@defform[(define-kata-collection name kata-or-kata-collection ...)]{
   Constructs, defines, and provides a collection named @racket[name]
-  from the given katas.
+  from the given katas or kata collections.
 }
 
 @defmodule[ts-kata-util/rendering/scribble]

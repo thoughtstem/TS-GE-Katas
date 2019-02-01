@@ -7,7 +7,7 @@
           (except-in racket read do)
           )
 
-@title{TS Starwars Battle Arena}
+@title{Starwars Battle Arena}
 
 These @(~a (length (kata-collection-katas katas))) katas pertain to @racket[battle-arena-starwars].
 They can be browsed in various ways using the table of contents below.
