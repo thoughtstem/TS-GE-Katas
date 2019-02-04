@@ -24,7 +24,6 @@ To use these katas in another collection do:
 @section{Hero Katas}
 
 @(render hero-katas)
-@(render avatar-katas)
 
 @section{Enemy Katas}
 
@@ -34,86 +33,86 @@ To use these katas in another collection do:
 
 @(render enemy-weapon-katas)
 
-@section{Spear Katas}
+@section{Lightsaber Katas}
 
-@(render spear-katas)
+@(render lightsaber-katas)
 
-@section{Sword Katas}
+@section{Blaster Katas}
 
-@(render sword-katas)
+@(render blaster-katas)
 
 @section{Paint Thrower Katas}
 
-@(render paint-thrower-katas)
+@;(render paint-thrower-katas)
 
 @section{Magic Balance Katas}
 
-@(render magic-balance-katas)
+@;(render magic-balance-katas)
 
 @section{Melee Balance Katas}
 
-@(render melee-balance-katas)
+@;(render melee-balance-katas)
 
 @section{Repeater Balance Katas}
 
-@(render repeater-balance-katas)
+@;(render repeater-balance-katas)
 
 @section{Spear Tower Katas}
 
-@(render spear-tower-katas)
+@;(render spear-tower-katas)
 
 @section{Repeater Tower Katas}
 
-@(render repeater-tower-katas)
+@;(render repeater-tower-katas)
 
 @section{Dagger Tower Katas}
 
-@(render dagger-tower-katas)
+@;(render dagger-tower-katas)
 
 @section{Single Shot Katas}
 
-@(render single-shot-katas)
+@;(render single-shot-katas)
 
 @section{Spread Shot Katas}
 
-@(render spread-shot-katas)
+@;(render spread-shot-katas)
 
 @section{Homing Repeater Katas}
 
-@(render homing-repeater-katas)
+@;(render homing-repeater-katas)
 
 @section{Grow Katas}
 
-@(render grow-katas)
+@;(render grow-katas)
 
 @section{Shield Katas}
 
-@(render shield-katas)
+@;(render shield-katas)
 
 @section{Boost Katas}
 
-@(render boost-katas)
+@;(render boost-katas)
 
 @section{Health Katas}
 
-@(render health-katas)
+@;(render health-katas)
 
 @section{Spike Mine Katas}
 
-@(render spike-mine-katas)
+@;(render spike-mine-katas)
 
 @section{Lava Katas}
 
-@(render lava-katas)
+@;(render lava-katas)
 
 @section{Rocket Tower Katas}
 
-@(render rocket-tower-katas)
+@;(render rocket-tower-katas)
 
 @section{Repeater Armor Katas}
 
-@(render repeater-armor-katas)
+@;(render repeater-armor-katas)
 
 @section{Sword Armor Katas}
 
-@(render sword-armor-katas)
+@;(render sword-armor-katas)
