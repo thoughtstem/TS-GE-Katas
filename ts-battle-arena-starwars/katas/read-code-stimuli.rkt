@@ -61,7 +61,41 @@
    'blaster-3
    (read "Make a game with your own defined blaster dart.")
 
+
+
+   'planet-1
+   (read "Make a game that has a random colored planet.")
+
+   'planet-2
+   (read "Make a game that uses a predefined image as the planet.")
+
+   'planet-3
+   (read "Make a game that has a fully customized planet.")
+
+
+
+   'heal-1
+   (read "Make a game that has an item that gives you some health.")
+
+   'heal-2
+   (read "Make a game that has an item that fills your health bar.")
+
+   'heal-3
+   (read "Make a game that has both healing items.")
+
+
+
+   'boost-1
+   (read "Make a game that has a powerup that temporarily boosts your damage.")
+
+   'boost-2
+   (read "Make a game that has a powerup that temporarily boosts your speed.")
+
+   'boost-3
+   (read "Make a game that has both Damage and Speed Boost Powerups, defined outside battle-arena-game.")
+
    
+
    'spear-1
    (read "Make a game that has a spear.")
 
@@ -251,28 +285,6 @@
 
    'grow-and-shrink
    (read "Make a game with a potion that makes you grow and then shrink")
-
-
-   
-   'health-1
-   (read "Make a game that has a potion that gives you some health.")
-
-   'health-2
-   (read "Make a game that has a potion that fills your health bar.")
-
-   'health-3
-   (read "Make a game that has both Health and Max Health Potions, defined outside battle-arena-game.")
-
-
-   
-   'boost-1
-   (read "Make a game that has a powerup that temporarily boosts your health.")
-
-   'boost-2
-   (read "Make a game that has a powerup that temporarily boosts your speed.")
-
-   'boost-3
-   (read "Make a game that has both Damage and Speed Boost Powerups, defined outside battle-arena-game.")
 
 
    

@@ -14,9 +14,7 @@ They can be browsed in various ways using the table of contents below.
 
 To use these katas in another collection do:
 
-@racketblock[
-             (require ts-battle-arena-starwars/katas)
- ]
+@racketblock[ (require ts-battle-arena-starwars/katas)]
 
 
 @table-of-contents[]
@@ -41,78 +39,31 @@ To use these katas in another collection do:
 
 @(render blaster-katas)
 
-@section{Paint Thrower Katas}
+@section{Planet Katas}
 
-@;(render paint-thrower-katas)
+@(render planet-katas)
 
-@section{Magic Balance Katas}
+@section{Heal Katas}
 
-@;(render magic-balance-katas)
-
-@section{Melee Balance Katas}
-
-@;(render melee-balance-katas)
-
-@section{Repeater Balance Katas}
-
-@;(render repeater-balance-katas)
-
-@section{Spear Tower Katas}
-
-@;(render spear-tower-katas)
-
-@section{Repeater Tower Katas}
-
-@;(render repeater-tower-katas)
-
-@section{Dagger Tower Katas}
-
-@;(render dagger-tower-katas)
-
-@section{Single Shot Katas}
-
-@;(render single-shot-katas)
-
-@section{Spread Shot Katas}
-
-@;(render spread-shot-katas)
-
-@section{Homing Repeater Katas}
-
-@;(render homing-repeater-katas)
-
-@section{Grow Katas}
-
-@;(render grow-katas)
-
-@section{Shield Katas}
-
-@;(render shield-katas)
+@(render heal-katas)
 
 @section{Boost Katas}
 
-@;(render boost-katas)
+@(render boost-katas)
 
-@section{Health Katas}
-
-@;(render health-katas)
-
-@section{Spike Mine Katas}
-
+@;(render magic-balance-katas)
+@;(render melee-balance-katas)
+@;(render repeater-balance-katas)
+@;(render spear-tower-katas)
+@;(render repeater-tower-katas)
+@;(render dagger-tower-katas)
+@;(render single-shot-katas)
+@;(render spread-shot-katas)
+@;(render homing-repeater-katas)
+@;(render grow-katas)
+@;(render shield-katas)
 @;(render spike-mine-katas)
-
-@section{Lava Katas}
-
 @;(render lava-katas)
-
-@section{Rocket Tower Katas}
-
 @;(render rocket-tower-katas)
-
-@section{Repeater Armor Katas}
-
 @;(render repeater-armor-katas)
-
-@section{Sword Armor Katas}
-
 @;(render sword-armor-katas)

@@ -25,7 +25,10 @@
   enemy-weapon-katas
   lightsaber-katas
   blaster-katas
-  ;paint-thrower-katas
+  planet-katas
+  heal-katas
+  boost-katas
+
   ;magic-balance-katas
   ;melee-balance-katas
   ;repeater-balance-katas
@@ -38,17 +41,8 @@
   ;spike-mine-katas
   ;lava-katas
   ;repeater-armor-katas
-  ;sword-armor-katas
-  
+  ;sword-armor-katas  
   ;rocket-tower-katas
   ;grow-katas
   ;shield-katas
-  ;boost-katas
-  ;health-katas
-  ;A few special ones require us to filter out certain other katas.
-  
-  ;(sword-katas
-  ; (not/c (curryr name-contains? "Tower")))
-  ;(spear-katas
-  ; (not/c (curryr name-contains? "Tower")))
   )
