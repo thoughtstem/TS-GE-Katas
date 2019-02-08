@@ -51,19 +51,29 @@ To use these katas in another collection do:
 
 @(render boost-katas)
 
-@;(render magic-balance-katas)
-@;(render melee-balance-katas)
-@;(render repeater-balance-katas)
-@;(render spear-tower-katas)
-@;(render repeater-tower-katas)
-@;(render dagger-tower-katas)
-@;(render single-shot-katas)
-@;(render spread-shot-katas)
-@;(render homing-repeater-katas)
-@;(render grow-katas)
-@;(render shield-katas)
-@;(render spike-mine-katas)
+@section{Shield Katas}
+
+@(render shield-katas)
+
+@section{Force Field Katas}
+
+@(render force-field-katas)
+
+@section{Lightsaber Droid Katas}
+
+@(render lightsaber-droid-katas)
+
+@section{Blaster Droid Katas}
+
+@(render blaster-droid-katas)
+
+@section{Lightsaber Armor Katas}
+
+@(render lightsaber-armor-katas)
+
+@section{Blaster Armor Katas}
+
+@(render blaster-armor-katas)
+
 @;(render lava-katas)
-@;(render rocket-tower-katas)
-@;(render repeater-armor-katas)
-@;(render sword-armor-katas)
+@;(render spike-mine-katas)

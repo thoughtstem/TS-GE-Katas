@@ -23,26 +23,22 @@
   (enemy-katas
    (not/c (curryr name-contains? "Weapon")))
   enemy-weapon-katas
-  lightsaber-katas
-  blaster-katas
+  (lightsaber-katas
+   (not/c (curryr name-contains? "Droid"))
+   (not/c (curryr name-contains? "Armor")))
+  (blaster-katas
+   (not/c (curryr name-contains? "Droid"))
+   (not/c (curryr name-contains? "Armor")))
   planet-katas
   heal-katas
   boost-katas
-
-  ;magic-balance-katas
-  ;melee-balance-katas
-  ;repeater-balance-katas
-  ;spear-tower-katas
-  ;dagger-tower-katas
-  ;repeater-tower-katas
-  ;single-shot-katas
-  ;spread-shot-katas
-  ;homing-repeater-katas
+  shield-katas
+  force-field-katas
+  lightsaber-droid-katas
+  blaster-droid-katas
+  lightsaber-armor-katas  
+  blaster-armor-katas  
+  ;lava-katas 
   ;spike-mine-katas
-  ;lava-katas
-  ;repeater-armor-katas
-  ;sword-armor-katas  
-  ;rocket-tower-katas
-  ;grow-katas
-  ;shield-katas
+
   )

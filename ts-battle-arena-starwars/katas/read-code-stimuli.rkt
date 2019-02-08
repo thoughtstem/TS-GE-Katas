@@ -16,6 +16,9 @@
    'hero-3
    (read "Make a game with a predifined sprite as your hero.")
 
+   'hero-4
+   (read "Make a game with a fully customized hero.")
+
 
    
    'enemy-1
@@ -94,71 +97,75 @@
    'boost-3
    (read "Make a game that has both Damage and Speed Boost Powerups, defined outside battle-arena-game.")
 
-   
-
-   'spear-1
-   (read "Make a game that has a spear.")
-
-   'spear-2
-   (read "Make a game with your own defined spear.")
-
-   'spear-3
-   (read "Make a game that has a fully customizable spear in it where you can modify its damage and durability.")
-
-   'spear-4
-   (read "Make a game that has a fully customizable spear in it where you can modify its speed, range, and sprite.")
-
 
    
-  
-          
-   'paint-thrower-1
-   (read "Make a game that has a paint thrower in it.")
+   'shield-1
+   (read "Make a game that has an item that increases your shield by 50.")
 
-   'paint-thrower-2
-   (read "Make a game with your own defined paint thrower with customizable rarity.")
+   'shield-2
+   (read "Make a game that has an item that recovers your shield to 100.")
 
-   'paint-thrower-3
-   (read "Make a game that has a customizable paint thrower in it where you can modify the damage and durability of the paint.")
-
-   'paint-thrower-4
-   (read "Make a game that has a customizable paint thrower in it where you can modify the speed, range, and sprite of the paint.")
-
-
-
-   'magic-balance-1
-   (read "Make a game that has a light magic weapon.")
-
-   'magic-balance-2
-   (read "Make a game that has a heavy magic weapon.")
-   
-   'magic-balance-3
-   (read "Make a game that has a light and a heavy magic weapon.  Balance them relative to each other.")
-
-
-   
-   'melee-balance-1
-   (read "Make a game that has a light melee weapon.")
-
-   'melee-balance-2
-   (read "Make a game that has a heavy melee weapon.")
-   
-   'melee-balance-3
-   (read "Make a game that has a light and a heavy melee weapon.  Balance them relative to each other.")
+   'shield-3
+   (read "Make a game that has both a Shield and Max Shield defined item.")
    
 
    
-   'repeater-balance-1
-   (read "Make a game that has a light repeater weapon.")
+   'force-field-1
+   (read "Make a game that has an item with a custom name that spawns a force field.")
 
-   'repeater-balance-2
-   (read "Make a game that has a heavy repeater weapon.")
+   'force-field-2
+   (read "Make a game that has an item with a custom name and sprite, that spawns a force field with a custom duration.")
+
+   'force-field-3
+   (read "Make a game that has an item with a custom name and sprite, that spawns a force field with a custom duration, and that allows friendly darts to go through it.")
+
+
+
+
+
+   'ligthsaber-droid-1
+   (read "Make a game that has a weapon that spawns a droid with a lightsaber.")
+
+   'ligthsaber-droid-2
+   (read "Make a game that has a defined weapon that spawns a droid with a customized lightsaber.")
    
-   'repeater-balance-3
-   (read "Make a game that has a light and a heavy repeater weapon.  Balance them relative to each other.")
+   'ligthsaber-droid-3
+   (read "Make a game that has a defined weapon that spawns a droid with a fully customized lightsaber.")
+
 
    
+   'blaster-droid-1
+   (read "Make a game that has a weapon that spawns a droid with a blaster.")
 
+   'blaster-droid-2
+   (read "Make a game that has a defined weapon that spawns a droid with a customized blaster.")
+   
+   'blaster-droid-3
+   (read "Make a game that has a defined weapon that spawns a droid with a fully customized blaster.")
+
+
+   'lightsaber-armor-1
+   (read "Make a game that has working Lightsaber Armor.")
+
+   'lightsaber-armor-2
+   (read "Make a game that has a fully customized Lightsaber Armor.")
+
+   'lightsaber-armor-3
+   (read "Make a game that has an enemy with a lightsaber and armor for your hero that will protect against that lightsaber!")
+
+   
+   
+   'blaster-armor-1
+   (read "Make a game that has working Blaster Armor.")
+
+   'blaster-armor-2
+   (read "Make a game that has a fully customized Blaster Armor.")
+
+   'blaster-armor-3
+   (read "Make a game that has an enemy with a blaster and armor for your hero that will protect against that blaster!")
+
+
+   
    'lava-1
    (read "Make a game that has a custom weapon that deploys a lava pit.")
 
@@ -179,121 +186,4 @@
    'spike-mine-3
    (read "Make a game that has a weapon that deploys a spike mine with a large range and speed, high damage, and non-default sprite")
 
-
-   
-   'spear-tower-1
-   (read "Make a game that has a custom weapon that deploys a spear tower.")
-
-   'spear-tower-2
-   (read "Make a game that has a custom weapon that deploys a spear tower with a speed of 10 and a range of 20.")
-
-   'spear-tower-3
-   (read "Make a game that has a custom weapon that deploys a spear tower with a custom spear image, damage level, range and speed")
-
-
-   
-   'repeater-armor-1
-   (read "Make a game that has armor called Repeater Armor.")
-
-   'repeater-armor-2
-   (read "Make a game that has working Repeater Armor.")
-
-   'repeater-armor-3
-   (read "Make a game that has 10 enemies with a repeater and armor for your avatar that will protect against that repeater!")
-
-   
-
-   'sword-armor-1
-   (read "Make a game that has armor called Sword Armor.")
-
-   'sword-armor-2
-   (read "Make a game that has working Sword Armor.")
-
-   'sword-armor-3
-   (read "Make a game that has 10 enemies with a sword and armor for your avatar that will protect against that sword!")
-
-
-   
-   'rocket-tower-1
-   (read "Make a game that has a custom weapon that deploys Rocket Tower.")
-
-   'rocket-tower-2
-   (read "Make a game that has a custom weapon that deploys a slow shooting, homing Rocket Tower.")
-
-   'rocket-tower-3
-   (read "Make a game that has a custom weapon that deploys a slow shooting, homing Rocket Tower that shoots a custom rocket.")
-
-   
-
-   'repeater-tower-1
-   (read "Make a game that has a weapon that deploys a Repeater Tower.")
-
-   'repeater-tower-2
-   (read "Make a game that has a weapon that deploys a Repeater Tower with slow bullets but a fast fire rate.")
-
-   'repeater-tower-3
-   (read "Make a game that has a custom weapon that deploys a slow shooting, homing Rocket Tower that shoots a custom rocket.")
-
-
-   
-   'dagger-tower-1
-   (read "Make a game that has a custom weapon that deploys a dagger tower.")
-
-   'dagger-tower-2
-   (read "Make a game that has a custom weapon that deploys a fast, spread shooting dagger tower.")
-
-   'dagger-tower-3
-   (read "Make a game that has a custom weapon that deploys a fast, spread shooting dagger tower with a custom dagger.")
-
-
-   
-   'single-shot-1
-   (read "Make a game that has a custom weapon that has a normal fire mode.")
-
-   'single-shot-2
-   (read "Make a game that has a custom weapon that has a normal fire mode and a customized dart.")
-
-   'single-shot-3
-   (read "Make a game that has a custom weapon that has a normal fire mode and a customized dart with a food sprite.")
-
-
-   
-   'spread-shot-1
-   (read "Make a game that has a weapon that has a spread fire mode.")
-
-   'spread-shot-2
-   (read "Make a game that has a weapon that has a spread fire mode and a customized dart.")
-
-   'spread-shot-3
-   (read "Make a game that has a weapon that has a spread fire mode and a customized dart with an object sprite.")
-
-
-   
-   'homing-repeater-1
-   (read "Make a game that has a weapon that has a hoaming fire mode.")
-
-   'homing-repeater-2
-   (read "Make a game that has a weapon that has a hoaming fire mode and a customized dart.")
-
-   'homing-repeater-3
-   (read "Make a game that has a weapon that has a hoaming fire mode and a customized dart with an animal sprite.")
-
-
-   
-   'grow-1
-   (read "Make a game with a potion that makes you grow.")
-
-   'grow-and-shrink
-   (read "Make a game with a potion that makes you grow and then shrink")
-
-
-   
-   'shield-1
-   (read "Make a game that has a potion that increases your shield by 50.")
-
-   'shield-2
-   (read "Make a game that has a potion that recovers your shield to 100.")
-
-   'shield-3
-   (read "Make a game that has both a Shield and Max Shield Potion, defined outside battle-arena-game.")
    ))
