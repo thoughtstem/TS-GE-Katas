@@ -1,9 +1,10 @@
 #lang scribble/manual
 
-@(require ts-kata-util/katas/rendering/scribble
+@(require ts-kata-util/katas/rendering
           ts-kata-util/katas/main
            "../katas.rkt"
            "../rendering.rkt"
+           ts-kata-util
            (except-in racket read do))
 
 @title{Battle Arena Katas}
@@ -18,48 +19,30 @@ They can be browsed in various ways using the table of contents below.
 
 @table-of-contents[]
 
-@section{Balance Katas}
-
-@(scribblify-collection
-  (merge-collections magic-balance-katas
-                     melee-balance-katas
-                     repeater-balance-katas))
-
-@section{Tower Katas}
-
-@(scribblify-collection
-  (merge-collections spear-tower-katas
-                     dagger-tower-katas
-                     repeater-tower-katas))
-
-@section{Defensive Base Katas}
-
-@(scribblify-collection
-  (merge-collections spike-mine-katas
-                     lava-katas
-                     spear-tower-katas))
-
-@section{Armor Katas}
-
-@(scribblify-collection
-  (merge-collections repeater-armor-katas
-                     sword-armor-katas
-                     enemy-weapon-katas))
-
-@section{Ranged Weapon Katas}
-
-@(scribblify-collection
-  (merge-collections single-shot-katas
-                     spread-shot-katas
-                     homing-repeater-katas))
-
-@section{Melee Weapon Katas}
-
-@(scribblify-collection
-  (merge-collections spear-katas
-                     sword-katas
-                     paint-thrower-katas))
-         
+@;@(sections-for  avatar-katas
+@;                enemy-katas
+@;                enemy-weapon-katas
+@;                spear-katas
+@;                sword-katas
+@;                paint-thrower-katas
+@;                magic-balance-katas
+@;                melee-balance-katas
+@;                repeater-balance-katas
+@;                spear-tower-katas
+@;                repeater-tower-katas
+@;                dagger-tower-katas
+@;                single-shot-katas
+@;                spread-shot-katas
+@;                homing-repeater-katas
+@;                grow-katas
+@;                shield-katas
+@;                boost-katas
+@;                health-katas
+@;                spike-mine-katas
+@;                lava-katas
+@;                rocket-tower-katas
+@;                repeater-armor-katas
+@;                sword-armor-katas )
 
 @section{Avatar Katas}
 
@@ -69,17 +52,9 @@ They can be browsed in various ways using the table of contents below.
 
 @(scribblify-collection enemy-katas)
 
-@section{Magic Balance Katas}
+@section{Enemy Weapon Katas}
 
-@(scribblify-collection magic-balance-katas)
-
-@section{Melee Balance Katas}
-
-@(scribblify-collection melee-balance-katas)
-
-@section{Repeater Balance Katas}
-
-@(scribblify-collection repeater-balance-katas)
+@(scribblify-collection enemy-weapon-katas)
 
 @section{Spear Katas}
 
@@ -92,6 +67,18 @@ They can be browsed in various ways using the table of contents below.
 @section{Paint Thrower Katas}
 
 @(scribblify-collection paint-thrower-katas)
+
+@section{Magic Balance Katas}
+
+@(scribblify-collection magic-balance-katas)
+
+@section{Melee Balance Katas}
+
+@(scribblify-collection melee-balance-katas)
+
+@section{Repeater Balance Katas}
+
+@(scribblify-collection repeater-balance-katas)
 
 @section{Spear Tower Katas}
 
@@ -107,17 +94,49 @@ They can be browsed in various ways using the table of contents below.
 
 @section{Single Shot Katas}
 
-@(scribblify-collection spear-tower-katas)
+@(scribblify-collection single-shot-katas)
 
 @section{Spread Shot Katas}
 
-@(scribblify-collection repeater-tower-katas)
+@(scribblify-collection spread-shot-katas)
 
 @section{Homing Repeater Katas}
 
-@(scribblify-collection dagger-tower-katas)
+@(scribblify-collection homing-repeater-katas)
 
-@section{All Katas}
+@section{Grow Katas}
 
-@(scribblify-collection battle-arena-katas)
+@(scribblify-collection grow-katas)
+
+@section{Shield Katas}
+
+@(scribblify-collection shield-katas)
+
+@section{Boost Katas}
+
+@(scribblify-collection boost-katas)
+
+@section{Health Katas}
+
+@(scribblify-collection health-katas)
+
+@section{Spike Mine Katas}
+
+@(scribblify-collection spike-mine-katas)
+
+@section{Lava Katas}
+
+@(scribblify-collection lava-katas)
+
+@section{Rocket Tower Katas}
+
+@(scribblify-collection rocket-tower-katas)
+
+@section{Repeater Armor Katas}
+
+@(scribblify-collection repeater-armor-katas)
+
+@section{Sword Armor Katas}
+
+@(scribblify-collection sword-armor-katas)
 

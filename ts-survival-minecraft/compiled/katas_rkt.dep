@@ -1,1 +1,5 @@
+<<<<<<< HEAD
 ("7.1" ("dae34853cca3b1a3c559efb488d81b7f6a7b2000" . "dc97513aca127f3e06f0c3409c50b7bec88c231b") (collects #"racket" #"main.rkt") (collects #"racket" #"runtime-config.rkt") (collects #"ts-fundamentals" #"katas.rkt") (collects #"ts-kata-util" #"katas" #"main.rkt") (collects #"ts-survival-minecraft" #"katas" #"read-code-stimuli.rkt"))
+=======
+("7.0" ("baac9ab3ee8ae33d5b344686157f5158c8c381d1" . "b634e927bc97d24e347c0befce91235ed4b04bd6") (collects #"racket" #"main.rkt") (collects #"racket" #"runtime-config.rkt") (collects #"ts-fundamentals" #"katas.rkt") (collects #"ts-kata-util" #"katas" #"main.rkt"))
+>>>>>>> a06fef198cd91fa81078c3c2150ab946fb56af65

@@ -158,9 +158,6 @@
              (syntax #,captured-module))))]))
 
 
-
-
-
 (provide define-example-code/from*)
 (define-syntax (define-example-code/from* stx)
   (define d (syntax->datum stx))
