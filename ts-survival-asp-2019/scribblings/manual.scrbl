@@ -9,7 +9,8 @@
 
 @title{Survival Games}
 
-Welcome to the kata collection for @bold{Survival Games}.  This is for students and coaches participating in their local scholastic game jams for Winter 2019.
+Welcome to the kata collection for @bold{Survival Games}.
+This is for students and coaches participating in their local scholastic game jams for Winter 2019.
 
 @(tri-badge potion-icon sword-icon mace-icon)
 
