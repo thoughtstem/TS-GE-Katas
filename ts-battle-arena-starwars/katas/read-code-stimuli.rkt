@@ -166,17 +166,17 @@
 
 
    
-   'lava-1
+   'lava-pit-1
    (read "Make a game that has a custom weapon that deploys a lava pit.")
 
-   'lava-2
+   'lava-pit-2
    (read "Make a game that has a custom weapon that deploys a lava pit with custom damage and size.")
 
-   'lava-3
+   'lava-pit-3
    (read "Make a game that has a custom weapon that deploys a lava pit with custom damage, size, sprite, and range.")
 
-
    
+
    'spike-mine-1
    (read "Make a game that has a weapon that deploys a default spike mine")
    
