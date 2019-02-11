@@ -15,6 +15,7 @@ as a bridge or interface between language and kata collection.
 First install `ts-kata-util` (and grant yourself access to any private repos)
 ```
 git clone https://github.com/thoughtstem/TS-Kata-Collections.git
+cd TS-Kata-Collections
 cd ts-kata-util
 raco pkg config --set git-checkout-credentials "GITHUB-NAME:GITHUB-PASSWORD"
 raco pkg install

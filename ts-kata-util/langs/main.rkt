@@ -4,27 +4,94 @@
          get-example-names
          module->example-ids
 
-         get-example-syntax)
+         get-example-syntax
+         fix-tabs)
 
-(define (add-line-breaks str)
-  (string-replace str "#:" "\n    #:"))
+
+
+(define (fix-tabs s)
+
+  ;Works perfectly... except it uses racket/gui/base, which fucks up Scribble...
+  ;  Posted on the racket mailing list and Robby suggested a refactoring of racket/gui to separate text% from racket/gui/base
+  ;Low hanging fruit anyone?
+  #;(
+  (define
+    racket:text%
+    (dynamic-require
+     'framework
+     'racket:text%))
+
+  (define t (new racket:text%))
+  (send t insert s 0)
+  (send t tabify-all)
+  (send t get-text)
+  )
+
+  s
+  )
+
+
+(define (remove-line-breaks str)
+  (regexp-replace* #px"(#:\\S*)\\s*" str "\\1 "))
 
 (define (syntax->program-string stx)
   (define lang
     (third (syntax->datum stx)))
-  ;(pretty-print-depth 1)
+
   (string-append
    (~a "#lang " lang "\n\n")
-   ;(~a (syntax->datum stx))
+
    (string-join
      (map (compose (curryr substring 1)
-                   add-line-breaks
-                   (curryr pretty-format 'infinity) ; original 50
+                   fix-tabs
+                   remove-line-breaks
+                   (curryr pretty-format 50) ; original 50
                    ) 
          (drop (syntax->datum stx) 3) )
     "\n\n")
 
    ))
+
+(module+ test
+
+  (require rackunit)
+
+  ;Be careful writing tests like these (or editing the ones below)
+  ;  It's easy to confuse yourself with hidden whitespace...
+  ;  (I speak from experience...) ~SF
+
+  (check-equal?
+"#lang racket
+
+(circle 40 'solid 'red)"
+
+   (syntax->program-string #'(module test racket
+                              (circle 40 'solid 'red))))
+
+  (check-equal?
+"#lang racket
+
+(battle-arena
+  #:avatar (custom-avatar)
+  #:background (custom-background))"
+
+   (syntax->program-string #'(module test racket
+                              (battle-arena
+                               #:avatar (custom-avatar)
+                               #:background (custom-background)))))
+
+  (check-equal?
+"#lang racket
+
+(battle-arena
+  #:avatar (custom-avatar #:sprite (monster))
+  #:background (custom-background))"
+
+   (syntax->program-string #'(module test racket
+                              (battle-arena
+                               #:avatar (custom-avatar #:sprite (monster))
+                               #:background (custom-background)))))
+  )
 
 
 (define (module->example-ids m)
