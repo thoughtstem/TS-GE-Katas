@@ -1,9 +1,11 @@
 #lang racket
 
-(provide render)
+(provide render
+         kata-section)
 
-(require ts-kata-util/katas/rendering
-         ts-kata-util/katas/main)
+(require ts-kata-util/katas/rendering/scribble
+         ts-kata-util/katas/main
+         scribble/manual)
 
 ;This is where you define special ways that katas render
 ;  within this collection only -- i.e. if this collection
@@ -19,3 +21,8 @@
 
 (define (kata->title level k)
   (level (~a (kata-name k) " Kata")))
+
+(define (kata-section kind collection)
+  (list
+   (section (kata-id->kata-name kind))
+   (render collection)))
