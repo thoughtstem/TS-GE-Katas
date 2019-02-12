@@ -38,7 +38,6 @@
   blaster-droid-katas
   lightsaber-armor-katas  
   blaster-armor-katas  
-  ;lava-katas 
-  ;spike-mine-katas
-
+  lava-pit-katas 
+  spike-mine-katas
   )
