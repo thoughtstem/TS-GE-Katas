@@ -31,5 +31,5 @@
   crafter-katas
   entity-katas
   sky-katas
-  starvation-rate-katas
-  game-jam-katas)
+  biome-katas
+  starvation-rate-katas)
