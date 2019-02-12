@@ -1,1 +1,9 @@
+<<<<<<< HEAD
 ("7.0" ("628ff3914e3cf6c97b9100d56a5fe3ecbb21995c" . "7e6851541740ffc075d854b83c97fdb0074aa1de") (collects #"2htdp" #"image.rkt") (collects #"racket" #"main.rkt") (collects #"racket" #"runtime-config.rkt") (collects #"ts-kata-util" #"katas" #"main.rkt"))
+=======
+<<<<<<< HEAD
+("7.1" ("628ff3914e3cf6c97b9100d56a5fe3ecbb21995c" . "68db30f5e9047d3b7a722dd2163e940bceb6fc12") (collects #"2htdp" #"image.rkt") (collects #"racket" #"main.rkt") (collects #"racket" #"runtime-config.rkt") (collects #"ts-kata-util" #"katas" #"main.rkt"))
+=======
+("7.0" ("628ff3914e3cf6c97b9100d56a5fe3ecbb21995c" . "b4e7fe6114c64f67b3ea1e60f39d473dbcaead7d") (collects #"2htdp" #"image.rkt") (collects #"racket" #"main.rkt") (collects #"racket" #"runtime-config.rkt") (collects #"ts-kata-util" #"katas" #"main.rkt"))
+>>>>>>> a06fef198cd91fa81078c3c2150ab946fb56af65
+>>>>>>> be9d229cf89406df9be87672044f03939d8acc14
