@@ -9,13 +9,7 @@
 ;Katas start as examples in some language.
 ;  "Proto katas" we could call them.
 (define battle-arena-proto-katas
-  (remap-ids
-   '(("avatar-(\\d*)" "hero-\\1")
-     ("sword-(\\d*)" "lightsaber-\\1"))
-   (collapse-alts
-    (lang->kata-collection 'battle-arena-starwars)))
-
-  )
+  (lang->kata-collection 'battle-arena-starwars))
 
 ;The main thing these "proto katas" are missing
 ;  is a clear stimulus.  (The response is simply "write the code")

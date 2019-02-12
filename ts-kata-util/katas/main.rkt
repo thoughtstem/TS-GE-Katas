@@ -3,6 +3,8 @@
 ;Split out kata lang, and kata collection name
 (provide example->kata
          lang->kata-collection
+         remap-ids
+         collapse-alts
          merge-collections
          filter-collection
          has-keyword?
@@ -205,7 +207,67 @@
    ;kata-size>?)
     ))
 
+(define (alt-kata? k)
+  (string-prefix?
+   (~a (kata-id k))
+   "alt/"))
 
+(define (alt-for k alts)
+  (findf
+   (λ(a)
+     (define implied-id
+       (second
+        (string-split (~a (kata-id a))
+                      "/")))
+     
+     (string=? (~a (kata-id k))
+               implied-id))
+   alts))
+
+(define (collapse-alts kc)
+  (define katas (kata-collection-katas kc))
+
+  (define alts  (filter alt-kata? katas))
+
+  (define (do-replace k)
+    (define id (kata-id k))
+
+    (define alt (alt-for k alts))
+
+    (struct-copy kata (or alt k)
+                 [id id]))
+
+  (kata-collection
+   (filter-not
+    (curryr member alts)
+    (map do-replace
+         katas))
+   ))
+
+(define/contract (remap-id mapping katas)
+  (-> (listof string?) (listof kata?) (listof kata?))
+  (define (rep k)
+    (define s (~a (kata-id k)))
+    (define new-id
+      (string->symbol
+       (regexp-replace (pregexp (first mapping))
+                       s
+                       (second mapping))))
+    (struct-copy kata k
+                 [id new-id]))
+
+  (map rep katas))
+
+(define/contract (remap-ids mappings kc)
+  (-> (listof (listof string?)) kata-collection? kata-collection?)
+  (define katas (kata-collection-katas kc))
+
+  (kata-collection
+   (foldl (λ(m katas)
+            (remap-id m katas))
+
+          katas
+          mappings)))
 
 
 (define (filter-collection pred kc)

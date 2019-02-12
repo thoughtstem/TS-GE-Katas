@@ -1,1 +1,1 @@
-("7.0" ("9324a678d2596162b0f50ae18a982d392e9d5a20" . "a47cb5f5651e4fc1be0eecc384310d9750577ba8") (collects #"errortrace" #"errortrace-key.rkt") (collects #"racket" #"main.rkt") (collects #"racket" #"runtime-config.rkt") (collects #"ts-kata-util" #"katas" #"main.rkt"))
+("7.0" ("172d79ca4935a57033b02eb1dc03fe7dc8c3e3a9" . "5eacac1824393f1be1658067d8b653c192e0e56d") (collects #"errortrace" #"errortrace-key.rkt") (collects #"racket" #"main.rkt") (collects #"racket" #"runtime-config.rkt") (collects #"ts-kata-util" #"katas" #"main.rkt"))

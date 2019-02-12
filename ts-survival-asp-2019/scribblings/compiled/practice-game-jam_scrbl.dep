@@ -1,5 +1,0 @@
-<<<<<<< HEAD
-("7.0" ("c789fb50df7e6767b33f64478e8c2b6951a91874" . "6dfa22a135c21dfec3d1b3a849b8024577f22420") (collects #"2htdp" #"image.rkt") (collects #"racket" #"runtime-config.rkt") (collects #"scribble" #"manual" #"lang" #"reader.rkt") (collects #"scribble" #"manual" #"lang.rkt") (collects #"ts-kata-util" #"main.rkt") (collects #"ts-survival-asp-2019" #"katas.rkt") (collects #"ts-survival-asp-2019" #"rendering.rkt"))
-=======
-("7.0" ("c789fb50df7e6767b33f64478e8c2b6951a91874" . "65e63262064a33a2a9f8b8442e16c9791ac280d9") (collects #"2htdp" #"image.rkt") (collects #"racket" #"runtime-config.rkt") (collects #"scribble" #"manual" #"lang" #"reader.rkt") (collects #"scribble" #"manual" #"lang.rkt") (collects #"ts-kata-util" #"main.rkt") (collects #"ts-survival-asp-2019" #"katas.rkt") (collects #"ts-survival-asp-2019" #"rendering.rkt"))
->>>>>>> be9d229cf89406df9be87672044f03939d8acc14
