@@ -7,7 +7,7 @@
           (except-in racket read do)
           )
 
-@title{Starwars Battle Arena}
+@title{Star Wars Battle Arena}
 
 These @(~a (length (kata-collection-katas katas))) katas pertain to @racket[battle-arena-starwars].
 They can be browsed in various ways using the table of contents below.
@@ -51,24 +51,34 @@ To use these katas in another collection do:
 
 @(render boost-katas)
 
-@;(render spear-katas)
-@;(render sword-katas)
-@;(render paint-thrower-katas)
-@;(render magic-balance-katas)
-@;(render melee-balance-katas)
-@;(render repeater-balance-katas)
-@;(render spear-tower-katas)
-@;(render repeater-tower-katas)
-@;(render dagger-tower-katas)
-@;(render single-shot-katas)
-@;(render spread-shot-katas)
-@;(render homing-repeater-katas)
-@;(render grow-katas)
-@;(render shield-katas)
-@;(render boost-katas)
-@;(render health-katas)
-@;(render spike-mine-katas)
-@;(render lava-katas)
-@;(render rocket-tower-katas)
-@;(render repeater-armor-katas)
-@;(render sword-armor-katas)
+@section{Shield Katas}
+
+@(render shield-katas)
+
+@section{Force Field Katas}
+
+@(render force-field-katas)
+
+@section{Lightsaber Droid Katas}
+
+@(render lightsaber-droid-katas)
+
+@section{Blaster Droid Katas}
+
+@(render blaster-droid-katas)
+
+@section{Lightsaber Armor Katas}
+
+@(render lightsaber-armor-katas)
+
+@section{Blaster Armor Katas}
+
+@(render blaster-armor-katas)
+
+@section{Lava Pit Katas}
+
+@(render lava-pit-katas)
+
+@section{Spike Mine Katas}
+
+@(render spike-mine-katas)

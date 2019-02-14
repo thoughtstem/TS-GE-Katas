@@ -1,5 +1,0 @@
-<<<<<<< HEAD
-("7.0" ("628ff3914e3cf6c97b9100d56a5fe3ecbb21995c" . "cf8dea4707e1297f100cb7d81bcfb20059575563") (collects #"2htdp" #"image.rkt") (collects #"errortrace" #"errortrace-key.rkt") (collects #"racket" #"main.rkt") (collects #"racket" #"runtime-config.rkt") (collects #"ts-kata-util" #"katas" #"main.rkt"))
-=======
-("7.0" ("628ff3914e3cf6c97b9100d56a5fe3ecbb21995c" . "b2d5567f98793ba45ff73c6a54f8847d8a3e07ee") (collects #"2htdp" #"image.rkt") (collects #"errortrace" #"errortrace-key.rkt") (collects #"racket" #"main.rkt") (collects #"racket" #"runtime-config.rkt") (collects #"ts-kata-util" #"katas" #"main.rkt"))
->>>>>>> be9d229cf89406df9be87672044f03939d8acc14

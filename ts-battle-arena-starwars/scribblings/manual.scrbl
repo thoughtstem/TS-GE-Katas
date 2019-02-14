@@ -23,13 +23,13 @@ To use these katas in another collection do:
 
 @(render hero-katas)
 
-@section{Enemy Katas}
+@section{Villain Katas}
 
-@(render enemy-katas)
+@(render villain-katas)
 
-@section{Enemy Weapon Katas}
+@section{Villain Weapon Katas}
 
-@(render enemy-weapon-katas)
+@(render villain-weapon-katas)
 
 @section{Lightsaber Katas}
 
@@ -43,9 +43,9 @@ To use these katas in another collection do:
 
 @(render planet-katas)
 
-@section{Heal Katas}
+@section{Health Katas}
 
-@(render heal-katas)
+@(render health-katas)
 
 @section{Boost Katas}
 
