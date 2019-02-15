@@ -70,19 +70,22 @@
              body ...)))))
 
 
+(define-for-syntax (not-kw sym)
+  (not
+   (string-prefix? (~a sym) "#:")))
 
 (define-syntax (language-mappings stx)
   (syntax-case stx ()
     [(_ src-lang tgt-lang [from to] ...)
-     #`(begin
-         (provide (except-out (all-from-out src-lang)
-                              from ...))
-         (module+ #,(datum->syntax stx 'mappings )
-           (provide mappings)
-           (define mappings
-             '((src-lang tgt-lang)
-               (from to)
-               ...))))]))
+     (begin
+       #`(begin
+           (provide (all-from-out src-lang))
+           (module+ #,(datum->syntax stx 'mappings )
+             (provide mappings)
+             (define mappings
+               '((src-lang tgt-lang)
+                 (from to)
+                 ...)))))]))
 
 
 

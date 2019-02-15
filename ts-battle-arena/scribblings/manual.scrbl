@@ -68,6 +68,10 @@ They can be browsed in various ways using the table of contents below.
 
 @(scribblify-collection paint-thrower-katas)
 
+@section{Background Katas}
+
+@(scribblify-collection background-katas)
+
 @section{Magic Balance Katas}
 
 @(scribblify-collection magic-balance-katas)
@@ -104,9 +108,9 @@ They can be browsed in various ways using the table of contents below.
 
 @(scribblify-collection homing-repeater-katas)
 
-@section{Grow Katas}
+@section{Size Katas}
 
-@(scribblify-collection grow-katas)
+@(scribblify-collection size-katas)
 
 @section{Shield Katas}
 
@@ -124,9 +128,9 @@ They can be browsed in various ways using the table of contents below.
 
 @(scribblify-collection spike-mine-katas)
 
-@section{Lava Katas}
+@section{Lava Pit Katas}
 
-@(scribblify-collection lava-katas)
+@(scribblify-collection lava-pit-katas)
 
 @section{Rocket Tower Katas}
 

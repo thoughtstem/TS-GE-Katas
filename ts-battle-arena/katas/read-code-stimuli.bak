@@ -6,20 +6,7 @@
 
 (define stimuli
   (list
-
-   'avatar-1
-   (read "Make a game with a hero.")
-
-   'avatar-2
-   (read "Make a game with a blue circle as a hero.")
-
-   ;'avatar-3
-   ;(read "Make a game with a random-character-sprite as your avatar.")
-
-   'avatar-4
-   (read "Make a game with a defined custom hero that has a sprite you chose from the random-character-row list.")
-
-
+   
    'spear-1
    (read "Make a game that has a spear.")
 
@@ -45,7 +32,18 @@
    'sword-4
    (read "Make a game that has a customizable sword in it where you can modify its speed, range, and sprite.")
 
-          
+   
+   'bg-1
+   (read "Make a game that has a custom background.")
+
+   'bg-2
+   (read "Make a game that uses a predefined image as the background.")
+
+   'bg-3
+   (read "Make a game that has a fully customized background.")
+
+
+   
    'paint-thrower-1
    (read "Make a game that has a paint thrower in it.")
 
@@ -59,7 +57,19 @@
    (read "Make a game that has a customizable paint thrower in it where you can modify the speed, range, and sprite of the paint.")
 
          
-  
+   'avatar-1
+   (read "Make a game with an avatar.")
+
+   'avatar-2
+   (read "Make a game with a blue circle avatar.")
+
+   'avatar-3
+   (read "Make a game with a random-character-sprite as your avatar.")
+
+   'avatar-4
+   (read "Make a game with a defined custom avatar that has a sprite you chose from the random-character-row list.")
+
+
    'enemy-1
    (read "Make a game with an enemy.")
 

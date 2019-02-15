@@ -1,1 +1,0 @@
-("7.1" ("a440b08a286e5c314e0cf099deb943764435efd4" . "1e5ec16e883f5dc0b5e0b7b60562e31b8bbeb51d") (collects #"racket" #"main.rkt") (collects #"racket" #"runtime-config.rkt") (collects #"ts-fundamentals" #"katas.rkt") (collects #"ts-kata-util" #"katas" #"main.rkt") (collects #"ts-survival-minecraft" #"katas" #"read-code-stimuli.rkt"))

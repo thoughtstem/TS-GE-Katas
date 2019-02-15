@@ -1,1 +1,0 @@
-("7.1" ("0f0d5a2eebeb3102672b00eeea0f7876fed9a090" . "f4d9b369e97a42a6a3bbe36805a782c2850001fd") (collects #"racket" #"main.rkt") (collects #"racket" #"runtime-config.rkt") (collects #"ts-battle-arena" #"katas.rkt") (collects #"ts-fundamentals" #"katas.rkt") (collects #"ts-kata-util" #"katas" #"main.rkt"))
