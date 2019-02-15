@@ -27,10 +27,18 @@ They can be browsed in various ways using the table of contents below.
                coin-katas
                crafter-katas
                sky-katas
-               starvation-rate-katas)
+               starvation-rate-katas
+               bg-katas
+               npc-katas)
 
 @section{All Katas}
 
 @(render survival-katas)
 
+@;was not able to use module path -- was creating a rkt file type?
+@(include-section survival/scribblings/accessible-assets)
+      
+         
+         
+         
 

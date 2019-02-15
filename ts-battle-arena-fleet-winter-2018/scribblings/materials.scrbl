@@ -52,7 +52,7 @@ Print out a copy of this schedule for each instructor.
 
 ---------------------------
 
-@(image "scribblings/imgs/2018-fleet-winter-schedule.png")
+@(image "scribblings/imgs/2018-fleet-schedule.png")
 
 @subsection{Schedule breakdown}
 

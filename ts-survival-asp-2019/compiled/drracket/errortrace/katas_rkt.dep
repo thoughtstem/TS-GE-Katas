@@ -1,0 +1,1 @@
+("7.1" ("da1ad48d0ca8b2984dcd0bda30898b0e8ba24aff" . "b333d6db200a22f56175b93619fa81a1b41b611e") (collects #"errortrace" #"errortrace-key.rkt") (collects #"racket" #"main.rkt") (collects #"racket" #"runtime-config.rkt") (collects #"ts-fundamentals" #"katas.rkt") (collects #"ts-kata-util" #"katas" #"main.rkt") (collects #"ts-survival" #"katas.rkt"))
