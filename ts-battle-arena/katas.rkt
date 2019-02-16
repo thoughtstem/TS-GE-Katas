@@ -4,7 +4,8 @@
          battle-arena-proto-katas)
 
 (require ts-kata-util/katas/main
-         "./katas/read-code-stimuli.rkt")
+         "./katas/read-code-stimuli.rkt"
+         "./katas/read-code-tips.rkt")
 
 ;Katas start as examples in some langauge.
 ;  "Proto katas" we could call them.
@@ -16,8 +17,9 @@
 ;Here we'll craft the stimuli, using the langauge that's appropriate
 ;  for this kata collection.
 (define battle-arena-katas
-  (apply fill-in-stimuli battle-arena-proto-katas stimuli))
-
+  (apply fill-in-tips
+         (apply fill-in-stimuli battle-arena-proto-katas stimuli)
+         tips))
 
 ;Now we just slice up the kata collection in a bunch of ways
 ;  Gives us a variety of ways to present the information later

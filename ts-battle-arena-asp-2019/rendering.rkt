@@ -9,12 +9,15 @@
 
 (require ts-kata-util/katas/rendering
          ts-kata-util/katas/main
+         ts-kata-util/main
          scribble/manual)
 
 (define (render kc)
   (kata-collection->scribble
    #:befores (list kata->title
-                   kata->dollar-icons)
+                   kata->dollar-icons
+                   kata->tip
+                   )
    kc))
 
 (require (only-in scribble/manual image para subsection))
@@ -42,6 +45,12 @@
   (subsection (~a (kata-name k) " "
                   "Kata "
                   "(difficulty = " (kata->difficulty k) ")")))
+
+(define (kata->tip k)
+  (define tip (kata-tip k))
+  (if tip
+      (side-note "Tip" tip)
+      #f))
 
 (define (kata-section kind collection)
   (list
