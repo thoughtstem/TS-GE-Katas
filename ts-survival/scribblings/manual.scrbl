@@ -20,6 +20,9 @@ They can be browsed in various ways using the table of contents below.
 
 @table-of-contents[]
 
+@section{Hello World Katas}
+@(render hello-world-katas)
+
 @(sections-for kata-section
                avatar-katas
                food-katas
@@ -35,8 +38,7 @@ They can be browsed in various ways using the table of contents below.
 
 @(render survival-katas)
 
-@;was not able to use module path -- was creating a rkt file type?
-@(include-section survival/scribblings/accessible-assets)
+@(include-section survival/scribblings/assets-library)
       
          
          

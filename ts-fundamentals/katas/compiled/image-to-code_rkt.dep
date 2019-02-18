@@ -1,1 +1,0 @@
-("7.1" ("628ff3914e3cf6c97b9100d56a5fe3ecbb21995c" . "f198ee4559cb6ff98ea7b5602371e493883837be") (collects #"2htdp" #"image.rkt") (collects #"racket" #"main.rkt") (collects #"racket" #"runtime-config.rkt") (collects #"ts-kata-util" #"katas" #"main.rkt"))

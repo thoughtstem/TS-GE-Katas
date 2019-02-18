@@ -9,20 +9,20 @@
 
 (define stimuli
   (list
+   'hello-world-1
+   (read "Make the basic Minecraft Game!")
+   
    'hero-1
    (read-template "a basic-skinned hero")
 
    'hero-2
-   (read-template "a skinned hero that looks like a solid yellow star")
+   (read-template "a hero skinned with a sprite from the assets library")
 
    'hero-3
-   (read-template "an skinned hero that is a random-character")
+   (read-template "a hero skinned with a custom sprite and with a speed of 20")
 
    'hero-4
-   (read-template "an skinned hero that has a custom drawing made in Piskel")
-
-   'hero-5
-   (read-template "an skinned hero that has a custom animation made in Piskel")
+   (read-template "a hero skinned with a custom sprite and speed, and WASD key-mode")
    
 
    'food-1

@@ -15,6 +15,7 @@
   (apply fill-in-stimuli survival-proto-katas stimuli))
 
 (define-sub-collections survival-katas
+  hello-world-katas
   avatar-katas
   food-katas
   coin-katas
