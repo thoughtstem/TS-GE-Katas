@@ -19,10 +19,8 @@
    (read-template "an avatar that is a random-character")
 
    'avatar-4
-   (read-template "an avatar that has a custom drawing made in Piskel")
-
-   'avatar-5
-   (read-template "an avatar that has a custom animation made in Piskel")
+   (read-template "an avatar that is another sprite")
+   
 
    'food-1
    (read-template "an avatar and some custom food")
@@ -93,5 +91,33 @@
 
    'starvation-rate
    (read-template "an avatar and the fastest starvation rate")
+
+   
+   'npc-1
+   (read-template "an avatar and a basic npc")
+
+   'npc-2
+   (read-template "an avatar and a witch npc with a name")
+
+   'npc-3
+   (read-template "an avatar and a witch npc with a name, starting tile, and follow mode")
+
+   'npc-4
+   (read-template "an avatar and an npc with custom dialog")
+
+   'npc-5
+   (read-template "an avatar and two npcs with custom dialog and two other customizations")
+
+
+   'bg-1
+   (read-template "an avatar and a basic custom-bg")
+
+   'bg-2
+   (read-template "an avatar and a desert custom-bg")
+
+   'bg-3
+   (read-template "an avatar and a lava custom-bg where the avatar starts on tile 4")
+
+
 
    ))

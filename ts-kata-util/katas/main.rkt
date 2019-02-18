@@ -11,6 +11,7 @@
          num-expressions
          find-by-id
          fill-in-stimuli
+         fill-in-tips
          
          kata-name
          name-contains?
@@ -64,17 +65,18 @@
 ;  Plus tags?  Unsure about that one...  No let's leave that out.
 ;   Where possible, we should be querying based on stimulus, response, and tests.
 ;  Start tagging things and they'll get out of sync quickly...
-(struct kata (id stimulus response tests) #:transparent)
+(struct kata (id stimulus response tip tests) #:transparent)
 
-(define (make-kata s r)
+(define (make-kata s r [t #f])
   (kata 'TODO-id
-        s r '()))
+        s r t '()))
 
 (struct expression (language data) #:transparent)
 
 (struct test ()         #:transparent)
 (struct response (data) #:transparent)
-(struct stimulus (data) #:transparent)
+(struct stimulus (data)  #:transparent)
+;(struct tip (data) #:transparent)
 
 ;TODO: Other kinds of tests, e.g. response gets score X on test T
 (struct test:within        test   (amount units)      #:transparent)
@@ -136,6 +138,7 @@
              (~a "#lang " in-lang "\n\n"
                  (substring (pretty-format c 20) 1)))
          #:lang in-lang)
+   #f
    '()))
 
 (define (coach k
@@ -154,6 +157,7 @@
    'TODO-id
    (hear kw)
    (say  p)
+   #f
    '()))
 
 (define/contract (within #:minutes (minutes #f)
@@ -360,6 +364,22 @@
       (if p
           (struct-copy kata k
                        [stimulus (second p)])
+          k))
+    (kata-collection-katas kc))))
+
+(define (fill-in-tips kc . ps)
+  (define pairs (pairify ps))
+
+  (kata-collection
+   (map
+    (λ(k)
+      (define p (findf (λ(p)
+                         (eq? (first p)
+                              (kata-id k)))
+                       pairs))
+      (if p
+          (struct-copy kata k
+                       [tip (second p)])
           k))
     (kata-collection-katas kc))))
 

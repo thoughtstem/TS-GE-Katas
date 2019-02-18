@@ -110,6 +110,16 @@
    (read-template "a basic-skinned hero and two entities with custom dialog, as well as two other customizations")
 
    
+   'biome-1
+   (read-template "a basic-skinned hero and a basic custom-bg")
+
+   'biome-2
+   (read-template "a basic-skinned hero and a desert custom-bg")
+
+   'biome-3
+   (read-template "a basic-skinned hero and a lava custom-bg where a hero will start on tile 4")
+
+   
    'starvation-rate
    (read-template "a basic-skinned hero and the fastest starvation rate")
 

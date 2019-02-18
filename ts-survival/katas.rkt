@@ -22,5 +22,7 @@
   crafter-katas
   sky-katas
   starvation-rate-katas
+  bg-katas
+  npc-katas
   game-jam-katas)
 

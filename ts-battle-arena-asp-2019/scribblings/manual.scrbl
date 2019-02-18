@@ -24,19 +24,23 @@ This is for students and coaches participating in their local scholastic game ja
 
 @(sections-for kata-section
                avatar-katas
-               enemy-katas
-               single-shot-katas
-               spread-shot-katas
-               homing-repeater-katas
-               sword-katas
-               spear-katas
-               paint-thrower-katas)
+               enemy-katas)
 
-@section{Extra Practice}
+@section{Weapon Katas}
+
+@(render weapon-katas)
+
+@section{Powerup Katas}
+
+@(render powerup-katas)
+
+@section{Extra Katas}
 
 @(render background-katas)
 @(render rocket-tower-katas)
 @(render spike-mine-katas)
+@(render repeater-armor-katas)
+@(render sword-armor-katas)
 
 @include-section["practice-game-jam.scrbl"]
 

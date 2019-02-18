@@ -1,1 +1,0 @@
-("7.0" ("a8f37b714d544bfb99284d54593d061c1003bcc7" . "3ee104c4dd2bdb7f584303aa1903dc64797e1ff7") (collects #"racket" #"main.rkt") (collects #"racket" #"runtime-config.rkt") (collects #"ts-battle-arena-starwars" #"katas.rkt") (collects #"ts-fundamentals" #"katas.rkt") (collects #"ts-kata-util" #"katas" #"main.rkt"))

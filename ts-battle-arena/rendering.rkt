@@ -9,7 +9,8 @@
 
 (define (scribblify-collection kc) ;AKA render in survival
   (kata-collection->scribble
-   #:befores (list kata->title)
+   #:befores (list kata->title
+                   kata->tip)
    kc))
 
 (require (only-in scribble/manual image para subsection))
@@ -17,6 +18,12 @@
 (define (kata->title k)
   (subsection (~a (kata-name k) " "
                   "Kata (" (kata-id k) ")")))
+
+(define (kata->tip k)
+  (define tip (kata-tip k))
+  (if tip
+      (side-note "Tip" tip)
+      #f))
 
 (define (kata-section kind collection)
   (list

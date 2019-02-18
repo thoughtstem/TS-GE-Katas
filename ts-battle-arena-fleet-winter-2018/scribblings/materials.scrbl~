@@ -39,9 +39,10 @@ Highlight the core values below and print if necessary.  Cut into strips and put
 
 @bold{Core Values}
 
-@(require ts-kata-util/katas/rendering ts-fundamentals/katas)
+@(require ts-kata-util/katas/rendering
+          ts-fundamentals/katas)
 @(kata->scribble
-  core-values-kata)
+  core-values)
 
 
 

@@ -27,6 +27,7 @@ They can be browsed in various ways using the table of contents below.
                ore-katas
                crafter-katas
                entity-katas
+               biome-katas
                sky-katas
                starvation-rate-katas)
 

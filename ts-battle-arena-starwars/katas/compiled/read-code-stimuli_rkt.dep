@@ -1,1 +1,0 @@
-("7.0" ("def64240c6fec63c7ffa449d035ce83d1de87611" . "3390dbfb84b81cc9f4c77d63d86db29a3c80837a") (collects #"racket" #"main.rkt") (collects #"racket" #"runtime-config.rkt") (collects #"ts-kata-util" #"katas" #"main.rkt"))

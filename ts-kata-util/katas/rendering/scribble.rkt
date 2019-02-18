@@ -1,7 +1,8 @@
 #lang at-exp racket
 
 (provide kata-collection->scribble
-         kata->scribble)
+         kata->scribble
+         side-note)
 
 (require "../main.rkt"
          "./main.rkt")
@@ -10,7 +11,7 @@
 
 
 (define (_kata->scribble k (befores (list )))
-  (define extras (map (λ(b) (b k)) befores))
+  (define extras (filter identity (map (λ(b) (b k)) befores)))
   
   ((make-kata->X
     #:string1->X (if (empty? extras)
@@ -59,6 +60,18 @@
       (kata->scribble kc #:befores before-each)
       (map (curry kata->scribble #:befores before-each)
            (kata-collection-katas kc)))
+
+  )
+
+(define (side-note #:icon [icon '()] header . body )
+  ;@margin-note*{@bold{Review/Introduce:} meaning of #lang ts-camp-jam-1, battle-arena-game, avatar, keyword.}
+
+  (list
+   (margin-note* icon
+                 (bold (~a header ": "))
+                 body)
+
+   )
 
   )
 
