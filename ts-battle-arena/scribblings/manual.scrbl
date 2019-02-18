@@ -44,6 +44,10 @@ They can be browsed in various ways using the table of contents below.
 @;                repeater-armor-katas
 @;                sword-armor-katas )
 
+@section{Intro Katas}
+
+@(scribblify-collection hello-world-katas)
+
 @section{Avatar Katas}
 
 @(scribblify-collection avatar-katas)

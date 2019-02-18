@@ -29,6 +29,7 @@
   (apply fill-in-stimuli battle-arena-proto-katas stimuli))
 
 (define-sub-collections katas
+  ;hello-world-kata
   hero-katas
   (villain-katas
    (not/c (curryr name-contains? "Weapon")))
