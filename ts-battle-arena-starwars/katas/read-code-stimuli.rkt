@@ -7,6 +7,9 @@
 (define stimuli
   (list
 
+   'hello-world-1
+   (read "Make a Star Wars game")
+
    'hero-1
    (read "Make a game with a hero.")
 

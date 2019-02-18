@@ -6,6 +6,9 @@
 
 (define stimuli
   (list
+
+   'hello-world-1
+   (read "Make a basic Battle Arena game.")
    
    'spear-1
    (read "Make a game that has a spear.")

@@ -83,4 +83,4 @@ To use these katas in another collection do:
 
 @(render spike-mine-katas)
 
-@(include-section battle-arena-starwars/scribblings/available-sprites)
+@(include-section battle-arena-starwars/scribblings/assets-library)
