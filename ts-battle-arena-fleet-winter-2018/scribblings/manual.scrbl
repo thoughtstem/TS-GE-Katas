@@ -50,7 +50,7 @@ even better ones!
                magic-balance-katas
                melee-balance-katas
                repeater-balance-katas
-               lava-katas
+               lava-pit-katas
                spike-mine-katas
                spear-tower-katas
                enemy-weapon-katas
@@ -62,7 +62,7 @@ even better ones!
                single-shot-katas
                spread-shot-katas
                homing-repeater-katas
-               grow-katas
+               size-katas
                health-katas
                boost-katas
                shield-katas)

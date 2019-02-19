@@ -5,6 +5,7 @@
 
 (require ts-kata-util/katas/main
          "./katas/read-code-stimuli.rkt"
+         "./katas/read-code-tips.rkt"
          ts-fundamentals/katas)
 
 
@@ -12,7 +13,9 @@
   (lang->kata-collection 'survival))
 
 (define survival-katas 
-  (apply fill-in-stimuli survival-proto-katas stimuli))
+  (apply fill-in-tips
+         (apply fill-in-stimuli survival-proto-katas stimuli)
+         tips))
 
 (define-sub-collections survival-katas
   hello-world-katas
