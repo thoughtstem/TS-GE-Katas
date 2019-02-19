@@ -1,9 +1,9 @@
 '(
   ;/index.html data
   ( 
-    (ts-survival-asp-2019   "SURVIVAL")
-    (ts-battle-arena-asp-2019   "BATTLE-ARENA")
-    (ts-fundamentals        "FUNDAMENTALS")
+    (ts-survival-asp-2019               "SURVIVAL")
+    (ts-battle-arena-asp-2019           "BATTLE-ARENA")
+    (ts-fundamentals-in-school-2019     "FUNDAMENTALS")
   )
 
   ;/unlisted.html data
