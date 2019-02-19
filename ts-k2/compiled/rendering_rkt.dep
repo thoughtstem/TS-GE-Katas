@@ -1,0 +1,1 @@
+("7.0" ("9bb1f3a2d17dc2ddf42280b78d8ad06275614379" . "0079d99d14f5dab4f77fe8eebeb6f82c8ff46a8f") (collects #"racket" #"main.rkt") (collects #"racket" #"runtime-config.rkt") (collects #"scribble" #"manual.rkt") (collects #"ts-kata-util" #"katas" #"main.rkt") (collects #"ts-kata-util" #"katas" #"rendering.rkt"))
