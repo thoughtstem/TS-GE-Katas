@@ -10,7 +10,7 @@
 @title{Survival Games}
 
 Welcome to the kata collection for @bold{Survival Games}.
-This is for students and coaches participating in their local scholastic game jams for Winter 2019.
+This is for students and coaches participating in their local scholastic game jams for Winter/Spring 2019.
 
 @(tri-badge potion-icon sword-icon mace-icon)
 
@@ -20,19 +20,33 @@ This is for students and coaches participating in their local scholastic game ja
 
 @(render core-values)
 @(render game-jam)
-@(render hello-world)
+@(render hello-world-katas)
 
 @(sections-for kata-section
                avatar-katas
                food-katas
                enemy-katas
-               coin-katas
                crafter-katas)
 
-@section{Extra Practice}
+@section{Extra Katas}
 
+@subsection{Coin Katas}
+@(render coin-katas)
+
+@subsection{Sky Katas}
 @(render sky-katas)
+
+@subsection{Starvation Rate Katas}
 @(render starvation-rate-katas)
 
+@subsection{BG Katas}
+@(render bg-katas)
+
+@subsection{NPC Katas}
+@(render npc-katas)
+
 @include-section["practice-game-jam.scrbl"]
+
+@(include-section survival/scribblings/assets-library)
+ 
 

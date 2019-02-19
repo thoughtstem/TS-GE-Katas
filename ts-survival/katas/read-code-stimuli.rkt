@@ -9,20 +9,28 @@
 
 (define stimuli
   (list
+
+   'hello-world-1
+   (read "Make the basic survival game!")
+   
    'avatar-1
    (read-template "a basic avatar")
 
+   ;'avatar-2
+   ;(read-template "an avatar that looks like a solid yellow star")
+
+   ;'avatar-3
+   ;(read-template "an avatar that is a random-character")
+
    'avatar-2
-   (read-template "an avatar that looks like a solid yellow star")
+   (read-template "an avatar with a sprite picked from the assets library")
 
    'avatar-3
-   (read-template "an avatar that is a random-character")
+   (read-template "an avatar with a custom sprite and speed of 20")
 
    'avatar-4
-   (read-template "an avatar that has a custom drawing made in Piskel")
-
-   'avatar-5
-   (read-template "an avatar that has a custom animation made in Piskel")
+   (read-template "an avatar with a custom sprite, speed and WASD key-mode")
+   
 
    'food-1
    (read-template "an avatar and some custom food")
@@ -93,5 +101,33 @@
 
    'starvation-rate
    (read-template "an avatar and the fastest starvation rate")
+
+   
+   'npc-1
+   (read-template "an avatar and a basic npc")
+
+   'npc-2
+   (read-template "an avatar and a witch npc with a name")
+
+   'npc-3
+   (read-template "an avatar and a witch npc with a name, starting tile, and follow mode")
+
+   'npc-4
+   (read-template "an avatar and an npc with custom dialog")
+
+   'npc-5
+   (read-template "an avatar and two npcs with custom dialog and two other customizations")
+
+
+   'bg-1
+   (read-template "an avatar and a basic custom-bg")
+
+   'bg-2
+   (read-template "an avatar and a desert custom-bg")
+
+   'bg-3
+   (read-template "an avatar and a lava custom-bg where the avatar starts on tile 4")
+
+
 
    ))

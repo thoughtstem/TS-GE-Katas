@@ -12,4 +12,4 @@
    #:in "Tell me about our Final Game Jam!"
    #:out (list "Building a SURVIVAL GAME."  
                "In ONE HOUR."
-               "Including: an AVATAR, FOOD, ENEMIES, COINS, and CRAFTING.")))
+               "Including: an AVATAR, FOOD, ENEMIES, and CRAFTING.")))

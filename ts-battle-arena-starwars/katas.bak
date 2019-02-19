@@ -9,7 +9,13 @@
 ;Katas start as examples in some language.
 ;  "Proto katas" we could call them.
 (define battle-arena-proto-katas
-  (lang->kata-collection 'battle-arena-starwars))
+  (remap-ids
+   '(("avatar-(\\d*)" "hero-\\1")
+     ("sword-(\\d*)" "lightsaber-\\1"))
+   (collapse-alts
+    (lang->kata-collection 'battle-arena-starwars)))
+
+  )
 
 ;The main thing these "proto katas" are missing
 ;  is a clear stimulus.  (The response is simply "write the code")
@@ -23,35 +29,21 @@
   (enemy-katas
    (not/c (curryr name-contains? "Weapon")))
   enemy-weapon-katas
-  lightsaber-katas
-  blaster-katas
+  (lightsaber-katas
+   (not/c (curryr name-contains? "Droid"))
+   (not/c (curryr name-contains? "Armor")))
+  (blaster-katas
+   (not/c (curryr name-contains? "Droid"))
+   (not/c (curryr name-contains? "Armor")))
   planet-katas
   heal-katas
   boost-katas
-  ;paint-thrower-katas
-  ;magic-balance-katas
-  ;melee-balance-katas
-  ;repeater-balance-katas
-  ;spear-tower-katas
-  ;dagger-tower-katas
-  ;repeater-tower-katas
-  ;single-shot-katas
-  ;spread-shot-katas
-  ;homing-repeater-katas
-  ;spike-mine-katas
-  ;lava-katas
-  ;repeater-armor-katas
-  ;sword-armor-katas
-  
-  ;rocket-tower-katas
-  ;grow-katas
-  ;shield-katas
-  ;boost-katas
-  ;health-katas
-  ;A few special ones require us to filter out certain other katas.
-  
-  ;(sword-katas
-  ; (not/c (curryr name-contains? "Tower")))
-  ;(spear-katas
-  ; (not/c (curryr name-contains? "Tower")))
+  shield-katas
+  force-field-katas
+  lightsaber-droid-katas
+  blaster-droid-katas
+  lightsaber-armor-katas  
+  blaster-armor-katas  
+  lava-pit-katas 
+  spike-mine-katas
   )

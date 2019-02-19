@@ -14,7 +14,8 @@
 ;If there are no special renderings, don't add anything to this file.
 (define (render #:level (level subsection) kc)
   (kata-collection->scribble
-   #:befores (list (curry kata->title level))
+   #:befores (list (curry kata->title level)
+                   kata->tip)
    kc))
 
 (require (only-in scribble/manual image para subsection))
@@ -22,6 +23,14 @@
 (define (kata->title level k)
   (level (~a (kata-name k) " Kata (" (kata-id k) ")")))
 
+(define yoda-sprite
+  (image "scribblings/img/yoda.png"))
+
+(define (kata->tip k)
+  (define tip (kata-tip k))
+  (if tip
+      (side-note #:icon yoda-sprite " Tip" tip)
+      #f))
 
 (define (kata-section kind collection)
   (list

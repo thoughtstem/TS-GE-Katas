@@ -4,6 +4,7 @@
 
 (require ts-kata-util/katas/main
          "./katas/read-code-stimuli.rkt"
+         "./katas/read-code-tips.rkt"
          )
 
 ;Katas start as examples in some language.
@@ -11,7 +12,11 @@
 (define battle-arena-proto-katas
   (remap-ids
    '(("avatar-(\\d*)" "hero-\\1")
-     ("sword-(\\d*)" "lightsaber-\\1"))
+     ("enemy-(\\d*)" "villain-\\1")
+     ("enemy-weapon-(\\d*)" "villain-weapon-\\1")
+     ("sword-(\\d*)" "lightsaber-\\1")
+     ("sword-armor-(\\d*)" "lightsaber-armor-\\1")
+     )
    (collapse-alts
     (lang->kata-collection 'battle-arena-starwars)))
 
@@ -22,13 +27,16 @@
 ;Here we'll craft the stimuli, using the langauge that's appropriate
 ;  for this kata collection.
 (define katas
-  (apply fill-in-stimuli battle-arena-proto-katas stimuli))
+  (apply fill-in-tips
+         (apply fill-in-stimuli battle-arena-proto-katas stimuli)
+         tips))
 
 (define-sub-collections katas
+  ;hello-world-kata
   hero-katas
-  (enemy-katas
+  (villain-katas
    (not/c (curryr name-contains? "Weapon")))
-  enemy-weapon-katas
+  villain-weapon-katas
   (lightsaber-katas
    (not/c (curryr name-contains? "Droid"))
    (not/c (curryr name-contains? "Armor")))
@@ -36,7 +44,7 @@
    (not/c (curryr name-contains? "Droid"))
    (not/c (curryr name-contains? "Armor")))
   planet-katas
-  heal-katas
+  health-katas
   boost-katas
   shield-katas
   force-field-katas

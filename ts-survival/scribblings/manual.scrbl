@@ -20,6 +20,9 @@ They can be browsed in various ways using the table of contents below.
 
 @table-of-contents[]
 
+@section{Hello World Katas}
+@(render hello-world-katas)
+
 @(sections-for kata-section
                avatar-katas
                food-katas
@@ -27,10 +30,17 @@ They can be browsed in various ways using the table of contents below.
                coin-katas
                crafter-katas
                sky-katas
-               starvation-rate-katas)
+               starvation-rate-katas
+               bg-katas
+               npc-katas)
 
 @section{All Katas}
 
 @(render survival-katas)
 
+@(include-section survival/scribblings/assets-library)
+      
+         
+         
+         
 

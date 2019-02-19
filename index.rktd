@@ -1,8 +1,8 @@
 '(
   ;/index.html data
   ( 
-    (ts-survival-asp-2019           "WINTER AFTER SCHOOL")
-    (ts-fundamentals-in-school-2019 "FUNDAMENTALS")
+    (ts-survival-asp-2019   "SURVIVAL")
+    (ts-fundamentals        "FUNDAMENTALS")
   )
 
   ;/unlisted.html data

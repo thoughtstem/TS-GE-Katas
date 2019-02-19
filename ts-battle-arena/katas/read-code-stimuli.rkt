@@ -6,6 +6,9 @@
 
 (define stimuli
   (list
+
+   'hello-world-1
+   (read "Make a basic Battle Arena game.")
    
    'spear-1
    (read "Make a game that has a spear.")
@@ -32,7 +35,18 @@
    'sword-4
    (read "Make a game that has a customizable sword in it where you can modify its speed, range, and sprite.")
 
-          
+   
+   'background-1
+   (read "Make a game that has a custom background.")
+
+   'background-2
+   (read "Make a game that uses a predefined image as the background.")
+
+   'background-3
+   (read "Make a game that has a fully customized background.")
+
+
+   
    'paint-thrower-1
    (read "Make a game that has a paint thrower in it.")
 
@@ -103,13 +117,13 @@
    (read "Make a game that has a light and a heavy repeater weapon.  Balance them relative to each other.")
    
 
-   'lava-1
+   'lava-pit-1
    (read "Make a game that has a custom weapon that deploys a lava pit.")
 
-   'lava-2
+   'lava-pit-2
    (read "Make a game that has a custom weapon that deploys a lava pit with custom damage and size.")
 
-   'lava-3
+   'lava-pit-3
    (read "Make a game that has a custom weapon that deploys a lava pit with custom damage, size, sprite, and range.")
 
 
@@ -224,29 +238,31 @@
    (read "Make a game that has a weapon that has a hoaming fire mode and a customized dart with an animal sprite.")
 
 
-   'grow-1
-   (read "Make a game with a potion that makes you grow.")
-   'grow-and-shrink
-   (read "Make a game with a potion that makes you grow and then shrink")
+   'size-1
+   (read "Make a game with a powerup that makes you grow.")
+   'size-2
+   (read "Make a game with a powerup that shrinks you.")
+   'size-3
+   (read "Make a game with a powerup that makes you grow and then shrink")
 
    'health-1
-   (read "Make a game that has a potion that gives you some health.")
+   (read "Make a game that has a powerup that gives you some health.")
    'health-2
-   (read "Make a game that has a potion that fills your health bar.")
+   (read "Make a game that has a powerup that fills your health bar.")
    'health-3
-   (read "Make a game that has both Health and Max Health Potions, defined outside battle-arena-game.")
+   (read "Make a game that has both a Health and a Max Health powerup, defined outside battle-arena-game.")
    
    'boost-1
    (read "Make a game that has a powerup that temporarily boosts your health.")
    'boost-2
    (read "Make a game that has a powerup that temporarily boosts your speed.")
    'boost-3
-   (read "Make a game that has both Damage and Speed Boost Powerups, defined outside battle-arena-game.")
+   (read "Make a game that has both a Damage and a Speed Boost powerup, defined outside battle-arena-game.")
 
    'shield-1
-   (read "Make a game that has a potion that increases your shield by 50.")
+   (read "Make a game that has a powerup that increases your shield by 50.")
    'shield-2
-   (read "Make a game that has a potion that recovers your shield to 100.")
+   (read "Make a game that has a powerup that recovers your shield to 100.")
    'shield-3
-   (read "Make a game that has both a Shield and Max Shield Potion, defined outside battle-arena-game.")
+   (read "Make a game that has both a Shield and a Max Shield powerup, defined outside battle-arena-game.")
    ))

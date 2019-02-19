@@ -7,11 +7,14 @@
 (define stimuli
   (list
 
+   'hello-world-1
+   (read "Make a Star Wars game")
+
    'hero-1
    (read "Make a game with a hero.")
 
    'hero-2
-   (read "Make a game with a yellow star as your hero.")
+   (read "Make a game with a blue circle as your hero.")
 
    'hero-3
    (read "Make a game with a predifined sprite as your hero.")
@@ -21,24 +24,24 @@
 
 
    
-   'enemy-1
-   (read "Make a game with an enemy.")
+   'villain-1
+   (read "Make a game with a villain.")
 
-   'enemy-2
-   (read "Make a game with a defined and customized enemy.")
+   'villain-2
+   (read "Make a game with a defined and customized villain.")
 
-   'enemy-3
-   (read "Make a game with a customized enemy and use a predifined sprite as your enemy.")
+   'villain-3
+   (read "Make a game with a customized villain and use a predifined sprite.")
 
 
    
-   'enemy-weapon-1
+   'villain-weapon-1
    (read "Make a game that has a an enemy and give it a custom blaster with yellow darts.")
 
-   'enemy-weapon-2
+   'villain-weapon-2
    (read "Make a game that has a custom sprite enemy and give it a red lightsaber as a weapon.")
 
-   'enemy-weapon-3
+   'villain-weapon-3
    (read "Make a game that has a custom sprite enemy and give it a double lightsaber as a weapon.")
 
    
@@ -77,14 +80,14 @@
 
 
 
-   'heal-1
-   (read "Make a game that has an item that gives you some health.")
+   'health-1
+   (read "Make a game that has an powerup that increases your health by 50.")
 
-   'heal-2
-   (read "Make a game that has an item that fills your health bar.")
+   'health-2
+   (read "Make a game that has an powerup that recovers your health to 100.")
 
-   'heal-3
-   (read "Make a game that has both healing items.")
+   'health-3
+   (read "Make a game that has both a Health and a Max Health defined powerup.")
 
 
 
@@ -95,18 +98,18 @@
    (read "Make a game that has a powerup that temporarily boosts your speed.")
 
    'boost-3
-   (read "Make a game that has both Damage and Speed Boost Powerups, defined outside battle-arena-game.")
+   (read "Make a game that has both a Damage and a Speed Boost powerup.")
 
 
    
    'shield-1
-   (read "Make a game that has an item that increases your shield by 50.")
+   (read "Make a game that has an powerup that increases your shield by 50.")
 
    'shield-2
-   (read "Make a game that has an item that recovers your shield to 100.")
+   (read "Make a game that has an powerup that recovers your shield to 100.")
 
    'shield-3
-   (read "Make a game that has both a Shield and Max Shield defined item.")
+   (read "Make a game that has both a Shield and Max Shield defined powerup.")
    
 
    
