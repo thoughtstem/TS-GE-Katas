@@ -13,7 +13,7 @@
 (define-kata core-values
   (recite
    #:in "What are our core values?"
-   #:out (list "It's not about my code, it's about what I can code!"  
+   #:out (list "It's not about my code; it's about what I can code!"  
                "It's not about me; it's about my team!")))
 
 

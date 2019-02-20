@@ -40,6 +40,7 @@ value
 LAVA-BG : image?
 value
 PINK-BG : image?
+<<<<<<< HEAD
 value
 caitsith-sheet : image?
 value
@@ -72,3 +73,5 @@ value
 witch-sheet : image?
 value
 wizard-sheet : image?
+=======
+>>>>>>> 4229220fbd400fd286c4b5a3a5b8b459e33effee

@@ -9,17 +9,27 @@
 
 (define stimuli
   (list
+
+   'hello-world-1
+   (read "Make the basic survival game!")
+   
    'avatar-1
    (read-template "a basic avatar")
 
+   ;'avatar-2
+   ;(read-template "an avatar that looks like a solid yellow star")
+
+   ;'avatar-3
+   ;(read-template "an avatar that is a random-character")
+
    'avatar-2
-   (read-template "an avatar that looks like a solid yellow star")
+   (read-template "an avatar with a sprite picked from the assets library")
 
    'avatar-3
-   (read-template "an avatar that is a random-character")
+   (read-template "an avatar with a custom sprite and speed of 20")
 
    'avatar-4
-   (read-template "an avatar that is another sprite")
+   (read-template "an avatar with a custom sprite, speed and WASD key-mode")
    
 
    'food-1

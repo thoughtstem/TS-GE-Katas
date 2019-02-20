@@ -153,3 +153,4 @@ They can be browsed in various ways using the table of contents below.
 @(scribblify-collection sword-armor-katas)
 
 @(include-section battle-arena/scribblings/assets-library)
+

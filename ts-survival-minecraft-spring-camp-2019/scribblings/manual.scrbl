@@ -17,7 +17,7 @@
 @;a lot of this is outdated. create new document?
 @;also reassess images
 @;include-section["../../ts-battle-arena-fleet-winter-2018/scribblings/materials.scrbl"]
-@include-section[ts-battle-arena-fleet-winter-2018/scribblings/materials]
+@;include-section[ts-battle-arena-fleet-winter-2018/scribblings/materials]
 @;(sections-for kata-section)
 
 @section{Katas}

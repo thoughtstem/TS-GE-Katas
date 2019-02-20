@@ -1,5 +1,7 @@
 33
 ((3) 0 () 0 () () (h ! (equal)))
+procedure
+(random-character-sprite) -> animated-sprite?
 value
 witch-sprite : animated-sprite?
 value

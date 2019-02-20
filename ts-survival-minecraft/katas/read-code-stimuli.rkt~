@@ -40,17 +40,15 @@
 
    'mob-1
    (read-template "a basic-skinned hero and a mob")
-
-   ;removed "random" mobs until custom-mob has multiple sprites
+   
    'mob-2
-   (read-template "a basic-skinned hero and 10 mobs")
+   (read-template "a basic-skinned hero and 10 randomized mobs")
 
-   ;once added more minecraft assets, mobs can be on theme
    'mob-3
-   (read-template "a basic-skinned hero and 5 bat mobs with medium AI")
+   (read-template "a basic-skinned hero and 5 skeleton mobs with medium AI")
 
    'mob-4
-   (read-template "a basic-skinned hero, 5 easy slime mobs, and 5 medium bat mobs that only come out at night")
+   (read-template "a basic-skinned hero, 5 easy creeper mobs, and 5 medium skeleton mobs that only come out at night")
 
    'mob-5
    (read-template "a basic-skinned hero and 5 hard mobs that spit acid with 50 damage")
@@ -110,6 +108,16 @@
 
    'entity-5
    (read-template "a basic-skinned hero and two entities with custom dialog, as well as two other customizations")
+
+   
+   'biome-1
+   (read-template "a basic-skinned hero and a basic custom-bg")
+
+   'biome-2
+   (read-template "a basic-skinned hero and a desert custom-bg")
+
+   'biome-3
+   (read-template "a basic-skinned hero and a lava custom-bg where a hero will start on tile 4")
 
    
    'starvation-rate

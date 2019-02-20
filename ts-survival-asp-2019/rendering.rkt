@@ -14,7 +14,8 @@
 (define (render kc)
   (kata-collection->scribble
    #:befores (list kata->title
-                   kata->dollar-icons)
+                   kata->dollar-icons
+                   kata->tip)
    kc))
 
 (require (only-in scribble/manual image para subsection))
@@ -27,6 +28,13 @@
   1
   ;haha, okay we just give one dollar always now :)
   )
+
+(define (kata->tip k)
+  (define tip (kata-tip k))
+  (if tip
+      (side-note "Tip" tip)
+      #f))
+
 
 (define (kata->difficulty k)
   (min 10

@@ -2,7 +2,9 @@
 
 (provide katas
          core-values
-         image->code-katas)
+         image->code-katas
+         hello-world
+         simple-pictures)
 
 (require ts-kata-util/katas/main
          "./katas/image-to-code.rkt"
@@ -22,25 +24,39 @@
 (define-kata-collection fundamentals-shapes
   (translate #:id "Another Shape"
              #:in "Make a star that is gold and size 60 pixels."
-             #:out '(star 60 'solid 'gold))
+             #:out (~a "#lang racket\n\n"
+                       "(require 2htdp/image)\n\n"
+                       "(star 60 'solid 'gold)"))
   (translate #:id "Favorite Color"
              #:in "Make a triangle of your favorite color and size 100."
-             #:out '(triangle 100 'solid 'skyblue))
+             #:out (~a "#lang racket\n\n"
+                       "(require 2htdp/image)\n\n"
+                       (substring (~v '(triangle 100 'solid 'skyblue)) 1)))
   (translate #:id "Not Solid?"
              #:in "Write five copies of the line below, filling in the blank with a word
                     that DOESN'T work!\n(circle 50 '_______ 'red)"
-             #:out (list '(circle 30 'blue 'red)
-                         '(circle 30 'dotted 'red)
-                         '(circle 30 'line 'red)))
+             #:out (~a "#lang racket\n\n"
+                       "(require 2htdp/image)\n\n"
+                       (substring (~v '(circle 30 'blue 'red)) 1) "\n"
+                       (substring (~v '(circle 30 'dotted 'red)) 1) "\n"
+                       (substring (~v '(circle 30 'line 'red)) 1)))
   (translate #:id "Outline Shape"
-             #:in "Make a square of size 150 with a purple outline."
-             #:out '(triangle 100 'outline 'purple)))
+             #:in "Make a triangle of size 150 with a purple outline."
+             #:out (~a "#lang racket\n\n"
+                       "(require 2htdp/image)\n\n"
+                       (substring (~v '(triangle 150 'outline 'purple)) 1))))
 
 (define-kata-collection fundamentals
   (fill-in-stimuli proto-fundamentals
 
                    'hello-world
-                   (read "Make a circle that is red and 80 pixels wide.")))
+                   (read "Make a circle that is red and size 40.")
+ 
+                   'target
+                   (read "Make a target using circles of different sizes and overlay.")))
+
+(define-kata target
+  (second (kata-collection-katas fundamentals)))
 
 (define-kata hello-world
   (first (kata-collection-katas fundamentals)))
@@ -50,9 +66,10 @@
 
 (define-kata-collection katas
   unplugged
-  fundamentals
+  hello-world
   fundamentals-shapes
   image->code-katas
+  target
   simple-pictures)
 
 
