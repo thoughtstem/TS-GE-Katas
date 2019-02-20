@@ -128,6 +128,10 @@ They can be browsed in various ways using the table of contents below.
 
 @(scribblify-collection health-katas)
 
+@section{Force Field Katas}
+
+@(scribblify-collection force-field-katas)
+
 @section{Spike Mine Katas}
 
 @(scribblify-collection spike-mine-katas)
@@ -148,3 +152,4 @@ They can be browsed in various ways using the table of contents below.
 
 @(scribblify-collection sword-armor-katas)
 
+@(include-section battle-arena/scribblings/assets-library)

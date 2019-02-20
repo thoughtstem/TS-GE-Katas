@@ -265,4 +265,15 @@
    (read "Make a game that has a powerup that recovers your shield to 100.")
    'shield-3
    (read "Make a game that has both a Shield and a Max Shield powerup, defined outside battle-arena-game.")
+
+   'force-field-1
+   (read "Make a game that has an item with a custom name that spawns a force field.")
+
+   'force-field-2
+   (read "Make a game that has an item with a custom name and sprite, that spawns a force field with a custom duration.")
+
+   'force-field-3
+   (read "Make a game that has an item with a custom name and sprite, that spawns a force field with a custom duration, and that allows friendly darts to go through it.")
+
+
    ))

@@ -7,7 +7,7 @@
           (except-in racket read do)
           )
 
-@title{Star Wars Battle Arena}
+@title{Battle Arena Star Wars}
 
 These @(~a (length (kata-collection-katas katas))) katas pertain to @racket[battle-arena-starwars].
 They can be browsed in various ways using the table of contents below.
@@ -18,6 +18,10 @@ To use these katas in another collection do:
 
 
 @table-of-contents[]
+
+@section{Intro Katas}
+
+@(render hello-world-katas)
 
 @section{Hero Katas}
 

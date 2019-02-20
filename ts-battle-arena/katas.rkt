@@ -47,6 +47,7 @@
   shield-katas
   boost-katas
   health-katas
+  force-field-katas
   ;A few special ones require us to filter out certain other katas.
   (enemy-katas
    (not/c (curryr name-contains? "Weapon")))

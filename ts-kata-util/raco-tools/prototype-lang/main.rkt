@@ -3,8 +3,6 @@
 (module reader syntax/module-reader
    LANGUAGE-NAME)
 
-(provide (all-from-out "./lang.rkt")
-         (all-from-out "./assets.rkt"))
+(provide (all-from-out "./lang.rkt"))
 
 (require "./lang.rkt")
-(require "./assets.rkt")

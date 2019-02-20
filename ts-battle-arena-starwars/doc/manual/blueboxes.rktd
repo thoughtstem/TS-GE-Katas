@@ -1,7 +1,5 @@
 33
 ((3) 0 () 0 () () (h ! (equal)))
-procedure
-(random-character-sprite) -> animated-sprite?
 value
 luke-sprite : animated-sprite?
 value
@@ -36,3 +34,123 @@ value
 bobafett-sprite : animated-sprite?
 value
 stormtrooper-sprite : animated-sprite?
+procedure
+(random-character-sprite) -> animated-sprite?
+value
+witch-sprite : animated-sprite?
+value
+darkelf-sprite : animated-sprite?
+value
+wizard-sprite : animated-sprite?
+value
+monk-sprite : animated-sprite?
+value
+madscientist-sprite : animated-sprite?
+value
+lightelf-sprite : animated-sprite?
+value
+darkknight-sprite : animated-sprite?
+value
+kavi-sprite : animated-sprite?
+value
+moderngirl-sprite : animated-sprite?
+value
+moogle-sprite : animated-sprite?
+value
+pirateboy-sprite : animated-sprite?
+value
+pirategirl-sprite : animated-sprite?
+value
+steampunkboy-sprite : animated-sprite?
+value
+steampunkgirl-sprite : animated-sprite?
+value
+FOREST-BG : image?
+value
+SNOW-BG : image?
+value
+DESERT-BG : image?
+value
+LAVA-BG : image?
+value
+PINK-BG : image?
+value
+caitsith-sheet : image?
+value
+darkelf-sheet : image?
+value
+darkknight-sheet : image?
+value
+kavi-sheet : image?
+value
+lightelf-sheet : image?
+value
+madscientist-sheet : image?
+value
+moderngirl-sheet : image?
+value
+monk-sheet : image?
+value
+moogle-sheet : image?
+value
+mystery-sheet : image?
+value
+pirateboy-sheet : image?
+value
+pirategirl-sheet : image?
+value
+steampunkboy-sheet : image?
+value
+steampunkgirl-sheet : image?
+value
+witch-sheet : image?
+value
+wizard-sheet : image?
+value
+bobafett-2 : image?
+value
+bobafett : image?
+value
+c2po : image?
+value
+c3po : image?
+value
+chewie : image?
+value
+darthmaul-2 : image?
+value
+darthmaul : image?
+value
+darthvader-2 : image?
+value
+darthvader : image?
+value
+hansolo-2 : image?
+value
+hansolo : image?
+value
+lando : image?
+value
+luke : image?
+value
+obiwan : image?
+value
+padawan : image?
+value
+princessleia-2 : image?
+value
+princessleia : image?
+value
+r2d2-2 : image?
+value
+r2d2 : image?
+value
+rebelpilot : image?
+value
+stormtrooper : image?
+value
+twilek-2 : image?
+value
+twilek : image?
+value
+yoda : image?

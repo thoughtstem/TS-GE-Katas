@@ -14,12 +14,9 @@
    (read "Make a game with a hero.")
 
    'hero-2
-   (read "Make a game with a blue circle as your hero.")
-
-   'hero-3
    (read "Make a game with a predifined sprite as your hero.")
 
-   'hero-4
+   'hero-3
    (read "Make a game with a fully customized hero.")
 
 
@@ -36,7 +33,7 @@
 
    
    'villain-weapon-1
-   (read "Make a game that has a an enemy and give it a custom blaster with yellow darts.")
+   (read "Make a game that has a an enemy and give it a blaster with yellow darts.")
 
    'villain-weapon-2
    (read "Make a game that has a custom sprite enemy and give it a red lightsaber as a weapon.")
@@ -53,7 +50,7 @@
    (read "Make a game with your own defined lightsaber.")
 
    'lightsaber-3
-   (read "Make a game with your own defined lightsaber dart.")
+   (read "Make a game with your own defined fully customized lightsaber.")
 
    
 
@@ -65,7 +62,7 @@
    (read "Make a game with your own defined blaster.")
 
    'blaster-3
-   (read "Make a game with your own defined blaster dart.")
+   (read "Make a game with your own defined fully customized blaster.")
 
 
 
@@ -126,13 +123,13 @@
 
 
 
-   'ligthsaber-droid-1
+   'lightsaber-droid-1
    (read "Make a game that has a weapon that spawns a droid with a lightsaber.")
 
-   'ligthsaber-droid-2
+   'lightsaber-droid-2
    (read "Make a game that has a defined weapon that spawns a droid with a customized lightsaber.")
    
-   'ligthsaber-droid-3
+   'lightsaber-droid-3
    (read "Make a game that has a defined weapon that spawns a droid with a fully customized lightsaber.")
 
 

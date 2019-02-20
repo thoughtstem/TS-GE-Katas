@@ -14,8 +14,8 @@
    '(("avatar-(\\d*)" "hero-\\1")
      ("enemy-(\\d*)" "villain-\\1")
      ("enemy-weapon-(\\d*)" "villain-weapon-\\1")
-     ("sword-(\\d*)" "lightsaber-\\1")
      ("sword-armor-(\\d*)" "lightsaber-armor-\\1")
+     ("background-(\\d*)" "planet-\\1")
      )
    (collapse-alts
     (lang->kata-collection 'battle-arena-starwars)))
@@ -32,7 +32,7 @@
          tips))
 
 (define-sub-collections katas
-  ;hello-world-kata
+  hello-world-katas
   hero-katas
   (villain-katas
    (not/c (curryr name-contains? "Weapon")))
