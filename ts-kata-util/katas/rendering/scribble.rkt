@@ -7,7 +7,7 @@
 (require "../main.rkt"
          "./main.rkt")
 
-(require scribble/manual)
+(require scribble/manual )
 
 
 (define (_kata->scribble k (befores (list )))
@@ -36,6 +36,8 @@
   (define  (f d l)
     (cond [(kata? d) ((compose frame (curryr inset 10))
                       (kata->pict d))]
+          [(pict? d) d]
+          [(expression? d) (_expr->scribble d)]
           [(and (eq? l 'English)
                 (list? d))
            (map (curryr f l) d)]

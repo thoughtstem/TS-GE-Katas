@@ -1,23 +1,38 @@
 #lang racket
-
 (provide katas)
 
 (require ts-kata-util/katas/main
-         ts-fundamentals/katas)
+         ts-fundamentals/katas
+         "./katas/read-code-stimuli.rkt" 
+         "./katas/ratchet-helpers.rkt")
 
-;Challenge, how do we do this, but without touching racket/gui/base???
-(require ratchet
-         (submod k2/lang/ocean/fish editor))
-
-(typeset-code editor
-              (green fish))
-
-;Then map that across our katas to display both the adult and child
-;  versions of the kata responses
+(define _k2-katas
+  (lang->kata-collection 'k2))
 
 (define katas
-  (merge-collections
-    (lang->kata-collection 'k2)))
+  (katas-map
+   add-ratchet-output-to-response
+   _k2-katas))
 
+;Social games
 
+(define-sub-collections katas
+  intro
+  warm-ups-asl
+  bots)
+
+(define/provide intro-games
+  (katas-map gamify-coding-kata intro))
+
+(define/provide sign-language-games
+  (katas-map gamify-coding-kata warm-ups-asl))
+
+(define/provide bots-games
+  (katas-map gamify-coding-kata bots))
+
+;Coding katas
+
+(define-sub-collections (apply fill-in-stimuli katas stimuli)
+  fish
+  hero)
 
