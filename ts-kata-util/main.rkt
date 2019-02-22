@@ -135,10 +135,8 @@
                    (lambda(e)
                      (error (~a "Error running example! " stx "\n\n" e))))]
     (begin
-      (define d (syntax->datum stx))
-      (eval `(begin ,@(drop d 3)) ns)))
-
-  )
+        (define d (syntax->datum stx))
+        (eval `(begin ,@(drop d 3)) ns))))
 
 
 (define-syntax (define-example-code stx)

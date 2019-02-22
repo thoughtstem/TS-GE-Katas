@@ -1,0 +1,22 @@
+#lang racket
+
+(provide katas)
+
+(require ts-kata-util/katas/main
+         ts-fundamentals/katas)
+
+(require ratchet
+         k2/lang/ocean/fish)
+
+(typeset-code fish
+         (green fish))
+
+(define katas
+  (merge-collections
+    ;Many katas begin by pulling in examples
+    ; from some TS-Language
+    (lang->kata-collection 'fundamentals)
+    (lang->kata-collection 'k2)))
+
+
+

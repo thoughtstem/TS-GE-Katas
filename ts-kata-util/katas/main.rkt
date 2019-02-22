@@ -12,6 +12,8 @@
          find-by-id
          fill-in-stimuli
          fill-in-tips
+         set-response
+         set-stimulus
          
          kata-name
          name-contains?
@@ -30,6 +32,7 @@
 
          say
          do
+         [rename-out [code write-code]]
          translate
          coach
 
@@ -37,7 +40,7 @@
          define-sub-collections
 
          kata-id->kata-name
-
+         katas-map
 
          define/provide ;This is too general for here...
          define-kata
@@ -93,6 +96,8 @@
   (struct-copy kata k
                [id i]))
 
+
+
 (define-syntax-rule (define-kata id def)
   (begin (provide id)
          (define id
@@ -125,10 +130,10 @@
 ;A kata that defines translating from a high level natural language
 ;  to code
 (define (translate #:id (id 'TODO-id)
-                            #:in           p
-                            #:in-lang      (from-lang 'English)
-                            #:out          c
-                            #:out-lang     (in-lang 'racket))
+                   #:in           p
+                   #:in-lang      (from-lang 'English)
+                   #:out          c
+                   #:out-lang     (in-lang 'racket))
   (kata
    id
    (read p
@@ -140,6 +145,14 @@
          #:lang in-lang)
    #f
    '()))
+
+;Inverts the data from stimulus and response...
+;  Useful if
+(provide writing->acting)
+(define (writing->acting k)
+  (struct-copy kata k
+               [stimulus (read  (response-data (kata-response k)))]
+               [response (do (stimulus-data (kata-stimulus k)))]))
 
 (define (coach k
                #:id (id 'TODO-id)
@@ -382,6 +395,18 @@
                        [tip (second p)])
           k))
     (kata-collection-katas kc))))
+
+(define (set-response k r)
+  (struct-copy kata k
+               [response r]))
+
+(define (set-stimulus k s)
+  (struct-copy kata k
+               [stimulus s]))
+
+(define (katas-map f kc)
+  (kata-collection
+   (map f (kata-collection-katas kc))))
 
 
 ;For organizing katas into sub collections...
