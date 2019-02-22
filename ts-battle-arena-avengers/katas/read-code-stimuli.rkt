@@ -32,40 +32,32 @@
 
 
    
-   'villain-weapon-1
+   'villain-power-1
    (read "Make a game that has a an enemy with a custom power with a yellow energy dart.")
 
-   'villain-weapon-2
+   'villain-power-2
    (read "Make a game that has a enemy with a custom sprite and a custom power with a purple ring of fire dart. .")
 
-   'villain-weapon-3
+   'villain-power-3
    (read "Make a game that has a enemy with a custom sprite and a fully customized power.")
 
    
+   'power-1
+   (read "Make a game with a custom power.")
 
-   'lightsaber-1
-   (read "Make a game that has a lightsaber.")
+   'power-2
+   (read "Make a game with a custom power and customize the name, icon, and dart.")
 
-   'lightsaber-2
-   (read "Make a game with your own defined lightsaber.")
+   'power-3
+   (read "Make a game with a defined and customized power.")
 
-   'lightsaber-3
-   (read "Make a game with your own defined lightsaber dart.")
+   'power-4
+   (read "Make a game with a fully customized power.")
 
+   'power-5
+   (read "Make a game with two custom power.")
    
-
-
-   'blaster-1
-   (read "Make a game that has a blaster.")
-
-   'blaster-2
-   (read "Make a game with your own defined blaster.")
-
-   'blaster-3
-   (read "Make a game with your own defined blaster dart.")
-
-
-
+   
    'planet-1
    (read "Make a game that has a random colored planet.")
 
@@ -120,50 +112,26 @@
    (read "Make a game that has an item with a custom name and sprite, that spawns a force field with a custom duration, and that allows friendly darts to go through it.")
 
 
+   'droid-1
+   (read "Make a game that lets you spawn a Droid that attacks at enemies.")
+
+   'droid-2
+   (read "Make a game that lets you spawn a Droid that attacks with yellow energy blasts.")
+
+   'droid-3
+   (read "Make a game that lets you spawn a Droid that attacks with a fully customized energy dart.")
 
 
 
-   'ligthsaber-droid-1
-   (read "Make a game that has a weapon that spawns a droid with a lightsaber.")
+   'armor-1
+   (read "Make a game that has a collectible Energy Armor.")
 
-   'ligthsaber-droid-2
-   (read "Make a game that has a defined weapon that spawns a droid with a customized lightsaber.")
+   'armor-2
+   (read "Make a game that has a fully customized Energy Armor.")
+
+   'armor-3
+   (read "Make a game that has an enemy and armor to protect your hero!")
    
-   'ligthsaber-droid-3
-   (read "Make a game that has a defined weapon that spawns a droid with a fully customized lightsaber.")
-
-
-   
-   'blaster-droid-1
-   (read "Make a game that has a weapon that spawns a droid with a blaster.")
-
-   'blaster-droid-2
-   (read "Make a game that has a defined weapon that spawns a droid with a customized blaster.")
-   
-   'blaster-droid-3
-   (read "Make a game that has a defined weapon that spawns a droid with a fully customized blaster.")
-
-
-   'lightsaber-armor-1
-   (read "Make a game that has working Lightsaber Armor.")
-
-   'lightsaber-armor-2
-   (read "Make a game that has a fully customized Lightsaber Armor.")
-
-   'lightsaber-armor-3
-   (read "Make a game that has an enemy with a lightsaber and armor for your hero that will protect against that lightsaber!")
-
-   
-   
-   'blaster-armor-1
-   (read "Make a game that has working Blaster Armor.")
-
-   'blaster-armor-2
-   (read "Make a game that has a fully customized Blaster Armor.")
-
-   'blaster-armor-3
-   (read "Make a game that has an enemy with a blaster and armor for your hero that will protect against that blaster!")
-
 
    
    'lava-pit-1

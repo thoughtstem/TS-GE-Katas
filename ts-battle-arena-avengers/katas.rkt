@@ -14,7 +14,7 @@
   (remap-ids
    '(("avatar-(\\d*)" "hero-\\1")
      ("enemy-(\\d*)" "villain-\\1")
-     ("enemy-weapon-(\\d*)" "villain-weapon-\\1")
+     ("enemy-weapon-(\\d*)" "villain-power-\\1")
      ("background-(\\d*)" "planet-\\1")
      )
    (collapse-alts
@@ -37,23 +37,19 @@
   hello-world-katas
   hero-katas
   (villain-katas
-   (not/c (curryr name-contains? "Weapon")))
-  villain-weapon-katas
-  (lightsaber-katas
-   (not/c (curryr name-contains? "Droid"))
-   (not/c (curryr name-contains? "Armor")))
-  (blaster-katas
-   (not/c (curryr name-contains? "Droid"))
-   (not/c (curryr name-contains? "Armor")))
+   (not/c (curryr name-contains? "Weapon"))
+   (not/c (curryr name-contains? "Power")))
+  villain-power-katas
+  power-katas
   planet-katas
   health-katas
   boost-katas
   shield-katas
   force-field-katas
-  lightsaber-droid-katas
-  blaster-droid-katas
-  lightsaber-armor-katas  
-  blaster-armor-katas  
-  lava-pit-katas 
+  droid-katas
+  (armor-katas
+      (not/c (curryr name-contains? "Repeater"))
+      (not/c (curryr name-contains? "Sword")))
+  lava-pit-katas
   spike-mine-katas
   )

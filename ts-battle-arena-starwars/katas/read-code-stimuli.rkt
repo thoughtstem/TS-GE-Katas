@@ -145,24 +145,24 @@
 
 
    'lightsaber-armor-1
-   (read "Make a game that has working Lightsaber Armor.")
+   (read "Make a game that has a collectible Lightsaber Armor.")
 
    'lightsaber-armor-2
    (read "Make a game that has a fully customized Lightsaber Armor.")
 
    'lightsaber-armor-3
-   (read "Make a game that has an enemy with a lightsaber and armor for your hero that will protect against that lightsaber!")
+   (read "Make a game that has an enemy with a lightsaber and armor to protect your hero.")
 
    
    
    'blaster-armor-1
-   (read "Make a game that has working Blaster Armor.")
+   (read "Make a game that has a collectible Blaster Armor.")
 
    'blaster-armor-2
    (read "Make a game that has a fully customized Blaster Armor.")
 
    'blaster-armor-3
-   (read "Make a game that has an enemy with a blaster and armor for your hero that will protect against that blaster!")
+   (read "Make a game that has an enemy with a blaster and and armor to protect your hero.")
 
 
    
