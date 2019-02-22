@@ -7,7 +7,6 @@
 
 (require "../main.rkt")
 
-(require scribble/manual) ; Added this for side-note
 
 ;S->S
 (define handle-kata-id
