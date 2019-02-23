@@ -14,36 +14,36 @@
    (read "Make a game that has a spear.")
 
    'spear-2
-   (read "Make a game with your own defined spear.")
+   (read "Make a game that has a spear with 50 damage.")
 
    'spear-3
-   (read "Make a game that has a fully customizable spear in it where you can modify its damage and durability.")
+   (read "Make a game that has an 'epic rarity spear with 50 damage.")
 
    'spear-4
-   (read "Make a game that has a fully customizable spear in it where you can modify its speed, range, and sprite.")
+   (read "Make a game that has a 'blue 'legendary spear with 100 damage, 20 speed, and 10 range.")
 
 
    'sword-1
    (read "Make a game that has a sword.")
 
    'sword-2
-   (read "Make a game with your own defined sword.")
+   (read "Make a game that has a sword that does 50 damage.")
 
    'sword-3
-   (read "Make a game with a fully customized sword.")
+   (read "Make a game that has an 'epic sword that does 50 damage.")
 
    'sword-4
-   (read "Make a game that has a customizable sword in it where you can modify its speed, range, and sprite.")
+   (read "Make a game that has a 'gold 'legendary sword with 100 damage and 100 duration.")
 
    
    'background-1
    (read "Make a game that has a custom background.")
 
    'background-2
-   (read "Make a game that uses a predefined image as the background.")
+   (read "Make a game that has a lava background")
 
    'background-3
-   (read "Make a game that has a fully customized background.")
+   (read "Make a game that has a lava background, 2 by 2 grid, and starts on tile 4.")
 
 
    
@@ -51,40 +51,42 @@
    (read "Make a game that has a paint thrower in it.")
 
    'paint-thrower-2
-   (read "Make a game with your own defined paint thrower with customizable rarity.")
+   (read "Make a game that has a paint thrower with 20 damage.")
 
    'paint-thrower-3
-   (read "Make a game that has a customizable paint thrower in it where you can modify the damage and durability of the paint.")
+   (read "Make a game that has an 'epic paint thrower with 20 damage and 10 speed.")
 
    'paint-thrower-4
-   (read "Make a game that has a customizable paint thrower in it where you can modify the speed, range, and sprite of the paint.")
+   (read "Make a game that has a 'legendary paint thrower with a customized sprite, damage, speed, and range.")
 
          
    'avatar-1
-   (read "Make a game with an avatar.")
+   (read "Make a game that has a custom avatar.")
 
    'avatar-2
-   (read "Make a game with a blue circle avatar.")
+   (read "Make a game that has a custom avatar with a sprite picked from the assets library.")
 
    'avatar-3
-   (read "Make a game with a random-character-sprite as your avatar.")
+   (read "Make a game that has a custom avatar with a custom sprite and 20 speed.")
 
    'avatar-4
-   (read "Make a game with a defined custom avatar that has a sprite you chose from the random-character-row list.")
-
+   (read "Make a game that has a custom avatar with a custom sprite, 20 speed, and 5 item slots.")
 
    'enemy-1
    (read "Make a game with an enemy.")
 
    'enemy-2
-   (read "Make a game with a defined and customized enemy.")
+   (read "Make a game with 10 random enemies")
 
    'enemy-3
-   (read "Make a game with an enemy that is one of the basic shapes.")
+   (read "Make a game that has 5 enemies with a darkknight sprite and 'medium ai.")
 
    'enemy-4
-   (read "Make a game with a defined custom enemy that has a sprite you chose from the random-character-row list.")
+   (read "Make a game that has 5 'easy wizard enemies with 50 health and 5 'medium darkknight enemies with 200 health.")
 
+   'enemy-5
+   (read "Make a game that has 5 'hard pirategirl enemies using a custom-weapon with 50 damage.")
+   
 
    'magic-balance-1
    (read "Make a game that has a light magic weapon.")
@@ -98,10 +100,10 @@
 
    
    'melee-balance-1
-   (read "Make a game that has a light melee weapon.")
+   (read "Make a game that has a 'common light melee weapon with 10 damage.")
 
    'melee-balance-2
-   (read "Make a game that has a heavy melee weapon.")
+   (read "Make a game that has an 'epic heavy melee weapon with 200 damage.")
    
    'melee-balance-3
    (read "Make a game that has a light and a heavy melee weapon.  Balance them relative to each other.")
