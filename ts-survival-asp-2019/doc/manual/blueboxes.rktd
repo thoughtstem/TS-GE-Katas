@@ -74,3 +74,19 @@ value
 LAVA-BG : image?
 value
 PINK-BG : image?
+value
+darkelf-sheet : image?
+value
+lightelf-sheet : image?
+value
+madscientist-sheet : image?
+value
+monk-sheet : image?
+value
+mystery-sheet : image?
+value
+pirate-sheet : image?
+value
+witch-sheet : image?
+value
+wizard-sheet : image?

@@ -3,6 +3,7 @@
   ( 
     (ts-survival-asp-2019               "SURVIVAL")
     (ts-battle-arena-asp-2019           "BATTLE-ARENA")
+    (ts-k2                              "K-2")
     (ts-fundamentals-in-school-2019     "FUNDAMENTALS")
   )
 

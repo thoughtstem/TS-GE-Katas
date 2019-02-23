@@ -1,0 +1,1 @@
+("7.0" ("4942cf07cb7516228548c00ef203c83322f24ce4" . "b1ec350d35de424bcffb1270871bfb7d6013fbed") (collects #"racket" #"main.rkt") (collects #"racket" #"runtime-config.rkt") (collects #"ts-fundamentals" #"katas.rkt") (collects #"ts-k2" #"katas" #"ratchet-helpers.rkt") (collects #"ts-k2" #"katas" #"read-code-stimuli.rkt") (collects #"ts-kata-util" #"katas" #"main.rkt"))
