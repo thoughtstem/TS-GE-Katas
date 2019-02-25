@@ -30,6 +30,14 @@
 (define/provide bots-games
   (katas-map gamify-coding-kata bots))
 
+
+;Consider defining a difficulty metric,
+;  but also a "diff" metric (small changes from previous).
+;Sort by some combination of the two.
+
+(define/provide social-games
+  (merge-collections intro-games sign-language-games bots-games))
+
 ;Coding katas
 
 (define-sub-collections (apply fill-in-stimuli katas stimuli)

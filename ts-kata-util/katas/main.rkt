@@ -44,7 +44,9 @@
 
          define/provide ;This is too general for here...
          define-kata
-         define-kata-collection)
+         define-kata-collection
+         sort-katas-by-difficulty
+         )
 
 ;(require scribble/manual)
 
@@ -409,7 +411,17 @@
    (map f (kata-collection-katas kc))))
 
 
-;For organizing katas into sub collections...
+
+(define (kata-length k)
+  (string-length (~a k)))
+
+(define (kata-length< k1 k2)
+  (< (kata-length k1) 
+     (kata-length k2)))
+
+(define (sort-katas-by-difficulty kc)
+  (kata-collection
+    (sort (kata-collection-katas kc) kata-length<)))
 
 (define-syntax (define-sub-collection stx)
   (syntax-case stx ()
@@ -417,25 +429,27 @@
      #'(begin
          (provide category-name)
          (define category-name
-           (filter-collection
-            (and/c
-             (curryr name-contains? (regexp-replace #rx" Katas"
-                                                   (kata-id->kata-name 'category-name)
-                                                   ""
-                                                   ))
-             stipulation ...)
-            base)))]
+           (sort-katas-by-difficulty
+             (filter-collection
+               (and/c
+                 (curryr name-contains? (regexp-replace #rx" Katas"
+                                                        (kata-id->kata-name 'category-name)
+                                                        ""
+                                                        ))
+                 stipulation ...)
+               base))))]
     [(_ base category-name) 
      #'(begin
          (provide category-name)
          (define category-name
-           (filter-collection
-            (and/c
-             (curryr name-contains? (regexp-replace #rx" Katas"
-                                                   (kata-id->kata-name 'category-name)
-                                                   ""
-                                                   )))
-            base)))]))
+           (sort-katas-by-difficulty
+             (filter-collection
+               (and/c
+                 (curryr name-contains? (regexp-replace #rx" Katas"
+                                                        (kata-id->kata-name 'category-name)
+                                                        ""
+                                                        )))
+               base))))]))
 
 (define-syntax-rule (define-sub-collections base name ...)
   (begin
