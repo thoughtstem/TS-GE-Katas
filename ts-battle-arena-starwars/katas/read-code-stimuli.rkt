@@ -10,35 +10,35 @@
    'hello-world-1
    (read "Make a Star Wars game")
 
-   'hero-1
+   'avatar-1
    (read "Make a game with a hero.")
 
-   'hero-2
+   'avatar-2
    (read "Make a game with a predifined sprite as your hero.")
 
-   'hero-3
+   'avatar-3
    (read "Make a game with a fully customized hero.")
 
 
    
-   'villain-1
+   'enemy-1
    (read "Make a game with a villain.")
 
-   'villain-2
+   'enemy-2
    (read "Make a game with a defined and customized villain.")
 
-   'villain-3
+   'enemy-3
    (read "Make a game with a customized villain and use a predifined sprite.")
 
 
    
-   'villain-weapon-1
+   'enemy-weapon-1
    (read "Make a game that has a an enemy and give it a blaster with yellow darts.")
 
-   'villain-weapon-2
+   'enemy-weapon-2
    (read "Make a game that has a custom sprite enemy and give it a red lightsaber as a weapon.")
 
-   'villain-weapon-3
+   'enemy-weapon-3
    (read "Make a game that has a custom sprite enemy and give it a double lightsaber as a weapon.")
 
    
@@ -66,13 +66,13 @@
 
 
 
-   'planet-1
+   'background-1
    (read "Make a game that has a random colored planet.")
 
-   'planet-2
+   'background-2
    (read "Make a game that uses a predefined image as the planet.")
 
-   'planet-3
+   'background-3
    (read "Make a game that has a fully customized planet.")
 
 
@@ -144,15 +144,15 @@
    (read "Make a game that has a defined weapon that spawns a droid with a fully customized blaster.")
 
 
-   'lightsaber-armor-1
+
+   'sword-armor-1
    (read "Make a game that has a collectible Lightsaber Armor.")
 
-   'lightsaber-armor-2
+   'sword-armor-2
    (read "Make a game that has a fully customized Lightsaber Armor.")
 
-   'lightsaber-armor-3
+   'sword-armor-3
    (read "Make a game that has an enemy with a lightsaber and armor to protect your hero.")
-
    
    
    'blaster-armor-1

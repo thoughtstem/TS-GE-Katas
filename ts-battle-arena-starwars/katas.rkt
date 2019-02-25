@@ -3,13 +3,28 @@
 (provide katas)
 
 (require ts-kata-util/katas/main
-         "./katas/read-code-stimuli.rkt"
+         ts-battle-arena/katas/read-code-stimuli
+         (prefix-in new: "./katas/read-code-stimuli.rkt")
          "./katas/read-code-tips.rkt"
          )
 
+
+;The main thing these "proto katas" are missing
+;  is a clear stimulus.  (The response is simply "write the code")
+;Here we'll craft the stimuli, using the langauge that's appropriate
+;  for this kata collection.
+(define battle-arena-proto-katas
+  (apply fill-in-tips
+         (apply fill-in-stimuli
+                (apply fill-in-stimuli (collapse-alts
+                                        (lang->kata-collection 'battle-arena-starwars))
+                       stimuli)
+                new:stimuli)
+         tips))
+
 ;Katas start as examples in some language.
 ;  "Proto katas" we could call them.
-(define battle-arena-proto-katas
+(define katas
   (remap-ids
    '(("avatar-(\\d*)" "hero-\\1")
      ("enemy-(\\d*)" "villain-\\1")
@@ -17,19 +32,11 @@
      ("sword-armor-(\\d*)" "lightsaber-armor-\\1")
      ("background-(\\d*)" "planet-\\1")
      )
-   (collapse-alts
-    (lang->kata-collection 'battle-arena-starwars)))
+   battle-arena-proto-katas
+   )
 
   )
 
-;The main thing these "proto katas" are missing
-;  is a clear stimulus.  (The response is simply "write the code")
-;Here we'll craft the stimuli, using the langauge that's appropriate
-;  for this kata collection.
-(define katas
-  (apply fill-in-tips
-         (apply fill-in-stimuli battle-arena-proto-katas stimuli)
-         tips))
 
 (define-sub-collections katas
   hello-world-katas
