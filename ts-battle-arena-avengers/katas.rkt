@@ -12,9 +12,9 @@
 ;  "Proto katas" we could call them.
 (define battle-arena-proto-katas
   (remap-ids
-   '(("avatar-(\\d*)" "hero-\\1")
-     ("enemy-(\\d*)" "villain-\\1")
+   '(("avatar-(\\d*)" "hero-\\1")    
      ("enemy-weapon-(\\d*)" "villain-power-\\1")
+     ("enemy-(\\d*)" "villain-\\1")
      ("background-(\\d*)" "planet-\\1")
      )
    (collapse-alts
