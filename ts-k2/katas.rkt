@@ -17,9 +17,13 @@
 ;Social games
 
 (define-sub-collections katas
+  demo
   intro
   warm-ups-asl
   bots)
+
+(define/provide demo-games
+  (katas-map gamify-coding-kata demo))
 
 (define/provide intro-games
   (katas-map gamify-coding-kata intro))
