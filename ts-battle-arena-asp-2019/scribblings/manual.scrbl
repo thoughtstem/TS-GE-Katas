@@ -37,8 +37,6 @@ This is for students and coaches participating in their local scholastic game ja
 @section{Extra Katas}
 
 @(render background-katas)
-@(render rocket-tower-katas)
-@(render spike-mine-katas)
 @(render repeater-armor-katas)
 @(render sword-armor-katas)
 
