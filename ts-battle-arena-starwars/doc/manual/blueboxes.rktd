@@ -107,50 +107,36 @@ witch-sheet : image?
 value
 wizard-sheet : image?
 value
-bobafett-2 : image?
+bobafett-sheet : image?
 value
-bobafett : image?
+c2po-sheet : image?
 value
-c2po : image?
+c3po-sheet : image?
 value
-c3po : image?
+chewie-sheet : image?
 value
-chewie : image?
+darthmaul-sheet : image?
 value
-darthmaul-2 : image?
+darthvader-sheet : image?
 value
-darthmaul : image?
+hansolo-sheet : image?
 value
-darthvader-2 : image?
+lando-sheet : image?
 value
-darthvader : image?
+luke-sheet : image?
 value
-hansolo-2 : image?
+obiwan-sheet : image?
 value
-hansolo : image?
+padawan-sheet : image?
 value
-lando : image?
+princessleia-sheet : image?
 value
-luke : image?
+r2d2-sheet : image?
 value
-obiwan : image?
+rebelpilot-sheet : image?
 value
-padawan : image?
+stormtrooper-sheet : image?
 value
-princessleia-2 : image?
+twilek-sheet : image?
 value
-princessleia : image?
-value
-r2d2-2 : image?
-value
-r2d2 : image?
-value
-rebelpilot : image?
-value
-stormtrooper : image?
-value
-twilek-2 : image?
-value
-twilek : image?
-value
-yoda : image?
+yoda-sheet : image?

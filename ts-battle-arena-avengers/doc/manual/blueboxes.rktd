@@ -113,44 +113,44 @@ witch-sheet : image?
 value
 wizard-sheet : image?
 value
-blackwidow : image?
+blackwidow-sheet : image?
 value
-captainamerica : image?
+captainamerica-sheet : image?
 value
-drax : image?
+drax-sheet : image?
 value
-energyball : image?
+energyball-sheet : image?
 value
-gamora : image?
+gamora-sheet : image?
 value
-hawkeye : image?
+hawkeye-sheet : image?
 value
-hulk : image?
+hulk-sheet : image?
 value
-ironman : image?
+ironman-sheet : image?
 value
-ironpatriot : image?
+ironpatriot-sheet : image?
 value
-loki : image?
+loki-sheet : image?
 value
-malekith : image?
+malekith-sheet : image?
 value
-mandarin : image?
+mandarin-sheet : image?
 value
-nebula : image?
+nebula-sheet : image?
 value
-nickfury : image?
+nickfury-sheet : image?
 value
-redskull : image?
+redskull-sheet : image?
 value
-rocketracoon : image?
+rocketracoon-sheet : image?
 value
-ronan : image?
+ronan-sheet : image?
 value
-starlord : image?
+starlord-sheet : image?
 value
-thor : image?
+thor-sheet : image?
 value
-tonystark : image?
+tonystark-sheet : image?
 value
-wintersoldier : image?
+wintersoldier-sheet : image?
