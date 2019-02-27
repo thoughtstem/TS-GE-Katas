@@ -47,6 +47,32 @@
    'paint-thrower-4
    (read "Make a game that has a 'legendary paint thrower with a customized sprite, damage, speed, and range.")
 
+   
+   'fire-magic-1
+   (read "Make a game that has fire magic in it.")
+
+   'fire-magic-2
+   (read "Make a game that has fire magic with 20 damage.")
+
+   'fire-magic-3
+   (read "Make a game that has an 'epic fire magic with 20 damage and 10 speed.")
+
+   'fire-magic-4
+   (read "Make a game that has a 'legendary fire magic with a customized sprite, damage, speed, and range.")
+
+
+   'ice-magic-1
+   (read "Make a game that has ice magic in it.")
+
+   'ice-magic-2
+   (read "Make a game that has ice magic with 20 damage.")
+
+   'ice-magic-3
+   (read "Make a game that has an 'epic ice magic with 20 damage and 10 speed.")
+
+   'ice-magic-4
+   (read "Make a game that has a 'legendary ice magic with a customized sprite, damage, speed, and range.")
+
          
    'avatar-1
    (read "Make a game that has a custom avatar.")
@@ -103,19 +129,19 @@
 
 
    'spike-mine-1
-   (read "Make a game that has a weapon that deploys a default spike mine")   
+   (read "Make a game that has a weapon that deploys a default spike mine.")   
    'spike-mine-2
-   (read "Make a game that has a weapon that deploys a spike mine with a large range and speed")   
+   (read "Make a game that has a weapon that deploys a spike mine with a large range and speed.")
    'spike-mine-3
-   (read "Make a game that has a weapon that deploys a spike mine with a large range and speed, high damage, and non-default sprite")
+   (read "Make a game that has a weapon that deploys a spike mine with a large range and speed, high damage, and custom sprite.")
 
 
    'spear-tower-1
    (read "Make a game that has a custom weapon that deploys a spear tower.")
    'spear-tower-2
-   (read "Make a game that has a custom weapon that deploys a spear tower with a speed of 10 and a range of 20.")
+   (read "Make a game that has a custom weapon that deploys a spear tower with a speed of 10 and a range of 50.")
    'spear-tower-3
-   (read "Make a game that has a custom weapon that deploys a spear tower with a custom spear image, damage level, range and speed")
+   (read "Make a game that has a custom weapon that deploys a spear tower with a custom sprite, damage, speed, and range.")
 
 
    'enemy-weapon-1
@@ -143,7 +169,7 @@
 
 
    'rocket-tower-1
-   (read "Make a game that has a custom weapon that deploys Rocket Tower.")
+   (read "Make a game that has a custom weapon that deploys a Rocket Tower.")
    'rocket-tower-2
    (read "Make a game that has a custom weapon that deploys a slow shooting, homing Rocket Tower.")
    'rocket-tower-3
@@ -168,35 +194,35 @@
 
    
    'single-shot-1
-   (read "Make a game that has a custom weapon that has a normal fire mode.")
+   (read "Make a game with a weapon that fires only once each click.")
    'single-shot-2
-   (read "Make a game that has a custom weapon that has a normal fire mode and a customized dart.")
+   (read "Make a game with a single-shot weapon that fires a dart with customized damage, speed, and range.")
    'single-shot-3
-   (read "Make a game that has a custom weapon that has a normal fire mode and a customized dart with a food sprite.")
+   (read "Make a game with a 'rare single-shot weapon that fires a dart with customized sprite, damage, speed, and range.")
 
 
    'spread-shot-1
-   (read "Make a game that has a weapon that has a spread fire mode.")
+   (read "Make a game with a spread-shot weapon.")
    'spread-shot-2
-   (read "Make a game that has a weapon that has a spread fire mode and a customized dart.")
+   (read "Make a game with a spread-shot weapon that fires customized darts that can go through one enemy and hit another.")
    'spread-shot-3
-   (read "Make a game that has a weapon that has a spread fire mode and a customized dart with an object sprite.")
+   (read "Make a game with a 'rare spread-shot weapon that fires darts with customized sprite, damage, durability, and speed.")
 
 
    'homing-repeater-1
-   (read "Make a game that has a weapon that has a hoaming fire mode.")
+   (read "Make a game with a weapon that fires homing darts.")
    'homing-repeater-2
-   (read "Make a game that has a weapon that has a hoaming fire mode and a customized dart.")
+   (read "Make a game with a weapon that fires homing darts with customized damage, speed, and range.")
    'homing-repeater-3
-   (read "Make a game that has a weapon that has a hoaming fire mode and a customized dart with an animal sprite.")
+   (read "Make a game with a 'rare weapon that fires homing darts with customized sprite, damage, speed, and range.")
 
 
    'size-1
    (read "Make a game with a powerup that makes you grow.")
    'size-2
-   (read "Make a game with a powerup that shrinks you.")
+   (read "Make a game with a powerup that makes you shrink.")
    'size-3
-   (read "Make a game with a powerup that makes you grow and then shrink")
+   (read "Make a game with both grow powerups and shrink powerups.")
 
    
    'health-1

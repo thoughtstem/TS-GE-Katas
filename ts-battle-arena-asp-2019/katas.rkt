@@ -17,7 +17,8 @@
 (define-kata-collection weapon-katas
   (second (kata-collection-katas sword-katas))
   (third (kata-collection-katas spear-katas))
-  (fourth (kata-collection-katas paint-thrower-katas))
+  (second (kata-collection-katas fire-magic-katas))
+  (fourth (kata-collection-katas fire-magic-katas))
   (first (kata-collection-katas single-shot-katas))
   (second (kata-collection-katas spread-shot-katas))
   (third (kata-collection-katas homing-repeater-katas)))
