@@ -28,6 +28,8 @@
   background-katas
   avatar-katas
   paint-thrower-katas
+  fire-magic-katas
+  ice-magic-katas
   magic-balance-katas
   melee-balance-katas
   repeater-balance-katas

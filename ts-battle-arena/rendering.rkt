@@ -5,7 +5,8 @@
 
 (require ts-kata-util/katas/rendering/scribble
          ts-kata-util/katas/main
-         scribble/manual)
+         scribble/manual
+         scribble/core)
 
 (define (scribblify-collection kc) ;AKA render in survival
   (kata-collection->scribble
@@ -22,7 +23,9 @@
 (define (kata->tip k)
   (define tip (kata-tip k))
   (if tip
-      (side-note "Tip" tip)
+      (if ((listof block?) tip)
+          tip
+          (side-note* "Tip" tip))
       #f))
 
 (define (kata-section kind collection)
