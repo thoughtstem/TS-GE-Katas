@@ -4,6 +4,7 @@
     (ts-survival-asp-2019               "SURVIVAL")
     (ts-battle-arena-asp-2019           "BATTLE-ARENA")
     (ts-fundamentals-in-school-2019     "FUNDAMENTALS")
+    (ts-survival-minecraft              "UCSD EXTENSION")
   )
 
   ;/unlisted.html data
