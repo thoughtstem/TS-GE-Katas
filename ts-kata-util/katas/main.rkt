@@ -12,6 +12,8 @@
          find-by-id
          fill-in-stimuli
          fill-in-tips
+         set-response
+         set-stimulus
          
          kata-name
          name-contains?
@@ -30,6 +32,7 @@
 
          say
          do
+         [rename-out [code write-code]]
          translate
          coach
 
@@ -37,11 +40,13 @@
          define-sub-collections
 
          kata-id->kata-name
-
+         katas-map
 
          define/provide ;This is too general for here...
          define-kata
-         define-kata-collection)
+         define-kata-collection
+         sort-katas-by-difficulty
+         )
 
 ;(require scribble/manual)
 
@@ -93,6 +98,8 @@
   (struct-copy kata k
                [id i]))
 
+
+
 (define-syntax-rule (define-kata id def)
   (begin (provide id)
          (define id
@@ -125,10 +132,10 @@
 ;A kata that defines translating from a high level natural language
 ;  to code
 (define (translate #:id (id 'TODO-id)
-                            #:in           p
-                            #:in-lang      (from-lang 'English)
-                            #:out          c
-                            #:out-lang     (in-lang 'racket))
+                   #:in           p
+                   #:in-lang      (from-lang 'English)
+                   #:out          c
+                   #:out-lang     (in-lang 'racket))
   (kata
    id
    (read p
@@ -140,6 +147,14 @@
          #:lang in-lang)
    #f
    '()))
+
+;Inverts the data from stimulus and response...
+;  Useful if
+(provide writing->acting)
+(define (writing->acting k)
+  (struct-copy kata k
+               [stimulus (read  (response-data (kata-response k)))]
+               [response (do (stimulus-data (kata-stimulus k)))]))
 
 (define (coach k
                #:id (id 'TODO-id)
@@ -383,8 +398,30 @@
           k))
     (kata-collection-katas kc))))
 
+(define (set-response k r)
+  (struct-copy kata k
+               [response r]))
 
-;For organizing katas into sub collections...
+(define (set-stimulus k s)
+  (struct-copy kata k
+               [stimulus s]))
+
+(define (katas-map f kc)
+  (kata-collection
+   (map f (kata-collection-katas kc))))
+
+
+
+(define (kata-length k)
+  (string-length (~a k)))
+
+(define (kata-length< k1 k2)
+  (< (kata-length k1) 
+     (kata-length k2)))
+
+(define (sort-katas-by-difficulty kc)
+  (kata-collection
+    (sort (kata-collection-katas kc) kata-length<)))
 
 (define-syntax (define-sub-collection stx)
   (syntax-case stx ()
@@ -392,25 +429,27 @@
      #'(begin
          (provide category-name)
          (define category-name
-           (filter-collection
-            (and/c
-             (curryr name-contains? (regexp-replace #rx" Katas"
-                                                   (kata-id->kata-name 'category-name)
-                                                   ""
-                                                   ))
-             stipulation ...)
-            base)))]
+           (sort-katas-by-difficulty
+             (filter-collection
+               (and/c
+                 (curryr name-contains? (regexp-replace #rx" Katas"
+                                                        (kata-id->kata-name 'category-name)
+                                                        ""
+                                                        ))
+                 stipulation ...)
+               base))))]
     [(_ base category-name) 
      #'(begin
          (provide category-name)
          (define category-name
-           (filter-collection
-            (and/c
-             (curryr name-contains? (regexp-replace #rx" Katas"
-                                                   (kata-id->kata-name 'category-name)
-                                                   ""
-                                                   )))
-            base)))]))
+           (sort-katas-by-difficulty
+             (filter-collection
+               (and/c
+                 (curryr name-contains? (regexp-replace #rx" Katas"
+                                                        (kata-id->kata-name 'category-name)
+                                                        ""
+                                                        )))
+               base))))]))
 
 (define-syntax-rule (define-sub-collections base name ...)
   (begin

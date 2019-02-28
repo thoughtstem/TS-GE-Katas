@@ -2,7 +2,10 @@
 
 (provide potion-icon
          mace-icon
-         sword-icon)
+         sword-icon
+         double-swords-icon
+         carrot-icon
+         coins-icon)
 
 (require "./rgb-hsb.rkt")
 (require racket/runtime-path pict)
@@ -37,6 +40,15 @@
    (* sv 61) (* sv 19)
    base))
 
+(define (double-swords-icon sv color)
+  (scale double-swords 10))
+
+(define (carrot-icon sv color)
+  (scale carrot 10))
+
+(define (coins-icon sv color)
+  (scale coins 10))
+
 
 (define (sword-icon sv color)
   (define base (scale sword-blade (- sv 0.01)))
@@ -54,4 +66,6 @@
 (module+ test
   (sword-icon 1 'red)
   (sword-icon 1 'green)
-  (sword-icon 1 'blue))
+  (sword-icon 1 'blue)
+
+  (double-swords-icon 10 'cyan))

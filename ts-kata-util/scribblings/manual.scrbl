@@ -28,10 +28,10 @@ organized.
 
   @racket[example-name] can be anything, but should be unique across examples.
 
-  Defining an example will 1) create a function called @racket[run:example-name] that will
-  run the example, and 2) write out the code for the example into the directory @racket[examples/compiled-example-data/]
+  Defining an example will define and provide a syntax called @racket[syntax:example-name] that can be imported into kata collections.  Examples cal also be run with @racket[(run-example example-name)].
 
-  From there, it can be included into a kata collection with @racket[lang->kata-collection].
+  
+
 }
 
 @defproc[(get-example-code [lang symbol?]

@@ -2,12 +2,13 @@
 
 (provide kata-collection->scribble
          kata->scribble
-         side-note)
+         side-note
+         side-note*)
 
 (require "../main.rkt"
          "./main.rkt")
 
-(require scribble/manual)
+(require scribble/manual )
 
 
 (define (_kata->scribble k (befores (list )))
@@ -36,6 +37,8 @@
   (define  (f d l)
     (cond [(kata? d) ((compose frame (curryr inset 10))
                       (kata->pict d))]
+          [(pict? d) d]
+          [(expression? d) (_expr->scribble d)]
           [(and (eq? l 'English)
                 (list? d))
            (map (curryr f l) d)]
@@ -67,9 +70,21 @@
   ;@margin-note*{@bold{Review/Introduce:} meaning of #lang ts-camp-jam-1, battle-arena-game, avatar, keyword.}
 
   (list
+   (margin-note icon
+                (bold (~a header ": "))
+                body)
+
+   )
+
+  )
+
+(define (side-note* #:icon [icon '()] header . body )
+  ;@margin-note*{@bold{Review/Introduce:} meaning of #lang ts-camp-jam-1, battle-arena-game, avatar, keyword.}
+
+  (list
    (margin-note* icon
-                 (bold (~a header ": "))
-                 body)
+                (bold (~a header ": "))
+                body)
 
    )
 

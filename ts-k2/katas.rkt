@@ -1,0 +1,50 @@
+#lang racket
+(provide katas)
+
+(require ts-kata-util/katas/main
+         ts-fundamentals/katas
+         "./katas/read-code-stimuli.rkt" 
+         "./katas/ratchet-helpers.rkt")
+
+(define _k2-katas
+  (lang->kata-collection 'k2))
+
+(define katas
+  (katas-map
+   add-ratchet-output-to-response
+   _k2-katas))
+
+;Social games
+
+(define-sub-collections katas
+  demo
+  intro
+  warm-ups-asl
+  bots)
+
+(define/provide demo-games
+  (katas-map gamify-coding-kata demo))
+
+(define/provide intro-games
+  (katas-map gamify-coding-kata intro))
+
+(define/provide sign-language-games
+  (katas-map gamify-coding-kata warm-ups-asl))
+
+(define/provide bots-games
+  (katas-map gamify-coding-kata bots))
+
+
+;Consider defining a difficulty metric,
+;  but also a "diff" metric (small changes from previous).
+;Sort by some combination of the two.
+
+(define/provide social-games
+  (merge-collections intro-games sign-language-games bots-games))
+
+;Coding katas
+
+(define-sub-collections (apply fill-in-stimuli katas stimuli)
+  fish
+  hero)
+

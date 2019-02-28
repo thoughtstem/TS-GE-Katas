@@ -40,3 +40,35 @@ value
 LAVA-BG : image?
 value
 PINK-BG : image?
+value
+caitsith-sheet : image?
+value
+darkelf-sheet : image?
+value
+darkknight-sheet : image?
+value
+kavi-sheet : image?
+value
+lightelf-sheet : image?
+value
+madscientist-sheet : image?
+value
+moderngirl-sheet : image?
+value
+monk-sheet : image?
+value
+moogle-sheet : image?
+value
+mystery-sheet : image?
+value
+pirateboy-sheet : image?
+value
+pirategirl-sheet : image?
+value
+steampunkboy-sheet : image?
+value
+steampunkgirl-sheet : image?
+value
+witch-sheet : image?
+value
+wizard-sheet : image?
