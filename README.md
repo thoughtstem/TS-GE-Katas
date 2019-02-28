@@ -1,5 +1,7 @@
 # TS-Kata-Collections
 
+[![Build Status](https://travis-ci.com/thoughtstem/TS-Kata-Collections.svg?branch=master)](https://travis-ci.com/thoughtstem/TS-Kata-Collections)
+
 These kata collections form the basis for various educational offerings.
 Each teaches a programming language in a gamified way.  Everything in this
 repo is public.  It can be viewed at katas.thoughtstem.com.  (Obviously, only put
