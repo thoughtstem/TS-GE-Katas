@@ -38,4 +38,6 @@ They can be browsed in various ways using the table of contents below.
 
 @(render survival-minecraft-katas)
 
+@(include-section survival-minecraft/scribblings/assets-library)
+
 

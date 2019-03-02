@@ -68,6 +68,14 @@ They can be browsed in various ways using the table of contents below.
 
 @(scribblify-collection sword-katas)
 
+@section{Fire Magic Katas}
+
+@(scribblify-collection fire-magic-katas)
+
+@section{Ice Magic Katas}
+
+@(scribblify-collection ice-magic-katas)
+
 @section{Paint Thrower Katas}
 
 @(scribblify-collection paint-thrower-katas)

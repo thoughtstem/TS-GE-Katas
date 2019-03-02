@@ -23,3 +23,5 @@
 @section{Katas}
 
 @(render survival-minecraft-katas)
+
+@(include-section survival-minecraft/scribblings/assets-library)

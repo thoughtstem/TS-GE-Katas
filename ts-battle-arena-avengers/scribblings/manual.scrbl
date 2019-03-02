@@ -30,17 +30,13 @@ To use these katas in another collection do:
 
 @(render villain-katas)
 
-@section{Villain Weapon Katas}
+@section{Villain Power Katas}
 
-@(render villain-weapon-katas)
+@(render villain-power-katas)
 
-@section{Lightsaber Katas}
+@section{Power Katas}
 
-@(render lightsaber-katas)
-
-@section{Blaster Katas}
-
-@(render blaster-katas)
+@(render power-katas)
 
 @section{Planet Katas}
 
@@ -62,21 +58,13 @@ To use these katas in another collection do:
 
 @(render force-field-katas)
 
-@section{Lightsaber Droid Katas}
+@section{Droid Katas}
 
-@(render lightsaber-droid-katas)
+@(render droid-katas)
 
-@section{Blaster Droid Katas}
+@section{Armor Katas}
 
-@(render blaster-droid-katas)
-
-@section{Lightsaber Armor Katas}
-
-@(render lightsaber-armor-katas)
-
-@section{Blaster Armor Katas}
-
-@(render blaster-armor-katas)
+@(render armor-katas)
 
 @section{Lava Pit Katas}
 

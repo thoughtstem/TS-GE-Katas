@@ -28,7 +28,7 @@ organized.
 
   @racket[example-name] can be anything, but should be unique across examples.
 
-  Defining an example will define and provide a syntax called @racket[syntax:example-name] that can be imported into kata collections.  Examples cal also be run with @racket[(run-example example-name).
+  Defining an example will define and provide a syntax called @racket[syntax:example-name] that can be imported into kata collections.  Examples cal also be run with @racket[(run-example example-name)].
 
   
 

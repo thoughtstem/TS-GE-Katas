@@ -44,6 +44,10 @@ They can be browsed in various ways using the table of contents below.
 @;                repeater-armor-katas
 @;                sword-armor-katas )
 
+@section{Intro Katas}
+
+@(scribblify-collection hello-world-katas)
+
 @section{Avatar Katas}
 
 @(scribblify-collection avatar-katas)
@@ -70,7 +74,7 @@ They can be browsed in various ways using the table of contents below.
 
 @section{Background Katas}
 
-@(scribblify-collection bg-katas)
+@(scribblify-collection background-katas)
 
 @section{Magic Balance Katas}
 
@@ -108,9 +112,9 @@ They can be browsed in various ways using the table of contents below.
 
 @(scribblify-collection homing-repeater-katas)
 
-@section{Grow Katas}
+@section{Size Katas}
 
-@(scribblify-collection grow-katas)
+@(scribblify-collection size-katas)
 
 @section{Shield Katas}
 
@@ -124,13 +128,17 @@ They can be browsed in various ways using the table of contents below.
 
 @(scribblify-collection health-katas)
 
+@section{Force Field Katas}
+
+@(scribblify-collection force-field-katas)
+
 @section{Spike Mine Katas}
 
 @(scribblify-collection spike-mine-katas)
 
-@section{Lava Katas}
+@section{Lava Pit Katas}
 
-@(scribblify-collection lava-katas)
+@(scribblify-collection lava-pit-katas)
 
 @section{Rocket Tower Katas}
 
@@ -143,4 +151,6 @@ They can be browsed in various ways using the table of contents below.
 @section{Sword Armor Katas}
 
 @(scribblify-collection sword-armor-katas)
+
+@(include-section battle-arena/scribblings/assets-library)
 

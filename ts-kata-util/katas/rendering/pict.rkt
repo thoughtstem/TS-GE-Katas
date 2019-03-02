@@ -25,6 +25,7 @@
   (define  (f d l)
     (cond [(kata? d) ((compose frame (curryr inset 10))
                       (_kata->pict d))]
+          [(expression? d) (_expr->pict d)]
           [(and (eq? l 'English)
                 (list? d))
            (apply (curry vl-append 5)

@@ -2,7 +2,8 @@
 
 (provide kata-collection->scribble
          kata->scribble
-         side-note)
+         side-note
+         side-note*)
 
 (require "../main.rkt"
          "./main.rkt")
@@ -69,9 +70,21 @@
   ;@margin-note*{@bold{Review/Introduce:} meaning of #lang ts-camp-jam-1, battle-arena-game, avatar, keyword.}
 
   (list
+   (margin-note icon
+                (bold (~a header ": "))
+                body)
+
+   )
+
+  )
+
+(define (side-note* #:icon [icon '()] header . body )
+  ;@margin-note*{@bold{Review/Introduce:} meaning of #lang ts-camp-jam-1, battle-arena-game, avatar, keyword.}
+
+  (list
    (margin-note* icon
-                 (bold (~a header ": "))
-                 body)
+                (bold (~a header ": "))
+                body)
 
    )
 

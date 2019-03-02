@@ -15,16 +15,18 @@
                "Including: an AVATAR, ENEMIES, WEAPONS, and POWERUPS.")))
 
 (define-kata-collection weapon-katas
+  (second (kata-collection-katas sword-katas))
+  (third (kata-collection-katas spear-katas))
+  (second (kata-collection-katas fire-magic-katas))
+  (fourth (kata-collection-katas fire-magic-katas))
   (first (kata-collection-katas single-shot-katas))
-  (first (kata-collection-katas spread-shot-katas))
-  (first (kata-collection-katas homing-repeater-katas))
-  (first (kata-collection-katas sword-katas))
-  (first (kata-collection-katas spear-katas))
-  (first (kata-collection-katas paint-thrower-katas)))
+  (second (kata-collection-katas spread-shot-katas))
+  (third (kata-collection-katas homing-repeater-katas)))
 
 (define-kata-collection powerup-katas
   (first (kata-collection-katas health-katas))
-  (first (kata-collection-katas shield-katas))
+  (second (kata-collection-katas shield-katas))
   (take  (kata-collection-katas boost-katas) 2)
-  (first (kata-collection-katas size-katas)))
+  (first (kata-collection-katas size-katas))
+  (drop (kata-collection-katas force-field-katas) 1))
   
