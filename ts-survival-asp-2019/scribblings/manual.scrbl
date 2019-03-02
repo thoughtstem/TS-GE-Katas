@@ -12,7 +12,10 @@
 Welcome to the kata collection for @bold{Survival Games}.
 This is for students and coaches participating in their local scholastic game jams for Winter/Spring 2019.
 
-@(tri-badge potion-icon sword-icon mace-icon)
+@(tri-badge #:bgs (shuffle pallet3)
+      double-swords-icon
+      carrot-icon
+      coins-icon)
 
 @table-of-contents[]
 
