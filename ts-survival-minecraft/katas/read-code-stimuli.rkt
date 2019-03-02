@@ -64,7 +64,7 @@
    (read-template "a basic-skinned hero and 20 gold ore blocks worth 200")
 
    'ore-4
-   (read-template "a basic-skinned hero, a silver coin, and a single epic gold coin that never respawns and is worth 1000")
+   (read-template "a basic-skinned hero, a gold ore, and a single epic diamond that never respawns and is worth 1000")
 
 
 
@@ -111,13 +111,13 @@
 
    
    'biome-1
-   (read-template "a basic-skinned hero and a basic custom-bg")
+   (read-template "a basic-skinned hero and a basic custom-biome")
 
    'biome-2
-   (read-template "a basic-skinned hero and a desert custom-bg")
+   (read-template "a basic-skinned hero and a desert custom-biome")
 
    'biome-3
-   (read-template "a basic-skinned hero and a lava custom-bg where a hero will start on tile 4")
+   (read-template "a basic-skinned hero and a lava custom-biome where a hero will start on tile 4")
 
    
    'starvation-rate
