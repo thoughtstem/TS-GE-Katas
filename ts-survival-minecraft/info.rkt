@@ -4,6 +4,7 @@
 
 (define deps '(
   "ts-kata-util"
+  "ts-survival"
   ;Your deps here
   ))
 
