@@ -8,7 +8,7 @@
 
 @title{K-2 Superhero Coders!}
 
-In this class, students will learn to code video games with their favorite super heroes.  
+In this class, students will learn to code video games with their favorite super heroes!
 
 This page roughly breaks the katas into 10 sections.  Each section roughly corresponds to a day of class.
 
