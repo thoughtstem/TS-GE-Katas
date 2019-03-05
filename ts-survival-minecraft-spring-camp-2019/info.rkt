@@ -5,5 +5,6 @@
 (define deps '(
   "ts-kata-util"
   "ts-survival"
+  "ts-survival-minecraft"
   ))
 

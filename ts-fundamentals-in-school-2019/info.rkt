@@ -4,6 +4,7 @@
 
 (define deps '(
   "ts-kata-util"
+  "ts-fundamentals"
   ;Your deps here
   ))
 

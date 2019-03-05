@@ -9,7 +9,6 @@
 (define-runtime-path here ".")
 
 (define ds (kata-collection-katas demo-games))
-(define fs (kata-collection-katas fish))
 
 (slide 
   (para "We're going to start by playing a game together...  Then, we'll get on the computers and make some games together.")

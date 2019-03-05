@@ -3,6 +3,10 @@
 (provide pallet1
          pallet2
          pallet3
+         pallet3-yellow
+         pallet3-red
+         pallet3-blue
+         pallet3-green
          bronze/silver/gold
          icons
          normal-badge
@@ -66,6 +70,16 @@
    (make-color 43 146 206 255)
    (make-color 64 188 143 255)
    ))
+
+(define pallet3-yellow
+  (list-ref pallet3 0))
+(define pallet3-red
+  (list-ref pallet3 1))
+(define pallet3-blue
+  (list-ref pallet3 2))
+(define pallet3-green
+  (list-ref pallet3 3))
+
 
 (define bronze/silver/gold
   (list
