@@ -4,7 +4,9 @@
          is-collection?
          collections-here
          get-deps
-         get-local-deps)
+         get-local-deps
+         update-or-install
+         )
 
 (require setup/getinfo
          pkg/lib)
@@ -54,6 +56,10 @@
        (not (string-prefix? (~a dir) "protoype"))
        (member (build-path "info.rkt")
                (directory-list dir))))
+
+(define update-or-install 
+  (try-then (curry pkg-update-command  #:link #t #:update-deps #t #:deps 'search-auto)
+            (curry pkg-install-command #:link #t #:update-deps #t #:deps 'search-auto)))
 
 (module+ test
   (require rackunit)
