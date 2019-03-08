@@ -26,6 +26,7 @@
 (define-sub-collections battle-arena-katas
   hello-world-katas
   background-katas
+  level-design-katas
   avatar-katas
   paint-thrower-katas
   fire-magic-katas
