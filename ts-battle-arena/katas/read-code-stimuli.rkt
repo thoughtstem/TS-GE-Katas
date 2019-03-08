@@ -33,9 +33,11 @@
    'background-1
    (read "Make a game that has a custom background.")
    'background-2
-   (read "Make a game that has a lava background")
+   (read "Make a game that has a lava background.")
    'background-3
-   (read "Make a game that has a lava background, 2 by 2 grid, and starts on tile 4.")
+   (read "Make a game that has a lava background and a 2 by 2 grid.")
+   'background-4
+   (read "Make a game that has a high definition lava background, 2 by 2 grid, and starts on tile 3.")
 
    
    'paint-thrower-1
@@ -256,5 +258,14 @@
    'force-field-3
    (read "Make a game that has an item with a custom name and sprite, that spawns a force field with a custom duration, and that allows friendly darts to go through it.")
 
+   'level-design-1
+   (read "Make a game with a forest background filled with trees.")
+   'level-design-2
+   (read "Make a game with a forest background filled with high definition trees.")
+   'level-design-3
+   (read "Make a game with a pink background filled with random color candy-cane-trees and snow-pine-trees.")
+   'level-design-4
+   (read "Make a game with 3 world objects with customized position, tile, size, and/or hue.")
 
+   
    ))
