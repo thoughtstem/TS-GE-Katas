@@ -145,7 +145,24 @@
    (list "See other bg-image options in the " (bold "assets library") ".")
 
    'background-3
-   (list "Rows and columns default to " (bold "3x3") " and start-tile can be between " (bold "0") " (the default) and "
-         (bold "8") ".")
-   
+   (list "Rows and columns default to " (bold "3x3") ".")
+
+   'background-4
+   (list "Start-tile can be between " (bold "0") " (the default) and "
+         (bold "total-tiles minus 1") ". For example, a 2x2 grid has 4 tiles, so the last tile is tile 3.")
+
+   'level-design-1
+   (list "This will fill the world with two types of trees")
+
+   'level-design-2
+   (list "Setting hd? #t will use more detailed assets but it will take longer to load.")
+
+   'level-design-3
+   (list "make-world-objects works best with houses or trees and must only take two types. See the "
+         (bold "Assets Library") " for more options.")
+
+   'level-design-4
+   (list "With a 3x3 bg, the posn x value can be betwen 0 and 480 and the y between 0 and 360."
+         " Hue is any value between 0 and 360.")
+
    ))
