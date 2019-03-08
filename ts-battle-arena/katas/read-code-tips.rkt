@@ -152,7 +152,7 @@
          (bold "total-tiles minus 1") ". For example, a 2x2 grid has 4 tiles, so the last tile is tile 3.")
 
    'level-design-1
-   (list "This will fill the world with two types of trees")
+   (list "This will fill the world with two types of trees.")
 
    'level-design-2
    (list "Setting hd? #t will use more detailed assets but it will take longer to load.")
@@ -162,7 +162,7 @@
          (bold "Assets Library") " for more options.")
 
    'level-design-4
-   (list "With a 3x3 bg, the posn x value can be betwen 0 and 480 and the y between 0 and 360."
+   (list "With a 3x3 bg, the posn x value can be between 0 and 480 and the y between 0 and 360."
          " Hue is any value between 0 and 360.")
 
    ))
