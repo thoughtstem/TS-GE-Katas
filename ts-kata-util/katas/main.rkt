@@ -163,6 +163,7 @@
    id
    (read k #:lang 'katas)
    (do  "Whatever is necessary to guide your fellow coach(es) through the four phases with this kata.")
+   #f
    (map test:with-material materials)))
 
 
