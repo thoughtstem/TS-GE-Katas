@@ -4,4 +4,4 @@
 *.bak
 *.scrbl~
 *.DS_Store
-/doc/
+doc/

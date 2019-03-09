@@ -4,9 +4,7 @@
          is-collection?
          collections-here
          get-deps
-         get-local-deps
-         update-or-install
-         )
+         get-local-deps)
 
 (require setup/getinfo
          pkg/lib)
@@ -57,18 +55,6 @@
        (member (build-path "info.rkt")
                (directory-list dir))))
 
-(define (try-then f1 f2)
-  (lambda(x)
-    (current-directory (build-path original x))
-    (with-handlers ([exn:fail? (thunk*
-                                (displayln (~a "Couldn't update " x ", trying to install..."))
-                                (f2 (~a "../" x)))])
-      (displayln (~a "Trying to update " x))
-      (f1 (~a "../" x)))))
-
-(define update-or-install 
-  (try-then (curry pkg-update-command  #:link #t #:update-deps #t #:deps 'search-auto)
-            (curry pkg-install-command #:link #t #:update-deps #t #:deps 'search-auto)))
 
 (module+ test
   (require rackunit)
