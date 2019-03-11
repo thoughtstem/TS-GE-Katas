@@ -1,12 +1,13 @@
 #lang racket
 
-(provide katas)
+(provide (all-from-out  ts-battle-arena-avengers/katas))
 
 (require ts-kata-util/katas/main
          ts-fundamentals/katas
-         (prefix-in ts-bas: ts-battle-arena-starwars/katas))
+         ts-battle-arena-starwars/katas
+         )
 
-(define katas
+#;(define katas
   (merge-collections
     (kata-collection (list core-values))
 

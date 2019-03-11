@@ -8,7 +8,7 @@
 
 @title{Battle Arena Avengers}
 
-These @(~a (length (kata-collection-katas katas))) katas pertain to @racket[battle-arena-avengers].
+These @(~a (length (kata-collection-katas battle-arena-avengers-katas))) katas pertain to @racket[battle-arena-avengers].
 They can be browsed in various ways using the table of contents below.
 
 To use these katas in another collection do:

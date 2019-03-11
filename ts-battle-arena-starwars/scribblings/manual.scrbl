@@ -9,7 +9,7 @@
 
 @title{Battle Arena Star Wars}
 
-These @(~a (length (kata-collection-katas katas))) katas pertain to @racket[battle-arena-starwars].
+These @(~a (length (kata-collection-katas battle-arena-starwars-katas))) katas pertain to @racket[battle-arena-starwars].
 They can be browsed in various ways using the table of contents below.
 
 To use these katas in another collection do:
