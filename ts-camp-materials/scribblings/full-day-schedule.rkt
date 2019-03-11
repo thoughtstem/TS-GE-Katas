@@ -1,15 +1,19 @@
 #lang scribble/manual
 
+@(require racket/runtime-path)
+
+@(define-runtime-path detail-sched "img/full-camp-sched-detail.png")
+@(define-runtime-path simple-sched "img/full-camp-sched-simple.png")
 
 @title{Full Day Camp Schedule}
 
 @section{Schedule with Hints}
 
-@(image "scribblings/img/full-camp-sched-detail.png" #:scale .75)
+@(image detail-sched #:scale .75)
 
 @section{Simple Schedule}
 
-@(image "scribblings/img/full-camp-sched-simple.png" #:scale .75)
+@(image simple-sched #:scale .75)
 
 @section{Schedule Breakdown}
 
