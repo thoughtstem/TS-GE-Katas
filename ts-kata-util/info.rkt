@@ -23,6 +23,7 @@
     ("new-language"        ts-kata-util/raco-tools/raco-new-language "Creates a new minimal TS-Languages folder" 100)
     ("rebuild-index"       ts-kata-util/raco-tools/rebuild-index "Builds the index page to help people navigate a collection of kata collections" 100)
     ("install-all-here"       ts-kata-util/raco-tools/install-all-here "Installs any kata collections or languages in the current directory as racket packages (raco pkg install)" 100)
+    ("test-all-here"       ts-kata-util/raco-tools/test-all-here "Test any kata collections or languages in the current directory as racket packages (raco test ___)" 100)
     ("show-deps-here"       ts-kata-util/raco-tools/show-deps-here "Prints out the dependency information for the packages in the current directory" 100)
     #;("build-docs-here"       ts-kata-util/raco-tools/build-docs-here "Builds the docs for packages beneath the current directory.  Stores the docs in a provided output directory" 100)
 ))
