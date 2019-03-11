@@ -6,5 +6,6 @@
   "ts-kata-util"
   "ts-survival"
   "survival-minecraft"
+  "ts-camp-materials"
   ))
 

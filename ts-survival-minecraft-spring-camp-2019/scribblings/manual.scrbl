@@ -19,10 +19,13 @@
 @(include-section ts-camp-materials/scribblings/one-day-materials)
 
 
-@section{Avatar Katas}
+@section{Hero Katas}
 
-@(render survival-minecraft-katas)
+All teams should start with these katas!
 
-@section{Table 2 Katas}
+@(render hello-world-katas)
+@(render hero-katas)
+
+
 
 @(include-section survival-minecraft/scribblings/assets-library)
