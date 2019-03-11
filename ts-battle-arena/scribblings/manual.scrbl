@@ -84,6 +84,10 @@ They can be browsed in various ways using the table of contents below.
 
 @(scribblify-collection background-katas)
 
+@section{Level Design Katas}
+
+@(scribblify-collection level-design-katas)
+
 @section{Magic Balance Katas}
 
 @(scribblify-collection magic-balance-katas)

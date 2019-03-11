@@ -19,7 +19,7 @@
     (response-data (kata-response k)))))
 
 (define (ratchet-social-slide k)
-  (slide (extract-ratchet-social k)))
+  (slide (scale-to-fit (extract-ratchet-social k) 600 480)))
 
 (define (ratchet-computer-slide k)
   (slide (para (expression-data (stimulus-data (kata-stimulus k))))
