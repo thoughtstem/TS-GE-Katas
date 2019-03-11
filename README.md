@@ -107,3 +107,5 @@ live to the world at http://katas.thoughtstem.com.
 # Further documentation 
 
 See Scribble docs for `ts-kata-util` 
+
+
