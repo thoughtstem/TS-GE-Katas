@@ -43,5 +43,5 @@ This is for students and coaches participating in their local scholastic game ja
 
 @include-section["practice-game-jam.scrbl"]
 
-@(include-section battle-arena/scribblings/assets-library)
+@(include-section battlearena/scribblings/assets-library)
 
