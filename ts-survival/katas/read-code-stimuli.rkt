@@ -120,14 +120,36 @@
 
 
    'bg-1
-   (read-template "an avatar and a basic custom-bg")
+   (read-template "an avatar and a custom background")
 
    'bg-2
-   (read-template "an avatar and a desert custom-bg")
+   (read-template "an avatar and a desert background")
 
    'bg-3
-   (read-template "an avatar and a lava custom-bg where the avatar starts on tile 4")
+   (read-template "an avatar and a lava background with a 2 by 2 grid")
 
+   'bg-4
+   (read-template "an avatar and a lava background with a 2 by 2 grid that starts on tile 3")
 
+   'level-design-1
+   (read-template "a forest background filled with trees")
+   
+   'level-design-2
+   (read-template "a forest background filled with high definition trees")
+   
+   'level-design-3
+   (read-template "a pink background filled with random color candy-cane-trees and snow-pine-trees")
+   
+   'level-design-4
+   (read-template "3 world objects with customized position, tile, size, and/or hue")
+
+   'weapon-crafter-1
+   (read-template "an avatar and a crafter that makes swords")
+
+   'weapon-crafter-2
+   (read-template "an avatar and a crafter that makes a Heavy Sword with 100 damage")
+
+   'weapon-crafter-3
+   (read-template "an avatar, coins, and a crafter that makes fire-magic with speed 5 and needs 100 gold to build")
 
    ))

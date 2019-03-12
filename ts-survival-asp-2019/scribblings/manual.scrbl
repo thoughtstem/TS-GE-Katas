@@ -30,17 +30,23 @@ This is for students and coaches participating in their local scholastic game ja
 
 @section{Extra Katas}
 
-@subsection{Coin Katas}
-@(render coin-katas)
-
-@subsection{Sky Katas}
-@(render sky-katas)
-
 @subsection{Starvation Rate Katas}
 @(render starvation-rate-katas)
 
 @subsection{BG Katas}
 @(render bg-katas)
+
+@subsection{Level Design Katas}
+@(render level-design-katas)
+
+@subsection{Coin Katas}
+@(render coin-katas)
+
+@subsection{Weapon Crafter Katas}
+@(render weapon-crafter-katas)
+
+@subsection{Sky Katas}
+@(render sky-katas)
 
 @subsection{NPC Katas}
 @(render npc-katas)
