@@ -5,23 +5,24 @@
           "../katas.rkt"
           "../rendering.rkt"
           (except-in racket read do)
-          "../../ts-battle-arena-fleet-winter-2018/scribblings/materials.scrbl")
+          )
 
-@title{Fleet Camp Spring -- Day 4}
+@title{Fleet Camp Spring 2019 -- Day 4}
 
-@larger[@larger{Coding for Minecraft Fans}]
+@larger[@larger{Coding for Minecraft Fans}]  
 
 
 @table-of-contents[]
 
-@;a lot of this is outdated. create new document?
-@;also reassess images
-@;include-section["../../ts-battle-arena-fleet-winter-2018/scribblings/materials.scrbl"]
-@;include-section[ts-battle-arena-fleet-winter-2018/scribblings/materials]
-@;(sections-for kata-section)
+@(include-section ts-camp-materials/scribblings/full-day-schedule)
 
-@section{Katas}
+@(include-section ts-camp-materials/scribblings/one-day-materials)
+
+
+@section{Avatar Katas}
 
 @(render survival-minecraft-katas)
+
+@section{Table 2 Katas}
 
 @(include-section survival-minecraft/scribblings/assets-library)
