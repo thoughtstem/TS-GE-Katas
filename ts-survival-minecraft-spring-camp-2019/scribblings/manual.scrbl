@@ -5,23 +5,51 @@
           "../katas.rkt"
           "../rendering.rkt"
           (except-in racket read do)
-          "../../ts-battle-arena-fleet-winter-2018/scribblings/materials.scrbl")
+          )
 
-@title{Fleet Camp Spring -- Day 4}
+@title{Fleet Camp Spring 2019 -- Day 4}
 
-@larger[@larger{Coding for Minecraft Fans}]
+@larger[@larger{Coding for Minecraft Fans}]  
 
 
 @table-of-contents[]
 
-@;a lot of this is outdated. create new document?
-@;also reassess images
-@;include-section["../../ts-battle-arena-fleet-winter-2018/scribblings/materials.scrbl"]
-@;include-section[ts-battle-arena-fleet-winter-2018/scribblings/materials]
-@;(sections-for kata-section)
+@section{Hero Katas}
 
-@section{Katas}
+All teams should start with these katas!
 
-@(render survival-minecraft-katas)
+@(render hello-world-katas)
+@(render hero-katas)
+
+@section{Food Katas}
+@(render food-katas)
+
+@section{Ore Katas}
+@(render ore-katas)
+
+@section{Mob Katas}
+@(render mob-katas)
+
+@section{Crafter Katas}
+@(render crafter-katas)
+
+@(include-section ts-camp-materials/scribblings/full-day-schedule)
+
+@(include-section ts-camp-materials/scribblings/one-day-materials)
+
+@section{Extra Katas}
+
+@subsection{Entity Katas}
+@(render entity-katas)
+
+@subsection{Biome Katas}
+@(render biome-katas)
+
+@subsection{Sky Katas}
+@(render sky-katas)
+
+@subsection{Starvation Rate Katas}
+@(render starvation-rate-katas)
+
 
 @(include-section survival-minecraft/scribblings/assets-library)

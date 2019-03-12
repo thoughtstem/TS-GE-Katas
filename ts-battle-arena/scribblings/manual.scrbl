@@ -9,7 +9,7 @@
 
 @title{Battle Arena Katas}
 
-These @(~a (length (kata-collection-katas battle-arena-katas))) katas pertain to @racket[battle-arena].
+These @(~a (length (kata-collection-katas battle-arena-katas))) katas pertain to @racket[battlearena].
 They can be browsed in various ways using the table of contents below.
 
 @racketblock[
@@ -164,5 +164,5 @@ They can be browsed in various ways using the table of contents below.
 
 @(scribblify-collection sword-armor-katas)
 
-@(include-section battle-arena/scribblings/assets-library)
+@(include-section battlearena/scribblings/assets-library)
 

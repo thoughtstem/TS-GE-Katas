@@ -1,5 +1,14 @@
 #lang scribble/manual
 
+@(require racket/runtime-path)
+
+@(define-runtime-path mini-health-bar "img/mini-health-bar.png")
+@(define-runtime-path printable-mini-health-bars "img/printable-mini-health-bars.png")
+@(define-runtime-path game-jam-health-bar "img/game-jam-health-bar.png")
+@(define-runtime-path printable-game-jam-health-bar "img/printable-game-jam-health-bars.png")
+@(define-runtime-path daily-team-page "img/daily-team-page.jpeg")
+@(define-runtime-path leaderboard "img/leaderboard.jpeg")
+
 @title{One Day Camp Materials}
 
 All the materials needed to run a successful full-day, one day camp!
@@ -16,11 +25,11 @@ and slide it into a name tag holder with lanyard.
 
 Sample:
 
-@(image "scribblings/img/mini-health-bar.png" #:scale .5)
+@(image mini-health-bar #:scale .5)
 
 Print 9 per page. Printable image:
 
-@(image "scribblings/img/printable-mini-health-bars.png")
+@(image printable-mini-health-bars)
 
 @section{Game Jam Health Bar}
 
@@ -31,11 +40,11 @@ their progress during the jam.
 
 Sample:
 
-@(image "scribblings/img/game-jam-health-bar.png" #:scale .25)
+@(image game-jam-health-bar #:scale .25)
 
 Print 2 per page. Printable image:
 
-@(image "scribblings/img/printable-game-jam-health-bars.png")
+@(image printable-game-jam-health-bar)
 
 @section{Daily Team Sheet}
 
@@ -46,7 +55,7 @@ space fo 5 team names and up to 6 health bars under each team name.
 
 Example:
 
-@(image "scribblings/img/daily-team-page.jpeg" #:scale .3)
+@(image daily-team-page #:scale .3)
 
 @section{Week Leaderboard}
 
@@ -57,7 +66,7 @@ topics, as well as a place to put the total camp score.
 
 Example:
 
-@(image "scribblings/img/leaderboard.jpeg" #:scale .5)
+@(image leaderboard #:scale .5)
 
 @section{Tech}
 

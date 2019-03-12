@@ -196,7 +196,7 @@ This is an example of how all the components come together during camp-jam into 
 @(define (sword) (image "scribblings/imgs/sword.png"))
 @(define (paint-thrower) (image "scribblings/imgs/paint-thrower.png"))
 
-@codeblock{#lang battle-arena}
+@codeblock{#lang battlearena}
 @racketblock[
  (define (cool-guy)
    (custom-avatar #:sprite #, (cool-guy)))
@@ -225,7 +225,7 @@ This is an example of how all the components come together during camp-jam into 
                   #:dart     (paint)
                   #:rarity   'epic))
 
- (battle-arena-game
+ (battlearena-game
   #:avatar      (cool-guy)
   #:enemy-list  (list (bad-guy))
   #:weapon-list (list (sharp-stick)
@@ -237,10 +237,10 @@ This is an example of how all the components come together during camp-jam into 
 
 This is an example of how all the components come together during camp-jam into one piece of code:
 
-@codeblock{#lang battle-arena}
+@codeblock{#lang battlearena}
 @racketblock[
 
- (battle-arena-game
+ (battlearena-game
   #:avatar      (custom-avatar #:sprite #, (cool-guy))
   #:enemy-list  (list (custom-enemy #:sprite #,       (bad-guy)
                                     #:ai              'easy

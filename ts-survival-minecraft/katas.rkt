@@ -6,9 +6,22 @@
 
 (require ts-kata-util/katas/main
          ts-fundamentals/katas
-         "./katas/read-code-stimuli.rkt")
+         (prefix-in new: "./katas/read-code-stimuli.rkt")
+         ts-survival/katas/read-code-stimuli
+         ts-survival/katas/read-code-tips)
+
+
 
 (define survival-minecraft-proto-katas
+  (apply fill-in-tips
+         (apply fill-in-stimuli
+                (apply fill-in-stimuli (collapse-alts
+                                        (lang->kata-collection 'survival-minecraft))
+                       stimuli)
+                new:stimuli)
+         tips))
+
+(define survival-minecraft-katas
   (remap-ids
    '(("avatar-(\\d*)" "hero-\\1")
      ("enemy-(\\d*)" "mob-\\1")
@@ -16,12 +29,7 @@
      ("npc-(\\d*)" "entity-\\1")
      ("bg-(\\d*)" "biome-\\1")
      )
-   (collapse-alts
-    (lang->kata-collection 'survival-minecraft))))
-
-
-(define survival-minecraft-katas
-  (apply fill-in-stimuli survival-minecraft-proto-katas stimuli))
+   survival-minecraft-proto-katas))
 
 (define-sub-collections survival-minecraft-katas
   hello-world-katas

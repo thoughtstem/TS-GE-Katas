@@ -8,7 +8,7 @@
 
 @title{Battle Arena Avengers}
 
-These @(~a (length (kata-collection-katas katas))) katas pertain to @racket[battle-arena-avengers].
+These @(~a (length (kata-collection-katas katas))) katas pertain to @racket[battlearena-avengers].
 They can be browsed in various ways using the table of contents below.
 
 To use these katas in another collection do:
@@ -74,4 +74,4 @@ To use these katas in another collection do:
 
 @(render spike-mine-katas)
 
-@(include-section battle-arena-avengers/scribblings/assets-library)
+@(include-section battlearena-avengers/scribblings/assets-library)

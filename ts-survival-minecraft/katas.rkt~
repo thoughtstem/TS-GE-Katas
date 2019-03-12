@@ -24,6 +24,7 @@
   (apply fill-in-stimuli survival-minecraft-proto-katas stimuli))
 
 (define-sub-collections survival-minecraft-katas
+  hello-world-katas
   hero-katas
   food-katas
   ore-katas
