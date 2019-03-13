@@ -11,14 +11,27 @@
 
 @larger[@larger{Coding for Minecraft Fans}]  
 
+This is your resource for your @bold{Coding for Minecraft Fans}
+Fleet Spring Camp! Here you can find:
+
+@itemlist[@item{The 5 main kata topics for the day}
+          @item{Extra katas}
+          @item{Day's schedule with details, hints and reccomendations}
+          @item{The list of materials needed to run this camp}
+          @item{Assets to use in katas and game jam}]
+
 
 @table-of-contents[]
 
+@section{Intro Katas}
+@(render core-values)
+@(render game-jam)
+@(render hello-world-katas)
+
 @section{Hero Katas}
 
-All teams should start with these katas!
+These should be every team's first katas of the day.
 
-@(render hello-world-katas)
 @(render hero-katas)
 
 @section{Food Katas}

@@ -84,13 +84,15 @@ Use the guide below to assist:
           @item{16 - 19 students = no more than 4 teams}
           @item{20+ students = no more than 5 teams}]
 
-@subsection{First Kata Rotation -- Avatar Katas}
+@subsection{Intro Katas & First Kata Rotation}
 
 @bold[@larger{9:45am - 10:15am}]
 
 Each team is directed to a table with a coach. That coach leads the
-students through as many of the Avatar Katas as their team earns in
-the 30 minute block.
+students through the @bold{Intro Katas} and as many of the @bold{First Katas}
+as their team earns in the 30 minute block. First Katas are almost
+always the avatar/avatar-equivalent katas, but will always be labeled
+as well.
 
 This is the only kata block where everyone is working on the same
 katas. See below for more guidelines.
@@ -132,4 +134,74 @@ breaks and, of course, GAME JAM!
 @bold[@larger{10:45am - 10:55am}]
 
 This is @bold{unstructured} break time. These are great times for students 
-to take a break from the computers and relax 
+to take a break from the computers, snack and relax! However, @bold{even in
+unstructured time, coaches should always be aware of, and in control of
+the camp environment}. Remember:
+
+@itemlist[@item[@bold{During breaks, all students are OFF our computers.}
+                " This can be a hard rule to enforce all the time -- what
+                about the student who wants to keep coding, that's good
+                right? Or the student who is a bit behind, and wants to spend
+                break catching up? What if they are just playing their game?
+                But really." @larger{Really.} "Please make sure all students
+                are completely off the computers during all breaks. Among
+                other things, time away from the computer allows for students
+                to get back in touch with those annoying physical bodies we
+                have -- and sometimes it's not until they step away
+                from the screen that they realize 'Oh! I'm hungry/thirsty/
+                sore/need to go to the bathroom!'"
+                @bold{This is a ThoughtSTEM Camp policy and needs to be followed!}]
+          @item[@bold{Keep it sane and safe.} " Coaches can (and should!) give the
+                students some space during these breaks, but must stay attentive
+                for student safety. There shouldn't be running or throwing things. 
+                Coaches should also be mindful of conversations -- keeping an ear
+                out for topics that could upset or seem inappropriate to other
+                students. Coaches should be aware of what is happening in their
+                camp at all times, even breaks. Be especially mindful of students
+                using their own devices (phones and computers) during breaks. While
+                not strictly disallowed, that privilege can be removed at anytime."]
+          @item[@bold{Be mindful of ALL students.} " Just like during the rest of
+                camp, coaches are working to make this as positive of an experience
+                for each student as possible! To this end," @bold{watch for lonely kiddos}
+                ". Do your best to make every student feel welcomed, even it if means
+                you just sit with that quiet student and chat about Spiderman for a
+                few minutes."]]
+
+@subsection{Game Breaks}
+
+@bold[@larger{10:55am - 11:15am}]
+
+@bold[@larger{2:00pm - 2:20pm}]
+
+Game breaks may be substitutes with unstructured time, if needed, or (if at Fleet)
+museum time. However, games are recommended because of the benefits that playing social
+games can have for students (and coaches!):
+
+Social games can help students...
+@itemlist[@item{...release excess energy!}
+          @item{...take a brain break from coding!}
+          @item{...socialize, especially if they are shy!}
+          @item{...feel like they are getting a "real camp experience!"}
+          @item{...engage and connect with coaches and other students!}
+          @item{...remember who the leaders are (coaches) and how to listen to them!}]
+
+Coaches are encouraged to play any games they think will engage the students! You can
+also find a list of games specifically curated for ThoughtSTEM camps here:
+@url{www.tinyurl.com/ts-game-list}.
+
+Students do not have to participate. Coaches should strive for 100% participation, which
+may involve some creative rule adjustments for students with differing needs and abilities!
+If a student will not play, and refuses accomodation, that student may sit
+quietly to the side with a coach. Remember -- if sitting out becomes more attractive than
+the game you are playing (the student gets to play on their phone, for example), you will
+be fighting an uphill battle to get even 50% participation!
+
+@bold{Remember: no students should be on computers during breaks}. This rule also should
+extend to the student's own devices (phones, computers) during structured breaks such as
+game breaks.
+
+
+
+
+
+
