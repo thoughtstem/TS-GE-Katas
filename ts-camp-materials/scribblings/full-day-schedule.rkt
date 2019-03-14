@@ -200,6 +200,109 @@ be fighting an uphill battle to get even 50% participation!
 extend to the student's own devices (phones, computers) during structured breaks such as
 game breaks.
 
+@subsection{Transition to Lunch/Buffer Time}
+
+@bold[@larger{11:45am - 12:00pm}]
+
+Time that can be be eaten into if any of the morning activities run over. Otherwise
+you can fill this time with any tidying up that is needed, a quick game, bank time
+(when students can exchange 1s for 5s, etc), or even market!
+
+@subsection{Coach Lunch Breaks}
+
+Every coach gets at least 30 min break for lunch.
+
+AT FLEET: Coaches split into 2 groups and take breaks in alternating shifts.
+When not on lunch, coaches are assisting Fleet staff with monitoring student
+lunch. Lunch breaks are either from 12:00pm - 12:30pm or 12:30pm - 1:00pm.
+@bold{Be sure to take your entire break and also return on time so the rest 
+of your team can have their entire break!}
+
+@subsection{Transition into Game Jam}
+
+@bold[@larger{2:20pm - 2:30pm}]
+
+After your game break (it is important to take a break between last kata rotation
+and the game jam!), take some time to outline some specifics of game jam and get the
+students excited and ready!
+
+@bold{To review prior to game jam:}
+@itemlist[@item["Coaches are now " @bold{judges} ", so don't expect us to help you out (for free)!"]
+          @item["The way to succeed in game jam is to " @bold{start small} " and "
+                @bold{test often.} " Once more for the kids in the back! "
+                @bold[@larger{Start small and test often!!!}]]
+          @item[@bold{Points} " are awarded in two ways:"
+                @itemlist[@item{throughout the game jam with bonus point stickers for CREATIVITY or COOPERATION}
+                          @item{at the end based on number of parentheses and keywords}]]
+          @item["Careful though, "@bold{you don't get any points if your game doesn't run!}
+                " Hence the first bit of advice! Coaches will help all students make sure
+                their games do run, but we don't need to tell them that at the top!"]
+          @item["At the end of the jam, students will calculate their points and earn "
+                @bold{ThoughtSTEM Dollars} " to be used in the market!"]
+          @item[@bold{Score Cards!} "Hand out index cards, have students write their
+                name and their team name. Explain that Bonus Stickers will go here."]
+          @item["Take the time to explain any " @bold{Student Supports} " that will be
+                available during the jam. See Below for more info on Student Supports."]
+          @item[@bold{Pair up} " if you are running game jam in pairs!"]
+          @item["Reinforce other rules, like no touching other people's computers, no running
+                or anything else you deem necessary"]]
+
+Just as important as any rules/reminders is setting the right energy for the jam! Be @bold{positive},
+@bold{excited}, and @bold{focused}!
+
+@subsection{GAME JAM!}
+
+@bold[@larger{2:30pm - 3:30pm}]
+
+Here's some advice on how to create a fun and successful jam!
+
+@bold[@larger{Student Support}]
+
+We know that asking students to code an entire game with code they have only learned that day can be
+daunting! There are lots of support systems you can add to ensure student success while still
+encouraging independence and creativity:
+
+@itemlist[@item[@bold{Resource Center} " -- set up a couple computers with access to the katas.thoughtstem.com 
+                page. Show students how to navigate the page prior to game jam. Computers MUST STAY at the
+                center, and coaches may instate a price for visiting the Resource Center at any time!"]
+          @item[@bold{Call in a Coach!} " -- this is an easy thing to add partway though a jam if you are
+                seeing frustrated students. For a fee, any student can get a coaches help for 2 minutes! A
+                good starting price is 5 ThoughtSTEM Dollars."]
+          @item[@bold{Starting Code} " -- don't forget that you always have access to scrap paper, white board
+                or any other tools where you can write hints for some or all students."]]
+
+@bold{A word of advice:} Err on the side of fewer supports -- the students may surprise you! You can always add
+some supports in partway through jam, but it's harder to take them away!
+
+@bold[@larger{Coaches}]
+
+Okay, the jam is on. What do you, a coach, do now??
+
+@itemlist[@item["Encourage the kids by " @bold{awarding bonus point stickers} " when they do things we like
+                to see! When they work with their team, when they test their game, when they create a cool
+                story behind their game, etc. Also use the stickers as a motivator when things get tough:
+                'bonus point for working on debugging! That's tricky stuff!' Not all students/teams need
+                to get the saem number of bonus, but keep an eye on distibution to keep it fair."]
+          @item["Monitor how students are progressing, and " @bold{adjust jam rules} " to make it easier or
+                harder as needed! For example, adding a price to the resource center, or adding in the ability
+                to Call in a Coach!"]
+          @item["In general, be a positive and supportive presence! BE EXCITED!"]]
+
+
+@bold[@larger{Scoring & Awarding}]
+
+Be sure to stop game jam with enough time to tally points! Students should score their own games, under the
+guidance and review of coaches. The suggested point algorithm is below, but should be adjusted to make sure
+students earn enough money to feel accomplished without bankrupting the coaches stash! Aiming for $10-25 is
+good sweet-spot.
+
+(num of open parentheses) + (num of close parentheses) + (num of keywords; ex #:avatar) = X
+
+X/5 = Y
+
+Y + (num of bonus point stickers) = TOTAL $$
+
+
 
 
 
