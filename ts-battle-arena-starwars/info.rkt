@@ -5,6 +5,6 @@
 (define deps '(
   "ts-kata-util"
   "ts-battle-arena"
-  "battle-arena-starwars"
+  "battlearena-starwars"
   ))
 

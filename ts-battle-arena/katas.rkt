@@ -10,7 +10,7 @@
 ;Katas start as examples in some langauge.
 ;  "Proto katas" we could call them.
 (define battle-arena-proto-katas
-  (lang->kata-collection 'battle-arena))
+  (lang->kata-collection 'battlearena))
 
 ;The main thing these "proto katas" are missing
 ;  is a clear stimulus.  (The response is simply "write the code")

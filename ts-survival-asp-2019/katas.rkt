@@ -13,3 +13,7 @@
    #:out (list "Building a SURVIVAL GAME."  
                "In ONE HOUR."
                "Including: an AVATAR, FOOD, ENEMIES, and CRAFTING.")))
+
+(define-kata-collection all-crafter-katas
+  (kata-collection-katas crafter-katas)
+  (kata-collection-katas weapon-crafter-katas))

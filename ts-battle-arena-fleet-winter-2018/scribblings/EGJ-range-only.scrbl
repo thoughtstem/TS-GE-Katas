@@ -10,7 +10,7 @@ This is an example of how all the components come together during camp-jam into 
 
 ---------------------
 
-@codeblock{#lang battle-arena}
+@codeblock{#lang battlearena}
 @racketblock[
  (define (my-avatar)
    (custom-avatar #:sprite (random-character-sprite)))
@@ -44,7 +44,7 @@ This is an example of how all the components come together during camp-jam into 
                    #:fire-mode 'homing
                    #:fire-rate 5))
 
- (battle-arena-game #:avatar      (my-avatar)
+ (battlearena-game #:avatar      (my-avatar)
                     #:enemy-list  (list (badguy))
                     #:weapon-list (list (single-shot)
                                         (spread-shot)
@@ -55,9 +55,9 @@ This is an example of how all the components come together during camp-jam into 
 
 This is an example of how all the components come together during camp-jam into one piece of code:
 
-@codeblock{#lang battle-arena}
+@codeblock{#lang battlearena}
 @racketblock[
- (battle-arena-game
+ (battlearena-game
   #:avatar     (custom-avatar
                 #:sprite (random-character-sprite))
   #:enemy-list (list (custom-enemy

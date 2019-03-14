@@ -15,7 +15,7 @@
   (apply fill-in-tips
          (apply fill-in-stimuli
                 (apply fill-in-stimuli (collapse-alts
-                                        (lang->kata-collection 'battle-arena-avengers))
+                                        (lang->kata-collection 'battlearena-avengers))
                        stimuli)
                 new:stimuli)
          tips))

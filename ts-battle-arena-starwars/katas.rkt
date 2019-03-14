@@ -17,7 +17,7 @@
   (apply fill-in-tips
          (apply fill-in-stimuli
                 (apply fill-in-stimuli (collapse-alts
-                                        (lang->kata-collection 'battle-arena-starwars))
+                                        (lang->kata-collection 'battlearena-starwars))
                        stimuli)
                 new:stimuli)
          tips))
