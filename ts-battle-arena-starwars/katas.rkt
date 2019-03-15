@@ -1,11 +1,12 @@
 #lang racket
 
-(provide battle-arena-starwars-katas)
+(provide battlearena-starwars-katas)
 
 (require ts-kata-util/katas/main
          ts-battle-arena/katas/read-code-stimuli
+         ts-battle-arena/katas/read-code-tips
          (prefix-in new: "./katas/read-code-stimuli.rkt")
-         "./katas/read-code-tips.rkt"
+         (prefix-in new: "./katas/read-code-tips.rkt")
          )
 
 
@@ -15,16 +16,18 @@
 ;  for this kata collection.
 (define battle-arena-proto-katas
   (apply fill-in-tips
-         (apply fill-in-stimuli
-                (apply fill-in-stimuli (collapse-alts
-                                        (lang->kata-collection 'battle-arena-starwars))
-                       stimuli)
-                new:stimuli)
-         tips))
+         (apply fill-in-tips
+                (apply fill-in-stimuli
+                       (apply fill-in-stimuli (collapse-alts
+                                               (lang->kata-collection 'battlearena-starwars))
+                              stimuli)
+                       new:stimuli)
+                tips)
+         new:tips))
 
 ;Katas start as examples in some language.
 ;  "Proto katas" we could call them.
-(define battle-arena-starwars-katas
+(define battlearena-starwars-katas
   (remap-ids
    '(("avatar-(\\d*)" "hero-\\1")
      ("enemy-(\\d*)" "villain-\\1")
@@ -38,7 +41,7 @@
   )
 
 
-(define-sub-collections battle-arena-starwars-katas
+(define-sub-collections battlearena-starwars-katas
   hello-world-katas
   hero-katas
   (villain-katas
@@ -51,6 +54,7 @@
    (not/c (curryr name-contains? "Droid"))
    (not/c (curryr name-contains? "Armor")))
   planet-katas
+  level-design-katas
   health-katas
   boost-katas
   shield-katas

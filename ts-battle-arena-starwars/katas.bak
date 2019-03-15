@@ -1,6 +1,6 @@
 #lang racket
 
-(provide katas)
+(provide battle-arena-starwars-katas)
 
 (require ts-kata-util/katas/main
          ts-battle-arena/katas/read-code-stimuli
@@ -17,14 +17,14 @@
   (apply fill-in-tips
          (apply fill-in-stimuli
                 (apply fill-in-stimuli (collapse-alts
-                                        (lang->kata-collection 'battle-arena-starwars))
+                                        (lang->kata-collection 'battlearena-starwars))
                        stimuli)
                 new:stimuli)
          tips))
 
 ;Katas start as examples in some language.
 ;  "Proto katas" we could call them.
-(define katas
+(define battle-arena-starwars-katas
   (remap-ids
    '(("avatar-(\\d*)" "hero-\\1")
      ("enemy-(\\d*)" "villain-\\1")
@@ -38,7 +38,7 @@
   )
 
 
-(define-sub-collections katas
+(define-sub-collections battle-arena-starwars-katas
   hello-world-katas
   hero-katas
   (villain-katas

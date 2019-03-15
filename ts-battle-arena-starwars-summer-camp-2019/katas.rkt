@@ -1,6 +1,6 @@
 #lang racket
 
-(provide (all-from-out  ts-battle-arena-avengers/katas))
+(provide (all-from-out  ts-battle-arena-starwars/katas))
 
 (require ts-kata-util/katas/main
          ts-fundamentals/katas

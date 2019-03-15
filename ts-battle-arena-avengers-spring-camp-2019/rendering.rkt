@@ -1,24 +1,17 @@
 #lang racket
 
-(provide kata->dollar-icons
-         kata->sticker-icon
-         kata->title
-         bronze?
-         silver?
-         gold?
-         platinum?
-         render
-         kata-section)
+(provide render)
 
 (require ts-kata-util/katas/rendering
          ts-kata-util/katas/main
-         scribble/manual)
+         scribble/core)
 
 (define (render kc)
   (kata-collection->scribble
    #:befores (list kata->title
                    kata->dollar-icons
-                   kata->sticker-icon)
+                   kata->sticker-icon
+                   kata->tip)
    kc))
 
 (require (only-in scribble/manual image para subsection))
@@ -43,15 +36,6 @@
               (platinum? k)) add-heart-icon]
          [else               (list)])))
 
-
-(define (kata->num-dollars k)
-  #;(cond [(bronze? k)     1]
-        [(silver? k)     3]
-        [(gold?   k)     5]
-        [(platinum?   k) 7]
-        [else 0])
-  1)
-
 (define (bronze? k)
   (string=? "Bronze" (kata->difficulty-name k)))
 
@@ -69,20 +53,24 @@
         [(string-suffix? (~a (kata-id k)) "-2")     "Silver"]
         [(string-suffix? (~a (kata-id k)) "-3")     "Gold"]
         [(string-suffix? (~a (kata-id k)) "-4")     "Platinum"]
-        [else            "Unknown"]))
+        [else            ""]))
 
 
 (define (kata->dollar-icons k)
-  (para
-   (map (thunk* dollar-icon)
-        (range (kata->num-dollars k)))))
+  (para dollar-icon))
 
 (define (kata->title k)
   (subsection (~a (kata->difficulty-name k) " "
                   (kata-name k) " "
                   "Kata")))
 
-(define (kata-section kind collection)
-  (list
-   (section (kata-id->kata-name kind))
-   (render collection)))
+(define captainamerica-sprite
+  (image "scribblings/img/captainamerica.png"))
+
+(define (kata->tip k)
+  (define tip (kata-tip k))
+  (if tip
+      (if ((listof block?) tip)
+          tip
+          (side-note #:icon captainamerica-sprite " Tip" tip))
+      #f))

@@ -1,11 +1,12 @@
 #lang racket
 
-(provide katas)
+(provide survival-pokemon-katas)
 
 (require ts-kata-util/katas/main
          ts-survival/katas/read-code-stimuli
+         ts-survival/katas/read-code-tips
          (prefix-in new: "./katas/read-code-stimuli.rkt")
-         "./katas/read-code-tips.rkt"
+         (prefix-in new: "./katas/read-code-tips.rkt")
          )
 
 ;The main thing these "proto katas" are missing
@@ -13,16 +14,18 @@
 ;Here we'll craft the stimuli, using the langauge that's appropriate
 (define survival-proto-katas
   (apply fill-in-tips
-         (apply fill-in-stimuli
-                (apply fill-in-stimuli (collapse-alts
-                                        (lang->kata-collection 'survival-pokemon))
-                       stimuli)
-                new:stimuli)
-         tips))
+         (apply fill-in-tips
+                (apply fill-in-stimuli
+                       (apply fill-in-stimuli (collapse-alts
+                                               (lang->kata-collection 'survival-pokemon))
+                              stimuli)
+                       new:stimuli)
+                tips)
+         new:tips))
 
 ;Katas start as examples in some language.
 ;  "Proto katas" we could call them.
-(define katas
+(define survival-pokemon-katas
   (remap-ids
    '(("avatar-(\\d*)" "pokemon-\\1")
      ("enemy-(\\d*)" "trainer-\\1")
@@ -35,7 +38,7 @@
 
   )
 
-(define-sub-collections katas
+(define-sub-collections survival-pokemon-katas
   hello-world-katas
   pokemon-katas
   food-katas
@@ -44,5 +47,6 @@
   crafter-katas
   friend-katas
   sky-katas
+  level-design-katas
   town-katas
   starvation-rate-katas)

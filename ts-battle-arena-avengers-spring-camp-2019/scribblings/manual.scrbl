@@ -8,14 +8,18 @@
           (except-in racket read do) 
           )
 
-@title{Fleet Camp Spring 2019 -- Day #}
+@title{Fleet Camp Spring 2019 -- Day 3}
 @larger[@larger{Coding for Avengers Fans}]
 
  
 @table-of-contents[]
 
-@section{Hero Katas}
+@section{Intro Katas}
+@(render core-values)
+@(render game-jam)
 @(render hello-world-katas)
+
+@section{Hero Katas}
 @(render hero-katas)
 
 @section{Villain Katas}
@@ -29,8 +33,20 @@
 
 @section{Planet Design Katas}
 @(render planet-katas)
-@(render level-design-katas)
 
 @(include-section ts-camp-materials/scribblings/full-day-schedule)
 @(include-section ts-camp-materials/scribblings/one-day-materials)
 
+
+@section{Extra Katas}
+@(render level-design-katas)
+@(render health-katas)
+@(render boost-katas)
+@(render shield-katas)
+@(render force-field-katas)
+@(render droid-katas)
+@(render armor-katas)
+@(render lava-pit-katas)
+@(render spike-mine-katas)
+
+@(include-section battlearena-avengers/scribblings/assets-library)

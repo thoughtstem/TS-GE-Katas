@@ -21,7 +21,7 @@
 (require (only-in scribble/manual image para subsection))
 
 (define dollar-icon
-  (image "scribblings/imgs/ts-dollar.png"
+  (image "scribblings/img/ts-dollar.png"
          #:scale .15))
 
 (define (kata->num-dollars k)

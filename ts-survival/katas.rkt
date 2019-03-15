@@ -1,7 +1,8 @@
 #lang racket
 
 (provide survival-katas
-         survival-proto-katas)
+         survival-proto-katas
+         stimuli)
 
 (require ts-kata-util/katas/main
          "./katas/read-code-stimuli.rkt"
@@ -25,6 +26,7 @@
   enemy-katas
   crafter-katas
   sky-katas
+  level-design-katas
   starvation-rate-katas
   bg-katas
   npc-katas

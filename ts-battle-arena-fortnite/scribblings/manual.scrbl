@@ -8,7 +8,7 @@
 
 @title{Battle Arena Fortnite}
 
-These @(~a (length (kata-collection-katas katas))) katas pertain to @racket[battle-arena-fortnite].
+These @(~a (length (kata-collection-katas battlearena-fortnite-katas))) katas pertain to @racket[battlearena-fortnite].
 They can be browsed in various ways using the table of contents below.
 
 To use these katas in another collection do:
@@ -31,7 +31,7 @@ To use these katas in another collection do:
 @(render enemy-weapon-katas)
 
 @section{Weapon Katas}
-@(render weapon-katas)
+@(render selected-weapon-katas)
 
 @section{Background Katas}
 @(render background-katas)
@@ -55,4 +55,4 @@ To use these katas in another collection do:
 @(render spike-mine-katas)
 
 
-@(include-section battle-arena-fortnite/scribblings/assets-library)
+@(include-section battlearena-fortnite/scribblings/assets-library)

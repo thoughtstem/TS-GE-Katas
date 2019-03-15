@@ -1,11 +1,12 @@
 #lang racket
 
-(provide battle-arena-avengers-katas)
+(provide battlearena-avengers-katas)
 
 (require ts-kata-util/katas/main
          ts-battle-arena/katas/read-code-stimuli
+         ts-battle-arena/katas/read-code-tips
          (prefix-in new: "./katas/read-code-stimuli.rkt")
-         "./katas/read-code-tips.rkt"
+         (prefix-in new: "./katas/read-code-tips.rkt")
          )
 
 ;The main thing these "proto katas" are missing
@@ -13,17 +14,19 @@
 ;Here we'll craft the stimuli, using the langauge that's appropriate
 (define battle-arena-proto-katas
   (apply fill-in-tips
-         (apply fill-in-stimuli
-                (apply fill-in-stimuli (collapse-alts
-                                        (lang->kata-collection 'battle-arena-avengers))
-                       stimuli)
-                new:stimuli)
-         tips))
+         (apply fill-in-tips
+                (apply fill-in-stimuli
+                       (apply fill-in-stimuli (collapse-alts
+                                               (lang->kata-collection 'battlearena-avengers))
+                              stimuli)
+                       new:stimuli)
+                tips)
+         new:tips))
 
 
 ;Katas start as examples in some language.
 ;  "Proto katas" we could call them.
-(define battle-arena-avengers-katas
+(define battlearena-avengers-katas
   (remap-ids
    '(("avatar-(\\d*)" "hero-\\1")    
      ("enemy-weapon-(\\d*)" "villain-power-\\1")
@@ -35,8 +38,7 @@
 
   )
 
-
-(define-sub-collections battle-arena-avengers-katas
+(define-sub-collections battlearena-avengers-katas
   hello-world-katas
   hero-katas
   (villain-katas
@@ -46,6 +48,7 @@
   (power-katas
    (not/c (curryr name-contains? "Villain")))
   planet-katas
+  level-design-katas
   health-katas
   boost-katas
   shield-katas

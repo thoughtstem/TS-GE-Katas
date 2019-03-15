@@ -16,8 +16,8 @@ For Fleet Winter and Spring Camps, use:
           @item{One Day Camp Materials}]
 
 
-@(include-section "full-day-schedule.scrbl")
-@(include-section "one-day-materials.scrbl")
+@(include-section "full-day-schedule.rkt")
+@(include-section "one-day-materials.rkt")
 
 
 

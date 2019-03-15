@@ -430,7 +430,7 @@
      #'(begin
          (provide category-name)
          (define category-name
-           (sort-katas-by-difficulty
+           ;(sort-katas-by-difficulty
              (filter-collection
                (and/c
                  (curryr name-contains? (regexp-replace #rx" Katas"
@@ -438,19 +438,23 @@
                                                         ""
                                                         ))
                  stipulation ...)
-               base))))]
+               base)
+             ;)
+           ))]
     [(_ base category-name) 
      #'(begin
          (provide category-name)
          (define category-name
-           (sort-katas-by-difficulty
+           ;(sort-katas-by-difficulty
              (filter-collection
                (and/c
                  (curryr name-contains? (regexp-replace #rx" Katas"
                                                         (kata-id->kata-name 'category-name)
                                                         ""
                                                         )))
-               base))))]))
+               base)
+             ;)
+           ))]))
 
 (define-syntax-rule (define-sub-collections base name ...)
   (begin
