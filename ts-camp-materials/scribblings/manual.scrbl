@@ -13,7 +13,7 @@ Kata Collections for camps of all kinds.
 
 For Fleet Winter and Spring Camps, use:
 @itemlist[@item{Full Camp Day Schedule}
-          @item{One Day Camp Materials}]
+          @item{Full Camp Day Materials}]
 
 
 @(include-section "full-day-schedule.rkt")

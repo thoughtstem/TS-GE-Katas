@@ -30,7 +30,6 @@ They can be browsed in various ways using the table of contents below.
                friend-katas
                sky-katas
                level-design-katas
-               town-katas
-               starvation-rate-katas)
+               town-katas)
 
 @(include-section survival-pokemon/scribblings/assets-library)

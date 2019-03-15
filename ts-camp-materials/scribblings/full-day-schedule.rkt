@@ -121,10 +121,10 @@ on knowing on set of katas).
 number of katas with any given team. It is more important that the students
 actually earn the katas than get through any specific number of katas.
 
-@bold{Using the health bars} -- keep track of katas earned as follows:
-@itemlist[@item{First earned -- fill in that table's block}
-          @item{Second -- bonus sticker on that table's block}
-          @item{Every other kata -- extra lives (heart stickers)!}]
+@bold{Kata cards} -- For every kata earned, students receive
+a new hole punch in their kata card. Once they have filled their card,
+students can get a ThoughtSTEM Dollar bonus! Then they keep that card,
+are start working on a new one.
 
 @bold{Stick to 30 min max!} -- make sure you have time for non-computer
 breaks and, of course, GAME JAM!
@@ -293,14 +293,15 @@ Okay, the jam is on. What do you, a coach, do now??
 
 Be sure to stop game jam with enough time to tally points! Students should score their own games, under the
 guidance and review of coaches. The suggested point algorithm is below, but should be adjusted to make sure
-students earn enough money to feel accomplished without bankrupting the coaches stash! Aiming for $10-25 is
+students earn enough money to feel accomplished without bankrupting the coaches! Aiming for $10-25 is
 good sweet-spot.
 
-(num of open parentheses) + (num of close parentheses) + (num of keywords; ex #:avatar) = X
+@racketblock[
+ (num of open parentheses) + (num of close parentheses) + (num of keywords, ex. #:avatar) = X
 
-X/5 = Y
+ X/5 = Y
 
-Y + (num of bonus point stickers) = TOTAL $$
+ Y + (num of bonus point stickers) = TOTAL $$]
 
 
 

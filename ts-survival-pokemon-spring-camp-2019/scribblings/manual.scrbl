@@ -1,4 +1,4 @@
-#lang scribble/manual
+ #lang scribble/manual
 
 
 @(require ts-kata-util/katas/main
@@ -29,7 +29,7 @@
 @(render trainer-katas)
 
 @section{Crafter Katas}
-@(render crafter-katas)
+@(render custom-crafter-katas)
 
 @section{Friend Katas}
 @(render friend-katas)
@@ -43,6 +43,5 @@
 @(render sky-katas)
 @(render level-design-katas)
 @(render town-katas)
-@(render starvation-rate-katas)
 
 @(include-section survival-pokemon/scribblings/assets-library)

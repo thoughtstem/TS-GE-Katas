@@ -23,6 +23,9 @@
    'food-2
    (list "By default, custom-food will heal by " (bold "10") ".")
 
+   'food-5
+   (list "The default starvation rate is " (bold "50" "."))
+
    'enemy-2
    (list "Without the " (bold "curry") ", the game will have 10 of the same enemy.
           With curry, the game will have 10 different enemies.")
