@@ -59,5 +59,4 @@
       (not/c (curryr name-contains? "Sword")))
   lava-pit-katas
   spike-mine-katas
-  level-design-katas
   )

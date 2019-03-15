@@ -9,7 +9,7 @@
           )
 
 @title{Fleet Camp Spring 2019 -- Day 5}
-@larger[@larger{Coding for Fornite Fans}]
+@larger[@larger{Coding for Fortnite Fans}]
 
  
 @table-of-contents[]

@@ -25,6 +25,7 @@
   coin-katas
   enemy-katas
   crafter-katas
+  weapon-crafter-katas
   sky-katas
   level-design-katas
   starvation-rate-katas

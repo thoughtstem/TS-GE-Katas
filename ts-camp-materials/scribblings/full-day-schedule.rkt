@@ -84,13 +84,15 @@ Use the guide below to assist:
           @item{16 - 19 students = no more than 4 teams}
           @item{20+ students = no more than 5 teams}]
 
-@subsection{First Kata Rotation -- Avatar Katas}
+@subsection{Intro Katas & First Kata Rotation}
 
 @bold[@larger{9:45am - 10:15am}]
 
 Each team is directed to a table with a coach. That coach leads the
-students through as many of the Avatar Katas as their team earns in
-the 30 minute block.
+students through the @bold{Intro Katas} and as many of the @bold{First Katas}
+as their team earns in the 30 minute block. First Katas are almost
+always the avatar/avatar-equivalent katas, but will always be labeled
+as well.
 
 This is the only kata block where everyone is working on the same
 katas. See below for more guidelines.
@@ -132,4 +134,177 @@ breaks and, of course, GAME JAM!
 @bold[@larger{10:45am - 10:55am}]
 
 This is @bold{unstructured} break time. These are great times for students 
-to take a break from the computers and relax 
+to take a break from the computers, snack and relax! However, @bold{even in
+unstructured time, coaches should always be aware of, and in control of
+the camp environment}. Remember:
+
+@itemlist[@item[@bold{During breaks, all students are OFF our computers.}
+                " This can be a hard rule to enforce all the time -- what
+                about the student who wants to keep coding, that's good
+                right? Or the student who is a bit behind, and wants to spend
+                break catching up? What if they are just playing their game?
+                But really." @larger{Really.} "Please make sure all students
+                are completely off the computers during all breaks. Among
+                other things, time away from the computer allows for students
+                to get back in touch with those annoying physical bodies we
+                have -- and sometimes it's not until they step away
+                from the screen that they realize 'Oh! I'm hungry/thirsty/
+                sore/need to go to the bathroom!'"
+                @bold{This is a ThoughtSTEM Camp policy and needs to be followed!}]
+          @item[@bold{Keep it sane and safe.} " Coaches can (and should!) give the
+                students some space during these breaks, but must stay attentive
+                for student safety. There shouldn't be running or throwing things. 
+                Coaches should also be mindful of conversations -- keeping an ear
+                out for topics that could upset or seem inappropriate to other
+                students. Coaches should be aware of what is happening in their
+                camp at all times, even breaks. Be especially mindful of students
+                using their own devices (phones and computers) during breaks. While
+                not strictly disallowed, that privilege can be removed at anytime."]
+          @item[@bold{Be mindful of ALL students.} " Just like during the rest of
+                camp, coaches are working to make this as positive of an experience
+                for each student as possible! To this end," @bold{watch for lonely kiddos}
+                ". Do your best to make every student feel welcomed, even it if means
+                you just sit with that quiet student and chat about Spiderman for a
+                few minutes."]]
+
+@subsection{Game Breaks}
+
+@bold[@larger{10:55am - 11:15am}]
+
+@bold[@larger{2:00pm - 2:20pm}]
+
+Game breaks may be substitutes with unstructured time, if needed, or (if at Fleet)
+museum time. However, games are recommended because of the benefits that playing social
+games can have for students (and coaches!):
+
+Social games can help students...
+@itemlist[@item{...release excess energy!}
+          @item{...take a brain break from coding!}
+          @item{...socialize, especially if they are shy!}
+          @item{...feel like they are getting a "real camp experience!"}
+          @item{...engage and connect with coaches and other students!}
+          @item{...remember who the leaders are (coaches) and how to listen to them!}]
+
+Coaches are encouraged to play any games they think will engage the students! You can
+also find a list of games specifically curated for ThoughtSTEM camps here:
+@url{www.tinyurl.com/ts-game-list}.
+
+Students do not have to participate. Coaches should strive for 100% participation, which
+may involve some creative rule adjustments for students with differing needs and abilities!
+If a student will not play, and refuses accomodation, that student may sit
+quietly to the side with a coach. Remember -- if sitting out becomes more attractive than
+the game you are playing (the student gets to play on their phone, for example), you will
+be fighting an uphill battle to get even 50% participation!
+
+@bold{Remember: no students should be on computers during breaks}. This rule also should
+extend to the student's own devices (phones, computers) during structured breaks such as
+game breaks.
+
+@subsection{Transition to Lunch/Buffer Time}
+
+@bold[@larger{11:45am - 12:00pm}]
+
+Time that can be be eaten into if any of the morning activities run over. Otherwise
+you can fill this time with any tidying up that is needed, a quick game, bank time
+(when students can exchange 1s for 5s, etc), or even market!
+
+@subsection{Coach Lunch Breaks}
+
+Every coach gets at least 30 min break for lunch.
+
+AT FLEET: Coaches split into 2 groups and take breaks in alternating shifts.
+When not on lunch, coaches are assisting Fleet staff with monitoring student
+lunch. Lunch breaks are either from 12:00pm - 12:30pm or 12:30pm - 1:00pm.
+@bold{Be sure to take your entire break and also return on time so the rest 
+of your team can have their entire break!}
+
+@subsection{Transition into Game Jam}
+
+@bold[@larger{2:20pm - 2:30pm}]
+
+After your game break (it is important to take a break between last kata rotation
+and the game jam!), take some time to outline some specifics of game jam and get the
+students excited and ready!
+
+@bold{To review prior to game jam:}
+@itemlist[@item["Coaches are now " @bold{judges} ", so don't expect us to help you out (for free)!"]
+          @item["The way to succeed in game jam is to " @bold{start small} " and "
+                @bold{test often.} " Once more for the kids in the back! "
+                @bold[@larger{Start small and test often!!!}]]
+          @item[@bold{Points} " are awarded in two ways:"
+                @itemlist[@item{throughout the game jam with bonus point stickers for CREATIVITY or COOPERATION}
+                          @item{at the end based on number of parentheses and keywords}]]
+          @item["Careful though, "@bold{you don't get any points if your game doesn't run!}
+                " Hence the first bit of advice! Coaches will help all students make sure
+                their games do run, but we don't need to tell them that at the top!"]
+          @item["At the end of the jam, students will calculate their points and earn "
+                @bold{ThoughtSTEM Dollars} " to be used in the market!"]
+          @item[@bold{Score Cards!} "Hand out index cards, have students write their
+                name and their team name. Explain that Bonus Stickers will go here."]
+          @item["Take the time to explain any " @bold{Student Supports} " that will be
+                available during the jam. See Below for more info on Student Supports."]
+          @item[@bold{Pair up} " if you are running game jam in pairs!"]
+          @item["Reinforce other rules, like no touching other people's computers, no running
+                or anything else you deem necessary"]]
+
+Just as important as any rules/reminders is setting the right energy for the jam! Be @bold{positive},
+@bold{excited}, and @bold{focused}!
+
+@subsection{GAME JAM!}
+
+@bold[@larger{2:30pm - 3:30pm}]
+
+Here's some advice on how to create a fun and successful jam!
+
+@bold[@larger{Student Support}]
+
+We know that asking students to code an entire game with code they have only learned that day can be
+daunting! There are lots of support systems you can add to ensure student success while still
+encouraging independence and creativity:
+
+@itemlist[@item[@bold{Resource Center} " -- set up a couple computers with access to the katas.thoughtstem.com 
+                page. Show students how to navigate the page prior to game jam. Computers MUST STAY at the
+                center, and coaches may instate a price for visiting the Resource Center at any time!"]
+          @item[@bold{Call in a Coach!} " -- this is an easy thing to add partway though a jam if you are
+                seeing frustrated students. For a fee, any student can get a coaches help for 2 minutes! A
+                good starting price is 5 ThoughtSTEM Dollars."]
+          @item[@bold{Starting Code} " -- don't forget that you always have access to scrap paper, white board
+                or any other tools where you can write hints for some or all students."]]
+
+@bold{A word of advice:} Err on the side of fewer supports -- the students may surprise you! You can always add
+some supports in partway through jam, but it's harder to take them away!
+
+@bold[@larger{Coaches}]
+
+Okay, the jam is on. What do you, a coach, do now??
+
+@itemlist[@item["Encourage the kids by " @bold{awarding bonus point stickers} " when they do things we like
+                to see! When they work with their team, when they test their game, when they create a cool
+                story behind their game, etc. Also use the stickers as a motivator when things get tough:
+                'bonus point for working on debugging! That's tricky stuff!' Not all students/teams need
+                to get the saem number of bonus, but keep an eye on distibution to keep it fair."]
+          @item["Monitor how students are progressing, and " @bold{adjust jam rules} " to make it easier or
+                harder as needed! For example, adding a price to the resource center, or adding in the ability
+                to Call in a Coach!"]
+          @item["In general, be a positive and supportive presence! BE EXCITED!"]]
+
+
+@bold[@larger{Scoring & Awarding}]
+
+Be sure to stop game jam with enough time to tally points! Students should score their own games, under the
+guidance and review of coaches. The suggested point algorithm is below, but should be adjusted to make sure
+students earn enough money to feel accomplished without bankrupting the coaches stash! Aiming for $10-25 is
+good sweet-spot.
+
+(num of open parentheses) + (num of close parentheses) + (num of keywords; ex #:avatar) = X
+
+X/5 = Y
+
+Y + (num of bonus point stickers) = TOTAL $$
+
+
+
+
+
+
+
