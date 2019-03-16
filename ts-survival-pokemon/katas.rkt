@@ -32,11 +32,14 @@
      ("coin-(\\d*)" "stone-\\1")
      ("npc-(\\d*)" "friend-\\1")
      ("bg-(\\d*)" "town-\\1")
+     ("weapon-(\\d*)" "attack-\\1")
      )
    survival-proto-katas
    )
 
   )
+
+
 
 (define-sub-collections survival-pokemon-katas
   hello-world-katas
@@ -50,3 +53,7 @@
   level-design-katas
   town-katas
   starvation-rate-katas)
+
+
+
+

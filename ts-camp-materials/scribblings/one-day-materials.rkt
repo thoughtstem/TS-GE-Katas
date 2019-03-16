@@ -9,7 +9,7 @@
 @(define-runtime-path daily-team-page "img/daily-team-page.jpeg")
 @(define-runtime-path leaderboard "img/leaderboard.jpeg")
 
-@title{One Day Camp Materials}
+@title{Full Camp Day Materials}
 
 All the materials needed to run a successful full-day, one day camp!
 

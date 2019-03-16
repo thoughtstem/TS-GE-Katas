@@ -31,8 +31,7 @@ They can be browsed in various ways using the table of contents below.
                crafter-katas
                entity-katas
                biome-katas
-               sky-katas
-               starvation-rate-katas)
+               sky-katas)
 
 @section{All Katas}
 

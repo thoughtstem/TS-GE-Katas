@@ -32,7 +32,6 @@ They can be browsed in various ways using the table of contents below.
                weapon-crafter-katas
                sky-katas
                level-design-katas
-               starvation-rate-katas
                bg-katas
                npc-katas)
 

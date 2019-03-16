@@ -61,8 +61,5 @@ These should be every team's first katas of the day.
 @subsection{Sky Katas}
 @(render sky-katas)
 
-@subsection{Starvation Rate Katas}
-@(render starvation-rate-katas)
-
 
 @(include-section survival-minecraft/scribblings/assets-library)

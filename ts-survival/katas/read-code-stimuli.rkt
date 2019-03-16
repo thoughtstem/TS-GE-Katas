@@ -44,6 +44,8 @@
    'food-4
    (read-template "an avatar, 2 apples (heals by 20 and respawns), and 1 cherry (heals by 50 and doesn't respawn)")
 
+   'food-5
+   (read-template "an avatar, 20 cherries that heals by 50, and a starvation rate of 100")
 
    'enemy-1
    (read-template "an avatar and an enemy")
