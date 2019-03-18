@@ -29,9 +29,9 @@
 ;  "Proto katas" we could call them.
 (define battlearena-starwars-katas
   (remap-ids
-   '(("avatar-(\\d*)" "hero-\\1")
-     ("enemy-(\\d*)" "villain-\\1")
-     ("enemy-weapon-(\\d*)" "villain-weapon-\\1")
+   '(("avatar-(\\d*)" "rebel-\\1")
+     ("enemy-(\\d*)" "imperial-\\1")
+     ("enemy-weapon-(\\d*)" "imperial-weapon-\\1")
      ("sword-armor-(\\d*)" "lightsaber-armor-\\1")
      ("background-(\\d*)" "planet-\\1")
      )
@@ -43,10 +43,10 @@
 
 (define-sub-collections battlearena-starwars-katas
   hello-world-katas
-  hero-katas
-  (villain-katas
+  rebel-katas
+  (imperial-katas
    (not/c (curryr name-contains? "Weapon")))
-  villain-weapon-katas
+  imperial-weapon-katas
   (lightsaber-katas
    (not/c (curryr name-contains? "Droid"))
    (not/c (curryr name-contains? "Armor")))
@@ -66,3 +66,5 @@
   lava-pit-katas 
   spike-mine-katas
   )
+
+

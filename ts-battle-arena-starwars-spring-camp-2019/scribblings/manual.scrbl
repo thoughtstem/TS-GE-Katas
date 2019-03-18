@@ -19,31 +19,30 @@
 @(render game-jam)
 @(render hello-world-katas)
 
-@section{Hero Katas}
-@(render hero-katas)
+@section{Rebel Katas}
+@(render rebel-katas)
 
-@section{Villain Katas}
-@(render villain-katas)
+@section{Imperial Katas}
+@(render imperial-katas)
 
-@section{Lightsaber Katas}
-@(render lightsaber-katas)
+@section{Weapon Katas}
+@(render weapon-katas)
 
-@section{Villain Weapons Katas}
-@(render villain-weapon-katas)
+@section{Powerup Katas}
+@(render powerup-katas)
 
-@section{Planet Katas}
-@(render planet-katas)
+@section{Imperial Weapons Katas}
+@(render imperial-weapon-katas)
 
 @(include-section ts-camp-materials/scribblings/full-day-schedule)
 @(include-section ts-camp-materials/scribblings/one-day-materials)
 
 
 @section{Extra Katas}
+@(render planet-katas)
 @(render level-design-katas)
-@(render health-katas)
 @(render boost-katas)
 @(render shield-katas)
-@(render force-field-katas)
 @(render lava-pit-katas)
 @(render spike-mine-katas)
 @(render lightsaber-droid-katas)
