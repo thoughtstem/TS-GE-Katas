@@ -30,9 +30,9 @@ Fleet Spring Camp! Here you can find:
 
 @section{Skin Katas}
 
-These should be every team's first katas of the day.
+These should be every team's first katas of the day, after Intro Katas.
 
-@(render hero-katas)
+@(render custom-skin-katas)
 
 @section{Food Katas}
 @(render food-katas)

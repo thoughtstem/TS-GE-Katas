@@ -23,7 +23,7 @@
 
 (define survival-minecraft-katas
   (remap-ids
-   '(("avatar-(\\d*)" "hero-\\1")
+   '(("avatar-(\\d*)" "custom-skin-\\1")
      ("enemy-(\\d*)" "mob-\\1")
      ("coin-(\\d*)" "ore-\\1")
      ("npc-(\\d*)" "entity-\\1")
@@ -33,7 +33,7 @@
 
 (define-sub-collections survival-minecraft-katas
   hello-world-katas
-  hero-katas
+  custom-skin-katas
   food-katas
   ore-katas
   mob-katas
