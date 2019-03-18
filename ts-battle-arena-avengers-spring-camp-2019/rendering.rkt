@@ -10,7 +10,7 @@
   (kata-collection->scribble
    #:befores (list kata->title
                    kata->dollar-icons
-                   kata->sticker-icon
+                   ;kata->sticker-icon
                    kata->tip)
    kc))
 

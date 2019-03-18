@@ -13,7 +13,7 @@
 ;The main thing these "proto katas" are missing
 ;  is a clear stimulus.  (The response is simply "write the code")
 ;Here we'll craft the stimuli, using the langauge that's appropriate
-(define battle-arena-proto-katas
+(define battlearena-fortnite-katas
   (apply fill-in-tips
          (apply fill-in-tips
                 (apply fill-in-stimuli
@@ -26,14 +26,7 @@
 
 ;Katas start as examples in some language.
 ;  "Proto katas" we could call them.
-(define battlearena-fortnite-katas
-  (remap-ids
-   '(("avatar-(\\d*)" "hero-\\1")    
-     )
-   battle-arena-proto-katas
-   )
 
-  )
 
 (define-kata-collection selected-weapon-katas
   (first (kata-collection-katas sword-katas))
@@ -46,7 +39,7 @@
 
 (define-sub-collections battlearena-fortnite-katas
   hello-world-katas
-  hero-katas
+  avatar-katas
   (enemy-katas
    (not/c (curryr name-contains? "Weapon")))
   enemy-weapon-katas
@@ -54,6 +47,7 @@
   level-design-katas
   health-katas
   boost-katas
+  size-katas
   shield-katas
   force-field-katas
   armor-katas
