@@ -36,14 +36,12 @@
 
    
    'power-1
-   (read "Make a game with a custom power.")
+   (read "Make a game with an energy blast power.")
    'power-2
-   (read "Make a game with a custom power and customize the name, icon, and dart.")
+   (read "Make a game with a custom power and customize color and the damage.")
    'power-3
    (read "Make a game with a defined and customized power.")
    'power-4
-   (read "Make a game with a fully customized power.")
-   'power-5
    (read "Make a game with two custom power.")
    
    

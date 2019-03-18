@@ -52,6 +52,7 @@
   health-katas
   boost-katas
   shield-katas
+  size-katas
   force-field-katas
   droid-katas
   (armor-katas
