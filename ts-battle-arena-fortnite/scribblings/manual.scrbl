@@ -21,8 +21,8 @@ To use these katas in another collection do:
 @section{Intro Katas}
 @(render hello-world-katas)
 
-@section{Hero Katas}
-@(render hero-katas)
+@section{Avatar Katas}
+@(render avatar-katas)
 
 @section{Enemy Katas}
 @(render enemy-katas)

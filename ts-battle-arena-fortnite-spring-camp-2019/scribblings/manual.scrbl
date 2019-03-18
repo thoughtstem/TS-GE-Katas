@@ -19,8 +19,8 @@
 @(render game-jam)
 @(render hello-world-katas)
 
-@section{Hero Katas}
-@(render hero-katas)
+@section{Avatar Katas}
+@(render avatar-katas)
 
 @section{Enemy Katas}
 @(render enemy-katas)
@@ -28,23 +28,24 @@
 @section{Weapon Katas}
 @(render selected-weapon-katas)
 
-@section{Enemy Weapons Katas}
-@(render enemy-weapon-katas)
+@section{Power-Up Katas}
+@(render powerup-katas)
 
-@section{Background Katas}
-@(render background-katas)
+@section{Armor Katas}
+@(render selected-armor-katas)
+
 
 @(include-section ts-camp-materials/scribblings/full-day-schedule)
 @(include-section ts-camp-materials/scribblings/one-day-materials)
 
 
 @section{Extra Katas}
+@(render background-katas)
 @(render level-design-katas)
 @(render health-katas)
 @(render boost-katas)
-@(render shield-katas)
+@(render size-katas)
 @(render force-field-katas)
-@(render armor-katas)
 @(render lava-pit-katas)
 @(render spike-mine-katas)
 

@@ -7,5 +7,8 @@
 
 (define tips
   (list
-   ;TO-DO Add some tips here
+
+   'repeater-armor-2
+   (list "You can protect against other weapons by changing the name in " (bold "#:protects-from") "; try typing Sword.")
+   
    ))
