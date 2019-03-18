@@ -25,15 +25,15 @@ To use these katas in another collection do:
 
 @section{Hero Katas}
 
-@(render hero-katas)
+@(render rebel-katas)
 
 @section{Villain Katas}
 
-@(render villain-katas)
+@(render imperial-katas)
 
 @section{Villain Weapon Katas}
 
-@(render villain-weapon-katas)
+@(render imperial-weapon-katas)
 
 @section{Lightsaber Katas}
 

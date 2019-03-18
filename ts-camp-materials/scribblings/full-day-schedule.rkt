@@ -24,33 +24,35 @@ schedule above is expected to run.
 
 @bold[@larger{8:45am - 9:15am}]
 
-It is important to start check-in on time, but not early!
+It is important to start check-in on time, but not early! To run a
+smooth and successful check-in, each coach should take over a specific
+job in the check in process.
 
-Each Coach should have one of the following specific jobs. Jobs are
-listed below from most to least vital, so fill in the top jobs first
+AT FLEET: The Jobs for coaches to take on are listed below. Jobs are
+listed from most to least vital, so fill in the top jobs first
 if you have fewer than 5 coaches:
 
 @itemlist[#:style 'ordered
           @item[@bold{Check-in Coach}
-                "-- armed with roster and any parent handouts, check-in each student:"
+                " -- armed with roster and any parent handouts, check-in each student:"
                 @itemlist[@item{Check paperwork status, give any needed paperwork to parent}
                           @item{Ask parent to confirm authorized pick-up list}
                           @item{Give parent any handouts}
                           @item{Check student in and send into room}]]
           @item[@bold{Welcome Coach}
-                "-- as students arrive, welcome them to class:"
+                " -- as students arrive, welcome them to class:"
                 @itemlist[@item{Explain and make name tags}
                           @item{Show where lunches/bags can be set}
                           @item{If no other Welcome Coaches, take on some of the responsibilities of Welcome Coach 2 as well}]]
           @item[@bold{Welcome Coach 2}
-                "-- make a comfortable environment for students while waiting for the day to officially start:"
+                " -- make a comfortable environment for students while waiting for the day to officially start:"
                 @itemlist[@item{Encourage conversation between students}
                           @item{Notice any shy/uncomfortable students and include them}
                           @item{Small talk or games, just keep is comfortable and welcoming!}]]
           @item[@bold{Check-in Coach 2}
-                "-- assist with check in: answering parent questions, handout paperwork, etc."]
+                " -- assist with check in: answering parent questions, handout paperwork, etc."]
           @item[@bold{Welcome Coach 3}
-                "-- same as Welcome 2."]
+                " -- same as Welcome 2."]
           ]
 
 @subsection{Introduction & Teams}
@@ -302,6 +304,51 @@ good sweet-spot.
  X/5 = Y
 
  Y + (num of bonus point stickers) = TOTAL $$]
+
+
+@subsection{Market}
+
+@bold[@larger{3:30pm - 3:45pm}]
+
+Do your best to keep the market organized and yourselves sane! Some hints on how to accomplish this:
+
+@itemlist[@item{Dismiss teams one at a time to the market.}
+          @item{Do not dismiss a team until they have completed any clean up tasks you have given
+           them.}
+          @item{Give yourself enough time for market -- don't make yourself rush!}]
+
+
+@subsection{Check Out}
+
+@bold[@larger{3:45pm - 4:15pm}]
+
+Just like with check-in, splitting up what needs to be done between the coaches will keep things
+safe, sane and easy!
+
+FOR FLEET -- Recommended jobs are listed below, in order of most to least important:
+
+@itemlist[#:style 'ordered
+          @item[@bold{Dismissal Coach}
+                " -- armed with roster, check the IDs of every student pick-up:"
+                @itemlist[@item{Move down the line of cars, checking for anyone picking up a student from our camp}
+                          @item{Ask for student name, and to see ID}
+                          @item{Check ID again }
+                          @item{Check student in and send into room}]]
+          @item[@bold{Welcome Coach}
+                " -- as students arrive, welcome them to class:"
+                @itemlist[@item{Explain and make name tags}
+                          @item{Show where lunches/bags can be set}
+                          @item{If no other Welcome Coaches, take on some of the responsibilities of Welcome Coach 2 as well}]]
+          @item[@bold{Welcome Coach 2}
+                " -- make a comfortable environment for students while waiting for the day to officially start:"
+                @itemlist[@item{Encourage conversation between students}
+                          @item{Notice any shy/uncomfortable students and include them}
+                          @item{Small talk or games, just keep is comfortable and welcoming!}]]
+          @item[@bold{Check-in Coach 2}
+                " -- assist with check in: answering parent questions, handout paperwork, etc."]
+          @item[@bold{Welcome Coach 3}
+                " -- same as Welcome 2."]
+          ]
 
 
 
