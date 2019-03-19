@@ -297,14 +297,14 @@
 
 ;TODO: Rewrite to be less stringy and more rackety
 ;  Read, parse into datum?
-(define (num-expressions k)
+(define (num-expressions k s)
   (define d (response-data (kata-response k)))
 
   (if (not (expression? d))
       0
       (sub1
        (length (string-split
-                (expression-data d) "(")))))
+                (expression-data d) s)))))
 
 (define (with-expression-count f n)
   (lambda (k)
