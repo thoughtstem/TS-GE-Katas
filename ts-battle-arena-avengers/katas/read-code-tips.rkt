@@ -15,12 +15,15 @@
    (list "Other darts are " (bold "(energy-blast)") ", " (bold "(star-bit)") ", "
          (bold "(magic-orb)") ", and " (bold "(flying-hammer)") ".")
 
-   'power-2
-   (list "Other darts are " (bold "(energy-blast)") ", " (bold "(star-bit)") ", "
+   'power-1
+   (list "Other darts besides " (bold "(energy-blast)") " are " (bold "(star-bit)") ", "
          (bold "(magic-orb)") ", and " (bold "(flying-hammer)") ".")
 
    'power-3
    (list "The rarity levels are " (bold "'common") ", " (bold "'uncommon") ", " (bold "'rare") ", "
          (bold "'epic") ", " (bold "'legendary") ".")
+
+   'size-1
+   (list "Use a negative number in " (bold "scale-sprite") " to shrink your character.")
 
    ))

@@ -22,26 +22,25 @@
 @section{Hero Katas}
 @(render hero-katas)
 
+@section{Planet Design Katas}
+@(render planet-design-katas)
+
 @section{Villain Katas}
 @(render villain-katas)
 
 @section{Power Katas}
 @(render power-katas)
 
-@section{Villain Power Katas}
-@(render villain-power-katas)
+@section{Power-Up Katas}
+@(render powerup-katas)
 
-@section{Planet Design Katas}
-@(render planet-katas)
+
 
 @(include-section ts-camp-materials/scribblings/full-day-schedule)
 @(include-section ts-camp-materials/scribblings/one-day-materials)
 
 
 @section{Extra Katas}
-@(render level-design-katas)
-@(render health-katas)
-@(render boost-katas)
 @(render shield-katas)
 @(render force-field-katas)
 @(render droid-katas)

@@ -14,4 +14,16 @@
    #:in "Tell me about our Final Game Jam!"
    #:out (list "Building a BATTLE ARENA GAME."  
                "In ONE HOUR."
-               "Including: a HERO, VILLAINS, POWERS, VILLAIN POWERS, and PLANET DESIGNS.")))
+               "Including: a HERO, VILLAINS, POWERS, PLANET DESIGNS, and POWER-UPS.")))
+
+
+(define-kata-collection powerup-katas
+  (first (kata-collection-katas health-katas))
+  (first (kata-collection-katas size-katas))
+  (second (kata-collection-katas boost-katas)))
+
+(define-kata-collection planet-design-katas
+  (first (kata-collection-katas planet-katas))
+  (second (kata-collection-katas planet-katas))
+  (first (kata-collection-katas level-design-katas))
+  (second (kata-collection-katas level-design-katas)))
