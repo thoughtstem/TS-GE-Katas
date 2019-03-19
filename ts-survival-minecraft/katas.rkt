@@ -8,18 +8,21 @@
          ts-fundamentals/katas
          (prefix-in new: "./katas/read-code-stimuli.rkt")
          ts-survival/katas/read-code-stimuli
+         (prefix-in new: "./katas/read-code-tips.rkt")
          ts-survival/katas/read-code-tips)
 
 
 
 (define survival-minecraft-proto-katas
   (apply fill-in-tips
-         (apply fill-in-stimuli
-                (apply fill-in-stimuli (collapse-alts
-                                        (lang->kata-collection 'survival-minecraft))
-                       stimuli)
-                new:stimuli)
-         tips))
+         (apply fill-in-tips
+                (apply fill-in-stimuli
+                       (apply fill-in-stimuli (collapse-alts
+                                               (lang->kata-collection 'survival-minecraft))
+                              stimuli)
+                       new:stimuli)
+                tips)
+         new:tips))
 
 (define survival-minecraft-katas
   (remap-ids

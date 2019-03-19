@@ -145,21 +145,20 @@ the camp environment}. Remember:
                 about the student who wants to keep coding, that's good
                 right? Or the student who is a bit behind, and wants to spend
                 break catching up? What if they are just playing their game?
-                But really." @larger{Really.} "Please make sure all students
+                But really. " @larger{Really.} " Please make sure all students
                 are completely off the computers during all breaks. Among
                 other things, time away from the computer allows for students
                 to get back in touch with those annoying physical bodies we
                 have -- and sometimes it's not until they step away
                 from the screen that they realize 'Oh! I'm hungry/thirsty/
-                sore/need to go to the bathroom!'"
+                sore/need to go to the bathroom!'" 
                 @bold{This is a ThoughtSTEM Camp policy and needs to be followed!}]
           @item[@bold{Keep it sane and safe.} " Coaches can (and should!) give the
                 students some space during these breaks, but must stay attentive
                 for student safety. There shouldn't be running or throwing things. 
                 Coaches should also be mindful of conversations -- keeping an ear
                 out for topics that could upset or seem inappropriate to other
-                students. Coaches should be aware of what is happening in their
-                camp at all times, even breaks. Be especially mindful of students
+                students. Be especially mindful of students
                 using their own devices (phones and computers) during breaks. While
                 not strictly disallowed, that privilege can be removed at anytime."]
           @item[@bold{Be mindful of ALL students.} " Just like during the rest of
@@ -331,25 +330,27 @@ FOR FLEET -- Recommended jobs are listed below, in order of most to least import
           @item[@bold{Dismissal Coach}
                 " -- armed with roster, check the IDs of every student pick-up:"
                 @itemlist[@item{Move down the line of cars, checking for anyone picking up a student from our camp}
+                          @item{(Sometimes people will park and walk up to you as well)}
                           @item{Ask for student name, and to see ID}
-                          @item{Check ID again }
-                          @item{Check student in and send into room}]]
-          @item[@bold{Welcome Coach}
-                " -- as students arrive, welcome them to class:"
-                @itemlist[@item{Explain and make name tags}
-                          @item{Show where lunches/bags can be set}
-                          @item{If no other Welcome Coaches, take on some of the responsibilities of Welcome Coach 2 as well}]]
-          @item[@bold{Welcome Coach 2}
-                " -- make a comfortable environment for students while waiting for the day to officially start:"
-                @itemlist[@item{Encourage conversation between students}
-                          @item{Notice any shy/uncomfortable students and include them}
-                          @item{Small talk or games, just keep is comfortable and welcoming!}]]
-          @item[@bold{Check-in Coach 2}
-                " -- assist with check in: answering parent questions, handout paperwork, etc."]
-          @item[@bold{Welcome Coach 3}
-                " -- same as Welcome 2."]
+                          @item{Check ID against approved pick up list}
+                          @item{If name is on list -- go get student or send Runner Coach}
+                          @item{If name is not on list -- check in with Andia and  either call parent yourself or Fleet will call}]]
+          @item[@bold{Classroom Coach}
+                " -- stay in the room with students:"
+                @itemlist[@item{Keep students safe and happy!}
+                          @item{Help Dismissal or Runner Coach get students have a pickup waiting}
+                          @item{If possible, start minor tidying and clean up.}]]
+          @item[@bold{Runner Coach}
+                " -- bring students from classroom to their waiting pickup:"
+                @itemlist[@item{Wait for the OK from the Dismissal Coach}
+                          @item{Make sure students get safely to their car}]]
+          @item[@bold{Runner Coach 2}
+                " -- same as Runner Coach."]
+          @item[@bold{Classroom Coach 2}
+                " -- same as Classroom Coach."]
           ]
 
+If any students are left at 4:15, let the monitors know through Slack, and Andia at Fleet.
 
 
 

@@ -12,9 +12,12 @@
    ;(list "tip here and it " (bold "can") " include formatting"))
 
    'avatar-3
-   (list "The default speed is " (bold "10") ".")
+   #f
 
    'avatar-4
+   (list "The default speed is " (bold "10") ".")
+
+   'avatar-5
    (list "The default key-mode is " (bold "'arrow-keys") ".")
 
    'food-1
