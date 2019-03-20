@@ -51,14 +51,8 @@ These should be every team's first katas of the day, after Intro Katas.
 @(include-section ts-camp-materials/scribblings/one-day-materials)
 
 @section{Extra Katas}
-
-@subsection{Entity Katas}
 @(render entity-katas)
-
-@subsection{Biome Katas}
 @(render biome-katas)
-
-@subsection{Sky Katas}
 @(render sky-katas)
 
 

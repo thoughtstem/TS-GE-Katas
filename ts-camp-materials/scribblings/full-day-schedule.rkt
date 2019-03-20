@@ -42,6 +42,7 @@ if you have fewer than 5 coaches:
           @item[@bold{Welcome Coach}
                 " -- as students arrive, welcome them to class:"
                 @itemlist[@item{Explain and make name tags}
+                          @item{Be sure to check photo permission for each student!}
                           @item{Show where lunches/bags can be set}
                           @item{If no other Welcome Coaches, take on some of the responsibilities of Welcome Coach 2 as well}]]
           @item[@bold{Welcome Coach 2}
@@ -67,7 +68,7 @@ if you have fewer than 5 coaches:
 
 @itemlist[@item{GAME JAM (briefly, more detail later)}
           @item{What kind of game you are making today}
-          @item{Katas, health bars (name tags), and table rotation}
+          @item{Katas, kata cards (name tags), and table rotation}
           @item{ThoughtSTEM dollars and market}
           @item{Core Values}]
 
@@ -117,7 +118,7 @@ for students (different coaches have different teaching styles, time to
 stand and stretch, change in space helps wake up tired brains...) as well
 as for coaches (taking turns with more challenging students, students
 keep changing computers and can't get attached to code, coaches can focus
-on knowing on set of katas).
+on knowing one set of katas).
 
 @bold{No minimum goal} -- don't stress about getting through a certain
 number of katas with any given team. It is more important that the students
@@ -126,7 +127,7 @@ actually earn the katas than get through any specific number of katas.
 @bold{Kata cards} -- For every kata earned, students receive
 a new hole punch in their kata card. Once they have filled their card,
 students can get a ThoughtSTEM Dollar bonus! Then they keep that card,
-are start working on a new one.
+and start working on a new one.
 
 @bold{Stick to 30 min max!} -- make sure you have time for non-computer
 breaks and, of course, GAME JAM!
@@ -150,8 +151,8 @@ the camp environment}. Remember:
                 other things, time away from the computer allows for students
                 to get back in touch with those annoying physical bodies we
                 have -- and sometimes it's not until they step away
-                from the screen that they realize 'Oh! I'm hungry/thirsty/
-                sore/need to go to the bathroom!'" 
+                from the screen that they realize 'Oh! I'm hungry/thirsty/sore/need
+                to go to the bathroom!' " 
                 @bold{This is a ThoughtSTEM Camp policy and needs to be followed!}]
           @item[@bold{Keep it sane and safe.} " Coaches can (and should!) give the
                 students some space during these breaks, but must stay attentive

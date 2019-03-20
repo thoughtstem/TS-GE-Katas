@@ -11,7 +11,15 @@
 @title{Fleet Camp Spring 2019 -- Day 1}
 @larger[@larger{Coding for Pokemon Fans}]
 
- 
+This is your resource for your @bold{Coding for Pokemon Fans}
+Fleet Spring Camp! Here you can find:
+
+@itemlist[@item{The 5 main kata topics for the day}
+          @item{Extra katas}
+          @item{Day's schedule with details, hints and reccomendations}
+          @item{The list of materials needed to run this camp}
+          @item{Assets to use in katas and game jam}]
+
 @table-of-contents[]
 
 @section{Intro Katas}

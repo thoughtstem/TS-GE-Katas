@@ -11,7 +11,15 @@
 @title{Fleet Camp Spring 2019 -- Day 5}
 @larger[@larger{Coding for Fortnite Fans}]
 
- 
+This is your resource for your @bold{Coding for Fortnite Fans}
+Fleet Spring Camp! Here you can find:
+
+@itemlist[@item{The 5 main kata topics for the day}
+          @item{Extra katas}
+          @item{Day's schedule with details, hints and reccomendations}
+          @item{The list of materials needed to run this camp}
+          @item{Assets to use in katas and game jam}]
+
 @table-of-contents[]
 
 @section{Intro Katas}
@@ -42,8 +50,8 @@
 @section{Extra Katas}
 @(render background-katas)
 @(render level-design-katas)
-@(render health-katas)
-@(render boost-katas)
+@;(render health-katas)
+@;(render boost-katas)
 @(render size-katas)
 @(render force-field-katas)
 @(render lava-pit-katas)

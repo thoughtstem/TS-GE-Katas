@@ -34,7 +34,7 @@
 
 (define (kata->difficulty k)
   (min 10
-       (max 1 (floor (/ (num-expressions k) 3)))))
+       (max 1 (floor (/ (num-expressions k "(") 3)))))
 
 
 (define (kata->dollar-icons k)
