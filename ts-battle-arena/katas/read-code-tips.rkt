@@ -165,4 +165,32 @@
    (list "With a 3x3 bg, the posn x value can be between 0 and 480 and the y between 0 and 360."
          " Hue is any value between 0 and 360.")
 
+   'health-1 ;ASP
+   (list "You can also try " (bold "set-health-to") ".")
+
+   'health-2 
+   (list "You can also try " (bold "change-health-by") ".")
+   
+   'shield-1
+   (list "You can also try " (bold "set-shield-to") ".")
+   
+   'shield-2 ;ASP
+   (list "You can also try " (bold "change-shield-by") ".")
+
+   'boost-1 ;ASP
+   (list "You can also try " (bold "set-damage-to") " and " (bold "multiply-damage-by") ".")
+
+   'boost-2 ;ASP
+   (list "You can also try " (bold "set-speed-to") " and " (bold "change-speed-by") "."
+         " The default movement speed is 10.")
+
+   'force-field-1
+   (list "The basic force-field will block enemy projectiles. It will also block your own projectiles.")
+   
+   'force-field-2 ;ASP
+   (list "The default " (bold "duration") " is " (bold "500") ".")
+
+   'force-field-3 ;ASP
+   (list "Setting #:allow-friendly-dart? to " (bold "#t") " will allow you to shoot through your force-field.")
+
    ))

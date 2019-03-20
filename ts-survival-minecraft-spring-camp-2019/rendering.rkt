@@ -3,26 +3,42 @@
 (provide render)
 
 (require ts-kata-util/katas/rendering
-         ts-kata-util/katas/main)
+         ts-kata-util/katas/main
+         scribble/core)
 
-;This is where you define special ways that katas render
-;  within this collection only -- i.e. if this collection
-;  has some kind of special gamification scheme, or special
-;  badges, or something like that.
-;If there are no special renderings, don't add anything to this file.
-(define (render #:level (level subsection) kc)
+(define (render kc);#:level (level subsection) kc)
   (kata-collection->scribble
-   #:befores (list (curry kata->title level)
+   #:befores (list kata->title
+                   kata->dollar-icons
                    kata->tip)
    kc))
 
 (require (only-in scribble/manual image para subsection))
 
-(define (kata->title level k)
-  (level (~a (kata-name k) " Kata")))
+(define dollar-icon
+  (image "scribblings/img/ts-dollar.png"
+         #:scale .15))
+
+(define (kata->dollar-icons k)
+  (para dollar-icon))
+
+(define (kata->difficulty k)
+  (min 10
+       (max 1 (floor (/ (+ (num-expressions k ":")
+                             (* (num-expressions k "(") 2)) 5)))))
+
+(define (kata->title k)
+  (subsection (~a (kata-name k) " "
+                  "Kata "
+                  "(difficulty = " (kata->difficulty k) ")")))
+
+(define chest-sprite
+  (image "scribblings/img/chest.png"))
 
 (define (kata->tip k)
   (define tip (kata-tip k))
   (if tip
-      (side-note "Tip" tip)
+      (if ((listof block?) tip)
+          tip
+          (side-note #:icon chest-sprite " Tip" tip))
       #f))

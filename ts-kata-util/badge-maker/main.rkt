@@ -6,8 +6,14 @@
          survival-badges
          battle-arena-badges)
 
-(require "./cluster-demos.rkt")
+(require "./cluster-demos.rkt" "./image-dir-loader.rkt" racket/runtime-path)
 (require "./util.rkt")
+
+(define-runtime-path images "images")
+(define (local-bitmap s)
+  (bitmap (~a (path->string images) "/" s)))
+
+(def-icons "./images" local-bitmap)
 
 (define (tri-badge a b c #:bgs (bgs pallet3))
   (sequence2 #:fgs (list "black")
@@ -34,14 +40,19 @@
   (triad
    (two-tone-badge (double-swords-icon 1 "black") pallet3-red pallet3-yellow)
    (two-tone-badge (mace-icon 1 "black") pallet3-red pallet3-blue)
-   (two-tone-badge (coins-icon 1 "black") pallet3-green pallet3-blue)
-   ))
+   (two-tone-badge (coins-icon 1 "black") pallet3-green pallet3-blue)))
+
+(define k2-badges
+  (triad
+   (two-tone-badge play pallet3-red pallet3-yellow)
+   (two-tone-badge thor pallet3-red pallet3-blue)
+   (two-tone-badge superhero pallet3-green pallet3-blue)))
 
 
 (module+ test
   survival-badges
   battle-arena-badges
-
+  k2-badges
 
   #;(tri-badge  (list pallet3-red pallet3-yellow
                     pallet3-blue pallet3-green)

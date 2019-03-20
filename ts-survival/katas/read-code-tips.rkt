@@ -23,6 +23,9 @@
    'food-2
    (list "By default, custom-food will heal by " (bold "10") ".")
 
+   'food-5
+   (list "The default starvation rate is " (bold "50" "."))
+
    'enemy-2
    (list "Without the " (bold "curry") ", the game will have 10 of the same enemy.
           With curry, the game will have 10 different enemies.")
@@ -52,11 +55,34 @@
    (list "See other bg-image options in the " (bold "assets library") ".")
 
    'bg-3
-   (list "start-tile can take a number between " (bold "0") " (the default) and "
-         (bold "9") ".")
+   (list "Rows and columns default to " (bold "3x3") ".")
+
+   'bg-4
+   (list "Start-tile can be between " (bold "0") " (the default) and "
+         (bold "total-tiles minus 1") ". For example, a 2x2 grid has 4 tiles, so the last tile is tile 3.")
 
    'npc-3
    (list "All options for #:mode are: " (bold "'follow") ", " (bold "'wander")
          ", " (bold "'pace") " and " (bold "'still") ".")
+
+   'level-design-1
+   (list "This will fill the world with two types of trees.")
+
+   'level-design-2
+   (list "Setting hd? #t will use more detailed assets but it will take longer to load.")
+
+   'level-design-3
+   (list "make-world-objects works best with houses or trees and must only take two types. See the "
+         (bold "Assets Library") " for more options.")
+
+   'level-design-4
+   (list "With a 3x3 bg, the posn x value can be between 0 and 480 and the y between 0 and 360."
+         " Hue is any value between 0 and 360.")
+
+   'weapon-crafter-2
+   (list "You can also try: " (bold "spear, fire-magic, ice-magic, sword-magic, ring-of-fire, ring-of-ice, or ring-of-blades") ".")
+
+   'weapon-crafter-3
+   (list "The default speed for " (bold "fire-magic") " is " (bold "3") ".")
    
    ))

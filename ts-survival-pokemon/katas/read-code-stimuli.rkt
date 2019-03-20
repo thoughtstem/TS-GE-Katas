@@ -61,12 +61,13 @@
    'crafter-1
    (read "Make a game with a Pokemon and a basic crafter.")
    'crafter-2
-   (read "Make a game with a Pokemon, carrots, and a crafter that makes carrot stew from carrots.")
+   (read "Make a game with a Pokemon, carrots, and a crafter that builds carrot stew from carrots.")
    'crafter-3
-   (read "Make a game with a Pokemon, fish, and a crafter that makes fish stew that heals you by 50.")
+   (read "Make a game with a Pokemon, fish, and a crafter that builds fish stew that heals you by 50.")
    'crafter-4
-   (read "Make a game with a Pokemon, carrots, fish, and a crafter on tile 2 (posn 200 200) that makes both carrot-stew and fish-stew.")
-
+   (read "Make a game with a Pokemon, carrots, fish, and a builds on tile 2 (posn 200 200) that makes both carrot-stew and fish-stew.")
+   'weapon-crafter-1
+   (read "Make a game with a Pokemon and a crafter that builds a fire-blast attack.")
 
 
    'npc-1

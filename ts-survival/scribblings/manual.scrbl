@@ -29,8 +29,9 @@ They can be browsed in various ways using the table of contents below.
                enemy-katas
                coin-katas
                crafter-katas
+               weapon-crafter-katas
                sky-katas
-               starvation-rate-katas
+               level-design-katas
                bg-katas
                npc-katas)
 

@@ -24,15 +24,14 @@ They can be browsed in various ways using the table of contents below.
 @(render hello-world-katas)
 
 @(sections-for kata-section
-               hero-katas
+               custom-skin-katas
                food-katas
                mob-katas
                ore-katas
                crafter-katas
                entity-katas
                biome-katas
-               sky-katas
-               starvation-rate-katas)
+               sky-katas)
 
 @section{All Katas}
 

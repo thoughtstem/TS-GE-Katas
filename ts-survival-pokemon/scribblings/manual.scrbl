@@ -9,7 +9,7 @@
 
 @title{Survival Pokemon}
 
-These @(~a (length (kata-collection-katas katas))) katas pertain to @racket[survival-pokemon].
+These @(~a (length (kata-collection-katas survival-pokemon-katas))) katas pertain to @racket[survival-pokemon].
 They can be browsed in various ways using the table of contents below.
 
 
@@ -29,7 +29,7 @@ They can be browsed in various ways using the table of contents below.
                crafter-katas
                friend-katas
                sky-katas
-               town-katas
-               starvation-rate-katas)
+               level-design-katas
+               town-katas)
 
 @(include-section survival-pokemon/scribblings/assets-library)

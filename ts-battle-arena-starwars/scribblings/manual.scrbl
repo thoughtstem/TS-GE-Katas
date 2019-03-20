@@ -9,7 +9,7 @@
 
 @title{Battle Arena Star Wars}
 
-These @(~a (length (kata-collection-katas katas))) katas pertain to @racket[battlearena-starwars].
+These @(~a (length (kata-collection-katas battlearena-starwars-katas))) katas pertain to @racket[battlearena-starwars].
 They can be browsed in various ways using the table of contents below.
 
 To use these katas in another collection do:
@@ -25,15 +25,15 @@ To use these katas in another collection do:
 
 @section{Hero Katas}
 
-@(render hero-katas)
+@(render rebel-katas)
 
 @section{Villain Katas}
 
-@(render villain-katas)
+@(render imperial-katas)
 
 @section{Villain Weapon Katas}
 
-@(render villain-weapon-katas)
+@(render imperial-weapon-katas)
 
 @section{Lightsaber Katas}
 
