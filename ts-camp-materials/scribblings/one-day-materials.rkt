@@ -2,10 +2,12 @@
 
 @(require racket/runtime-path)
 
-@(define-runtime-path kata-card "img/kata-card.png")
+@(define-runtime-path kata-card            "img/kata-card.png")
 @(define-runtime-path printable-kata-cards "img/printable-kata-cards.pdf")
-@(define-runtime-path daily-team-page "img/daily-team-page.jpeg")
-@(define-runtime-path leaderboard "img/leaderboard.jpeg")
+@(define-runtime-path daily-team-page      "img/daily-team-page.jpeg")
+@(define-runtime-path leaderboard          "img/leaderboard.jpeg")
+@(define-runtime-path leaderboard-marker1  "img/leaderboard-marker-front.jpg")
+@(define-runtime-path leaderboard-marker2  "img/leaderboard-marker-back.jpg")
 
 @title{Full Camp Day Materials}
 
@@ -30,16 +32,16 @@ Print 9 per page. Printable image:
 
 @(image printable-kata-cards)
 
-@section{Daily Team Sheet}
+@;section{Daily Team Sheet}
 
-@bold[@larger{# = 1 per day}]
+@;bold[@larger{# = 1 per day}]
 
-Made from butcher paper; the sheet has the date, day's topic and
-space for 5 team names and up to 6 health bars under each team name.
+@;Made from butcher paper; the sheet has the date, day's topic and
+@;space for 5 team names and up to 6 health bars under each team name.
 
-Example:
+@;Example:
 
-@(image daily-team-page #:scale .3)
+@;(image daily-team-page #:scale .3)
 
 @section{Week Leaderboard}
 
@@ -51,6 +53,20 @@ topics, as well as a place to put the total camp score.
 Example:
 
 @(image leaderboard #:scale .5)
+
+@section{Leaderboard Marker}
+
+@bold[@larger{# = 1 per session of camps}]
+
+Something to mark the current point leader across all camps. For
+instance, a crown cut out from paper taped to a clothes pin.
+
+Example:
+
+@(image leaderboard-marker1 #:scale .25)
+@(image leaderboard-marker2 #:scale .25)
+
+
 
 @section{Tech}
 

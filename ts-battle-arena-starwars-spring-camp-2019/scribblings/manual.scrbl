@@ -36,7 +36,7 @@ Fleet Spring Camp! Here you can find:
 @section{Weapon Katas}
 @(render weapon-katas)
 
-@section{Powerup Katas}
+@section{Power-Up Katas}
 @(render powerup-katas)
 
 @section{Imperial Weapons Katas}
