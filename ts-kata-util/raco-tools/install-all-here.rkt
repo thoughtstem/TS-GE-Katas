@@ -21,7 +21,7 @@
 (displayln (~a "Sorted by dependencies: " sorted-collections))
 
 (define (install s) 
-  (curry pkg-install-command #:no-setup (no-docs) #:link #t #:update-deps #t #:deps 'search-auto #:skip-installed #t)
+  (pkg-install-command #:no-setup (no-docs) #:link #t #:update-deps #t #:deps 'search-auto #:skip-installed #t s)
 
   s)
 
