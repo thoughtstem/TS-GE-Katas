@@ -7,9 +7,13 @@
           (except-in racket read do)
           )
 
-@title{Star Wars Battle Arena}
+@title{Battle Arena Star Wars}
 
-These @(~a (length (kata-collection-katas katas))) katas pertain to @racket[battle-arena-starwars].
+<<<<<<< HEAD
+These @(~a (length (kata-collection-katas battle-arena-starwars-katas))) katas pertain to @racket[battle-arena-starwars].
+=======
+These @(~a (length (kata-collection-katas katas))) katas pertain to @racket[battlearena-starwars].
+>>>>>>> 2c30402a471207df0e0be048f803f412cd18e7a8
 They can be browsed in various ways using the table of contents below.
 
 To use these katas in another collection do:
@@ -18,6 +22,10 @@ To use these katas in another collection do:
 
 
 @table-of-contents[]
+
+@section{Intro Katas}
+
+@(render hello-world-katas)
 
 @section{Hero Katas}
 
@@ -83,4 +91,4 @@ To use these katas in another collection do:
 
 @(render spike-mine-katas)
 
-@(include-section battle-arena-starwars/scribblings/assets-library)
+@(include-section battlearena-starwars/scribblings/assets-library)

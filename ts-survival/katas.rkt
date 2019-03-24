@@ -27,9 +27,11 @@
   crafter-katas
   weapon-crafter-katas
   sky-katas
+  level-design-katas
   starvation-rate-katas
   bg-katas
-  level-design-katas
   npc-katas
   game-jam-katas)
+
+
 

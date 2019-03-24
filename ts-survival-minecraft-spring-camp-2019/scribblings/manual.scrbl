@@ -28,11 +28,11 @@ Fleet Spring Camp! Here you can find:
 @(render game-jam)
 @(render hello-world-katas)
 
-@section{Hero Katas}
+@section{Skin Katas}
 
-These should be every team's first katas of the day.
+These should be every team's first katas of the day, after Intro Katas.
 
-@(render hero-katas)
+@(render custom-skin-katas)
 
 @section{Food Katas}
 @(render food-katas)
@@ -51,18 +51,9 @@ These should be every team's first katas of the day.
 @(include-section ts-camp-materials/scribblings/one-day-materials)
 
 @section{Extra Katas}
-
-@subsection{Entity Katas}
 @(render entity-katas)
-
-@subsection{Biome Katas}
 @(render biome-katas)
-
-@subsection{Sky Katas}
 @(render sky-katas)
-
-@subsection{Starvation Rate Katas}
-@(render starvation-rate-katas)
 
 
 @(include-section survival-minecraft/scribblings/assets-library)

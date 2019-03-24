@@ -35,6 +35,10 @@
    (list "By adding a recipe, the crafter now requires an item in the avatar's
          backpack to build something.")
 
+   'weapon-crafter-1
+   (list "Other attacks to try include: " (bold "aqua-jet") ", " (bold "fire-spin") ", "
+         (bold "waterfall") ", or " (bold "custom-attack") ".")
+
    'sky-1
    (list "By default, the length-of-day will be " (bold "2400") ".")
 

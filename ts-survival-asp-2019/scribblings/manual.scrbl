@@ -30,9 +30,6 @@ This is for students and coaches participating in their local scholastic game ja
 
 @section{Extra Katas}
 
-@subsection{Starvation Rate Katas}
-@(render starvation-rate-katas)
-
 @subsection{BG Katas}
 @(render bg-katas)
 

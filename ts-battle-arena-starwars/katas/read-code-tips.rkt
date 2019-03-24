@@ -7,8 +7,5 @@
 
 (define tips
   (list
-   
-   'villain-2
-   (list "Also try " (bold "'medium") " or " (bold "'hard"))
 
    ))

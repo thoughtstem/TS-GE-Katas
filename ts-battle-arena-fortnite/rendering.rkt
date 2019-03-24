@@ -5,7 +5,8 @@
 
 (require ts-kata-util/katas/rendering
          ts-kata-util/katas/main
-         scribble/manual)
+         scribble/manual
+         scribble/core)
 
 ;This is where you define special ways that katas render
 ;  within this collection only -- i.e. if this collection
@@ -29,7 +30,9 @@
 (define (kata->tip k)
   (define tip (kata-tip k))
   (if tip
-      (side-note #:icon constructor-sprite " Tip" tip)
+      (if ((listof block?) tip)
+          tip
+          (side-note* #:icon constructor-sprite " Tip" tip))
       #f))
 
 (define (kata-section kind collection)

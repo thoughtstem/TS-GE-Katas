@@ -297,14 +297,14 @@
 
 ;TODO: Rewrite to be less stringy and more rackety
 ;  Read, parse into datum?
-(define (num-expressions k)
+(define (num-expressions k s)
   (define d (response-data (kata-response k)))
 
   (if (not (expression? d))
       0
       (sub1
        (length (string-split
-                (expression-data d) "(")))))
+                (expression-data d) s)))))
 
 (define (with-expression-count f n)
   (lambda (k)
@@ -430,7 +430,7 @@
      #'(begin
          (provide category-name)
          (define category-name
-           (sort-katas-by-difficulty
+           ;(sort-katas-by-difficulty
              (filter-collection
                (and/c
                  (curryr name-contains? (regexp-replace #rx" Katas"
@@ -438,19 +438,23 @@
                                                         ""
                                                         ))
                  stipulation ...)
-               base))))]
+               base)
+             ;)
+           ))]
     [(_ base category-name) 
      #'(begin
          (provide category-name)
          (define category-name
-           (sort-katas-by-difficulty
+           ;(sort-katas-by-difficulty
              (filter-collection
                (and/c
                  (curryr name-contains? (regexp-replace #rx" Katas"
                                                         (kata-id->kata-name 'category-name)
                                                         ""
                                                         )))
-               base))))]))
+               base)
+             ;)
+           ))]))
 
 (define-syntax-rule (define-sub-collections base name ...)
   (begin

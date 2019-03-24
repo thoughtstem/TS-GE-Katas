@@ -24,7 +24,7 @@
 (require (only-in scribble/manual image para subsection))
 
 (define dollar-icon
-  (image "scribblings/imgs/ts-dollar.png"
+  (image "scribblings/img/ts-dollar.png"
          #:scale .15))
 
 (define (kata->num-dollars k)
@@ -34,7 +34,7 @@
 
 (define (kata->difficulty k)
   (min 10
-       (max 1 (floor (/ (num-expressions k) 3)))))
+       (max 1 (floor (/ (num-expressions k "(") 3)))))
 
 
 (define (kata->dollar-icons k)

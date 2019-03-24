@@ -4,7 +4,7 @@
 
 (define deps '(
   "ts-kata-util"
+  "ts-battle-arena"
   "ts-battle-arena-starwars"
-  ;Your deps here
   ))
 

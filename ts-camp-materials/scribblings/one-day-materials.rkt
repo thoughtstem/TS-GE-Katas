@@ -2,60 +2,46 @@
 
 @(require racket/runtime-path)
 
-@(define-runtime-path mini-health-bar "img/mini-health-bar.png")
-@(define-runtime-path printable-mini-health-bars "img/printable-mini-health-bars.png")
-@(define-runtime-path game-jam-health-bar "img/game-jam-health-bar.png")
-@(define-runtime-path printable-game-jam-health-bar "img/printable-game-jam-health-bars.png")
-@(define-runtime-path daily-team-page "img/daily-team-page.jpeg")
-@(define-runtime-path leaderboard "img/leaderboard.jpeg")
+@(define-runtime-path kata-card            "img/kata-card.png")
+@(define-runtime-path printable-kata-cards "img/printable-kata-cards.pdf")
+@(define-runtime-path daily-team-page      "img/daily-team-page.jpeg")
+@(define-runtime-path leaderboard          "img/leaderboard.jpeg")
+@(define-runtime-path leaderboard-marker1  "img/leaderboard-marker-front.jpg")
+@(define-runtime-path leaderboard-marker2  "img/leaderboard-marker-back.jpg")
 
-@title{One Day Camp Materials}
+@title{Full Camp Day Materials}
 
 All the materials needed to run a successful full-day, one day camp!
 
-@section{Name Tags/Mini Health Bars}
+@section{Kata Cards}
 
 @bold[@larger{# = 1 per student}]
 
 Each student receives one of the following at the very beginning
 of the day.
 
-Write their name (or have the student write it!) on the back,
-and slide it into a name tag holder with lanyard.
+Write their name and note their photo-permission status by either
+crossing out the camera icon or leaving it be!
+Give to student to slide it into a name tag holder with lanyard.
 
 Sample:
 
-@(image mini-health-bar #:scale .5)
+@(image kata-card #:scale .5)
 
 Print 9 per page. Printable image:
 
-@(image printable-mini-health-bars)
+@(image printable-kata-cards)
 
-@section{Game Jam Health Bar}
+@;section{Daily Team Sheet}
 
-@bold[@larger{# = 1 per student}]
+@;bold[@larger{# = 1 per day}]
 
-Each student uses one of these during game jam to keep track of
-their progress during the jam.
+@;Made from butcher paper; the sheet has the date, day's topic and
+@;space for 5 team names and up to 6 health bars under each team name.
 
-Sample:
+@;Example:
 
-@(image game-jam-health-bar #:scale .25)
-
-Print 2 per page. Printable image:
-
-@(image printable-game-jam-health-bar)
-
-@section{Daily Team Sheet}
-
-@bold[@larger{# = 1 per day}]
-
-Made from butcher paper; the sheet has the date, day's topic and
-space fo 5 team names and up to 6 health bars under each team name.
-
-Example:
-
-@(image daily-team-page #:scale .3)
+@;(image daily-team-page #:scale .3)
 
 @section{Week Leaderboard}
 
@@ -67,6 +53,20 @@ topics, as well as a place to put the total camp score.
 Example:
 
 @(image leaderboard #:scale .5)
+
+@section{Leaderboard Marker}
+
+@bold[@larger{# = 1 per session of camps}]
+
+Something to mark the current point leader across all camps. For
+instance, a crown cut out from paper taped to a clothes pin.
+
+Example:
+
+@(image leaderboard-marker1 #:scale .25)
+@(image leaderboard-marker2 #:scale .25)
+
+
 
 @section{Tech}
 
@@ -84,13 +84,15 @@ Don't forget to pack these too!
 
 @itemlist[@item{Market}
           @item{ThoughtSTEM Dollars}
-          @item{Stickers (hearts and bonus)}
+          @item{Stickers for bonus points}
+          @item{Index cards}
           @item{Markers}
           @item{5 timers}]
 
 The following items might also come in handy:
           
 @itemlist[@item{Extra tables}
+          @item{Scrap paper}
           @item{Combination lock for computer locker}
           @item{Clipboards}
           @item{Projector}]
