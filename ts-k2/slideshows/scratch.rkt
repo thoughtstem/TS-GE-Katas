@@ -44,7 +44,7 @@
   (t "Okay, begin!")
   (t "I'll start the timer...")
   (t "Rule 1: Change anything")
-  (t "Rule 2: I won't tell you want to do.")
+  (t "Rule 2: I won't tell you what to do.")
   (t "Rule 3: No talking (except to your partner)."))
 
 

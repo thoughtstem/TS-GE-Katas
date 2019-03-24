@@ -2,6 +2,7 @@
 
 @(require ts-kata-util/katas/main
           ts-kata-util/katas/rendering
+          ts-kata-util/badge-maker/main
           "../katas.rkt"
           "../rendering.rkt"
           (except-in racket read do))
@@ -9,6 +10,8 @@
 @title{K-2 Superhero Coders!}
 
 In this class, students will learn to code video games with their favorite super heroes!
+
+@k2-superhero-badges
 
 This page roughly breaks the katas into 10 sections.  Each section roughly corresponds to a day of class.
 
