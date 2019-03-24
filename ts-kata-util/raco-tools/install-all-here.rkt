@@ -27,11 +27,13 @@
 
 (define (maybe-setup s)
   (when (no-docs)
-          (setup #:collections (list (list s))
+          (begin 
+            (displayln "DOING A SETUP WITHOUT DOCS")
+            (setup #:collections (list (list s))
                    ;Some things to make it faster...
                    #:jobs (processor-count)
                    #:make-docs? #f
-                   #:make-doc-index? #f)))
+                   #:make-doc-index? #f))))
 
 (map (compose maybe-setup install ~a)
      sorted-collections)
