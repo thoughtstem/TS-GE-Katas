@@ -32,6 +32,8 @@ cd TS-Languages
 raco install-all-here
 ```
 
+Or use `raco install-all-here --no-docs` for faster installations.
+
 Now, with langs installed, you can install the kata collections
 
 ```

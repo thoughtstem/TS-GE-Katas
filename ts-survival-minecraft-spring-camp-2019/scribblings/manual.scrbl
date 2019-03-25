@@ -55,5 +55,5 @@ These should be every team's first katas of the day, after Intro Katas.
 @(render biome-katas)
 @(render sky-katas)
 
-
+@(include-section ts-camp-materials/scribblings/game-jam-resources)
 @(include-section survival-minecraft/scribblings/assets-library)

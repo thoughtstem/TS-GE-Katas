@@ -52,4 +52,5 @@ Fleet Spring Camp! Here you can find:
 @(render level-design-katas)
 @(render town-katas)
 
+@(include-section ts-camp-materials/scribblings/game-jam-resources)
 @(include-section survival-pokemon/scribblings/assets-library)

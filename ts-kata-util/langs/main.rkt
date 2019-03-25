@@ -5,7 +5,11 @@
          module->example-ids
 
          get-example-syntax
-         fix-tabs)
+         fix-tabs
+
+         GAME-JAM-VID)
+
+(require scribble/base)
 
 
 
@@ -148,6 +152,10 @@
         (curryr string-split ":")
         ~a)
        example-ids))
+
+(define GAME-JAM-VID
+  (hyperlink "https://youtu.be/rfH7itXF0BE"
+             (bold "Game Jam Intro Video")))
 
 
 

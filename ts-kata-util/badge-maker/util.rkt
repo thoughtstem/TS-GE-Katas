@@ -7,6 +7,14 @@
          pallet3-red
          pallet3-blue
          pallet3-green
+
+         pallet2-red
+         pallet2-orange
+         pallet2-yellow
+         pallet2-green
+         pallet2-blue
+         pallet2-purple
+
          bronze/silver/gold
          icons
          normal-badge
@@ -60,8 +68,19 @@
 (define pallet2
   (list
    "red"
-   "green"
-   "cyan"))
+   "orange"
+   "yellow"
+   "green" 
+   "blue" 
+   "purple" 
+   ))
+
+(define pallet2-red    (list-ref pallet2 0))
+(define pallet2-orange (list-ref pallet2 1))
+(define pallet2-yellow (list-ref pallet2 2))
+(define pallet2-green  (list-ref pallet2 3))
+(define pallet2-blue   (list-ref pallet2 4))
+(define pallet2-purple (list-ref pallet2 5))
 
 (define pallet3
   (list

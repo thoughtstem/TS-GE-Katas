@@ -19,7 +19,9 @@
 
          define/contract/doc
 
-         test-all-examples-as-games)
+         test-all-examples-as-games
+
+         GAME-JAM-VID)
 
 
 
