@@ -189,7 +189,7 @@ Social games can help students...
 
 Coaches are encouraged to play any games they think will engage the students! You can
 also find a list of games specifically curated for ThoughtSTEM camps here:
-@url{www.tinyurl.com/ts-game-list}.
+@hyperlink["http://www.tinyurl.com/ts-game-list" "www.tinyurl.com/ts-game-list"].
 
 Students do not have to participate. Coaches should strive for 100% participation, which
 may involve some creative rule adjustments for students with differing needs and abilities!

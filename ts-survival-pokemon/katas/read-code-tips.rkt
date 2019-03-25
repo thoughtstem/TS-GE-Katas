@@ -57,6 +57,9 @@
          (bold "9") ".")
 
    'npc-3
+   #f
+   
+   'npc-4
    (list "All options for #:mode are: " (bold "'follow") ", " (bold "'wander")
          ", " (bold "'pace") " and " (bold "'still") ".")
    ))
