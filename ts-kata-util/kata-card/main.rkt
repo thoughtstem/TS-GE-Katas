@@ -123,14 +123,16 @@
 
 ;======= TESTS =======
 
-"default test"
-(kata-card)
+(module+ test 
+  (displayln "default test")
+  (kata-card)
 
-"another icon test"
-(kata-card camera)
+  (displayln "another icon test")
+  (kata-card camera)
 
-"pastel test"
-(kata-card #:pastel? #t)
+  (displayln "pastel test")
+  (kata-card #:pastel? #t)
 
-"no camera icon test"
-(kata-card #:camera? #f)
+  (displayln "no camera icon test")
+  (kata-card #:camera? #f))
+  
