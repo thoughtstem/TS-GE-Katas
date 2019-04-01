@@ -41,6 +41,10 @@
    (list "By adding a recipe, the crafter now requires an item in the avatar's
          backpack to build something.")
 
+   'crafter-3
+   (list "The " (bold "carrot-stew-recipe") " used above is already defined in the lang.
+          To add your own recipies, you will need to define them yourself!")
+
    'sky-1
    (list "By default, the length-of-day will be " (bold "2400") ".")
 
