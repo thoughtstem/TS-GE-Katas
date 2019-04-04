@@ -27,5 +27,10 @@ This page roughly breaks the katas into 10 sections.  Each section roughly corre
                session-seven
                session-eight
                session-nine
-               session-ten)
+               session-ten
+               )
+
+@section{Katas for Home Practice}
+@(render hero)
+
 

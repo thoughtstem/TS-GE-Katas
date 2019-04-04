@@ -58,4 +58,5 @@ Fleet Spring Camp! Here you can find:
 @(render lightsaber-armor-katas)
 @(render blaster-armor-katas)
 
+@(include-section ts-camp-materials/scribblings/game-jam-resources)
 @(include-section battlearena-starwars/scribblings/assets-library)

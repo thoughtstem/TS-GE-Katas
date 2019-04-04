@@ -56,4 +56,5 @@ Fleet Spring Camp! Here you can find:
 @(render lava-pit-katas)
 @(render spike-mine-katas)
 
+@(include-section ts-camp-materials/scribblings/game-jam-resources)
 @(include-section battlearena-avengers/scribblings/assets-library)

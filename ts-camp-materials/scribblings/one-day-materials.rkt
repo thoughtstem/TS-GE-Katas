@@ -3,7 +3,7 @@
 @(require racket/runtime-path)
 
 @(define-runtime-path kata-card            "img/kata-card.png")
-@(define-runtime-path printable-kata-cards "img/printable-kata-cards.pdf")
+@(define-runtime-path printable-kata-cards "img/printable-kata-cards.png")
 @(define-runtime-path daily-team-page      "img/daily-team-page.jpeg")
 @(define-runtime-path leaderboard          "img/leaderboard.jpeg")
 @(define-runtime-path leaderboard-marker1  "img/leaderboard-marker-front.jpg")
@@ -15,7 +15,7 @@ All the materials needed to run a successful full-day, one day camp!
 
 @section{Kata Cards}
 
-@bold[@larger{# = 1 per student}]
+@bold[@larger{# = ~2 per student}]
 
 Each student receives one of the following at the very beginning
 of the day.
