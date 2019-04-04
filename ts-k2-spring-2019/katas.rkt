@@ -1,6 +1,6 @@
 #lang racket
 
-(provide katas)
+(provide (all-from-out ts-k2/katas))
 
 
 (require racket/generator
@@ -37,3 +37,9 @@
                  session-eight
                  session-nine
                  session-ten)
+
+#;(define-sub-collection katas
+  hero-katas
+  )
+
+
