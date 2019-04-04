@@ -1,5 +1,7 @@
 #lang racket
-(provide katas)
+
+(provide katas
+         hero)
 
 (require ts-kata-util/katas/main
          ts-fundamentals/katas
