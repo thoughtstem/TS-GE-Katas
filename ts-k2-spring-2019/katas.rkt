@@ -37,9 +37,3 @@
                  session-eight
                  session-nine
                  session-ten)
-
-#;(define-sub-collection katas
-  hero-katas
-  )
-
-

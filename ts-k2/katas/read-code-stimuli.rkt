@@ -132,5 +132,25 @@
    'hero-34
    (read "Look at the code below, say out loud what it does then write it from memory")
 
+
+
+   
+   'farm-1
+   (read-template "a game where a Chicken is trying to survive by eating apples.")
+
+   'farm-2
+   (read-template "a game where a Chicken is trying to survive by eating brocolli.")
+
+   'farm-3
+   (read-template "a game where a Horse is trying to survive by eating brocolli, apples, and onions.")
+   
+   'farm-4
+   (read-template "a game where a Horse is trying to survive by eating potatoes and 2 other food items.")
+   
+   'farm-5
+   (read-template "a game where an animal of your choice is trying to survive by eating 3 different food items.")
+   
+   'farm-6
+   (read-template "a game where an animal of your choice is trying to survive by eating all 6 different food items.")
    ))
 
