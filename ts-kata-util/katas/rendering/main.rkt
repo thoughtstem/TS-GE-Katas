@@ -7,8 +7,6 @@
 
 (require "../main.rkt")
 
-
-;S->S
 (define handle-kata-id
   (make-parameter identity))
 
@@ -45,9 +43,7 @@
   
   (apply ~a
          (struct->name t) ": "
-         (add-between
-          fields
-          " ")))
+         (add-between fields " ")))
 
 (define (tests->X string->X Xs->X ts)
   (apply Xs->X

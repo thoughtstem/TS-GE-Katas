@@ -1,11 +1,15 @@
 #lang racket
 
-(provide kata->pict)
+(provide kata->pict
+         (rename-out [_data->pict kata-data->pict]))
 
 (require "../main.rkt"
          "./main.rkt")
 
-(require pict pict/code)
+(require pict pict/code (only-in slideshow para t))
+
+;Can make this a parameter later.
+(define WIDTH 300)
 
 (define (_data->pict d)
   ((make-data->X
@@ -33,7 +37,7 @@
           [(and (eq? l 'English)
                 (not (list? d))
                 (string? d))
-           (text d)]
+           (para d #:width WIDTH)]
           [else (codeblock-pict #:keep-lang-line? #t (~a d))]))
   
   ((make-expression->X
