@@ -9,8 +9,8 @@
 
 
 
-(define HEIGHT 300)
-(define WIDTH (* HEIGHT 1.4))
+(define HEIGHT (* 2.5 300))
+(define WIDTH  (* 3.5 300))
 
 (define MARGIN 10)
 (define PADDING 20)
@@ -123,14 +123,15 @@
 (define ks
   (kata-collection-katas battle-arena-katas))
 
-;(kata->card (last ks))
-(flatten
- (map kata->card (list (first ks)
-                       (last ks))))
+(define (save-pict the-pict name)
+    (define bm (pict->bitmap the-pict))
+      (send bm save-file name 'png))
 
-#;(define backs
-  (map (compose expression-data response-data kata-response)
-       ks))
+(for ([p (flatten
+           (map kata->card ks))]
+      [i (in-naturals)])
+  (save-pict p (~a "./output/card-" (~a i #:min-width 3 #:left-pad-string "0" #:align 'right) ".png")))
 
-#;(for ([b backs])
-  ((compose displayln reformat-program) b))
+
+
+
