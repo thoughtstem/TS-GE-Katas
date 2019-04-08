@@ -6,7 +6,7 @@
 (require "../main.rkt"
          "./main.rkt")
 
-(require pict pict/code (only-in slideshow para t))
+(require pict pict/code )
 
 ;Can make this a parameter later.
 (define WIDTH 300)
@@ -26,6 +26,8 @@
     #:Xs->X     (curry vl-append 10)) k))
 
 (define (_expr->pict k)
+  (define para (dynamic-require 'slideshow 'para))
+
   (define  (f d l)
     (cond [(kata? d) ((compose frame (curryr inset 10))
                       (_kata->pict d))]
@@ -37,7 +39,9 @@
           [(and (eq? l 'English)
                 (not (list? d))
                 (string? d))
-           (para d #:width WIDTH)]
+           ;(text d)
+           (para d #:width WIDTH)
+           ]
           [else (codeblock-pict #:keep-lang-line? #t (~a d))]))
   
   ((make-expression->X
