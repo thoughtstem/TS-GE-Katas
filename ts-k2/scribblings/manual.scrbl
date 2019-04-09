@@ -18,5 +18,6 @@
 
 @(sections-for kata-section  
                fish
-               hero)
+               hero
+               farm)
 

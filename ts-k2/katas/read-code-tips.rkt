@@ -10,6 +10,6 @@
   (list
 
    'farm-4
-   (side-note "The Question Mark icon means students can choose any sprite")
+   (list "The Question Mark icon means students can choose any sprite")
 
    ))
