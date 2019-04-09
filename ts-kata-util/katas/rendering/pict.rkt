@@ -26,7 +26,8 @@
     #:Xs->X     (curry vl-append 10)) k))
 
 (define (_expr->pict k)
-  (define para (dynamic-require 'slideshow 'para))
+  ;Breaks the docs...
+  ;(define para (dynamic-require 'slideshow 'para))
 
   (define  (f d l)
     (cond [(kata? d) ((compose frame (curryr inset 10))
@@ -39,8 +40,9 @@
           [(and (eq? l 'English)
                 (not (list? d))
                 (string? d))
-           ;(text d)
-           (para d #:width WIDTH)
+           (text d)
+           ;Breaks the docs :(
+           ;(para d #:width WIDTH)
            ]
           [else (codeblock-pict #:keep-lang-line? #t (~a d))]))
   
