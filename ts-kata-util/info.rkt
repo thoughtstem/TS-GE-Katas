@@ -12,6 +12,7 @@
 
 (define compile-omit-paths '(
   "badge-maker" 
+  "deck-printer" 
   "raco-tools"
   "raco-tools/prototype-kata-collection" 
   "raco-tools/prototype-lang"))
