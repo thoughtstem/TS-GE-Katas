@@ -7,9 +7,9 @@
           "../rendering.rkt"
           (except-in racket read do))
 
-@title{K-2 Superhero Coders!}
+@title{K-2 Farm Animals!}
 
-In this class, students will learn to code video games with their favorite super heroes!
+In this class, students will learn to code video games with their favorite farm animals!
 
 @k2-superhero-badges
 
@@ -31,6 +31,6 @@ This page roughly breaks the katas into 10 sections.  Each section roughly corre
                )
 
 @section{Katas for Home Practice}
-@(render hero)
+@(render farm)
 
 

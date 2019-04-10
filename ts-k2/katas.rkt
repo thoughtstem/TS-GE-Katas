@@ -1,9 +1,13 @@
 #lang racket
-(provide katas)
+
+(provide katas
+         hero
+         farm)
 
 (require ts-kata-util/katas/main
          ts-fundamentals/katas
-         "./katas/read-code-stimuli.rkt" 
+         "./katas/read-code-stimuli.rkt"
+         "./katas/read-code-tips.rkt" 
          "./katas/ratchet-helpers.rkt")
 
 (define _k2-katas
@@ -44,7 +48,13 @@
 
 ;Coding katas
 
-(define-sub-collections (apply fill-in-stimuli katas stimuli)
+(define k2-katas
+  (apply fill-in-tips
+         (apply fill-in-stimuli katas stimuli)
+         tips))
+
+(define-sub-collections k2-katas
   fish
-  hero)
+  hero
+  farm)
 

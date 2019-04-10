@@ -1,11 +1,15 @@
 #lang racket
 
-(provide kata->pict)
+(provide kata->pict
+         (rename-out [_data->pict kata-data->pict]))
 
 (require "../main.rkt"
          "./main.rkt")
 
-(require pict pict/code)
+(require pict pict/code )
+
+;Can make this a parameter later.
+(define WIDTH 300)
 
 (define (_data->pict d)
   ((make-data->X
@@ -22,6 +26,9 @@
     #:Xs->X     (curry vl-append 10)) k))
 
 (define (_expr->pict k)
+  ;Breaks the docs...
+  ;(define para (dynamic-require 'slideshow 'para))
+
   (define  (f d l)
     (cond [(kata? d) ((compose frame (curryr inset 10))
                       (_kata->pict d))]
@@ -33,7 +40,10 @@
           [(and (eq? l 'English)
                 (not (list? d))
                 (string? d))
-           (text d)]
+           (text d)
+           ;Breaks the docs :(
+           ;(para d #:width WIDTH)
+           ]
           [else (codeblock-pict #:keep-lang-line? #t (~a d))]))
   
   ((make-expression->X

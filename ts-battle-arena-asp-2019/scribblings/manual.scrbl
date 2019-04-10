@@ -3,9 +3,11 @@
 @(require ts-kata-util/katas/rendering
           ts-kata-util/katas/main
           ts-kata-util/badge-maker/main
+          ts-kata-util/kata-card/main
           "../katas.rkt"
           "../rendering.rkt"
-          (except-in racket read do))
+          (except-in racket read do)
+          pict)
 
 @title{Battle Arena Games}
 
@@ -44,4 +46,12 @@ This is for students and coaches participating in their local scholastic game ja
 @include-section["practice-game-jam.scrbl"]
 
 @(include-section battlearena/scribblings/assets-library)
+
+@section{Kata Card}
+
+Full Size Kata Card design for this course:
+
+@(kata-card)
+
+To print -- Save image and print @bold{9 per page}.
 

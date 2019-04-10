@@ -132,5 +132,73 @@
    'hero-34
    (read "Look at the code below, say out loud what it does then write it from memory")
 
+
+
+   
+   'farm-001
+   (read-template "a game where a Chicken is trying to survive by eating apples.")
+
+   'farm-002
+   (read-template "a game where a Chicken is trying to survive by eating brocolli.")
+
+   'farm-003
+   (read-template "a game where a Horse is trying to survive by eating brocolli, apples, and onions.")
+   
+   'farm-004
+   (read-template "a game where a Horse is trying to survive by eating potatoes and 2 other food items.")
+   
+   'farm-005
+   (read-template "a game where an animal of your choice is trying to survive by eating 3 different food items.")
+   
+   'farm-006
+   (read-template "a game where an animal of your choice is trying to survive by eating all 6 different food items.")
+
+   'farm-007
+   (read-template "a game where a cow is trying to survive by eating kiwis, and it can collect copper coins.")
+   
+   'farm-008
+   (read-template "a game where an animal of your choice is trying to survive by eating a food item of your choice and can collect a coin of your choice.")
+   
+   'farm-009
+   (read-template "a game where a sheep is trying to survive by eating kiwis and another food item of your choice, and it can collect silver coins and another coin of your choice.")
+   
+   'farm-010
+   (read-template "a game where a rabbit is trying to survive by eating bananas and apples, and it can collect gold coins.")
+   
+   'farm-011
+   (read-template "a game where an animal of your choice is trying to survive by eating copper coins, and it can collect apples.")
+   
+   'farm-012
+   (read-template "a game where an animal of your choice is trying to survive by eating 2 food items of your choice, and it can collect 2 coins of your choice.")
+   
+   'farm-013
+   (read-template "a game where an animal of your choice is trying to survive by eating potatoes, and it can collect 2 coins of your choice.")
+   
+   'farm-014
+   (read-template "a game where an animal of your choice is trying to survive by eating 2 food items of your choice, and it can collect all 3 types of coins.")
+   
+   'farm-015
+   (read-template "a game where an animal of your choice is trying to survive by eating 5 food items of your choice, and it can collect 5 coins of your choice.")
+
+   'farm-016
+   (read-template "a game where a sheep is trying to survive by eating grapes, it can collect silver coins, and a dog is the enemy.")
+
+   'farm-017
+   (read-template "a game where a horse is trying to survive by eating peppers and kiwis, it can collect silver and gold coins, and a wolf is the enemy.")
+
+   'farm-018
+   (read-template "a game where an animal of your choice  is trying to survive by eating apples and another food item of your choice, it can collect silver coins an another coin of your choice, and the enemy is an animal of your choice.")
+
+   'farm-019
+   (read-template "a game where a wolf is trying to survive by eating apples and grapes, it can collect kiwis and peppers, and a sheep and cow are the enemies.")
+
+   'farm-020
+   (read-template "a game where an apple is trying to survive by eating wolves and dogs, it can collect horses and llamas, and grapes, kiwis, and apples are the enemies.")
+   
+   'farm-021
+   (read-template "a game where a cow is tryng to survive by eating cows, it can collect cows, and a cow is the enemy.")
+
+   'farm-022
+   (read-template "a game where an animal of your choice is trying to survive by eating 2 food items of your choice, it can collect 3 coins of your choice, and 4 animals of your choice are the enemies.")
    ))
 

@@ -2,16 +2,15 @@
 
 (provide (all-from-out ts-k2/katas))
 
-
 (require racket/generator
          ts-kata-util/katas/main
          ts-k2/katas)
 
 (define social-games-generator (sequence->repeated-generator (kata-collection-katas social-games)))
-(define hero-generator         (sequence->repeated-generator (kata-collection-katas hero )))
+(define farm-generator         (sequence->repeated-generator (kata-collection-katas farm )))
 
 (define social-per-day 2)
-(define hero-per-day   3)
+(define farm-per-day   3)
 
 (define (next n g)
   (kata-collection
@@ -21,7 +20,7 @@
   (define/provide session 
                   (merge-collections 
                     (next social-per-day social-games-generator)
-                    (next hero-per-day hero-generator))))
+                    (next farm-per-day farm-generator))))
 
 (define-syntax-rule (define-sessions session ...)
   (begin (define-session session) ...))
