@@ -1,13 +1,8 @@
 #lang racket
 
-;Provides pngs in ./images as an identifier
 
-(require "./image-dir-loader.rkt"
-         racket/runtime-path
-         pict)
+(require "../../assets/main.rkt")
 
-(define-runtime-path images "images")
-(define (local-bitmap s)
-  (bitmap (~a (path->string images) "/" s)))
+;Provides pngs in ./images as identifiers
+(define-assets-from "images")
 
-(def-icons "./images" local-bitmap)

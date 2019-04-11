@@ -25,7 +25,6 @@
 
 (define (hexagon-triad i1 i2 i3 
                        c1 c2 c3)
-
   (apply triad 
          (hexagon-badges i1 i2 i3 c1 c2 c3)))
 
@@ -52,7 +51,7 @@
    hex-bg))
 
 (define hex-bg
-  (scale hexagon 1.75))
+  (scale-to-fit hexagon 200 200))
 
 (define (display-pallet colors)
   (apply (curry vl-append 10)

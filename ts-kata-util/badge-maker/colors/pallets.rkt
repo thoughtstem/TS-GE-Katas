@@ -1,20 +1,21 @@
 #lang racket
 
+;NOTE: If you add more colors, please document them in ts-kata-util/scribblings/badge-maker.scrbl
 (provide
   pallet1
-  pallet2
-  pallet3
-  pallet3-yellow
-  pallet3-red
-  pallet3-blue
-  pallet3-green
+  bright
+  googly
+  googly-yellow
+  googly-red
+  googly-blue
+  googly-green
 
-  pallet2-red
-  pallet2-orange
-  pallet2-yellow
-  pallet2-green
-  pallet2-blue
-  pallet2-purple)
+  bright-red
+  bright-orange
+  bright-yellow
+  bright-green
+  bright-blue
+  bright-purple)
 
 (require 
    (only-in 2htdp/image make-color))
@@ -27,7 +28,7 @@
    (make-color 160 99 129 255)
    (make-color 81 163 163 255)))
 
-(define pallet2
+(define bright
   (list
    "red"
    "orange"
@@ -36,14 +37,14 @@
    "cyan" 
    "purple"))
 
-(define pallet2-red    (list-ref pallet2 0))
-(define pallet2-orange (list-ref pallet2 1))
-(define pallet2-yellow (list-ref pallet2 2))
-(define pallet2-green  (list-ref pallet2 3))
-(define pallet2-blue   (list-ref pallet2 4))
-(define pallet2-purple (list-ref pallet2 5))
+(define bright-red    (list-ref bright 0))
+(define bright-orange (list-ref bright 1))
+(define bright-yellow (list-ref bright 2))
+(define bright-green  (list-ref bright 3))
+(define bright-blue   (list-ref bright 4))
+(define bright-purple (list-ref bright 5))
 
-(define pallet3
+(define googly
   (list
    (make-color 255 191 0 255)
    (make-color 232 63 111 255)
@@ -51,14 +52,14 @@
    (make-color 64 188 143 255)
    ))
 
-(define pallet3-yellow
-  (list-ref pallet3 0))
-(define pallet3-red
-  (list-ref pallet3 1))
-(define pallet3-blue
-  (list-ref pallet3 2))
-(define pallet3-green
-  (list-ref pallet3 3))
+(define googly-yellow
+  (list-ref googly 0))
+(define googly-red
+  (list-ref googly 1))
+(define googly-blue
+  (list-ref googly 2))
+(define googly-green
+  (list-ref googly 3))
 
 
 

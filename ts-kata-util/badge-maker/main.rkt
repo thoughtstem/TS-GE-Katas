@@ -2,7 +2,12 @@
 
 (provide survival-badges
          k2-superhero-badges
-         battle-arena-badges)
+         battle-arena-badges
+
+         (all-from-out "./styles/hexagon.rkt"
+                       "./icons/main.rkt"
+                       "./colors/pallets.rkt"
+                       "./util.rkt"))
 
 (require "./icons/main.rkt")
 (require "./colors/pallets.rkt")
@@ -11,15 +16,18 @@
 
 (define survival-badges
   (hexagon-triad potion sword carrot
-                 pallet3-yellow pallet3-red pallet3-green))
+                 googly-yellow googly-red googly-green))
 
 (define battle-arena-badges
   (hexagon-triad double-swords mace coins
-                 pallet3-green pallet3-blue pallet3-yellow))
+                 googly-green googly-blue googly-yellow))
 
 (define k2-superhero-badges
   (hexagon-triad play thor superhero
-                 pallet2-red pallet2-yellow pallet2-blue))
+                 bright-red bright-yellow bright-blue))
+
+;NOTE: If you make more of these, please document them in ts-kata-util/scribblings/badge-maker.scrbl
+
 
 
 (module+ test
