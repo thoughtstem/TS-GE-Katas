@@ -11,23 +11,18 @@
 
 In this class, students will learn to code video games with their favorite farm animals!
 
-@k2-superhero-badges
+@k2-farm-badges
 
-This page roughly breaks the katas into 10 sections.  Each section roughly corresponds to a day of class.
+This page roughly breaks the katas into 5 sections.  Each section roughly corresponds to a day of camp.
 
 @table-of-contents[]
 
 @(sections-for kata-section
-               session-one
-               session-two
-               session-three
-               session-four
-               session-five
-               session-six
-               session-seven
-               session-eight
-               session-nine
-               session-ten
+               day-one 
+               day-two
+               day-three
+               day-four
+               day-five
                )
 
 @section{Katas for Home Practice}
