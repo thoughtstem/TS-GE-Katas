@@ -1,8 +1,10 @@
 #lang racket
 
 (provide survival-badges
-         k2-superhero-badges
          battle-arena-badges
+         k2-superhero-badges
+         k2-farm-badges
+         starwars-badges
 
          (all-from-out "./styles/hexagon.rkt"
                        "./icons/main.rkt"
@@ -28,10 +30,18 @@
 
 ;NOTE: If you make more of these, please document them in ts-kata-util/scribblings/badge-maker.scrbl
 
+(define k2-farm-badges
+  (hexagon-triad chicken cow horse
+                 bright-red bright-yellow bright-blue))
 
+(define starwars-badges
+  (hexagon-triad laser-sword robot space-ship 
+                 googly-red googly-blue googly-green))
 
 (module+ test
   survival-badges
   battle-arena-badges
   k2-superhero-badges
+  k2-farm-badges
+  starwars-badges
   )

@@ -48,6 +48,13 @@
 
 @(include-extracted ts-kata-util/badge-maker/icons/main)
 
+@defthing[starwars-badges pict?]{
+  @starwars-badges 
+}
+
+@defthing[k2-farm-badges pict?]{
+  @k2-farm-badges 
+}
 
 @defthing[survival-badges pict?]{
   @survival-badges 
