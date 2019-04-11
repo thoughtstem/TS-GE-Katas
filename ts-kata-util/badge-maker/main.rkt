@@ -5,6 +5,8 @@
 
          survival-badges
          k2-superhero-badges
+         k2-farm-badges
+         starwars-badges
          battle-arena-badges)
 
 (require "./cluster-demos.rkt" "./image-dir-loader.rkt" racket/runtime-path)
@@ -49,11 +51,24 @@
    (two-tone-badge thor pallet2-yellow pallet2-blue)
    (two-tone-badge superhero pallet2-blue pallet2-orange)))
 
+(define k2-farm-badges
+  (triad
+   (two-tone-badge chicken pallet2-orange pallet2-yellow)
+   (two-tone-badge llama pallet2-yellow pallet2-green)
+   (two-tone-badge horse pallet2-green pallet2-orange)))
+
+(define starwars-badges
+  (triad
+   (two-tone-badge question pallet3-yellow pallet3-red)
+   (two-tone-badge question pallet3-red    pallet3-green)
+   (two-tone-badge question pallet3-green  pallet3-yellow)))
 
 (module+ test
-  survival-badges
-  battle-arena-badges
-  k2-superhero-badges
+  ;survival-badges
+  ;battle-arena-badges
+  ;k2-superhero-badges
+  ;k2-farm-badges
+  starwars-badges
 
   #;(tri-badge  (list pallet3-red pallet3-yellow
                     pallet3-blue pallet3-green)

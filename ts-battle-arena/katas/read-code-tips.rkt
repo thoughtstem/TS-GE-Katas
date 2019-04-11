@@ -15,6 +15,9 @@
    'avatar-4
    (list "The default item-slots is " (bold "2") ".")
 
+   'avatar-5
+   (list "The default health and max health is 100.")
+
    'enemy-2
    (list "Without the " (bold "curry") ", the game will have 10 of the same enemy.
           With curry, the game will have 10 different enemies.")
