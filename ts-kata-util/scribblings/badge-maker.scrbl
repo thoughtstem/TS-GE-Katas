@@ -47,25 +47,22 @@
 
 @(include-extracted ts-kata-util/badge-maker/icons/main)
 
-@defthing[starwars-badges pict?]{
-  @starwars-badges 
-}
+@defthing[adventure-badges pict?]{ @adventure-badges}
+@defthing[survival-badges pict?]{ @survival-badges }
+@defthing[battlearena-badges pict?]{ @battlearena-badges}
 
-@defthing[k2-farm-badges pict?]{
-  @k2-farm-badges 
-}
+@defthing[k2-farm-badges pict?]{ @k2-farm-badges }
+@defthing[k2-sea-badges pict?]{@k2-sea-badges}
+@defthing[k2-superhero-badges pict?]{ @k2-superhero-badges}
+@defthing[k2-zoo-badges pict?]{ @k2-zoo-badges }
 
-@defthing[survival-badges pict?]{
-  @survival-badges 
-}
+@defthing[avengers-badges pict?]{ @avengers-badges }
+@defthing[fortnite-badges pict?]{ @fortnite-badges }
+@defthing[starwars-badges pict?]{ @starwars-badges }
 
-@defthing[battle-arena-badges pict?]{
-  @battle-arena-badges
-}
-
-@defthing[k2-superhero-badges pict?]{
-  @k2-superhero-badges
-}
+@;defthing[harrypotter-badges pict?]{ @harrypotter-badges }
+@;defthing[lotr-badges pict?]{ @lotr-badges }
+@;defthing[mario-badges pict?]{ @mario-badges }
 
 @section{Colors}
 

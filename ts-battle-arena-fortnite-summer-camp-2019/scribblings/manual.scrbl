@@ -3,6 +3,7 @@
 
 @(require ts-kata-util/katas/main
           ts-kata-util/katas/rendering
+          ts-kata-util/badge-maker/main
           "../katas.rkt"
           "../rendering.rkt"
           (except-in racket read do) 
@@ -11,7 +12,7 @@
 @title{Fortnite Summer Camp}
 @larger[@larger{Coding for Fortnite Fans}]
 
-@;fortnite-badges
+@fortnite-badges
 
 @table-of-contents[]
 

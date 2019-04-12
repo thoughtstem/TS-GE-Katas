@@ -12,7 +12,7 @@
 @title{Marvel Summer Camp}
 @larger[@larger{Coding for Marvel Fans}]
 
-@;avengers-badges
+@avengers-badges
 
 @table-of-contents[]
 
