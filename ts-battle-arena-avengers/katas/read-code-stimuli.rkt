@@ -11,27 +11,31 @@
    (read "Make an Avengers game")
 
   
-   'hero-1
+   'avatar-1
    (read "Make a game with a hero.")
-   'hero-2
+   'avatar-2
    (read "Make a game with a predifined sprite as your hero.")
-   'hero-3
-   (read "Make a game with a fully customized hero.")
+   'avatar-3
+   (read "Make a game that has a custom hero with a custom sprite and 15 speed.")
+   'avatar-4
+   (read "Make a game that has a custom hero with a custom sprite, 20 speed, arrow-keys movement, and 5 item slots.")
+   'avatar-5
+   (read "Make a game that has a custom hero with a custom sprite, 25 speed, 5 item slots, and 200 for health, max-health, shield, and max-shield.")
 
    
-   'villain-1
+   'enemy-1
    (read "Make a game with a villain.")
-   'villain-2
-   (read "Make a game with a defined and customized villain.")
-   'villain-3
-   (read "Make a game with a customized villain and use a predifined sprite.")
+   'enemy-3
+   (read "Make a game with a 5 custom sprite villains, 'medium ai, 200 health, and 100 shield.")
+   'enemy-4
+   (read "Make a game with 2 custom sprite villains. 5 of the first one with 'easy ai, and 50 health. 3 of the second one with 'hard ai, and 200 health. ")
 
    
-   'villain-power-1
+   'enemy-weapon-1
    (read "Make a game that has a an enemy with a custom power with a yellow energy dart.")
-   'villain-power-2
-   (read "Make a game that has a enemy with a custom sprite and a custom power with a purple ring of fire dart. .")
-   'villain-power-3
+   'enemy-weapon-2
+   (read "Make a game that has a enemy with a custom sprite and a custom power with a purple ring of fire dart.")
+   'enemy-weapon-3
    (read "Make a game that has a enemy with a custom sprite and a fully customized power.")
 
    
@@ -45,11 +49,11 @@
    (read "Make a game with two custom power.")
    
    
-   'planet-1
+   'background-1
    (read "Make a game that has a random colored planet.")
-   'planet-2
+   'background-2
    (read "Make a game that uses a predefined image as the planet.")
-   'planet-3
+   'background-3
    (read "Make a game that has a fully customized planet.")
 
 

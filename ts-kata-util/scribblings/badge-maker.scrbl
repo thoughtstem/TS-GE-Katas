@@ -5,8 +5,7 @@
 @require[@for-label[ts-kata-util
                     racket/base]]
 
-@title{ts-kata-util}
-@author{thoughtstem}
+@title{Badge Maker}
 
 @defmodule[ts-kata-util/badge-maker]
 
