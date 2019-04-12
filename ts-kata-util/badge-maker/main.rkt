@@ -17,7 +17,6 @@
 (require "./styles/hexagon.rkt")
 (require "./util.rkt")
 
-;NOTE: If you make more of these, they will be automatically documented in ts-kata-util/scribblings/badge-maker.scrbl
 
 (collect-badges all-triads
                 (define-badges k2-superhero-badges

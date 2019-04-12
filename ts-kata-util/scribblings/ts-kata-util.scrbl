@@ -2,6 +2,7 @@
 @require[@for-label[ts-kata-util
                     racket/base]]
 
+@title{ts-kata-util}
 @defmodule[ts-kata-util]
 
 These are the utilities that help language designers craft a language

@@ -7,13 +7,9 @@
           "../rendering.rkt"
           (except-in racket read do))
 
-@title{K-2 Farm Animals!}
-
-In this class, students will learn to code video games with their favorite farm animals!
+@title{Farm Animals Summer Camp}
 
 @k2-farm-badges
-
-This page roughly breaks the katas into 5 sections.  Each section roughly corresponds to a day of camp.
 
 @table-of-contents[]
 
@@ -25,7 +21,8 @@ This page roughly breaks the katas into 5 sections.  Each section roughly corres
                day-five
                )
 
-@section{Katas for Home Practice}
+@section{All Katas}
 @(render farm)
 
-
+@;(include-section ts-camp-materials/scribblings/game-jam-resources)
+@;(include-section k2/scribblings/assets-library)

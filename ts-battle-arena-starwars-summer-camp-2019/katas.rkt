@@ -37,4 +37,4 @@
    #:in "Tell me about our Final Game Jam!"
    #:out (list "Building a BATTLE ARENA GAME."  
                "In ONE HOUR."
-               "Including: a HERO, VILLAINS, LIGHTSABERS, VILLAIN WEAPONS, and PLANET DESIGNS.")))
+               "Including: a REBEL, IMPERIALS, WEAPONS, POWER-UPS, and TRAP WEAPONS.")))

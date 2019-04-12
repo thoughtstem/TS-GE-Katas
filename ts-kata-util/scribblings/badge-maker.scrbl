@@ -5,8 +5,7 @@
 @require[@for-label[ts-kata-util
                     racket/base]]
 
-@title{ts-kata-util}
-@author{thoughtstem}
+@title{Badge Maker}
 
 @defmodule[ts-kata-util/badge-maker]
 
@@ -58,7 +57,6 @@ Here are some tools for creating new badges:
 
 @(include-extracted ts-kata-util/badge-maker/icons/main)
 @(include-extracted ts-kata-util/badge-maker/main)
-
 
 
 @section{Colors}
