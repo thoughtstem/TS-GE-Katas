@@ -7,13 +7,47 @@
          hexagon-badge
          hexagon-triad 
          hexagon-badges
-         )
+         gridify-triads)
 
 (require (only-in "../icons/main.rkt" hexagon)
          (prefix-in h: 2htdp/image)
          racket/runtime-path
          (only-in 2htdp/image make-color regular-polygon make-pen line)
          pict)
+
+(define (safe-take l n)
+  (take l (min n (length l))))
+
+(define (safe-drop l n)
+  (drop l (min n (length l))))
+
+(define (gridify-triads ts)
+  (define even #t)
+  (define ret (blank))
+  (define row #f)
+
+  (let loop ()
+    (set! row
+      (if even
+        (apply hc-append (safe-take ts 3))
+        (apply hc-append (safe-take ts 4))))
+
+    (set! ts
+      (if even
+        (safe-drop ts 3)
+        (safe-drop ts 4)))
+
+
+    (set! row (hc-append row))
+    (set! ret (vc-append ret row))
+    (set! even (not even))
+
+    (unless (empty? ts)
+      (loop)))
+
+  ret)
+
+
 
 (define (hexagon-badges i1 i2 i3 
                        c1 c2 c3)

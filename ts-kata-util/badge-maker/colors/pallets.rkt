@@ -1,14 +1,17 @@
 #lang racket
 
+
 ;NOTE: If you add more colors, please document them in ts-kata-util/scribblings/badge-maker.scrbl
 (provide
-  pallet1
   bright
   googly
-  googly-yellow
+
   googly-red
-  googly-blue
+  googly-orange
+  googly-yellow
   googly-green
+  googly-blue
+  googly-purple
 
   bright-red
   bright-orange
@@ -17,25 +20,16 @@
   bright-blue
   bright-purple)
 
-(require 
-   (only-in 2htdp/image make-color))
-
-(define pallet1
-  (list
-   (make-color 195 244 145 255)
-   (make-color 233 204 116 255)
-   (make-color 203 144 77 255)
-   (make-color 160 99 129 255)
-   (make-color 81 163 163 255)))
+(require (only-in 2htdp/image make-color))
 
 (define bright
   (list
-   "red"
-   "orange"
-   "yellow"
-   "green" 
-   "cyan" 
-   "purple"))
+   (make-color 255 9 0 255)
+   (make-color 255 127 0 255)
+   (make-color 255 239 0 255)
+   (make-color 0 241 29 255)  
+   (make-color 0 121 255 255)  
+   (make-color 168 0 255 255)))
 
 (define bright-red    (list-ref bright 0))
 (define bright-orange (list-ref bright 1))
@@ -46,20 +40,18 @@
 
 (define googly
   (list
-   (make-color 255 191 0 255)
-   (make-color 232 63 111 255)
-   (make-color 43 146 206 255)
-   (make-color 64 188 143 255)
-   ))
+   (make-color 203 31 71 255)
+   (make-color 245 111 2 255)
+   (make-color 255 186 0 255)
+   (make-color 0 179 69 255)  
+   (make-color 0 136 210 255)  
+   (make-color 100 93 172 255)))
 
-(define googly-yellow
-  (list-ref googly 0))
-(define googly-red
-  (list-ref googly 1))
-(define googly-blue
-  (list-ref googly 2))
-(define googly-green
-  (list-ref googly 3))
-
+(define googly-red    (list-ref googly 0))
+(define googly-orange (list-ref googly 1))
+(define googly-yellow (list-ref googly 2))
+(define googly-green  (list-ref googly 3))
+(define googly-blue   (list-ref googly 4))
+(define googly-purple (list-ref googly 5))
 
 

@@ -10,6 +10,16 @@
 
 @defmodule[ts-kata-util/badge-maker]
 
+@defthing[badge-grid pict?]{
+  A grid of our current badges collection.  Any triad defined in @racket[ts-kata-util/badge-maker/main] will end up on this grid automatically.
+
+  It's mainly for eyeballing color distributions.
+
+  @badge-grid
+
+}
+
+Here are some tools for creating new badges:
 
 @defproc[(hexagon-triad [i1 pict?] 
                         [i2 pict?] 
@@ -47,26 +57,9 @@
 @(require scribble/extract)
 
 @(include-extracted ts-kata-util/badge-maker/icons/main)
+@(include-extracted ts-kata-util/badge-maker/main)
 
-@defthing[starwars-badges pict?]{
-  @starwars-badges 
-}
 
-@defthing[k2-farm-badges pict?]{
-  @k2-farm-badges 
-}
-
-@defthing[survival-badges pict?]{
-  @survival-badges 
-}
-
-@defthing[battle-arena-badges pict?]{
-  @battle-arena-badges
-}
-
-@defthing[k2-superhero-badges pict?]{
-  @k2-superhero-badges
-}
 
 @section{Colors}
 
@@ -100,16 +93,24 @@
   @(circle 10 'solid googly-red)
 }
 
+@defthing[googly-orange color?]{
+  @(circle 10 'solid googly-orange)
+}
+
 @defthing[googly-yellow color?]{
   @(circle 10 'solid googly-yellow)
+}
+
+@defthing[googly-green color?]{
+  @(circle 10 'solid googly-green)
 }
 
 @defthing[googly-blue color?]{
   @(circle 10 'solid googly-blue)
 }
 
-@defthing[googly-green color?]{
-  @(circle 10 'solid googly-green)
+@defthing[googly-purple color?]{
+  @(circle 10 'solid googly-purple)
 }
 
 
