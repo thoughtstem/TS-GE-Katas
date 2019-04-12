@@ -53,4 +53,8 @@
   armor-katas
   lava-pit-katas
   spike-mine-katas
+  spear-tower-katas
+  dagger-tower-katas
+  repeater-tower-katas
+  rocket-tower-katas
   )
