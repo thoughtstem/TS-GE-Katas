@@ -46,7 +46,7 @@
                                (hexagon-triad potion sword carrot
                                               googly-red googly-orange googly-yellow))
 
-                (define-badges battle-arena-badges
+                (define-badges battlearena-badges
                                (hexagon-triad double-swords mace coins
                                               googly-orange googly-yellow googly-green))
 
