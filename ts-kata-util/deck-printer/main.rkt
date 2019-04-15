@@ -5,56 +5,74 @@
          (except-in ts-kata-util/katas/main read))
 
 (require ts-battle-arena/katas
-         pict)
+         pict
+         (only-in slideshow para current-font-size))
 
 
 
-(define HEIGHT 300)
-(define WIDTH (* HEIGHT 1.4))
+(define HEIGHT 1200)
+(define WIDTH HEIGHT
+  #;
+  (* HEIGHT 1.4))
 
-(define MARGIN 10)
-(define PADDING 20)
+(define MARGIN 550)
+(define PADDING 10)
 
 (define ROUNDING 5)
 
 (define BACK-COLOR "white")
 (define FRONT-COLOR "aquamarine")
+(define FRONT-COLOR-FG "palegreen")
 
 (define bg
   (filled-rectangle (+ WIDTH PADDING)
                     (+ HEIGHT PADDING)))
 
 (define (front-side p)
+  (define adj-p
+    (rotate 
+      (scale-to-fit (cc-superimpose 
+                      (colorize
+                        (filled-rectangle WIDTH (+ MARGIN (pict-height p)))
+                        FRONT-COLOR-FG
+                        )
+                      p)
+                    (- WIDTH MARGIN)
+                    (- HEIGHT MARGIN)) 
+      (/ pi 3)))
+
   (cc-superimpose
     bg
     (colorize (filled-rounded-rectangle WIDTH HEIGHT ROUNDING)
               FRONT-COLOR)
-    (scale-to-fit p (- WIDTH MARGIN)
-                  (- HEIGHT MARGIN)))
-
-  )
+    
+    adj-p
+    (cc-superimpose 
+      adj-p)))
 
 (define (back-side p)
-  (define maybe-rotated-p
-    (if (> (pict-height p)
-           (pict-width p))
-        (rotate p (/ pi 2))
-        p))
+  (define adj-p
+    (rotate 
+      (scale-to-fit p
+                    (- WIDTH MARGIN)
+                    (- HEIGHT MARGIN)) 
+      (/ pi 3)))
+
   
   (cc-superimpose
     bg
     (colorize (filled-rounded-rectangle WIDTH HEIGHT ROUNDING)
               BACK-COLOR)
-    (scale-to-fit maybe-rotated-p (- WIDTH MARGIN)
-                  (- HEIGHT MARGIN))))
+    adj-p))
 
 
 (define (kata->front-side k)
   (define content
-    (stimulus-data (kata-stimulus k)))
+    (expression-data (stimulus-data (kata-stimulus k))))
 
   (define content-pict
-    (kata-data->pict content))
+    (parameterize ([current-font-size 46])
+      (para content)))
 
   (front-side content-pict))
 
@@ -119,18 +137,45 @@
   (fix-indentation (fix-line-breaks too-many-line-breaks)))
 
 
+(define (save-pict the-pict name kind)
+    (define bm (pict->bitmap the-pict))
+      (send bm save-file name kind))
 
-(define ks
-  (kata-collection-katas battle-arena-katas))
+#;
+(save-pict (standard-fish 200 200) "fish.png" 'png)
 
-;(kata->card (last ks))
-(flatten
- (map kata->card (list (first ks)
-                       (last ks))))
 
-#;(define backs
-  (map (compose expression-data response-data kata-response)
-       ks))
+(define (list->folder path ls)
+  (make-directory* path)
+  (make-directory* (build-path path "fronts"))
+  (make-directory* (build-path path "backs"))
 
-#;(for ([b backs])
-  ((compose displayln reformat-program) b))
+  (for ([l ls]
+        [i (in-naturals)])
+
+    (define name 
+      (~a "card-" (~a #:width 3 #:align 'right #:left-pad-string "0" i) ".png"))
+
+    (define dest
+      (if (even? i)
+          (build-path path "fronts" name)
+          (build-path path "backs" name)))
+
+    (save-pict l dest 'png)))
+
+
+(define (collection->folder kc folder-path)
+  (define ks (kata-collection-katas kc))
+
+  (list->folder folder-path
+                (flatten
+                  (map kata->card ks))))
+
+(collection->folder battle-arena-katas 
+                    (build-path (find-system-path 'home-dir)
+                                "Desktop"
+                                "battle-arena-katas"))
+
+;Use this: https://www.makeplayingcards.com/design/small-custom-hex-cards.html
+
+
