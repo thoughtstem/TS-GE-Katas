@@ -19,5 +19,8 @@
     (ts-battle-arena-avengers-summer-camp-2019 "MARVEL")
     (ts-battle-arena-fortnite-summer-camp-2019 "FORTNITE")
     (ts-battle-arena-starwars-summer-camp-2019 "STAR WARS")
+    (ts-survival-minecraft-summer-camp-2019    "MINECRAFT")
+    (ts-survival-pokemon-summer-camp-2019      "POKEMON")
+    
   )
 )
