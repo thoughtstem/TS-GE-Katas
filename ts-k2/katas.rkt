@@ -2,7 +2,8 @@
 
 (provide katas
          hero
-         farm)
+         farm
+         sea)
 
 (require ts-kata-util/katas/main
          ts-fundamentals/katas
@@ -56,5 +57,6 @@
 (define-sub-collections k2-katas
   fish
   hero
-  farm)
+  farm
+  sea)
 

@@ -7,7 +7,7 @@
           "../rendering.rkt"
           (except-in racket read do))
 
-@title{Farm Animals Summer Camp}
+@title{Adventures in Coding and Farm Animals: K-2nd}
 
 @k2-farm-badges
 
@@ -21,8 +21,9 @@
                day-five
                )
 
-@section{All Katas}
+@section{All Farm Katas}
 @(render farm)
 
-@;(include-section ts-camp-materials/scribblings/game-jam-resources)
+@(include-section ts-camp-materials/scribblings/half-day-schedule)
+@(include-section ts-camp-materials/scribblings/game-jam-resources)
 @;(include-section k2/scribblings/assets-library)

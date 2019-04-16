@@ -36,10 +36,6 @@
 @section{Tower Katas}
 @(render selected-tower-katas)
 
-
-@;(include-section ts-camp-materials/scribblings/full-day-schedule)
-@;(include-section ts-camp-materials/scribblings/one-day-materials)
-
 @section{Extra Katas}
 @(render background-katas)
 @(render level-design-katas)
@@ -50,6 +46,6 @@
 @(render dagger-tower-katas)
 @(render rocket-tower-katas)
 
-
+@(include-section ts-camp-materials/scribblings/half-day-schedule)
 @(include-section ts-camp-materials/scribblings/game-jam-resources)
 @(include-section battlearena-fortnite/scribblings/assets-library)
