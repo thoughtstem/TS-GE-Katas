@@ -288,37 +288,36 @@
    (read-template "game where you are a sprite of your choice hunting for four sprites of your choice and collecting four sprites of your choice.")
 
    'sea-021
-   (read-template "game where you are a ghost fish hunting for strawberries, collecting silver coins, and avoiding a shark enemy.")
+   (read-template "game where you are a ghost fish hunting for strawberries and avoiding a shark enemy.")
 
    'sea-022
-   (read-template "game where you are a jellyfish hunting for potatoes and cherries, collecting silver and gold coins, and avoiding a red fish enemy.")
+   (read-template "game where you are a jellyfish hunting for potatoes and cherries and avoiding a red fish enemy.")
 
    'sea-023
-   (read-template "game where you are a sprite of your choice hunting for apples and another sprite of your choice, collecting a silver coin and another sprite of your choice, and avoiding an enemy of your choice.")
+   (read-template "game where you are a sprite of your choice hunting for mushrooms and another sprite of your choice and avoiding an enemy of your choice.")
 
    'sea-024
-   (read-template "game where you are a shark hunting for apples and strawberries, collecting potatoes and cherries, and avoiding a crab and a jellyfish enemy.")
+   (read-template "game where you are a shark hunting for apples and strawberries and avoiding crab and jellyfish enemies.")
 
    'sea-025
-   (read-template "game where you are a strawberry hunting for orange fish and octopus, collecting ghost fish and crabs, and avoiding a potato, and apple and a cherries enemy!")
+   (read-template "game where you are a strawberry hunting for orange fish and octopus and avoiding tomato, kiwi, and banana enemies!")
 
    'sea-026
-   (read-template "game where you are a shark, hunting for sharks, collecting sharks and avoiding shark enemies!")
+   (read-template "game where you are a shark hunting for sharks and avoiding a shark enemy!")
 
    'sea-027
-   (read-template "game where you are a sprite of your choice, hunting for two other sprites of your choice, collecting three sprites of your choice, and avoiding four enemies of your choice.")
+   (read-template "game where you are a sprite of your choice, hunting for two other sprites of your choice, and avoiding four enemies of your choice.")
 
    'sea-028
-   (read-template "collection of 2 games. In the first game, you are an octopus hunting for apples, collecting copper coins and avoiding a crab enemy.
-                   In the second game, you are still an octopus, but hunting for cherries, collecting gold coins and avoiding a shark enemy!")
+   (read-template "collection of 2 games. In the first game, you are an octopus hunting for apples and avoiding a crab enemy.
+                   In the second game, you are still an octopus, but hunting for cherries and avoiding a shark enemy!")
 
    'sea-029
-   (read-template "collection of 2 games. In the first game, you are a sprite of your choice hunting for strawberries and potatoes, collecting copper and silver coins and avoiding an orange fish enemy.
-                   When you 'level up' in the next game, every thing is the same except you collect silver and gold coins.")
+   (read-template "collection of 2 games. In the first game, you are a sprite of your choice hunting for strawberries and potatoes and avoiding an orange fish enemy.
+                   When you 'level up' in the next game, every thing is the same except you are now avoiding a jellyfish enemy.")
 
    'sea-030
-   (read-template "collection of 3 games. In all games, you can be the sprite of your choice hunting two sprites of your choice and avoiding two enemies of your choice.
-                   In the first, you collect copper coins, the  silver, then gold in the last game.")
+   (read-template "collection of 3 games. In all games, you can be the sprite of your choice hunting two sprites of your choice and avoiding two enemies of your choice.")
 
    'sea-031
    (read-template "game where you are a starfish healing an octopus friend.")

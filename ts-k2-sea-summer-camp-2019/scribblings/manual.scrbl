@@ -7,9 +7,9 @@
           "../rendering.rkt"
           (except-in racket read do))
 
-@title{Adventures in Coding and Farm Animals: K-2nd}
+@title{Adventures in Coding Under the Sea: K-2nd}
 
-@k2-farm-badges
+@k2-sea-badges
 
 @table-of-contents[]
 
@@ -21,9 +21,8 @@
                day-five
                )
 
-@section{All Farm Katas}
-@(render farm)
+@section{All Sea Katas}
+@(render sea)
 
 @(include-section ts-camp-materials/scribblings/half-day-schedule)
 @(include-section ts-camp-materials/scribblings/game-jam-resources)
-@;(include-section k2/scribblings/assets-library)
