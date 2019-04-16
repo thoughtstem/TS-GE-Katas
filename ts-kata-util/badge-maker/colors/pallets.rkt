@@ -40,7 +40,7 @@
 
 (define googly
   (list
-   (make-color 203 31 71 255)
+   (make-color 224 20 13 255)
    (make-color 245 111 2 255)
    (make-color 255 186 0 255)
    (make-color 0 179 69 255)  

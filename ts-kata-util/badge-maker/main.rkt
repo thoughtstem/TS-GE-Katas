@@ -25,51 +25,51 @@
 
 
                 (define-badges k2-farm-badges
-                               (hexagon-triad chicken cow horse
+                               (hexagon-triad pig cow horse
                                               bright-orange bright-yellow bright-green))
 
                 (define-badges k2-sea-badges
-                               (hexagon-triad fish1 fish2 octopus
-                                              bright-yellow bright-green bright-blue))
+                               (hexagon-triad fish octopus shark
+                                              bright-purple bright-green bright-blue))
 
                 (define-badges k2-zoo-badges
-                               (hexagon-triad giraffe elephant tiger
-                                              bright-green bright-blue bright-purple))
+                               (hexagon-triad monkey giraffe elephant
+                                              bright-green bright-yellow bright-purple))
 
-                (define-badges k2-superhero2-badges
+                (define-badges k2-superhero2-badges  
                                (hexagon-triad superman black-widow lightning 
                                               bright-blue bright-purple bright-red))
 
 
 
                 (define-badges survival-badges
-                               (hexagon-triad potion sword carrot
-                                              googly-red googly-orange googly-yellow))
+                               (hexagon-triad carrot sword4 potion
+                                              googly-orange googly-red googly-yellow))
 
                 (define-badges battlearena-badges
-                               (hexagon-triad double-swords mace coins
-                                              googly-orange googly-yellow googly-green))
+                               (hexagon-triad coins mace double-swords
+                                              googly-yellow googly-orange googly-green))
 
 
 
                 (define-badges pokemon-badges
-                               (hexagon-triad pokeball pika monster-ball
-                                              googly-yellow googly-green googly-blue ))
+                               (hexagon-triad grass fire water
+                                              googly-green googly-red googly-blue))
 
                 (define-badges minecraft-badges
-                               (hexagon-triad slime zombie sword3
-                                              googly-green googly-blue googly-purple))
+                               (hexagon-triad chest ore creeper
+                                              googly-blue googly-purple googly-green))
 
                 (define-badges starwars-badges
                                (hexagon-triad laser-sword robot space-ship 
                                               googly-blue googly-purple googly-red))
-
+            
                 (define-badges avengers-badges
-                               (hexagon-triad superman black-widow lightning 
-                                              googly-red googly-yellow googly-blue))
+                               (hexagon-triad captain-america fist iron-man
+                                              googly-blue googly-yellow googly-red ))
 
                 (define-badges fortnite-badges
-                               (hexagon-triad tower bullet armor
+                               (hexagon-triad tower helmet fireball
                                               googly-orange googly-green googly-purple))
 
                 (define-badges adventure-badges
@@ -77,12 +77,12 @@
                                               googly-red googly-green googly-blue))
 
                 (define-badges lotr-badges
-                               (hexagon-triad hairy-foot orc wizard2 
+                               (hexagon-triad orc gandalf ring 
                                               googly-orange googly-blue googly-purple))
 
                 (define-badges mario-badges
-                               (hexagon-triad mushroom happy-star plunger
-                                              googly-yellow googly-purple googly-red))
+                               (hexagon-triad plunger mushroom happy-star 
+                                              googly-purple googly-red googly-yellow))
 
 
                 (define-badges harry-potter-badges
