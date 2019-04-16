@@ -20,6 +20,9 @@
 (define default-icon
   (bitmap "img/laptop-icon.png"))
 
+(define am-camp (bitmap "img/sun-am.png"))
+(define pm-camp (bitmap "img/sun-pm.png"))
+
 
 ;======= FUNCTIONS =========
 
@@ -121,18 +124,31 @@
 
   (place-icons shrunk-icons #:camera? camera?))
 
+(define (printable-kata-card i)
+  (define img (p:pict->bitmap (kata-card i)))
+  
+  (above
+   (beside img img img)
+   (beside img img img)
+   (beside img img img)))
+
 ;======= TESTS =======
 
 (module+ test 
-  (displayln "default test")
-  (kata-card)
+  ;(displayln "default test")
+  ;(kata-card)
 
-  (displayln "another icon test")
-  (kata-card camera)
+  (printable-kata-card am-camp)
+  (printable-kata-card pm-camp)
+  
 
-  (displayln "pastel test")
-  (kata-card #:pastel? #t)
+  ;(displayln "another icon test")
+  ;(kata-card camera)
 
-  (displayln "no camera icon test")
-  (kata-card #:camera? #f))
+  ;(displayln "pastel test")
+  ;(kata-card #:pastel? #t)
+
+  ;(displayln "no camera icon test")
+  ;(kata-card #:camera? #f)
+  )
   
