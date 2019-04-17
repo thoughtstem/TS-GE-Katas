@@ -3,7 +3,8 @@
 (provide katas
          hero
          farm
-         sea)
+         sea
+         zoo)
 
 (require ts-kata-util/katas/main
          ts-fundamentals/katas
@@ -58,5 +59,6 @@
   fish
   hero
   farm
-  sea)
+  sea
+  zoo)
 
