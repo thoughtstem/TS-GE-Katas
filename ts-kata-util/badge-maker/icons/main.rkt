@@ -4,5 +4,5 @@
 (require "../../assets/main.rkt")
 
 ;Provides pngs in ./images as identifiers
-(define-assets-from "images")
+(define-icons-from "images")
 

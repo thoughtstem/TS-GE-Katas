@@ -9,7 +9,7 @@
          hexagon-badges
          gridify-triads)
 
-(require (only-in "../icons/main.rkt" hexagon)
+(require (only-in "../icons/main.rkt" hexagon-icon)
          (prefix-in h: 2htdp/image)
          racket/runtime-path
          (only-in 2htdp/image make-color regular-polygon make-pen line)
@@ -85,7 +85,7 @@
    hex-bg))
 
 (define hex-bg
-  (scale-to-fit hexagon 200 200))
+  (scale-to-fit hexagon-icon 200 200))
 
 (define (display-pallet colors)
   (apply (curry vl-append 10)
