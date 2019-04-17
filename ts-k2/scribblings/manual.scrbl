@@ -20,5 +20,6 @@
                fish
                hero
                farm
-               sea)
+               sea
+               zoo)
 
