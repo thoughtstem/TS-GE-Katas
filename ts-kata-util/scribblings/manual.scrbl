@@ -6,4 +6,5 @@
 @author{thoughtstem}
 
 @include-section["./badge-maker.scrbl"]
+@include-section["./deck-printer.scrbl"]
 @include-section["./ts-kata-util.scrbl"]
