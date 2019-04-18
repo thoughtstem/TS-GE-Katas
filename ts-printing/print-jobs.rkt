@@ -341,3 +341,31 @@
       [FRONT-COLOR-FG clear-white]
       [FRONT-TITLE    (title "(towns)")])))
 
+(define (ts-k2-farm-summer-camp-2019->Desktop)
+  (local-require ts-k2-farm-summer-camp-2019/katas)
+
+  (begin-job "ts-k2-farm-summer-camp-2019-cards"
+    (farm
+      [FRONT-COLOR    bright-orange]
+      [FRONT-COLOR-FG clear-white]
+      [FRONT-TITLE    (title "(farm)")])))
+
+(define (ts-k2-sea-summer-camp-2019->Desktop)
+  (local-require ts-k2-sea-summer-camp-2019/katas)
+
+  (begin-job "ts-k2-sea-summer-camp-2019-cards"
+    (farm
+      [FRONT-COLOR    bright-blue]
+      [FRONT-COLOR-FG clear-white]
+      [FRONT-TITLE    (title "(sea)")])))
+
+(define (ts-k2-hero-summer-camp-2019->Desktop)
+  (local-require ts-k2-hero-summer-camp-2019/katas)
+
+  (begin-job "ts-k2-hero-summer-camp-2019-cards"
+    (farm
+      [FRONT-COLOR    bright-green]
+      [FRONT-COLOR-FG clear-white]
+      [FRONT-TITLE    (title "(heros)")])))
+
+(ts-k2-sea-summer-camp-2019->Desktop)

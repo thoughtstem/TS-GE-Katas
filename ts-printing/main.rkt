@@ -5,6 +5,7 @@
          FRONT-TITLE
          FRONT-COLOR
          FRONT-COLOR-FG
+         EXTRA-META
          STARTING-CARD-NUMBER
          begin-job)
 
@@ -27,6 +28,7 @@
 (define FRONT-COLOR-FG       (make-parameter "palegreen"))
 (define STARTING-CARD-NUMBER (make-parameter 0))
 (define FRONT-TITLE          (make-parameter (blank)))
+(define EXTRA-META           (make-parameter (blank)))
 
 
 (define HEIGHT 1200)
@@ -115,15 +117,28 @@
   (local-require slideshow pict/code)
 
   (define content
-    (response-data (kata-response k)))
+    (expression-data
+      (response-data (kata-response k))))
 
-  (define program (reformat-program (expression-data content)))
-
-  (define content-pict
-    ;Not always this simple, but can start with this...
-    (codeblock-pict #:keep-lang-line? #t program))
+  ;Gotta turn whatever our kata response data was into a pict that
+  ; appropriately renders on a card.  
+  ;The two cases below handle the vast majority of our katas.  
+  (define content-pict 
+    (cond 
+      [(string? content) ;Works for 3rd-5th katas
+       (codeblock-pict #:keep-lang-line? #t   
+                       (reformat-program content))]
+      [else ;For now, assume it's a K-2
+       (extract-code-image content)]))
 
   (back-side content-pict))
+
+
+(define/contract (extract-code-image kata-data)
+  (-> list? pict?) ;k2 kata datas happen to be structured as lists.  Putting this contract here so that it breaks when we inevitably decide to change that...
+
+  ;But I'll try to make it somewhat general, so it doesn't matter where the pict is in the list, or how many there are.  (Currently, just one.)
+  (apply vc-append (filter pict? kata-data)))
 
 
 (define (kata->card k)
@@ -185,12 +200,14 @@
 (define (add-meta p i)
   (define meta 
     (scale
-      (text (~a "#" (~r i #:precision 0) " " git-hash))
+     (vc-append -10
+       (text (~a "#" (~r i #:precision 0) " " git-hash))
+       (EXTRA-META))
       2))
 
   (pin-over p 
             (- (/ WIDTH 2) (/ (pict-width meta) 2))
-            (- HEIGHT 200) ;Magic number to get the meta to be on the hex cards.
+            (- HEIGHT 200 (pict-height meta)) ;200 seems to be a magic number to get it within the bleed area of the hex design from makeplayingcards.com
             meta))
 
 (define (list->folder path ls)
@@ -246,7 +263,8 @@
     (define counter 0)
 
     (parameterize ([k v] ...
-                         [STARTING-CARD-NUMBER counter])
+                         [STARTING-CARD-NUMBER counter]
+                         [EXTRA-META (text folder)])
       (collection->Desktop collection folder)
       (set! counter (+ counter 
                        (length 

@@ -67,22 +67,23 @@
 
 @defmodule[ts-printer/print-jobs]
 
-Some common print jobs:
+Some common print jobs, where for each major category of 
+katas, it assigns a different front-of-card
+color from our @racket[ts-kata-util/colors/pallets] and 
+adds a matching title.
 
-@defproc[(ts-battle-arena->Desktop) void?]{
-  No fancy formatting.
-}
+@defproc[(ts-battle-arena-asp-2019->Desktop) void?]{ }
 
-@defproc[(ts-battle-arena-asp-2019->Desktop) void?]{
-  For each major category of katas, it assigns a different front-of-card
-  color from our @racket[ts-kata-util/colors/pallets] and 
-  adds a matching title.
-}
+@defproc[(ts-battle-arena-fortnite-summer-camp-2019->Desktop) void?]{ }
 
-@defproc[(ts-battle-arena-fortnite-summer-camp-2019->Desktop) void?]{
-  For each major category of katas, it assigns a different front-of-card
-  color from our @racket[ts-kata-util/colors/pallets] and 
-  adds a matching title.
-}
+@defproc[(ts-battle-arena-starwars-summer-camp-2019->Desktop) void?]{ }
 
+@defproc[(ts-survival-asp-2019->Desktop) void?]{ }
 
+@defproc[(ts-survival-minecraft-summer-camp-2019->Desktop) void?]{ }
+
+@defproc[(ts-survival-pokemon-summer-camp-2019->Desktop) void?]{ }
+
+@defproc[(ts-k2-farm-summer-camp-2019->Desktop) void?]{ }
+@defproc[(ts-k2-sea-summer-camp-2019->Desktop) void?]{ }
+@defproc[(ts-k2-hero-summer-camp-2019->Desktop) void?]{ }
