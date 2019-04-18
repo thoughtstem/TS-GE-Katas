@@ -1,11 +1,11 @@
 #lang scribble/manual
 
-@require[@for-label[ts-kata-util/deck-printer
+@require[@for-label[ts-printing
                     racket/base]]
 
 @title{Deck Printer}
 
-@defmodule[ts-kata-util/deck-printer]
+@defmodule[ts-printer]
 
 @defproc[(collection->folder [kc kata-collection?] [dest path?]) voide?]{
   Outputs the katas in the collection into the specified folders.
