@@ -15,7 +15,7 @@
     (ts-kata-util "Docs for ts-kata-util")
 
     (ts-k2-farm-summer-camp-2019               "FARM")
-    ;(ts-k2-hero-summer-camp-2019               "HEROES")
+    (ts-k2-hero-summer-camp-2019               "SUPERHEROES")
     (ts-k2-sea-summer-camp-2019                "SEA")
     (ts-k2-zoo-summer-camp-2019                "ZOO")
     
