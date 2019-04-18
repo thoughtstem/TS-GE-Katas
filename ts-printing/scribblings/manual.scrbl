@@ -7,7 +7,7 @@
 
 @defmodule[ts-printer]
 
-@defproc[(collection->folder [kc kata-collection?] [dest path?]) voide?]{
+@defproc[(collection->folder [kc kata-collection?] [dest path?]) void?]{
   Outputs the katas in the collection into the specified folders.
   
   Cards will be given names like @racket["card-025.png"].  Even numbered
@@ -20,7 +20,7 @@
   @link{https://www.makeplayingcards.com/design/your-own-hex-cards.html}
 }
 
-@defproc[(collection->Desktop [kc kata-collection?] [s string?])]{
+@defproc[(collection->Desktop [kc kata-collection?] [s string?]) void?]{
   Wrapper for @racket[collection->folder].  Assumes you want the
   collection in a folder named @racket[s] on your Desktop.
 }
