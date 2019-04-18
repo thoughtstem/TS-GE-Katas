@@ -5,7 +5,8 @@
          FRONT-TITLE
          FRONT-COLOR
          FRONT-COLOR-FG
-         STARTING-CARD-NUMBER)
+         STARTING-CARD-NUMBER
+         begin-job)
 
 (require ts-kata-util/katas/rendering/pict
          (except-in ts-kata-util/katas/main read))
@@ -231,13 +232,26 @@
 
 
 
-(define (collection->Desktop kc)
+(define (collection->Desktop kc folder-name)
   (collection->folder kc 
                       (build-path (find-system-path 'home-dir)
                                   "Desktop"
-                                  "ts-battle-arena-asp-2019-cards")))
+                                  folder-name)))
 
 
+(define-syntax-rule (begin-job folder 
+                      (collection [k v] ...) 
+                      ...)
+  (begin
+    (define counter 0)
+
+    (parameterize ([k v] ...
+                         [STARTING-CARD-NUMBER counter])
+      (collection->Desktop collection folder)
+      (set! counter (+ counter 
+                       (length 
+                         (kata-collection-katas collection))))) 
+    ...))
 
 
 
