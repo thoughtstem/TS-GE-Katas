@@ -30,7 +30,7 @@ Here are some tools for creating new badges:
 
   
   @codeblock{
-    (hexagon-triad potion sword carrot
+    (hexagon-triad potion-icon sword-icon carrot-icon
                    googly-yellow googly-red googly-green)
   }
 
@@ -43,7 +43,7 @@ Here are some tools for creating new badges:
                         [c2 color?]) pict?]{
   
   @codeblock{
-    (hexagon-badge potion 
+    (hexagon-badge potion-icon
                    googly-yellow googly-red)
   }
 
