@@ -7,6 +7,9 @@
 (define (read-template noun)
   (read (~a "Write code to make a " noun )))
 
+(define (read-multi-game-template noun)
+  (read (~a "Write a collection of games. " noun " The objective of each game is to score 10 points. Once you reach that score, close the game and continue with the next.")))
+
 (define stimuli
   (list
 
@@ -25,205 +28,205 @@
    'fish-5
    (read-template "red fish above a blue fish -- with a green fish beside them")
 
-   'hero-0
+   'hero-000
    (read-template "spritesheet for Blackwidow")
 
-   'hero-1
+   'hero-001
    (read-template "spritesheet for Ironman")
 
-   'hero-2
+   'hero-002
    (read-template "spritesheet for Gamora")
 
-   'hero-3
+   'hero-003
    (read-template "game where Gamora is the hero")
 
-   'hero-4
+   'hero-004
    (read-template "game where Ironman is the hero")
 
-   'hero-5
+   'hero-005
    (read-template "game where Blackwidow is the hero")
 
-   'hero-6
+   'hero-006
    (read-template "game where Blackwidow is the hero, and Gamora and Ironman are enemies.")
 
-   'hero-7
+   'hero-007
    (read-template "game where Ironman is the hero, and Gamora and Blackwidow are enemies.")
 
-   'hero-8
+   'hero-008
    (read-template "game where Ironman is the hero, and Ironman is also an enemy.")
 
-   'hero-9
+   'hero-009
    (read-template "game where Ironman is the hero, and there are three Ironman enemies too.")
 
-   'hero-10
+   'hero-010
    (read-template "game where Gamora is the hero, and there are four Gamora enemies too.")
 
 
-   'hero-11
+   'hero-011
    (read-template "game where Ironman is the hero, and Gamora is your enemy.  Give Gamora a Hammer power.")
 
-   'hero-12
+   'hero-012
    (read-template "game where Ironman is the hero, and three Gamoras are your enemies.  Give ONE Gamora a Hammer power.")
 
-   'hero-13
+   'hero-013
    (read-template "game where Ironman is the hero, and three Gamoras are your enemies.  Give EACH Gamora a Hammer power.")
 
-   'hero-14
+   'hero-014
    (read-template "game where Ironman is the hero, and the enemies are Drax, Hawkeye, and Gamora.  Give EACH enemy a Hammer power.")
 
-   'hero-15
+   'hero-015
    (read-template "game where Ironman is the hero, and the enemies are four other Ironmans.  Give the hero a Hammer power.  Give nothing to the enemies.")
 
-   'hero-16
+   'hero-016
    (read-template "game where Ironman is the hero, and the enemies are four other Ironmans.  Give the hero a Hammer power.  Give the enemies Hammer powers too.")
 
-   'hero-17
+   'hero-017
    (read-template "game where Ironman is the hero, and the enemies are four other Ironmans.  Give the hero a Hammer power, and give the enemies all a Magic Orb.")
 
-   'hero-18
+   'hero-018
    (read-template "game where Ironman is the hero, and the enemies are two Draxes and two Blackwidows.  Give the hero a Hammer power, give each Drax a Magic Orb power, and give each Blackwidow a Hammer power.")
 
-   'hero-19
+   'hero-019
    (read-template "game where Ironman is the hero, and the enemies are two Draxes, two Blackwidows, and two other Ironmen.  Give the hero a Hammer power, give each Drax a magic orb, and give each Blackwidow a Hammer power.  Give the Ironmen no powers (just the default).")
 
-   'hero-20
+   'hero-020
    (read-template "game where Ironman is the hero, and there are no enemies.  Give the hero a red Magic Orb power.")
 
-   'hero-21
+   'hero-021
    (read-template "game where Ironman is the hero, and there are no enemies.  Give the hero a red Star Bit power.")
 
-   'hero-22
+   'hero-022
    (read-template "game where Ironman is the hero, and there are no enemies.  Give the hero a red Energy Blast power.")
 
-   'hero-23
+   'hero-023
    (read-template "game where Ironman is the hero, and there are three other Ironmen enemies.  Give each a Magic Orb power, each with a different color.")
 
-   'hero-24
+   'hero-024
    (read-template "game where Ironman is the hero, and there are five other Ironmen enemies.  Give everyone a Magic Orb power, each with a different color.")
 
-   'hero-25
+   'hero-025
    (read-template "game where Ironman is the hero, and there are five other Drax enemies.  Give everyone a Magic Orb power, each with a different color.")
 
-   'hero-26
+   'hero-026
    (read-template "game where Ironman is the hero, and there are five other Drax enemies.  Give everyone a Magic Orb power, each with a different color.  Also add two Ironmen enemies with default powers.")
 
-   'hero-27
+   'hero-027
    (read-template "game with two levels.  In the first level, the enemy is Gamora, and in the second level the enemy is Drax. In both levels, the hero is Ironman.")
 
 
-   'hero-28
+   'hero-028
    (read-template "game with three levels.  In the first level, the enemy is Gamora, in the second level the enemy is Drax, in the third level the enemy is Hawkeye. In all levels, the hero is Ironman.")
 
-   'hero-29
+   'hero-029
    (read-template "game with three levels.  In all levels, the hero is Ironman.  In the first level, there should be one Gamora enemy.  In each level after that, there should be one more Gamora enemy than before.")
 
-   'hero-30
+   'hero-030
    (read-template "game with three levels.  In all levels, the hero is Ironman and the enemy is Gamora.  But make Gamora have a different colored magic orb power in each level.")
 
-   'hero-31
+   'hero-031
    (read-template "game with three levels.  In all levels, the hero is Ironman and the enemies are Gamoras with Magic Orb powers.  Make each level have one more Gamora than the level before.  Also, give the Gamoras in each level a different power color than the level before.")
    
-   'hero-32
+   'hero-032
    (read "Look at the code below, say out loud what it does then write it from memory")
    
-   'hero-33
+   'hero-033
    (read "Look at the code below, say out loud what it does then write it from memory")
 
-   'hero-34
+   'hero-034
    (read "Look at the code below, say out loud what it does then write it from memory")
 
 
 
    
    'farm-001
-   (read-template "game where a Chicken is trying to survive by eating apples.")
+   (read-template "game where a chicken is trying to survive by eating apples.")
 
    'farm-002
-   (read-template "game where a Chicken is trying to survive by eating broccoli.")
+   (read-template "game where a chicken is trying to survive by eating broccoli.")
 
    'farm-003
-   (read-template "game where a Horse is trying to survive by eating broccoli, apples, and onions.")
+   (read-template "game with a horse, 1 broccoli, 1 apple, and 1 onion.")
    
    'farm-004
-   (read-template "game where a Horse is trying to survive by eating potatoes and 2 other food items.")
+   (read-template "game with a horse, 1 potato, and 2 other different food items.")
    
    'farm-005
-   (read-template "game where an animal of your choice is trying to survive by eating 3 different food items.")
+   (read-template "game with an animal, and 3 other different food items.")
    
    'farm-006
-   (read-template "game where an animal of your choice is trying to survive by eating all 6 different food items.")
+   (read-template "game with an animal and all 6 different food items.")
 
    'farm-007
-   (read-template "game where an apple is trying to survive by eating broccoli.")
+   (read-template "game with a chicken, 5 apples, and 5 tomotoes.")
 
    'farm-008
-   (read-template "game where a tomato is trying to survive by eating 2 fruits.")
+   (read-template "game with a llama, 3 of a certain food, and 5 of another food.")
 
    'farm-009
-   (read-template "game where an onion is trying to survive by eating 3 different white animals.")
+   (read-template "game with a horse, 1 of a certain food, 2 of another food, and 3 of another.")
 
    'farm-010
    (read-template "game where a rabbit is trying to survive by eating another rabbit.")
    
    'farm-011
-   (read-template "game where a cow is trying to survive by eating kiwis, and it can collect copper coins.")
+   (read-template "game with a cow, 1 kiwis, and copper coins.")
    
    'farm-012
-   (read-template "game where an animal of your choice is trying to survive by eating a food item of your choice and can collect a coin of your choice.")
+   (read-template "game with an animal, 1 food item of your choice, and coins of your choice.")
    
    'farm-013
-   (read-template "game where a sheep is trying to survive by eating kiwis and another food item of your choice, and it can collect silver coins and another coin of your choice.")
+   (read-template "game with a sheep, 1 kiwis, 1 of another food, silver coins, and another coin.")
    
    'farm-014
-   (read-template "game where a rabbit is trying to survive by eating bananas and apples, and it can collect gold coins.")
+   (read-template "game with a rabbit, 5 bananas, 5 apples, and gold coins.")
    
    'farm-015
-   (read-template "game where an animal of your choice is trying to survive by eating copper coins, and it can collect apples.")
+   (read-template "game with an animal, 10 kiwis, and copper coins.")
    
    'farm-016
-   (read-template "game where an animal of your choice is trying to survive by eating 2 food items of your choice, and it can collect 2 coins of your choice.")
+   (read-template "game with an animal, 3 of one food, 5 of another food, and 2 types of coins.")
    
    'farm-017
-   (read-template "game where an animal of your choice is trying to survive by eating potatoes, and it can collect 2 coins of your choice.")
+   (read-template "game with an animal, 1 potato, and 2 coins of your choice.")
    
    'farm-018
-   (read-template "game where an animal of your choice is trying to survive by eating 2 food items of your choice, and it can collect all 3 types of coins.")
+   (read-template "game with an animal, 2 different food items, and all 3 types of coins.")
 
    'farm-019
-   (read-template "game where a potato is trying to surviv by eating a randon coin, and it can collect a random food item.")
+   (read-template "game with a potato, 3 silver coins as food, and apple coins.")
    
    'farm-020
-   (read-template "game where an animal of your choice is trying to survive by eating 5 food items of your choice, and it can collect 5 coins of your choice.")
+   (read-template "game with an animal, 5 different food items, and 5 different coins.")
    
    'farm-021
-   (read-template "game where a sheep is trying to survive by eating grapes, it can collect silver coins, and a dog is the enemy.")
+   (read-template "game with a sheep, grapes, silver coins, and a dog as the enemy.")
 
    'farm-022
-   (read-template "game where a horse is trying to survive by eating peppers and kiwis, it can collect silver and gold coins, and a wolf is the enemy.")
+   (read-template "game with a horse, 1 pepper, 1 kiwi, silver and gold coins, and a wolf as the enemy.")
 
    'farm-023
-   (read-template "game where an animal of your choice  is trying to survive by eating apples and another food item of your choice, it can collect silver coins an another coin of your choice, and the enemy is an animal of your choice.")
+   (read-template "game with an animal, 3 apples, 5 of another food item, silver coins, another type of coin, and an enemy of your choice.")
 
    'farm-024
-   (read-template "game where a wolf is trying to survive by eating apples and grapes, it can collect kiwis and peppers, and a sheep and cow are the enemies.")
+   (read-template "game with a wolf, 1 apple, 10 grapes, kiwi coins, peppers coins, and a sheep and cow as the enemies.")
 
    'farm-025
-   (read-template "game where an apple is trying to survive by eating wolves and dogs, it can collect horses and llamas, and grapes, kiwis, and apples are the enemies.")
+   (read-template "game with a horse, 3 peppers, 3 grapes, 3 kiwis, silver coins, gold coins, 3 dogs and 1 wolf as enemies.")
    
    'farm-026
-   (read-template "game where a cow is trying to survive by eating cows, it can collect cows, and a cow is the enemy.")
+   (read-template "game with an apple, eating 5 apples, collecting apple coins, and 2 apple enemies.")
 
    'farm-027
-   (read-template "game where an animal of your choice is trying to survive by eating 2 food items of your choice, it can collect 3 coins of your choice, and 4 animals of your choice are the enemies.")
+   (read-template "game with an animal, 2 food items with an amount of 5, 3 coins of your choice, and 4 different enemies.")
 
    'farm-028
-   (read-template "collection of 2 games. The first game will have a rabbit eating apples, collecting gold, and avoiding a dog. The next game will also have a rabbit eating kiwis, collecting silver, and avoiding a wolf. The objective of the game is to score 10 points. Once you reach those points in the first game, you can close it and it will open the following game which has the same objective of 10 points.")
+   (read-multi-game-template "The first game will have a rabbit, 1 apple, and gold coins. The second game will have a rabbit, 1 kiwi, silver coins, and a dog enemy.")
 
    'farm-029
-   (read-template "collection of 2 games. The first game will have an animal of you choice, eating apples and grapes, collecting silver and gold, and avoiding a wolf. The next game will also have an animal of your choice eating the same thing, collecting copper and silver, and avoiding a wolf. The objective of the game is to score 10 points. Once you reach those points in the first game, you can close it and it will open the following game which has the same objective of 10 points.")
+   (read-multi-game-template "The first game will have an animal of you choice, 3 apples, 5 grapes, silver coins, and gold coins. The second game will have an animal, 1 apple, 1 grape, copper coins, silver coins, and a wolf enemy.")
 
    'farm-030
-   (read-template "collection of 3 games. You can choose your animal in all three games and it can eat 2 food items of your choice. In the first game you can collect gold, silver in the second, and copper in the third. You will avoid 1 enemy of your choice in the first game, 2 in the second, and 3 in the third. The objective of the game is to score 10 points. Once you reach those points in the first game, you can close it and it will open the following game which has the same objective of 10 points.")
+   (read-multi-game-template "The first game will have a horse, 5 apples, 5 grapes, 5 kiwis, gold coins, and a dog as the enemy. The second one will have a llama, 5 apples, 5 grapes, silver coins, 2 dog enemies, and 1 wolf enemy. The third one will have a rabbit, 5 apples, copper coins, and 3 wolf enemies.")
 
 
 
