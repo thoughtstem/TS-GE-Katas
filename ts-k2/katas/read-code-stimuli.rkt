@@ -157,19 +157,19 @@
    (read-template "game with an animal and all 6 different food items.")
 
    'farm-007
-   (read-template "game with a chicken, 5 apples, and 5 tomotoes.")
+   (read-template "game with a cow, 5 apples, and 5 kiwis.")
 
    'farm-008
    (read-template "game with a llama, 3 of a certain food, and 5 of another food.")
 
    'farm-009
-   (read-template "game with a horse, 1 of a certain food, 2 of another food, and 3 of another.")
+   (read-template "game with a cow, 1 of a certain food, 2 of another food, and 3 of another.")
 
    'farm-010
-   (read-template "game where a rabbit is trying to survive by eating another rabbit.")
+   (read-template "game with a rabbit, 1 apple, and copper coins.")
    
    'farm-011
-   (read-template "game with a cow, 1 kiwis, and copper coins.")
+   (read-template "game with a cow, 1 kiwis, and gold coins.")
    
    'farm-012
    (read-template "game with an animal, 1 food item of your choice, and coins of your choice.")
@@ -193,13 +193,13 @@
    (read-template "game with an animal, 2 different food items, and all 3 types of coins.")
 
    'farm-019
-   (read-template "game with a potato, 3 silver coins as food, and apple coins.")
+   (read-template "game with a sheep, 1 apple, silver coins, and a dog has an enemy.")
    
    'farm-020
    (read-template "game with an animal, 5 different food items, and 5 different coins.")
    
    'farm-021
-   (read-template "game with a sheep, grapes, silver coins, and a dog as the enemy.")
+   (read-template "game with a sheep, kiwis, grapes, silver coins, and a dog and a wolf as the enemies.")
 
    'farm-022
    (read-template "game with a horse, 1 pepper, 1 kiwi, silver and gold coins, and a wolf as the enemy.")

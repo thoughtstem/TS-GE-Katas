@@ -8,14 +8,12 @@
          ts-battle-arena-avengers/katas
          )
 
-
 (define-kata game-jam
   (recite
    #:in "Tell me about our Final Game Jam!"
    #:out (list "Building a BATTLE ARENA GAME."  
                "In ONE HOUR."
                "Including: a HERO, PLANET DESIGNS, VILLAINS, POWERS, and POWER-UPS.")))
-
 
 (define-kata-collection powerup-katas
   (first (kata-collection-katas health-katas))
