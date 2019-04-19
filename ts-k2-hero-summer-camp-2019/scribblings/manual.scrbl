@@ -13,13 +13,20 @@
 
 @table-of-contents[]
 
-@(sections-for kata-section
-               day-one 
-               day-two
-               day-three
-               day-four
-               day-five
-               )
+@section{Basic Katas}
+@(render day-one)
+
+@section{Power Katas}
+@(render day-two)
+
+@section{Power Color Katas}
+@(render day-three)
+
+@section{Multi Level Katas}
+@(render day-four)
+
+@section{More Multi Level Katas}
+@(render day-five)
 
 @section{All Hero Katas}
 @(render hero)
