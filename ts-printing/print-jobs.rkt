@@ -368,4 +368,4 @@
       [FRONT-COLOR-FG clear-white]
       [FRONT-TITLE    (title "(heros)")])))
 
-(ts-k2-sea-summer-camp-2019->Desktop)
+

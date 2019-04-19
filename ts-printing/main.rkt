@@ -7,7 +7,8 @@
          FRONT-COLOR-FG
          EXTRA-META
          STARTING-CARD-NUMBER
-         begin-job)
+         begin-job
+         save-pict)
 
 (require ts-kata-util/katas/rendering/pict
          (except-in ts-kata-util/katas/main read))
@@ -138,7 +139,17 @@
   (-> list? pict?) ;k2 kata datas happen to be structured as lists.  Putting this contract here so that it breaks when we inevitably decide to change that...
 
   ;But I'll try to make it somewhat general, so it doesn't matter where the pict is in the list, or how many there are.  (Currently, just one.)
-  (apply vc-append (filter pict? kata-data)))
+
+  (define extracted-lang 
+    (text
+      (first-line 
+        (expression-data 
+          (first kata-data)))))
+
+  (apply vl-append 20 extracted-lang (filter pict? kata-data)))
+
+(define (first-line s)
+  (first (string-split s "\n")))
 
 
 (define (kata->card k)
@@ -271,5 +282,12 @@
                          (kata-collection-katas collection))))) 
     ...))
 
+
+
+#;
+(require ts-k2-hero-summer-camp-2019/katas)
+#;
+(show-pict
+  (kata->back-side (first (kata-collection-katas farm))))
 
 
