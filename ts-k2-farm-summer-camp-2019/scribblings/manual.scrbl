@@ -13,13 +13,20 @@
 
 @table-of-contents[]
 
-@(sections-for kata-section
-               day-one 
-               day-two
-               day-three
-               day-four
-               day-five
-               )
+@section{Food Katas}
+@(render day-one)
+
+@section{Coin Katas}
+@(render day-two)
+
+@section{More Coin Katas}
+@(render day-three)
+
+@section{Enemy Katas}
+@(render day-four)
+
+@section{More Enemy Katas}
+@(render day-five)
 
 @section{All Farm Katas}
 @(render farm)
