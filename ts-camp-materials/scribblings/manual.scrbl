@@ -21,11 +21,14 @@ For Week-Long Summer camps, or any other 3 hour programs, use:
 For any Camp or ASP, use:
 @itemlist[@item{Game Jam Resources}]
 
+@table-of-contents[]
+
 
 @(include-section "full-day-schedule.rkt")
 @(include-section "one-day-materials.rkt")
 @(include-section "half-day-schedule.rkt")
 @(include-section "game-jam-resources.rkt")
+@(include-section "icebreaker-games.rkt")
 
 
 
