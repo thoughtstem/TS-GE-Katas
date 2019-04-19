@@ -246,111 +246,86 @@
    (read-template "game where you are a sprite of your choice hunting for three foods of your choice.")
 
    'sea-006
-   (read-template "game where you are a sprite of your choice hunting for pineapples, broccoli, kiwis, tomatoes and apples.")
+   (read-template "game where you are a sprite of your choice hunting for pineapple, broccoli, kiwis, tomatoes and apples.")
 
    'sea-007
-   (read-template "game where you are an apple hunting for broccoli.")
-
-   'sea-008
-   (read-template "game where you are a pineapple hunting for two foods of your choice.")
-
-   'sea-009
-   (read-template "game where you are a kiwi hunting for three foods of your choice.")
-
-   'sea-010
-   (read-template "game where you are a green fish hunting for other green fish!")
-
-   'sea-011
-   (read-template "game where you are shark hunting for kiwi fruit and collecting copper coins.")
-
-   'sea-012
-   (read-template "game where you are a sprite of your choice hunting for one sprite of your choice and collecting a sprite of your choice.")
-
-   'sea-013
-   (read-template "game where you are an octopus hunting for pineapples and another sprite of your choice, and collecting silver coins and another sprite of your choice.")
-
-   'sea-014
-   (read-template "game where you are a jellyfish hunting for broccoli and apples and collecting gold coins.")
-
-   'sea-015
-   (read-template "game where you are a sprite of your choice hunting for copper coins and collecting apples!")
-
-   'sea-016
-   (read-template "game where you are a sprite of your choice hunting for two sprites of your choice and collecting two sprites of your choice.")
-
-   'sea-017
-   (read-template "game where you are a sprite of your choice hunting for tomatoes and collecting two sprites of your choice.")
-
-   'sea-018
-   (read-template "game where you are a sprite of your choice hunting for two other sprites of your choice and collecting copper, silver and gold coins.")
-
-   'sea-019
-   (read-template "game where you are a broccoli hunting for a sprite of your choice and collecting a sprite of your choice.")
-
-   'sea-020
-   (read-template "game where you are a sprite of your choice hunting for four sprites of your choice and collecting four sprites of your choice.")
-
-   'sea-021
    (read-template "game where you are a ghost fish hunting for strawberries and avoiding a shark enemy.")
 
-   'sea-022
-   (read-template "game where you are a jellyfish hunting for potatoes and cherries and avoiding a red fish enemy.")
+   'sea-008
+   (read-template "game where you are a jellyfish hunting for 5 potatoes and avoiding a red fish enemy.")
 
-   'sea-023
-   (read-template "game where you are a sprite of your choice hunting for mushrooms and another sprite of your choice and avoiding an enemy of your choice.")
+   'sea-009
+   (read-template "game where you are a sprite of your choice hunting for cherries and avoiding 5 crab enemies.")
 
-   'sea-024
-   (read-template "game where you are a shark hunting for apples and strawberries and avoiding crab and jellyfish enemies.")
+   'sea-010
+   (read-template "game where you are a shark hunting for 3 apples and 2 strawberries, and avoiding crab and jellyfish enemies.")
 
-   'sea-025
-   (read-template "game where you are a strawberry hunting for orange fish and octopus and avoiding tomato, kiwi, and banana enemies!")
+   'sea-011
+   (read-template "game where you are a strawberry hunting for orange fish and octopus and avoiding 8 banana enemies!")
 
-   'sea-026
-   (read-template "game where you are a shark hunting for sharks and avoiding a shark enemy!")
+   'sea-012
+   (read-template "game where you are a shark hunting for 5 sharks and avoiding 5 shark enemies!")
 
-   'sea-027
-   (read-template "game where you are a sprite of your choice, hunting for two other sprites of your choice, and avoiding four enemies of your choice.")
+   'sea-013
+   (read-template "game where you are an octopus, hunting for tomatoes and kiwi, and avoiding 3 orange fish enemies.")
 
-   'sea-028
-   (read-template "collection of 2 games. In the first game, you are an octopus hunting for apples and avoiding a crab enemy.
-                   In the second game, you are still an octopus, but hunting for cherries and avoiding a shark enemy!")
+   'sea-014
+   (read-template "game where you are a sprite of your choice, hunting for 10 apples, and avoiding 10 enemies of your choice.")
 
-   'sea-029
-   (read-template "collection of 2 games. In the first game, you are a sprite of your choice hunting for strawberries and potatoes and avoiding an orange fish enemy.
-                   When you 'level up' in the next game, every thing is the same except you are now avoiding a jellyfish enemy.")
+   'sea-015
+   (read-template "game where you are a jellyfish, hunting for kiwi, and avoiding a RED jellyfish enemy!")
 
-   'sea-030
-   (read-template "collection of 3 games. In all games, you can be the sprite of your choice hunting two sprites of your choice and avoiding two enemies of your choice.")
+   'sea-016
+   (read-template "game where you are a sprite of your choice, hunting for 5 PURPLE tomatoes, and avoiding 5 GREEN shark enemies.")
 
-   'sea-031
+   'sea-017
+   (read-template "game where you are a sprite of your choice, hunting for 3 ORANGE foods of your choice and 3 YELLOW foods,
+                   and avoiding 2 BLUE enemies of your choice and 2 PURPLE enemies of your choice.")
+
+   'sea-018
+   (read-template "collection of 2 games. In the first game, you are a sprite of your choice hunting for strawberries and YELLOW potatoes and avoiding an orange fish enemy.
+                   When you 'level up' in the next game, every thing is the same except you are now avoiding 5 orange fish enemies.")
+
+   'sea-019
    (read-template "game where you are a starfish healing an octopus friend.")
 
-   'sea-032
+   'sea-020
    (read-template "game where you are a jellyfish healing  green fish, orange fish and red fish friends.")
 
-   'sea-033
-   (read-template "game where you are a shark healing yellow fish and ghost fish friends.")
+   'sea-021
+   (read-template "game where you are a shark healing 2 yellow fish and 2 ghost fish friends.")
 
-   'sea-034
-   (read-template "game where you are a crab healing three other crab friends!")
+   'sea-022
+   (read-template "game where you are a crab healing a RED crab, GREEN crab and PURPLE crab friend.")
 
-   'sea-035
-   (read-template "game where you are a sprite of your choice healing red fish, starfish and broccoli friends.")
+   'sea-023
+   (read-template "game where you are a sprite of your choice healing 5 friends of your choice,
+                   and hunting for pineapple and broccoli.")
 
-   'sea-036
-   (read-template "game where you are mushroom healing apple, kiwi, pineapple and broccoli friends!")
+   'sea-024
+   (read-template "collection of 2 games. In both games you are a sprite of your choice. In the first game you are healing 4 yellow fish and hunting for 4 apples.
+                   In the second game you are hunting for 4 yellow fish and 4 more friends of your choice, and hunting for 4 BLUE apple.")
 
-   'sea-037
-   (read-template "game where you are a sprite of your choice healing yellow fish and shark friends and two other sprites of your choice.")
+   'sea-025
+   (read-template "game where you are a sprite of your choice healing yellow fish and BLUE shark friends and two other friends of your choice.")
 
-   'sea-038
-   (read-template "collection of 2 games. In both games you are a ghost fish. In the first game you are healing starfish and orange fish friends.
-                   In the second game, you are healing a crab friend and three other sprites of your choice.")
+   'sea-026
+   (read-template "game where you are a ghost fish healing 5 PURPLE friends of your choice, hunting for 5 ORANGE mushrooms and avoiding a shark enemy.")
 
-   'sea-039
-   (read-template "collection of 2 games. In bothe games you are a sprite of your choice. In the first game you are healing an octopus friend and two other sprites of your choice.
-                   In the second game, you are healing a green fish and two other sprites of your choice.")
+   'sea-027
+   (read-template "collection of 2 games. In both games you are a sprite of your choice. In the first game you are healing starfish and orange fish friends.
+                   In the second game, you are healing crab, green fish, red fish, and jellyfish friends.")
 
-   'sea-040
-   (read-template "game where you are a sprite of your choice healing four friends of your choice.")))
+   'sea-028
+   (read-template "collection of 2 games. In both games you are a sprite of your choice. In the first game you are healing 4 GREEN octopus friends, hunting for 4 kiwi, and avoiding 4 crab enemies.
+                   In the second game, you are healing 4 GREEN sprites of your choice, hunting for 4 foods of your choice, and avoiding 4 enemies of your choice.")
 
+   'sea-029
+   (read-template "game where you pick all the sprites! In addition to choosing who you play as, choose a RED, ORANGE and YELLOW friend to heal, a 3 foods to hunt for,
+                   and GREEN, BLUE and PURPLE enemies.")
+
+   'sea-030
+   (read-template "collection of 2 games. In both games you are a sprite of your choice. In the first game you are healing ORANGE starfish and ORANGE crab friends, hunting for ORANGE broccoli and ORANGE kiwi, and avoiding ORANGE shark and ORANGE jellyfish enemies.
+                   In the second game, you are healing 3 orange fish and 3 green fish friends, hunting for 3 pineapples and 3 mushrooms, and avoiding 3 red fish and 3 yellow fish enemies.")))
+
+  

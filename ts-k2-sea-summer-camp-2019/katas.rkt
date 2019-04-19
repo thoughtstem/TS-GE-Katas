@@ -2,33 +2,20 @@
 
 (provide (all-from-out ts-k2/katas))
 
-(require racket/generator
-         ts-kata-util/katas/main
+(require ts-kata-util/katas/main
          ts-k2/katas)
 
-(define social-games-generator (sequence->repeated-generator (kata-collection-katas social-games)))
-(define sea-generator          (sequence->repeated-generator (kata-collection-katas sea)))
+(define-kata-collection day-one
+  (take (kata-collection-katas sea) 6))
 
-(define social-per-day 2)
-(define sea-per-day   6)
+(define-kata-collection day-two
+  (take (drop (kata-collection-katas sea) 6) 6))
 
-(define (next n g)
-  (kata-collection
-     (map (thunk* (g)) (range n)))) 
+(define-kata-collection day-three
+  (take (drop (kata-collection-katas sea) 12) 6))
 
-(define-syntax-rule (define-day day) 
-  (define/provide day 
-                  (merge-collections 
-                    (next social-per-day social-games-generator)
-                    (next sea-per-day    sea-generator))))
+(define-kata-collection day-four
+  (take (drop (kata-collection-katas sea) 18) 6))
 
-(define-syntax-rule (define-days day ...)
-  (begin (define-day day) ...))
-
-
-(define-days day-one 
-             day-two
-             day-three
-             day-four
-             day-five)
-
+(define-kata-collection day-five
+  (take (drop (kata-collection-katas sea) 24) 6))
