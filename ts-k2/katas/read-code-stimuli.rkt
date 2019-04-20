@@ -7,6 +7,9 @@
 (define (read-template noun)
   (read (~a "Write code to make a " noun )))
 
+(define (short-template noun)
+  (read (~a "Code a game where you are " noun)))
+
 (define (read-multi-game-template noun)
   (read (~a "Write a collection of games. " noun " The objective of each game is to score 10 points. Once you reach that score, close the game and continue with the next.")))
 
@@ -326,6 +329,26 @@
 
    'sea-030
    (read-template "collection of 2 games. In both games you are a sprite of your choice. In the first game you are healing ORANGE starfish and ORANGE crab friends, hunting for ORANGE broccoli and ORANGE kiwi, and avoiding ORANGE shark and ORANGE jellyfish enemies.
-                   In the second game, you are healing 3 orange fish and 3 green fish friends, hunting for 3 pineapples and 3 mushrooms, and avoiding 3 red fish and 3 yellow fish enemies.")))
+                   In the second game, you are healing 3 orange fish and 3 green fish friends, hunting for 3 pineapples and 3 mushrooms, and avoiding 3 red fish and 3 yellow fish enemies.")
+
+   'zoo-001
+   (short-template "a monkey eating bananas")
+
+   'zoo-002
+   (short-template "an elephant eating grapes")
+
+   'zoo-003
+   (short-template "a hippo eating apples, potatos, and onions")
+
+   'zoo-004
+   (short-template "a kangaroo eating apples and 2 sprites of your choice")
+
+   'zoo-005
+   (short-template "a sprite of your choice eating 3 different sprites of your choice")
+
+   'zoo-006
+   (short-template "a sprite of your choice eating apples, bananas, grapes, onions, and tomatoes")
+   
+   ))
 
   
