@@ -9,7 +9,7 @@
 
 @title{Adventures in Coding and Zoo Animals: K-2nd}
 
-@k2-farm-badges
+@k2-zoo-badges
 
 @table-of-contents[]
 
