@@ -354,7 +354,7 @@
   (local-require ts-k2-sea-summer-camp-2019/katas)
 
   (begin-job "ts-k2-sea-summer-camp-2019-cards"
-    (farm
+    (sea
       [FRONT-COLOR    bright-blue]
       [FRONT-COLOR-FG clear-white]
       [FRONT-TITLE    (title "(sea)")])))
@@ -363,7 +363,7 @@
   (local-require ts-k2-hero-summer-camp-2019/katas)
 
   (begin-job "ts-k2-hero-summer-camp-2019-cards"
-    (farm
+    (hero
       [FRONT-COLOR    bright-green]
       [FRONT-COLOR-FG clear-white]
       [FRONT-TITLE    (title "(heros)")])))

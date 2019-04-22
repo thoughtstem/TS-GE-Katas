@@ -1,7 +1,7 @@
 #lang racket
 
 (require "./main.rkt"
-         "../main.rkt"
+         "../challenge-cards/main.rkt"
          (only-in pict text))
 
 (require 
@@ -32,8 +32,7 @@
   (rename-in (only-in (submod k2/lang/farm/enemies  ratchet) farm-lang)
              [farm-lang farm-lang-enemies]) 
   (rename-in (only-in (submod k2/lang/farm/coins  ratchet) farm-lang)
-             [farm-lang farm-lang-coins]) 
-  )  
+             [farm-lang farm-lang-coins]))  
 
 
 (begin-identifier-job  "k2-langs"  
@@ -63,7 +62,6 @@
                        (farm-lang-enemies
                          [EXTRA-META (text "k2/lang/farm/enemies")])
                        (farm-lang-coins
-                         [EXTRA-META (text "k2/lang/farm/coins")])
-                       )
+                         [EXTRA-META (text "k2/lang/farm/coins")]))
 
 

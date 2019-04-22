@@ -6,7 +6,7 @@
          pict
          (only-in pict/code codeblock-pict)
          "./double-size.rkt"
-         "../main.rkt")
+         "../challenge-cards/main.rkt")
 
 (define HEIGHT 600)
 (define WIDTH HEIGHT)
@@ -32,11 +32,11 @@
   (define p  (identifier-mapping-original im)) 
 
   (front-side 
-    #;
-    (scale p 3)
-    (double-size 
+    (scale-to-fit
       (double-size 
-        (pict->bitmap p)))))
+        (double-size 
+          (pict->bitmap p)))
+      200 200)))
 
 
 (define (identifier->front-side im)
