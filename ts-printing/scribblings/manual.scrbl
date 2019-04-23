@@ -15,9 +15,15 @@
   placed into a subdirectory front/, and backs will be placed into a subdirectory
   back/
 
-  Here is the starting point for doing a print order: 
+  Here are the templates we've used in the past:
+
+  Medium hext cards (2.6" x 3"):
 
   @link{https://www.makeplayingcards.com/design/your-own-hex-cards.html}
+
+  Bigger hex cards (3.25" x 3.75"):
+
+  @link{https://www.makeplayingcards.com/design/custom-hexagonal-game-cards.html}
 }
 
 @defproc[(collection->Desktop [kc kata-collection?] [s string?]) void?]{
