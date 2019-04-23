@@ -33,9 +33,9 @@ and Friday are all slightly different. The reasons for this are straightforward:
 
 @subsection{Check-in}
 
-@larger{AM -- MON 8:45am-9:15am & TUE-FRI 8:45am-9:00am}
+@larger{AM -- mon 8:45am-9:15am & tue-fri 8:45am-9:00am}
 
-@larger{PM -- MON 12:45pm-1:15pm & TUE-FRI 12:45pm-1:00pm}
+@larger{PM -- mon 12:45pm-1:15pm & tue-fri 12:45pm-1:00pm}
 
 It is important to start check-in on time, @bold{but not early!} On the first day,
 all staff and students stay at the pick up location until all students arrive, or
@@ -124,9 +124,9 @@ Attendance is still required.
 
 
 @subsection{Icebreakers}
-@larger{AM -- MON 9:15am-9:30am}
+@larger{AM -- mon 9:15am-9:30am}
 
-@larger{AM -- MON 1:15pm - 1:30pm}
+@larger{AM -- mon 1:15pm - 1:30pm}
 
 The first activity upon arriving to the classroom should be getting to know the
 students and giving them a chance to get to know you! @bold{EXCITING ENERGY} is
@@ -135,15 +135,15 @@ vital for this activity.
 Icebreakers should be led by the Head Coach, and all Team Leaders should
 participate.
 
-Choose one or two of the Icebreaker games in the section below-- or play your own
-favorite get-to-know-you game!
+Choose one or two of the @secref["Icebreaker_Games"
+                                 #:doc '(lib "ts-camp-materials/scribblings/manual.scrbl")]
+or play your own favorite get-to-know-you game!
 
-@bold{LINK TO ICEBREAKER GAMES HERE????}
 
 @subsection{Coding Warmup}
-@larger{AM -- TUE-FRI 9:00am-9:15am}
+@larger{AM -- tue-fri 9:00am-9:15am}
 
-@larger{PM -- TUE-FRI 1:00pm-1:15pm}
+@larger{PM -- tue-fri 1:00pm-1:15pm}
 
 A chance for students to settle in, try katas from yesterday, test combining
 katas, etc while the Teaching Team settles in as well. Fairly independant time,
@@ -152,9 +152,9 @@ and the Head Coach may want to give out specific challenges with goals and TS
 Dollar rewards to keep students on task.
 
 @subsection{Intro & Starter Katas}
-@larger{AM -- MON 9:30am-10:15am}
+@larger{AM -- mon 9:30am-10:15am}
 
-@larger{PM -- MON 1:30pm-2:15pm}
+@larger{PM -- mon 1:30pm-2:15pm}
 
 Head Coach leads into this section by explaining a few core concepts:
 @itemlist[@item{GAME JAM!}
@@ -168,9 +168,9 @@ TLs, who start their team on the first kata section. See more details on
 teaching katas below:
 
 @subsection{Katas}
-@larger{AM -- TUE-FRI 9:15am-10:00am}
+@larger{AM -- tue-fri 9:15am-10:00am}
 
-@larger{PM -- TUE-FRI 1:15pm-2:00pm}
+@larger{PM -- tue-fri 1:15pm-2:00pm}
 
 Breakout time when each camp is working independently with their Team Leader to
 learn and earn katas in their curriculum. Here's how to optimize the LEARNING as
@@ -195,9 +195,9 @@ encouragement, helping with any especially tricky bugs and assisting in behavior
 management when needed.
 
 @subsection{Snack Break}
-@larger{AM -- MON 10:15am-10:30am & TUE-FRI 10:00am-10:15am}
+@larger{AM -- mon 10:15am-10:30am & tue-fri 10:00am-10:15am}
 
-@larger{PM -- MON 2:15pm-2:30pm & TUE-FRI 2:00pm-2:15pm}
+@larger{PM -- mon 2:15pm-2:30pm & tue-fri 2:00pm-2:15pm}
 
 This is @bold{Team Leader Break Time} as well. Head Coach should manage the
 camp while TLs @bold{leave the camp room} and take a 15 minute break. If the HC
@@ -239,9 +239,9 @@ the camp environment}. Remember:
                 few minutes."]]
 
 @subsection{Game Time}
-@larger{AM -- MON 10:30am-10:45am & TUE-FRI 10:15am-10:45am}
+@larger{AM -- mon 10:30am-10:45am & tue-fri 10:15am-10:45am}
 
-@larger{PM -- MON 2:30pm-2:45pm & TUE-FRI 2:15pm-2:45pm}
+@larger{PM -- mon 2:30pm-2:45pm & tue-fri 2:15pm-2:45pm}
 
 Why Game Time? Social games can help students...
 @itemlist[@item{...release excess energy!}
@@ -269,9 +269,9 @@ will ask TLs to lead a game, expecially if the group is splitting up and playing
 different games.
 
 @subsection{Nerd Out}
-@larger{AM -- MON-THU 10:45am-11:00am}
+@larger{AM -- mon-thu 10:45am-11:00am}
 
-@larger{PM -- MON-THU 2:45pm-3:00pm}
+@larger{PM -- mon-thu 2:45pm-3:00pm}
 
 During Nerd Out, students and Team Leaders breakout into their camp groups. Head
 Coach gives out a discussion or activity prompt, which TLs can then customize
@@ -283,32 +283,76 @@ for their specific camp fandom. Nerd Out is an opportunity for...
           @item{...start planning for Game Jam and the game they may want to create!}]
 
 @subsection{Kata Practice}
-@larger{AM -- MON-THU 11:00am-11:30am}
+@larger{AM -- mon-thu 11:00am-11:30am}
 
-@larger{PM -- MON-THU 3:00pm-3:30pm}
+@larger{PM -- mon-thu 3:00pm-3:30pm}
+
+Kata Practice is a time to continue working on the day's katas. Depending on student
+progress and areas of challenge, the Team Leader may choose to do one or more of the
+following, roughly ordered by priority:
+
+@itemlist[#:style 'ordered
+          @item[@bold{Practice synthesizing different katas into one game -- like they will
+                do in Game Jam!}]
+          @item{Continue earning katas in the day's section, if TL feels like they
+                did not make enough progress earlier.}
+          @item{Go back and earn katas from a previous day's section, if TL feels that
+                the students will benefit from more skill in another area.}]
+
+On most days, the TLs should use this time to challenge students to
+creatively use the knowledge they have gained through katas to build a more complex game.
+The TL can combine two or more challenge cards (from sections that they have covered)
+to create a custom challenge for their students. For example: It is day three and you
+have learned Avatar, Enemies and Weapons. You pick an Avatar card that says "Make a game
+with a pirateboy-sprite avatar." You pick a Weapons card that says "Make a game with a
+sword that does 50 damage." You challenge your students to build a game with a pirateboy-sprite
+avatar and a sword that does 50 damage.
+
 
 @subsection{Game Show}
-@larger{AM -- MON-THU 11:30am-11:45am}
+@larger{AM -- mon-thu 11:30am-11:45am}
 
-@larger{PM -- MON-THU 3:30pm-3:45pm}
+@larger{PM -- mon-thu 3:30pm-3:45pm}
+
+This activity starts as a whole camp activity lead by the Head Coach, before breaking out
+into their camp groups.
+
+Head Coach starts by asking a question related to the day's activities. Questions are
+provided in the day's script. Rules and rewards of the game show are outlined in advance
+-- raised hands or some other non-screaming answer strategy*, waiting for HC to call on you
+before answering, playing for ThoughtSTEM Dollars or some other reward.
+
+After asking the handful of all-access questions, HC passes off to TLs, who continue the
+game show with questions specific to their camp and the katas learned that day. Rules and
+rewards may change going from the big group to the smaller group, so be sure to review
+before you start -- "buzzers" or some other non-screaming answer strategy*, waiting to be
+called on before answering, playing for ThoughtSTEM Dollars or some other reward.
+
+* To make the Game Show more fun, HCs/TLs are encouraged to use a more active/fun way of
+indicating that you know the answer than simply raising your hand. For example, when in
+the whole camp group, high fiving the TL who then makes a buzzer noise. Then HC can call
+on the TL who buzzes first, who can pick the student who high fived them first. Or, when
+in camp teams, making your own answer buzzer sound!
 
 @subsection{Market/Wrap Up}
-@larger{AM -- MON-THU 11:45am-12:00(ish)pm}
+@larger{AM -- mon-thu 11:45am-12:00(ish)pm}
 
-@larger{PM -- MON-THU 3:45pm-4:00(ish)pm}
+@larger{PM -- mon-thu 3:45pm-4:00(ish)pm}
+
+
 
 @subsection{Lunch}
-@larger{AM ONLY -- MON-FRI 12:00pm-12:45pm}
+@larger{AM ONLY -- mon-fri 12:00pm-12:45pm}
 
 @subsection{Check-out}
-@larger{AM -- MON-FRI 12:45pm-1:00pm}
+@larger{AM -- mon-fri 12:45pm-1:00pm}
 
-@larger{PM -- MON-FRI 4:00pm-4:15pm}
+@larger{PM -- mon-fri 4:00pm-4:15pm}
 
 @subsection{GAME JAM}
-@larger{AM -- FRI 10:30am-12:00pm}
+@larger{AM -- fri 10:30am-12:00pm}
 
-@larger{PM -- FRI 2:30pm-4:00pm}
+@larger{PM -- fri 2:30pm-4:00pm}4/16
 
 
 
