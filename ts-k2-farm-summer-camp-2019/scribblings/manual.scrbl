@@ -32,5 +32,6 @@
 @(render farm)
 
 @(include-section ts-camp-materials/scribblings/half-day-schedule)
+@(include-section ts-camp-materials/scribblings/eod-discussions)
 @(include-section ts-camp-materials/scribblings/game-jam-resources)
 @;(include-section k2/scribblings/assets-library)
