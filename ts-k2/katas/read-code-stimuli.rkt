@@ -8,7 +8,7 @@
   (read (~a "Write code to make a " noun )))
 
 (define (short-template noun)
-  (read (~a "Code a game where you are " noun)))
+  (read (~a "Code a game with " noun)))
 
 (define (read-multi-game-template noun)
   (read (~a "Write a collection of games. " noun " The objective of each game is to score 10 points. Once you reach that score, close the game and continue with the next.")))
@@ -332,23 +332,101 @@
                    In the second game, you are healing 3 orange fish and 3 green fish friends, hunting for 3 pineapples and 3 mushrooms, and avoiding 3 red fish and 3 yellow fish enemies.")
 
    'zoo-001
-   (short-template "a monkey eating bananas")
+   (short-template "a monkey eating bananas.")
 
    'zoo-002
-   (short-template "an elephant eating grapes")
+   (short-template "an elephant eating grapes.")
 
    'zoo-003
-   (short-template "a hippo eating apples, potatos, and onions")
+   (short-template "a hippopotamus eating apples, potatos, and onions.")
 
    'zoo-004
-   (short-template "a kangaroo eating apples and 2 sprites of your choice")
+   (short-template "a kangaroo eating apples and 2 sprites of your choice.")
 
    'zoo-005
-   (short-template "a sprite of your choice eating 3 different sprites of your choice")
+   (short-template "a sprite of your choice eating 3 different sprites of your choice.")
 
    'zoo-006
-   (short-template "a sprite of your choice eating apples, bananas, grapes, onions, and tomatoes")
+   (short-template "a sprite of your choice eating apples, bananas, grapes, onions, and tomatoes.")
+
    
+   'zoo-007
+   (short-template "a hippopotamus eating 5 apples and 5 bananas.")
+
+   'zoo-008
+   (short-template "a hippopotamus eating 3 apples and 5 food sprites of your choice.")
+
+   'zoo-009
+   (short-template "a monkey eating a red banana, a green banana, and a blue banana.")
+
+   'zoo-010
+   (short-template "a hippopotamus eating 5 purple food sprites of your choice.")
+
+   'zoo-011
+   (short-template "a penguin, a fish, and a copper coin in the zoo.")
+
+   'zoo-012
+   (short-template "an avatar sprite of your choice, a food sprite of your choice, and 5 gold coins colored green.")
+
+   
+   'zoo-013
+   (short-template "a zookeeper eating apples and collecting all 3 coin sprites (copper, silver, and gold).")
+   
+   'zoo-014
+   (short-template "a zookeeper eating apples and bananas and collecting 2 gold coins, 4 silver coins, and 6 copper coins.")
+
+   'zoo-015
+   (short-template "an avatar sprite of your choice, 10 of the same food sprite of your choice, and 10 gold coins colored purple.")
+
+   'zoo-016
+   (short-template "a green penguin eating 5 blue fish and collecting 10 gold coins colored red.")
+
+   'zoo-017
+   (read "Code two levels of a game: one with a monkey eating 10 bananas, and another with a monkey eating 10 bananas AND collecting 10 silver coins.")
+
+   'zoo-018
+   (read (~a "Code two levels of a game: one with an avatar of your choice, 2 foods of your choice, and 5 copper coins "
+             "and another with an avatar of your choice, 2 foods of your choice, and 10 gold coins."))
+
+   'zoo-019
+   (short-template "a zookeeper that has to heal a monkey to full health.")
+
+   'zoo-020
+   (short-template "a zookeeper that has to heal a monkey, an elephant, and a giraffe.")
+
+   'zoo-021
+   (short-template "a zookeeper that has to heal a hippo and a kangaroo.")
+
+   'zoo-022
+   (short-template "a zookeeper that has to heal 3 penguins.")
+
+   'zoo-023
+   (short-template "a zookeeper that has to heal 2 monkeys and 2 elephants.")
+
+   'zoo-024
+   (short-template "a zookeeper that has to heal 2 monkeys and 2 elephants.")
+
+   
+   'zoo-025
+   (short-template "a purple zookeeper that has to heal 2 monkeys, 4 elephants, and 6 penguins.")
+
+   'zoo-026
+   (short-template "a red zookeeper that has to heal 4 green giraffes and 4 purple giraffes.")
+
+   'zoo-027
+   (short-template "a zookeeper that has to heal 4 red sprites (of your choice), 4 green sprites, and 4 blue sprites.")
+
+   'zoo-028
+   (short-template "a zookeeper that has to heal 5 monkeys and 5 hippos and eat 5 apples and 5 bananas.")
+
+   'zoo-029
+   (read (~a "Code two levels of a game: one with a zookeeper that has to heal 4 red monkeys, 4 blue monkeys, and 4 green monkeys "
+             "and another with a zookeeper that has to heal 4 orange giraffes, 4 yellow giraffes, and 4 purple giraffes."))
+
+   'zoo-030
+   (read (~a "Code three levels of a game. Level 1 must have a zookeeper, 2 monkeys, and 2 bananas. "
+             "Level 2 must have a zookeeper, 4 penguins, and 4 fish. "
+             "Level 3 must have a zookeeper, 6 hippos, and 6 apples."))
    ))
 
   
