@@ -18,7 +18,6 @@
 
 @section{Intro Katas}
 @(render core-values)
-@(render game-jam)
 @(render hello-world-katas)
 
 @section{Hero Katas}

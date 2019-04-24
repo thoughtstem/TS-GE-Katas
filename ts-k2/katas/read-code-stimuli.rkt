@@ -32,7 +32,7 @@
    (read-template "red fish above a blue fish -- with a green fish beside them")
 
    'hero-000
-   (read-template "spritesheet for Blackwidow")
+   (read "Create a basic hero game.")
 
    'hero-001
    (read-template "spritesheet for Ironman")
@@ -63,7 +63,6 @@
 
    'hero-010
    (read-template "game where Gamora is the hero, and there are four Gamora enemies too.")
-
 
    'hero-011
    (read-template "game where Ironman is the hero, and Gamora is your enemy.  Give Gamora a Hammer power.")
@@ -116,7 +115,6 @@
    'hero-027
    (read-template "game with two levels.  In the first level, the enemy is Gamora, and in the second level the enemy is Drax. In both levels, the hero is Ironman.")
 
-
    'hero-028
    (read-template "game with three levels.  In the first level, the enemy is Gamora, in the second level the enemy is Drax, in the third level the enemy is Hawkeye. In all levels, the hero is Ironman.")
 
@@ -140,6 +138,8 @@
 
 
 
+   'farm-000
+   (read "Create a basic farm game.")
    
    'farm-001
    (read-template "game where a chicken is trying to survive by eating apples.")
@@ -232,7 +232,9 @@
    (read-multi-game-template "The first game will have a horse, 5 apples, 5 grapes, 5 kiwis, gold coins, and a dog as the enemy. The second one will have a llama, 5 apples, 5 grapes, silver coins, 2 dog enemies, and 1 wolf enemy. The third one will have a rabbit, 5 apples, copper coins, and 3 wolf enemies.")
 
 
-
+   'sea-000
+   (read "Create a basic sea game.")
+   
    'sea-001
    (read-template "game where you are a yellow fish finding and eating pineapples.")
 
@@ -331,6 +333,10 @@
    (read-template "collection of 2 games. In both games you are a sprite of your choice. In the first game you are healing ORANGE starfish and ORANGE crab friends, hunting for ORANGE broccoli and ORANGE kiwi, and avoiding ORANGE shark and ORANGE jellyfish enemies.
                    In the second game, you are healing 3 orange fish and 3 green fish friends, hunting for 3 pineapples and 3 mushrooms, and avoiding 3 red fish and 3 yellow fish enemies.")
 
+
+   'zoo-000
+   (read "Create a basic zoo game.")
+   
    'zoo-001
    (short-template "a monkey eating bananas.")
 

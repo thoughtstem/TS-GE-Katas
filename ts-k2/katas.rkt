@@ -7,7 +7,7 @@
          zoo)
 
 (require ts-kata-util/katas/main
-         ts-fundamentals/katas
+         ;ts-fundamentals/katas
          "./katas/read-code-stimuli.rkt"
          "./katas/read-code-tips.rkt" 
          "./katas/ratchet-helpers.rkt")

@@ -1,8 +1,9 @@
 #lang scribble/manual
 
-@(require ts-kata-util/katas/main
-          ts-kata-util/katas/rendering
+@(require ;ts-kata-util/katas/main
+          ;ts-kata-util/katas/rendering
           ts-kata-util/badge-maker/main
+          (prefix-in f: ts-fundamentals/katas)
           "../katas.rkt"
           "../rendering.rkt"
           (except-in racket read do))
@@ -12,6 +13,10 @@
 @k2-superhero2-badges
 
 @table-of-contents[]
+
+@section{Intro Katas}
+@(render f:core-values)
+@(render intro-kata)
 
 @section{Basic Katas}
 @(render day-one)
@@ -32,7 +37,5 @@
 @(render hero)
 
 @(include-section ts-camp-materials/scribblings/half-day-schedule)
+@(include-section ts-camp-materials/scribblings/gameshow-k2)
 @(include-section ts-camp-materials/scribblings/game-jam-resources)
-@;(include-section k2/scribblings/assets-library)
-
-
