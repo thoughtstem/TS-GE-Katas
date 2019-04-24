@@ -1,8 +1,8 @@
 #lang scribble/manual
 
 
-@(require ts-kata-util/katas/main
-          ts-kata-util/katas/rendering
+@(require ;ts-kata-util/katas/main
+          ;ts-kata-util/katas/rendering
           ts-kata-util/badge-maker/main
           "../katas.rkt"
           "../rendering.rkt"
@@ -44,6 +44,7 @@
 @(render planet-design-extra-katas)
 
 @(include-section ts-camp-materials/scribblings/half-day-schedule)
+@(include-section ts-camp-materials/scribblings/gameshow-avengers)
 @(include-section ts-camp-materials/scribblings/game-jam-resources)
 @(include-section battlearena-avengers/scribblings/assets-library)
 
