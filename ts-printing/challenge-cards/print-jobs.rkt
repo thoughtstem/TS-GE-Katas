@@ -354,7 +354,7 @@
   (local-require ts-k2-sea-summer-camp-2019/katas)
 
   (begin-job "ts-k2-sea-summer-camp-2019-cards"
-    (farm
+    (sea
       [FRONT-COLOR    bright-blue]
       [FRONT-COLOR-FG clear-white]
       [FRONT-TITLE    (title "(sea)")])))
@@ -363,9 +363,25 @@
   (local-require ts-k2-hero-summer-camp-2019/katas)
 
   (begin-job "ts-k2-hero-summer-camp-2019-cards"
-    (farm
+    (hero
       [FRONT-COLOR    bright-green]
       [FRONT-COLOR-FG clear-white]
       [FRONT-TITLE    (title "(heros)")])))
 
 
+(define (all->Desktop)
+ (ts-battle-arena-asp-2019->Desktop)
+ (ts-battle-arena-avengers-summer-camp-2019->Desktop)
+ (ts-battle-arena-fortnite-summer-camp-2019->Desktop)
+
+ (ts-battle-arena-starwars-summer-camp-2019->Desktop)
+ (ts-survival-asp-2019->Desktop)
+ (ts-survival-minecraft-summer-camp-2019->Desktop)
+
+ (ts-survival-pokemon-summer-camp-2019->Desktop)
+ (ts-k2-farm-summer-camp-2019->Desktop)
+ (ts-k2-sea-summer-camp-2019->Desktop)
+ (ts-k2-hero-summer-camp-2019->Desktop))
+
+#;
+(all->Desktop)
