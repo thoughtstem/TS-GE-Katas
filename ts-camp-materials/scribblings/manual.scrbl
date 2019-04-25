@@ -19,7 +19,7 @@ For Week-Long Summer camps, or any other 3 hour programs, use:
 @itemlist[@item{Half Day Camp Schedule}]
 
 For any Camp or ASP, use:
-@itemlist[@item{Game Jam Resources}]
+@itemlist[@item{Game Jam}]
 
 @table-of-contents[]
 

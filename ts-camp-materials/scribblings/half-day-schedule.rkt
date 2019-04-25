@@ -71,7 +71,7 @@ Duties include:
                 out of their way to engage students on the fringe."
                 @bold{This is especially important on day one!}]]
 
-@bold[@larger{Kiddo Collectors -- 1-2 Team Leaders}]
+@bold[@larger{Runners -- 1-2 Team Leaders}]
 
 These TLs move between cars, completing the following duties:
 @itemlist[@item{Ensuring student safety around cars}
@@ -109,7 +109,7 @@ slightly different jobs:
                 pick up list with each parent/guardian as they drop off their
                 student.}
           @item{There also may be additional paperwork to hand out to parents.}
-          @item{Team Leader Assignments -- Kiddo Collectors and Traffic
+          @item{Team Leader Assignments -- Runners and Traffic
                 Cop may shift to assist Head Coach or to HB Managers.}]
 
 @bold{Del Mar Unified School District}
@@ -122,6 +122,11 @@ care counselors.
 Students are part of a larger camp and will be brought to your room by counselors.
 Attendance is still required.
 
+@bold{La Jolla Country Day Center}
+
+LJCD Staff handles student check-in. From 8:30-9:00am there is a Morning Kick-Off with all
+students across all camps. Pick up your students from that Kick-Off room and bring to the
+camp room at 9am.
 
 @subsection{Icebreakers}
 @larger{AM -- mon 9:15am-9:30am}
@@ -339,20 +344,150 @@ in camp teams, making your own answer buzzer sound!
 
 @larger{PM -- mon-thu 3:45pm-4:00(ish)pm}
 
+At the end of every day there is an opportunity for Market. However, Market is a reward/privilege
+and can be cancelled if there is no time, or if students misbehaved/didn't earn Market
+Time.
 
+To keep the Market Time organized and sane, the following guidelines are highly recommended:
+
+@itemlist[@item{Only 1 camp/5 students at the Market at a time.}
+          @item{Keep students moving through the Market so you have time for everyone.
+                ("Okay, you have been here for 5 min, you have 1 more min to make your choice!")}
+          @item{Have the Market display up and accessible all day so students can plan
+                for what they want to get at the end of the day!}
+          @item{Create a Cash Rule -- money must be unfolded and handed nicely to the cashier
+                (no crumpled bills shoved in our faces!).}
+          @item{Exchange bills throughout the day, not during Market (five 1s for one 5, etc.).}
+          @item{One or two staff run the Market, while the others keep students coming/going.}
+          @item{If you don't have enough time, save it for another day rather than rush.}] 
 
 @subsection{Lunch}
 @larger{AM ONLY -- mon-fri 12:00pm-12:45pm}
 
+All lunches are held at a university buffet-style dining hall. Before heading to lunch on
+Monday, outline safety rules and remind students as needed throughout the week. Head Coach
+should check in with dining hall staff for entering procedures, additional rules or, if HC
+has worked this location before, at least a touch-base and any special updates for the week.
+
+The following rules are @bold{standard across all ThoughtSTEM camps} and must be followed
+for student safety and continued positive relations with the camp locations:
+
+@itemlist[#:style 'ordered
+          @item{Absolutely no running.}
+          @item{Be courteous and polite to all dining hall staff and other diners.}
+          @item{Line up to enter the dining hall and wait for your Head Coach to dismiss
+                you into the hall.}
+          @item{All students with food allergies (marked on roster) will meet with the
+                HC on the first day for a quick tour and guide on what to look for to stay
+                away from their allergens. (Usually signage at each station.)}
+          @item{Only one dessert per day.}
+          @item{Clean up all trash and put away dishes correctly (a staff member should
+                be stationed by the dish station at the end of lunch on day one to help
+                students figure it out!).}
+          @item{Ideally, all students should be seated in the same area. If the hall is
+                crowded and that isn't possible, there should be a staff member with every
+                group of students and HC should know where all those groups are.}]
+
+The following guidelines are recommended. The Head Coach may instate any of these
+additional rules as needed:
+
+@itemlist[@item{One one plate at a time.}
+          @item{If you want to ask me "Can I have ____??" Just imagine I am your
+                mom/dad/primary caregiver; what would they say? Would your dad say yes to
+                three cups of Mountain Dew?}]
+
+
 @subsection{Check-out}
-@larger{AM -- mon-fri 12:45pm-1:00pm}
+@larger{AM -- mon-fri 12:45pm-1:15pm}
 
 @larger{PM -- mon-fri 4:00pm-4:15pm}
+
+Be sure to arrive @bold{promptly} at the checkout location -- this means leaving the camp
+room/lunch hall BEFORE the time check-out is supposed to start!
+
+If there are still students waiting on pick-up at 10 past the hour (1:10/4:10), notify HQ
+who will call the parent. @bold{Update HQ as soon as that student is picked up!}
+
+The AM check-out is also the PM check-in time! The only additional step will be checking
+with each parent to see if they are dropping off or picking up a student! Everything else
+should fall easily
+
+At most locations, parents will remain in the car, and staff will bring students to their
+parents. Just like check-in, Head Coach should assign jobs to everyone with the goal of
+keeping the process safe and orderly:
+
+@bold[@larger{Head Coach}]
+
+The Head Coach duties during check-out are:
+@itemlist[@item{Assign jobs to Team Leaders, adjust jobs as needed}
+          @item{Make sure any special check-out procedures for students are followed}
+          @item{Answer parent questions or direct parents to contact HQ}
+          @item{Oversee the check-out process to ensure safety and sanity}]
+
+@bold[@larger{Home Base Managers -- 1-2 Team Leaders}]
+
+These TLs hang out with the students who are still in our care. Duties include:
+@itemlist[@item{Keeping all students together and safe}
+          @item{Interrupting and redirecting unsafe student behavior
+                (ex. wandering off, playing with sticks, throwing rocks, etc)}
+          @item{Fostering a comfortable, welcoming environment by talking to
+                students, starting conversations between students and going
+                out of their way to engage students on the fringe.}]
+
+@bold[@larger{Runners -- 1-2 Team Leaders}]
+
+These TLs move between cars, completing the following duties:
+@itemlist[@item{Ensuring student safety around cars}
+          @item{Communicating with Home Base Managers to safely relay students from Home
+                Base to their parent's car.}
+          @item{Checking in with parents, answering any quick questions and calling
+                over the Head Coach to deal with any more complex questions}]
+
+@bold[@larger{Traffic Cop -- 1 Team Leader}]
+
+This TL helps keep the car chaos to a minimum. Duties include:
+@itemlist[@item{Ensuring student safety around cars}
+          @item{Keeping the car line moving forward}
+          @item{Helping parents navigate out safely}
+          @item{Reminding parents they they should stay in cars, or, helping them
+                find a place to park on a rare occasion where they need to get out
+                of the car}]
+
+@bold[@larger{Special Location Instructions}]
+
+Some of our camp locations have different check-out procedures. In some cases, we
+are part of a larger camp where the main staff handles check-out. Others require
+slightly different jobs:
+
+@bold{Fleet Science Center}
+
+Every day, Head Coach must check the IDs of every picking-up adult against
+the authorized pick-up for that student. If someone who isn't on that list
+wants to pick up, the primary adult contact must be called and the pick-up
+adult cleared by them.
+
+@bold{Del Mar Unified School District}
+
+Parents come to the classroom for pick up; staff can dismiss from the door of the room,
+"Home Base" is just the classroom.
+
+@bold{Lawrence Family JCC}
+
+Students are part of a larger camp and will be taken to their next activity from JCC camp
+staff.
+
+@bold{La Jolla Country Day Center}
+
+Bring students to their age group's designated dismissal room. Assist LJCD Camp Staff as
+needed. 
 
 @subsection{GAME JAM}
 @larger{AM -- fri 10:30am-12:00pm}
 
-@larger{PM -- fri 2:30pm-4:00pm}4/16
+@larger{PM -- fri 2:30pm-4:00pm}
+
+Information on Game Jam Intro, Game Jam and Scoring can be found on the
+@secref["Game_Jam" #:doc '(lib "ts-camp-materials/scribblings/manual.scrbl")] page.
 
 
 
