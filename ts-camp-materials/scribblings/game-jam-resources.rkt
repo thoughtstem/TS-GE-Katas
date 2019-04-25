@@ -41,6 +41,13 @@ to build as many games back-to-back as they can!
 
 @section{Prompt}
 
+The challenge cards are the perfect prompt for Game Jam. Cards should stay stimulus-side-up
+(code is hidden) unless the student "purchases" a card flip. Coaches should make it clear
+that flipping a card over without paying up is cheating and keep an eye as best they can
+during the jam. Students will probably speak up very loudly if they think they see someone
+breaking this rule. Offer reminders when needed, but only repercussions when you see
+cheating with your own eyes.
+
 @larger{3rd-10th}
 
 Every student/pair of students is given three challenge cards as a starting prompt for
@@ -75,18 +82,76 @@ not:
                 its settled and won't be listening to a word you say until then!}
           @item{Have students switch "drivers" (who is typing) every 3 minutes. Set a
                 timer and just keep running it, instucting students to swap everytime it
-                goes off.}]
+                goes off.}
+          @item{When students are paired up, they EACH receive the total dollars they
+                earned with their game, they don't have to split the total between them.}]
 
-@section{Student Resources}
+@section{Hints and Help!}
 
+Most students will need some sort of support to achieve the goals of Game Jam. During the
+Jam, all coaches/staff are now @bold{judges} and will not be able to help students out (at
+least not for free!). Instead, there are some standard resources available to the students
+as well as some additional supports you can add if needed:
+
+These are the standard resources that are a part of every Jam. Prices may be adjusted to
+make it easier or harder to access, and, in turn, the Jam easier/harder!
+@itemlist[@item[@bold{Challenge Cards} " -- the challenge cards are already on the table
+                and the easiest assist available! If a student gets stuck, they may pay
+                to flip their challenge card over to see the code for " @bold{5 ThoughtSTEM Dollars}
+                ". Once they have purchased this flip, the card can stay code-up for the
+                rest of the Jam. If you have multiple coaches working with the same
+                students, keeping eachother up to date on any paid flips is advised, so
+                no coaches accidentally reprimand a student for cheating when they aren't!"]
+          @item[@bold{Asset Access} " -- free to all, where you can see all the
+                assets/sprites available in the language you are Jammin' in! This can be
+                a chromebook with the Asset Library page up on a separate table (must stay
+                at this table), or a white board with the list of the identifiers, or a
+                list projected up on a screen..."]]
+
+Here are some additional supports that can be added during Game Jam. These can help if
+students are struggling, without sacrificing the integrity of Game Jam:
+
+@itemlist[@item[@bold{Call in a Coach!} " -- for 5 ThoughtSTEM dollars, any student can
+                get a coach's help for 2 minutes! This can be very useful in the last 5
+                or 10 minutes to get all student games running."]
+          @item[@bold{Starting Code} " -- don't forget that you always have access to
+                scrap paper, white board or any other tools where you can write hints for
+                some or all students. A common reminder is the defining syntax, or basic
+                code to start with."]]
+
+@section{Coaches Role during the Jam}
+
+Okay, the jam is on. You are now a "judge." What does that mean? What do you do??
+
+@itemlist[@item[@bold{Support the students} " by offering words of encouragement, advice on how to
+                approach problems, and congratulations on cool code! Avoid the temptation
+                to give answers to students when they are stuck, rather point them to the
+                resources accessable to them."]
+          @item["Encourage the kids by " @bold{awarding bonus point stickers} " when they do things we like
+                to see! When they work with their team, when they test their game, when they create a cool
+                story behind their game, etc. Also use the stickers as a motivator when things get tough:
+                'bonus point for working on debugging! That's tricky stuff!' Not all students/teams need
+                to get the same number of bonus, but keep an eye on distibution to keep it fair."]
+          @item["Monitor how students are progressing, and " @bold{adjust jam rules} " to make it easier or
+                harder as needed! For example, adding a price to the resource center, or adding in the ability
+                to Call in a Coach!"]
+          @item[@bold{Mediate any disagreements} " between partners or other students. This feel high-stakes
+                for students, and tempers can flare on occasion. Be even-keeled and fair."]
+          @item["In general, " @bold{be a positive and supportive presence!} " BE EXCITED!"]]
 
 @section{Scoring}
 
-Points are only given for @bold{working games!} Coaches do whatever it takes to get every
+Reward students bonus points throughout the Jam for CREATIVITY, COOPERATION and other
+behaviors that you want to encourage! You can easily keep track of bonus points by giving
+each student/pair of students an index card. Put a sticker on this index card every time
+you award a point! This card can also come in handy when adding up points later.
+
+At the end of Jam, students calculate their point total!
+Points are only given for @bold{working games}! Coaches do whatever it takes to get every
 student to have at least one working game. The suggested point algorithms are below,
 but can be adjusted to make sure students earn enough money to feel accomplished without
-bankrupting the coaches! $10-25 per student (more when more money is spent during Jam)
-is a good sweet-spot.
+bankrupting the coaches! $10-25 per student 
+is a good sweet-spot (also think about how much money students SPENT in the Jam).
 
 @larger{3rd-10th}
 
@@ -125,8 +190,31 @@ and help their coach!
           @item{Give the ending number of dollars and Game Jam Badge to that student/each
                 student in that pair!!!}]
 
+@section{Leading into the Jam}
 
-@section{Game Jam Intro Video}
+That was a lot of info! Now what do you tell the students??
+Right before the Jam, the coach should review/explain what to expect with the students.
+Be sure to hit the following points:
+
+@itemlist[@item{How much time they have for the Jam.}
+          @item{Scoring and Points! How they will earn points for their game, including
+                bonus points. (don't forget to hand out cards!)}
+          @item{Only get points for RUNNING games!}
+          @item{Coaches are now Judges.}
+          @item{The different resources and supports available (and how much they will
+                cost ya!).}
+          @item{Partner rules; swapping drivers, working as a team, etc.}
+          @item{Reinforce other rules, like no touching other people's computers, no running
+                or anything else you deem necessary}]
+
+Offer this key piece of advice -- repeat it early and often:
+@centered[@larger[["The way to succeed in game jam is to " @bold{start small} " and "
+          @bold{test often.} " Once more for the kids in the back! "
+          @bold[@larger{Start small and test often!!!}]]]]
+
+@subsection{Game Jam Intro Video}
+
+@bold{This video is currently out of date.}
 
 This introduction video outlines everything a student needs to know
 before going into game jam, including:
