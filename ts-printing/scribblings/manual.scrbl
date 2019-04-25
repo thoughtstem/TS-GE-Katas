@@ -4,6 +4,85 @@
 
 @title{A Package for Our Various Printing Needs}
 
+@defmodule[ts-printing/common]
+
+This module provides three functions: one for constructing
+the front side of a card, one for the back, and one for writing
+a list of cards out to a folder.  
+
+It also provides a variety of parameters to configure the above --
+e.g. to specify background colors, meta data, card numbering, etc.
+
+
+@defproc[(list->folder [card-list (listof pict?)] [folder-name string? "my-cards"] [dest path? DESKTOP]) void?]{
+
+  Outputs the cards into the specified folder name in the specified destination.  
+
+  Input picts should be a list of
+  fronts and backs, alternating.  The output is in a form suitable for 
+  uploading to makeplayingcards.com.
+
+  For ideal results, all of the picts in the input list should have been passed through either @racket[front-side] or @racket[back-side].  If not, there are some parameters in this module that will have no effect (i.e. ones that control the background color of some card). 
+  
+  Card files will be given names like @racket["card-025.png"].  Even numbered
+  cards are the fronts, and odds are the back.  Furthermore, fronts will be 
+  placed into a subdirectory front/, and backs will be placed into a subdirectory
+  back/
+
+  The outputted images are square and can be used in a variety of templates.
+
+  Here are the templates we've used in the past for challenge chards:
+
+  Medium hext cards (2.6" x 3"):
+
+  @link{https://www.makeplayingcards.com/design/your-own-hex-cards.html}
+
+  Bigger hex cards (3.25" x 3.75"):
+
+  @link{https://www.makeplayingcards.com/design/custom-hexagonal-game-cards.html}
+
+  For identifier and asset cards, the templates are:
+
+  @link{https://www.makeplayingcards.com/design/custom-small-square-cards.html}
+}
+
+
+The above function can be configured through various parameters.
+
+@defparam[WIDTH number number? #:value 1200]{
+  The total card width is this value plus the @racket[PADDING] value.
+}
+
+@defparam[HEIGHT number number? #:value 1200]{
+  The total card height is this value plus the @racket[PADDING] value.
+}
+
+@defparam[MARGIN number number? #:value 200]{
+  This controls how close to the edges the foreground of a card is scaled. 
+  Anything passed to @racket[front-side] or @racket[back-side] will not
+  be scaled larger than the @racket[WIDTH] minus the @racket[MARGIN].
+}
+
+@defparam[PADDING number number? #:value 10]{
+  This is used to create a bleed area for cutting.
+}
+
+
+@defparam[FRONT-BG-COLOR color color? #:value "white"]{
+  The bagkround color for card fronts
+}
+
+@defparam[BACK-BG-COLOR color color? #:value "white"]{
+  The bagkround color for card backs
+}
+
+@defparam[STARTING-CARD-NUMBER number number? #:value 0]{
+  Will number the cards starting at the given value.  Usually, you won't do this by hand.  It can be used when outputing multiple decks to the same folder -- starting the numbering of each subsequent deck where the first left off.  This is done for you in macros like @racket[begin-job].
+}
+
+
+
+
 @defmodule[ts-printing/challenge-cards/print-jobs]
 
 @defform[(begin-job desktop-folder (collection [parameter val] ...) ...)]{
@@ -106,50 +185,4 @@ adds a matching title.
   The cards are sorted in order of frequency of use across a
 
 }
-
-@defmodule[ts-printing/common]
-
-Everything is built upon a common module.
-
-@defproc[(list->folder [card-list (listof pict?)] [dest path?]) void?]{
-  Outputs the cards into the specified folders.  Input picts should be a list of
-  fronts and backs, alternating.  The output is in a form suitable for 
-  uploading to makeplayingcards.com.
-  
-  Card files will be given names like @racket["card-025.png"].  Even numbered
-  cards are the fronts, and odds are the back.  Furthermore, fronts will be 
-  placed into a subdirectory front/, and backs will be placed into a subdirectory
-  back/
-
-  The outputted images are square and can be used in a variety of templates.
-
-  Here are the templates we've used in the past for challenge chards:
-
-  Medium hext cards (2.6" x 3"):
-
-  @link{https://www.makeplayingcards.com/design/your-own-hex-cards.html}
-
-  Bigger hex cards (3.25" x 3.75"):
-
-  @link{https://www.makeplayingcards.com/design/custom-hexagonal-game-cards.html}
-
-  For identifier and asset cards, the templates are:
-
-  @link{https://www.makeplayingcards.com/design/custom-small-square-cards.html}
-}
-
-The above function can be configured through various parameters.
-
-@defparam[FRONT-COLOR color color? #:value "aquamarine"]{
-  Color that renders at the base of each card front.
-}
-
-@defparam[FRONT-COLOR-FG color color? #:value "palegreen"]{
-  Color that renders behind the text on each card front.
-}
-
-@defparam[FRONT-TITLE pict pict? #:value (blank)]{
-  Renders at the top of the front of each card.
-}
-
 

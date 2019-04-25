@@ -20,7 +20,9 @@
   bright-blue
   bright-purple)
 
-(require (only-in 2htdp/image make-color))
+(require 
+  (only-in racket/draw color%)
+  (only-in 2htdp/image make-color))
 
 (define bright
   (list
