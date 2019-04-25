@@ -1,12 +1,16 @@
 #lang racket
 
+(provide begin-identifier-job
+         begin-asset-job)
+
 (require pict
          (only-in 2htdp/image image? image-width image-height)
          (only-in pict/code codeblock-pict)
          (only-in game-engine animated-sprite? render)
          "../challenge-cards/main.rkt"
          "../k2-identifier-cards/double-size.rkt"
-         "./util.rkt")
+         "./util.rkt"
+         "./special-forms.rkt")
 
 (define HEIGHT 600)
 (define WIDTH HEIGHT)
@@ -16,7 +20,20 @@
 ;Use this design: https://www.makeplayingcards.com/design/custom-small-square-cards.html
 
 (define bg (colorize (filled-rectangle WIDTH HEIGHT) "white"))
-(define (front-side i) (cc-superimpose bg i))
+
+(define (front-side i)
+  (define scaled-i (scale i 4)) ;Magic number works for most identifiers...
+  (define w (- WIDTH MARGIN))
+  (define h (- WIDTH MARGIN))
+  
+  (define final-i
+    (if (or (> (pict-width scaled-i) w)
+            (> (pict-height scaled-i) h))
+        (scale-to-fit scaled-i w h)
+        scaled-i))
+  
+  (cc-superimpose bg final-i))
+
 (define (back-side i)
 
   (define final-i
@@ -41,20 +58,22 @@
   (with-handlers ([exn:fail? (lambda (e) 
                                #t)])
                  
-    ;Will fail on forms like 'define.  We use
+    ;dynamic-require fails on forms like 'define.  We use
     ;the exception thrown to detect forms...
-    ;There's probably some kind of cleaner way, but it works fine.
+    ;There's probably a cleaner way, but it works fine.
     (dynamic-require (CURRENT-LANGUAGE) id)
     #f))
 
 (define (is-asset? id)
-  ((or/c image? animated-sprite?) (id->thing id)))
+  ((or/c image? animated-sprite?) 
+   (id->thing id)))
 
 (define (is-procedure? id)
   (procedure?  (id->thing id)))
 
 (define (form->back id)
-  (list id "FORM"))
+  (back-side
+   (special-image-for id)))
 
 
 (define (asset->back id)
@@ -63,7 +82,11 @@
     (cond 
       [(image? thing) thing]
       [(animated-sprite? thing) (render thing)]
-      [else (raise (~a "What was that? " id ))]))
+      [else 
+        (begin
+          (displayln "That wasn't a procedure, form, or asset")
+          (displayln id)
+          (blank))]))
   
   (back-side image))
 
@@ -111,31 +134,130 @@
 (define (id->back id)
   (cond
     [(is-form? id)      (form->back id)]
-    [(is-asset? id)     (asset->back id)]
     [(is-procedure? id) (procedure->back id)]
-    [else (raise (~a "What was that? " id))]))
+    [(is-asset? id)     (asset->back id)]
+    [else 
+        (begin
+          (displayln "That wasn't a procedure, form, or asset")
+          (displayln id)
+          (back-side (blank)))]))
+
+(define (id->front id)
+  (front-side
+   (codeblock-pict
+    (~a id))))
 
 
-(define (test)
-  (local-require battlearena-avengers/examples)
-  
-  (map id->back 
-       (map
-         identifier-id
-         (get-ids-with-frequency)))
-  
-  )
+(define (explode-by-frequency l)
+  (define (explode x)
+    (define f (identifier-frequency x))
+    (if (= 1 f)
+        x
+        (map (const x) (range f))))
+  (flatten (map explode l)))
+
+(define (lang->list l)
+  (parameterize ([CURRENT-LANGUAGE l])
+    (define freqs (get-ids-with-frequency))
+
+    (define exploded
+      (explode-by-frequency freqs))
+
+    (define backs
+      (map (compose
+            id->back
+            identifier-id)
+           exploded))
+
+    (define fronts
+      (map (compose
+            id->front
+            identifier-id)
+           exploded))
+
+    (flatten (map list fronts backs))))
+
+(define (lang->asset-list l)
+  (parameterize ([CURRENT-LANGUAGE l])
+    (define ids (get-asset-ids))
+    (define backs (map id->back ids))
+    (define fronts (map id->front ids))
+    
+    (flatten (map list fronts backs))))
 
 
-(parameterize ([CURRENT-LANGUAGE 'battlearena-avengers])
-  (test)
+(define (list->Desktop l folder)
+  (list->folder
+   (build-path (find-system-path 'home-dir) "Desktop" folder)
+   l))
 
-  #;
-  (map id->back
-       (map first
-            (test)))    
+(define-syntax-rule (begin-identifier-job folder
+                                          (lang [k v] ...)
+                                          ...)
+  (begin
+    (define counter 0)
 
-  #;
-  (total-cards
-    (test)))
+    (parameterize ([k v] ...
+                   [STARTING-CARD-NUMBER counter]
+                   [META-TRANSFORM (curryr colorize "gray")]
+                   [EXTRA-META     (text (~a "#lang " 'lang))])
+      (define cards (lang->list 'lang))
+
+      (list->Desktop cards folder)
+      
+      (set! counter (+ counter
+                       (length
+                        cards))))
+    ...))
+
+(define-syntax-rule (begin-asset-job folder
+                                     (lang [k v] ...)
+                                     ...)
+  (begin
+    (define counter 0)
+
+    (parameterize ([k v] ...
+                   [STARTING-CARD-NUMBER counter]
+                   [META-TRANSFORM (curryr colorize "gray")]
+                   [EXTRA-META    (text (~a "#lang " 'lang))])
+      (define cards (lang->asset-list 'lang))
+
+      (list->Desktop cards folder)
+      
+      (set! counter (+ counter
+                       (length
+                        cards))))
+    ...))
+
+
+;Combine the above jobs??  Not sure yet.
+
+#;
+(begin-asset-job "ba-test"
+                 (battlearena-avengers))
+
+#;
+(begin-identifier-job "ba-test"
+                      (battlearena-avengers))
+
+
+
+;Do docs: Include justifications for
+;  Number printed
+;  Ordering
+;  What's on the back
+
+;  Intended use-case: one deck can do any kata in the collection -- and any
+;     new kata -- as long as it doesn't require more of any identifier than appears in
+;     some kata in the collection.
+
+;  Asset card extras.  Print separately -- but maybe in the same job...
+
+
+; Order cards
+
+;Tomorrow: Shared decks
+
+
+
 

@@ -1,6 +1,6 @@
 #lang racket
 
-(provide begin-identifier-job)
+(provide begin-k2-identifier-job)
 
 (require ratchet
          pict
@@ -68,7 +68,7 @@
                              "Desktop"
                              folder-name)))
 
-(define-syntax-rule (begin-identifier-job folder 
+(define-syntax-rule (begin-k2-identifier-job folder 
                       (lang [k v] ...) 
                       ...)
   (begin
