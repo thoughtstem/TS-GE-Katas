@@ -1,7 +1,8 @@
 #lang racket
 
 (provide begin-identifier-job
-         begin-asset-job)
+         begin-asset-job
+         FILTER-BY-COLLECTION)
 
 (require pict
          (only-in 2htdp/image image? image-width image-height)

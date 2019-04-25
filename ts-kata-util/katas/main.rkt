@@ -46,6 +46,8 @@
          define-kata
          define-kata-collection
          sort-katas-by-difficulty
+
+         ->code?
          )
 
 ;(require scribble/manual)
@@ -93,6 +95,10 @@
 (struct response:code response () #:transparent)
 (struct response:say  response () #:transparent)
 (struct response:do   response () #:transparent)
+
+(define (->code? k)
+  (response:code?
+    (kata-response k)))
 
 (define (set-id i k )
   (struct-copy kata k
