@@ -12,10 +12,10 @@ Use these questions during Game Show time. You can ask any/all the questions in 
                     @itemlist[@item{@italic{To survive by eating food.}}]}
           @item{@bold{What key do you use to eat the food?}
                     @itemlist[@item{@italic{Press the spacebar when you're near a food item.}}]}
-          @item{@bold{Q?}
-                    @itemlist[@item{@italic{A.}}]}
-          @item{@bold{Q?}
-                    @itemlist[@item{@italic{A.}}]}]
+          @item{@bold{Name two character sprites.}
+                    @itemlist[@item{@italic{Reference the Ratchet GUI.}}]}
+          @item{@bold{Name three food sprites.}
+                    @itemlist[@item{@italic{Reference the Ratchet GUI.}}]}]
 
 
 @section{Tuesday}

@@ -6,35 +6,35 @@ Use these questions during Game Show time. You can ask any/all the questions in 
 
 @section{Monday}
 
-@itemlist[@item{@bold{Q?}
-                    @itemlist[@item{@italic{A.}}]}
-          @item{@bold{Q?}
-                    @itemlist[@item{@italic{A.}}]}
-          @item{@bold{Q?}
-                    @itemlist[@item{@italic{A.}}]}
-          @item{@bold{Q?}
-                    @itemlist[@item{@italic{A.}}]}
-          @item{@bold{Q?}
-                    @itemlist[@item{@italic{A.}}]}]
+@itemlist[@item{@bold{What keys make your character move?}
+                    @itemlist[@item{@italic{WASD keys.}}]}
+          @item{@bold{What is the keyword to add a character to your game?}
+                    @itemlist[@item{@italic{#:avatar}}]}
+          @item{@bold{What is the keyword to change what your character looks like?}
+                    @itemlist[@item{@italic{#:sprite}}]}
+          @item{@bold{Name three available character sprites.}
+                    @itemlist[@item{@italic{Anything from the Assets Library.}}]}
+          @item{@bold{What is the default speed value?}
+                    @itemlist[@item{@italic{10.}}]}]
 
 
 @section{Tuesday}
 
-@itemlist[@item{@bold{Q?}
-                    @itemlist[@item{@italic{A.}}]}
-          @item{@bold{Q?}
-                    @itemlist[@item{@italic{A.}}]}
-          @item{@bold{Q?}
-                    @itemlist[@item{@italic{A.}}]}
-          @item{@bold{Q?}
-                    @itemlist[@item{@italic{A.}}]}
-          @item{@bold{Q?}
-                    @itemlist[@item{@italic{A.}}]}]
+@itemlist[@item{@bold{What is the keyboard to add enemies?}
+                    @itemlist[@item{@italic{#:enemy-list}}]}
+          @item{@bold{What does AI stand for?}
+                    @itemlist[@item{@italic{Artificial Intelligence.}}]}
+          @item{@bold{What is the keyword to change the number of enemies in the game?}
+                    @itemlist[@item{@italic{#:amount-in-world}}]}
+          @item{@bold{Name the four Fornite character classes.}
+                    @itemlist[@item{@italic{Commando, Ninja, Outlander, and Constructor.}}]}
+          @item{@bold{Name the three Fortnite Game Modes.}
+                    @itemlist[@item{@italic{Save the World, Battle Royale, and Creative.}}]}]
 
 @section{Wednesday}
 
-@itemlist[@item{@bold{Q?}
-                    @itemlist[@item{@italic{A.}}]}
+@itemlist[@item{@bold{What is the keyboard to add weapons in the game?}
+                    @itemlist[@item{@italic{#:weapon-list}}]}
           @item{@bold{Q?}
                     @itemlist[@item{@italic{A.}}]}
           @item{@bold{Q?}
