@@ -1,19 +1,13 @@
 #lang racket
 
 (provide (all-from-out ts-battle-arena-fortnite/katas)
-         (all-from-out ts-fundamentals/katas))
+         (all-from-out ts-fundamentals/katas)
+         )
 
 (require ts-kata-util/katas/main
          ts-fundamentals/katas
          ts-battle-arena-fortnite/katas
          )
-
-(define-kata game-jam
-  (recite
-   #:in "Tell me about our Final Game Jam!"
-   #:out (list "Building a BATTLE ARENA GAME."  
-               "In ONE HOUR."
-               "Including: a AVATAR, ENEMIES, WEAPONS, POWER-UPS, and TOWER WEAPONS.")))
 
 (define-kata-collection powerup-katas
   (first (kata-collection-katas health-katas))

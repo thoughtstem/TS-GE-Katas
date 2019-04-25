@@ -2,10 +2,12 @@
 
 (provide collection->folder
          collection->Desktop
+         list->folder
          FRONT-TITLE
          FRONT-COLOR
          FRONT-COLOR-FG
          EXTRA-META
+         META-TRANSFORM
          STARTING-CARD-NUMBER
          begin-job
          save-pict)
@@ -30,6 +32,7 @@
 (define STARTING-CARD-NUMBER (make-parameter 0))
 (define FRONT-TITLE          (make-parameter (blank)))
 (define EXTRA-META           (make-parameter (blank)))
+(define META-TRANSFORM       (make-parameter identity))
 
 
 (define HEIGHT 1200)
@@ -217,9 +220,9 @@
       2))
 
   (pin-over p 
-            (- (/ WIDTH 2) (/ (pict-width meta) 2))
-            (- HEIGHT 200 (pict-height meta)) ;200 seems to be a magic number to get it within the bleed area of the hex design from makeplayingcards.com
-            meta))
+            (- (/ (pict-width p) 2) (/ (pict-width meta) 2))
+            (- (pict-height p) 200 (pict-height meta)) ;200 seems to be a magic number to get it within the bleed area of the hex design from makeplayingcards.com
+            ((META-TRANSFORM) meta)))
 
 (define (list->folder path ls)
   (make-directory* path)
@@ -228,7 +231,7 @@
 
   (define front? #t)
   (for ([l ls]
-        [i (range (* 2 (STARTING-CARD-NUMBER)) ;Double cus we number both front and back separately... But should we???
+        [i (range (* 2 (STARTING-CARD-NUMBER)) ;Double cus we number both front and back separately
                   (* 2 (+ (length ls) 
                           (STARTING-CARD-NUMBER))))])
 
@@ -245,8 +248,7 @@
         (add-meta l (/ i 2))
         l))
 
-    (save-pict final-pict 
-               dest 'png)
+    (save-pict final-pict dest 'png)
 
     (set! front? (not front?))))
 
