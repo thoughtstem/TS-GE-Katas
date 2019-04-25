@@ -208,9 +208,9 @@ Be sure to hit the following points:
                 or anything else you deem necessary}]
 
 Offer this key piece of advice -- repeat it early and often:
-@centered[@larger[["The way to succeed in game jam is to " @bold{start small} " and "
+@centered[@larger["The way to succeed in game jam is to " @bold{start small} " and "
           @bold{test often.} " Once more for the kids in the back! "
-          @bold[@larger{Start small and test often!!!}]]]]
+          @bold[@larger{Start small and test often!!!}]]]
 
 @subsection{Game Jam Intro Video}
 
