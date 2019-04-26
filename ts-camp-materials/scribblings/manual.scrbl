@@ -6,7 +6,7 @@
           "../rendering.rkt"
           (except-in racket read do))
 
-@title{Camp Resources}
+@title{Camp and ASP Resources}
 
 Materials, instructions and documentation to be piped into Frontline
 Kata Collections for camps of all kinds.
@@ -29,6 +29,7 @@ For any Camp or ASP, use:
 @(include-section "half-day-schedule.rkt")
 @(include-section "game-jam-resources.rkt")
 @(include-section "icebreaker-games.rkt")
+@(include-section "games.rkt")
 
 
 
