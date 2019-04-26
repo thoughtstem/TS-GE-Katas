@@ -9,7 +9,6 @@
          (only-in pict/code codeblock-pict)
          (only-in game-engine animated-sprite? render)
          "../common.rkt"
-         "../k2-identifier-cards/double-size.rkt"
          "./util.rkt"
          "./special-forms.rkt")
 

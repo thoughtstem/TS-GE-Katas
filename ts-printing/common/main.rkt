@@ -21,6 +21,7 @@
          default-meta
          make-texture
          git-hash
+         double-size
          w h)
 
 (require pict 
@@ -32,6 +33,7 @@
                   color-blue)
          (only-in racket/draw color%)
          (only-in 2htdp/image image?)
+         "./double-size.rkt" 
          "./texture.rkt")
 
 (define HEIGHT  (make-parameter 1200))

@@ -66,3 +66,4 @@
                            [EXTRA-META (text "k2/lang/farm/coins")])))
 
 
+(all->Desktop)
