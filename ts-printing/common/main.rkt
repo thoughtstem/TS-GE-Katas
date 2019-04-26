@@ -5,12 +5,22 @@
          back-side
          FRONT-BG-COLOR
          BACK-BG-COLOR
+         FRONT-BG-TEXTURE
+         BACK-BG-TEXTURE
          STARTING-CARD-NUMBER
-         FRONT-TITLE
          WIDTH
          HEIGHT
+         MARGIN
+         FRONT-META-FUNCTION
+         BACK-META-FUNCTION
+         VERSION
+         TOTAL
          pictify
-         save-pict)
+         blank-bg
+         save-pict
+         default-meta
+         make-texture
+         git-hash)
 
 (require pict 
          (only-in 2htdp/image 
@@ -19,7 +29,8 @@
                   color-red
                   color-green
                   color-blue)
-         (only-in racket/draw color%))
+         (only-in racket/draw color%)
+         "./texture.rkt")
 
 (define HEIGHT  (make-parameter 1200))
 (define WIDTH   (make-parameter 1200))
@@ -28,9 +39,21 @@
 
 (define FRONT-BG-COLOR       (make-parameter "white"))
 (define BACK-BG-COLOR        (make-parameter "white"))
+
+(define FRONT-BG-TEXTURE       (make-parameter (blank)))
+(define BACK-BG-TEXTURE        (make-parameter (blank)))
+
 (define STARTING-CARD-NUMBER (make-parameter 0))
 
-(define FRONT-TITLE       (make-parameter (blank)))
+
+(define TOTAL   (make-parameter 0))
+(define VERSION (make-parameter 0))
+
+(define (default-meta i)
+  (text (~a i "/" (TOTAL) " v" (VERSION))))
+
+(define FRONT-META-FUNCTION  (make-parameter default-meta))
+(define BACK-META-FUNCTION  (make-parameter (thunk* (blank))))
 
 (define (pictify c) 
   (if (color? c)
@@ -42,48 +65,79 @@
     c))
 
 
-(define (bg c)
-  (colorize
-    (filled-rectangle (+ (WIDTH)  (PADDING))
-                      (+ (HEIGHT) (PADDING)))
-    (pictify c))) 
+(define (bg c t)
+  (define solid
+    (colorize
+      (filled-rectangle (+ (WIDTH)  (PADDING))
+                        (+ (HEIGHT) (PADDING)))
+      (pictify c)))
+ 
+  (define texture 
+    (scale-to-fit t 
+                  solid
+                  #:mode 'distort))
 
-(define (side main-bg card-fg)
+  (cc-superimpose solid texture)) 
+
+(define (side #:fit-mode (fit-mode 'scale) main-bg card-fg)
   (define adj-fg
-    (scale-to-fit card-fg
-                  (- (WIDTH) (MARGIN)) 
-                  (- (HEIGHT) (MARGIN))))
+    (if (eq? fit-mode 'scale)
+      (scale-to-fit card-fg
+                    (- (WIDTH) (MARGIN)) 
+                    (- (HEIGHT) (MARGIN)))
+      card-fg))
 
-  (cc-superimpose
+  (refocus
+    (cc-superimpose
       main-bg 
-      adj-fg))
+      adj-fg)
+    main-bg))
 
-(define (front-side (my-fg (blank)))
-  (side (bg (FRONT-BG-COLOR)) 
+(define/contract (front-side #:fit-mode (fit-mode 'scale) 
+                    (my-fg (blank)))
+  (->* () 
+       (#:fit-mode (or/c 'scale 'crop)
+        pict?)
+       pict?)
+  (side #:fit-mode fit-mode
+        (bg (FRONT-BG-COLOR) (FRONT-BG-TEXTURE)) 
         my-fg))
 
-(define (back-side (my-fg (blank)))
-  (side (bg (BACK-BG-COLOR)) 
+(define/contract (back-side #:fit-mode (fit-mode 'scale)
+                            (my-fg (blank)))
+  (->* () 
+       (#:fit-mode (or/c 'scale 'crop)
+        pict?)
+       pict?)
+  (side #:fit-mode fit-mode
+        (bg (BACK-BG-COLOR) (BACK-BG-TEXTURE)) 
         my-fg))
+
+(define (blank-bg)
+  (blank (WIDTH) (HEIGHT)))
 
 (define git-hash 
-  (with-output-to-string 
-    (thunk
-      (system "git rev-parse --short HEAD"))))
+  (substring (with-output-to-string 
+               (thunk
+                 (system "git rev-parse --short HEAD")))
+             1 ;removes the # mark 
+             ))
+
+(define (add-meta p meta)
+  (pin-over
+    p
+    (-
+     (/ (WIDTH) 2)
+     (/ (pict-width meta) 2))
+    (- (HEIGHT) (MARGIN))
+    meta))
+
 
 (define (front-transform p i)
-  (pin-over
-    p
-    (- (WIDTH) (MARGIN))
-    (- (HEIGHT) (MARGIN))
-    (text (~a i))))
+  (add-meta p ((FRONT-META-FUNCTION) i)))
 
 (define (back-transform p i)
-  (pin-over
-    p
-    (- (WIDTH) (MARGIN))
-    (- (HEIGHT) (MARGIN))
-    (text (~a i))))
+  (add-meta p ((BACK-META-FUNCTION) i)))
 
 (define (list->folder ls (folder-name "my-cards") (dest DESKTOP))
   (define path (build-path dest folder-name))
@@ -111,11 +165,12 @@
          front-transform
          back-transform) 
        l 
-       i))
+       (floor (/ i 2))))
 
     (save-pict final-pict dest 'png)
 
     (set! front? (not front?))))
+
 
 (define (save-pict the-pict name kind)
   (define bm (pict->bitmap the-pict))

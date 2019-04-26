@@ -2,6 +2,7 @@
 
 (provide collection->Desktop
          FRONT-FG-COLOR
+         FRONT-TITLE
          begin-job)
 
 (require ts-kata-util/katas/rendering/pict
@@ -20,6 +21,7 @@
 (require "../common.rkt")
 
 (define FRONT-FG-COLOR (make-parameter "white"))
+(define FRONT-TITLE    (make-parameter (blank)))
 
 (define (kata->front-side k)
   (define content
@@ -29,16 +31,31 @@
     (parameterize ([current-font-size 46])
       (para content)))
 
-  (define bg
+  (define blank-card-bg
+    (blank-bg))
+
+  (define text-bg
     (colorize
       (filled-rectangle (WIDTH) (pict-height content-pict))
       (pictify 
         (FRONT-FG-COLOR))))
 
-  (front-side 
+  (define main
     (cc-superimpose
-      bg 
-      content-pict)))
+      blank-card-bg
+      (cc-superimpose
+        text-bg 
+        content-pict)))
+
+  (define with-title
+    (pin-over main
+              (- (/ (WIDTH) 2)
+                 (/ (pict-width (FRONT-TITLE)) 2))
+              (MARGIN) 
+              (FRONT-TITLE)))
+
+  (front-side #:fit-mode 'crop
+    with-title))
 
 (define (kata->back-side k)
   (local-require slideshow pict/code)
@@ -139,6 +156,22 @@
                       (collection [k v] ...) 
                       ...)
   (begin
+    (VERSION git-hash)
+    (TOTAL (length 
+             (flatten
+               (list
+                 (kata-collection-katas collection) 
+                 ...))))
+
+    (FRONT-META-FUNCTION
+      (lambda (i)
+        (vc-append (default-meta i)
+                   (text folder))))
+
+    ;Need a crazy margin to make it work with
+    ; the hex cards.
+    (MARGIN 500)
+
     (define counter 0)
 
     (parameterize ([k v] ...
@@ -152,11 +185,12 @@
     ...))
 
 
+#;
+(begin
+  (require ts-battle-arena-avengers-summer-camp-2019/katas)
 
-#;
-(require ts-k2-hero-summer-camp-2019/katas)
-#;
-(show-pict
-  (kata->back-side (first (kata-collection-katas farm))))
+  (parameterize ([FRONT-TITLE (text "HELLO")])
+    (show-pict
+      (kata->front-side (first (kata-collection-katas hero-katas))))))
 
 

@@ -46,8 +46,11 @@ e.g. to specify background colors, meta data, card numbering, etc.
   @link{https://www.makeplayingcards.com/design/custom-small-square-cards.html}
 }
 
+@defproc[(blank-bg) pict?]{ 
+  Returns a blank pict determined by the size of the @racket[WIDTH] and @racket[HEIGHT] parameters.
+}
 
-The above function can be configured through various parameters.
+The above functions can be configured through various parameters.
 
 @defparam[WIDTH number number? #:value 1200]{
   The total card width is this value plus the @racket[PADDING] value.
@@ -76,14 +79,42 @@ The above function can be configured through various parameters.
   The bagkround color for card backs
 }
 
+@defparam[FRONT-META-FUNCTION procedure (-> number? pict?) #:value default-meta]{
+  Can be used to add meta data to the front of cards.  By default adds just the card number and the @racket[VERSION] parameter.
+
+  (Meta data is currently placed in the bottom center of a card.  If you wanted to configure that, you would need to add another parameter to common/main.rkt and update the placement algorithm accordingly.)
+}
+
+@defparam[BACK-META-FUNCTION procedure (-> number? pict?) #:value (thunk* (blank))]{
+  Can be used to add meta data to the front of cards.  Does nothing by default. 
+
+  (Meta data is currently placed in the bottom center of a card.  If you wanted to configure that, you would need to add another parameter to common/main.rkt and update the placement algorithm accordingly.)
+}
+
+@defparam[TOTAL number number? #:value 0]{
+  The total number of cards in the deck.  You usually won't set this yourself.  It gets set in the various @racket[begin-job] functions, where the total is calculated as all of the cards printed within that job.
+}
+
+@defparam[VERSION string string? #:value ""]{
+  The version of the deck.  This defaults to the current checksum of TS-Kata-Collections.
+}
+
 @defparam[STARTING-CARD-NUMBER number number? #:value 0]{
   Will number the cards starting at the given value.  Usually, you won't do this by hand.  It can be used when outputing multiple decks to the same folder -- starting the numbering of each subsequent deck where the first left off.  This is done for you in macros like @racket[begin-job].
 }
 
 
-
-
 @defmodule[ts-printing/challenge-cards/print-jobs]
+
+Adds some printing parameters that are specific to challenge cards:
+
+@defparam[FRONT-FG-COLOR color color? #:value "white"]{
+  The front of a challenge card contains the textual prompt for the challenge.  This color appears behind the text.  
+}
+
+@defparam[FRONT-TITLE pict pict? #:value (blank)]{
+  This is displayed at the top of the front of each card.
+}
 
 @defform[(begin-job desktop-folder (collection [parameter val] ...) ...)]{
   Utility for putting multiple kata collections into the same folder,
