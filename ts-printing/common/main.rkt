@@ -20,7 +20,8 @@
          save-pict
          default-meta
          make-texture
-         git-hash)
+         git-hash
+         w h)
 
 (require pict 
          (only-in 2htdp/image 
@@ -30,6 +31,7 @@
                   color-green
                   color-blue)
          (only-in racket/draw color%)
+         (only-in 2htdp/image image?)
          "./texture.rkt")
 
 (define HEIGHT  (make-parameter 1200))
@@ -97,7 +99,7 @@
                     (my-fg (blank)))
   (->* () 
        (#:fit-mode (or/c 'scale 'crop)
-        pict?)
+        (or/c pict? image?))
        pict?)
   (side #:fit-mode fit-mode
         (bg (FRONT-BG-COLOR) (FRONT-BG-TEXTURE)) 
@@ -107,7 +109,7 @@
                             (my-fg (blank)))
   (->* () 
        (#:fit-mode (or/c 'scale 'crop)
-        pict?)
+        (or/c pict? image?))
        pict?)
   (side #:fit-mode fit-mode
         (bg (BACK-BG-COLOR) (BACK-BG-TEXTURE)) 
@@ -181,6 +183,14 @@
   (build-path (find-system-path 'home-dir)
               "Desktop"))
 
+
+(define (w)
+  (- (WIDTH) (MARGIN)))
+
+(define (h)
+  (- (HEIGHT) (MARGIN)))
+
+#;
 (parameterize ([FRONT-BG-COLOR "green"]
                [BACK-BG-COLOR "red"])
   (list->folder

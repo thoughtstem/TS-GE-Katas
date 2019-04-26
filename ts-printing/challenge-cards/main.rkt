@@ -50,7 +50,8 @@
   (define with-title
     (pin-over main
               (- (/ (WIDTH) 2)
-                 (/ (pict-width (FRONT-TITLE)) 2))
+                 (/ (pict-width 
+                      (FRONT-TITLE)) 2))
               (MARGIN) 
               (FRONT-TITLE)))
 

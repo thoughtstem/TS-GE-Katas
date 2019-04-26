@@ -8,49 +8,10 @@
          (only-in 2htdp/image image? image-width image-height)
          (only-in pict/code codeblock-pict)
          (only-in game-engine animated-sprite? render)
-         "../challenge-cards/main.rkt"
+         "../common.rkt"
          "../k2-identifier-cards/double-size.rkt"
          "./util.rkt"
          "./special-forms.rkt")
-
-(define HEIGHT 600)
-(define WIDTH HEIGHT)
-
-(define MARGIN 200)
-
-;Use this design: https://www.makeplayingcards.com/design/custom-small-square-cards.html
-
-(define bg (colorize (filled-rectangle WIDTH HEIGHT) "white"))
-
-(define (front-side i)
-  (define scaled-i (scale i 4)) ;Magic number works for most identifiers...
-  (define w (- WIDTH MARGIN))
-  (define h (- WIDTH MARGIN))
-  
-  (define final-i
-    (if (or (> (pict-width scaled-i) w)
-            (> (pict-height scaled-i) h))
-        (scale-to-fit scaled-i w h)
-        scaled-i))
-  
-  (cc-superimpose bg final-i))
-
-(define (back-side i)
-
-  (define final-i
-    (if (or (pict? i)
-            (and (image? i)
-                 (or (> (image-width i) 200)
-                     (> (image-height i) 200))))
-        i ;Picts and large assets are unchanged
-        (double-size
-         (double-size i)) ;Better way of scaling bitmap assets
-        ))
-  
-  (cc-superimpose bg
-                  (scale-to-fit final-i
-                                (- WIDTH MARGIN)
-                                (- HEIGHT MARGIN)))) 
 
 (define (id->thing id)
   (dynamic-require (CURRENT-LANGUAGE) id))
@@ -89,7 +50,17 @@
           (displayln id)
           (blank))]))
   
-  (back-side image))
+
+  (back-side (special-scale image)) )
+
+
+;Good for scaling pixel art.  Sharper edges.
+(define (special-scale i)
+  (scale-to-fit
+    (double-size
+      (double-size i))
+    (w)
+    (h)))
 
 (define (procedure->back id)
   (define thing (id->thing id))
@@ -144,9 +115,24 @@
           (back-side (blank)))]))
 
 (define (id->front id)
-  (front-side
-   (codeblock-pict
-    (~a id))))
+  (define blank-card-bg
+    (blank-bg))
+
+  (define content
+    (codeblock-pict
+      (~a id)))
+
+  ;We want all of these to be the same size (normal font size scaled by 4),
+  ;  so we only scale down if it happens to be too big.  Most of the identifiers are short, though, and will fit fine.
+  (define scaled-content
+    (if (or (> (pict-width content) (w))
+            (> (pict-height content) (h)))
+      (scale-to-fit content w h)
+      (scale content 6)))
+
+  (front-side 
+    (cc-superimpose blank-card-bg
+                    scaled-content)))
 
 
 (define (explode-by-frequency l)
@@ -189,19 +175,28 @@
 
 (define (list->Desktop l folder)
   (list->folder
-   (build-path (find-system-path 'home-dir) "Desktop" folder)
-   l))
+    l
+    folder))
 
 (define-syntax-rule (begin-identifier-job folder
                                           (lang [k v] ...)
                                           ...)
   (begin
+    (VERSION git-hash)
+    (HEIGHT 800)
+    (WIDTH  800)
+    (MARGIN 200)
+    (FRONT-META-FUNCTION
+      (lambda (i)
+        (colorize
+          (vc-append (default-meta i)
+                     (text folder))
+          "gray")))
+
     (define counter 0)
 
     (parameterize ([k v] ...
-                   [STARTING-CARD-NUMBER counter]
-                   [META-TRANSFORM (curryr colorize "gray")]
-                   [EXTRA-META     (text (~a "#lang " 'lang))])
+                   [STARTING-CARD-NUMBER counter])
       (define cards (lang->list 'lang))
 
       (list->Desktop cards folder)
@@ -215,12 +210,21 @@
                                      (lang [k v] ...)
                                      ...)
   (begin
+    (VERSION git-hash)
+    (HEIGHT 800)
+    (WIDTH  800)
+    (MARGIN 200)
+    (FRONT-META-FUNCTION
+      (lambda (i)
+        (colorize
+          (vc-append (default-meta i)
+                     (text folder))
+          "gray")))
+
     (define counter 0)
 
     (parameterize ([k v] ...
-                   [STARTING-CARD-NUMBER counter]
-                   [META-TRANSFORM (curryr colorize "gray")]
-                   [EXTRA-META    (text (~a "#lang " 'lang))])
+                   [STARTING-CARD-NUMBER counter])
       (define cards (lang->asset-list 'lang))
 
       (list->Desktop cards folder)
