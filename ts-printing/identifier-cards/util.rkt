@@ -1,6 +1,7 @@
 #lang racket
 
 (provide get-ids-with-frequency
+         get-asset-ids
          total-cards
          CURRENT-LANGUAGE
          (struct-out identifier))
@@ -9,11 +10,14 @@
 
 (define CURRENT-LANGUAGE (make-parameter #f))
 
-(struct identifier (id frequency))
+(struct identifier (id frequency corpus-frequency))
 
 (define (get-example-codes path)
+  (dynamic-require path #f)
+
   (define-values (ret unk) 
     (module->exports path))
+
   (map
     (compose 
       (curryr drop 3) ;To get rid of the (module __ __ ...) 
@@ -22,18 +26,42 @@
     (map first
          (rest (first ret)))))
 
+(define (get-asset-ids (path (string->symbol (~a (CURRENT-LANGUAGE) "/assets"))))
+  (dynamic-require path #f)
+  
+  (define-values (ret unk) 
+    (module->exports path))
+
+  (map first
+         (rest (first ret))))
+
+
+
 (define (example-name->code path en)
   (dynamic-require path en))
 
-(define user-defined '())
-(define (redact-non-identifiers l )
+(define (add-function-defs-to-user-defined l)
   (when 
     (and (list? l)
          (< 1 (length l))
          (list? (second l))
          (eq? 'define (first l))) 
     (set! user-defined (cons (first (second l))
-                             user-defined)))
+                             user-defined))))
+
+(define (add-constant-defs-to-user-defined l)
+  (when 
+    (and (list? l)
+         (< 1 (length l))
+         (eq? 'define (first l))) 
+    (set! user-defined (cons (second l) 
+                             user-defined))))
+
+(define user-defined '())
+(define (redact-non-identifiers l )
+  (add-function-defs-to-user-defined l)
+  (add-constant-defs-to-user-defined l)
+
 
   (cond
     [(string? l) '_____]
@@ -55,9 +83,12 @@
 (define (filter-redacted l)
   (filter (negate (curry eq? '_____)) l))
 
-(define (get-ids-with-frequency (path (string->symbol (~a (CURRENT-LANGUAGE) "/examples"))))
 
-  (define codes (get-example-codes path))
+
+(define (get-ids-with-frequency 
+          (examples-path       (string->symbol (~a (CURRENT-LANGUAGE) "/examples"))))
+
+  (define codes (get-example-codes examples-path))
 
   (define freq-hashes (map 
                         (compose frequency-hash
@@ -69,17 +100,24 @@
   (frequency-hash->list
     (foldl merge-freq-hashes 
            (first freq-hashes) 
-           (rest freq-hashes))))
+           (rest freq-hashes))
+    (flatten codes)))
 
-(define (frequency-hash->list h)
+;Takes a frequency hash, turns it into a list of (identifier ...) structs,
+;  additionally sorts by how many times the identifier appears in the corpus 
+(define (frequency-hash->list h (corpus '()))
   (define l (hash->list h))  
-  (define sorted-l 
-    (sort l < #:key cdr))
 
-  (define (p->id-with-freq p) (identifier (car p) (cdr p)))
+  (define (p->id-with-freq p) 
+    (identifier (car p) 
+                (cdr p) 
+                (length (indexes-of corpus (car p))) ;Num occurances
+                ))
 
-  (map p->id-with-freq
-       sorted-l))
+  (sort 
+    (map p->id-with-freq l)
+    >
+    #:key identifier-corpus-frequency))
 
 (define (frequency-hash l (h (hash)))
   (if (empty? l) 
@@ -92,3 +130,6 @@
 
 (define (total-cards frequency-list)
   (apply + (map second frequency-list)))
+
+
+

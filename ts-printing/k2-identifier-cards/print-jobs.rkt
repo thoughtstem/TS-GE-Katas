@@ -35,33 +35,34 @@
              [farm-lang farm-lang-coins]))  
 
 
-(begin-identifier-job  "k2-langs"  
-                       (hero-lang-basic
-                         [EXTRA-META (text "k2/lang/hero/basic")]) 
-                       (hero-lang-powers
-                         [EXTRA-META (text "k2/lang/hero/powers")]) 
+(define (all->Desktop)
+  (begin-k2-identifier-job  "k2-langs"  
+                         (hero-lang-basic
+                           [EXTRA-META (text "k2/lang/hero/basic")]) 
+                         (hero-lang-powers
+                           [EXTRA-META (text "k2/lang/hero/powers")]) 
 
-                       (zoo-lang-friends
-                         [EXTRA-META (text "k2/lang/zoo/friends")])
-                       (zoo-lang-coins
-                         [EXTRA-META (text "k2/lang/zoo/coins")])
-                       (zoo-lang-foods
-                         [EXTRA-META (text "k2/lang/zoo/foods")])
-                       
-                       (sea-lang-friends
-                         [EXTRA-META (text "k2/lang/sea/friends")])
-                       (sea-lang-enemies
-                         [EXTRA-META (text "k2/lang/sea/enemies")])
-                       (sea-lang-coins
-                         [EXTRA-META (text "k2/lang/sea/coins")])
-                       (sea-lang-foods
-                         [EXTRA-META (text "k2/lang/sea/foods")])
+                         (zoo-lang-friends
+                           [EXTRA-META (text "k2/lang/zoo/friends")])
+                         (zoo-lang-coins
+                           [EXTRA-META (text "k2/lang/zoo/coins")])
+                         (zoo-lang-foods
+                           [EXTRA-META (text "k2/lang/zoo/foods")])
 
-                       (farm-lang-foods
-                         [EXTRA-META (text "k2/lang/farm/foods")])
-                       (farm-lang-enemies
-                         [EXTRA-META (text "k2/lang/farm/enemies")])
-                       (farm-lang-coins
-                         [EXTRA-META (text "k2/lang/farm/coins")]))
+                         (sea-lang-friends
+                           [EXTRA-META (text "k2/lang/sea/friends")])
+                         (sea-lang-enemies
+                           [EXTRA-META (text "k2/lang/sea/enemies")])
+                         (sea-lang-coins
+                           [EXTRA-META (text "k2/lang/sea/coins")])
+                         (sea-lang-foods
+                           [EXTRA-META (text "k2/lang/sea/foods")])
+
+                         (farm-lang-foods
+                           [EXTRA-META (text "k2/lang/farm/foods")])
+                         (farm-lang-enemies
+                           [EXTRA-META (text "k2/lang/farm/enemies")])
+                         (farm-lang-coins
+                           [EXTRA-META (text "k2/lang/farm/coins")])))
 
 
