@@ -30,6 +30,7 @@ For any Camp or ASP, use:
 @(include-section "game-jam-resources.rkt")
 @(include-section "icebreaker-games.rkt")
 @(include-section "games.rkt")
+@(include-section "HC-script-mon.rkt")
 
 
 
