@@ -125,3 +125,5 @@
           @item["Welcome camp teams " @bold{one at a time} " to visit market"]
           @item["Students done with market collect their things for lunch/home and line
                 up by door"]]
+
+@;add lunch black and notes
