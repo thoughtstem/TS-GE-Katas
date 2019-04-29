@@ -34,98 +34,92 @@
    'hero-000
    (read "Create a basic hero game.")
 
-   'hero-001
-   (read-template "spritesheet for Ironman")
-
-   'hero-002
-   (read-template "spritesheet for Gamora")
-
    'hero-003
-   (read-template "game where Gamora is the hero")
+   (short-template "Gamora as the hero.")
 
    'hero-004
-   (read-template "game where Ironman is the hero")
+   (short-template "Ironman as the hero.")
 
    'hero-005
-   (read-template "game where Blackwidow is the hero")
+   (short-template "Blackwidow as the hero")
 
    'hero-006
-   (read-template "game where Blackwidow is the hero, and Gamora and Ironman are enemies.")
+   (short-template "Blackwidow as the hero battling Gamora and Ironman.")
 
    'hero-007
-   (read-template "game where Ironman is the hero, and Gamora and Blackwidow are enemies.")
+   (short-template "Ironman battling Gamora and Blackwidow.")
 
    'hero-008
-   (read-template "game where Ironman is the hero, and Ironman is also an enemy.")
+   (short-template "Ironman battling Ironman!")
 
    'hero-009
-   (read-template "game where Ironman is the hero, and there are three Ironman enemies too.")
+   (short-template "Ironman battling 3 other Ironman!")
 
    'hero-010
-   (read-template "game where Gamora is the hero, and there are four Gamora enemies too.")
+   (short-template "Gamora battling 4 other Gamoras!")
 
    'hero-011
-   (read-template "game where Ironman is the hero, and Gamora is your enemy.  Give Gamora a Hammer power.")
+   (short-template "Ironman battling Gamora with Hammer power.")
 
    'hero-012
-   (read-template "game where Ironman is the hero, and three Gamoras are your enemies.  Give ONE Gamora a Hammer power.")
+   (short-template "Ironman battling 1 Gamora with Hammer power, and 2 other Gamoras.")
 
    'hero-013
-   (read-template "game where Ironman is the hero, and three Gamoras are your enemies.  Give EACH Gamora a Hammer power.")
+   (short-template "Ironman battling 3 Gamoras with Hammer powers.")
 
    'hero-014
-   (read-template "game where Ironman is the hero, and the enemies are Drax, Hawkeye, and Gamora.  Give EACH enemy a Hammer power.")
+   (short-template "Ironman battling Drax, Hawkeye, and Gamora. Give EACH enemy Hammer powers.")
 
    'hero-015
-   (read-template "game where Ironman is the hero, and the enemies are four other Ironmans.  Give the hero a Hammer power.  Give nothing to the enemies.")
+   (short-template "Ironman with Hammer power battling 4 other Ironman.")
 
    'hero-016
-   (read-template "game where Ironman is the hero, and the enemies are four other Ironmans.  Give the hero a Hammer power.  Give the enemies Hammer powers too.")
+   (short-template "Ironman with Hammer power battling 4 other Ironman with Hammer powers.")
 
    'hero-017
-   (read-template "game where Ironman is the hero, and the enemies are four other Ironmans.  Give the hero a Hammer power, and give the enemies all a Magic Orb.")
+   (short-template "Ironman with Hammer power battling 4 other Ironman with Magic Orbs.")
 
    'hero-018
-   (read-template "game where Ironman is the hero, and the enemies are two Draxes and two Blackwidows.  Give the hero a Hammer power, give each Drax a Magic Orb power, and give each Blackwidow a Hammer power.")
+   (short-template "Ironman with Hammer power battling 2 Draxes with Magic Orbs, and 2 Blackwidows with Hammer powers.")
 
    'hero-019
-   (read-template "game where Ironman is the hero, and the enemies are two Draxes, two Blackwidows, and two other Ironmen.  Give the hero a Hammer power, give each Drax a magic orb, and give each Blackwidow a Hammer power.  Give the Ironmen no powers (just the default).")
+   (short-template "Ironman with Hammer power battling 2 Draxes with Magic Orbs, 2 Blackwidows with Hammer powers, and 2 other Ironman with no powers.")
 
    'hero-020
-   (read-template "game where Ironman is the hero, and there are no enemies.  Give the hero a red Magic Orb power.")
+   (short-template "Ironman with a RED Magic Orb.")
 
    'hero-021
-   (read-template "game where Ironman is the hero, and there are no enemies.  Give the hero a red Star Bit power.")
+   (short-template "Ironman with a RED Star Bit power.")
 
    'hero-022
-   (read-template "game where Ironman is the hero, and there are no enemies.  Give the hero a red Energy Blast power.")
+   (short-template "Ironman with a RED Energy Blast power.")
 
    'hero-023
-   (read-template "game where Ironman is the hero, and there are three other Ironmen enemies.  Give each a Magic Orb power, each with a different color.")
+   (short-template "Ironman with a Magic Orb battling 3 other Ironman with Magic Orbs.  Make each Magic Orb a different color.")
 
    'hero-024
-   (read-template "game where Ironman is the hero, and there are five other Ironmen enemies.  Give everyone a Magic Orb power, each with a different color.")
+   (short-template "Ironman with a Magic Orb battling 5 other Ironman with Magic Orbs.  Make each Magic Orb a different color.")
 
    'hero-025
-   (read-template "game where Ironman is the hero, and there are five other Drax enemies.  Give everyone a Magic Orb power, each with a different color.")
+   (short-template "Ironman with a Magic Orb battling 5 Drax with Magic Orbs.  Make each Magic Orb a different color.")
 
    'hero-026
-   (read-template "game where Ironman is the hero, and there are five other Drax enemies.  Give everyone a Magic Orb power, each with a different color.  Also add two Ironmen enemies with default powers.")
+   (short-template "Ironman with a Magic Orb battling a Drax with Hammer power, 2 Drax with YELLOW Star Bit powers, 2 Drax with BLUE Energy Blast powers, and 2 other Ironman.")
 
    'hero-027
-   (read-template "game with two levels.  In the 1st level, the enemy is Gamora, and in the 2nd level the enemy is Drax. In both levels, the hero is Ironman.")
+   (read-multi-game-template "The 1st level has Ironman battling Gamora. The 2nd level has Ironman battling Drax.")
 
    'hero-028
-   (read-template "game with three levels.  In the 1st level, the enemy is Gamora, in the 2nd level the enemy is Drax, in the third level the enemy is Hawkeye. In all levels, the hero is Ironman.")
+   (read-multi-game-template "The 1st level has Ironman battling Gamora. The 2nd level has Ironman battling Drax. The 3rd level has Ironman battling Hawkeye.")
 
    'hero-029
-   (read-template "game with three levels.  In all levels, the hero is Ironman.  In the 1st level, there should be one Gamora enemy.  In each level after that, there should be one more Gamora enemy than before.")
+   (read-multi-game-template "The 1st level has Ironman battling Gamora. The 2nd level has Ironman battling 2 Gamoras. The 3rd level has Ironman battling 3 Gamoras!")
 
    'hero-030
-   (read-template "game with three levels.  In all levels, the hero is Ironman and the enemy is Gamora.  But make Gamora have a different colored magic orb power in each level.")
+   (read-multi-game-template "All 3 levels have Ironman battling Gamora. Give Gamora a different colored Magic Orb in each level.")
 
    'hero-031
-   (read-template "game with three levels.  In all levels, the hero is Ironman and the enemies are Gamoras with Magic Orb powers.  Make each level have one more Gamora than the level before.  Also, give the Gamoras in each level a different power color than the level before.")
+   (read-multi-game-template "The 1st level has Ironman battling Gamora with a Magic Orb. The 2nd level adds another Gamora with a Magic Orb. The 3rd level adds one more Gamora with a Magic Orb. Give Gamora a different colored Magic Orb in each level.")
    
    'hero-032
    (read "Look at the code below, say out loud what it does then write it from memory")
