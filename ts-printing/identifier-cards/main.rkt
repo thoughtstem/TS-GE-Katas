@@ -2,6 +2,10 @@
 
 (provide begin-identifier-job
          begin-asset-job
+         lang->list
+         ID->CODE-PICT 
+         ID->SUMMARY
+         CURRENT-LANGUAGE-EXAMPLES
          FILTER-BY-COLLECTION)
 
 (require pict
@@ -11,6 +15,7 @@
          "../common.rkt"
          "./util.rkt"
          "./special-forms.rkt")
+
 
 (define (id->thing id)
   (dynamic-require (CURRENT-LANGUAGE) id))
@@ -92,7 +97,7 @@
               (map (const (~a "\n  ___" ))
                    (range (apply max arity)))]
              #;
-             [else (raise
+             [else (error
                     (~a "Not sure how to render the back of a card for a procedure with arity: " arity " " id))])))
  
   (back-side
@@ -102,7 +107,9 @@
                          kw-dummies
                          normal-dummies ;Usually, these are just extra components -- nice consistent quirk of how we designed our languages
                        ")")))) 
-(define (id->back id)
+
+
+(define (id->summary id)
   (cond
     [(is-form? id)      (form->back id)]
     [(is-procedure? id) (procedure->back id)]
@@ -113,13 +120,15 @@
           (displayln id)
           (back-side (blank)))]))
 
+(define (id->back id)
+  (back-side ((ID->SUMMARY) id)))
+
 (define (id->front id)
   (define blank-card-bg
     (blank-bg))
 
   (define content
-    (codeblock-pict
-      (~a id)))
+    ((ID->CODE-PICT) id))
 
   ;We want all of these to be the same size (normal font size scaled by 4),
   ;  so we only scale down if it happens to be too big.  Most of the identifiers are short, though, and will fit fine.
@@ -172,10 +181,6 @@
     (flatten (map list fronts backs))))
 
 
-(define (list->Desktop l folder)
-  (list->folder
-    l
-    folder))
 
 (define-syntax-rule (begin-identifier-job folder
                                           (lang [k v] ...)
@@ -192,13 +197,21 @@
                      (text folder))
           "gray")))
 
+    #; ;Not quite going to work.  Need to do params during lang->list
+    ;   Also... this doubles up all the work, which is annoying...
+    (TOTAL
+      (length (flatten
+                (list
+                  (lang->list 'lang)
+                  ...))))
+
     (define counter 0)
 
     (parameterize ([k v] ...
                    [STARTING-CARD-NUMBER counter])
       (define cards (lang->list 'lang))
 
-      (list->Desktop cards folder)
+      (list->folder cards folder)
       
       (set! counter (+ counter
                        (length
@@ -220,13 +233,19 @@
                      (text folder))
           "gray")))
 
+    (TOTAL
+      (length (flatten
+                (list
+                  (lang->asset-list 'lang)
+                  ...))))
+
     (define counter 0)
 
     (parameterize ([k v] ...
                    [STARTING-CARD-NUMBER counter])
       (define cards (lang->asset-list 'lang))
 
-      (list->Desktop cards folder)
+      (list->folder cards folder)
       
       (set! counter (+ counter
                        (length
@@ -234,34 +253,13 @@
     ...))
 
 
-;Combine the above jobs??  Not sure yet.
+(define ID->SUMMARY
+  (make-parameter
+    id->summary))
 
-#;
-(begin-asset-job "ba-test"
-                 (battlearena-avengers))
-
-#;
-(begin-identifier-job "ba-test"
-                      (battlearena-avengers))
-
-
-
-;Do docs: Include justifications for
-;  Number printed
-;  Ordering
-;  What's on the back
-
-;  Intended use-case: one deck can do any kata in the collection -- and any
-;     new kata -- as long as it doesn't require more of any identifier than appears in
-;     some kata in the collection.
-
-;  Asset card extras.  Print separately -- but maybe in the same job...
-
-
-; Order cards
-
-;Tomorrow: Shared decks
-
-
-
+(define ID->CODE-PICT
+  (make-parameter
+    (lambda (id)
+      (codeblock-pict
+        (~a id)))))
 

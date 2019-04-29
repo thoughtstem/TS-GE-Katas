@@ -4,6 +4,7 @@
          get-asset-ids
          total-cards
          CURRENT-LANGUAGE
+         CURRENT-LANGUAGE-EXAMPLES
          FILTER-BY-COLLECTION
          (struct-out identifier))
 
@@ -11,7 +12,8 @@
          (except-in ts-kata-util/katas/main
                     read))
 
-(define CURRENT-LANGUAGE (make-parameter #f))
+(define CURRENT-LANGUAGE          (make-parameter #f))
+(define CURRENT-LANGUAGE-EXAMPLES (make-parameter #f))
 (define FILTER-BY-COLLECTION (make-parameter #f))
 
 (struct identifier (id frequency corpus-frequency))
@@ -23,6 +25,10 @@
 (define (kata->program k)
   (define d 
     (expression-data (response-data (kata-response k))))
+
+  ;Hack for k2
+  (when (list? d)
+    (set! d  (expression-data (first d))))
 
   
   (read
@@ -126,9 +132,10 @@
 
 
 (define (get-ids-with-frequency 
-          (examples-path       (string->symbol (~a (CURRENT-LANGUAGE) "/examples")))
-          (filter-func           (const #t))
-          )
+          (examples-path       (or 
+                                 (CURRENT-LANGUAGE-EXAMPLES)
+                                 (string->symbol (~a (CURRENT-LANGUAGE) "/examples"))))
+          (filter-func           (const #t)))
 
   (define codes (get-example-codes examples-path))
 

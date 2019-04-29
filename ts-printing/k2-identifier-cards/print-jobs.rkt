@@ -2,68 +2,88 @@
 
 (require "./main.rkt"
          "../challenge-cards/main.rkt"
+         ts-kata-util/katas/main
          (only-in pict text))
 
-(require 
-  (rename-in (only-in (submod k2/lang/hero/powers  ratchet) hero-lang)
-             [hero-lang hero-lang-powers])
-  (rename-in (only-in (submod k2/lang/hero/basic  ratchet) hero-lang)
-             [hero-lang hero-lang-basic])
 
-  (rename-in (only-in (submod k2/lang/zoo/friends  ratchet) zoo-lang)
-             [zoo-lang zoo-lang-friends])
-  (rename-in (only-in (submod k2/lang/zoo/coins  ratchet) zoo-lang)
-             [zoo-lang zoo-lang-coins])
-  (rename-in (only-in (submod k2/lang/zoo/foods  ratchet) zoo-lang)
-             [zoo-lang zoo-lang-foods])
-  (rename-in (only-in (submod k2/lang/sea/friends  ratchet) sea-lang)
-             [sea-lang sea-lang-friends])
-  
-  (rename-in (only-in (submod k2/lang/sea/enemies  ratchet) sea-lang)
-             [sea-lang sea-lang-enemies])
+(define (farm->Desktop)
+  (local-require ts-k2-farm-summer-camp-2019/katas)
 
-  (rename-in (only-in (submod k2/lang/sea/coins  ratchet) sea-lang)
-             [sea-lang sea-lang-coins])
-  (rename-in (only-in (submod k2/lang/sea/foods  ratchet) sea-lang)
-             [sea-lang sea-lang-foods])
+  (define farm-foods
+    (filter-by-response-lang 'k2/lang/farm/foods 
+      farm))
 
-  (rename-in (only-in (submod k2/lang/farm/foods  ratchet) farm-lang)
-             [farm-lang farm-lang-foods]) 
-  (rename-in (only-in (submod k2/lang/farm/enemies  ratchet) farm-lang)
-             [farm-lang farm-lang-enemies]) 
-  (rename-in (only-in (submod k2/lang/farm/coins  ratchet) farm-lang)
-             [farm-lang farm-lang-coins]))  
+  (define farm-coins
+    (filter-by-response-lang 'k2/lang/farm/coins 
+      farm))
+
+  (define farm-enemies
+    (filter-by-response-lang 'k2/lang/farm/enemies 
+      farm))
+
+  (begin-k2-identifier-job  "k2-farm-identifiers"  
+                            (k2/lang/farm/foods
+                              [FILTER-BY-COLLECTION farm-foods])
+                            (k2/lang/farm/coins
+                              [FILTER-BY-COLLECTION farm-coins])
+                            (k2/lang/farm/enemies
+                              [FILTER-BY-COLLECTION farm-enemies])))
+
+(define (sea->Desktop)
+  (local-require ts-k2-sea-summer-camp-2019/katas)
+
+  (define sea-foods
+    (filter-by-response-lang 'k2/lang/sea/foods 
+      sea))
+
+  (define sea-friends
+    (filter-by-response-lang 'k2/lang/sea/friends 
+      sea))
+
+  (define sea-enemies
+    (filter-by-response-lang 'k2/lang/sea/enemies 
+      sea))
+
+  (begin-k2-identifier-job  "k2-sea-identifiers"  
+                            (k2/lang/sea/foods
+                              [FILTER-BY-COLLECTION sea-foods])
+                            (k2/lang/sea/friends
+                              [FILTER-BY-COLLECTION sea-friends])
+                            (k2/lang/sea/enemies
+                              [FILTER-BY-COLLECTION sea-enemies])))
+
+
+(define (zoo->Desktop)
+  (local-require ts-k2-zoo-summer-camp-2019/katas)
+
+  ;Consider moving these into ts-k2-zoo-summer-camp-2019/katas 
+
+  (define zoo-foods
+    (filter-by-response-lang 'k2/lang/zoo/foods 
+      zoo))
+
+  (define zoo-friends
+    (filter-by-response-lang 'k2/lang/zoo/friends 
+      zoo))
+
+  (define zoo-coins
+    (filter-by-response-lang 'k2/lang/zoo/coins 
+      zoo))
+
+  (begin-k2-identifier-job  "k2-zoo-identifiers"  
+                            (k2/lang/zoo/foods
+                              [FILTER-BY-COLLECTION zoo-foods])
+                            (k2/lang/zoo/friends
+                              [FILTER-BY-COLLECTION zoo-friends])
+                            (k2/lang/zoo/coins
+                              [FILTER-BY-COLLECTION zoo-coins])))
 
 
 (define (all->Desktop)
-  (begin-k2-identifier-job  "k2-langs"  
-                         (hero-lang-basic
-                           [EXTRA-META (text "k2/lang/hero/basic")]) 
-                         (hero-lang-powers
-                           [EXTRA-META (text "k2/lang/hero/powers")]) 
+  (zoo->Desktop)
+  (sea->Desktop)
+  (farm->Desktop))
 
-                         (zoo-lang-friends
-                           [EXTRA-META (text "k2/lang/zoo/friends")])
-                         (zoo-lang-coins
-                           [EXTRA-META (text "k2/lang/zoo/coins")])
-                         (zoo-lang-foods
-                           [EXTRA-META (text "k2/lang/zoo/foods")])
+#;
+(farm->Desktop)
 
-                         (sea-lang-friends
-                           [EXTRA-META (text "k2/lang/sea/friends")])
-                         (sea-lang-enemies
-                           [EXTRA-META (text "k2/lang/sea/enemies")])
-                         (sea-lang-coins
-                           [EXTRA-META (text "k2/lang/sea/coins")])
-                         (sea-lang-foods
-                           [EXTRA-META (text "k2/lang/sea/foods")])
-
-                         (farm-lang-foods
-                           [EXTRA-META (text "k2/lang/farm/foods")])
-                         (farm-lang-enemies
-                           [EXTRA-META (text "k2/lang/farm/enemies")])
-                         (farm-lang-coins
-                           [EXTRA-META (text "k2/lang/farm/coins")])))
-
-
-(all->Desktop)

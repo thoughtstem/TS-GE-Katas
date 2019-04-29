@@ -48,6 +48,8 @@
          sort-katas-by-difficulty
 
          ->code?
+         response-lang=?
+         filter-by-response-lang
          )
 
 ;(require scribble/manual)
@@ -295,6 +297,33 @@
           katas
           mappings)))
 
+
+(define (first-line s)
+  (first 
+    (string-split s "\n")))
+
+(define (get-lang s)
+  (string->symbol
+    (regexp-replace #px"#lang " (first-line s) "")))
+
+(define (response-lang k)
+  (define kd (expression-data
+               (response-data (kata-response k))))
+
+  ;Hack for k2
+  (when (list? kd) ;This needs to get formalized better.
+    (set! kd (expression-data (first kd))))
+
+  (get-lang kd))
+
+(define (filter-by-response-lang l kc)
+  (filter-collection
+    (curryr response-lang=? l)
+    kc))
+
+(define (response-lang=? k l)
+  (define kl (response-lang k))
+  (eq? l kl))
 
 (define (filter-collection pred kc)
   ;Use lenses?

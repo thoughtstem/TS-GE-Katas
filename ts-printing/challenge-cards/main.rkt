@@ -158,11 +158,6 @@
                       ...)
   (begin
     (VERSION git-hash)
-    (TOTAL (length 
-             (flatten
-               (list
-                 (kata-collection-katas collection) 
-                 ...))))
 
     (FRONT-META-FUNCTION
       (lambda (i)
@@ -173,12 +168,18 @@
     ; the hex cards.
     (MARGIN 500)
 
+    #;
+    (TOTAL (length 
+             (flatten
+               (list
+                 (kata-collection-katas collection) 
+                 ...))))
+
+
     (define counter 0)
 
     (parameterize ([k v] ...
-                         [STARTING-CARD-NUMBER counter]
-                         #;
-                         [EXTRA-META (text folder)])
+                         [STARTING-CARD-NUMBER counter] )
       (collection->Desktop collection folder)
       (set! counter (+ counter 
                        (length 
