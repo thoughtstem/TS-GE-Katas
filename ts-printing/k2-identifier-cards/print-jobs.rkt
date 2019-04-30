@@ -56,19 +56,9 @@
 (define (zoo->Desktop)
   (local-require ts-k2-zoo-summer-camp-2019/katas)
 
-  ;Consider moving these into ts-k2-zoo-summer-camp-2019/katas 
-
-  (define zoo-foods
-    (filter-by-response-lang 'k2/lang/zoo/foods 
-      zoo))
-
-  (define zoo-friends
-    (filter-by-response-lang 'k2/lang/zoo/friends 
-      zoo))
-
-  (define zoo-coins
-    (filter-by-response-lang 'k2/lang/zoo/coins 
-      zoo))
+  (define zoo-foods   (filter-by-response-lang 'k2/lang/zoo/foods zoo))
+  (define zoo-friends (filter-by-response-lang 'k2/lang/zoo/friends zoo))
+  (define zoo-coins   (filter-by-response-lang 'k2/lang/zoo/coins zoo))
 
   (begin-k2-identifier-job  "k2-zoo-identifiers"  
                             (k2/lang/zoo/foods
@@ -78,12 +68,25 @@
                             (k2/lang/zoo/coins
                               [FILTER-BY-COLLECTION zoo-coins])))
 
+(define (hero->Desktop)
+  (local-require ts-k2-hero-summer-camp-2019/katas)
+
+  (define hero-basic  (filter-by-response-lang 'k2/lang/hero/basic hero))
+  (define hero-powers (filter-by-response-lang 'k2/lang/hero/powers hero))
+
+  (begin-k2-identifier-job  "k2-hero-identifiers"  
+                            (k2/lang/hero/basic
+                              [FILTER-BY-COLLECTION hero-basic])
+                            (k2/lang/hero/powers
+                              [FILTER-BY-COLLECTION hero-powers])))
+
 
 (define (all->Desktop)
+  (hero->Desktop)
   (zoo->Desktop)
   (sea->Desktop)
   (farm->Desktop))
 
 #;
-(farm->Desktop)
+(all->Desktop)
 

@@ -45,11 +45,12 @@
     (VERSION git-hash)
     (HEIGHT 800)
     (WIDTH  800)
-    (MARGIN 200)
+    (MARGIN 100)
     (FRONT-META-FUNCTION
       (lambda (i)
         (colorize
           (vc-append (default-meta i)
+                     (text (~a "#lang " (CURRENT-LANGUAGE)))
                      (text folder))
           "gray")))
 
@@ -58,7 +59,8 @@
         (list
           (cons 
             'lang 
-            (parameterize ([CURRENT-LANGUAGE-EXAMPLES 'k2/examples]    
+            (parameterize ([CURRENT-LANGUAGE 'lang]
+                           [CURRENT-LANGUAGE-EXAMPLES 'k2/examples]    
                            [CURRENT-VISUAL-LANGUAGE
                              (dynamic-require '(submod lang ratchet) 'vis-lang)]
                            [k v] ...)
@@ -68,9 +70,10 @@
     (TOTAL (/ (length (flatten (hash-values card-hash)))
               2))
 
-    (define counter 0)
+    (define counter 1)
 
     (parameterize ([k v] ...
+                   [CURRENT-LANGUAGE 'lang] 
                    [STARTING-CARD-NUMBER counter])
 
       (define cards (hash-ref card-hash 'lang))
@@ -89,3 +92,6 @@
     ...)
   
   )
+
+
+

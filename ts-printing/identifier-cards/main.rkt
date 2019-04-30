@@ -6,6 +6,7 @@
          ID->CODE-PICT 
          ID->SUMMARY
          CURRENT-LANGUAGE-EXAMPLES
+         CURRENT-LANGUAGE
          FILTER-BY-COLLECTION)
 
 (require pict
@@ -197,19 +198,23 @@
                      (text folder))
           "gray")))
 
-    #; ;Not quite going to work.  Need to do params during lang->list
-    ;   Also... this doubles up all the work, which is annoying...
-    (TOTAL
-      (length (flatten
-                (list
-                  (lang->list 'lang)
-                  ...))))
+    (define card-hash
+      (make-hash 
+        (list
+          (cons 
+            'lang 
+            (parameterize ([k v] ...)
+              (lang->list 'lang)))
+          ...)))
+
+    (TOTAL (/ (length (flatten (hash-values card-hash)))
+              2))
 
     (define counter 0)
 
     (parameterize ([k v] ...
                    [STARTING-CARD-NUMBER counter])
-      (define cards (lang->list 'lang))
+      (define cards (hash-ref card-hash 'lang))
 
       (list->folder cards folder)
       
@@ -230,20 +235,28 @@
       (lambda (i)
         (colorize
           (vc-append (default-meta i)
+                     (text (~a "#lang " (CURRENT-LANGUAGE)))
                      (text folder))
           "gray")))
 
-    (TOTAL
-      (length (flatten
-                (list
-                  (lang->asset-list 'lang)
-                  ...))))
+    (define card-hash
+      (make-hash 
+        (list
+          (cons 
+            'lang 
+            (parameterize ([CURRENT-LANGUAGE 'lang] 
+                           [k v] ...)
+              (lang->asset-list 'lang)))
+          ...)))
+
+    (TOTAL (/ (length (flatten (hash-values card-hash)))
+              2))
 
     (define counter 0)
 
     (parameterize ([k v] ...
                    [STARTING-CARD-NUMBER counter])
-      (define cards (lang->asset-list 'lang))
+      (define cards (hash-ref card-hash 'lang))
 
       (list->folder cards folder)
       
