@@ -13,7 +13,7 @@ The goals of a Game Jam are simple:
           @item["Students feel " @bold{proud and accomplished} " regarding
                 what they did in Game Jam."]]
 
-Rules of Game Jam can be adjusted to accomodate the needs of a particular batch of students,
+Rules of Game Jam can be adjusted to accommodate the needs of a particular batch of students,
 as long as the goals above are still being served. Remember that adding support, hints
 and assistance can make a potentially frustrating Game Jam into a success! However, adding
 too much help can undermine a feeling of actual accomplishment. It's all about balance!
@@ -39,27 +39,6 @@ other exercises plus additional resources available during Jam.
 Instead of working on one large game, K-2nd students work on individual kata cards, trying
 to build as many games back-to-back as they can!
 
-@section{Prompt}
-
-The challenge cards are the perfect prompt for Game Jam. Cards should stay stimulus-side-up
-(code is hidden) unless the student "purchases" a card flip. Coaches should make it clear
-that flipping a card over without paying up is cheating and keep an eye as best they can
-during the jam. Students will probably speak up very loudly if they think they see someone
-breaking this rule. Offer reminders when needed, but only repercussions when you see
-cheating with your own eyes.
-
-@larger{3rd-10th}
-
-Every student/pair of students is given three challenge cards as a starting prompt for
-their game. @bold{These are optional!} If students have their own ideas of what they want
-to create, go for it! The 3 card prompt is merely an inspiration to turn to if they get
-stuck.
-
-@larger{K-2nd}
-
-A single challenge card is given to each student/pair of students. Once that challenge is
-correctly completed, they receive their next challenge card!
-
 @section{Partnering Up}
 
 Working in pairs is recommended whenever possible -- two brains working on the same code
@@ -81,10 +60,31 @@ not:
                 than later -- they will be worrying about who they will end up with until
                 its settled and won't be listening to a word you say until then!}
           @item{Have students switch "drivers" (who is typing) every 3 minutes. Set a
-                timer and just keep running it, instucting students to swap everytime it
+                timer and just keep running it, instucting students to swap every time it
                 goes off.}
           @item{When students are paired up, they EACH receive the total dollars they
                 earned with their game, they don't have to split the total between them.}]
+
+@section{Prompt}
+
+The challenge cards are the perfect prompt for Game Jam. Cards should stay stimulus-side-up
+(code is hidden) unless the student "purchases" a card flip. Coaches should make it clear
+that flipping a card over without paying up is cheating and keep an eye as best they can
+during the jam. Students will probably speak up very loudly if they think they see someone
+breaking this rule. Offer reminders when needed, but only repercussions when you see
+cheating with your own eyes.
+
+@larger{3rd-10th}
+
+Every student/pair of students is given three challenge cards as a starting prompt for
+their game. @bold{These are optional!} If students have their own ideas of what they want
+to create, go for it! The 3 card prompt is merely an inspiration to turn to if they get
+stuck.
+
+@larger{K-2nd}
+
+A single challenge card is given to each student/pair of students. Once that challenge is
+correctly completed, they receive their next challenge card!
 
 @section{Hints and Help!}
 
@@ -111,7 +111,7 @@ make it easier or harder to access, and, in turn, the Jam easier/harder!
 Here are some additional supports that can be added during Game Jam. These can help if
 students are struggling, without sacrificing the integrity of Game Jam:
 
-@itemlist[@item[@bold{Call in a Coach!} " -- for 5 ThoughtSTEM dollars, any student can
+@itemlist[@item[@bold{Call in a Coach!} " -- for " @bold{5 ThoughtSTEM dollars} ", any student can
                 get a coach's help for 2 minutes! This can be very useful in the last 5
                 or 10 minutes to get all student games running."]
           @item[@bold{Starting Code} " -- don't forget that you always have access to
@@ -119,19 +119,19 @@ students are struggling, without sacrificing the integrity of Game Jam:
                 some or all students. A common reminder is the defining syntax, or basic
                 code to start with."]]
 
-@section{Coaches Role during the Jam}
+@section{Staff Role during the Jam}
 
 Okay, the jam is on. You are now a "judge." What does that mean? What do you do??
 
 @itemlist[@item[@bold{Support the students} " by offering words of encouragement, advice on how to
                 approach problems, and congratulations on cool code! Avoid the temptation
                 to give answers to students when they are stuck, rather point them to the
-                resources accessable to them."]
+                resources accessible to them."]
           @item["Encourage the kids by " @bold{awarding bonus point stickers} " when they do things we like
                 to see! When they work with their team, when they test their game, when they create a cool
                 story behind their game, etc. Also use the stickers as a motivator when things get tough:
                 'bonus point for working on debugging! That's tricky stuff!' Not all students/teams need
-                to get the same number of bonus, but keep an eye on distibution to keep it fair."]
+                to get the same number of bonus, but keep an eye on distribution to keep it fair."]
           @item["Monitor how students are progressing, and " @bold{adjust jam rules} " to make it easier or
                 harder as needed! For example, adding a price to the resource center, or adding in the ability
                 to Call in a Coach!"]
