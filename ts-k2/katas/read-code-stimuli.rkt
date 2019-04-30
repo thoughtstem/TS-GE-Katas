@@ -34,104 +34,108 @@
    'hero-000
    (read "Create a basic hero game.")
 
-   'hero-003
+   'hero-001
+   (short-template "Iron Man as the hero.")
+
+   'hero-002
    (short-template "Gamora as the hero.")
+   
+   'hero-003
+   (short-template "Gamora as the hero, and Nebula as the enemy.")
 
    'hero-004
-   (short-template "Ironman as the hero.")
+   (short-template "Hulk battling Loki, Redskull, and Mandarin.")
 
    'hero-005
-   (short-template "Blackwidow as the hero")
+   (short-template "Iron Man battling Captain America and Hulk")
 
    'hero-006
-   (short-template "Blackwidow as the hero battling Gamora and Ironman.")
+   (short-template "Captain America battling 2 other Captain Americas!")
 
    'hero-007
-   (short-template "Ironman battling Gamora and Blackwidow.")
+   (short-template "Thor using a Hammer battling Loki.")
 
    'hero-008
-   (short-template "Ironman battling Ironman!")
+   (short-template "Starlord using a Star Bit battling Mandarin.")
 
    'hero-009
-   (short-template "Ironman battling 3 other Ironman!")
+   (short-template "Gamora using a Magic Orb battling Nebula using an Energy Blast.")
 
    'hero-010
-   (short-template "Gamora battling 4 other Gamoras!")
+   (short-template "Loki using an Energy Blast battling Thor using a Hammer, and Star-Lord using Sar Bit.")
 
    'hero-011
-   (short-template "Ironman battling Gamora with Hammer power.")
+   (short-template "Nebula using an Energy Blast battling Rocket Racoon using a Star Bit, Gamora using a Star Bit, Drax using a Magic Orb, and Star-Lord using a Maric Orb.")
 
    'hero-012
-   (short-template "Ironman battling 1 Gamora with Hammer power, and 2 other Gamoras.")
+   (short-template "Thor using a random power battling Loki, Malekith, Mandarin, and Nebula all using random powers.")
 
    'hero-013
-   (short-template "Ironman battling 3 Gamoras with Hammer powers.")
+   (short-template "Gamora using a GREEN Magic Orb battling Nebula using a BLUE Energy Blast.")
 
    'hero-014
-   (short-template "Ironman battling Drax, Hawkeye, and Gamora. Give EACH enemy Hammer powers.")
+   (short-template "Loki using a YELLOW Energy Blast battling Thor using an ORANGE Hammer, and Star-Lord using a PURPLE Star Bit.")
 
    'hero-015
-   (short-template "Ironman with Hammer power battling 4 other Ironman.")
+   (short-template "Nebula using a GREEN Energy Blast battling Rocket Racoon and Gamora using a RED Star Bit, and Drax and Starlord using a RED Magic Orb.")
 
    'hero-016
-   (short-template "Ironman with Hammer power battling 4 other Ironman with Hammer powers.")
+   (short-template "Loki using a Star Bit battling 6 Thors each with a different colored Hammer.")
 
    'hero-017
-   (short-template "Ironman with Hammer power battling 4 other Ironman with Magic Orbs.")
+   (short-template "Gamora using a RED random power battling Nebula using a Yellow power, and Mandarin using a YELLOW power.")
 
    'hero-018
-   (short-template "Ironman with Hammer power battling 2 Draxes with Magic Orbs, and 2 Blackwidows with Hammer powers.")
+   (short-template "Star-Lord using a random colored power battling Rocket Racoon, Drax, and Gamora each using a random colored power.")
 
    'hero-019
-   (short-template "Ironman with Hammer power battling 2 Draxes with Magic Orbs, 2 Blackwidows with Hammer powers, and 2 other Ironman with no powers.")
+   (short-template "Drax using an Energy Blast battling Loki using a Magic Orb and Thor using a Hammer.")
 
    'hero-020
-   (short-template "Ironman with a RED Magic Orb.")
-
+   (short-template "Iron Man using a RED Magic Orb battling 2 Mandarins! One using an ORANGE Energy Blast, the other one a random colored power.")
+   
    'hero-021
-   (short-template "Ironman with a RED Star Bit power.")
+   (short-template "Iron Man using a Star Bit battling Nebula using a Magic Orb, and Loki using an Energy Blast; with Health and Force Field Power-Ups.")
 
    'hero-022
-   (short-template "Ironman with a RED Energy Blast power.")
+   (short-template "Thor using a BLUE Hammer battling Loki and Mandarin using a random colored power.")
 
    'hero-023
-   (short-template "Ironman with a Magic Orb battling 3 other Ironman with Magic Orbs.  Make each Magic Orb a different color.")
+   (short-template "Nebula using a random colored Star Bit battling Black Widow using a RED power, Iron Man using a BLUE Energy Blast; with Health and Speed Power-Ups.")
 
    'hero-024
-   (short-template "Ironman with a Magic Orb battling 5 other Ironman with Magic Orbs.  Make each Magic Orb a different color.")
+   (short-template "Iron Man using a RED Magic Orb battling 3 other Iron Mans each with a radom colored power.")
 
    'hero-025
-   (short-template "Ironman with a Magic Orb battling 5 Drax with Magic Orbs.  Make each Magic Orb a different color.")
+   (short-template "Drax using a random colored power battling Loki, Malekith, Mandarin, and Nebula all with a random colored power; with Health, Grow, Shrink, Speed, and Force Field Power-Ups.")
 
    'hero-026
-   (short-template "Ironman with a Magic Orb battling a Drax with Hammer power, 2 Drax with YELLOW Star Bit powers, 2 Drax with BLUE Energy Blast powers, and 2 other Ironman.")
+   (read-multi-game-template "The 1st game with Thor using a Hammer battling 2 Lokis! One using a Magic Orb and the other one a Star Bit.
+                              The 2nd game with Thor using a GREEN Hammer battling 2 Lokis! One using a RED Magic Orb and the other one a RED Star Bit.")
 
    'hero-027
-   (read-multi-game-template "The 1st level has Ironman battling Gamora. The 2nd level has Ironman battling Drax.")
+   (read-multi-game-template "The 1st game with Iron Man using a GREEN Magic Orb battling Mandarin using a RED Maric Orb.
+                              In the 2nd game add a second Mandarin using an ORANGE Magic Orb.
+                              In the 3rd game add a third Mandarin using a YELLOW Magic Orb.")
 
    'hero-028
-   (read-multi-game-template "The 1st level has Ironman battling Gamora. The 2nd level has Ironman battling Drax. The 3rd level has Ironman battling Hawkeye.")
+   (read-multi-game-template "The 1st game with Black Widow battling Nebula, both using a random colored power.
+                              In the 2nd game add a second Nebula using a random colored power.
+                              In the 3rd game add a third Nebula using a random colored power, with Health and Speed Power-Ups.")
 
    'hero-029
-   (read-multi-game-template "The 1st level has Ironman battling Gamora. The 2nd level has Ironman battling 2 Gamoras. The 3rd level has Ironman battling 3 Gamoras!")
+   (read-multi-game-template "The 1st game with Iron Man battling Loki, both using a random colored power.
+                              The 2nd game with Drax battling Malekith and Mandarin, all three using a random colored power.
+                              The 3rd game with Black Widow battling Nebula and Loki, all three using a random colored power; with Health and Speed Power-Ups.")
 
    'hero-030
-   (read-multi-game-template "All 3 levels have Ironman battling Gamora. Give Gamora a different colored Magic Orb in each level.")
+   (read-multi-game-template "The 1st game with Iron Man battling Loki, both using a random colored power; with a Health Power-Up.
+                              The 2nd game with Drax battling Loki, Malekith, Mandarin, and Nebula, all of them using a random colored power; with Health, Grow, and Shrink Power-Ups.
+                              The 3rd game with Black Widow battling Loki, Malekith, Mandarin, and Nebula, all of them using a random colored power; with all the Power-Ups.")
 
-   'hero-031
-   (read-multi-game-template "The 1st level has Ironman battling Gamora with a Magic Orb. The 2nd level adds another Gamora with a Magic Orb. The 3rd level adds one more Gamora with a Magic Orb. Give Gamora a different colored Magic Orb in each level.")
    
-   'hero-032
-   (read "Look at the code below, say out loud what it does then write it from memory")
+
    
-   'hero-033
-   (read "Look at the code below, say out loud what it does then write it from memory")
-
-   'hero-034
-   (read "Look at the code below, say out loud what it does then write it from memory")
-
-
-
    'farm-000
    (read "Create a basic farm game.")
    
