@@ -10,11 +10,12 @@
          STARTING-CARD-NUMBER
          WIDTH
          HEIGHT
-         MARGIN
          FRONT-META-FUNCTION
          BACK-META-FUNCTION
          VERSION
          TOTAL
+         BACK-MARGIN
+         FRONT-MARGIN
          pictify
          blank-bg
          save-pict
@@ -22,7 +23,8 @@
          make-texture
          git-hash
          double-size
-         w h)
+         front-w front-h
+         back-w back-h)
 
 (require pict 
          (only-in 2htdp/image 
@@ -38,7 +40,8 @@
 
 (define HEIGHT  (make-parameter 1200))
 (define WIDTH   (make-parameter 1200))
-(define MARGIN  (make-parameter 200))
+(define BACK-MARGIN  (make-parameter 200))
+(define FRONT-MARGIN  (make-parameter 200))
 (define PADDING (make-parameter 10))
 
 (define FRONT-BG-COLOR       (make-parameter "white"))
@@ -79,16 +82,16 @@
   (define texture 
     (scale-to-fit t 
                   solid
-                  #:mode 'distort))
+                  #:mode 'distort ))
 
   (cc-superimpose solid texture)) 
 
-(define (side #:fit-mode (fit-mode 'scale) main-bg card-fg)
+(define (side #:fit-mode (fit-mode 'scale) main-bg card-fg margin)
   (define adj-fg
     (if (eq? fit-mode 'scale)
       (scale-to-fit card-fg
-                    (- (WIDTH) (MARGIN)) 
-                    (- (HEIGHT) (MARGIN)))
+                    (- (WIDTH) margin)
+                    (- (HEIGHT) margin))
       card-fg))
 
   (refocus
@@ -105,7 +108,9 @@
        pict?)
   (side #:fit-mode fit-mode
         (bg (FRONT-BG-COLOR) (FRONT-BG-TEXTURE)) 
-        my-fg))
+        my-fg
+        (FRONT-MARGIN)
+        ))
 
 (define/contract (back-side #:fit-mode (fit-mode 'scale)
                             (my-fg (blank)))
@@ -115,7 +120,9 @@
        pict?)
   (side #:fit-mode fit-mode
         (bg (BACK-BG-COLOR) (BACK-BG-TEXTURE)) 
-        my-fg))
+        my-fg
+        (BACK-MARGIN)
+        ))
 
 (define (blank-bg)
   (blank (WIDTH) (HEIGHT)))
@@ -133,7 +140,7 @@
     (-
      (/ (WIDTH) 2)
      (/ (pict-width meta) 2))
-    (- (HEIGHT) (MARGIN))
+    (- (HEIGHT) (FRONT-MARGIN))
     meta))
 
 
@@ -185,19 +192,16 @@
   (build-path (find-system-path 'home-dir)
               "Desktop"))
 
+(define (front-w)
+  (- (WIDTH) (FRONT-MARGIN)))
 
-(define (w)
-  (- (WIDTH) (MARGIN)))
+(define (front-h)
+  (- (HEIGHT) (FRONT-MARGIN)))
 
-(define (h)
-  (- (HEIGHT) (MARGIN)))
+(define (back-w)
+  (- (WIDTH) (BACK-MARGIN)))
 
-#;
-(parameterize ([FRONT-BG-COLOR "green"]
-               [BACK-BG-COLOR "red"])
-  (list->folder
-    (list (front-side 
-            (circle 10)
-            )
-          (back-side))))
+(define (back-h)
+  (- (HEIGHT) (BACK-MARGIN)))
+
 

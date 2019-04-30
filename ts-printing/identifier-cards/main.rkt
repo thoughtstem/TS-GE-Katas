@@ -54,18 +54,21 @@
           (displayln "That wasn't a procedure, form, or asset")
           (displayln id)
           (blank))]))
-  
 
   (back-side (special-scale image)) )
 
 
 ;Good for scaling pixel art.  Sharper edges.
 (define (special-scale i)
-  (scale-to-fit
-    (double-size
-      (double-size i))
-    (w)
-    (h)))
+  ;Doubling the size of small images is safe... Not larger ones!  If we need to parameterize the 200 we can...
+  (if (or (< (image-width i) 200)
+          (< (image-height i) 200))
+    (scale-to-fit
+      (double-size
+        (double-size i))
+      (back-w)
+      (back-h))
+    i))
 
 (define (procedure->back id)
   (define thing (id->thing id))
@@ -119,7 +122,7 @@
         (begin
           (displayln "That wasn't a procedure, form, or asset")
           (displayln id)
-          (back-side (blank)))]))
+          (blank))]))
 
 (define (id->back id)
   (back-side ((ID->SUMMARY) id)))
@@ -134,8 +137,8 @@
   ;We want all of these to be the same size (normal font size scaled by 4),
   ;  so we only scale down if it happens to be too big.  Most of the identifiers are short, though, and will fit fine.
   (define scaled-content
-    (if (or (> (pict-width content) (w))
-            (> (pict-height content) (h)))
+    (if (or (> (pict-width content) (front-w))
+            (> (pict-height content) (front-h)))
       (scale-to-fit content w h)
       (scale content 6)))
 
@@ -187,14 +190,16 @@
                                           (lang [k v] ...)
                                           ...)
   (begin
+    (displayln "Begining identifier job")
+    (displayln (~a "Output to: " folder))
     (VERSION git-hash)
     (HEIGHT 800)
     (WIDTH  800)
-    (MARGIN 200)
     (FRONT-META-FUNCTION
       (lambda (i)
         (colorize
           (vc-append (default-meta i)
+                     (text (~a "#lang " (CURRENT-LANGUAGE)))
                      (text folder))
           "gray")))
 
@@ -203,24 +208,30 @@
         (list
           (cons 
             'lang 
-            (parameterize ([k v] ...)
+            (parameterize ([k v] ...
+                           [CURRENT-LANGUAGE 'lang])
+              (displayln "Adding to hash...")
+              (displayln 'lang)
               (lang->list 'lang)))
           ...)))
 
     (TOTAL (/ (length (flatten (hash-values card-hash)))
               2))
 
-    (define counter 0)
+    (define counter 1)
 
     (parameterize ([k v] ...
+                   [CURRENT-LANGUAGE 'lang]
                    [STARTING-CARD-NUMBER counter])
       (define cards (hash-ref card-hash 'lang))
 
       (list->folder cards folder)
       
       (set! counter (+ counter
-                       (length
-                        cards))))
+                       (/
+                         (length
+                           cards)
+                         2))))
     ...))
 
 (define-syntax-rule (begin-asset-job folder
@@ -230,7 +241,6 @@
     (VERSION git-hash)
     (HEIGHT 800)
     (WIDTH  800)
-    (MARGIN 200)
     (FRONT-META-FUNCTION
       (lambda (i)
         (colorize
@@ -252,17 +262,18 @@
     (TOTAL (/ (length (flatten (hash-values card-hash)))
               2))
 
-    (define counter 0)
+    (define counter 1)
 
     (parameterize ([k v] ...
+                   [CURRENT-LANGUAGE 'lang]
                    [STARTING-CARD-NUMBER counter])
       (define cards (hash-ref card-hash 'lang))
 
       (list->folder cards folder)
       
       (set! counter (+ counter
-                       (length
-                        cards))))
+                       (/ (length cards)
+                          2))))
     ...))
 
 

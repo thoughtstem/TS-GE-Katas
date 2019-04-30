@@ -45,7 +45,9 @@
     (VERSION git-hash)
     (HEIGHT 800)
     (WIDTH  800)
-    (MARGIN 100)
+    (FRONT-MARGIN 100)
+    (BACK-MARGIN 100)
+
     (FRONT-META-FUNCTION
       (lambda (i)
         (colorize

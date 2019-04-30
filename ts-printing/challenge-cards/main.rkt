@@ -52,7 +52,7 @@
               (- (/ (WIDTH) 2)
                  (/ (pict-width 
                       (FRONT-TITLE)) 2))
-              (MARGIN) 
+              (FRONT-MARGIN) 
               (FRONT-TITLE)))
 
   (front-side #:fit-mode 'crop
@@ -166,9 +166,11 @@
 
     ;Need a crazy margin to make it work with
     ; the hex cards.
-    (MARGIN 500)
+    (FRONT-MARGIN 200)
+    (BACK-MARGIN 500)
+    ;Gets the backs in the right place,
+    ;   messes up the location of the metas...
 
-    #;
     (TOTAL (length 
              (flatten
                (list
@@ -176,7 +178,7 @@
                  ...))))
 
 
-    (define counter 0)
+    (define counter 1)
 
     (parameterize ([k v] ...
                          [STARTING-CARD-NUMBER counter] )
@@ -186,13 +188,5 @@
                          (kata-collection-katas collection))))) 
     ...))
 
-
-#;
-(begin
-  (require ts-battle-arena-avengers-summer-camp-2019/katas)
-
-  (parameterize ([FRONT-TITLE (text "HELLO")])
-    (show-pict
-      (kata->front-side (first (kata-collection-katas hero-katas))))))
 
 

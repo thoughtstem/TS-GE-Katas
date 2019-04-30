@@ -128,17 +128,13 @@ Adds some printing parameters that are specific to challenge cards:
 
           (begin-job "ts-battle-arena-fortnite-summer-camp-2019-cards"    
             (avatar-katas
-              [FRONT-COLOR    googly-red]
-              [FRONT-COLOR-FG clear-white]
-              [FRONT-TITLE    (title "(avatar)")]) 
-            (selected-enemy-katas
-              [FRONT-COLOR    googly-orange]
-              [FRONT-COLOR-FG clear-white]
-              [FRONT-TITLE    (title "(enemies)")]) 
-            (selected-weapon-katas
-              [FRONT-COLOR    googly-yellow]
-              [FRONT-COLOR-FG clear-white]
-              [FRONT-TITLE    (title "(weapons)")]) ))
+              [FRONT-BG-COLOR  googly-red]
+              [FRONT-FG-COLOR  clear-white]
+              [FRONT-TITLE     (title "(avatar)")]) 
+            (enemy-katas
+              [FRONT-BG-COLOR  googly-orange]
+              [FRONT-FG-COLOR  clear-white]
+              [FRONT-TITLE     (title "(enemy)")]))
   } 
 
   This is the building block used to define the print jobs below.
@@ -159,51 +155,6 @@ adds a matching title.
 @defproc[(ts-k2-sea-summer-camp-2019->Desktop) void?]{ }
 @defproc[(ts-k2-hero-summer-camp-2019->Desktop) void?]{ }
 
-@defmodule[ts-printing/k2-identifier-cards/main]
-
-@defform[(begin-k2-identifier-job desktop-folder (collection [parameter val] ...) ...)]{
-  Utility for putting multiple k2 lang identifiers into a printable folder.  There are so few identifiers in any one langauge that it makes sense to bundle multiple together into a single deck
-
-  Here's the current implementation of @racket[all->Desktop], which outputs all current k2 lang identifiers.
-
-  @codeblock{
-(define (all->Desktop)
-  (begin-k2-identifier-job  "k2-langs"  
-                         (hero-lang-basic
-                           [EXTRA-META (text "k2/lang/hero/basic")]) 
-                         (hero-lang-powers
-                           [EXTRA-META (text "k2/lang/hero/powers")]) 
-
-                         (zoo-lang-friends
-                           [EXTRA-META (text "k2/lang/zoo/friends")])
-                         (zoo-lang-coins
-                           [EXTRA-META (text "k2/lang/zoo/coins")])
-                         (zoo-lang-foods
-                           [EXTRA-META (text "k2/lang/zoo/foods")])
-
-                         (sea-lang-friends
-                           [EXTRA-META (text "k2/lang/sea/friends")])
-                         (sea-lang-enemies
-                           [EXTRA-META (text "k2/lang/sea/enemies")])
-                         (sea-lang-coins
-                           [EXTRA-META (text "k2/lang/sea/coins")])
-                         (sea-lang-foods
-                           [EXTRA-META (text "k2/lang/sea/foods")])
-
-                         (farm-lang-foods
-                           [EXTRA-META (text "k2/lang/farm/foods")])
-                         (farm-lang-enemies
-                           [EXTRA-META (text "k2/lang/farm/enemies")])
-                         (farm-lang-coins
-                           [EXTRA-META (text "k2/lang/farm/coins")])))
-  } 
-}
-
-
-@defmodule[ts-printing/k2-identifier-cards/print-jobs]
-
-@defproc[(all->Desktop) void?]{}
-
 @defmodule[ts-printing/identifier-cards/main]
 
 @defform[(begin-identifier-job desktop-folder (lang [parameter val] ...) ...)]{
@@ -213,7 +164,73 @@ adds a matching title.
 
   Enough duplicates are added so that the deck can be used to construct any single example in the corpus of examples. 
 
-  The cards are sorted in order of frequency of use across a
+  The cards are sorted in order of frequency of use across all examples in the corpus.
 
+  Note that the corpus is specified by the @racket[(FILTER-BY-COLLECTION)] -- which both scopes the list of outputted identifiers by whether or not they appear in the corpus (you don't want to get identifiers from all of racket just because your language happens to reprovide racket), and also is used to calculate the frequency.  The @racket[FILTER-BY-COLLECTION] can be any collection of code katas (response is a program) where the programs are written in the langauge @racket[lang].
+
+@codeblock{
+(begin-identifier-job "battlearena-avengers"      
+                        (battlearena-avengers
+                          [FILTER-BY-COLLECTION 
+                            (merge-collections   
+                              hero-katas     
+                              planet-design-katas
+                              villain-with-power-katas
+                              hero-power-katas                             
+                              powerup-katas)]))
 }
+}
+
+@defform[(begin-identifier-job desktop-folder (lang [parameter val] ...) ...)]{
+  Takes a language, uses it as a module path to locate the assets module within that langauge.  Then generates cards for all provided identifiers from there.
+
+  If an identifier doesn't map to an @racket[image?] or @racket[animated-sprite?] it is ignored.  The front of the cards is the identifier.  The backs are images of the assets.
+}
+
+@defmodule[ts-printing/identifier-cards/print-jobs]
+
+@defproc[(all->Desktop) void?]{ All of the below }
+
+@defproc[(battlearena-avengers->Desktop) void?]{}
+@defproc[(battlearena-fortnite->Desktop) void?]{}
+@defproc[(battlearena-starwars->Desktop) void?]{}
+@defproc[(survival-minecraft->Desktop) void?]{}
+@defproc[(survival-pokemon->Desktop) void?]{}
+@defproc[(assets->Desktop) void?]{}
+
+@defmodule[ts-printing/k2-identifier-cards/main]
+
+@defform[(begin-k2-identifier-job desktop-folder (lang [parameter val] ...) ...)]{
+
+  Same as @racket[begin-identifier-job], but the given @racket[lang]s need to be Ratchet languages -- meaning that the module that defines the reader for the @racket[lang] also needs to define a @racket[ratchet] submodule, which provides the @racket[vis-lang] identifier that describes the visual language.
+
+  Note that a useful utility from @racket[ts-kata-util/katas/main] is the @racket[filter-by-response-lang] which takes a lang (symbol) and a collection of katas, and returns a collection of only the katas whose response code language is the given one.  This is useful because at the k2 level we often have kata collections that use a variety of related languages.
+
+  @codeblock{
+  (define (farm->Desktop)
+          (local-require ts-k2-farm-summer-camp-2019/katas)
+
+          ;Break the farm collection into sub-collections by language.
+          (define farm-foods (filter-by-response-lang 'k2/lang/farm/foods farm))
+          (define farm-coins (filter-by-response-lang 'k2/lang/farm/coins farm))   
+          (define farm-enemies (filter-by-response-lang 'k2/lang/farm/enemies farm))
+
+          (begin-k2-identifier-job  "k2-farm-identifiers"                          
+                                    (k2/lang/farm/foods                            
+                                      [FILTER-BY-COLLECTION farm-foods])           
+                                    (k2/lang/farm/coins                            
+                                      [FILTER-BY-COLLECTION farm-coins])           
+                                    (k2/lang/farm/enemies
+                                      [FILTER-BY-COLLECTION farm-enemies])))
+  } 
+}
+
+
+@defmodule[ts-printing/k2-identifier-cards/print-jobs]
+
+@defproc[(all->Desktop) void?]{}
+@defproc[(sea->Desktop) void?]{}
+@defproc[(zoo->Desktop) void?]{}
+@defproc[(farm->Desktop) void?]{}
+@defproc[(hero->Desktop) void?]{}
 

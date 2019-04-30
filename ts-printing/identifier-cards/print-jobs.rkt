@@ -89,9 +89,6 @@
 (all->Desktop)
 
 #;
-(battlearena-avengers->Desktop)
-
-#;
 (assets->Desktop)
 
 

@@ -14,7 +14,7 @@
 (define clear-white (color 255 255 255 100))
 
 (define-syntax-rule (set-fg-texture img body)
-  (parameterize ([FRONT-BG-TEXTURE (make-texture (p:bitmap (~a "./common/textures/" img)))])
+  (parameterize ([FRONT-BG-TEXTURE (make-texture (p:bitmap (~a "../common/textures/" img)))])
     body))
 
 
@@ -388,6 +388,8 @@
   (ts-k2-sea-summer-camp-2019->Desktop)
   (ts-k2-hero-summer-camp-2019->Desktop))
 
+
+(ts-battle-arena-starwars-summer-camp-2019->Desktop)
 
 #;
 (all->Desktop)

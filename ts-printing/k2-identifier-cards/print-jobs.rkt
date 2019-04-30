@@ -9,17 +9,11 @@
 (define (farm->Desktop)
   (local-require ts-k2-farm-summer-camp-2019/katas)
 
-  (define farm-foods
-    (filter-by-response-lang 'k2/lang/farm/foods 
-      farm))
+  (define farm-foods (filter-by-response-lang 'k2/lang/farm/foods farm))
 
-  (define farm-coins
-    (filter-by-response-lang 'k2/lang/farm/coins 
-      farm))
+  (define farm-coins (filter-by-response-lang 'k2/lang/farm/coins farm))
 
-  (define farm-enemies
-    (filter-by-response-lang 'k2/lang/farm/enemies 
-      farm))
+  (define farm-enemies (filter-by-response-lang 'k2/lang/farm/enemies farm))
 
   (begin-k2-identifier-job  "k2-farm-identifiers"  
                             (k2/lang/farm/foods
