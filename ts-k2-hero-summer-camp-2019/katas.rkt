@@ -9,16 +9,16 @@
   (first (kata-collection-katas hero)))
 
 (define-kata-collection day-one
-  (take (drop (kata-collection-katas hero) 1) 9))
+  (take (drop (kata-collection-katas hero) 1) 6))
 
 (define-kata-collection day-two
-  (take (drop (kata-collection-katas hero) 10) 9))
+  (take (drop (kata-collection-katas hero) 7) 6))
 
 (define-kata-collection day-three
-  (take (drop (kata-collection-katas hero) 19) 7))
+  (take (drop (kata-collection-katas hero) 13) 6))
 
 (define-kata-collection day-four
-  (take (drop (kata-collection-katas hero) 26) 4))
+  (take (drop (kata-collection-katas hero) 19) 6))
 
 (define-kata-collection day-five
-  (drop (kata-collection-katas hero) 30))
+  (drop (kata-collection-katas hero) 25))
