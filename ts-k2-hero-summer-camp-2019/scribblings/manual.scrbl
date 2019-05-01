@@ -27,10 +27,10 @@
 @section{Power Color Katas}
 @(render day-three)
 
-@section{Multi Level Katas}
+@section{Power-ups Katas}
 @(render day-four)
 
-@section{More Multi Level Katas}
+@section{Multi Level Katas}
 @(render day-five)
 
 @section{All Hero Katas}

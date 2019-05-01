@@ -92,14 +92,14 @@ This TL helps keep the car chaos to a minimum. Duties include:
                 find a place to park on a rare occasion where they need to get out
                 of the car}]
 
-@bold[@larger{If Needed: 1-2 Team Leaders -- Complete Set Up}]
+@bold[@larger{If Needed: Complete Set Up -- 1-2 Team Leaders}]
 
 If 8:45 arrives and there is more setup to complete, the Head Coach can assign one
 or two TLs to stay in the camp room and finish up.
 
 @bold[@larger{Special Location Instructions}]
 
-Some of our camp locations have different check-in proceedures. In some cases, we
+Some of our camp locations have different check-in procedures. In some cases, we
 are part of a larger camp where the main staff handles check-in. Others require
 slightly different jobs:
 
@@ -131,11 +131,11 @@ camp room at 9am.
 @subsection{Icebreakers}
 @larger{AM -- mon 9:15am-9:30am}
 
-@larger{AM -- mon 1:15pm - 1:30pm}
+@larger{PM -- mon 1:15pm-1:30pm}
 
 The first activity upon arriving to the classroom should be getting to know the
 students and giving them a chance to get to know you! @bold{EXCITING ENERGY} is
-vital for this activity.
+vital for this activity, even though it may feel like ice skating uphill at times.
 
 Icebreakers should be led by the Head Coach, and all Team Leaders should
 participate.
@@ -177,7 +177,7 @@ teaching katas below:
 
 @larger{PM -- tue-fri 1:15pm-2:00pm}
 
-Breakout time when each camp is working independently with their Team Leader to
+Breakout time where each camp is working independently with their Team Leader to
 learn and earn katas in their curriculum. Here's how to optimize the LEARNING as
 well as the FUN:
 
@@ -215,7 +215,7 @@ for students to take a break from the computers, snack and relax! However,
 @bold{even in unstructured time, staff should always be aware of, and in control of
 the camp environment}. Remember:
 
-@itemlist[@item[@bold{During breaks, all students are OFF our computers.}
+@itemlist[@item[@bold{During breaks, all students are OFF computers.}
                 " This can be a hard rule to enforce all the time -- what
                 about the student who wants to keep coding, that's good
                 right? Or the student who is a bit behind, and wants to spend
@@ -238,7 +238,7 @@ the camp environment}. Remember:
                            breaks included.}]
           @item[@bold{Be mindful of ALL students.} " Just like during the rest of
                 camp, HC is working to make this as positive of an experience
-                for each student as possible! To this end," @bold{watch for lonely kiddos}
+                for each student as possible! To this end, " @bold{watch for lonely kiddos}
                 ". Do your best to make every student feel welcomed, even it if means
                 you just sit with that quiet student and chat about Spiderman for a
                 few minutes."]]
@@ -270,7 +270,7 @@ Head Coaches run Game Time with all students from all camps; with support from T
 Leaders. By default, TLs are participating in games and helping create a
 safe and fun environment. TLs also should step in to remind individual students to
 listen or participate, as needed, so HC can focus on the larger group. Sometimes a HC
-will ask TLs to lead a game, expecially if the group is splitting up and playing two
+will ask TLs to lead a game, especially if the group is splitting up and playing two
 different games.
 
 @subsection{Nerd Out}
@@ -361,6 +361,14 @@ To keep the Market Time organized and sane, the following guidelines are highly 
           @item{One or two staff run the Market, while the others keep students coming/going.}
           @item{If you don't have enough time, save it for another day rather than rush.}] 
 
+@subsection{GAME JAM}
+@larger{AM -- fri 10:30am-12:00pm}
+
+@larger{PM -- fri 2:30pm-4:00pm}
+
+Information on Game Jam Intro, Game Jam and Scoring can be found on the
+@secref["Game_Jam" #:doc '(lib "ts-camp-materials/scribblings/manual.scrbl")] page.
+
 @subsection{Lunch}
 @larger{AM ONLY -- mon-fri 12:00pm-12:45pm}
 
@@ -369,7 +377,7 @@ Monday, outline safety rules and remind students as needed throughout the week. 
 should check in with dining hall staff for entering procedures, additional rules or, if HC
 has worked this location before, at least a touch-base and any special updates for the week.
 
-The following rules are @bold{standard across all ThoughtSTEM camps} and must be followed
+@bold{The following rules are standard across all ThoughtSTEM camps and must be followed}
 for student safety and continued positive relations with the camp locations:
 
 @itemlist[#:style 'ordered
@@ -410,7 +418,7 @@ who will call the parent. @bold{Update HQ as soon as that student is picked up!}
 
 The AM check-out is also the PM check-in time! The only additional step will be checking
 with each parent to see if they are dropping off or picking up a student! Everything else
-should fall easily
+should overlap intuitively.
 
 At most locations, parents will remain in the car, and staff will bring students to their
 parents. Just like check-in, Head Coach should assign jobs to everyone with the goal of
@@ -481,13 +489,7 @@ staff.
 Bring students to their age group's designated dismissal room. Assist LJCD Camp Staff as
 needed. 
 
-@subsection{GAME JAM}
-@larger{AM -- fri 10:30am-12:00pm}
 
-@larger{PM -- fri 2:30pm-4:00pm}
-
-Information on Game Jam Intro, Game Jam and Scoring can be found on the
-@secref["Game_Jam" #:doc '(lib "ts-camp-materials/scribblings/manual.scrbl")] page.
 
 
 

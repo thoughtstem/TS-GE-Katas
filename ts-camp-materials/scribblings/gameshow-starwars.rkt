@@ -17,7 +17,6 @@ Use these questions during Game Show time. You can ask any/all the questions in 
           @item{@bold{What is the default speed value?}
                     @itemlist[@item{@italic{10.}}]}]
 
-
 @section{Tuesday}
 
 @itemlist[@item{@bold{What is the keyword to add enemies?}
