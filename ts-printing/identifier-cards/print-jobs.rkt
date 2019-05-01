@@ -3,6 +3,21 @@
 (require "./main.rkt"
          ts-kata-util/katas/main)
 
+(define (battlearena->Desktop)
+  (local-require ts-battle-arena-asp-2019/katas)
+
+  (begin-identifier-job "battlearena"
+                        (battlearena
+                          [FILTER-BY-COLLECTION 
+                            (merge-collections
+                              avatar-katas 
+                              enemy-katas
+                              weapon-katas
+                              powerup-katas
+                              background-katas
+                              level-design-katas
+                              repeater-armor-katas
+                              sword-armor-katas)])))
 
 (define (battlearena-avengers->Desktop)
   (local-require ts-battle-arena-avengers-summer-camp-2019/katas)
@@ -89,8 +104,10 @@
 (all->Desktop)
 
 #;
-(assets->Desktop)
+(battlearena->Desktop)
 
+#;
+(assets->Desktop)
 
 
 

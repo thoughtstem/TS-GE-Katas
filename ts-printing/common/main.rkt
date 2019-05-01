@@ -159,6 +159,13 @@
               2 ;Magic number should become a parameter if we need to change it. 
               )))
 
+;Ensures all images unique.  Makeplayingcards.com tries to "help" by not
+; letting you upload the same image twice.
+(define (add-croppable-number i p)
+  (rb-superimpose 
+    p
+    (text (~a i))))
+
 (define (list->folder ls (folder-name "my-cards") (dest DESKTOP))
   (define path (build-path dest folder-name))
 
@@ -168,9 +175,11 @@
 
   (define front? #t)
   (for ([l ls]
-        [i (range (* 2 (STARTING-CARD-NUMBER)) ;Double cus we number both front and back separately
-                  (* 2 (+ (length ls) 
-                          (STARTING-CARD-NUMBER))))])
+        [n (in-naturals)])
+
+    (define i 
+      (add1 (+ (STARTING-CARD-NUMBER) 
+               (floor (/ n 2)))))
 
     (define name 
       (~a "card-" (~a #:width 3 #:align 'right #:left-pad-string "0" i) ".png"))
@@ -181,11 +190,13 @@
         (build-path path "backs" name)))
 
     (define final-pict 
-      ((if front?
-         front-transform
-         back-transform) 
-       l 
-       (floor (/ i 2))))
+      (add-croppable-number 
+        i 
+        ((if front?
+           front-transform
+           back-transform) 
+         l 
+         i)))
 
     (save-pict final-pict dest 'png)
 

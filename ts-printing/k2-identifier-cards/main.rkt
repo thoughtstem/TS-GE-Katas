@@ -72,7 +72,7 @@
     (TOTAL (/ (length (flatten (hash-values card-hash)))
               2))
 
-    (define counter 1)
+    (define counter 0)
 
     (parameterize ([k v] ...
                    [CURRENT-LANGUAGE 'lang] 

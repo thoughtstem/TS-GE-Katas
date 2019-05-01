@@ -124,8 +124,13 @@
           (displayln id)
           (blank))]))
 
+
+
 (define (id->back id)
-  (back-side ((ID->SUMMARY) id)))
+  (define ret 
+    (back-side ((ID->SUMMARY) id)))
+
+  ret)
 
 (define (id->front id)
   (define blank-card-bg
@@ -156,6 +161,7 @@
   (flatten (map explode l)))
 
 (define (lang->list l)
+
   (parameterize ([CURRENT-LANGUAGE l])
     (define freqs (get-ids-with-frequency))
 
@@ -192,6 +198,7 @@
   (begin
     (displayln "Begining identifier job")
     (displayln (~a "Output to: " folder))
+
     (VERSION git-hash)
     (HEIGHT 800)
     (WIDTH  800)
@@ -218,7 +225,7 @@
     (TOTAL (/ (length (flatten (hash-values card-hash)))
               2))
 
-    (define counter 1)
+    (define counter 0)
 
     (parameterize ([k v] ...
                    [CURRENT-LANGUAGE 'lang]
@@ -262,7 +269,7 @@
     (TOTAL (/ (length (flatten (hash-values card-hash)))
               2))
 
-    (define counter 1)
+    (define counter 0)
 
     (parameterize ([k v] ...
                    [CURRENT-LANGUAGE 'lang]

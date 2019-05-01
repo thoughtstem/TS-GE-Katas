@@ -168,7 +168,7 @@
 
     ;Need a crazy margin to make it work with
     ; the hex cards.
-    (FRONT-MARGIN 200)
+    (FRONT-MARGIN 250)
     (BACK-MARGIN 500)
     ;Gets the backs in the right place,
     ;   messes up the location of the metas...
@@ -180,7 +180,7 @@
                  ...))))
 
 
-    (define counter 1)
+    (define counter 0)
 
     (parameterize ([k v] ...
                          [STARTING-CARD-NUMBER counter] )

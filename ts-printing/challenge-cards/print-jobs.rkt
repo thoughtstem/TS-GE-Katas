@@ -22,7 +22,7 @@
   (local-require ts-battle-arena-asp-2019/katas)
 
   (set-fg-texture "paint-daubs1.jpg"
-    (begin-job "ts-battle-arena-asp-2019-cards"     
+    (begin-job "ts-battle-arena-asp-2019"     
                (avatar-katas 
                  [FRONT-BG-COLOR googly-red]
                  [FRONT-FG-COLOR clear-white]
@@ -60,7 +60,7 @@
   (local-require ts-battle-arena-avengers-summer-camp-2019/katas)
 
   (set-fg-texture "grunge1.jpg" 
-    (begin-job "ts-battle-arena-avengers-summer-camp-2019-cards"    
+    (begin-job "ts-battle-arena-avengers-summer-camp-2019"    
                (hero-katas 
                  [FRONT-BG-COLOR    googly-red]
                  [FRONT-FG-COLOR clear-white]
@@ -112,7 +112,7 @@
   (local-require ts-battle-arena-fortnite-summer-camp-2019/katas)
 
   (set-fg-texture "swirls1.jpg" 
-               (begin-job "ts-battle-arena-fortnite-summer-camp-2019-cards"    
+               (begin-job "ts-battle-arena-fortnite-summer-camp-2019"    
                           (avatar-katas
                             [FRONT-BG-COLOR    googly-red]
                             [FRONT-FG-COLOR clear-white]
@@ -171,7 +171,7 @@
   (local-require ts-battle-arena-starwars-summer-camp-2019/katas)
 
   (set-fg-texture "paint-swirls1.jpg"
-    (begin-job "ts-battle-arena-starwars-summer-camp-2019-cards"    
+    (begin-job "ts-battle-arena-starwars-summer-camp-2019"    
                (rebel-katas
                  [FRONT-BG-COLOR    googly-red]
                  [FRONT-FG-COLOR clear-white]
@@ -230,7 +230,7 @@
   (local-require ts-survival-asp-2019/katas)
 
   (set-fg-texture "swish1.jpg"
-    (begin-job "ts-survival-asp-2019-cards"
+    (begin-job "ts-survival-asp-2019"
                (avatar-katas
                  [FRONT-BG-COLOR    googly-red]
                  [FRONT-FG-COLOR clear-white]
@@ -276,7 +276,7 @@
   (local-require ts-survival-minecraft-summer-camp-2019/katas)
 
   (set-fg-texture "checkers.jpg" 
-    (begin-job "ts-survival-minecraft-summer-camp-2019-cards"
+    (begin-job "ts-survival-minecraft-summer-camp-2019"
                (custom-skin-katas
                  [FRONT-BG-COLOR    googly-red]
                  [FRONT-FG-COLOR clear-white]
@@ -314,7 +314,7 @@
   (local-require ts-survival-pokemon-summer-camp-2019/katas)
 
   (set-fg-texture "rays1.jpg" 
-    (begin-job "ts-survival-pokemon-summer-camp-2019-cards"
+    (begin-job "ts-survival-pokemon-summer-camp-2019"
                (pokemon-katas
                  [FRONT-BG-COLOR    googly-red]
                  [FRONT-FG-COLOR clear-white]
@@ -347,7 +347,7 @@
 (define (ts-k2-farm-summer-camp-2019->Desktop)
   (local-require ts-k2-farm-summer-camp-2019/katas)
 
-  (begin-job "ts-k2-farm-summer-camp-2019-cards"
+  (begin-job "ts-k2-farm-summer-camp-2019"
     (farm
       [FRONT-BG-COLOR    bright-orange]
       [FRONT-FG-COLOR clear-white]
@@ -356,7 +356,7 @@
 (define (ts-k2-sea-summer-camp-2019->Desktop)
   (local-require ts-k2-sea-summer-camp-2019/katas)
 
-  (begin-job "ts-k2-sea-summer-camp-2019-cards"
+  (begin-job "ts-k2-sea-summer-camp-2019"
     (sea
       [FRONT-BG-COLOR    bright-blue]
       [FRONT-FG-COLOR clear-white]
@@ -365,7 +365,7 @@
 (define (ts-k2-hero-summer-camp-2019->Desktop)
   (local-require ts-k2-hero-summer-camp-2019/katas)
 
-  (begin-job "ts-k2-hero-summer-camp-2019-cards"
+  (begin-job "ts-k2-hero-summer-camp-2019"
     (hero
       [FRONT-BG-COLOR    bright-green]
       [FRONT-FG-COLOR clear-white]
@@ -390,8 +390,10 @@
 #;
 (all->Desktop)
 
+#;
+(ts-battle-arena-starwars-summer-camp-2019->Desktop)
 
 #;
-(ts-battle-arena-fortnite-summer-camp-2019->Desktop)
+(ts-battle-arena-asp-2019->Desktop)
 
 
