@@ -60,10 +60,15 @@ The above functions can be configured through various parameters.
   The total card height is this value plus the @racket[PADDING] value.
 }
 
-@defparam[MARGIN number number? #:value 200]{
-  This controls how close to the edges the foreground of a card is scaled. 
-  Anything passed to @racket[front-side] or @racket[back-side] will not
-  be scaled larger than the @racket[WIDTH] minus the @racket[MARGIN].
+@defparam[FRONT-MARGIN number number? #:value 200]{
+  This controls how close to the edges the foreground of a card is scaled
+  on the fronts of cards.
+  Anything passed to @racket[front-side] 
+  be scaled larger than the @racket[WIDTH] minus the @racket[FRONT-MARGIN].
+}
+
+@defparam[BACK-MARGIN number number? #:value 200]{
+  Same as the above, but controls @racket[back-side].
 }
 
 @defparam[PADDING number number? #:value 10]{
@@ -134,7 +139,7 @@ Adds some printing parameters that are specific to challenge cards:
             (enemy-katas
               [FRONT-BG-COLOR  googly-orange]
               [FRONT-FG-COLOR  clear-white]
-              [FRONT-TITLE     (title "(enemy)")]))
+              [FRONT-TITLE     (title "(enemy)")])))
   } 
 
   This is the building block used to define the print jobs below.

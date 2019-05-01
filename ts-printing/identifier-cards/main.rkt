@@ -139,7 +139,7 @@
   (define scaled-content
     (if (or (> (pict-width content) (front-w))
             (> (pict-height content) (front-h)))
-      (scale-to-fit content w h)
+      (scale-to-fit content (front-w) (front-h))
       (scale content 6)))
 
   (front-side 

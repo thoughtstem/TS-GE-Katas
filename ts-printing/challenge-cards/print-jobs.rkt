@@ -155,8 +155,7 @@
                             [FRONT-TITLE    (title "(spike-mines)")]) 
                           (armor-katas
                             [FRONT-BG-COLOR    googly-purple]
-                            #;
-                            [FRONT-COLOR-FG clear-white]
+                            [FRONT-FG-COLOR clear-white]
                             [FRONT-TITLE    (title "(armor++)")])
                           (dagger-tower-katas
                             [FRONT-BG-COLOR    googly-purple]
@@ -276,7 +275,7 @@
 (define (ts-survival-minecraft-summer-camp-2019->Desktop)
   (local-require ts-survival-minecraft-summer-camp-2019/katas)
 
-  (set-fg-texture "checkers1.jpg" 
+  (set-fg-texture "checkers.jpg" 
     (begin-job "ts-survival-minecraft-summer-camp-2019-cards"
                (custom-skin-katas
                  [FRONT-BG-COLOR    googly-red]
@@ -300,13 +299,12 @@
                  [FRONT-TITLE    (title "(crafting)")]) 
                (entity-katas
                  [FRONT-BG-COLOR    googly-purple]
-                 #;
-                 [FRONT-COLOR-FG clear-white]
+                 [FRONT-FG-COLOR clear-white]
                  [FRONT-TITLE    (title "(entities)")]) 
                (biome-katas
                  [FRONT-BG-COLOR    googly-purple]
                  [FRONT-FG-COLOR clear-white]
-                 [FRONT-TITLE    (title "(bioms)")]) 
+                 [FRONT-TITLE    (title "(biomes)")]) 
                (sky-katas
                  [FRONT-BG-COLOR    googly-purple]
                  [FRONT-FG-COLOR clear-white]
@@ -389,10 +387,11 @@
   (ts-k2-hero-summer-camp-2019->Desktop))
 
 
-(ts-battle-arena-starwars-summer-camp-2019->Desktop)
-
 #;
 (all->Desktop)
 
+
 #;
-(ts-battle-arena-avengers-summer-camp-2019->Desktop)
+(ts-battle-arena-fortnite-summer-camp-2019->Desktop)
+
+

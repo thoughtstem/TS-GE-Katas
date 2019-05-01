@@ -157,6 +157,8 @@
                       (collection [k v] ...) 
                       ...)
   (begin
+    (displayln (~a "Staring job " folder))
+
     (VERSION git-hash)
 
     (FRONT-META-FUNCTION
@@ -182,6 +184,7 @@
 
     (parameterize ([k v] ...
                          [STARTING-CARD-NUMBER counter] )
+      (displayln (~a "Processing deck " 'collection))
       (collection->Desktop collection folder)
       (set! counter (+ counter 
                        (length 

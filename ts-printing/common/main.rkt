@@ -138,17 +138,26 @@
   (pin-over
     p
     (-
-     (/ (WIDTH) 2)
-     (/ (pict-width meta) 2))
+      (/ (WIDTH) 2)
+      (/ (pict-width meta) 2))
     (- (HEIGHT) (FRONT-MARGIN))
+
     meta))
 
 
 (define (front-transform p i)
-  (add-meta p ((FRONT-META-FUNCTION) i)))
+  (add-meta p 
+            (scale 
+              ((FRONT-META-FUNCTION) i)
+              2 ;Magic number should become a parameter if we need to change it.
+              )))
 
 (define (back-transform p i)
-  (add-meta p ((BACK-META-FUNCTION) i)))
+  (add-meta p 
+            (scale 
+              ((BACK-META-FUNCTION) i)
+              2 ;Magic number should become a parameter if we need to change it. 
+              )))
 
 (define (list->folder ls (folder-name "my-cards") (dest DESKTOP))
   (define path (build-path dest folder-name))

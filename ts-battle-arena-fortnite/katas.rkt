@@ -24,18 +24,6 @@
                 tips)
          new:tips))
 
-;Katas start as examples in some language.
-;  "Proto katas" we could call them.
-
-
-(define-kata-collection selected-weapon-katas
-  (first (kata-collection-katas sword-katas))
-  (second (kata-collection-katas spear-katas))
-  (third (kata-collection-katas fire-magic-katas))
-  (fourth (kata-collection-katas fire-magic-katas))
-  (second (kata-collection-katas single-shot-katas))
-  (second (kata-collection-katas spread-shot-katas))
-  (second (kata-collection-katas homing-repeater-katas)))
 
 (define-sub-collections battlearena-fortnite-katas
   hello-world-katas
@@ -57,4 +45,20 @@
   dagger-tower-katas
   repeater-tower-katas
   rocket-tower-katas
-  )
+  
+  sword-katas
+  spear-katas
+  fire-magic-katas
+  single-shot-katas
+  spread-shot-katas
+  homing-repeater-katas)
+
+(define-kata-collection selected-weapon-katas
+  (first (kata-collection-katas sword-katas))
+  (second (kata-collection-katas spear-katas))
+  (third (kata-collection-katas fire-magic-katas))
+  (fourth (kata-collection-katas fire-magic-katas))
+  (second (kata-collection-katas single-shot-katas))
+  (second (kata-collection-katas spread-shot-katas))
+  (second (kata-collection-katas homing-repeater-katas)))
+
