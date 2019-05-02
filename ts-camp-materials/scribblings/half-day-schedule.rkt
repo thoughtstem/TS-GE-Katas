@@ -53,7 +53,8 @@ job in the check in process:
 @bold[@larger{Head Coach}]
 
 The Head Coach duties during check-in are:
-@itemlist[@item{Assign jobs to Team Leaders, adjust jobs as needed}
+@itemlist[#:style 'compact
+          @item{Assign jobs to Team Leaders, adjust jobs as needed}
           @item{Check students in as they arrive on ThoughtSTEM backend,
                 using tablet}
           @item{Answer parent questions or direct parents to contact HQ}
@@ -63,18 +64,20 @@ The Head Coach duties during check-in are:
 
 These TLs hang out with the students who have already been dropped off.
 Duties include:
-@itemlist[@item{Keeping all students in our care together and safe}
+@itemlist[#:style 'compact
+          @item{Keeping all students in our care together and safe}
           @item{Interrupting and redirecting unsafe student behavior
                 (ex. wandering off, playing with sticks, throwing rocks, etc)}
           @item["Fostering a comfortable, welcoming environment by talking to
                 students, starting conversations between students and going
-                out of their way to engage students on the fringe."
+                out of their way to engage students on the fringe. "
                 @bold{This is especially important on day one!}]]
 
 @bold[@larger{Runners -- 1-2 Team Leaders}]
 
 These TLs move between cars, completing the following duties:
-@itemlist[@item{Ensuring student safety around cars}
+@itemlist[#:style 'compact
+          @item{Ensuring student safety around cars}
           @item{directing them (or in some cases, walking them) to where the rest
                 of the students are, with HB Managers}
           @item{Checking in with parents, answering any quick questions and calling
@@ -85,7 +88,8 @@ These TLs move between cars, completing the following duties:
 @bold[@larger{Traffic Cop -- 1 Team Leader}]
 
 This TL helps keep the car chaos to a minimum. Duties include:
-@itemlist[@item{Ensuring student safety around cars}
+@itemlist[#:style 'compact
+          @item{Ensuring student safety around cars}
           @item{Keeping the car line moving forward}
           @item{Helping parents navigate out safely}
           @item{Reminding parents they they should stay in cars, or, helping them
@@ -105,7 +109,8 @@ slightly different jobs:
 
 @bold{Fleet Science Center}
 
-@itemlist[@item{On first day check in, Head Coach needs to confirm the authorized
+@itemlist[#:style 'compact
+          @item{On first day check in, Head Coach needs to confirm the authorized
                 pick up list with each parent/guardian as they drop off their
                 student.}
           @item{There also may be additional paperwork to hand out to parents.}
@@ -162,7 +167,8 @@ Dollar rewards to keep students on task.
 @larger{PM -- mon 1:30pm-2:15pm}
 
 Head Coach leads into this section by explaining a few core concepts:
-@itemlist[@item{GAME JAM!}
+@itemlist[#:style 'compact
+          @item{GAME JAM!}
           @item{Katas}
           @item{Kata cards, ThoughtSTEM Dollars & Market}]
 
@@ -249,7 +255,8 @@ the camp environment}. Remember:
 @larger{PM -- mon 2:30pm-2:45pm & tue-fri 2:15pm-2:45pm}
 
 Why Game Time? Social games can help students...
-@itemlist[@item{...release excess energy!}
+@itemlist[#:style 'compact
+          @item{...release excess energy!}
           @item{...take a brain break from coding!}
           @item{...socialize, especially if they are shy!}
           @item{...feel like they are getting a "real camp experience!"}
@@ -259,7 +266,8 @@ Why Game Time? Social games can help students...
 The Head Coach Script has a game recommendation for each day. HCs are welcome to
 make adjustments to serve their specific group of students, keeping the following
 guidelines in mind:
-@itemlist[@item{Whenever possible, play a game that is accessible for the youngest
+@itemlist[#:style 'compact
+          @item{Whenever possible, play a game that is accessible for the youngest
                 campers while still being engaging for the oldest!}
           @item{HC can also split the camp into two groups to play two different
                 games to help shrink the accessible/engaging age gap.}
@@ -281,7 +289,8 @@ different games.
 During Nerd Out, students and Team Leaders breakout into their camp groups. Head
 Coach gives out a discussion or activity prompt, which TLs can then customize
 for their specific camp fandom. Nerd Out is an opportunity for...
-@itemlist[@item{...students to "nerd out" about their fandom!}
+@itemlist[#:style 'compact
+          @item{...students to "nerd out" about their fandom!}
           @item{...students to teach the TLs more about their fandom!}
           @item{...TLs to get to know the students more!}
           @item{...think critically about the media they enjoy and how they can "add" to that world!}
@@ -350,7 +359,8 @@ Time.
 
 To keep the Market Time organized and sane, the following guidelines are highly recommended:
 
-@itemlist[@item{Only 1 camp/5 students at the Market at a time.}
+@itemlist[#:style 'compact
+          @item{Only 1 camp/5 students at the Market at a time.}
           @item{Keep students moving through the Market so you have time for everyone.
                 ("Okay, you have been here for 5 min, you have 1 more min to make your choice!")}
           @item{Have the Market display up and accessible all day so students can plan
@@ -427,7 +437,8 @@ keeping the process safe and orderly:
 @bold[@larger{Head Coach}]
 
 The Head Coach duties during check-out are:
-@itemlist[@item{Assign jobs to Team Leaders, adjust jobs as needed}
+@itemlist[#:style 'compact
+          @item{Assign jobs to Team Leaders, adjust jobs as needed}
           @item{Make sure any special check-out procedures for students are followed}
           @item{Answer parent questions or direct parents to contact HQ}
           @item{Oversee the check-out process to ensure safety and sanity}]
@@ -435,7 +446,8 @@ The Head Coach duties during check-out are:
 @bold[@larger{Home Base Managers -- 1-2 Team Leaders}]
 
 These TLs hang out with the students who are still in our care. Duties include:
-@itemlist[@item{Keeping all students together and safe}
+@itemlist[#:style 'compact
+          @item{Keeping all students together and safe}
           @item{Interrupting and redirecting unsafe student behavior
                 (ex. wandering off, playing with sticks, throwing rocks, etc)}
           @item{Fostering a comfortable, welcoming environment by talking to
@@ -445,7 +457,8 @@ These TLs hang out with the students who are still in our care. Duties include:
 @bold[@larger{Runners -- 1-2 Team Leaders}]
 
 These TLs move between cars, completing the following duties:
-@itemlist[@item{Ensuring student safety around cars}
+@itemlist[#:style 'compact
+          @item{Ensuring student safety around cars}
           @item{Communicating with Home Base Managers to safely relay students from Home
                 Base to their parent's car.}
           @item{Checking in with parents, answering any quick questions and calling
@@ -454,7 +467,8 @@ These TLs move between cars, completing the following duties:
 @bold[@larger{Traffic Cop -- 1 Team Leader}]
 
 This TL helps keep the car chaos to a minimum. Duties include:
-@itemlist[@item{Ensuring student safety around cars}
+@itemlist[#:style 'compact
+          @item{Ensuring student safety around cars}
           @item{Keeping the car line moving forward}
           @item{Helping parents navigate out safely}
           @item{Reminding parents they they should stay in cars, or, helping them
