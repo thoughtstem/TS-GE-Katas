@@ -2,55 +2,58 @@
 
 @(require "script-util.rkt")
 
-@title{Monday Head Coach Script}
+@title{Tuesday Head Coach Script}
 
-@(header-block check-in-icebreakers
-               "8:45am-9:30am"
-               "12:45pm-1:30pm"
+@(header-block check-in
+               "8:45am-9:00am"
+               "12:45pm-1:00pm"
                'together)
 
 @itemlist[#:style 'compact
-          @item["Arrive at the check-in location at " @bold{quarter of} " (8:45am/12:45pm)."]
+          @item["Arrive at the check-in location at " @bold{quarter of}
+                " (8:45am/12:45pm)."]
           @item[@bold{Assign} " specific jobs to all TLs"]
-          @item["Check for " @bold{incomplete paperwork} " before letting parent leave"]
-          @item["Stay at check-in until all students arrive or " @bold{quarter past}
-                " (9:15am/1:15pm). Return to camp room."]
-          @item["Recommended Icebreakers: "
-                @secref["Meet__n__Greet"
-                        #:doc '(lib "ts-camp-materials/scribblings/manual.scrbl")] " or " 
-                @secref["Four_Corners"
-                        #:doc '(lib "ts-camp-materials/scribblings/manual.scrbl")]]]
+          @item["Head to camp room " @bold{on the hour} " (9am/1pm)"]
+          @item["Assign " @bold{One TL} " to wait for any late students"
+                @itemlist[@item{TL keeps tablet?}
+                          @item{TL returns to camp room when all students arrive or
+                                at quarter past (9:15am/1:15pm)}]]]
 
-@time-warning @bold{5 and 2 min} warnings
-
-@(header-block intro-starter-katas
-               "9:30am-10:15am"
-               "1:30pm-2:15pm"
-               'start-together)
+@(header-block coding-warmup
+               "9:00am-9:15am"
+               "1:00pm-1:15pm"
+               'breakout)
 
 @itemlist[#:style 'compact
-          @item[@bold{Announce to all students:}
-                @itemlist[@item["Welcome! " @bold{Introduce} " self and TLs"]
-                          @item["Explain " @bold{Game Jam}]
-                          @item["Explain " @bold{Katas}]
-                          @item["Explain " @bold{Kata Cards, ThoughtSTEM Dollars, Market & Badges}]]]
-          @item["Teach all students the " @bold{Core Values kata}]
-          @item["Breakout into " @bold{camp teams}]
-          @item["Monitor and assist TLs as they work on katas, starting with "
-                @bold{Hello World kata}]
+          @item["With loose guidance from TLs, " @bold{students review} " code from
+                yesterday"]
+          @item[@bold{Step in} " for TL who is waiting at check-in"]]
+
+@time-warning @bold{5 and 2 min} warnings
+          
+@(header-block katas
+               "9:15am-10:00am"
+               "1:15pm-2:00pm"
+               'breakout)
+
+@itemlist[#:style 'compact
+          @item[@bold{Transision announcement:}
+                @itemlist[@item["Welcome back!"]
+                          @item[@bold{New Katas} " today!"]
+                          @item["So " @bold{listen up} " to TLs"]]]
+          @item["Monitor and assist TLs as they work on the " @bold{next section katas}]
           @item[@bold{PM ONLY} " -- take " @bold{YOUR 30 min lunch break} " from "
-                @bold{1:45-2:15}]]
+                @bold{1:20-1:50}]]
 
 @time-warning @bold{15, 10, 5 and 2 min} warnings
 
 
 @(header-block snack-break
-               "10:15am-10:30am"
-               "2:15pm-2:30pm"
+               "10:00am-10:15am"
+               "2:00pm-2:15pm"
                'together)
 
 @itemlist[#:style 'compact
-          @item["Bring camp " @bold{all together}]
           @item[@bold{Dismiss TLs for break} " -- TLs should LEAVE the camp space so they
                 can actually relax/check phones/not be interrupted by students"]
           @item["All students are " @bold{off computers} " for the entire break"]
@@ -58,18 +61,17 @@
 
 @time-warning @bold{5 and 2 min} warnings
 
-@(header-block game-time-15
-               "10:30am-10:45am"
-               "2:30pm-2:45pm"
+@(header-block game-time-30
+               "10:15am-10:45am"
+               "2:15pm-2:45pm"
                'together)
-
+@;edit from here
 @itemlist[#:style 'compact
-          @item["Bring camp " @bold{all together}]
           @item["Recommended game: " @secref["I_Like_My_Neighbors_Who___"
                                              #:doc '(lib "ts-camp-materials/scribblings/manual.scrbl")]
-                @itemlist[@item["Since this is a speedy game, and there is a risk of collisions, "
-                                @bold{split the camp} " into  a smaller-students group
-                                and a larger-students group"]]]]
+                @itemlist[@item["Since this is a speedy game, and there is a risk of
+                                collisions, "  @bold{split the camp} " into  a
+                                smaller-students group and a larger-students group"]]]]
 
 @time-warning @bold{5 and 2 min} warnings
 
@@ -131,7 +133,7 @@
                'start-breakout)
 
 @itemlist[#:style 'compact
-          @item[@bold{PM ONLY} " -- ensure you finish with enough time to travel to check-out
+          @item["PM only -- ensure you finish with enough time to travel to check-out
                 location by 4pm"]
           @item["Assign yourself or a TL to be " @bold{Market Cashier}]
           @item["Students tidy their camp table before allowed to go to market"]

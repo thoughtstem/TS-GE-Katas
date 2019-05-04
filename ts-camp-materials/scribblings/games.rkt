@@ -4,6 +4,118 @@
 
 Games to play during camp game time!
 
+All Ages:
+@itemlist[#:style 'compact
+          @item[@secref["Selfie_Scavenger_Hunt"
+                        #:doc '(lib "ts-camp-materials/scribblings/manual.scrbl")]]
+          @item[@secref["Shark_Attack"
+                        #:doc '(lib "ts-camp-materials/scribblings/manual.scrbl")]]
+          @item[@secref["Captain_s_Coming"
+                        #:doc '(lib "ts-camp-materials/scribblings/manual.scrbl")]]]
+
+Younger Students (K-5th):
+@itemlist[#:style 'compact
+          @item[@secref["Duck_Duck_Goose"
+                        #:doc '(lib "ts-camp-materials/scribblings/manual.scrbl")]]
+          @item[@secref["Follow_the_Leader"
+                        #:doc '(lib "ts-camp-materials/scribblings/manual.scrbl")]]
+          @item[@secref["Ultimate_Rock_Paper_Scissors"
+                        #:doc '(lib "ts-camp-materials/scribblings/manual.scrbl")]]
+          @item[@secref["Wax_Museum"
+                        #:doc '(lib "ts-camp-materials/scribblings/manual.scrbl")]]]
+
+Older Students (3rd-10th):
+@itemlist[#:style 'compact
+          @item[@secref["Bippity_Bippity_Bop"
+                        #:doc '(lib "ts-camp-materials/scribblings/manual.scrbl")]]
+          @item[@secref["Wah"
+                        #:doc '(lib "ts-camp-materials/scribblings/manual.scrbl")]]
+          @item[@secref["Human_Knot"
+                        #:doc '(lib "ts-camp-materials/scribblings/manual.scrbl")]]
+          @item[@secref["Zoo_Keeper"
+                        #:doc '(lib "ts-camp-materials/scribblings/manual.scrbl")]]
+          @item[@secref["Mafia"
+                        #:doc '(lib "ts-camp-materials/scribblings/manual.scrbl")]]
+          @item[@secref["Jedi_Mind_Tricks"
+                        #:doc '(lib "ts-camp-materials/scribblings/manual.scrbl")]]
+          @item[@secref["Ninja"
+                        #:doc '(lib "ts-camp-materials/scribblings/manual.scrbl")]]]
+
+@section{Selfie Scavenger Hunt}
+
+@bold{Recommended for: K-2, 3-5, 6-10}
+
+@bold{NEED:}
+
+@itemlist[#:style 'compact
+          @item{List of things to "find" (see below for examples)}
+          @item{Large space to go hunt! Good to have clear, defined borders (a non-busy
+                road, sports field, unique building -- big things you cannot miss)}
+          @item{Each Team Leader should have their smart phone for this activity}]
+
+@bold{HOW TO PLAY:}
+
+Head Coach facilitates breaking up into mixed age teams, as many as there are Team
+Leaders. A "count off" from a circle (assign each student a number, put all 1's with this
+TL, 2's with that TL, etc) or instructing them to find their OWN team consisting of one
+member from each camp group -- either works!
+
+Head Coach explains all these rules to everyone, before sending them on their hunt:
+@itemlist[#:style 'compact
+          @item{Stick with your team! You cannot leave any members of your team behind.}
+          @item{Explain the boundaries of the Search Area.}
+          @item{Each team must take a group selfie with everything on the list.*}
+          @item{Give a return time!}]
+
+* If there is a no-photos student, make them the photographer, in charge of snapping the
+shot of everyone else on their team and the object.
+
+HC should reinforce a few key points with TLs -- the boundaries and return time
+especially. HC can text or give a physical list of all the items to find to each TL.
+
+As teams return, HC checks the photos; looking for every team member in each photos and
+that they got everything on the list. Celebrate every team as they return!
+
+@bold{EXAMPLE LISTS:}
+Aim for 5-10 items on the list, depedning on how much time you are allowing for the hunt.
+Leave some open ended items, where the thing to found might be different for everyone
+(like "A Beautiful View") and include some riddles for extra fun!
+
+Here were 2 seperate lists created for an old camp location at UCSD. Notes (not given to
+teams!) are in italics:
+@itemlist[#:style 'compact
+          @item["5 different things you can't do -- " @italic{There were lots of "no ___"
+                                                           signs around this location!}]
+          @item{A beautiful view}
+          @item["Where Earl hangs out -- " @italic{There was a cafe called "Earl's Place"}]
+          @item{A year}
+          @item["Something for a rainy day -- " @italic{Lots of umbrellas around!}]
+          @item{Frankfurter Hall}
+          @item{A question?}
+          @item["A place to dunk, dribble and shoot -- " @italic{A basketball court}]
+          @item{Enough pinecones for every member of your team}
+          @item["A misplaced letter -- " @italic{An Amazon Locker has a misplaced panel with
+                                              one of the letters of "Amazon" in the wrong
+                                              spot!}]]
+@itemlist[#:style 'compact
+          @item["A place to pick fruit or veggies -- " @italic{A nearby garden}]
+          @item{A bike pump}
+          @item["William J. Brennan -- " @italic{Featured in a mural with his name}]
+          @item["'Bold and Adventurous Thinking' -- " @italic{Words on another mural}]
+          @item["Something to help you find your way around -- " @italic{Campus map}]
+          @item{4 different signs with the word "only"}
+          @item{A windmill}
+          @item["A beach without an ocean -- " @italic{Beach volleyball court!}]
+          @item{A bridge}]
+                
+@bold{TIPS & TRICKS:}
+
+@itemlist[@item{Head Coach should keep an eye out for potential hunt items for the first
+                few days. If needed, they can step out for 10 minutes during a kata
+                section to finalize their list before playing. Share any finished lists
+                with HQ so they can be passed on to future HCs!}]
+
+
 
 @section{Duck Duck Goose}
 
@@ -43,14 +155,14 @@ Detective guesses correctly, or has three incorrect guesses.
 
 @bold{TIPS & TRICKS:}
 
-@itemlist[@item{May have to remind students not to directly stare at the Chief, but rather
+@itemlist[@item{May have to remind students not to directly stare at the Leader, but rather
                 use their peripheral vision, or pay attention to someone else and match
                 them!}]
 
 
 @section{Shark Attack}
 
-@bold{Recommended for: K-2nd, 3-5}
+@bold{Recommended for: K-2nd, 3-5, 6-10}
 
 @bold{NEED:}
 
@@ -248,7 +360,7 @@ attention!)
 
 @section{Wax Museum}
 
-@bold{Recommended for: 3-5}
+@bold{Recommended for: K-2?, 3-5}
 
 @bold{NEED:}
 

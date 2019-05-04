@@ -263,16 +263,19 @@ Why Game Time? Social games can help students...
           @item{...engage and connect with students and staff from other camps and age groups!}
           @item{...remember who the staff are and how to listen to them!}]
 
-The Head Coach Script has a game recommendation for each day. HCs are welcome to
-make adjustments to serve their specific group of students, keeping the following
-guidelines in mind:
+The Head Coach Script has a game recommendation or two for each day. Sometimes this
+will be one game for all ages, or a game for younger and a game for older students.
+In either case, HC can divide the camp into two or more groups:
+
 @itemlist[#:style 'compact
-          @item{Whenever possible, play a game that is accessible for the youngest
-                campers while still being engaging for the oldest!}
-          @item{HC can also split the camp into two groups to play two different
-                games to help shrink the accessible/engaging age gap.}
-          @item{While it can be tempting to stick with one game that entertains,
-                it can be worthwhile to try new things too!}]
+          @item{Whenever possible, mix up the camp groups.}
+          @item{HC can announce the games and let students choose which they want to play}
+          @item{Or HC can split by grade (this will still mix up camp groups, as long
+                as you do some crossing over; K-4 and 5-10 for example)}]
+
+HCs are welcome to pick thier own games to serve their specific group of students,
+but keep in mind that while it can be tempting to stick with one game that
+entertains, it can be worthwhile to try new things too!
 
 Head Coaches run Game Time with all students from all camps; with support from Team
 Leaders. By default, TLs are participating in games and helping create a
@@ -280,6 +283,9 @@ safe and fun environment. TLs also should step in to remind individual students 
 listen or participate, as needed, so HC can focus on the larger group. Sometimes a HC
 will ask TLs to lead a game, especially if the group is splitting up and playing two
 different games.
+
+Here are a whole bunch of @secref["Camp_Games" #:doc '(lib "ts-camp-materials/scribblings/manual.scrbl")]
+with instructions!
 
 @subsection{Nerd Out}
 @larger{AM -- mon-thu 10:45am-11:00am}
