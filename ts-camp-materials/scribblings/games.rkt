@@ -8,9 +8,11 @@ All Ages:
 @itemlist[#:style 'compact
           @item[@secref["Selfie_Scavenger_Hunt"
                         #:doc '(lib "ts-camp-materials/scribblings/manual.scrbl")]]
-          @item[@secref["Shark_Attack"
+          @item[@secref["Bippity_Bippity_Bop"
                         #:doc '(lib "ts-camp-materials/scribblings/manual.scrbl")]]
           @item[@secref["Captain_s_Coming"
+                        #:doc '(lib "ts-camp-materials/scribblings/manual.scrbl")]]
+          @item[@secref["Shark_Attack"
                         #:doc '(lib "ts-camp-materials/scribblings/manual.scrbl")]]]
 
 Younger Students (K-5th):
@@ -26,8 +28,6 @@ Younger Students (K-5th):
 
 Older Students (3rd-10th):
 @itemlist[#:style 'compact
-          @item[@secref["Bippity_Bippity_Bop"
-                        #:doc '(lib "ts-camp-materials/scribblings/manual.scrbl")]]
           @item[@secref["Wah"
                         #:doc '(lib "ts-camp-materials/scribblings/manual.scrbl")]]
           @item[@secref["Human_Knot"

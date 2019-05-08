@@ -9,6 +9,8 @@
                "12:45pm-1:30pm"
                'together)
 
+@time-warning @bold{5 and 2 min} warnings
+
 @itemlist[#:style 'compact
           @item["Arrive at the check-in location at " @bold{quarter of} " (8:45am/12:45pm)."]
           @item[@bold{Assign} " specific jobs to all TLs"]
@@ -21,12 +23,14 @@
                 @secref["Four_Corners"
                         #:doc '(lib "ts-camp-materials/scribblings/manual.scrbl")]]]
 
-@time-warning @bold{5 and 2 min} warnings
+
 
 @(header-block intro-starter-katas
                "9:30am-10:15am"
                "1:30pm-2:15pm"
                'start-together)
+
+@time-warning @bold{15, 10, 5 and 2 min} warnings
 
 @itemlist[#:style 'compact
           @item[@bold{Announce to all students:}
@@ -41,13 +45,13 @@
           @item[@bold{PM ONLY} " -- take " @bold{YOUR 30 min lunch break} " from "
                 @bold{1:45-2:15}]]
 
-@time-warning @bold{15, 10, 5 and 2 min} warnings
-
 
 @(header-block snack-break
                "10:15am-10:30am"
                "2:15pm-2:30pm"
                'together)
+
+@time-warning @bold{5 and 2 min} warnings
 
 @itemlist[#:style 'compact
           @item["Bring camp " @bold{all together}]
@@ -56,12 +60,13 @@
           @item["All students are " @bold{off computers} " for the entire break"]
           @item["Monitor all students and keep it " @bold{safe and sane}]]
 
-@time-warning @bold{5 and 2 min} warnings
 
 @(header-block game-time-15
                "10:30am-10:45am"
                "2:30pm-2:45pm"
                'together)
+
+@time-warning @bold{5 and 2 min} warnings
 
 @itemlist[#:style 'compact
           @item["Bring camp " @bold{all together}]
@@ -71,25 +76,27 @@
                                 @bold{split the camp} " into  a smaller-students group
                                 and a larger-students group"]]]]
 
-@time-warning @bold{5 and 2 min} warnings
 
 @(header-block nerd-out
                "10:45am-11:00am"
                "2:45pm-3:00pm"
                'breakout)
 
+@time-warning @bold{5 and 2 min} warnings
+
 @itemlist[#:style 'compact
           @item["Breakout into " @bold{camp teams}]
-          @item["Announce today's prompt:"
-                @itemlist[@item[@bold{Share your favorite animal(k2) or character(3-10) from
-                                      your camp's fandom!}]]]
+          @item["Announce today's mission:"
+                @itemlist[@item[@bold{Create a TEAM NAME and POSTER}]]]
           @item["Monitor camp groups, inspiring further discussion as needed"]]
-@time-warning @bold{5 and 2 min} warnings
+
 
 @(header-block kata-practice
                "11:00am-11:30am"
                "3:00pm-3:30pm"
                'breakout)
+
+@time-warning @bold{10, 5 and 2 min} warnings
 
 @itemlist[#:style 'compact
           @item[@bold{Transition annoucement:}
@@ -97,12 +104,14 @@
                           @item{Back to katas}
                           @item{Earn more katas or extra challenges from TLs!}]]
           @item["Monitor camp groups, assisting TLs as needed"]]
-@time-warning @bold{10, 5 and 2 min} warnings
+
 
 @(header-block game-show
                "11:30am-11:45am"
                "3:30pm-3:45am"
                'start-together)
+
+@time-warning @bold{5 and 2 min} warnings
 
 @itemlist[#:style 'compact
           @item["Bring camp " @bold{all together}]
@@ -123,11 +132,11 @@
                                 @italic{ DrRacket}]]]
           @item["Breakout into " @bold{camp teams} " for TLs to lead camp-specific
                 game show questions"]]
-@time-warning @bold{5 and 2 min} warnings
+
 
 @(header-block market-wrap-up
                "11:45am-12:00(ish)pm"
-               "3:45am-4:00(ish)pm"
+               "3:45pm-4:00(ish)pm"
                'start-breakout)
 
 @itemlist[#:style 'compact
@@ -142,6 +151,8 @@
 
 @lunch-block
 
+@time-warning @bold{10, 5 and 2 min} warnings
+
 @itemlist[#:style 'compact
           @item[@bold{Announce to all students} " the rules of lunch:"
                 @itemlist[@item{Absolutely no running}
@@ -153,4 +164,16 @@
           @item["Ensure you finish with enough time to travel to check-out
                 location by 12:45pm"]
           @item["Keep lunch time " @bold{safe and organized}]]
-@time-warning @bold{10, 5 and 2 min} warnings
+
+
+@(header-block check-out
+               "12:45pm-1:10pm"
+               "4:00pm-4:10pm"
+               'together)
+
+@itemlist[#:style 'compact
+          @item["Arrive at the check-out location " @bold{on time}]
+          @item[@bold{Assign} " specific jobs to all TLs"]
+          @item["Alert HQ of any students awaiting pickup at " @bold{ten past}
+                " (1:10pm/4:10pm) and keep HQ up to date when picked up"]
+          @item[@bold{PM ONLY} " -- dismiss TLs ASAP and clock out"]]

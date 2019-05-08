@@ -99,7 +99,31 @@ This TL helps keep the car chaos to a minimum. Duties include:
 @bold[@larger{If Needed: Complete Set Up -- 1-2 Team Leaders}]
 
 If 8:45 arrives and there is more setup to complete, the Head Coach can assign one
-or two TLs to stay in the camp room and finish up.
+or two TLs to stay in the camp room and finish up. Some locations require this, see
+the note below:
+
+@bold[@larger{Monitoring Camp Room}]
+
+We can never leave our equipment alone in an unlocked room; this means that a TL will
+have to remain behind every day during check-in at some locations. This TL can complete
+set up during this time.
+
+Camp locations where room will be @bold{unlocked} during all camp hours (will need
+a TL to remain during check in):
+@itemlist[#:style 'compact
+          @item{UCSD}
+          @item{San Diego Christian College}
+          @item{La Jolla Country Day Camp (not typical check-in, see note below)}]
+
+Camp locations with exceptions, where no monitoring is needed during check-in:
+@itemlist[#:style 'compact
+          @item{Cal State San Marcos -- Head Coach has key to lock room}
+          @item{SDSU -- doors autolock at check-in time}
+          @item{Fleet Science Center -- check-in is at camp room}
+          @item{Del Mar Unified School District -- check-in is at camp room}
+          @item{Lawrence Family JCC -- check-in is at camp room}]
+
+@smaller[@italic{Location notes updated 5/2019}]
 
 @bold[@larger{Special Location Instructions}]
 
@@ -420,11 +444,38 @@ additional rules as needed:
                 mom/dad/primary caregiver; what would they say? Would your dad say yes to
                 three cups of Mountain Dew?}]
 
+@bold[@larger{Monitoring Camp Room}]
+
+We can never leave our equipment alone in an unlocked room; this means that one TL must
+be in the room at all times during lunch at some camp locations. In these cases, 2 TLs a
+day will split the lunch shift. @bold{Head Coach is responsible for assigning TLs and
+making sure room is monitored AND all TLs get lunch.} HC cannot perform this duty, as
+they are CPR certified and required at the lunch location.
+
+Camp locations where room will be @bold{unlocked} during all camp hours (will need
+monitoring over lunch):
+@itemlist[#:style 'compact
+          @item{UCSD}
+          @item{San Diego Christian College}
+          @item{La Jolla Country Day Camp}
+          @item{Fleet Science Center -- (lunch is Bring Your Own, so one lucky TL
+                a day can take the whole lunch break in the room. Make sure this
+                break rotates fairly throughout the week.)}]
+
+Camp locations with exceptions, where no monitoring is needed during lunch:
+@itemlist[#:style 'compact
+          @item{Cal State San Marcos -- Head Coach has key to lock room}
+          @item{SDSU -- doors autolock at lunch time}
+          @item{Del Mar Unified School District -- no lunch}
+          @item{Lawrence Family JCC -- no lunch}]
+
+@smaller[@italic{Location notes updated 5/2019}]
+
 
 @subsection{Check-out}
-@larger{AM -- mon-fri 12:45pm-1:15pm}
+@larger{AM -- mon-fri 12:45pm-1:10pm}
 
-@larger{PM -- mon-fri 4:00pm-4:15pm}
+@larger{PM -- mon-fri 4:00pm-4:10pm}
 
 Be sure to arrive @bold{promptly} at the checkout location -- this means leaving the camp
 room/lunch hall BEFORE the time check-out is supposed to start!
@@ -481,6 +532,34 @@ This TL helps keep the car chaos to a minimum. Duties include:
                 find a place to park on a rare occasion where they need to get out
                 of the car}]
 
+@bold[@larger{Monitoring Camp Room}]
+
+We can never leave our equipment alone in an unlocked room; this means that a TL will
+have to remain behind every day during check-out at some locations. This TL will be
+responsible for tidying and prepping the room for the next day/camp (this should not
+be a gargantuan task -- end-of-camp tidying is part of the camp routine for students
+and should be done before students are allowed to visit market).
+
+At the end of the PM camp, TL must remain in the room until it is locked by location
+staff or HC returns.
+
+Camp locations where room will be @bold{unlocked} during all camp hours (will need
+a TL to remain during check-out):
+@itemlist[#:style 'compact
+          @item{UCSD}
+          @item{San Diego Christian College}
+          @item{La Jolla Country Day Camp (not typical check-out, see note below)}]
+
+Camp locations with exceptions, where no monitoring is needed during check-in:
+@itemlist[#:style 'compact
+          @item{Cal State San Marcos -- Head Coach has key to lock room}
+          @item{SDSU -- doors autolock at check-in time}
+          @item{Fleet Science Center -- check-out is at camp room}
+          @item{Del Mar Unified School District -- check-out is at camp room}
+          @item{Lawrence Family JCC -- check-out is at camp room}]
+
+@smaller[@italic{Location notes updated 5/2019}]
+
 @bold[@larger{Special Location Instructions}]
 
 Some of our camp locations have different check-out procedures. In some cases, we
@@ -510,6 +589,33 @@ Bring students to their age group's designated dismissal room. Assist LJCD Camp 
 needed. 
 
 
+@subsection{Staff Dismissal}
+
+At the end of the PM camp, all staff get to go home for a well-earned rest! All Team
+Leaders must @bold{wait until offically dimissed by their Head Coach.} Dismissal can
+be directly from the check-out location.
+
+HC should dismiss TLs:
+@itemlist[#:style 'compact
+          @item{all at the same time}
+          @item{when all students are gone, or HC feels they can safely monitor the few
+                remaining students by themselves}
+          @item{when camp room is sufficiently tidied and ready for the next day}
+          @item{promptly and unambigiously}
+          @item[@bold{no later than 4:30} ", preferably by 4:15"]]
+
+HC should notify HQ through Slack when TLs are dismissed.
+
+In the cases where one TL has to remain in the camp room to monitor equipment/tidy up,
+there may have to be some differences on when that person is released -- since they must
+stay in the room until HC returns or location staff comes to lock up. HC should stay in
+contact with this TL through Slack with any delays on their return, and TL should notify
+HC if lock up happens prior to HC's return and HC can dismiss them remotely. Switch up
+the TL who gets "stuck" with this job.
+
+Head Coach must remain at the camp location until all students are picked up (or, in
+some cases, safely passed on to camp staff) and equipment is safely locked in the camp
+room. HC then notifies HQ through Slack that they are leaving.
 
 
 

@@ -40,7 +40,7 @@
 @(render level-design-katas)
 @(render town-katas)
 
-@(include-section ts-camp-materials/scribblings/half-day-schedule)
+@;(include-section ts-camp-materials/scribblings/half-day-schedule)
 @(include-section ts-camp-materials/scribblings/gameshow-pokemon)
-@(include-section ts-camp-materials/scribblings/game-jam-resources)
+@;(include-section ts-camp-materials/scribblings/game-jam-resources)
 @(include-section survival-pokemon/scribblings/assets-library)

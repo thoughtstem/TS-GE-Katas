@@ -10,7 +10,7 @@ All Ages:
                         #:doc '(lib "ts-camp-materials/scribblings/manual.scrbl")]]
           @item[@secref["Four_Corners"
                          #:doc '(lib "ts-camp-materials/scribblings/manual.scrbl")]]
-          @item[@secref["I_Like_My_Neighbors_Who___"
+          @item[@secref["The_Red_Wind_Blows___"
                         #:doc '(lib "ts-camp-materials/scribblings/manual.scrbl")]]]
 
 3rd and up:
@@ -69,8 +69,8 @@ Ballroom Dance Partner, etc.
           @item{Establish a "times up" cue (clap pattern, lights on and off) before
                 the game starts to help transition from conversation back to
                 walking around the space.}
-          @item{Prompt the students to switch who is answering the conversation
-                prompt about halfway through the time.}]
+          @item{Prompt the students to switch who is answering the question
+                about halfway through the time.}]
 
 @section{Four Corners}
 
@@ -138,7 +138,6 @@ made-up-but-plausible fact. Take turns sharing these with the group, then the
 group votes on which they think is the lie. The student then reveals The Truth
 and everyone congratulates themselves or sighs in despair, appropriately.
 
-
 @bold{TIPS AND TRICKS:}
 
 @itemlist[@item{Do not allow any side conversations during this activity. Being
@@ -147,7 +146,7 @@ and everyone congratulates themselves or sighs in despair, appropriately.
                 for the whole week.}]
 
 
-@section{I Like My Neighbors Who...}
+@section{The Red Wind Blows...}
 
 @bold{NEED:}
 
@@ -160,13 +159,13 @@ and everyone congratulates themselves or sighs in despair, appropriately.
 
 Everyone except the Head Coach sits in a large circle. HC is in the middle of the
 circle. HC explains that they will state a fact that is true about themselves
-prefaced by "I Like my Neighbors Who..." (for kids 6 grade and up, use the phrase
-"The Red Wind Blows for anyone who.."). For example: “I like my neighbors who
-have been to Canada.” or “The red wind blows for anyone who has a pet iguana”.
+prefaced by "The Red Wind Blows for anyone who..." For example: “The red wind blows
+for anyone who has been to Canada.” or “The red wind blows for anyone who has a
+pet iguana”.
 Then everyone for whom that fact also applies (anyone else who has a pet
 iguana/has been to Canada) must get up from their seat and find a new one in the
-circle. HC in the middle also finds a seat, leaving a new person in the middle,
-who then shares.
+circle. HC in the middle also is trying to find a seat. This will leave a new person
+in the middle, who then shares.
 
 @bold{TIPS AND TRICKS:}
 
@@ -181,7 +180,12 @@ who then shares.
           @item{If someone gets stuck, prompt them with questions about
                 themselves (have you traveled somewhere interesting? Have you
                 ever been stung by a bee? Do you have any pets?)}
-          @item{For older students -- include "levels." For level one, only
+          @item{Remind students that they can be their own judge in this game --
+                to limit follow up questions! If the fact feels true to them,
+                they should jump in. (Example: Middle says "The red wind blows for
+                anyone with a sister!" you have a step sister -- does that count?!
+                Well do you think it counts? Go with your gut.)}
+          @item{Variation -- include "levels." For level one, only
                 include physical attributes about yourself (hair color, what you
                 are wearing, if you have glasses etc). Level two is
                 likes/dislikes. Level three can be experiences.}]

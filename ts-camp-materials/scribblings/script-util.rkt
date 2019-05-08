@@ -25,7 +25,8 @@
          game-jam-intro
          game-jam
          scoring-market
-         check-in)
+         check-in
+         check-out)
 
 (define-runtime-path check-in-icebreakers "img/check-in-icebreakers.png")
 (define-runtime-path intro-starter-katas "img/intro-starter-katas.png")
@@ -44,6 +45,7 @@
 (define-runtime-path game-jam "img/game-jam.png")
 (define-runtime-path scoring-market "img/scoring-market.png")
 (define-runtime-path check-in "img/check-in.png")
+(define-runtime-path check-out "img/check-out.png")
 
 (define-runtime-path bring-together-icon "img/together-icon.png")
 (define-runtime-path breakout-teams-icon "img/breakout-icon.png")
@@ -108,6 +110,7 @@
   (hc-append (scale (bitmap lunch) .5)
              (ghost (rectangle 20 20))
              (vl-append
+              (text "AM CAMP ONLY" null 20)
               (am-time "12:00pm-12:45(ish)pm")
               (ghost (rectangle 10 10))
               (scale (bitmap bring-together-icon) .3))))
