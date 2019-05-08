@@ -24,6 +24,8 @@
     (ts-battle-arena-starwars-summer-camp-2019 "STAR WARS")
     (ts-survival-minecraft-summer-camp-2019    "MINECRAFT")
     (ts-survival-pokemon-summer-camp-2019      "POKEMON")
+    (ts-adventure-mario-summer-camp-2019       "MARIO")
+    (ts-adventure-harrypotter-summer-camp-2019       "HARRY POTTER")
     
   )
 )

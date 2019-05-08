@@ -9,7 +9,7 @@
 
 @title{Battle Arena Katas}
 
-These @(~a (length (kata-collection-katas battle-arena-katas))) katas pertain to @racket[battle-arena].
+These @(~a (length (kata-collection-katas battle-arena-katas))) katas pertain to @racket[battlearena].
 They can be browsed in various ways using the table of contents below.
 
 @racketblock[
@@ -68,6 +68,14 @@ They can be browsed in various ways using the table of contents below.
 
 @(scribblify-collection sword-katas)
 
+@section{Fire Magic Katas}
+
+@(scribblify-collection fire-magic-katas)
+
+@section{Ice Magic Katas}
+
+@(scribblify-collection ice-magic-katas)
+
 @section{Paint Thrower Katas}
 
 @(scribblify-collection paint-thrower-katas)
@@ -75,6 +83,10 @@ They can be browsed in various ways using the table of contents below.
 @section{Background Katas}
 
 @(scribblify-collection background-katas)
+
+@section{Level Design Katas}
+
+@(scribblify-collection level-design-katas)
 
 @section{Magic Balance Katas}
 
@@ -152,5 +164,5 @@ They can be browsed in various ways using the table of contents below.
 
 @(scribblify-collection sword-armor-katas)
 
-@(include-section battle-arena/scribblings/assets-library)
+@(include-section battlearena/scribblings/assets-library)
 
