@@ -36,6 +36,6 @@
 @section{All Zoo Katas}
 @(render zoo)
 
-@(include-section ts-camp-materials/scribblings/half-day-schedule)
+@;(include-section ts-camp-materials/scribblings/half-day-schedule)
 @(include-section ts-camp-materials/scribblings/gameshow-k2)
-@(include-section ts-camp-materials/scribblings/game-jam-resources)
+@;(include-section ts-camp-materials/scribblings/game-jam-resources)

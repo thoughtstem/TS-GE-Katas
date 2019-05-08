@@ -15,26 +15,32 @@
           @item[@bold{Assign} " specific jobs to all TLs"]
           @item["Head to camp room " @bold{on the hour} " (9am/1pm)"]
           @item["Assign " @bold{One TL} " to wait for any late students"
-                @itemlist[@item{TL keeps tablet?}
+                @itemlist[@item{TL keeps tablet}
                           @item{TL returns to camp room when all students arrive or
-                                at quarter past (9:15am/1:15pm)}]]]
+                                at quarter past (9:15am/1:15pm)}]]
+          @item["Once TL returns, " @bold{confirm attendance} " on backend is
+                accurate with HQ over Slack"]]
 
 @(header-block coding-warmup
                "9:00am-9:15am"
                "1:00pm-1:15pm"
                'breakout)
 
+@time-warning @bold{5 and 2 min} warnings
+
 @itemlist[#:style 'compact
           @item["With loose guidance from TLs, " @bold{students review} " code from
                 yesterday"]
           @item[@bold{Step in} " for TL who is waiting at check-in"]]
 
-@time-warning @bold{5 and 2 min} warnings
+
           
 @(header-block katas
                "9:15am-10:00am"
                "1:15pm-2:00pm"
                'breakout)
+
+@time-warning @bold{15, 10, 5 and 2 min} warnings
 
 @itemlist[#:style 'compact
           @item[@bold{Transision announcement:}
@@ -45,7 +51,6 @@
           @item[@bold{PM ONLY} " -- take " @bold{YOUR 30 min lunch break} " from "
                 @bold{1:20-1:50}]]
 
-@time-warning @bold{15, 10, 5 and 2 min} warnings
 
 
 @(header-block snack-break
@@ -53,19 +58,23 @@
                "2:00pm-2:15pm"
                'together)
 
+@time-warning @bold{5 and 2 min} warnings
+
 @itemlist[#:style 'compact
           @item[@bold{Dismiss TLs for break} " -- TLs should LEAVE the camp space so they
                 can actually relax/check phones/not be interrupted by students"]
           @item["All students are " @bold{off computers} " for the entire break"]
           @item["Monitor all students and keep it " @bold{safe and sane}]]
 
-@time-warning @bold{5 and 2 min} warnings
+
 
 @(header-block game-time-30
                "10:15am-10:45am"
                "2:15pm-2:45pm"
                'together)
-@;edit from here
+
+@time-warning @bold{5 and 2 min} warnings
+@;edit from here on
 @itemlist[#:style 'compact
           @item["Recommended game: " @secref["I_Like_My_Neighbors_Who___"
                                              #:doc '(lib "ts-camp-materials/scribblings/manual.scrbl")]
@@ -73,7 +82,7 @@
                                 collisions, "  @bold{split the camp} " into  a
                                 smaller-students group and a larger-students group"]]]]
 
-@time-warning @bold{5 and 2 min} warnings
+
 
 @(header-block nerd-out
                "10:45am-11:00am"
