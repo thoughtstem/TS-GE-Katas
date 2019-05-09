@@ -131,7 +131,8 @@ Okay, the jam is on. You are now a "judge." What does that mean? What do you do?
                 approach problems, and congratulations on cool code! Avoid the temptation
                 to give answers to students when they are stuck, rather point them to the
                 resources accessible to them."]
-          @item["Encourage the kids by " @bold{awarding bonus point stickers} " when they do things we like
+          @item["Encourage the kids by " @bold{awarding bonus point stickers} " (see Scoring Section)
+                when they do things we like
                 to see -- when they work with their team, when they test their game, when they create a cool
                 story behind their game, etc! Also use the stickers as a motivator when things get tough:
                 'bonus point for working on debugging! That's tricky stuff!' Not all students/teams need
@@ -164,9 +165,10 @@ review of coaches.
 
 Scoring Step-by-Step:
 @itemlist[#:style 'ordered
-          @item{Count up total number of open and closed parens in RUNNING code (each
+          @item{Make sure all games are running before awarding points!}
+          @item{Count up total number of open and closed parens in code (each
                 single paren counts as one). Write this number down.}
-          @item{Count up total keywords in RUNNING code. Write this number down.}
+          @item{Count up total keywords in code. Write this number down.}
           @item{Add the previous two numbers together.}
           @item{Divide this number by five. (HINT: divide by less if average game is
                 on the shorter side. Divide by more if games are longer.)}
@@ -217,19 +219,19 @@ Offer this key piece of advice -- repeat it early and often:
           @bold{test often.} " Once more for the kids in the back! "
           @bold[@larger{Start small and test often!!!}]]]
 
-@subsection{Game Jam Intro Video}
+@;subsection{Game Jam Intro Video}
 
-@bold{This video is currently out of date. Please Ignore!}
+@;bold{This video is currently out of date. Please Ignore!}
 
-This introduction video outlines everything a student needs to know
-before going into game jam, including:
-@itemlist[@item{How to pair program}
-          @item{How scoring works}
-          @item{All about the resource center}]
-It also can serve as a reminder to coaches on how game jam works!
+@;This introduction video outlines everything a student needs to know
+@;before going into game jam, including:
+@;itemlist[@item{How to pair program}
+          @;item{How scoring works}
+          @;item{All about the resource center}]
+@;It also can serve as a reminder to coaches on how game jam works!
 
 @;GAME-JAM-VID
 
-Keep in mind that these are the minimum guidelines of a jam, and that
-coaches can always add rules and student supports as they see fit.
+@;Keep in mind that these are the minimum guidelines of a jam, and that
+@;coaches can always add rules and student supports as they see fit.
 
