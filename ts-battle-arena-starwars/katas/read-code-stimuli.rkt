@@ -16,56 +16,48 @@
    
    'avatar-1
    (read "Make a game that has a custom rebel.")
-
    'avatar-2
    (read "Make a game that has a predifined sprite as your custom rebel.")
-
    'avatar-3
    (read "Make a game that has a custom rebel with a custom sprite and 20 speed.")
-
-   'avatar-3
+   'avatar-4
    (read "Make a game that has a custom rebel with a custom sprite, 20 speed, and 5 item slots.")
+   'avatar-5
+   (read "Make a game that has a custom rebel with a custom sprite, 20 speed, 5 item slots, and 200 for health, max-health, shield, and max-shield.")
 
    
    'enemy-1
    (read "Make a game that has a custom imperial.")
-
    'enemy-2
    (read "Make a game that has 10 random imperials.")
-
    'enemy-3
    (read "Make a game that has 5 imperials with 'medium ai and custom health and shield.")
-
    'enemy-4
    (read "Make a game that has 5 Storm Troopers with 'easy ai and 1 Boba Fett with 'hard ai.")
-
+   'enemy-5
+   (read "Make a game that has 5 'hard Darth Vader enemies using a lightsaber with 50 damage.")
+   
    
    'enemy-weapon-1
    (read "Make a game that has a custom imperial and give it a blaster that shoots yellow lasers.")
-
    'enemy-weapon-2
    (read "Make a game that has a custom imperial with a custom sprite and a red lightsaber.")
-
    'enemy-weapon-3
    (read "Make a game that has a custom imperial with a custom sprite and a double lightsaber.")
 
 
    'background-1
    (read "Make a game that has a random colored planet.")
-
    'background-2
    (read "Make a game that uses a predefined image as the planet.")
-
    'background-3
    (read "Make a game that has a fully customized planet.")
 
    
    'sword-armor-1
    (read "Make a game that has a collectible Lightsaber Armor.")
-
    'sword-armor-2
    (read "Make a game that has a fully customized Lightsaber Armor.")
-
    'sword-armor-3
    (read "Make a game that has an enemy with a lightsaber and armor to protect your rebel.")
 
@@ -74,30 +66,24 @@
    
    'lightsaber-1
    (read "Make a game that has a lightsaber.")
-
    'lightsaber-2
    (read "Make a game with your own defined lightsaber.")
-
    'lightsaber-3
    (read "Make a game with your own defined fully customized lightsaber.")
 
 
    'blaster-1
    (read "Make a game that has a blaster.")
-
    'blaster-2
    (read "Make a game with your own defined blaster.")
-
    'blaster-3
    (read "Make a game with your own defined fully customized blaster.")
 
 
    'lightsaber-droid-1
    (read "Make a game that has a weapon that spawns a droid with a lightsaber.")
-
    'lightsaber-droid-2
-   (read "Make a game that has a defined weapon that spawns a droid with a customized lightsaber.")
-   
+   (read "Make a game that has a defined weapon that spawns a droid with a customized lightsaber.")   
    'lightsaber-droid-3
    (read "Make a game that has a defined weapon that spawns a droid with a fully customized lightsaber.")
 

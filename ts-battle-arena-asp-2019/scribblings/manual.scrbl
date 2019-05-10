@@ -14,7 +14,7 @@
 Welcome to the kata collection for @bold{Battle Arena Games}.
 This is for students and coaches participating in their local scholastic game jams for Spring 2019.
 
-@battle-arena-badges
+@battlearena-badges
 
 @table-of-contents[]
 

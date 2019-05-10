@@ -8,20 +8,20 @@
 
 @title{Camp Resources}
 
-Materials, instructions and documentation to be piped into Frontline
-Kata Collections for camps of all kinds.
+Everything that a Head Coach needs to run a successful camp!
 
-For Fleet Winter and Spring Camps, use:
-@itemlist[@item{Full Camp Day Schedule}
-          @item{Full Camp Day Materials}]
+@table-of-contents[]
 
-For any 3rd-5th Camp or ASP, use:
-@itemlist[@item{Game Jam Resources}]
-
-
-@(include-section "full-day-schedule.rkt")
-@(include-section "one-day-materials.rkt")
+@;(include-section "full-day-schedule.rkt")
+@;(include-section "one-day-materials.rkt")
+@(include-section "HC-script-mon.rkt")
+@(include-section "HC-script-tue.rkt")
+@(include-section "half-day-schedule.rkt")
 @(include-section "game-jam-resources.rkt")
+@(include-section "icebreaker-games.rkt")
+@(include-section "games.rkt")
+
+
 
 
 

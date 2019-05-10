@@ -1,62 +1,99 @@
 #lang racket
 
-(provide (all-from-out "./util.rkt")
-         tri-badge
+(require scribble/srcdoc pict)
+(require (for-doc (only-in pict pict?)
+                  (submod "..")))
 
-         survival-badges
-         k2-superhero-badges
-         battle-arena-badges)
 
-(require "./cluster-demos.rkt" "./image-dir-loader.rkt" racket/runtime-path)
+(provide 
+  ;Note that all define-badge defs are provided. You just can't see them because of macro magic.
+  badge-grid
+  (all-from-out "./styles/hexagon.rkt"
+                "./icons/main.rkt"
+                "./colors/pallets.rkt"
+                "./util.rkt"))
+(require "./icons/main.rkt")
+(require "./colors/pallets.rkt")
+(require "./styles/hexagon.rkt")
 (require "./util.rkt")
 
-(define-runtime-path images "images")
-(define (local-bitmap s)
-  (bitmap (~a (path->string images) "/" s)))
 
-(def-icons "./images" local-bitmap)
-
-(define (tri-badge a b c #:bgs (bgs pallet3))
-  (sequence2 #:fgs (list "black")
-             #:bgs bgs
-
-             a
-             b
-             c))
-
-(require pict)
-
-(define (save-pict the-pict name kind)
-  (define bm (pict->bitmap the-pict))
-  (send bm save-file name kind))
-
-(define survival-badges
-  (triad
-   (two-tone-badge (potion-icon 1 "black") pallet3-yellow pallet3-red)
-   (two-tone-badge (sword-icon 1 "black") pallet3-blue pallet3-green)
-   (two-tone-badge (carrot-icon 1 "black") pallet3-yellow pallet3-green)
-   ))
-
-(define battle-arena-badges
-  (triad
-   (two-tone-badge (double-swords-icon 1 "black") pallet3-red pallet3-yellow)
-   (two-tone-badge (mace-icon 1 "black") pallet3-red pallet3-blue)
-   (two-tone-badge (coins-icon 1 "black") pallet3-green pallet3-blue)))
-
-(define k2-superhero-badges
-  (triad
-   (two-tone-badge play pallet2-red pallet2-yellow)
-   (two-tone-badge thor pallet2-yellow pallet2-blue)
-   (two-tone-badge superhero pallet2-blue pallet2-orange)))
+(collect-badges all-triads
+                (define-badges k2-superhero-badges
+                               (hexagon-triad play-icon thor-icon superhero-icon
+                                              bright-red bright-orange bright-yellow))
 
 
-(module+ test
-  survival-badges
-  battle-arena-badges
-  k2-superhero-badges
+                (define-badges k2-farm-badges
+                               (hexagon-triad pig-icon cow-icon horse-icon
+                                              bright-orange bright-yellow bright-green))
 
-  #;(tri-badge  (list pallet3-red pallet3-yellow
-                    pallet3-blue pallet3-green)
-              potion-icon sword-icon carrot-icon)
+                (define-badges k2-sea-badges
+                               (hexagon-triad fish-icon octopus-icon shark-icon
+                                              bright-purple bright-green bright-blue))
 
-  )
+                (define-badges k2-zoo-badges
+                               (hexagon-triad monkey-icon giraffe-icon elephant-icon
+                                              bright-green bright-yellow bright-purple))
+
+                (define-badges k2-superhero2-badges  
+                               (hexagon-triad superman-icon black-widow-icon lightning-icon 
+                                              bright-blue bright-purple bright-red))
+
+
+
+                (define-badges survival-badges
+                               (hexagon-triad carrot-icon sword4-icon potion-icon
+                                              googly-orange googly-red googly-yellow))
+
+                (define-badges battlearena-badges
+                               (hexagon-triad coins-icon mace-icon double-swords-icon
+                                              googly-yellow googly-orange googly-green))
+
+
+
+                (define-badges pokemon-badges
+                               (hexagon-triad grass-icon fire-icon water-icon
+                                              googly-green googly-red googly-blue))
+
+                (define-badges minecraft-badges
+                               (hexagon-triad chest-icon ore-icon creeper-icon
+                                              googly-blue googly-purple googly-green))
+
+                (define-badges starwars-badges
+                               (hexagon-triad laser-sword-icon robot-icon space-ship-icon 
+                                              googly-blue googly-purple googly-red))
+            
+                (define-badges avengers-badges
+                               (hexagon-triad captain-america-icon fist-icon iron-man-icon
+                                              googly-blue googly-yellow googly-red ))
+
+                (define-badges fortnite-badges
+                               (hexagon-triad tower-icon helmet-icon fireball-icon
+                                              googly-orange googly-green googly-purple))
+
+                (define-badges adventure-badges
+                               (hexagon-triad heal-icon bow-icon spear-icon
+                                              googly-red googly-green googly-blue))
+
+                (define-badges lotr-badges
+                               (hexagon-triad orc-icon gandalf-icon ring-icon 
+                                              googly-orange googly-blue googly-purple))
+
+                (define-badges mario-badges
+                               (hexagon-triad plunger-icon mushroom-icon happy-star-icon 
+                                              googly-purple googly-red googly-yellow))
+
+
+                (define-badges harry-potter-badges
+                               (hexagon-triad glasses-icon owl-icon wand-icon 
+                                              googly-green googly-red googly-orange)))
+
+
+(define badge-grid
+  (gridify-triads 
+    (map (compose 
+           (curryr scale 0.25))
+         all-triads)))
+
+

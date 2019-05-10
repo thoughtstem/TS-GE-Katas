@@ -2,10 +2,12 @@
 
 (provide katas
          hero
-         farm)
+         farm
+         sea
+         zoo)
 
 (require ts-kata-util/katas/main
-         ts-fundamentals/katas
+         ;ts-fundamentals/katas
          "./katas/read-code-stimuli.rkt"
          "./katas/read-code-tips.rkt" 
          "./katas/ratchet-helpers.rkt")
@@ -56,5 +58,7 @@
 (define-sub-collections k2-katas
   fish
   hero
-  farm)
+  farm
+  sea
+  zoo)
 

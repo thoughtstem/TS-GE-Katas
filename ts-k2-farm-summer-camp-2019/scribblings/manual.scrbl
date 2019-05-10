@@ -1,36 +1,41 @@
 #lang scribble/manual
 
-@(require ts-kata-util/katas/main
-          ts-kata-util/katas/rendering
+@(require ;ts-kata-util/katas/main
+          ;ts-kata-util/katas/rendering
           ts-kata-util/badge-maker/main
+          (prefix-in f: ts-fundamentals/katas)
           "../katas.rkt"
           "../rendering.rkt"
           (except-in racket read do))
 
-@title{K-2 Farm Animals!}
+@title{Adventures in Coding and Farm Animals: K-2nd}
 
-In this class, students will learn to code video games with their favorite farm animals!
-
-@k2-superhero-badges
-
-This page roughly breaks the katas into 10 sections.  Each section roughly corresponds to a day of class.
+@k2-farm-badges
 
 @table-of-contents[]
 
-@(sections-for kata-section
-               session-one
-               session-two
-               session-three
-               session-four
-               session-five
-               session-six
-               session-seven
-               session-eight
-               session-nine
-               session-ten
-               )
+@section{Intro Katas}
+@(render f:core-values)
+@(render intro-kata)
 
-@section{Katas for Home Practice}
+@section{Food Katas}
+@(render day-one)
+
+@section{Coin Katas}
+@(render day-two)
+
+@section{More Coin Katas}
+@(render day-three)
+
+@section{Enemy Katas}
+@(render day-four)
+
+@section{More Enemy Katas}
+@(render day-five)
+
+@section{All Farm Katas}
 @(render farm)
 
-
+@;(include-section ts-camp-materials/scribblings/half-day-schedule)
+@(include-section ts-camp-materials/scribblings/gameshow-k2)
+@;(include-section ts-camp-materials/scribblings/game-jam-resources)
