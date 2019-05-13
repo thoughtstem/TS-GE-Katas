@@ -6,6 +6,8 @@
          CURRENT-LANGUAGE
          CURRENT-LANGUAGE-EXAMPLES
          FILTER-BY-COLLECTION
+         ASSET-PATH
+         resolves-to?
          (struct-out identifier))
 
 (require (only-in racket/hash hash-union)
@@ -15,6 +17,7 @@
 (define CURRENT-LANGUAGE          (make-parameter #f))
 (define CURRENT-LANGUAGE-EXAMPLES (make-parameter #f))
 (define FILTER-BY-COLLECTION (make-parameter #f))
+(define ASSET-PATH          (make-parameter #f))
 
 (struct identifier (id frequency corpus-frequency))
 
@@ -72,16 +75,31 @@
     programs   
     (do-collection-filter programs)))
 
-(define (get-asset-ids (path (string->symbol (~a (CURRENT-LANGUAGE) "/assets"))))
+(define (get-asset-ids (path 
+                         (or
+                           (ASSET-PATH)
+                           (string->symbol (~a (CURRENT-LANGUAGE) "/assets")))))
   (dynamic-require path #f)
   
-  (define-values (ret unk) 
+  (define-values (vars stxs) 
     (module->exports path))
 
   (map first
-         (rest (first ret))))
+         (append
+           (if (empty? vars) 
+             '()
+             (rest (first vars)))
+           (if (empty? stxs)
+             '()
+             (rest (first stxs))))))
 
+(define (resolve id)
+  (dynamic-require (CURRENT-LANGUAGE) id))
 
+(define (resolves-to? contract)
+  (lambda (id)
+    (define thing (resolve id))
+    (contract thing)))
 
 (define (example-name->code path en)
   (dynamic-require path en))

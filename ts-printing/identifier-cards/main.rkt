@@ -6,6 +6,7 @@
          ID->CODE-PICT 
          ID->SUMMARY
          CURRENT-LANGUAGE-EXAMPLES
+         ASSET-PATH
          CURRENT-LANGUAGE
          FILTER-BY-COLLECTION)
 
@@ -184,8 +185,10 @@
 
 (define (lang->asset-list l)
   (parameterize ([CURRENT-LANGUAGE l])
-    (define ids (get-asset-ids))
-    (define backs (map id->back ids))
+    (define ids 
+      (filter (resolves-to? (or/c animated-sprite? image?)) 
+              (get-asset-ids)))
+    (define backs  (map id->back ids))
     (define fronts (map id->front ids))
     
     (flatten (map list fronts backs))))
@@ -215,8 +218,8 @@
         (list
           (cons 
             'lang 
-            (parameterize ([k v] ...
-                           [CURRENT-LANGUAGE 'lang])
+            (parameterize ([CURRENT-LANGUAGE 'lang]
+                           [k v] ... )
               (displayln "Adding to hash...")
               (displayln 'lang)
               (lang->list 'lang)))
@@ -227,8 +230,8 @@
 
     (define counter 0)
 
-    (parameterize ([k v] ...
-                   [CURRENT-LANGUAGE 'lang]
+    (parameterize ([CURRENT-LANGUAGE 'lang]
+                   [k v] ... 
                    [STARTING-CARD-NUMBER counter])
       (define cards (hash-ref card-hash 'lang))
 
@@ -271,8 +274,8 @@
 
     (define counter 0)
 
-    (parameterize ([k v] ...
-                   [CURRENT-LANGUAGE 'lang]
+    (parameterize ([CURRENT-LANGUAGE 'lang]
+                   [k v] ... 
                    [STARTING-CARD-NUMBER counter])
       (define cards (hash-ref card-hash 'lang))
 
