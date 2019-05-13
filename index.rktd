@@ -9,11 +9,11 @@
 
   ;/unlisted.html data
   ( 
-    (ts-survival "SURVIVAL")
-    (ts-battle-arena "BATTLE-ARENA")
-    ;(ts-coach "COACH TRAINING KATAS")
-    ;(ts-kata-util "Docs for ts-kata-util")
-    (ts-camp-materials                         "HEAD COACH RESOURCES")
+    (ts-survival       "SURVIVAL")
+    (ts-battle-arena   "BATTLE-ARENA")
+    ;(ts-coach         "COACH TRAINING KATAS")
+    (ts-kata-util      "KATA UTIL")
+    (ts-camp-materials "COACH RESOURCES")
 
     (ts-k2-farm-summer-camp-2019               "FARM")
     (ts-k2-hero-summer-camp-2019               "SUPERHEROES")
