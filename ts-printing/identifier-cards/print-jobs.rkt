@@ -83,26 +83,12 @@
                               food-katas
                               trainer-katas)])))
 
-(define (assets->Desktop)
-  (begin-asset-job "asset-cards"
-                   (battlearena-fortnite)
-                   (battlearena-avengers)
-                   (battlearena-starwars)
-                   (survival-minecraft)
-                   (survival-pokemon)))
-
-(define (k2-assets->Desktop)
-  (begin-asset-job "k2-asset-cards"
-                   (k2/lang/animal/animal-asset-friendly-names
-                     [ASSET-PATH 'k2/lang/animal/animal-asset-friendly-names])))
-
 (define (all->Desktop)
   (battlearena-avengers->Desktop) 
   (battlearena-fortnite->Desktop) 
   (battlearena-starwars->Desktop)
   (survival-minecraft->Desktop)
-  (survival-pokemon->Desktop)
-  (assets->Desktop))
+  (survival-pokemon->Desktop))
 
 
 #;
@@ -111,7 +97,7 @@
 #;
 (battlearena->Desktop)
 
+#;
 (k2-assets->Desktop)
-
 
 

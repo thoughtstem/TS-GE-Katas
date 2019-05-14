@@ -8,7 +8,8 @@
          CURRENT-LANGUAGE-EXAMPLES
          ASSET-PATH
          CURRENT-LANGUAGE
-         FILTER-BY-COLLECTION)
+         FILTER-BY-COLLECTION
+         LANGUAGE-COLOR)
 
 (require pict
          (only-in 2htdp/image image? image-width image-height)
@@ -18,6 +19,7 @@
          "./util.rkt"
          "./special-forms.rkt")
 
+(define LANGUAGE-COLOR (make-parameter "white"))
 
 (define (id->thing id)
   (dynamic-require (CURRENT-LANGUAGE) id))
@@ -255,7 +257,11 @@
       (lambda (i)
         (colorize
           (vc-append (default-meta i)
-                     (text (~a "#lang " (CURRENT-LANGUAGE)))
+                     (hc-append 3 
+                                (colorize
+                                  (filled-ellipse 10 10 )
+                                  (LANGUAGE-COLOR))
+                       (text (~a "(require " (CURRENT-LANGUAGE) ")")))
                      (text folder))
           "gray")))
 

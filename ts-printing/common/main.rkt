@@ -18,6 +18,7 @@
          FRONT-MARGIN
          pictify
          blank-bg
+         border-bg
          save-pict
          default-meta
          make-texture
@@ -123,6 +124,14 @@
         my-fg
         (BACK-MARGIN)
         ))
+
+(define (border-bg (color "black") (size (FRONT-MARGIN)))
+  (filled-rectangle 
+    (WIDTH) 
+    (HEIGHT)
+    #:color "white"
+    #:border-color color
+    #:border-width size))
 
 (define (blank-bg)
   (blank (WIDTH) (HEIGHT)))

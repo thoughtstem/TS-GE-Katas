@@ -23,88 +23,52 @@
 
   (set-fg-texture "paint-daubs1.jpg"
     (begin-job "ts-battle-arena-asp-2019"     
-               (avatar-katas 
+               ((collection-apply (curryr take 4) avatar-katas)
                  [FRONT-BG-COLOR googly-red]
                  [FRONT-FG-COLOR clear-white]
                  [FRONT-TITLE    (title "(avatar)")]) 
-               (enemy-katas 
+               ((collection-apply (curryr take 5) enemy-katas) 
                  [FRONT-BG-COLOR    googly-orange]
                  [FRONT-FG-COLOR clear-white]
                  [FRONT-TITLE    (title "(enemies)")])
-               (weapon-katas 
+               ((collection-apply (curryr take 5) weapon-katas) 
                  [FRONT-BG-COLOR    googly-yellow]
                  [FRONT-FG-COLOR clear-white]
                  [FRONT-TITLE    (title "(weapons)")])
-               (powerup-katas
+               ((collection-apply (curryr take 5) powerup-katas) 
                  [FRONT-BG-COLOR    googly-green]
                  [FRONT-FG-COLOR clear-white]
                  [FRONT-TITLE    (title "(powerups)")])
-               (background-katas
-                 [FRONT-BG-COLOR    googly-purple]
+               (background-katas ;Not 5 in here
+                 [FRONT-BG-COLOR    googly-blue]
                  [FRONT-FG-COLOR clear-white]
-                 [FRONT-TITLE    (title "(background)")])
-               (level-design-katas
-                 [FRONT-BG-COLOR    googly-purple]
-                 [FRONT-FG-COLOR clear-white]
-                 [FRONT-TITLE    (title "(level-design)")])
-               (repeater-armor-katas
-                 [FRONT-BG-COLOR    googly-purple]
-                 [FRONT-FG-COLOR clear-white]
-                 [FRONT-TITLE    (title "(repeater-armor)")])
-               (sword-armor-katas
-                 [FRONT-BG-COLOR    googly-purple]
-                 [FRONT-FG-COLOR clear-white]
-                 [FRONT-TITLE    (title "(sword-armor)")]))))
+                 [FRONT-TITLE    (title "(background)")]))))
 
 (define (ts-battle-arena-avengers-summer-camp-2019->Desktop)
   (local-require ts-battle-arena-avengers-summer-camp-2019/katas)
 
   (set-fg-texture "grunge1.jpg" 
     (begin-job "ts-battle-arena-avengers-summer-camp-2019"    
-               (hero-katas 
+               ((collection-apply (curryr take 4) hero-katas) 
                  [FRONT-BG-COLOR    googly-red]
                  [FRONT-FG-COLOR clear-white]
                  [FRONT-TITLE    (title "(hero)")]) 
-               (planet-design-katas 
+               ((collection-apply (curryr take 5) planet-design-katas)  
                  [FRONT-BG-COLOR    googly-orange]
                  [FRONT-FG-COLOR clear-white]
                  [FRONT-TITLE    (title "(planet-design)")]) 
-               (villain-with-power-katas
+               ((collection-apply (curryr take 5) villain-with-power-katas)
                  [FRONT-BG-COLOR    googly-yellow]
                  [FRONT-FG-COLOR clear-white]
                  [FRONT-TITLE    (title "(villains)")]) 
-               (hero-power-katas
+               ((collection-apply (curryr take 5) hero-power-katas)
                  [FRONT-BG-COLOR    googly-green]
                  [FRONT-FG-COLOR clear-white]
                  [FRONT-TITLE    (title "(hero-powers)")]) 
-               (powerup-katas
+               ((collection-apply (curryr take 5) powerup-katas)
                  [FRONT-BG-COLOR    googly-blue]
                  [FRONT-FG-COLOR clear-white]
-                 [FRONT-TITLE    (title "(powerup)")]) 
-               (shield-katas
-                 [FRONT-BG-COLOR    googly-purple]
-                 [FRONT-FG-COLOR clear-white]
-                 [FRONT-TITLE    (title "(shield)")]) 
-               (force-field-extra-katas
-                 [FRONT-BG-COLOR    googly-purple]
-                 [FRONT-FG-COLOR clear-white]
-                 [FRONT-TITLE    (title "(force-field)")]) 
-               (armor-katas
-                 [FRONT-BG-COLOR    googly-purple]
-                 [FRONT-FG-COLOR clear-white]
-                 [FRONT-TITLE    (title "(armor)")]) 
-               (lava-pit-katas
-                 [FRONT-BG-COLOR    googly-purple]
-                 [FRONT-FG-COLOR clear-white]
-                 [FRONT-TITLE    (title "(lava-pits)")]) 
-               (spike-mine-katas
-                 [FRONT-BG-COLOR    googly-purple]
-                 [FRONT-FG-COLOR clear-white]
-                 [FRONT-TITLE    (title "(spike-mines)")]) 
-               (planet-design-extra-katas
-                 [FRONT-BG-COLOR    googly-purple]
-                 [FRONT-FG-COLOR clear-white]
-                 [FRONT-TITLE    (title "(planet-design++)")]))))
+                 [FRONT-TITLE    (title "(powerup)")]))))
 
 
 
@@ -113,58 +77,26 @@
 
   (set-fg-texture "swirls1.jpg" 
                (begin-job "ts-battle-arena-fortnite-summer-camp-2019"    
-                          (avatar-katas
+                          ((collection-apply (curryr take 4) avatar-katas) 
                             [FRONT-BG-COLOR    googly-red]
                             [FRONT-FG-COLOR clear-white]
                             [FRONT-TITLE    (title "(avatar)")]) 
-                          (selected-enemy-katas
+                          ((collection-apply (curryr take 5) selected-enemy-katas)
                             [FRONT-BG-COLOR    googly-orange]
                             [FRONT-FG-COLOR clear-white]
                             [FRONT-TITLE    (title "(enemies)")]) 
-                          (selected-weapon-katas
+                          ((collection-apply (curryr take 5) selected-weapon-katas) 
                             [FRONT-BG-COLOR    googly-yellow]
                             [FRONT-FG-COLOR clear-white]
                             [FRONT-TITLE    (title "(weapons)")]) 
-                          (powerup-katas
+                          ((collection-apply (curryr take 5) powerup-katas ) 
                             [FRONT-BG-COLOR    googly-green]
                             [FRONT-FG-COLOR clear-white]
                             [FRONT-TITLE    (title "(powerups)")]) 
-                          (selected-tower-katas
+                          ((collection-apply (curryr take 5) selected-tower-katas)
                             [FRONT-BG-COLOR    googly-blue]
                             [FRONT-FG-COLOR clear-white]
-                            [FRONT-TITLE    (title "(towers)")]) 
-                          (background-katas
-                            [FRONT-BG-COLOR    googly-purple]
-                            [FRONT-FG-COLOR clear-white]
-                            [FRONT-TITLE    (title "(background)")]) 
-                          (level-design-katas
-                            [FRONT-BG-COLOR    googly-purple]
-                            [FRONT-FG-COLOR clear-white]
-                            [FRONT-TITLE    (title "(level-design)")]) 
-                          (force-field-katas
-                            [FRONT-BG-COLOR    googly-purple]
-                            [FRONT-FG-COLOR clear-white]
-                            [FRONT-TITLE    (title "(force-field)")]) 
-                          (lava-pit-katas
-                            [FRONT-BG-COLOR    googly-purple]
-                            [FRONT-FG-COLOR clear-white]
-                            [FRONT-TITLE    (title "(lava-pits)")]) 
-                          (spike-mine-katas
-                            [FRONT-BG-COLOR    googly-purple]
-                            [FRONT-FG-COLOR clear-white]
-                            [FRONT-TITLE    (title "(spike-mines)")]) 
-                          (armor-katas
-                            [FRONT-BG-COLOR    googly-purple]
-                            [FRONT-FG-COLOR clear-white]
-                            [FRONT-TITLE    (title "(armor++)")])
-                          (dagger-tower-katas
-                            [FRONT-BG-COLOR    googly-purple]
-                            [FRONT-FG-COLOR clear-white]
-                            [FRONT-TITLE    (title "(dagger-towers)")])
-                          (rocket-tower-katas
-                            [FRONT-BG-COLOR    googly-purple]
-                            [FRONT-FG-COLOR clear-white]
-                            [FRONT-TITLE    (title "(rocket-towers)")]))))
+                            [FRONT-TITLE    (title "(towers)")]) )))
 
 
 (define (ts-battle-arena-starwars-summer-camp-2019->Desktop)
@@ -172,58 +104,26 @@
 
   (set-fg-texture "paint-swirls1.jpg"
     (begin-job "ts-battle-arena-starwars-summer-camp-2019"    
-               (rebel-katas
+               ((collection-apply (curryr take 4) rebel-katas)
                  [FRONT-BG-COLOR    googly-red]
                  [FRONT-FG-COLOR clear-white]
                  [FRONT-TITLE    (title "(rebels)")]) 
-               (imperial-katas
+               ((collection-apply (curryr take 5) imperial-katas)
                  [FRONT-BG-COLOR    googly-orange]
                  [FRONT-FG-COLOR clear-white]
                  [FRONT-TITLE    (title "(imperials)")]) 
-               (weapon-katas
+               ((collection-apply (curryr take 5) weapon-katas)
                  [FRONT-BG-COLOR    googly-yellow]
                  [FRONT-FG-COLOR clear-white]
                  [FRONT-TITLE    (title "(weapons)")]) 
-               (powerup-katas
+               ((collection-apply (curryr take 5) powerup-katas)
                  [FRONT-BG-COLOR    googly-green]
                  [FRONT-FG-COLOR clear-white]
                  [FRONT-TITLE    (title "(powerups)")]) 
-               (trap-weapon-katas
+               ((collection-apply (curryr take 5) trap-weapon-katas)
                  [FRONT-BG-COLOR    googly-blue]
                  [FRONT-FG-COLOR clear-white]
-                 [FRONT-TITLE    (title "(trap-weapons)")]) 
-               (planet-katas
-                 [FRONT-BG-COLOR    googly-purple]
-                 [FRONT-FG-COLOR clear-white]
-                 [FRONT-TITLE    (title "(planets)")]) 
-               (level-design-katas
-                 [FRONT-BG-COLOR    googly-purple]
-                 [FRONT-FG-COLOR clear-white]
-                 [FRONT-TITLE    (title "(level-design)")]) 
-               (boost-katas
-                 [FRONT-BG-COLOR    googly-purple]
-                 [FRONT-FG-COLOR clear-white]
-                 [FRONT-TITLE    (title "(boosts)")]) 
-               (shield-katas
-                 [FRONT-BG-COLOR    googly-purple]
-                 [FRONT-FG-COLOR clear-white]
-                 [FRONT-TITLE    (title "(shields)")]) 
-               (lava-pit-katas
-                 [FRONT-BG-COLOR    googly-purple]
-                 [FRONT-FG-COLOR clear-white]
-                 [FRONT-TITLE    (title "(lava-pits)")]) 
-               (blaster-droid-katas
-                 [FRONT-BG-COLOR    googly-purple]
-                 [FRONT-FG-COLOR clear-white]
-                 [FRONT-TITLE    (title "(blaster-droids)")])
-               (lightsaber-armor-katas
-                 [FRONT-BG-COLOR    googly-purple]
-                 [FRONT-FG-COLOR clear-white]
-                 [FRONT-TITLE    (title "(lightsaber-armor)")])
-               (blaster-armor-katas
-                 [FRONT-BG-COLOR    googly-purple]
-                 [FRONT-FG-COLOR clear-white]
-                 [FRONT-TITLE    (title "(blaster-armor)")]))))
+                 [FRONT-TITLE    (title "(trap-weapons)")]) )))
 
 
 (define (ts-survival-asp-2019->Desktop)
@@ -231,118 +131,78 @@
 
   (set-fg-texture "swish1.jpg"
     (begin-job "ts-survival-asp-2019"
-               (avatar-katas
+               ((collection-apply (curryr take 4) avatar-katas)
                  [FRONT-BG-COLOR    googly-red]
                  [FRONT-FG-COLOR clear-white]
                  [FRONT-TITLE    (title "(avatar)")]) 
-               (food-katas
+               ((collection-apply (curryr take 5) food-katas)
                  [FRONT-BG-COLOR    googly-orange]
                  [FRONT-FG-COLOR clear-white]
                  [FRONT-TITLE    (title "(food)")]) 
-               (enemy-katas
+               ((collection-apply (curryr take 5) enemy-katas) 
                  [FRONT-BG-COLOR    googly-yellow]
                  [FRONT-FG-COLOR clear-white]
                  [FRONT-TITLE    (title "(enemies)")]) 
-               (crafter-katas
+               ((collection-apply (curryr take 5) crafter-katas)
                  [FRONT-BG-COLOR    googly-green]
                  [FRONT-FG-COLOR clear-white]
                  [FRONT-TITLE    (title "(crafters)")]) 
                (bg-katas
-                 [FRONT-BG-COLOR    googly-purple]
+                 [FRONT-BG-COLOR    googly-blue]
                  [FRONT-FG-COLOR clear-white]
-                 [FRONT-TITLE    (title "(backgrounds)")]) 
-               (level-design-katas
-                 [FRONT-BG-COLOR    googly-purple]
-                 [FRONT-FG-COLOR clear-white]
-                 [FRONT-TITLE    (title "(level-design)")]) 
-               (coin-katas
-                 [FRONT-BG-COLOR    googly-purple]
-                 [FRONT-FG-COLOR clear-white]
-                 [FRONT-TITLE    (title "(coins)")]) 
-               (weapon-crafter-katas
-                 [FRONT-BG-COLOR    googly-purple]
-                 [FRONT-FG-COLOR clear-white]
-                 [FRONT-TITLE    (title "(weapon-crafters)")]) 
-               (sky-katas
-                 [FRONT-BG-COLOR    googly-purple]
-                 [FRONT-FG-COLOR clear-white]
-                 [FRONT-TITLE    (title "(sky)")]) 
-               (npc-katas
-                 [FRONT-BG-COLOR    googly-purple]
-                 [FRONT-FG-COLOR clear-white]
-                 [FRONT-TITLE    (title "(npcs)")]))))
+                 [FRONT-TITLE    (title "(backgrounds)")]))))
 
 (define (ts-survival-minecraft-summer-camp-2019->Desktop)
   (local-require ts-survival-minecraft-summer-camp-2019/katas)
 
   (set-fg-texture "checkers.jpg" 
     (begin-job "ts-survival-minecraft-summer-camp-2019"
-               (custom-skin-katas
+               ((collection-apply (curryr take 4) custom-skin-katas)
                  [FRONT-BG-COLOR    googly-red]
                  [FRONT-FG-COLOR clear-white]
                  [FRONT-TITLE    (title "(custom-skin)")]) 
-               (food-katas
+               ((collection-apply (curryr take 5) food-katas) 
                  [FRONT-BG-COLOR    googly-orange]
                  [FRONT-FG-COLOR clear-white]
                  [FRONT-TITLE    (title "(food)")]) 
-               (ore-katas
+               ((collection-apply (curryr take 5) ore-katas )
                  [FRONT-BG-COLOR    googly-yellow]
                  [FRONT-FG-COLOR clear-white]
                  [FRONT-TITLE    (title "(ore)")]) 
-               (mob-katas
+               ((collection-apply (curryr take 5) mob-katas)
                  [FRONT-BG-COLOR    googly-green]
                  [FRONT-FG-COLOR clear-white]
                  [FRONT-TITLE    (title "(mobs)")]) 
-               (crafter-katas
+               ((collection-apply (curryr take 5) crafter-katas)
                  [FRONT-BG-COLOR    googly-blue]
                  [FRONT-FG-COLOR clear-white]
-                 [FRONT-TITLE    (title "(crafting)")]) 
-               (entity-katas
-                 [FRONT-BG-COLOR    googly-purple]
-                 [FRONT-FG-COLOR clear-white]
-                 [FRONT-TITLE    (title "(entities)")]) 
-               (biome-katas
-                 [FRONT-BG-COLOR    googly-purple]
-                 [FRONT-FG-COLOR clear-white]
-                 [FRONT-TITLE    (title "(biomes)")]) 
-               (sky-katas
-                 [FRONT-BG-COLOR    googly-purple]
-                 [FRONT-FG-COLOR clear-white]
-                 [FRONT-TITLE    (title "(sky)")]))))
+                 [FRONT-TITLE    (title "(crafting)")]))))
 
 (define (ts-survival-pokemon-summer-camp-2019->Desktop)
   (local-require ts-survival-pokemon-summer-camp-2019/katas)
 
   (set-fg-texture "rays1.jpg" 
     (begin-job "ts-survival-pokemon-summer-camp-2019"
-               (pokemon-katas
+               ((collection-apply (curryr take 4) pokemon-katas)
                  [FRONT-BG-COLOR    googly-red]
                  [FRONT-FG-COLOR clear-white]
                  [FRONT-TITLE    (title "(avatar)")]) 
-               (food-katas
+               ((collection-apply (curryr take 5) food-katas )
                  [FRONT-BG-COLOR    googly-orange]
                  [FRONT-FG-COLOR clear-white]
                  [FRONT-TITLE    (title "(food)")]) 
-               (trainer-katas
+               ((collection-apply (curryr take 5) trainer-katas )
                  [FRONT-BG-COLOR    googly-yellow]
                  [FRONT-FG-COLOR clear-white]
                  [FRONT-TITLE    (title "(trainers)")]) 
-               (stone-katas
-                 [FRONT-BG-COLOR    googly-purple]
+               ((collection-apply (curryr take 5) stone-katas )
+                 [FRONT-BG-COLOR    googly-green] 
                  [FRONT-FG-COLOR clear-white]
                  [FRONT-TITLE    (title "(stone)")]) 
-               (sky-katas
-                 [FRONT-BG-COLOR    googly-purple]
+               ((collection-apply (curryr take 5) sky-katas ) 
+                 [FRONT-BG-COLOR    googly-blue]
                  [FRONT-FG-COLOR clear-white]
-                 [FRONT-TITLE    (title "(sky)")]) 
-               (level-design-katas
-                 [FRONT-BG-COLOR    googly-purple]
-                 [FRONT-FG-COLOR clear-white]
-                 [FRONT-TITLE    (title "(level-design)")]) 
-               (town-katas
-                 [FRONT-BG-COLOR    googly-purple]
-                 [FRONT-FG-COLOR clear-white]
-                 [FRONT-TITLE    (title "(towns)")]))))
+                 [FRONT-TITLE    (title "(sky)")]) )))
 
 (define (ts-k2-farm-summer-camp-2019->Desktop)
   (local-require ts-k2-farm-summer-camp-2019/katas)
@@ -386,14 +246,7 @@
   (ts-k2-sea-summer-camp-2019->Desktop)
   (ts-k2-hero-summer-camp-2019->Desktop))
 
-
 #;
 (all->Desktop)
-
-#;
-(ts-battle-arena-starwars-summer-camp-2019->Desktop)
-
-#;
-(ts-battle-arena-asp-2019->Desktop)
 
 

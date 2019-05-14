@@ -125,13 +125,14 @@
   (trim-nonsense formatted))
 
 
-(define (fix-indentation s)
-  (local-require framework)
+(require (only-in framework racket:text%))
+(define racket-text (new racket:text%))
 
-  (define t (new racket:text%))
-  (send t insert s)
-  (send t tabify-all)
-  (send t get-text))
+(define (fix-indentation s)
+  (send racket-text erase)
+  (send racket-text insert s)
+  (send racket-text tabify-all)
+  (send racket-text get-text))
 
 (define (pretty-format-datum d)
   (define too-many-line-breaks (pretty-format d 0))

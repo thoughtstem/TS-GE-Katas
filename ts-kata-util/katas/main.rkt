@@ -50,6 +50,8 @@
          ->code?
          response-lang=?
          filter-by-response-lang
+
+         collection-apply
          )
 
 ;(require scribble/manual)
@@ -329,6 +331,10 @@
   ;Use lenses?
   (kata-collection
    (filter pred (kata-collection-katas kc))))
+
+(define (collection-apply f kc)
+  (kata-collection
+    (f (kata-collection-katas kc))))
 
 ;TODO: Rewrite to be less stringy and more rackety
 ;  Read, parse into datum?
