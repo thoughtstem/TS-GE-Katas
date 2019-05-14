@@ -39,7 +39,7 @@
 @(render biome-katas)
 @(render sky-katas)
 
-@(include-section ts-camp-materials/scribblings/half-day-schedule)
+@;(include-section ts-camp-materials/scribblings/half-day-schedule)
 @(include-section ts-camp-materials/scribblings/gameshow-minecraft)
-@(include-section ts-camp-materials/scribblings/game-jam-resources)
+@;(include-section ts-camp-materials/scribblings/game-jam-resources)
 @(include-section survival-minecraft/scribblings/assets-library)

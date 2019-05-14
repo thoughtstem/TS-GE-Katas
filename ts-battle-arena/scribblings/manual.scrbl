@@ -19,31 +19,6 @@ They can be browsed in various ways using the table of contents below.
 
 @table-of-contents[]
 
-@;@(sections-for  avatar-katas
-@;                enemy-katas
-@;                enemy-weapon-katas
-@;                spear-katas
-@;                sword-katas
-@;                paint-thrower-katas
-@;                magic-balance-katas
-@;                melee-balance-katas
-@;                repeater-balance-katas
-@;                spear-tower-katas
-@;                repeater-tower-katas
-@;                dagger-tower-katas
-@;                single-shot-katas
-@;                spread-shot-katas
-@;                homing-repeater-katas
-@;                grow-katas
-@;                shield-katas
-@;                boost-katas
-@;                health-katas
-@;                spike-mine-katas
-@;                lava-katas
-@;                rocket-tower-katas
-@;                repeater-armor-katas
-@;                sword-armor-katas )
-
 @section{Intro Katas}
 
 @(scribblify-collection hello-world-katas)

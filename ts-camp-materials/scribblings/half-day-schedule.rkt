@@ -53,7 +53,8 @@ job in the check in process:
 @bold[@larger{Head Coach}]
 
 The Head Coach duties during check-in are:
-@itemlist[@item{Assign jobs to Team Leaders, adjust jobs as needed}
+@itemlist[#:style 'compact
+          @item{Assign jobs to Team Leaders, adjust jobs as needed}
           @item{Check students in as they arrive on ThoughtSTEM backend,
                 using tablet}
           @item{Answer parent questions or direct parents to contact HQ}
@@ -63,18 +64,20 @@ The Head Coach duties during check-in are:
 
 These TLs hang out with the students who have already been dropped off.
 Duties include:
-@itemlist[@item{Keeping all students in our care together and safe}
+@itemlist[#:style 'compact
+          @item{Keeping all students in our care together and safe}
           @item{Interrupting and redirecting unsafe student behavior
                 (ex. wandering off, playing with sticks, throwing rocks, etc)}
           @item["Fostering a comfortable, welcoming environment by talking to
                 students, starting conversations between students and going
-                out of their way to engage students on the fringe."
+                out of their way to engage students on the fringe. "
                 @bold{This is especially important on day one!}]]
 
 @bold[@larger{Runners -- 1-2 Team Leaders}]
 
 These TLs move between cars, completing the following duties:
-@itemlist[@item{Ensuring student safety around cars}
+@itemlist[#:style 'compact
+          @item{Ensuring student safety around cars}
           @item{directing them (or in some cases, walking them) to where the rest
                 of the students are, with HB Managers}
           @item{Checking in with parents, answering any quick questions and calling
@@ -85,7 +88,8 @@ These TLs move between cars, completing the following duties:
 @bold[@larger{Traffic Cop -- 1 Team Leader}]
 
 This TL helps keep the car chaos to a minimum. Duties include:
-@itemlist[@item{Ensuring student safety around cars}
+@itemlist[#:style 'compact
+          @item{Ensuring student safety around cars}
           @item{Keeping the car line moving forward}
           @item{Helping parents navigate out safely}
           @item{Reminding parents they they should stay in cars, or, helping them
@@ -95,7 +99,31 @@ This TL helps keep the car chaos to a minimum. Duties include:
 @bold[@larger{If Needed: Complete Set Up -- 1-2 Team Leaders}]
 
 If 8:45 arrives and there is more setup to complete, the Head Coach can assign one
-or two TLs to stay in the camp room and finish up.
+or two TLs to stay in the camp room and finish up. Some locations require this, see
+the note below:
+
+@bold[@larger{Monitoring Camp Room}]
+
+We can never leave our equipment alone in an unlocked room; this means that a TL will
+have to remain behind every day during check-in at some locations. This TL can complete
+set up during this time.
+
+Camp locations where room will be @bold{unlocked} during all camp hours (will need
+a TL to remain during check in):
+@itemlist[#:style 'compact
+          @item{UCSD}
+          @item{San Diego Christian College}
+          @item{La Jolla Country Day Camp (not typical check-in, see note below)}]
+
+Camp locations with exceptions, where no monitoring is needed during check-in:
+@itemlist[#:style 'compact
+          @item{Cal State San Marcos -- Head Coach has key to lock room}
+          @item{SDSU -- doors autolock at check-in time}
+          @item{Fleet Science Center -- check-in is at camp room}
+          @item{Del Mar Unified School District -- check-in is at camp room}
+          @item{Lawrence Family JCC -- check-in is at camp room}]
+
+@smaller[@italic{Location notes updated 5/2019}]
 
 @bold[@larger{Special Location Instructions}]
 
@@ -105,7 +133,8 @@ slightly different jobs:
 
 @bold{Fleet Science Center}
 
-@itemlist[@item{On first day check in, Head Coach needs to confirm the authorized
+@itemlist[#:style 'compact
+          @item{On first day check in, Head Coach needs to confirm the authorized
                 pick up list with each parent/guardian as they drop off their
                 student.}
           @item{There also may be additional paperwork to hand out to parents.}
@@ -162,7 +191,8 @@ Dollar rewards to keep students on task.
 @larger{PM -- mon 1:30pm-2:15pm}
 
 Head Coach leads into this section by explaining a few core concepts:
-@itemlist[@item{GAME JAM!}
+@itemlist[#:style 'compact
+          @item{GAME JAM!}
           @item{Katas}
           @item{Kata cards, ThoughtSTEM Dollars & Market}]
 
@@ -249,22 +279,27 @@ the camp environment}. Remember:
 @larger{PM -- mon 2:30pm-2:45pm & tue-fri 2:15pm-2:45pm}
 
 Why Game Time? Social games can help students...
-@itemlist[@item{...release excess energy!}
+@itemlist[#:style 'compact
+          @item{...release excess energy!}
           @item{...take a brain break from coding!}
           @item{...socialize, especially if they are shy!}
           @item{...feel like they are getting a "real camp experience!"}
           @item{...engage and connect with students and staff from other camps and age groups!}
           @item{...remember who the staff are and how to listen to them!}]
 
-The Head Coach Script has a game recommendation for each day. HCs are welcome to
-make adjustments to serve their specific group of students, keeping the following
-guidelines in mind:
-@itemlist[@item{Whenever possible, play a game that is accessible for the youngest
-                campers while still being engaging for the oldest!}
-          @item{HC can also split the camp into two groups to play two different
-                games to help shrink the accessible/engaging age gap.}
-          @item{While it can be tempting to stick with one game that entertains,
-                it can be worthwhile to try new things too!}]
+The Head Coach Script has a game recommendation or two for each day. Sometimes this
+will be one game for all ages, or a game for younger and a game for older students.
+In either case, HC can divide the camp into two or more groups:
+
+@itemlist[#:style 'compact
+          @item{Whenever possible, mix up the camp groups.}
+          @item{HC can announce the games and let students choose which they want to play}
+          @item{Or HC can split by grade (this will still mix up camp groups, as long
+                as you do some crossing over; K-4 and 5-10 for example)}]
+
+HCs are welcome to pick thier own games to serve their specific group of students,
+but keep in mind that while it can be tempting to stick with one game that
+entertains, it can be worthwhile to try new things too!
 
 Head Coaches run Game Time with all students from all camps; with support from Team
 Leaders. By default, TLs are participating in games and helping create a
@@ -272,6 +307,9 @@ safe and fun environment. TLs also should step in to remind individual students 
 listen or participate, as needed, so HC can focus on the larger group. Sometimes a HC
 will ask TLs to lead a game, especially if the group is splitting up and playing two
 different games.
+
+Here are a whole bunch of @secref["Camp_Games" #:doc '(lib "ts-camp-materials/scribblings/manual.scrbl")]
+with instructions!
 
 @subsection{Nerd Out}
 @larger{AM -- mon-thu 10:45am-11:00am}
@@ -281,7 +319,8 @@ different games.
 During Nerd Out, students and Team Leaders breakout into their camp groups. Head
 Coach gives out a discussion or activity prompt, which TLs can then customize
 for their specific camp fandom. Nerd Out is an opportunity for...
-@itemlist[@item{...students to "nerd out" about their fandom!}
+@itemlist[#:style 'compact
+          @item{...students to "nerd out" about their fandom!}
           @item{...students to teach the TLs more about their fandom!}
           @item{...TLs to get to know the students more!}
           @item{...think critically about the media they enjoy and how they can "add" to that world!}
@@ -350,7 +389,8 @@ Time.
 
 To keep the Market Time organized and sane, the following guidelines are highly recommended:
 
-@itemlist[@item{Only 1 camp/5 students at the Market at a time.}
+@itemlist[#:style 'compact
+          @item{Only 1 camp/5 students at the Market at a time.}
           @item{Keep students moving through the Market so you have time for everyone.
                 ("Okay, you have been here for 5 min, you have 1 more min to make your choice!")}
           @item{Have the Market display up and accessible all day so students can plan
@@ -404,11 +444,38 @@ additional rules as needed:
                 mom/dad/primary caregiver; what would they say? Would your dad say yes to
                 three cups of Mountain Dew?}]
 
+@bold[@larger{Monitoring Camp Room}]
+
+We can never leave our equipment alone in an unlocked room; this means that one TL must
+be in the room at all times during lunch at some camp locations. In these cases, 2 TLs a
+day will split the lunch shift. @bold{Head Coach is responsible for assigning TLs and
+making sure room is monitored AND all TLs get lunch.} HC cannot perform this duty, as
+they are CPR certified and required at the lunch location.
+
+Camp locations where room will be @bold{unlocked} during all camp hours (will need
+monitoring over lunch):
+@itemlist[#:style 'compact
+          @item{UCSD}
+          @item{San Diego Christian College}
+          @item{La Jolla Country Day Camp}
+          @item{Fleet Science Center -- (lunch is Bring Your Own, so one lucky TL
+                a day can take the whole lunch break in the room. Make sure this
+                break rotates fairly throughout the week.)}]
+
+Camp locations with exceptions, where no monitoring is needed during lunch:
+@itemlist[#:style 'compact
+          @item{Cal State San Marcos -- Head Coach has key to lock room}
+          @item{SDSU -- doors autolock at lunch time}
+          @item{Del Mar Unified School District -- no lunch}
+          @item{Lawrence Family JCC -- no lunch}]
+
+@smaller[@italic{Location notes updated 5/2019}]
+
 
 @subsection{Check-out}
-@larger{AM -- mon-fri 12:45pm-1:15pm}
+@larger{AM -- mon-fri 12:45pm-1:10pm}
 
-@larger{PM -- mon-fri 4:00pm-4:15pm}
+@larger{PM -- mon-fri 4:00pm-4:10pm}
 
 Be sure to arrive @bold{promptly} at the checkout location -- this means leaving the camp
 room/lunch hall BEFORE the time check-out is supposed to start!
@@ -427,7 +494,8 @@ keeping the process safe and orderly:
 @bold[@larger{Head Coach}]
 
 The Head Coach duties during check-out are:
-@itemlist[@item{Assign jobs to Team Leaders, adjust jobs as needed}
+@itemlist[#:style 'compact
+          @item{Assign jobs to Team Leaders, adjust jobs as needed}
           @item{Make sure any special check-out procedures for students are followed}
           @item{Answer parent questions or direct parents to contact HQ}
           @item{Oversee the check-out process to ensure safety and sanity}]
@@ -435,7 +503,8 @@ The Head Coach duties during check-out are:
 @bold[@larger{Home Base Managers -- 1-2 Team Leaders}]
 
 These TLs hang out with the students who are still in our care. Duties include:
-@itemlist[@item{Keeping all students together and safe}
+@itemlist[#:style 'compact
+          @item{Keeping all students together and safe}
           @item{Interrupting and redirecting unsafe student behavior
                 (ex. wandering off, playing with sticks, throwing rocks, etc)}
           @item{Fostering a comfortable, welcoming environment by talking to
@@ -445,7 +514,8 @@ These TLs hang out with the students who are still in our care. Duties include:
 @bold[@larger{Runners -- 1-2 Team Leaders}]
 
 These TLs move between cars, completing the following duties:
-@itemlist[@item{Ensuring student safety around cars}
+@itemlist[#:style 'compact
+          @item{Ensuring student safety around cars}
           @item{Communicating with Home Base Managers to safely relay students from Home
                 Base to their parent's car.}
           @item{Checking in with parents, answering any quick questions and calling
@@ -454,12 +524,41 @@ These TLs move between cars, completing the following duties:
 @bold[@larger{Traffic Cop -- 1 Team Leader}]
 
 This TL helps keep the car chaos to a minimum. Duties include:
-@itemlist[@item{Ensuring student safety around cars}
+@itemlist[#:style 'compact
+          @item{Ensuring student safety around cars}
           @item{Keeping the car line moving forward}
           @item{Helping parents navigate out safely}
           @item{Reminding parents they they should stay in cars, or, helping them
                 find a place to park on a rare occasion where they need to get out
                 of the car}]
+
+@bold[@larger{Monitoring Camp Room}]
+
+We can never leave our equipment alone in an unlocked room; this means that a TL will
+have to remain behind every day during check-out at some locations. This TL will be
+responsible for tidying and prepping the room for the next day/camp (this should not
+be a gargantuan task -- end-of-camp tidying is part of the camp routine for students
+and should be done before students are allowed to visit market).
+
+At the end of the PM camp, TL must remain in the room until it is locked by location
+staff or HC returns.
+
+Camp locations where room will be @bold{unlocked} during all camp hours (will need
+a TL to remain during check-out):
+@itemlist[#:style 'compact
+          @item{UCSD}
+          @item{San Diego Christian College}
+          @item{La Jolla Country Day Camp (not typical check-out, see note below)}]
+
+Camp locations with exceptions, where no monitoring is needed during check-in:
+@itemlist[#:style 'compact
+          @item{Cal State San Marcos -- Head Coach has key to lock room}
+          @item{SDSU -- doors autolock at check-in time}
+          @item{Fleet Science Center -- check-out is at camp room}
+          @item{Del Mar Unified School District -- check-out is at camp room}
+          @item{Lawrence Family JCC -- check-out is at camp room}]
+
+@smaller[@italic{Location notes updated 5/2019}]
 
 @bold[@larger{Special Location Instructions}]
 
@@ -490,6 +589,33 @@ Bring students to their age group's designated dismissal room. Assist LJCD Camp 
 needed. 
 
 
+@subsection{Staff Dismissal}
+
+At the end of the PM camp, all staff get to go home for a well-earned rest! All Team
+Leaders must @bold{wait until offically dimissed by their Head Coach.} Dismissal can
+be directly from the check-out location.
+
+HC should dismiss TLs:
+@itemlist[#:style 'compact
+          @item{all at the same time}
+          @item{when all students are gone, or HC feels they can safely monitor the few
+                remaining students by themselves}
+          @item{when camp room is sufficiently tidied and ready for the next day}
+          @item{promptly and unambigiously}
+          @item[@bold{no later than 4:30} ", preferably by 4:15"]]
+
+HC should notify HQ through Slack when TLs are dismissed.
+
+In the cases where one TL has to remain in the camp room to monitor equipment/tidy up,
+there may have to be some differences on when that person is released -- since they must
+stay in the room until HC returns or location staff comes to lock up. HC should stay in
+contact with this TL through Slack with any delays on their return, and TL should notify
+HC if lock up happens prior to HC's return and HC can dismiss them remotely. Switch up
+the TL who gets "stuck" with this job.
+
+Head Coach must remain at the camp location until all students are picked up (or, in
+some cases, safely passed on to camp staff) and equipment is safely locked in the camp
+room. HC then notifies HQ through Slack that they are leaving.
 
 
 

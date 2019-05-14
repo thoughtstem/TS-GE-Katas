@@ -45,7 +45,7 @@
 @(render dagger-tower-katas)
 @(render rocket-tower-katas)
 
-@(include-section ts-camp-materials/scribblings/half-day-schedule)
+@;(include-section ts-camp-materials/scribblings/half-day-schedule)
 @(include-section ts-camp-materials/scribblings/gameshow-fortnite)
-@(include-section ts-camp-materials/scribblings/game-jam-resources)
+@;(include-section ts-camp-materials/scribblings/game-jam-resources)
 @(include-section battlearena-fortnite/scribblings/assets-library)

@@ -83,55 +83,55 @@
    (short-template "Loki using a Star Bit battling 6 Thors each with a different colored Hammer.")
 
    'hero-017
-   (short-template "Gamora using a RED random power battling Nebula using a Yellow power, and Mandarin using a YELLOW power.")
+   (short-template "Gamora using a RED random power battling Nebula using a YELLOW power, and Mandarin using a YELLOW power.")
 
    'hero-018
-   (short-template "Star-Lord using a random colored power battling Rocket Racoon, Drax, and Gamora each using a random colored power.")
+   (short-template "Star-Lord using a power of any color battling Rocket Racoon, Drax, and Gamora each using a power of any color.")
 
    'hero-019
    (short-template "Drax using an Energy Blast battling Loki using a Magic Orb and Thor using a Hammer.")
 
    'hero-020
-   (short-template "Iron Man using a RED Magic Orb battling 2 Mandarins! One using an ORANGE Energy Blast, the other one a random colored power.")
+   (short-template "Iron Man using a RED Magic Orb battling 2 Mandarins! One using an ORANGE Energy Blast, the other one a power of any color.")
    
    'hero-021
-   (short-template "Iron Man using a Star Bit battling Nebula using a Magic Orb, and Loki using an Energy Blast; with Health and Force Field Power-Ups.")
+   (short-template "Iron Man using a Star Bit battling Nebula using a Magic Orb, and Loki using an Energy Blast. Include Health and Force Field Power-Ups.")
 
    'hero-022
-   (short-template "Thor using a BLUE Hammer battling Loki and Mandarin using a random colored power.")
+   (short-template "Thor using a BLUE Hammer battling Loki and Mandarin using a power of any color.")
 
    'hero-023
-   (short-template "Nebula using a random colored Star Bit battling Black Widow using a RED power, Iron Man using a BLUE Energy Blast; with Health and Speed Power-Ups.")
+   (short-template "Nebula using a Star Bit of any color battling Black Widow using a RED power, Iron Man using a BLUE Energy Blast. Include Health and Speed Power-Ups.")
 
    'hero-024
-   (short-template "Iron Man using a RED Magic Orb battling 3 other Iron Mans each with a radom colored power.")
+   (short-template "Iron Man using a RED Magic Orb battling 3 other Iron Mans each with a power of any color.")
 
    'hero-025
-   (short-template "Drax using a random colored power battling Loki, Malekith, Mandarin, and Nebula all with a random colored power; with Health, Grow, Shrink, Speed, and Force Field Power-Ups.")
+   (short-template "Drax using a power of any color battling Loki, Malekith, Mandarin, and Nebula all with a power of any color. Include Health, Grow, Shrink, Speed, and Force Field Power-Ups.")
 
    'hero-026
    (read-multi-game-template "The 1st game with Thor using a Hammer battling 2 Lokis! One using a Magic Orb and the other one a Star Bit.
                               The 2nd game with Thor using a GREEN Hammer battling 2 Lokis! One using a RED Magic Orb and the other one a RED Star Bit.")
 
    'hero-027
-   (read-multi-game-template "The 1st game with Iron Man using a GREEN Magic Orb battling Mandarin using a RED Maric Orb.
+   (read-multi-game-template "The 1st game with Iron Man using a GREEN Magic Orb battling Mandarin using a RED Magic Orb.
                               In the 2nd game add a second Mandarin using an ORANGE Magic Orb.
                               In the 3rd game add a third Mandarin using a YELLOW Magic Orb.")
 
    'hero-028
-   (read-multi-game-template "The 1st game with Black Widow battling Nebula, both using a random colored power.
-                              In the 2nd game add a second Nebula using a random colored power.
-                              In the 3rd game add a third Nebula using a random colored power, with Health and Speed Power-Ups.")
+   (read-multi-game-template "The 1st game with Black Widow battling Nebula, both using a power of any color.
+                              In the 2nd game add a second Nebula using a power of any color.
+                              In the 3rd game add a third Nebula using a power of any color; include Health and Speed Power-Ups.")
 
    'hero-029
-   (read-multi-game-template "The 1st game with Iron Man battling Loki, both using a random colored power.
-                              The 2nd game with Drax battling Malekith and Mandarin, all three using a random colored power.
-                              The 3rd game with Black Widow battling Nebula and Loki, all three using a random colored power; with Health and Speed Power-Ups.")
+   (read-multi-game-template "The 1st game with Iron Man battling Loki, both using a power of any color.
+                              The 2nd game with Drax battling Malekith and Mandarin, all three using a power of any color.
+                              The 3rd game with Black Widow battling Nebula and Loki, all three using a power of any color; include Health and Speed Power-Ups.")
 
    'hero-030
-   (read-multi-game-template "The 1st game with Iron Man battling Loki, both using a random colored power; with a Health Power-Up.
-                              The 2nd game with Drax battling Loki, Malekith, Mandarin, and Nebula, all of them using a random colored power; with Health, Grow, and Shrink Power-Ups.
-                              The 3rd game with Black Widow battling Loki, Malekith, Mandarin, and Nebula, all of them using a random colored power; with all the Power-Ups.")
+   (read-multi-game-template "The 1st game with Iron Man battling Loki, both using a power of any color; include a Health Power-Up.
+                              The 2nd game with Drax battling Loki, Malekith, Mandarin, and Nebula, all of them using a power of any color; include Health, Grow, and Shrink Power-Ups.
+                              The 3rd game with Black Widow battling Loki, Malekith, Mandarin, and Nebula, all of them using a power of any color; include all the Power-Ups.")
 
    
 

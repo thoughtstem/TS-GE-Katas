@@ -4,11 +4,34 @@
 
 Perfect Monday games to get to know your campers.
 
+All Ages:
+@itemlist[#:style 'compact
+          @item[@secref["Meet__n__Greet"
+                        #:doc '(lib "ts-camp-materials/scribblings/manual.scrbl")]]
+          @item[@secref["Four_Corners"
+                         #:doc '(lib "ts-camp-materials/scribblings/manual.scrbl")]]
+          @item[@secref["The_Red_Wind_Blows___"
+                        #:doc '(lib "ts-camp-materials/scribblings/manual.scrbl")]]]
+
+3rd and up:
+@itemlist[#:style 'compact
+          @item[@secref["Two_Truths_and_a_Lie"
+                        #:doc '(lib "ts-camp-materials/scribblings/manual.scrbl")]]
+          @item[@secref["String_Theory"
+                        #:doc '(lib "ts-camp-materials/scribblings/manual.scrbl")]]
+          @item[@secref["Name_Alliteration"
+                        #:doc '(lib "ts-camp-materials/scribblings/manual.scrbl")]]]
+
+6th and up:
+@itemlist[@item[@secref["The_Lying_Game"
+                        #:doc '(lib "ts-camp-materials/scribblings/manual.scrbl")]]]
+
 @section{Meet 'n' Greet}
 
 @bold{NEED:}
 
-@itemlist[@item{Enough space for the group to walk around and not bump into each
+@itemlist[#:style 'compact
+          @item{Enough space for the group to walk around and not bump into each
                  other.}
           @item{Conversation prompts (provided below)}]
 
@@ -34,24 +57,27 @@ Ballroom Dance Partner, etc.
           @item{What do you want to be when you grow up?}
           @item{Would you rather have a dinosaur or blue whale as a pet?}
           @item{Would you rather go to Disneyland, Legoland, Sea World or the San Diego Zoo?}
-          @item{Would you rather go to the moon or the deep ocean?}]
+          @item{Would you rather go to the moon or the deep ocean?}
+          @item["For more questions check out the " @(hyperlink "https://docs.google.com/spreadsheets/d/18rteYLx-zFzDO9JTym7nSkxh097V5TVblcES5ISoKRY/edit?usp=sharing" "CONVERSATION STARTERS on this doc!")]]
 
 
 @bold{TIPS AND TRICKS:}
 
-@itemlist[@item{Have the students keep going to back to previous partners between
+@itemlist[#:style 'compact
+          @item{Have the students keep going to back to previous partners between
                 new partners so they remember all their partners.}
           @item{Establish a "times up" cue (clap pattern, lights on and off) before
                 the game starts to help transition from conversation back to
                 walking around the space.}
-          @item{Prompt the students to switch who is answering the conversation
-                prompt about halfway through the time.}]
+          @item{Prompt the students to switch who is answering the question
+                about halfway through the time.}]
 
 @section{Four Corners}
 
 @bold{NEED:}
 
-@itemlist[@item{Enough space to move around comfortably}
+@itemlist[#:style 'compact
+          @item{Enough space to move around comfortably}
           @item{List of four-choice multiple choice questions (provided below)}]
 
 @bold{HOW TO PLAY:}
@@ -89,7 +115,8 @@ Then, the HC gives a new question, four new answers and says "go" once more!
 
 @bold{TIPS AND TRICKS:}
 
-@itemlist[@item{Establish a "times up" cue (clap pattern, lights on and off)
+@itemlist[#:style 'compact
+          @item{Establish a "times up" cue (clap pattern, lights on and off)
                 before the game starts to help transition from conversation back
                 to listening.}
           @item{You will have to clarify a few times that they must pick
@@ -111,7 +138,6 @@ made-up-but-plausible fact. Take turns sharing these with the group, then the
 group votes on which they think is the lie. The student then reveals The Truth
 and everyone congratulates themselves or sighs in despair, appropriately.
 
-
 @bold{TIPS AND TRICKS:}
 
 @itemlist[@item{Do not allow any side conversations during this activity. Being
@@ -120,11 +146,12 @@ and everyone congratulates themselves or sighs in despair, appropriately.
                 for the whole week.}]
 
 
-@section{I Like My Neighbors Who...}
+@section{The Red Wind Blows...}
 
 @bold{NEED:}
 
-@itemlist[@item{Enough space for whole class to sit in a circle}
+@itemlist[#:style 'compact
+          @item{Enough space for whole class to sit in a circle}
           @item{Preferably chairs for the circle, though sitting on the ground
                 can work as well}]
         
@@ -132,17 +159,18 @@ and everyone congratulates themselves or sighs in despair, appropriately.
 
 Everyone except the Head Coach sits in a large circle. HC is in the middle of the
 circle. HC explains that they will state a fact that is true about themselves
-prefaced by "I Like my Neighbors Who..." (for kids 6 grade and up, use the phrase
-"The Red Wind Blows for anyone who.."). For example: “I like my neighbors who
-have been to Canada.” or “The red wind blows for anyone who has a pet iguana”.
+prefaced by "The Red Wind Blows for anyone who..." For example: “The red wind blows
+for anyone who has been to Canada.” or “The red wind blows for anyone who has a
+pet iguana”.
 Then everyone for whom that fact also applies (anyone else who has a pet
 iguana/has been to Canada) must get up from their seat and find a new one in the
-circle. HC in the middle also finds a seat, leaving a new person in the middle,
-who then shares.
+circle. HC in the middle also is trying to find a seat. This will leave a new person
+in the middle, who then shares.
 
 @bold{TIPS AND TRICKS:}
 
-@itemlist[@item{I suggest making it "illegal" to move to the seat directly next
+@itemlist[#:style 'compact
+          @item{I suggest making it "illegal" to move to the seat directly next
                 to you.}
           @item{Remind students that this can be a quick game, but it is always a
                 SAFE game. No need to run.}
@@ -152,7 +180,12 @@ who then shares.
           @item{If someone gets stuck, prompt them with questions about
                 themselves (have you traveled somewhere interesting? Have you
                 ever been stung by a bee? Do you have any pets?)}
-          @item{For older students -- include "levels." For level one, only
+          @item{Remind students that they can be their own judge in this game --
+                to limit follow up questions! If the fact feels true to them,
+                they should jump in. (Example: Middle says "The red wind blows for
+                anyone with a sister!" you have a step sister -- does that count?!
+                Well do you think it counts? Go with your gut.)}
+          @item{Variation -- include "levels." For level one, only
                 include physical attributes about yourself (hair color, what you
                 are wearing, if you have glasses etc). Level two is
                 likes/dislikes. Level three can be experiences.}]
@@ -162,7 +195,8 @@ who then shares.
 
 @bold{NEED:}
 
-@itemlist[@item{Ball of string or yarn}
+@itemlist[#:style 'compact
+          @item{Ball of string or yarn}
           @item{Scissors}]
         
 @bold{HOW TO PLAY:}
@@ -177,7 +211,8 @@ talk about likes/dislikes, dreams, skills, whatever. As long as they keep talkin
 
 @bold{TIPS AND TRICKS:}
 
-@itemlist[@item{This will likely be a game where students try to enforce the
+@itemlist[#:style 'compact
+          @item{This will likely be a game where students try to enforce the
                 rules on each other (“She’s going too slowly!” “He’s wrapping it
                 around all his fingers, not just one!” “They’re wrapping and not
                 talking!”). You will need to remind them that you are the teacher,
@@ -205,10 +240,10 @@ Examples: Jazzy Jason (snaps fingers), Super Sonny (super hero arm), Cool Carlos
 Stellar Stephen (mimes surfing), Genuine Jeron (thumbs up), Lovely Lindsey
 (takes a bow).
 
-
 @bold{TIPS AND TRICKS:}
 
-@itemlist[@item{If a student cannot come up with an adjective, ask for three
+@itemlist[#:style 'compact
+          @item{If a student cannot come up with an adjective, ask for three
                 suggestions from the rest of the class (maybe give one of your own
                 as well). Then the student must pick one of those (or come up with
                 their own).}
@@ -230,7 +265,8 @@ Stellar Stephen (mimes surfing), Genuine Jeron (thumbs up), Lovely Lindsey
 
 @bold{NEED:}
 
-@itemlist[@item{Pens/pencils}
+@itemlist[#:style 'compact
+          @item{Pens/pencils}
           @item{Enough slips of paper for everyone}
           @item{2 bowls/hats/bags to put the papers in}]
         
@@ -259,7 +295,8 @@ longs to whom. Final guesses are shared, correct answers revealed, points tallie
 celebrations had.
 
 @bold{INTERVIEW RULES}
-@itemlist[@item{Each round of questioning starts with interviewer stating the fact
+@itemlist[#:style 'compact
+          @item{Each round of questioning starts with interviewer stating the fact
                 they have in hand. This prevents the interviewer tricking the
                 interviewee into revealing the fact is not theirs.}
           @item{You may NOT lie about your own fact. (example: your fact is "I have
@@ -273,7 +310,8 @@ celebrations had.
 
 @bold{TIPS AND TRICKS:}
 
-@itemlist[@item{Have at least one leader on each team to help guide towards good
+@itemlist[#:style 'compact
+          @item{Have at least one staff on each team to help guide towards good
                 facts etc.}
           @item{Demo each step of the game, giving both good and bad examples of
                 facts to pick, how to interview, how to answer.}
