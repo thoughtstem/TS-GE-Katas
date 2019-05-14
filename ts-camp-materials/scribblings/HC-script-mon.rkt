@@ -70,11 +70,24 @@
 
 @itemlist[#:style 'compact
           @item["Bring camp " @bold{all together}]
-          @item["Recommended game: " @secref["I_Like_My_Neighbors_Who___"
-                                             #:doc '(lib "ts-camp-materials/scribblings/manual.scrbl")]
-                @itemlist[@item["Since this is a speedy game, and there is a risk of collisions, "
-                                @bold{split the camp} " into  a smaller-students group
-                                and a larger-students group"]]]]
+          @item[@tabular[#:style 'boxed
+                         #:sep @hspace[1]
+                         #:row-properties '(bottom-border ())
+                         (list (list @bold{Age Group}
+                                     @bold{Game}
+                                     @bold{Notes})
+                               (list "All Ages"
+                                     @secref["The_Red_Wind_Blows___" #:doc '(lib "ts-camp-materials/scribblings/manual.scrbl")]
+                                     "10 player min.")
+                               (list "Younger"
+                                     @secref["Four_Corners" #:doc '(lib "ts-camp-materials/scribblings/manual.scrbl")]
+                                     "If not played as icebreaker.")
+                               (list "Older"
+                                     (list @secref["Two_Truths_and_a_Lie" #:doc '(lib "ts-camp-materials/scribblings/manual.scrbl")]
+                                           " or "
+                                           @secref["Human_Knot" #:doc '(lib "ts-camp-materials/scribblings/manual.scrbl")])
+                                     'cont))]]]
+
 
 
 @(header-block nerd-out
@@ -87,7 +100,9 @@
 @itemlist[#:style 'compact
           @item["Breakout into " @bold{camp teams}]
           @item["Announce today's mission:"
-                @itemlist[@item[@bold{Create a TEAM NAME and POSTER}]]]
+                @itemlist[@item[@bold{Create a TEAM NAME and POSTER}]
+                          @item["if additional time: "@bold{Share your favorite
+                                animal(k2) or character(3-10) from your camp's fandom!}]]]
           @item["Monitor camp groups, inspiring further discussion as needed"]]
 
 
@@ -143,7 +158,8 @@
           @item[@bold{PM ONLY} " -- ensure you finish with enough time to travel to check-out
                 location by 4pm"]
           @item["Assign yourself or a TL to be " @bold{Market Cashier}]
-          @item["Students tidy their camp table before allowed to go to market"]
+          @item["Students " @bold{tidy their camp table} " before allowed to go to
+                market"]
           @item["Welcome camp teams " @bold{one at a time} " to visit market"]
           @item["Students done with market collect their things for lunch/home and line
                 up by door"]]
