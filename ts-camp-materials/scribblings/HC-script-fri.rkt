@@ -1,8 +1,8 @@
 #lang scribble/manual
 
 @(require "script-util.rkt")
-
-@title{Tuesday Head Coach Script}
+@;unedited
+@title{Friday Head Coach Script}
 
 @(header-block check-in
                "8:45am-9:00am"
@@ -27,7 +27,6 @@
                'breakout)
 
 @time-warning @bold{5 and 2 min} warnings
-
 @itemlist[#:style 'compact
           @item["With loose guidance from TLs, " @bold{students review} " code from
                 yesterday"]
@@ -41,12 +40,8 @@
                'breakout)
 
 @time-warning @bold{15, 10, 5 and 2 min} warnings
-
 @itemlist[#:style 'compact
-          @item[@bold{Transision announcement:}
-                @itemlist[@item["Welcome back!"]
-                          @item[@bold{New Katas} " today!"]
-                          @item["So " @bold{listen up} " to TLs"]]]
+          @item["Transision from independant review to focused learning"]
           @item["Monitor and assist TLs as they work on the " @bold{next section katas}]
           @item[@bold{PM ONLY} " -- take " @bold{YOUR 30 min lunch break} " from "
                 @bold{1:20-1:50}]]
@@ -59,7 +54,6 @@
                'together)
 
 @time-warning @bold{5 and 2 min} warnings
-
 @itemlist[#:style 'compact
           @item[@bold{Dismiss TLs for break} " -- TLs should LEAVE the camp space so they
                 can actually relax/check phones/not be interrupted by students"]
@@ -75,22 +69,22 @@
 
 @time-warning @bold{5 and 2 min} warnings
 @tabular[#:style 'boxed
-         #:row-properties '(bottom-border ())
          #:sep @hspace[1]
+         #:row-properties '(bottom-border ())
          (list (list @bold{Age Group}
                      @bold{Game}
                      @bold{Notes})
                (list "All Ages"
-                     @secref["Who_Am_I_" #:doc '(lib "ts-camp-materials/scribblings/manual.scrbl")]
-                     "Can play with any number of players.")
+                     @secref["Selfie_Scavenger_Hunt" #:doc '(lib "ts-camp-materials/scribblings/manual.scrbl")]
+                     "Play with entire camp.")
                (list "Younger"
-                     (list @secref["Follow_the_Leader" #:doc '(lib "ts-camp-materials/scribblings/manual.scrbl")]
+                     (list @secref["Duck_Duck_Goose" #:doc '(lib "ts-camp-materials/scribblings/manual.scrbl")]
                            " or "
-                           @secref["Sharks_and_Minnows_Tag" #:doc '(lib "ts-camp-materials/scribblings/manual.scrbl")])
+                           @secref["What_Time_Is_It__Mr__Wolf__Tag" #:doc '(lib "ts-camp-materials/scribblings/manual.scrbl")])
                      "Tag needs large outdoor space.")
                (list "Older"
-                     @secref["Hand_Game" #:doc '(lib "ts-camp-materials/scribblings/manual.scrbl")]
-                     "5 player min."))]
+                     @secref["Jedi_Mind_Tricks" #:doc '(lib "ts-camp-materials/scribblings/manual.scrbl")]
+                     "8 player min."))]
 
 
 
@@ -165,12 +159,6 @@
 @lunch-block
 @time-warning @bold{10, 5 and 2 min} warnings
 @itemlist[#:style 'compact
-          @item[@bold{Remind all students} " the rules of lunch:"
-                @itemlist[@item{Absolutely no running}
-                          @item{Be courteous and polite to staff/other diners}
-                          @item{One dessert per day}
-                          @item{Clean up correctly}
-                          @item{Sit together}]]
           @item["Ensure you finish with enough time to travel to check-out
                 location by 12:45pm"]
           @item["Keep lunch time " @bold{safe and organized}]]

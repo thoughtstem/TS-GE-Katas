@@ -308,6 +308,15 @@ listen or participate, as needed, so HC can focus on the larger group. Sometimes
 will ask TLs to lead a game, especially if the group is splitting up and playing two
 different games.
 
+@bold{"But I don't want to play"} -- if a student does not want to participate, try
+to encourage them or find a way they can participate in another way. But if they are
+just not having it, that's okay! They can sit out with a Team Leader for company.
+@bold{However, no one can be on computers during this time}. Make sure the student
+sitting out is not distracting the students who actually want to play and be mindful
+of how "fun" not participating looks -- it's always easier NOT do things, and if it
+looks like it's easy AND fun to sit out instead of play, you are going to fighting an
+uphill battle to get students to stay long enough to even learn the game!
+
 Here are a whole bunch of @secref["Camp_Games" #:doc '(lib "ts-camp-materials/scribblings/manual.scrbl")]
 with instructions!
 
