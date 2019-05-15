@@ -63,14 +63,19 @@
 
 ;Good for scaling pixel art.  Sharper edges.
 (define (special-scale i)
+  (displayln (~a "Resizing pixel art to " 
+                 (back-w) " by " (back-h)))
+
   ;Doubling the size of small images is safe... Not larger ones!  If we need to parameterize the 200 we can...
-  (if (or (< (image-width i) 200)
-          (< (image-height i) 200))
+  (if (or (< (image-width i) 300)
+          (< (image-height i) 300))
     (scale-to-fit
       (double-size
         (double-size i))
       (back-w)
-      (back-h))
+      (back-h)
+      
+      )
     i))
 
 (define (procedure->back id)
@@ -188,7 +193,7 @@
 (define (lang->asset-list l)
   (parameterize ([CURRENT-LANGUAGE l])
     (define ids 
-      (filter (resolves-to? (or/c animated-sprite? image?)) 
+      (filter (resolves-to? animated-sprite?)
               (get-asset-ids)))
     (define backs  (map id->back ids))
     (define fronts (map id->front ids))

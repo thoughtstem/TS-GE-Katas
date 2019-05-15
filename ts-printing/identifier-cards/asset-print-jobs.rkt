@@ -8,8 +8,6 @@
   ;  But the k2 langs don't organize the assets by sub lang.  Should we reorganize them??
 
   (begin-asset-job "extra-assets-cards"
-                   ;TODO: FIx this...
-                   ; Buuut: Does that require reorging all the lang assets?   
                    (k2/assets/all
                       [ASSET-PATH 'k2/assets/all]
                       [LANGUAGE-COLOR "black"]))
