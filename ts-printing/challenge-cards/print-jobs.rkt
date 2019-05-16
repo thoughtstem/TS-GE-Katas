@@ -365,7 +365,7 @@
       [FRONT-COLOR    googly-purple]
       [FRONT-COLOR-FG clear-white] 
       [FRONT-TITLE    (title "(enemy)")])
-    )
+    ))
 |#
  ; ------ K2
 (define (ts-k2-farm-summer-camp-2019->Desktop)
