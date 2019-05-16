@@ -29,6 +29,7 @@
 (define adventure-mario-katas
   (remap-ids
    '(("avatar-(\\d*)" "character-\\1")
+     ("bg-(\\d*)" "level-\\1")
      )
    adventure-proto-katas
    )
@@ -37,5 +38,9 @@
 
 (define-sub-collections adventure-mario-katas
   hello-world-katas
- 
+  character-katas
+  coin-katas
+  level-design-katas
+  fetch-quest-katas
+  enemy-katas
   )
