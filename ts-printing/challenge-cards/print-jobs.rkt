@@ -341,7 +341,7 @@
       [FRONT-COLOR-FG clear-white]
       [FRONT-TITLE    (title "(towns)")])))
 
-(define (ts-adventure-mario-summer-camp-2019->Desktop)
+#|(define (ts-adventure-mario-summer-camp-2019->Desktop)
   (local-require ts-adventure-mario-summer-camp-2019/katas)
 
   (begin-job "ts-adventure-mario-summer-camp-2019-cards"     
@@ -365,8 +365,8 @@
       [FRONT-COLOR    googly-purple]
       [FRONT-COLOR-FG clear-white] 
       [FRONT-TITLE    (title "(enemy)")])
-    ))
-
+    )
+|#
  ; ------ K2
 (define (ts-k2-farm-summer-camp-2019->Desktop)
   (local-require ts-k2-farm-summer-camp-2019/katas)
@@ -406,7 +406,7 @@
   (ts-survival-minecraft-summer-camp-2019->Desktop)
   (ts-survival-pokemon-summer-camp-2019->Desktop)
   
-  (ts-adventure-mario-summer-camp-2019->Desktop)
+  ;(ts-adventure-mario-summer-camp-2019->Desktop)
 
   
   (ts-k2-farm-summer-camp-2019->Desktop)
