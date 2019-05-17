@@ -84,7 +84,7 @@ stuck.
 @larger{K-2nd}
 
 A single challenge card is given to each student/pair of students. Once that challenge is
-correctly completed, they receive their next challenge card!
+correctly completed, they receive a sticker (to keep track of their total) and a new card!
 
 Split the time of Game Jam between the two K-2 langs they have worked with -- spend the
 first 15/20 minutes with the more basic language, then shift the students to the harder
@@ -137,8 +137,10 @@ Okay, the jam is on. You are now a "judge." What does that mean? What do you do?
                 story behind their game, etc! Also use the stickers as a motivator when things get tough:
                 'bonus point for working on debugging! That's tricky stuff!' Not all students/teams need
                 to get the same number of bonus, but keep an eye on distribution to keep it fair."]
+          @item["Give out any " @bold{resources} " (for the right price!)."]
+          @item["For " @bold{K-2} " -- trade out challenge cards, and award stickers for every completion."]
           @item["Monitor how students are progressing, and " @bold{adjust jam rules} " to make it easier or
-                harder as needed! For example, adding a price to the resource center, or adding in the ability
+                harder as needed! For example, adjusting prices of resources, or adding in the ability
                 to Call in a Coach!"]
           @item[@bold{Mediate any disagreements} " between partners or other students. This feels high-stakes
                 for students, and tempers can flare on occasion. Be even-keeled and fair."]
@@ -205,7 +207,8 @@ Be sure to hit the following points:
 
 @itemlist[@item{How much time they have for the Jam.}
           @item{Scoring and Points! How they will earn points for their game, including
-                bonus points. (don't forget to hand out cards!)}
+                bonus points. No need to outline exact formulas. (don't forget to hand
+                out cards!)}
           @item{Only get points for RUNNING games!}
           @item{Coaches are now Judges.}
           @item{The different resources and supports available (and how much they will
