@@ -341,6 +341,33 @@
       [FRONT-COLOR-FG clear-white]
       [FRONT-TITLE    (title "(towns)")])))
 
+#|(define (ts-adventure-mario-summer-camp-2019->Desktop)
+  (local-require ts-adventure-mario-summer-camp-2019/katas)
+
+  (begin-job "ts-adventure-mario-summer-camp-2019-cards"     
+    (character-katas 
+      [FRONT-COLOR    googly-red]
+      [FRONT-COLOR-FG clear-white]
+      [FRONT-TITLE    (title "(character)")]) 
+    (coin-katas 
+      [FRONT-COLOR    googly-orange]
+      [FRONT-COLOR-FG clear-white] 
+      [FRONT-TITLE    (title "(coin)")])
+    (level-design-katas 
+      [FRONT-COLOR    googly-yellow]
+      [FRONT-COLOR-FG clear-white] 
+      [FRONT-TITLE    (title "(level-design)")])
+    (fetch-quest-katas
+      [FRONT-COLOR    googly-green]
+      [FRONT-COLOR-FG clear-white] 
+      [FRONT-TITLE    (title "(fetch-quest)")])
+    (enemy-katas
+      [FRONT-COLOR    googly-purple]
+      [FRONT-COLOR-FG clear-white] 
+      [FRONT-TITLE    (title "(enemy)")])
+    ))
+|#
+ ; ------ K2
 (define (ts-k2-farm-summer-camp-2019->Desktop)
   (local-require ts-k2-farm-summer-camp-2019/katas)
 
@@ -370,18 +397,20 @@
 
 
 (define (all->Desktop)
- (ts-battle-arena-asp-2019->Desktop)
- (ts-battle-arena-avengers-summer-camp-2019->Desktop)
- (ts-battle-arena-fortnite-summer-camp-2019->Desktop)
+  ;(ts-battle-arena-asp-2019->Desktop)
+  (ts-battle-arena-avengers-summer-camp-2019->Desktop)
+  (ts-battle-arena-fortnite-summer-camp-2019->Desktop)
+  (ts-battle-arena-starwars-summer-camp-2019->Desktop)
+  
+  ;(ts-survival-asp-2019->Desktop)
+  (ts-survival-minecraft-summer-camp-2019->Desktop)
+  (ts-survival-pokemon-summer-camp-2019->Desktop)
+  
+  ;(ts-adventure-mario-summer-camp-2019->Desktop)
 
- (ts-battle-arena-starwars-summer-camp-2019->Desktop)
- (ts-survival-asp-2019->Desktop)
- (ts-survival-minecraft-summer-camp-2019->Desktop)
+  
+  (ts-k2-farm-summer-camp-2019->Desktop)
+  (ts-k2-sea-summer-camp-2019->Desktop)
+  (ts-k2-hero-summer-camp-2019->Desktop))
 
- (ts-survival-pokemon-summer-camp-2019->Desktop)
- (ts-k2-farm-summer-camp-2019->Desktop)
- (ts-k2-sea-summer-camp-2019->Desktop)
- (ts-k2-hero-summer-camp-2019->Desktop))
-
-#;
-(all->Desktop)
+#;(all->Desktop)

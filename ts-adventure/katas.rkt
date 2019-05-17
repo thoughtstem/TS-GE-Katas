@@ -17,4 +17,18 @@
 
 (define-sub-collections adventure-katas
   hello-world-katas
+  
+  avatar-katas
+  coin-katas
+  level-design-katas
+  fetch-quest-katas
+  enemy-katas
+
+  food-katas
+  crafter-katas
+  weapon-crafter-katas
+  sky-katas
+  bg-katas
+  npc-katas
+  
   )
