@@ -400,7 +400,8 @@
   ;(ts-survival-asp-2019->Desktop)
   (ts-survival-minecraft-summer-camp-2019->Desktop)
   (ts-survival-pokemon-summer-camp-2019->Desktop)
-  
+
+  ;(ts-adventure-asp-2019->Desktop)
   (ts-adventure-mario-summer-camp-2019->Desktop)
   ;(ts-adventure-harrypotter-summer-camp-2019->Desktop)
 
@@ -412,5 +413,5 @@
 
 
 
-(all->Desktop)
+;(all->Desktop)
 
