@@ -1,23 +1,14 @@
 #lang racket
 
-(provide collection->folder
-         collection->Desktop
-         list->folder
+(provide collection->Desktop
+         FRONT-FG-COLOR
          FRONT-TITLE
-         FRONT-COLOR
-         FRONT-COLOR-FG
-         EXTRA-META
-         META-TRANSFORM
-         STARTING-CARD-NUMBER
-         begin-job
-         save-pict)
+         begin-job)
 
 (require ts-kata-util/katas/rendering/pict
          (except-in ts-kata-util/katas/main read))
 
-(require (except-in pict colorize)
-         (rename-in pict 
-                    [colorize pict-colorize])
+(require pict 
          (only-in slideshow para current-font-size)
          (only-in 2htdp/image 
                   color?
@@ -27,85 +18,10 @@
                   color-blue)
          (only-in racket/draw color%))
 
-(define FRONT-COLOR          (make-parameter "aquamarine"))
-(define FRONT-COLOR-FG       (make-parameter "palegreen"))
-(define STARTING-CARD-NUMBER (make-parameter 0))
-(define FRONT-TITLE          (make-parameter (blank)))
-(define EXTRA-META           (make-parameter (blank)))
-(define META-TRANSFORM       (make-parameter identity))
+(require "../common.rkt")
 
-
-(define HEIGHT 1200)
-(define WIDTH HEIGHT)
-
-(define MARGIN 550)
-(define PADDING 10)
-
-(define ROUNDING 5)
-
-(define BACK-COLOR "white")
-
-(define (colorize i c)
-  (define new-c 
-    (if (color? c)
-      (make-object color% 
-                   (color-red c)
-                   (color-green c)
-                   (color-blue c)
-                   (/ (color-alpha c) 255))
-      c)) 
-
-  (pict-colorize i new-c))
-
-(define bg
-  (filled-rectangle (+ WIDTH PADDING)
-                    (+ HEIGHT PADDING)))
-
-(define (color-bg i)
-  (cc-superimpose 
-    (colorize
-      (filled-rectangle WIDTH 
-                        (+ 10 (pict-height i)))
-      (FRONT-COLOR-FG))
-    i))
-
-
-
-(define (front-side p)
-  (define adj-p
-    (color-bg (scale-to-fit p
-                            (- WIDTH MARGIN)
-                            (- HEIGHT MARGIN))))
-
-  (pin-over
-    (cc-superimpose
-      bg
-      (colorize (filled-rounded-rectangle WIDTH HEIGHT ROUNDING)
-                (FRONT-COLOR))
-
-      adj-p
-      (cc-superimpose 
-        adj-p))
-
-    (- (/ WIDTH 2) (/ (pict-width (FRONT-TITLE)) 2))
-    200 ;Magic number to get the meta to be on the hex cards.
-
-    (FRONT-TITLE)))
-
-
-(define (back-side p)
-  (define adj-p
-    (scale-to-fit p
-                  (- WIDTH MARGIN)
-                  (- HEIGHT MARGIN)))
-
-
-  (cc-superimpose
-    bg
-    (colorize (filled-rounded-rectangle WIDTH HEIGHT ROUNDING)
-              BACK-COLOR)
-    adj-p))
-
+(define FRONT-FG-COLOR (make-parameter "white"))
+(define FRONT-TITLE    (make-parameter (blank)))
 
 (define (kata->front-side k)
   (define content
@@ -115,7 +31,32 @@
     (parameterize ([current-font-size 46])
       (para content)))
 
-  (front-side content-pict))
+  (define blank-card-bg
+    (blank-bg))
+
+  (define text-bg
+    (colorize
+      (filled-rectangle (WIDTH) (pict-height content-pict))
+      (pictify 
+        (FRONT-FG-COLOR))))
+
+  (define main
+    (cc-superimpose
+      blank-card-bg
+      (cc-superimpose
+        text-bg 
+        content-pict)))
+
+  (define with-title
+    (pin-over main
+              (- (/ (WIDTH) 2)
+                 (/ (pict-width 
+                      (FRONT-TITLE)) 2))
+              (FRONT-MARGIN) 
+              (FRONT-TITLE)))
+
+  (front-side #:fit-mode 'crop
+    with-title))
 
 (define (kata->back-side k)
   (local-require slideshow pict/code)
@@ -184,13 +125,14 @@
   (trim-nonsense formatted))
 
 
-(define (fix-indentation s)
-  (local-require framework)
+(require (only-in framework racket:text%))
+(define racket-text (new racket:text%))
 
-  (define t (new racket:text%))
-  (send t insert s)
-  (send t tabify-all)
-  (send t get-text))
+(define (fix-indentation s)
+  (send racket-text erase)
+  (send racket-text insert s)
+  (send racket-text tabify-all)
+  (send racket-text get-text))
 
 (define (pretty-format-datum d)
   (define too-many-line-breaks (pretty-format d 0))
@@ -201,95 +143,54 @@
   (fix-indentation (fix-line-breaks too-many-line-breaks)))
 
 
-(define (save-pict the-pict name kind)
-  (define bm (pict->bitmap the-pict))
-  (send bm save-file name kind))
-
-
-(define git-hash 
-  (with-output-to-string 
-    (thunk
-      (system "git rev-parse --short HEAD"))))
-
-(define (add-meta p i)
-  (define meta 
-    (scale
-     (vc-append -10
-       (text (~a "#" (~r i #:precision 0) " " git-hash))
-       (EXTRA-META))
-      2))
-
-  (pin-over p 
-            (- (/ (pict-width p) 2) (/ (pict-width meta) 2))
-            (- (pict-height p) 200 (pict-height meta)) ;200 seems to be a magic number to get it within the bleed area of the hex design from makeplayingcards.com
-            ((META-TRANSFORM) meta)))
-
-(define (list->folder path ls)
-  (make-directory* path)
-  (make-directory* (build-path path "fronts"))
-  (make-directory* (build-path path "backs"))
-
-  (define front? #t)
-  (for ([l ls]
-        [i (range (* 2 (STARTING-CARD-NUMBER)) ;Double cus we number both front and back separately
-                  (* 2 (+ (length ls) 
-                          (STARTING-CARD-NUMBER))))])
-
-    (define name 
-      (~a "card-" (~a #:width 3 #:align 'right #:left-pad-string "0" i) ".png"))
-
-    (define dest
-      (if front?
-        (build-path path "fronts" name)
-        (build-path path "backs" name)))
-
-    (define final-pict
-      (if front?
-        (add-meta l (/ i 2))
-        l))
-
-    (save-pict final-pict dest 'png)
-
-    (set! front? (not front?))))
-
-
-(define (collection->folder kc folder-path)
+(define (collection->Desktop kc folder-path)
   (define ks (kata-collection-katas kc))
 
-  (list->folder folder-path
-                (flatten
-                  (map kata->card ks))))
+  (list->folder 
+    (flatten
+      (map kata->card ks))
+    folder-path))
 
 
-
-(define (collection->Desktop kc folder-name)
-  (collection->folder kc 
-                      (build-path (find-system-path 'home-dir)
-                                  "Desktop"
-                                  folder-name)))
 
 
 (define-syntax-rule (begin-job folder 
                       (collection [k v] ...) 
                       ...)
   (begin
+    (displayln (~a "Staring job " folder))
+
+    (VERSION git-hash)
+
+    (FRONT-META-FUNCTION
+      (lambda (i)
+        (vc-append (default-meta i)
+                   (text folder))))
+
+    ;Need a crazy margin to make it work with
+    ; the hex cards.
+    (FRONT-MARGIN 250)
+    (BACK-MARGIN 500)
+    ;Gets the backs in the right place,
+    ;   messes up the location of the metas...
+
+    (TOTAL (length 
+             (flatten
+               (list
+                 (kata-collection-katas collection) 
+                 ...))))
+
+
     (define counter 0)
 
     (parameterize ([k v] ...
-                         [STARTING-CARD-NUMBER counter]
-                         [EXTRA-META (text folder)])
+                         [STARTING-CARD-NUMBER counter] )
+      (displayln (~a "Processing deck " 'collection))
       (collection->Desktop collection folder)
       (set! counter (+ counter 
                        (length 
                          (kata-collection-katas collection))))) 
     ...))
 
-
-
-#;
-(require ts-k2-hero-summer-camp-2019/katas)
-#;
-(show-pict
-  (kata->back-side (first (kata-collection-katas farm))))
 
 

@@ -1,55 +1,25 @@
 #lang racket
 
 (provide begin-identifier-job
-         begin-asset-job)
+         begin-asset-job
+         lang->list
+         ID->CODE-PICT 
+         ID->SUMMARY
+         CURRENT-LANGUAGE-EXAMPLES
+         ASSET-PATH
+         CURRENT-LANGUAGE
+         FILTER-BY-COLLECTION
+         LANGUAGE-COLOR)
 
 (require pict
          (only-in 2htdp/image image? image-width image-height)
          (only-in pict/code codeblock-pict)
          (only-in game-engine animated-sprite? render)
-         "../challenge-cards/main.rkt"
-         "../k2-identifier-cards/double-size.rkt"
+         "../common.rkt"
          "./util.rkt"
          "./special-forms.rkt")
 
-(define HEIGHT 600)
-(define WIDTH HEIGHT)
-
-(define MARGIN 200)
-
-;Use this design: https://www.makeplayingcards.com/design/custom-small-square-cards.html
-
-(define bg (colorize (filled-rectangle WIDTH HEIGHT) "white"))
-
-(define (front-side i)
-  (define scaled-i (scale i 4)) ;Magic number works for most identifiers...
-  (define w (- WIDTH MARGIN))
-  (define h (- WIDTH MARGIN))
-  
-  (define final-i
-    (if (or (> (pict-width scaled-i) w)
-            (> (pict-height scaled-i) h))
-        (scale-to-fit scaled-i w h)
-        scaled-i))
-  
-  (cc-superimpose bg final-i))
-
-(define (back-side i)
-
-  (define final-i
-    (if (or (pict? i)
-            (and (image? i)
-                 (or (> (image-width i) 200)
-                     (> (image-height i) 200))))
-        i ;Picts and large assets are unchanged
-        (double-size
-         (double-size i)) ;Better way of scaling bitmap assets
-        ))
-  
-  (cc-superimpose bg
-                  (scale-to-fit final-i
-                                (- WIDTH MARGIN)
-                                (- HEIGHT MARGIN)))) 
+(define LANGUAGE-COLOR (make-parameter "white"))
 
 (define (id->thing id)
   (dynamic-require (CURRENT-LANGUAGE) id))
@@ -87,8 +57,26 @@
           (displayln "That wasn't a procedure, form, or asset")
           (displayln id)
           (blank))]))
-  
-  (back-side image))
+
+  (back-side (special-scale image)) )
+
+
+;Good for scaling pixel art.  Sharper edges.
+(define (special-scale i)
+  (displayln (~a "Resizing pixel art to " 
+                 (back-w) " by " (back-h)))
+
+  ;Doubling the size of small images is safe... Not larger ones!  If we need to parameterize the 200 we can...
+  (if (or (< (image-width i) 300)
+          (< (image-height i) 300))
+    (scale-to-fit
+      (double-size
+        (double-size i))
+      (back-w)
+      (back-h)
+      
+      )
+    i))
 
 (define (procedure->back id)
   (define thing (id->thing id))
@@ -121,7 +109,7 @@
               (map (const (~a "\n  ___" ))
                    (range (apply max arity)))]
              #;
-             [else (raise
+             [else (error
                     (~a "Not sure how to render the back of a card for a procedure with arity: " arity " " id))])))
  
   (back-side
@@ -131,7 +119,9 @@
                          kw-dummies
                          normal-dummies ;Usually, these are just extra components -- nice consistent quirk of how we designed our languages
                        ")")))) 
-(define (id->back id)
+
+
+(define (id->summary id)
   (cond
     [(is-form? id)      (form->back id)]
     [(is-procedure? id) (procedure->back id)]
@@ -140,12 +130,34 @@
         (begin
           (displayln "That wasn't a procedure, form, or asset")
           (displayln id)
-          (back-side (blank)))]))
+          (blank))]))
+
+
+
+(define (id->back id)
+  (define ret 
+    (back-side ((ID->SUMMARY) id)))
+
+  ret)
 
 (define (id->front id)
-  (front-side
-   (codeblock-pict
-    (~a id))))
+  (define blank-card-bg
+    (blank-bg))
+
+  (define content
+    ((ID->CODE-PICT) id))
+
+  ;We want all of these to be the same size (normal font size scaled by 4),
+  ;  so we only scale down if it happens to be too big.  Most of the identifiers are short, though, and will fit fine.
+  (define scaled-content
+    (if (or (> (pict-width content) (front-w))
+            (> (pict-height content) (front-h)))
+      (scale-to-fit content (front-w) (front-h))
+      (scale content 6)))
+
+  (front-side 
+    (cc-superimpose blank-card-bg
+                    scaled-content)))
 
 
 (define (explode-by-frequency l)
@@ -157,6 +169,7 @@
   (flatten (map explode l)))
 
 (define (lang->list l)
+
   (parameterize ([CURRENT-LANGUAGE l])
     (define freqs (get-ids-with-frequency))
 
@@ -179,85 +192,119 @@
 
 (define (lang->asset-list l)
   (parameterize ([CURRENT-LANGUAGE l])
-    (define ids (get-asset-ids))
-    (define backs (map id->back ids))
+    (define ids 
+      (filter (resolves-to? animated-sprite?)
+              (get-asset-ids)))
+    (define backs  (map id->back ids))
     (define fronts (map id->front ids))
     
     (flatten (map list fronts backs))))
 
 
-(define (list->Desktop l folder)
-  (list->folder
-   (build-path (find-system-path 'home-dir) "Desktop" folder)
-   l))
 
 (define-syntax-rule (begin-identifier-job folder
                                           (lang [k v] ...)
                                           ...)
   (begin
+    (displayln "Begining identifier job")
+    (displayln (~a "Output to: " folder))
+
+    (VERSION git-hash)
+    (HEIGHT 800)
+    (WIDTH  800)
+    (FRONT-META-FUNCTION
+      (lambda (i)
+        (colorize
+          (vc-append (default-meta i)
+                     (text (~a "#lang " (CURRENT-LANGUAGE)))
+                     (text folder))
+          "gray")))
+
+    (define card-hash
+      (make-hash 
+        (list
+          (cons 
+            'lang 
+            (parameterize ([CURRENT-LANGUAGE 'lang]
+                           [k v] ... )
+              (displayln "Adding to hash...")
+              (displayln 'lang)
+              (lang->list 'lang)))
+          ...)))
+
+    (TOTAL (/ (length (flatten (hash-values card-hash)))
+              2))
+
     (define counter 0)
 
-    (parameterize ([k v] ...
-                   [STARTING-CARD-NUMBER counter]
-                   [META-TRANSFORM (curryr colorize "gray")]
-                   [EXTRA-META     (text (~a "#lang " 'lang))])
-      (define cards (lang->list 'lang))
+    (parameterize ([CURRENT-LANGUAGE 'lang]
+                   [k v] ... 
+                   [STARTING-CARD-NUMBER counter])
+      (define cards (hash-ref card-hash 'lang))
 
-      (list->Desktop cards folder)
+      (list->folder cards folder)
       
       (set! counter (+ counter
-                       (length
-                        cards))))
+                       (/
+                         (length
+                           cards)
+                         2))))
     ...))
 
 (define-syntax-rule (begin-asset-job folder
                                      (lang [k v] ...)
                                      ...)
   (begin
+    (VERSION git-hash)
+    (HEIGHT 800)
+    (WIDTH  800)
+    (FRONT-META-FUNCTION
+      (lambda (i)
+        (colorize
+          (vc-append (default-meta i)
+                     (hc-append 3 
+                                (colorize
+                                  (filled-ellipse 10 10 )
+                                  (LANGUAGE-COLOR))
+                       (text (~a "(require " (CURRENT-LANGUAGE) ")")))
+                     (text folder))
+          "gray")))
+
+    (define card-hash
+      (make-hash 
+        (list
+          (cons 
+            'lang 
+            (parameterize ([CURRENT-LANGUAGE 'lang] 
+                           [k v] ...)
+              (lang->asset-list 'lang)))
+          ...)))
+
+    (TOTAL (/ (length (flatten (hash-values card-hash)))
+              2))
+
     (define counter 0)
 
-    (parameterize ([k v] ...
-                   [STARTING-CARD-NUMBER counter]
-                   [META-TRANSFORM (curryr colorize "gray")]
-                   [EXTRA-META    (text (~a "#lang " 'lang))])
-      (define cards (lang->asset-list 'lang))
+    (parameterize ([CURRENT-LANGUAGE 'lang]
+                   [k v] ... 
+                   [STARTING-CARD-NUMBER counter])
+      (define cards (hash-ref card-hash 'lang))
 
-      (list->Desktop cards folder)
+      (list->folder cards folder)
       
       (set! counter (+ counter
-                       (length
-                        cards))))
+                       (/ (length cards)
+                          2))))
     ...))
 
 
-;Combine the above jobs??  Not sure yet.
+(define ID->SUMMARY
+  (make-parameter
+    id->summary))
 
-#;
-(begin-asset-job "ba-test"
-                 (battlearena-avengers))
-
-#;
-(begin-identifier-job "ba-test"
-                      (battlearena-avengers))
-
-
-
-;Do docs: Include justifications for
-;  Number printed
-;  Ordering
-;  What's on the back
-
-;  Intended use-case: one deck can do any kata in the collection -- and any
-;     new kata -- as long as it doesn't require more of any identifier than appears in
-;     some kata in the collection.
-
-;  Asset card extras.  Print separately -- but maybe in the same job...
-
-
-; Order cards
-
-;Tomorrow: Shared decks
-
-
-
+(define ID->CODE-PICT
+  (make-parameter
+    (lambda (id)
+      (codeblock-pict
+        (~a id)))))
 
