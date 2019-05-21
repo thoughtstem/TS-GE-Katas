@@ -43,9 +43,10 @@ all staff and students stay at the pick up location until all students arrive, o
 staff go to the camp room at 9am, and one Team Leader will stay at the pick up
 location until all students have arrived or 9:15 -- whichever comes first.
 
-In most locations, parents should be staying in their cars during drop off.The
-one exception to this rule is on Day One: when parents need to stay with their
-student until the Head Coach confirms that ThoughtSTEM has all paperwork required.
+In most locations, parents should be staying in their cars during drop off.
+No need t enforce this on Day One, when many parents may want to walk
+their student up the the camp. Staff should tell parents that for pick-up and
+future check-ins that they can stay in their car.
 
 To run a smooth and successful check-in, each coach should take over a specific
 job in the check in process:
@@ -138,7 +139,9 @@ slightly different jobs:
                 pick up list with each parent/guardian as they drop off their
                 student.}
           @item{There also may be additional paperwork to hand out to parents.}
-          @item{Team Leader Assignments -- Runners and Traffic
+          @item{Parents are welcome to either wait in the pickup line or park and
+                walk their student up every day.}
+          @item{Team Leader Assignments -- Traffic
                 Cop may shift to assist Head Coach or to HB Managers.}]
 
 @bold{Del Mar Unified School District}
