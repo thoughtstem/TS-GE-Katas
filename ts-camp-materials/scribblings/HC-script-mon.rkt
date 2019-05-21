@@ -4,6 +4,7 @@
 
 @title{Monday Head Coach Script}
 
+@section{Check In & Icebreakers}
 @(header-block check-in-icebreakers
                "8:45am-9:30am"
                "12:45pm-1:30pm"
@@ -13,8 +14,7 @@
 
 @itemlist[#:style 'compact
           @item["Arrive at the check-in location at " @bold{quarter of} " (8:45am/12:45pm)."]
-          @item[@bold{Assign} " specific jobs to all TLs"]
-          @item["Check for " @bold{incomplete paperwork} " before letting parent leave"]
+          @item[@bold{Assign} " specific jobs to all Team Leaders"]
           @item["Stay at check-in until all students arrive or " @bold{quarter past}
                 " (9:15am/1:15pm). Return to camp room."]
           @item["Recommended Icebreakers: "
@@ -24,7 +24,7 @@
                         #:doc '(lib "ts-camp-materials/scribblings/manual.scrbl")]]]
 
 
-
+@section{Intro & Starter Katas}
 @(header-block intro-starter-katas
                "9:30am-10:15am"
                "1:30pm-2:15pm"
@@ -45,7 +45,7 @@
           @item[@bold{PM ONLY} " -- take " @bold{YOUR 30 min lunch break} " from "
                 @bold{1:45-2:15}]]
 
-
+@section{Snack Break}
 @(header-block snack-break
                "10:15am-10:30am"
                "2:15pm-2:30pm"
@@ -60,7 +60,7 @@
           @item["All students are " @bold{off computers} " for the entire break"]
           @item["Monitor all students and keep it " @bold{safe and sane}]]
 
-
+@section{Game Time}
 @(header-block game-time-15
                "10:30am-10:45am"
                "2:30pm-2:45pm"
@@ -98,7 +98,7 @@
                      'cont))]
 
 
-
+@section{Nerd Out}
 @(header-block nerd-out
                "10:45am-11:00am"
                "2:45pm-3:00pm"
@@ -112,7 +112,7 @@
                           @item{Make sure all teams have paper, markers.}]]
           @item["Monitor camp groups, inspiring further discussion as needed"]]
 
-
+@section{Kata Practice}
 @(header-block kata-practice
                "11:00am-11:30am"
                "3:00pm-3:30pm"
@@ -127,7 +127,7 @@
                           @item{Earn more katas or extra challenges from TLs!}]]
           @item["Monitor camp groups, assisting TLs as needed"]]
 
-
+@section{Game Show}
 @(header-block game-show
                "11:30am-11:45am"
                "3:30pm-3:45pm"
@@ -154,7 +154,7 @@
           @item["Breakout into " @bold{camp teams} " for TLs to lead camp-specific
                 game show questions"]]
 
-
+@section{Market/Wrap Up}
 @(header-block market-wrap-up
                "11:45am-12:00(ish)pm"
                "3:45pm-4:00(ish)pm"
@@ -170,7 +170,7 @@
           @item["Students done with market collect their things for lunch/home and line
                 up by door"]]
 
-
+@section{Lunch -- AM only}
 @lunch-block
 
 @time-warning @bold{10, 5 and 2 min} warnings
@@ -187,7 +187,7 @@
                 location by 12:45pm"]
           @item["Keep lunch time " @bold{safe and organized}]]
 
-
+@section{Check Out}
 @(header-block check-out
                "12:45pm-1:10pm"
                "4:00pm-4:10pm"
