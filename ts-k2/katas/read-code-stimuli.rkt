@@ -121,7 +121,7 @@
    'hero-028
    (read-multi-game-template "The 1st game with Black Widow battling Nebula, both using a power of any color.
                               In the 2nd game add a second Nebula using a power of any color.
-                              In the 3rd game add a third Nebula using a power of any color; include Health and Speed Power-Ups.")
+                              In the 3rd game include Health and Speed Power-Ups.")
 
    'hero-029
    (read-multi-game-template "The 1st game with Iron Man battling Loki, both using a power of any color.
