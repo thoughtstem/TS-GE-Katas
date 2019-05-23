@@ -29,6 +29,8 @@
 (define adventure-harrypotter-katas
   (remap-ids
    '(("avatar-(\\d*)" "wizard-\\1")
+     ("weapon-(\\d*)" "spell-\\1")
+     ("food-(\\d*)" "potion-\\1")
      )
    adventure-proto-katas
    )
@@ -37,5 +39,10 @@
 
 (define-sub-collections adventure-harrypotter-katas
   hello-world-katas
- 
+  wizard-katas
+  potion-katas
+  loot-quest-katas
+  npc-katas
+  (spell-katas
+   (not/c (curryr name-contains? "Crafter")))
   )

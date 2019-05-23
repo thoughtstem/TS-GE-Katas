@@ -20,7 +20,24 @@
 @(render core-values)
 @(render hello-world-katas)
 
-@(include-section ts-camp-materials/scribblings/half-day-schedule)
+@section{Wizard Katas}
+@(render wizard-katas)
+
+@section{Potion Katas}
+@(render potion-katas)
+
+@section{Loot Quest Katas}
+@(render loot-quest-katas)
+
+@section{NPC Katas}
+@(render npc-katas)
+
+@section{Spell Katas}
+@(render spell-katas)
+
+@section{Extra Katas}
+
+@;(include-section ts-camp-materials/scribblings/half-day-schedule)
 @(include-section ts-camp-materials/scribblings/gameshow-harrypotter)
-@(include-section ts-camp-materials/scribblings/game-jam-resources)
+@;(include-section ts-camp-materials/scribblings/game-jam-resources)
 @(include-section adventure-harrypotter/scribblings/assets-library)
