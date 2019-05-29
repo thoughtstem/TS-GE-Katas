@@ -55,18 +55,40 @@
   (fix-indentation (fix-line-breaks too-many-line-breaks)))
 
 
-;The manual one-liner constructions are cool, but maybe we can take a stab at the more general algorithm for fixing things.   The best is: If a leaf node can be collapsed in a way that causes the overall "area" (rows * cols) of the string to be reduced, it should do so.
-
 (define (collapse-leaves s)
+  (until-no-change collapse-first-leaf s))
+
+;Obviously, this will be infinite if there is always a change.
+;Using it with collapse-first-leaf should be fine, though.
+(define (until-no-change f s)
+  (define next (f s))
+
+  (if (string=? next s)
+    s
+    (until-no-change f next)))
+
+(define (uncollapsed? p s)
+  (string-contains? 
+    (substring s (car p) (cdr p)) 
+    "\n"))
+
+(define (collapse-first-leaf s)
   (define leaf-positions
-    (regexp-match-positions* 
+    (regexp-match-positions*
       (pregexp (~a "\\([^()]*\\)")) ;Any parens that have no parens inside...
       s))
 
+  (define uncollapsed-leaf
+    (findf (curryr uncollapsed? s) leaf-positions))
+
   ;Collapse any leafs that actually reduce the area of the string
-  (foldl collapse-leaf-if-helpful
-         s
-         leaf-positions))
+  ;NOTE: This probably isn't perfect.  The order you collapse leaves in might affect which subsequent leaves can be collapsed.
+  ;  Might need to implement backtracking if we really want to be confident that the final string has the smallest possible
+  ;  area.  However, I think this will be fine for now -- it only needs to make a small improvement over how programs are 
+  ;  currently displaying on cards.
+  (if (not uncollapsed-leaf)
+    s
+    (collapse-leaf-if-helpful uncollapsed-leaf s)))
 
 (define (collapse-leaf-if-helpful p s)
   (define collapsed (collapse-leaf p s)) 
