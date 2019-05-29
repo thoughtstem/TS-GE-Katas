@@ -4,9 +4,6 @@
 
 (require ts-kata-util/katas/main)
 
-(define (read-template noun)
-  (read (~a "Write code to make a " noun )))
-
 (define (short-template noun)
   (read (~a "Code a game with " noun)))
 
@@ -16,23 +13,8 @@
 (define stimuli
   (list
 
-   'fish-1
-   (read-template "red fish")
-
-   'fish-2
-   (read-template "blue fish")
-
-   'fish-3
-   (read-template "red fish beside a blue fish")
-
-   'fish-4
-   (read-template "red fish above a blue fish")
-
-   'fish-5
-   (read-template "red fish above a blue fish -- with a green fish beside them")
-
    'hero-000
-   (read "Create a basic hero game.")
+   (read "Code a basic hero game.")
 
    'hero-001
    (short-template "Iron Man as the hero.")
@@ -137,7 +119,7 @@
 
    
    'farm-000
-   (read "Create a basic farm game.")
+   (read "Code a basic farm game.")
    
    'farm-001
    (short-template "a chicken eating apples.")
@@ -235,7 +217,7 @@
 
 
    'sea-000
-   (read "Create a basic sea game.")
+   (read "Code a basic sea game.")
    
    'sea-001
    (short-template "a yellow fish eating pineapples.")
@@ -334,7 +316,7 @@
 
 
    'zoo-000
-   (read "Create a basic zoo game.")
+   (read "Code a basic zoo game.")
    
    'zoo-001
    (short-template "a monkey eating bananas.")
