@@ -166,7 +166,9 @@
 
 
 @lunch-block
+
 @time-warning @bold{10, 5 and 2 min} warnings
+
 @itemlist[#:style 'compact
           @item["Ensure you finish with enough time to travel to check-out
                 location by 12:45pm"]

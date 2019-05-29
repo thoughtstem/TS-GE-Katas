@@ -8,5 +8,5 @@
   (list
 
    'hello-world-1
-   (read "Make a Harry Potter game")
+   (read "Make a Harry Potter game.")
 ))

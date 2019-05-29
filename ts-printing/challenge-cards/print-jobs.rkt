@@ -211,7 +211,7 @@
   (local-require ts-adventure-asp-2019/katas)
 
   (set-fg-texture "bg008.jpg"
-    (begin-job "ts-adventure-mario-summer-camp-2019-cards"     
+    (begin-job "ts-adventure-asp-2019-cards"     
                ((collection-apply (curryr try-take 4) ?-katas)
                 [FRONT-BG-COLOR googly-red]
                 [FRONT-FG-COLOR clear-white]
@@ -259,31 +259,31 @@
                 [FRONT-FG-COLOR clear-white] 
                 [FRONT-TITLE    (title "(enemy)")]) )))
 
-#|(define (ts-adventure-harrypotter-summer-camp-2019->Desktop)
+(define (ts-adventure-harrypotter-summer-camp-2019->Desktop)
   (local-require ts-adventure-harrypotter-summer-camp-2019/katas)
 
   (set-fg-texture "bg010.jpg"
-    (begin-job "ts-adventure-mario-summer-camp-2019-cards"     
-               ((collection-apply (curryr try-take 4) ?-katas)
+    (begin-job "ts-adventure-harrypotter-summer-camp-2019-cards"     
+               ((collection-apply (curryr try-take 4) wizard-katas)
                 [FRONT-BG-COLOR googly-red]
                 [FRONT-FG-COLOR clear-white]
-                [FRONT-TITLE    (title "(?)")])
-               ((collection-apply (curryr try-take 5) ?-katas)
+                [FRONT-TITLE    (title "(wizard)")])
+               ((collection-apply (curryr try-take 5) potion-katas)
                 [FRONT-BG-COLOR googly-orange]
                 [FRONT-FG-COLOR clear-white] 
-                [FRONT-TITLE    (title "(?)")])
-               ((collection-apply (curryr try-take 5) ?-katas)
+                [FRONT-TITLE    (title "(potion)")])
+               ((collection-apply (curryr try-take 5) loot-quest-katas)
                 [FRONT-BG-COLOR googly-yellow]
                 [FRONT-FG-COLOR clear-white] 
-                [FRONT-TITLE    (title "(?)")])
-               ((collection-apply (curryr try-take 5) ?-katas)
+                [FRONT-TITLE    (title "(loot-quest)")])
+               ((collection-apply (curryr try-take 5) npc-katas)
                 [FRONT-BG-COLOR googly-green]
                 [FRONT-FG-COLOR clear-white] 
-                [FRONT-TITLE    (title "(?)")])
-               ((collection-apply (curryr try-take 5) ?-katas)
+                [FRONT-TITLE    (title "(npc)")])
+               ((collection-apply (curryr try-take 5) spell-katas)
                 [FRONT-BG-COLOR googly-purple]
                 [FRONT-FG-COLOR clear-white] 
-                [FRONT-TITLE    (title "(?)")]) )))|#
+                [FRONT-TITLE    (title "(spell)")]) )))
 
 ; ---- K2
 (define (ts-k2-farm-summer-camp-2019->Desktop)
@@ -403,7 +403,7 @@
 
   ;(ts-adventure-asp-2019->Desktop)
   (ts-adventure-mario-summer-camp-2019->Desktop)
-  ;(ts-adventure-harrypotter-summer-camp-2019->Desktop)
+  (ts-adventure-harrypotter-summer-camp-2019->Desktop)
 
   (ts-k2-farm-summer-camp-2019->Desktop)
   (ts-k2-sea-summer-camp-2019->Desktop)
