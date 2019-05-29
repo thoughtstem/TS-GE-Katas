@@ -18,7 +18,8 @@
                   color-blue)
          (only-in racket/draw color%))
 
-(require "../common.rkt")
+(require "../common.rkt"
+         "./pretty-printing.rkt")
 
 (define FRONT-FG-COLOR (make-parameter "white"))
 (define FRONT-TITLE    (make-parameter (blank)))
@@ -99,48 +100,6 @@
 (define (kata->card k)
   (list (kata->front-side k)
         (kata->back-side k)))
-
-(define (reformat-program s)
-
-  (define ss (string-split s "\n"))
-
-  (define lang-line (first ss))
-
-  (define program (string-join (rest ss) "\n\n"))
-
-  (define reformatted-program (reformat-string program))
-
-  (fix-indentation
-    (~a lang-line "\n" reformatted-program)))
-
-(define (reformat-string s)
-  (define formatted (pretty-format-datum
-                      (read (open-input-string (~a "(begin" s ")")))))
-
-  (define (trim-nonsense s)
-    (substring s
-               7
-               (sub1 (string-length s))))
-
-  (trim-nonsense formatted))
-
-
-(require (only-in framework racket:text%))
-(define racket-text (new racket:text%))
-
-(define (fix-indentation s)
-  (send racket-text erase)
-  (send racket-text insert s)
-  (send racket-text tabify-all)
-  (send racket-text get-text))
-
-(define (pretty-format-datum d)
-  (define too-many-line-breaks (pretty-format d 0))
-
-  (define (fix-line-breaks s)
-    (regexp-replace* #px"(#:\\S*)\\s*" s "\\1 "))
-
-  (fix-indentation (fix-line-breaks too-many-line-breaks)))
 
 
 (define (collection->Desktop kc folder-path)
