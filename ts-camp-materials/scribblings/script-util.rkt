@@ -26,7 +26,8 @@
          game-jam
          scoring-market
          check-in
-         check-out)
+         check-out
+         outside-icon)
 
 (define-runtime-path check-in-icebreakers "img/check-in-icebreakers.png")
 (define-runtime-path intro-starter-katas "img/intro-starter-katas.png")
@@ -52,6 +53,7 @@
 (define-runtime-path AM-icon "img/sun-am.png")
 (define-runtime-path PM-icon "img/sun-pm.png")
 (define-runtime-path clock-icon "img/clock.png")
+(define-runtime-path outside-icon "img/outside-icon.png")
 
 (define time-warning (image clock-icon #:scale .75))
 (define together (image bring-together-icon #:scale .5))
@@ -73,14 +75,17 @@
 (define org-type?
   (or/c 'together 'breakout 'start-together 'start-breakout 'none))
 
-(define/contract (header-block i am pm org-type)
-  (-> any/c string? string? org-type? pict?)
+(define/contract (header-block i am pm #:camp-type [org-type 'none] #:outside? [outside? #f])
+  (->* (any/c string? string?) (#:camp-type org-type? #:outside? boolean?) pict?)
 
   (define together-pict
     (scale (bitmap bring-together-icon) .3))
 
   (define breakout-pict
     (scale (bitmap breakout-teams-icon) .3))
+
+  (define outside-pict
+    (scale (bitmap outside-icon) .5))
    
   (define org-img
     (cond [(eq? org-type 'together)       (vl-append (ghost (rectangle 10 10))
@@ -98,13 +103,21 @@
                                                       (ghost (rectangle 10 10))
                                                       together-pict))]
           [(eq? org-type 'none)           (ghost (rectangle 0 0))]))
+
+  (define maybe-outside-icon
+    (if outside? outside-pict (ghost (rectangle 0 0))))
+
+  (define icons
+    (hc-append org-img
+               (ghost (rectangle 10 10))
+               maybe-outside-icon))
    
   (hc-append (scale (bitmap i) .5)
              (ghost (rectangle 20 20))
              (vl-append
               (am-time am)
               (pm-time pm)
-              org-img)))
+              icons)))
 
 (define lunch-block
   (hc-append (scale (bitmap lunch) .5)

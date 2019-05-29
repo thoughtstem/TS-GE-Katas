@@ -7,7 +7,7 @@
 @(header-block check-in
                "8:45am-9:00am"
                "12:45pm-1:00pm"
-               'together)
+               #:camp-type 'together)
 
 @itemlist[#:style 'compact
           @item["Arrive at the check-in location at " @bold{quarter of}
@@ -24,12 +24,12 @@
 @(header-block coding-warmup
                "9:00am-9:15am"
                "1:00pm-1:15pm"
-               'breakout)
+               #:camp-type 'breakout)
 
 @time-warning @bold{5 and 2 min} warnings
 
 @itemlist[#:style 'compact
-          @item["With loose guidance from TLs, " @bold{students review} " code from
+          @item["With loose guidance from TLs, " @bold{students review} " katas from
                 yesterday"]
           @item[@bold{Step in} " for TL who is waiting at check-in"]]
 
@@ -38,7 +38,7 @@
 @(header-block katas
                "9:15am-10:00am"
                "1:15pm-2:00pm"
-               'breakout)
+               #:camp-type 'breakout)
 
 @time-warning @bold{15, 10, 5 and 2 min} warnings
 
@@ -56,7 +56,8 @@
 @(header-block snack-break
                "10:00am-10:15am"
                "2:00pm-2:15pm"
-               'together)
+               #:camp-type 'together
+               #:outside? #t)
 
 @time-warning @bold{5 and 2 min} warnings
 
@@ -71,9 +72,21 @@
 @(header-block game-time-30
                "10:15am-10:45am"
                "2:15pm-2:45pm"
-               'together)
+               #:camp-type 'together
+               #:outside? #t)
 
 @time-warning @bold{5 and 2 min} warnings
+
+@itemlist[#:style 'compact
+          @item[@bold{Choose game(s)} " from chart below. Consider expected interest
+                of the group, any play space restraints, and what has been already
+                played when choosing."]
+          @item[@bold{If both groups will be playing the same game} ", introduce the
+                game first, then split up." @bold{Otherwise} " split first, and have
+                TLs help you in explaining/playing the games."]
+          @item["When splitting into game groups, consider age recommendations,
+                student safety (physical size of students), and actual student
+                interest."]]
 @tabular[#:style 'boxed
          #:row-properties '(bottom-border ())
          #:sep @hspace[1]
@@ -97,21 +110,27 @@
 @(header-block nerd-out
                "10:45am-11:00am"
                "2:45pm-3:00pm"
-               'breakout)
+               #:camp-type 'breakout
+               #:outside? #t)
+
 @time-warning @bold{5 and 2 min} warnings
-@;needs correct mission
+
 @itemlist[#:style 'compact
-          @item["Breakout into " @bold{camp teams}]
           @item["Announce today's mission:"
-                @itemlist[@item[@bold{EDIT ME}]]]
+                @itemlist[@item["3rd-10th camps --"@bold{What do you like about your
+                                fandom? Why do you think this fandom is so popular?}]
+                          @item["K-2nd camps -- " @bold{What is your favorite animal?
+                                What animals do you think a lot of people like? Why?}]]]
           @item["Monitor camp groups, inspiring further discussion as needed"]]
 
 
 @(header-block kata-practice
                "11:00am-11:30am"
                "3:00pm-3:30pm"
-               'breakout)
+               #:camp-type 'breakout)
+
 @time-warning @bold{10, 5 and 2 min} warnings
+
 @itemlist[#:style 'compact
           @item[@bold{Transition annoucement:}
                 @itemlist[@item{Wrap up discussion}
@@ -119,29 +138,30 @@
                           @item{Earn more katas or extra challenges from TLs!}]]
           @item["Monitor camp groups, assisting TLs as needed"]]
 
-@;update daily questions
+
 @(header-block game-show
                "11:30am-11:45am"
-               "3:30pm-3:45am"
-               'start-together)
+               "3:30pm-3:45pm"
+               #:camp-type 'start-together)
+
 @time-warning @bold{5 and 2 min} warnings
+
 @itemlist[#:style 'compact
           @item["Bring camp " @bold{all together}]
-          @item["Announce "@bold{rules & rewards} " of the game show:"
+          @item["Review "@bold{rules & rewards} " of the game show:"
                 @itemlist[@item{TLs as buzzers or raised hands}
                           @item{Wait to be called on, no shouting out!}
                           @item{TS dollars/other reward?}]]
           @item["Today's Whole Camp Daily Game Show Questions:"
-                @itemlist[@item[@bold{When is Game Jam?}
-                                @italic{ Friday}]
-                          @item[@bold{How do you earn your first badge? Second? Final?}
-                                @italic{ After earning 10 katas. 20 katas. Completing Game Jam.}]
-                          @item[@bold{What are our Core Values?}
-                                @italic{ It's not about my code, it's about what I CAN code. It's not about me, it't about my TEAM.}]
-                          @item[@bold{Team Leaders -- cover your nametags. Who can tell me their Team Leader's name?}
-                                @italic{ ...}]
-                          @item[@bold{What is the program we are coding in?}
-                                @italic{ DrRacket}]]]
+                @itemlist[@item[@bold{What is the most important keys/characters when coding in Dr Racket?}
+                                @italic{ Open and closing parentheses ( )}]
+                          @item[@bold{What is Game Jam?}
+                                @italic{ A race to create the best game you can using the skills you learn over this week.}]
+                          @item[@bold{Everyone -- cover your nametags. Who can tell me the name of everyone in their camp team?}]
+                          @item[@bold{How many tiles are there in the games we are making?}
+                                @italic{ K-2: 4 (2x2) 3-10: 9 (3x3)}]
+                          @item[@bold{Who can tell me 1 of the reasons that your team brainstormed for why your fandom is popular? K2 -- what animals are popular?}
+                                @italic{ (1 answer per camp team)}]]]
           @item["Breakout into " @bold{camp teams} " for TLs to lead camp-specific
                 game show questions"]]
 
@@ -149,7 +169,7 @@
 @(header-block market-wrap-up
                "11:45am-12:00(ish)pm"
                "3:45am-4:00(ish)pm"
-               'start-breakout)
+               #:camp-type 'start-breakout)
 
 @itemlist[#:style 'compact
           @item["PM only -- ensure you finish with enough time to travel to check-out
@@ -163,7 +183,9 @@
 
 
 @lunch-block
+
 @time-warning @bold{10, 5 and 2 min} warnings
+
 @itemlist[#:style 'compact
           @item[@bold{Remind all students} " the rules of lunch:"
                 @itemlist[@item{Absolutely no running}
@@ -179,7 +201,7 @@
 @(header-block check-out
                "12:45pm-1:10pm"
                "4:00pm-4:10pm"
-               'together)
+               #:camp-type 'together)
 
 @itemlist[#:style 'compact
           @item["Arrive at the check-out location " @bold{on time}]
