@@ -3,8 +3,6 @@
 (provide duplicate
          begin-job
          keyword-card 
-         symbol-card 
-         string-card 
          paren-card)
 
 (require pict
@@ -16,8 +14,7 @@
     (map (thunk* (if (procedure? thing) 
                    (thing)
                    thing))
-         (range (floor n)))) )
-
+         (range (floor n)))))
 
 (define (paren-card)
   (list
@@ -26,50 +23,20 @@
 
 (define (keyword-card)
   (define front
-    (lt-superimpose
-      (vl-append
-        (scale (text "keyword") 2)
-        (colorize
-          (scale (text "#:") 10)
-          "brown"))
+    (ct-superimpose
+      (rotate 
+       (vc-append
+         (scale (text "keyword") 2)
+
+         (colorize
+           (scale (text "#:") 5)
+           "brown"))
+       (/ pi -2))
       (blank-bg)))
 
   (list
     (front-side (inset front 50))
     (back-side (blank))))
-
-(define (symbol-card)
-  (define front
-    (lt-superimpose
-      (vl-append
-        (scale  (text "symbol") 2)
-        (colorize
-          (scale (text "'") 10)
-          "darkgreen"))
-      (blank-bg)))
-
-  (list
-    (front-side (inset front 50))
-    (back-side (blank))))
-
-(define (string-card)
-  (define front
-    (rb-superimpose
-      (colorize
-        (scale (text "\"") 10)
-        "darkgreen")
-      (lt-superimpose
-        (vl-append
-          (scale (text "string") 2)
-          (colorize
-            (scale (text "\"") 10)
-            "darkgreen"))
-        (blank-bg))))
-
-  (list
-    (front-side (inset front 50))
-    (back-side (blank))))
-
 
 (define-syntax-rule (begin-job folder
                                (cards [k v] ...)
@@ -79,7 +46,7 @@
 
     (VERSION "")
     (HEIGHT 800)
-    (WIDTH  800)
+    (WIDTH  400)
     (FRONT-META-FUNCTION
       (lambda (i)
         (blank)))
