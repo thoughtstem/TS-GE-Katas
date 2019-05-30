@@ -47,30 +47,23 @@
 
    
    'enemy-weapon-1
-   (read-prefix "with a villain that uses an energy blast.")
-   'enemy-weapon-2
-   (read-prefix "with a villain. Customize the sprite, and a custom power with a purple ring of fire dart.")
+   (read-prefix "with a villain that uses an energy blast of a different color.")
    'enemy-weapon-3
-   (read-prefix "that has a enemy with a custom sprite and a fully customized power.")
+   (read-prefix "with Mandarin as the villain that uses a more powerful, faster, and more durable ring of fire of a custom color.")
 
    
-   'power-1
-   (read-prefix "with an energy blast power.")
    'power-2
-   (read-prefix "with a custom power and customize color and the damage.")
+   (read-prefix "with a more powerful energy blast of a custom color.")
    'power-3
-   (read-prefix "with a defined and customized power.")
+   (read-prefix "with more powerful, faster and rarer start bit of a custom color.")
    'power-4
    (read-prefix "with two custom power.")
+
    
-
-
-   'droid-1
-   (read-prefix "that lets you spawn a Droid that attacks at enemies.")
-   'droid-2
-   (read-prefix "that lets you spawn a Droid that attacks with yellow energy blasts.")
-   'droid-3
-   (read-prefix "that lets you spawn a Droid that attacks with a fully customized energy dart.")
+   'drone-2
+   (read-prefix "with an energy drone that has a custom color and different shooting style.")
+   'drone-3
+   (read-prefix "with a more powerful, faster-shooting, custom color, homing energy drone.")
 
 
    'armor-1

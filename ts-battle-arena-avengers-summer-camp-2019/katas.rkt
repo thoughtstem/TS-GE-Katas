@@ -36,9 +36,9 @@
   (first (kata-collection-katas villain-katas))
   (third (kata-collection-katas villain-katas))
   (fourth (kata-collection-katas villain-katas))
-  (kata-collection-katas villain-power-katas))
+  (first (kata-collection-katas villain-power-katas))
+  (third (kata-collection-katas villain-power-katas)))
 
 (define-kata-collection hero-power-katas
-  (kata-collection-katas power-katas)
-  (first (kata-collection-katas drone-katas))
-  (second (kata-collection-katas drone-katas)))
+  (drop (kata-collection-katas power-katas) 1)
+  (drop (kata-collection-katas drone-katas) 1))
