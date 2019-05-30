@@ -37,5 +37,5 @@
 
 (define-kata-collection hero-power-katas
   (kata-collection-katas power-katas)
-  (first (kata-collection-katas droid-katas))
-  (second (kata-collection-katas droid-katas)))
+  (first (kata-collection-katas drone-katas))
+  (second (kata-collection-katas drone-katas)))

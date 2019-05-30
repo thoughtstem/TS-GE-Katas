@@ -81,8 +81,6 @@
    'avatar-3
    (read-prefix "that has a custom avatar with a custom sprite and 20 speed.")
    'avatar-4
-   (read-prefix "that has a custom avatar with a custom sprite, 20 speed, and 5 item slots.")
-   'avatar-5
    (read-prefix "that has a custom avatar with a custom sprite, 20 speed, 5 item slots, and 200 for health, max-health, shield, and max-shield.")
 
 

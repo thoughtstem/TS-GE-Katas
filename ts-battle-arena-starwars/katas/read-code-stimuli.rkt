@@ -24,8 +24,6 @@
    'avatar-3
    (read-prefix "with a rebel defined outside the game function. Customize the sprite and the speed.")
    'avatar-4
-   (read-prefix "with a rebel defined outside the game function. Customize the sprite, speed, key mode, and item slots.")
-   'avatar-5
    (read-prefix "with a rebel defined outside the game function. Customize the sprite, speed, item slots, health, max health, shield, and max shield.")
 
    

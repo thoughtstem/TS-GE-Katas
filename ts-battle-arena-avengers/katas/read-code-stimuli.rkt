@@ -17,13 +17,11 @@
    'avatar-1
    (read-prefix "with a hero.")
    'avatar-2
-   (read-prefix "with a hero. Customize the sprite.")
+   (read-prefix "with Thor as the hero.")
    'avatar-3
-   (read-prefix "with a hero defined outside the game function. Customize the sprite and the speed.")
+   (read-prefix "with a fast-moving Hulk as the hero.")
    'avatar-4
-   (read-prefix "with a hero defined outside the game function. Customize the sprite, speed, key mode, and item slots.")
-   'avatar-5
-   (read-prefix "with a hero defined outside the game function. Customize the sprite, speed, item slots, health, max health, shield, and max shield.")
+   (read-prefix "with a fast-moving Drax, a large backpack, and double the health and shield values.")
 
    
    'enemy-1
@@ -53,11 +51,11 @@
    
    
    'background-1
-   (read-prefix "that has a random colored planet.")
+   (read-prefix "with a custom planet.")
    'background-2
-   (read-prefix "that uses a predefined image as the planet.")
+   (read-prefix "with a lava planet.")
    'background-3
-   (read-prefix "that has a fully customized planet.")
+   (read-prefix "with a lava planet and a 2x2 grid.")
 
 
    'droid-1
