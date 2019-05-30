@@ -190,10 +190,18 @@
 
     (flatten (map list fronts backs))))
 
+(define (has-sprite-in-id? id)
+  (string-contains? (~a id) "sprite"))
+
+(define (has-bg-in-id? id)
+  (string-contains? (~a id) "-BG"))
+
 (define (lang->asset-list l)
   (parameterize ([CURRENT-LANGUAGE l])
     (define ids 
-      (filter (resolves-to? animated-sprite?)
+      (filter (or/c (resolves-to? (or/c animated-sprite?))
+                    has-sprite-in-id?
+                    has-bg-in-id?)
               (get-asset-ids)))
     (define backs  (map id->back ids))
     (define fronts (map id->front ids))
