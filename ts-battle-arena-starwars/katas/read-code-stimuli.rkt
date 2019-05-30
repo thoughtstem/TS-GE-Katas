@@ -5,7 +5,7 @@
 (require ts-kata-util/katas/main)
 
 (define (read-prefix s)
-  (read (~a "Code a game " s)))
+  (read (~a "Code a game with " s)))
 
 (define stimuli
   (list
@@ -18,33 +18,27 @@
 
    
    'avatar-1
-   (read-prefix "with a rebel.")
+   (read-prefix "a rebel.")
    'avatar-2
-   (read-prefix "with a rebel. Customize the sprite.")
+   (read-prefix "a Yoda as the rebel.")
    'avatar-3
-   (read-prefix "with a rebel defined outside the game function. Customize the sprite and the speed.")
+   (read-prefix "a fast-moving Obiwan as the rebel.")
    'avatar-4
-   (read-prefix "with a rebel defined outside the game function. Customize the sprite, speed, item slots, health, max health, shield, and max shield.")
+   (read-prefix "a fast-moving Obiwan rebel, a large backpack, and double the health and shield values.")
 
    
    'enemy-1
-   (read-prefix "that has a custom imperial.")
-   'enemy-2
-   (read-prefix "that has 10 random imperials.")
+   (read-prefix "that has an imperial.")
    'enemy-3
-   (read-prefix "that has 5 imperials with 'medium ai and custom health and shield.")
+   (read-prefix "several Darth Maul imperials who are challenging to defeat, that have double heatlh and shield.")
    'enemy-4
-   (read-prefix "that has 5 Storm Troopers with 'easy ai and 1 Boba Fett with 'hard ai.")
-   'enemy-5
-   (read-prefix "that has 5 'hard Darth Vader enemies using a lightsaber with 50 damage.")
-   
-   
-   'enemy-weapon-1
-   (read-prefix "that has a custom imperial and give it a blaster that shoots yellow lasers.")
+   (read-prefix "6 imperials: 5 weak with easy ai, and 1 strong with hard ai. Choose your own sprites.")
+
+
    'enemy-weapon-2
-   (read-prefix "that has a custom imperial with a custom sprite and a red lightsaber.")
+   (read-prefix "Darth Vader using a lightsaber of a custom color.")
    'enemy-weapon-3
-   (read-prefix "that has a custom imperial with a custom sprite and a double lightsaber.")
+   (read-prefix "Darth Maul using a double lightsaber.")
 
 
    'background-1
@@ -66,35 +60,27 @@
    ; ==== STIMULI FOR NEW KATAS ====
    
    'lightsaber-1
-   (read-prefix "that has a lightsaber.")
+   (read-prefix "a lightsaber.")
    'lightsaber-2
-   (read-prefix "with your own defined lightsaber.")
+   (read-prefix "a lightsaber that has a custom icon and high rarity.")
    'lightsaber-3
-   (read-prefix "with your own defined fully customized lightsaber.")
+   (read-prefix "a more powerful, custom colored lightsaber with a high rarity and a custom icon.")
 
 
-   'blaster-1
-   (read-prefix "that has a blaster.")
    'blaster-2
-   (read-prefix "with your own defined blaster.")
+   (read-prefix "a blaster that has a custom icon and high rarity.")
    'blaster-3
-   (read-prefix "with your own defined fully customized blaster.")
+   (read-prefix "a more powerful, faster, more durable, longer ranged, custom colored blaster with high rarity, a custom name and icon.")
 
 
    'lightsaber-droid-1
-   (read-prefix "that has a weapon that spawns a droid with a lightsaber.")
-   'lightsaber-droid-2
-   (read-prefix "that has a defined weapon that spawns a droid with a customized lightsaber.")   
+   (read-prefix "a lightsaber droid.")
    'lightsaber-droid-3
-   (read-prefix "that has a defined weapon that spawns a droid with a fully customized lightsaber.")
+   (read-prefix "a lightsaber droid that uses custom colored, more powerful, more durable lightsabers that move faster.")
 
-   
-   'blaster-droid-1
-   (read-prefix "that has a weapon that spawns a droid with a blaster.")
+
    'blaster-droid-2
-   (read-prefix "that has a defined weapon that spawns a droid with a customized blaster.")   
-   'blaster-droid-3
-   (read-prefix "that has a defined weapon that spawns a droid with a fully customized blaster.")
+   (read-prefix "a blaster droid that shoots a more powerful, custom colored, spread energy blast.")   
 
    
    'blaster-armor-1

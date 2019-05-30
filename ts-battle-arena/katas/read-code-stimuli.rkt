@@ -129,9 +129,9 @@
 
 
    'spike-mine-1
-   (read-prefix "that has a weapon that deploys a default spike mine.")   
+   (read-prefix "with a spike mine.")   
    'spike-mine-2
-   (read-prefix "that has a weapon that deploys a spike mine with a large range and speed.")
+   (read-prefix "with a spike mine that uses fast, long ranged darts.")
    'spike-mine-3
    (read-prefix "that has a weapon that deploys a spike mine with a large range and speed, high damage, and custom sprite.")
 
@@ -227,9 +227,9 @@
    'health-1
    (read-prefix "with a \"Health Power-up\" item that increases your health. Customize the icon and make it respawnable.")
    'health-2
-   (read-prefix "that has an item that recovers your health to 100.")
+   (read-prefix "with a \"Max Health Power-up\" item that sets your health to 100. Customize the icon and the rarity.")
    'health-3
-   (read-prefix "that has both a Health and a Max Health defined items.")
+   (read-prefix "with 2 health items: the first one should increase your health, the second one should restore all your health. Make custom icons for both.")
 
 
    'boost-1
@@ -249,11 +249,11 @@
    
 
    'force-field-1
-   (read-prefix "with an item that temporarily spawn a force field, name it and customize the icon.")
+   (read-prefix "with a \"Force Field\" item.")
    'force-field-2
-   (read-prefix "with a \"Force Field\" item with a custom duration and customize the icon.")
+   (read-prefix "with a \"Force Field\" item that has a custom duration and customize the icon.")
    'force-field-3
-   (read-prefix "that has an item with a custom name and sprite, that spawns a force field with a custom duration, and that allows friendly darts to go through it.")
+   (read-prefix "with a \"Force Field\" item that has a custom icon. Customize the duration and allow the player to shoot out of it.")
 
    
    'level-design-1
