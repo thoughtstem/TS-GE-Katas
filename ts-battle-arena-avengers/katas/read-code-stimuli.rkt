@@ -24,16 +24,30 @@
    (read-prefix "with a fast-moving Drax, a large backpack, and double the health and shield values.")
 
    
+   'background-1
+   (read-prefix "with a custom planet.")
+   'background-2
+   (read-prefix "with a lava planet.")
+   'background-4
+   (read-prefix "with a high definition lava planet, a smaller grid, and different starting tile.")
+
+
+   'level-design-1
+   (read-prefix "with a forest planet filled with trees.")
+   'level-design-3
+   (read-prefix "with a pink planet filled with candy-cane-trees and snow-pine-trees.")
+
+
    'enemy-1
    (read-prefix "with a villain.")
    'enemy-3
-   (read-prefix "with a villain defined outside the game function. Customize the sprite, ai, health, shield, and the amount in the world.")
+   (read-prefix "with a few Lokis as the villains, give them a higher difficulty, and double their heatlh and shield.")
    'enemy-4
-   (read-prefix "with two villains defined outside the game function. For both of them customize the sprite, ai, health, and the amount in world. ")
+   (read-prefix "with a some Winter Soldiers that have a low difficulty and half their health, and fewer Red Skulls that have a higher diffuculty and double health.")
 
    
    'enemy-weapon-1
-   (read-prefix "with a villain. Customize the color of the power.")
+   (read-prefix "with a villain that uses an energy blast.")
    'enemy-weapon-2
    (read-prefix "with a villain. Customize the sprite, and a custom power with a purple ring of fire dart.")
    'enemy-weapon-3
@@ -49,13 +63,6 @@
    'power-4
    (read-prefix "with two custom power.")
    
-   
-   'background-1
-   (read-prefix "with a custom planet.")
-   'background-2
-   (read-prefix "with a lava planet.")
-   'background-3
-   (read-prefix "with a lava planet and a 2x2 grid.")
 
 
    'droid-1

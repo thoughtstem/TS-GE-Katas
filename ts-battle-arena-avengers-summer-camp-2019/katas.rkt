@@ -22,8 +22,11 @@
   (third (kata-collection-katas force-field-katas)))
 
 (define-kata-collection planet-design-katas
-  (reverse (drop (reverse (kata-collection-katas planet-katas))       1))
-  (reverse (drop (reverse (kata-collection-katas level-design-katas)) 1)))
+  (first (kata-collection-katas planet-katas))
+  (second (kata-collection-katas planet-katas))
+  (fourth (kata-collection-katas planet-katas))
+  (first (kata-collection-katas level-design-katas))
+  (third (kata-collection-katas level-design-katas)))
 
 (define-kata-collection planet-design-extra-katas
   (fourth (kata-collection-katas planet-katas))
