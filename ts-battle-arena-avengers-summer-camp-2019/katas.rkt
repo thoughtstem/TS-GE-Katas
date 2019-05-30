@@ -12,7 +12,6 @@
 (define-kata-collection powerup-katas
   (first (kata-collection-katas health-katas))
   (first (kata-collection-katas size-katas))
-  (second (kata-collection-katas size-katas))
   (first (kata-collection-katas boost-katas))
   (second (kata-collection-katas boost-katas))
   (second (kata-collection-katas force-field-katas)))
