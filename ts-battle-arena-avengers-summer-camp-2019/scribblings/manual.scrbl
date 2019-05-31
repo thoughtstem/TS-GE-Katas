@@ -35,13 +35,13 @@
 @section{Power-Up Katas}
 @(render powerup-katas)
 
-@section{Extra Katas}
-@(render shield-katas)
-@(render force-field-extra-katas)
-@(render armor-katas)
-@(render lava-pit-katas)
-@(render spike-mine-katas)
-@(render planet-design-extra-katas)
+@;section{Extra Katas}
+@;(render shield-katas)
+@;(render force-field-extra-katas)
+@;(render armor-katas)
+@;(render lava-pit-katas)
+@;(render spike-mine-katas)
+@;(render planet-design-extra-katas)
 
 @;(include-section ts-camp-materials/scribblings/half-day-schedule)
 @(include-section ts-camp-materials/scribblings/gameshow-avengers)

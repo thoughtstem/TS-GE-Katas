@@ -54,7 +54,7 @@
   shield-katas
   size-katas
   force-field-katas
-  droid-katas
+  drone-katas
   (armor-katas
       (not/c (curryr name-contains? "Repeater"))
       (not/c (curryr name-contains? "Sword")))

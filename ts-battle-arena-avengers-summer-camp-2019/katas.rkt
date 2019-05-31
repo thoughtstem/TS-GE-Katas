@@ -12,7 +12,6 @@
 (define-kata-collection powerup-katas
   (first (kata-collection-katas health-katas))
   (first (kata-collection-katas size-katas))
-  (second (kata-collection-katas size-katas))
   (first (kata-collection-katas boost-katas))
   (second (kata-collection-katas boost-katas))
   (second (kata-collection-katas force-field-katas)))
@@ -22,8 +21,11 @@
   (third (kata-collection-katas force-field-katas)))
 
 (define-kata-collection planet-design-katas
-  (reverse (drop (reverse (kata-collection-katas planet-katas))       1))
-  (reverse (drop (reverse (kata-collection-katas level-design-katas)) 1)))
+  (first (kata-collection-katas planet-katas))
+  (second (kata-collection-katas planet-katas))
+  (fourth (kata-collection-katas planet-katas))
+  (first (kata-collection-katas level-design-katas))
+  (third (kata-collection-katas level-design-katas)))
 
 (define-kata-collection planet-design-extra-katas
   (fourth (kata-collection-katas planet-katas))
@@ -33,9 +35,9 @@
   (first (kata-collection-katas villain-katas))
   (third (kata-collection-katas villain-katas))
   (fourth (kata-collection-katas villain-katas))
-  (kata-collection-katas villain-power-katas))
+  (first (kata-collection-katas villain-power-katas))
+  (third (kata-collection-katas villain-power-katas)))
 
 (define-kata-collection hero-power-katas
-  (kata-collection-katas power-katas)
-  (first (kata-collection-katas droid-katas))
-  (second (kata-collection-katas droid-katas)))
+  (drop (kata-collection-katas power-katas) 1)
+  (drop (kata-collection-katas drone-katas) 1))

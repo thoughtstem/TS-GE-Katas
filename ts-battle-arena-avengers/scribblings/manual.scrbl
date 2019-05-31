@@ -64,7 +64,7 @@ To use these katas in another collection do:
 
 @section{Droid Katas}
 
-@(render droid-katas)
+@(render drone-katas)
 
 @section{Armor Katas}
 

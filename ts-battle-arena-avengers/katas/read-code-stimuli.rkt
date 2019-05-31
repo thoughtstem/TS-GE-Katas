@@ -5,7 +5,7 @@
 (require ts-kata-util/katas/main)
 
 (define (read-prefix s)
-  (read (~a "Code a game " s)))
+  (read (~a "Code a game with " s)))
                   
 (define stimuli
   (list
@@ -15,57 +15,59 @@
 
   
    'avatar-1
-   (read-prefix "with a hero.")
+   (read-prefix "a hero.")
    'avatar-2
-   (read-prefix "with a hero. Customize the sprite.")
+   (read-prefix "Thor as the hero.")
    'avatar-3
-   (read-prefix "with a hero defined outside the game function. Customize the sprite and the speed.")
+   (read-prefix "a fast-moving Hulk as the hero.")
    'avatar-4
-   (read-prefix "with a hero defined outside the game function. Customize the sprite, speed, key mode, and item slots.")
-   'avatar-5
-   (read-prefix "with a hero defined outside the game function. Customize the sprite, speed, item slots, health, max health, shield, and max shield.")
+   (read-prefix "a fast-moving Drax hero, a large backpack, and double the health and shield values.")
+
+   
+   'background-1
+   (read-prefix "a planet.")
+   'background-2
+   (read-prefix "a lava planet.")
+   'background-4
+   (read-prefix "a high definition lava planet, fewer tiles, and different starting tile.")
+
+
+   'level-design-1
+   (read-prefix "a forest planet that has world objects.")
+   'level-design-3
+   (read-prefix "a pink planet that has two randomly-colored types of trees in high definition.")
 
    
    'enemy-1
-   (read-prefix "with a villain.")
+   (read-prefix "a villain.")
    'enemy-3
-   (read-prefix "with a villain defined outside the game function. Customize the sprite, ai, health, shield, and the amount in the world.")
+   (read-prefix "several Loki villains who are challenging to defeat, that have double heatlh and shield.")
    'enemy-4
-   (read-prefix "with two villains defined outside the game function. For both of them customize the sprite, ai, health, and the amount in world. ")
+   (read-prefix "8 enemies: 5 weak with easy ai, and 3 strong with hard ai. Choose your own sprites.")
 
    
    'enemy-weapon-1
-   (read-prefix "with a villain. Customize the color of the power.")
-   'enemy-weapon-2
-   (read-prefix "with a villain. Customize the sprite, and a custom power with a purple ring of fire dart.")
+   (read-prefix "a villain that uses an energy blast of a custom color.")
    'enemy-weapon-3
-   (read-prefix "that has a enemy with a custom sprite and a fully customized power.")
+   (read-prefix "Mandarin as the villain that uses a more powerful, faster, custom colored ring of fire that lasts longer.")
 
    
-   'power-1
-   (read-prefix "with an energy blast power.")
    'power-2
-   (read-prefix "with a custom power and customize color and the damage.")
+   (read-prefix "a more powerful, custom colored energy blast.")
    'power-3
-   (read-prefix "with a defined and customized power.")
+   (read-prefix "more powerful, faster, custom colored star bit with high rarity.")
    'power-4
-   (read-prefix "with two custom power.")
+   (read-prefix "2 weapons: 1 powerful, faster magic orb with spread and single-click shooting mode; and 1 powerful, faster hammer with a custom color and high rarity.")
+
+   'boost-1
+   (read-prefix "a \"Damage Boost\" item that temporarily increases the damage of your power and customize the icon.")
    
    
-   'background-1
-   (read-prefix "that has a random colored planet.")
-   'background-2
-   (read-prefix "that uses a predefined image as the planet.")
-   'background-3
-   (read-prefix "that has a fully customized planet.")
-
-
-   'droid-1
-   (read-prefix "that lets you spawn a Droid that attacks at enemies.")
-   'droid-2
-   (read-prefix "that lets you spawn a Droid that attacks with yellow energy blasts.")
-   'droid-3
-   (read-prefix "that lets you spawn a Droid that attacks with a fully customized energy dart.")
+   
+   'drone-2
+   (read-prefix "an energy drone that uses a spread shot energy blast of a custom color.")
+   'drone-3
+   (read-prefix "an energy drone that uses a more powerful, faster-shooting, homing energy blast of a custom color.")
 
 
    'armor-1

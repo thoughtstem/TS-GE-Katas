@@ -34,15 +34,15 @@
 @section{Trap Weapons Katas}
 @(render trap-weapon-katas)
 
-@section{Extra Katas}
-@(render planet-katas)
-@(render level-design-katas)
-@(render boost-katas)
-@(render shield-katas)
-@(render lava-pit-katas)
-@(render blaster-droid-katas)
-@(render lightsaber-armor-katas)
-@(render blaster-armor-katas)
+@;section{Extra Katas}
+@;(render planet-katas)
+@;(render level-design-katas)
+@;(render boost-katas)
+@;(render shield-katas)
+@;(render lava-pit-katas)
+@;(render blaster-droid-katas)
+@;(render lightsaber-armor-katas)
+@;(render blaster-armor-katas)
 
 @;(include-section ts-camp-materials/scribblings/half-day-schedule)
 @(include-section ts-camp-materials/scribblings/gameshow-starwars)
