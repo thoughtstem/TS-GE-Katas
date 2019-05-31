@@ -18,16 +18,19 @@
   (first (kata-collection-katas old:imperial-katas))
   (third (kata-collection-katas old:imperial-katas))
   (fourth (kata-collection-katas old:imperial-katas))
-  (kata-collection-katas old:imperial-weapon-katas))
+  (second (kata-collection-katas old:imperial-weapon-katas))
+  (third (kata-collection-katas old:imperial-weapon-katas)))
   
 (define-kata-collection weapon-katas
   (kata-collection-katas lightsaber-katas)
-  (kata-collection-katas blaster-katas))
+  (drop (kata-collection-katas blaster-katas) 1))
 
 (define-kata-collection powerup-katas
   (kata-collection-katas health-katas)
   (kata-collection-katas force-field-katas))
 
 (define-kata-collection trap-weapon-katas
-  (kata-collection-katas spike-mine-katas)
-  (kata-collection-katas lightsaber-droid-katas))
+  (take (kata-collection-katas spike-mine-katas) 2)
+  (first (kata-collection-katas lightsaber-droid-katas))
+  (third (kata-collection-katas lightsaber-droid-katas))
+  (second (kata-collection-katas blaster-droid-katas)))

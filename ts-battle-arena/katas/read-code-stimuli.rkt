@@ -129,9 +129,9 @@
 
 
    'spike-mine-1
-   (read-prefix "that has a weapon that deploys a default spike mine.")   
+   (read-prefix "with a spike mine.")   
    'spike-mine-2
-   (read-prefix "that has a weapon that deploys a spike mine with a large range and speed.")
+   (read-prefix "with a spike mine that uses fast, long ranged darts.")
    'spike-mine-3
    (read-prefix "that has a weapon that deploys a spike mine with a large range and speed, high damage, and custom sprite.")
 
@@ -217,51 +217,51 @@
 
 
    'size-1
-   (read-prefix "with a powerup that makes you grow.")
+   (read-prefix "with a \"Grow Power-up\" item that makes you bigger and customize the icon.")
    'size-2
-   (read-prefix "with a powerup that makes you shrink.")
+   (read-prefix "with an item that makes you shrink, name it and customize the icon.")
    'size-3
    (read-prefix "with both grow powerups and shrink powerups.")
 
    
    'health-1
-   (read-prefix "that has an powerup that increases your health by 50.")
+   (read-prefix "with a \"Health Power-up\" item that increases your health. Customize the icon and make it respawnable.")
    'health-2
-   (read-prefix "that has an powerup that recovers your health to 100.")
+   (read-prefix "with a \"Max Health Power-up\" item that sets your health to 100. Customize the icon and the rarity.")
    'health-3
-   (read-prefix "that has both a Health and a Max Health defined powerup.")
+   (read-prefix "with 2 health items: the first one should increase your health, the second one should restore all your health. Make custom icons for both.")
 
 
    'boost-1
-   (read-prefix "that has a powerup that temporarily boosts your damage.")
+   (read-prefix "with a \"Damage Boost\" item that temporarily increases the damage of your weapon and customize the icon.")
    'boost-2
-   (read-prefix "that has a powerup that temporarily boosts your speed.")
+   (read-prefix "with a \"Speed Boost\" item that temporarily boosts your speed and customize the icon.")
    'boost-3
-   (read-prefix "that has both a Damage and a Speed Boost defined powerup.")
+   (read-prefix "that has both a Damage and a Speed Boost defined items.")
 
 
    'shield-1
-   (read-prefix "that has an powerup that increases your shield by 50.")
+   (read-prefix "that has an item that increases your shield by 50.")
    'shield-2
-   (read-prefix "that has an powerup that recovers your shield to 100.")
+   (read-prefix "that has an item that recovers your shield to 100.")
    'shield-3
-   (read-prefix "that has both a Shield and Max Shield defined powerup.")
+   (read-prefix "that has both a Shield and Max Shield defined items.")
    
 
    'force-field-1
-   (read-prefix "that has an item with a custom name that spawns a force field.")
+   (read-prefix "with a \"Force Field\" item.")
    'force-field-2
-   (read-prefix "that has an item with a custom name and sprite, that spawns a force field with a custom duration.")
+   (read-prefix "with a \"Force Field\" item that has a custom duration and customize the icon.")
    'force-field-3
-   (read-prefix "that has an item with a custom name and sprite, that spawns a force field with a custom duration, and that allows friendly darts to go through it.")
+   (read-prefix "with a \"Force Field\" item that has a custom icon. Customize the duration and allow the player to shoot out of it.")
 
    
    'level-design-1
-   (read-prefix "with a forest background filled with trees.")
+   (read-prefix "with a forest background that has world objects.")
    'level-design-2
    (read-prefix "with a forest background filled with high definition trees.")
    'level-design-3
-   (read-prefix "with a pink background filled with random color candy-cane-trees and snow-pine-trees.")
+   (read-prefix "with a pink background that has two randomly-colored types of trees in high definition.")
    'level-design-4
    (read-prefix "with 3 world objects with customized position, tile, size, and/or hue.")
 
