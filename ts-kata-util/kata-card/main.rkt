@@ -2,10 +2,11 @@
 
 (require 2htdp/image
          (prefix-in p: pict)
-         (only-in game-engine tint-img
-                              change-img-hue
-                              mask-pixel
-                              name->color))
+         (only-in "./rgb-hsb.rkt"
+                  tint-img
+                  change-img-hue
+                  mask-pixel
+                  name->color))
 
 (provide iconify-img
          rainbow-set
