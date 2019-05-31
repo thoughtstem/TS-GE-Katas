@@ -1,0 +1,290 @@
+#lang racket
+
+(require "base.rkt"
+         pict
+         (prefix-in pp: pprint))
+
+;Design constraints:
+; 1) A language for describing tactics to teachers and students
+; 2) Formal enough to do simulations of (interpereter for the lang can be built).  
+;    (Though it may be hard to simulate player's actions in an authentic way.  AI bots are always hard to build.)
+; 3) Can auto generate an example round, with pictures
+; 4) Can print the English on a card, easy-to-read, diagrams, sparse text
+; 5) Supports abstract descriptions: e.g. "Write the kata code on the whiteboard."  As well as concrete descriptions: "Write the following code on the whiteboard: (battlearena-game (custom-avatar))"
+
+;May ultimately want to put "frame stories" at top (i.e. Mafia)
+
+
+(struct instruction (subject verb) ;Agent? action?
+  #:transparent)
+
+(struct setup (instructions))
+(define (setup-phase . is)
+  (setup is))
+
+(struct until-kata-complete (instructions))
+(define (until-kata-complete-phase . is)
+  (until-kata-complete is))
+
+(struct storage (data) #:transparent)
+
+
+(struct object-part (english-description object))
+(define noun? (or/c object-part?
+                    any/c))
+
+(define (contents-of object)
+  (object-part "the contents of" object))
+
+(define (back-of object)
+  (object-part "the back of" object))
+
+(define (front-of object)
+  (object-part "the front of" object))
+
+(define (top-half-of object)
+  (object-part "the top half of" object))
+
+(define (bottom-half-of object)
+  (object-part "the bottom half of" object))
+
+(struct challenge-card (front back) #:transparent)
+
+(define/contract (print-subject s)
+  (-> any/c pp:doc?)
+  (pp:text (~a s)))
+
+
+;Verbs
+(struct information-move (english-verb information destination))
+(struct information-edit (english-verb destination))
+(define verb? (or/c information-move? information-edit?))
+
+(define (hand-write info dest)
+  (information-move "hand write" info dest))
+
+(define (erase-all-from dest)
+  (information-edit "erase all from" dest))
+
+(define (type-up info dest)
+  (information-move "type up" info dest))
+
+
+(define (remove-some-identifiers dest)
+  (information-edit "remove some identifiers from" dest))
+
+
+
+;PRINTING
+
+(define indentation-level 3)
+
+
+(define/contract (print-verb v)
+  (-> verb? pp:doc?)
+  (match v
+    ;Like a "store" operation -- var dest = info 
+    [(information-move verb info dest) 
+     (pp:v-append 
+       (pp:nest indentation-level
+                (pp:v-append
+                  (pp:text (~a verb ":")) 
+                  (print-object info)))  
+       (pp:nest indentation-level
+                (pp:v-append
+                  (pp:text "on:")
+                  (print-object dest))))]
+    ;Like an "update" operation -- var dest = (verb dest)
+    ;Verb is some arbitrary function
+    [(information-edit verb dest)
+     (pp:nest indentation-level
+              (pp:v-append 
+                (pp:text (~a verb ":")) 
+                (print-object dest)))]
+    [_ (pp:text (~a v))]))
+
+
+(define/contract (print-object d)
+  (-> noun? pp:doc?)
+  (match d
+    [(object-part english object) 
+     (pp:h-append  
+       (pp:text english) 
+       (pp:text " ")
+       (print-object object))]
+    [_ 
+      (pp:text (~a d))]))
+
+(define/contract (print-instruction n i)
+  (-> number? 
+      (or/c instruction?
+            setup?
+            until-kata-complete?) 
+      pp:doc?)
+
+  (match i
+    [(instruction subject verb)
+     (pp:nest indentation-level
+              (pp:v-append
+                (pp:text (~a "Step " n )) 
+                (pp:nest indentation-level
+                         (pp:v-append
+                           (pp:h-append
+                             (print-subject (instruction-subject i))  
+                             (pp:text ":"))
+                           (print-verb (instruction-verb i))))  
+                ))]
+
+    [(setup instructions) 
+     (pp:nest indentation-level
+              (pp:v-append
+                (pp:text "SETUP:")
+                (print-instructions instructions)))]
+
+    [(until-kata-complete instructions) 
+     (pp:nest indentation-level
+              (pp:v-append
+                (pp:text "UNTIL KATA COMPLETE:")
+                (print-instructions instructions)))]))
+
+(define/contract (print-instructions is)
+  (-> list? pp:doc?)
+
+  (apply pp:v-append
+    (map print-instruction 
+         (range 1 (add1 (length is))) 
+         is)))
+
+(define (disintegrating-code coach 
+                             students computers
+                             challenge-card 
+                             whiteboard 
+                             markers)
+
+  (list
+    (setup-phase
+      (instruction coach  
+                   (hand-write 
+                     (contents-of 
+                       (back-of challenge-card)) 
+                     (bottom-half-of whiteboard)))
+
+      (instruction coach  
+                   (hand-write 
+                     (contents-of 
+                       (front-of challenge-card)) 
+                     (top-half-of whiteboard)))) 
+
+
+    ;TODO: Remove -phase
+    (until-kata-complete-phase
+
+      (instruction students
+                   (erase-all-from computers))
+
+      (instruction students
+                   (type-up 
+                     (contents-of (bottom-half-of whiteboard))
+                     computers))
+
+      (instruction coach  
+                   (remove-some-identifiers
+                     (contents-of 
+                       (bottom-half-of whiteboard))))) ))
+
+
+(define (mafia coach 
+               team computers
+               challenge-card 
+               whiteboard 
+               markers)
+
+  (list
+    (setup-phase
+      #;
+      (instruction coach  
+                   (tell-story 
+                     "You're all game developers in a company.  The big deadline is almost here!  But the code keeps breaking in the middle of the night..."))
+
+      (instruction coach  
+                   ;Named sub-group?
+                   (secretly-designate-people-from 
+                     team
+                     (to-be 'Hacker)
+                     ;How many?   
+                     ))
+
+      (instruction coach  
+                   (hand-write 
+                     (contents-of 
+                       (back-of challenge-card)) 
+                     whiteboard))
+
+      #;
+      (instruction coach  
+                   (explain 
+                     (contents-of 
+                       (front-of challenge-card))))
+      )
+
+    #;
+    (phase 'Night
+       (instruction (group 'Hackers)
+                    (introduce-bugs 
+                      (contents-of whiteboard))))
+
+    #;
+    (phase 'Day
+       (instruction team
+                    (debug 
+                      (contents-of whiteboard))))
+
+
+    ;TODO: Remove -phase
+    (until-kata-complete-phase
+
+      (instruction team
+                   (erase-all-from computers))
+
+      (instruction team
+                   (type-up 
+                     (contents-of (bottom-half-of whiteboard))
+                     computers))
+
+      (instruction coach  
+                   (remove-some-identifiers
+                     (contents-of 
+                       (bottom-half-of whiteboard)))))
+   
+
+    ))
+
+
+(module+ test
+
+  (pp:pretty-print
+    (print-instructions 
+      (disintegrating-code 'Coach
+                           'Team
+                           'Team-Computers
+                           'the-challenge-card
+                           'the-whiteboard
+                           'the-markers)))
+
+
+  (pp:pretty-print
+    (print-instructions 
+      (mafia 'Coach
+             'Team
+             'Team-Computers
+             'the-challenge-card
+             'the-whiteboard
+             'the-markers)))
+
+
+
+
+  )
+
+
+

@@ -53,7 +53,7 @@
   (local-require ts-battle-arena-avengers-summer-camp-2019/katas)
 
   (set-fg-texture "bg002.jpg" 
-    (begin-job "ts-battle-arena-avengers-summer-camp-2019"    
+    (begin-job "battlearena"
                ((collection-apply (curryr try-take 4) hero-katas) 
                  [FRONT-BG-COLOR    googly-red]
                  [FRONT-FG-COLOR clear-white]
@@ -79,7 +79,7 @@
   (local-require ts-battle-arena-fortnite-summer-camp-2019/katas)
 
   (set-fg-texture "bg003.jpg" 
-               (begin-job "ts-battle-arena-fortnite-summer-camp-2019"    
+               (begin-job "battlearena-fortnite"
                           ((collection-apply (curryr try-take 4) avatar-katas) 
                             [FRONT-BG-COLOR    googly-red]
                             [FRONT-FG-COLOR clear-white]
@@ -105,7 +105,7 @@
   (local-require ts-battle-arena-starwars-summer-camp-2019/katas)
 
   (set-fg-texture "bg004.jpg"
-    (begin-job "ts-battle-arena-starwars-summer-camp-2019"    
+    (begin-job "battlearena-starwars"
                ((collection-apply (curryr try-take 4) rebel-katas)
                  [FRONT-BG-COLOR    googly-red]
                  [FRONT-FG-COLOR clear-white]
@@ -158,7 +158,7 @@
   (local-require ts-survival-minecraft-summer-camp-2019/katas)
 
   (set-fg-texture "bg006.jpg" 
-    (begin-job "ts-survival-minecraft-summer-camp-2019"
+    (begin-job "survival-minecraft"
                ((collection-apply (curryr try-take 4) custom-skin-katas)
                  [FRONT-BG-COLOR    googly-red]
                  [FRONT-FG-COLOR clear-white]
@@ -184,7 +184,7 @@
   (local-require ts-survival-pokemon-summer-camp-2019/katas)
 
   (set-fg-texture "bg007.jpg" 
-    (begin-job "ts-survival-pokemon-summer-camp-2019"
+    (begin-job "survival-pokemon"
                ((collection-apply (curryr try-take 4) pokemon-katas)
                 [FRONT-BG-COLOR googly-red]
                 [FRONT-FG-COLOR clear-white]
@@ -237,7 +237,7 @@
   (local-require ts-adventure-mario-summer-camp-2019/katas)
 
   (set-fg-texture "bg009.jpg"
-    (begin-job "ts-adventure-mario-summer-camp-2019-cards"     
+    (begin-job "adventure-mario"
                ((collection-apply (curryr try-take 4) character-katas)
                 [FRONT-BG-COLOR googly-red]
                 [FRONT-FG-COLOR clear-white]
@@ -263,7 +263,7 @@
   (local-require ts-adventure-harrypotter-summer-camp-2019/katas)
 
   (set-fg-texture "bg010.jpg"
-    (begin-job "ts-adventure-harrypotter-summer-camp-2019-cards"     
+    (begin-job "adventure-harrypotter"
                ((collection-apply (curryr try-take 4) wizard-katas)
                 [FRONT-BG-COLOR googly-red]
                 [FRONT-FG-COLOR clear-white]
@@ -413,5 +413,5 @@
 
 
 
-(all->Desktop)
+#;(all->Desktop)
 
