@@ -5,7 +5,7 @@
 (require ts-kata-util/katas/main)
 
 (define (read-prefix s)
-  (read (~a "Code a game " s)))
+  (read (~a "Code a game with " s)))
 
 (define stimuli
   (list
@@ -17,7 +17,7 @@
    'spear-1
    (read-prefix "that has a spear.")
    'spear-2
-   (read-prefix "that has a spear with 50 damage.")
+   (read-prefix "a strong spear. Customize the name.")
    'spear-3
    (read-prefix "that has an 'epic rarity spear with 50 damage.")
    'spear-4
@@ -59,7 +59,7 @@
    'fire-magic-2
    (read-prefix "that has fire magic with 20 damage.")
    'fire-magic-3
-   (read-prefix "that has an 'epic fire magic with 20 damage and 10 speed.")
+   (read-prefix "a more powerful, faster fire magic that has a high rarity. Customize the icon and the name.")
    'fire-magic-4
    (read-prefix "that has a 'legendary fire magic with a customized sprite, damage, speed, and range.")
 
@@ -75,23 +75,22 @@
 
          
    'avatar-1
-   (read-prefix "that has a custom avatar.")
+   (read-prefix "an avatar.")
    'avatar-2
-   (read-prefix "that has a custom avatar with a sprite picked from the assets library.")
+   (read-prefix "a constructor as the avatar.")
    'avatar-3
-   (read-prefix "that has a custom avatar with a custom sprite and 20 speed.")
+   (read-prefix "a fast-moving ninja as the hero that has a large backpack, and different movement keys.")
    'avatar-4
-   (read-prefix "that has a custom avatar with a custom sprite, 20 speed, 5 item slots, and 200 for health, max-health, shield, and max-shield.")
-
+   (read-prefix "a fast-moving pirate, a large backpack, and double the health and shield values.")
 
    'enemy-1
-   (read-prefix "with an enemy.")
+   (read-prefix "an enemy.")
    'enemy-2
-   (read-prefix "with 10 random enemies")
+   (read-prefix "10 random enemies")
    'enemy-3
-   (read-prefix "that has 5 enemies with a darkknight sprite and 'medium ai.")
+   (read-prefix "several Dark knight enemies who are challenging to defeat.")
    'enemy-4
-   (read-prefix "that has 5 'easy wizard enemies with 50 health and 5 'medium darkknight enemies with 200 health.")
+   (read-prefix "8 enemies: 5 weak with easy ai, and 3 strong with medium ai. Choose your own sprites.")
    'enemy-5
    (read-prefix "that has 5 'hard pirategirl enemies using a custom-weapon with 50 damage.")
    
@@ -129,29 +128,29 @@
 
 
    'spike-mine-1
-   (read-prefix "with a spike mine.")   
+   (read-prefix "a spike mine.")   
    'spike-mine-2
-   (read-prefix "with a spike mine that uses fast, long ranged darts.")
+   (read-prefix "a spike mine that uses fast, long ranged darts.")
    'spike-mine-3
    (read-prefix "that has a weapon that deploys a spike mine with a large range and speed, high damage, and custom sprite.")
 
 
    'spear-tower-1
-   (read-prefix "that has a custom weapon that deploys a spear tower.")
+   (read-prefix "a spear tower.")
    'spear-tower-2
-   (read-prefix "that has a custom weapon that deploys a spear tower with a speed of 10 and a range of 50.")
+   (read-prefix "a tower that shoots faster spears that have a longer range.")
    'spear-tower-3
-   (read-prefix "that has a custom weapon that deploys a spear tower with a custom sprite, damage, speed, and range.")
+   (read-prefix "a tower that shoots faster, more powerful, gold-colored spears that have a longer range.")
 
 
    'enemy-weapon-1
-   (read-prefix "that has a an enemy and give it a custom weapon.")
+   (read-prefix "an enemy that uses a sword.")
    'enemy-weapon-2
-   (read-prefix "that has an enemy, give it a custom weapon and customize it.")
+   (read-prefix "that has an enemy, give it a custom weapon and customize it.")   
    'enemy-weapon-3
-   (read-prefix "that has am enemy, give it a custom weapon, and customize the dart.")
+   (read-prefix "an enemy that uses a weak and slow repeater that shoots long ranged darts.")
 
-   
+     
    'repeater-armor-1
    (read-prefix "that has armor called Repeater Armor.")
    'repeater-armor-2
@@ -179,9 +178,9 @@
    'repeater-tower-1
    (read-prefix "that has a weapon that deploys a Repeater Tower.")
    'repeater-tower-2
-   (read-prefix "that has a weapon that deploys a Repeater Tower with slow bullets but a fast fire rate.")
+   (read-prefix "a tower that shoots fast-moving darts at a faster rate.")
    'repeater-tower-3
-   (read-prefix "that has a custom weapon that deploys a slow shooting, homing Rocket Tower that shoots a custom rocket.")
+   (read-prefix "a tower that shoots very powerful, fast-moving, long-range darts at a very slow rate.")
 
 
    'dagger-tower-1
@@ -193,49 +192,49 @@
 
    
    'single-shot-1
-   (read-prefix "with a weapon that fires only once each click.")
+   (read-prefix "a weapon that fires only once each click.")
    'single-shot-2
-   (read-prefix "with a single-shot weapon that fires a dart with customized damage, speed, and range.")
+   (read-prefix "a more powerful, faster repeater that shoots a single dart with a medium range. Customize the icon and the name.")
    'single-shot-3
-   (read-prefix "with a 'rare single-shot weapon that fires a dart with customized sprite, damage, speed, and range.")
+   (read-prefix "a 'rare single-shot weapon that fires a dart with customized sprite, damage, speed, and range.")
 
 
    'spread-shot-1
-   (read-prefix "with a spread-shot weapon.")
+   (read-prefix "a spread-shot weapon.")
    'spread-shot-2
-   (read-prefix "with a spread-shot weapon that fires customized darts that can go through one enemy and hit another.")
+   (read-prefix "a more powerful, faster repeater that shoots multiple darts. Customize the name and the icon.")
    'spread-shot-3
-   (read-prefix "with a 'rare spread-shot weapon that fires darts with customized sprite, damage, durability, and speed.")
+   (read-prefix "a 'rare spread-shot weapon that fires darts with customized sprite, damage, durability, and speed.")
 
 
    'homing-repeater-1
-   (read-prefix "with a weapon that fires homing darts.")
+   (read-prefix "a weapon that fires homing darts.")
    'homing-repeater-2
-   (read-prefix "with a weapon that fires homing darts with customized damage, speed, and range.")
+   (read-prefix "a more powerful, slower repeater that shoots homing darts. Customize the name and the icon.")
    'homing-repeater-3
-   (read-prefix "with a 'rare weapon that fires homing darts with customized sprite, damage, speed, and range.")
+   (read-prefix "a 'rare weapon that fires homing darts with customized sprite, damage, speed, and range.")
 
 
    'size-1
-   (read-prefix "with a \"Grow Power-up\" item that makes you bigger and customize the icon.")
+   (read-prefix "a \"Grow Power-up\" item that makes you bigger and customize the icon.")
    'size-2
-   (read-prefix "with an item that makes you shrink, name it and customize the icon.")
+   (read-prefix "an item that makes you shrink, name it and customize the icon.")
    'size-3
-   (read-prefix "with both grow powerups and shrink powerups.")
+   (read-prefix "both grow powerups and shrink powerups.")
 
    
    'health-1
-   (read-prefix "with a \"Health Power-up\" item that increases your health. Customize the icon and make it respawnable.")
+   (read-prefix "a \"Health Power-up\" item that increases your health. Customize the icon and make it respawnable.")
    'health-2
-   (read-prefix "with a \"Max Health Power-up\" item that sets your health to 100. Customize the icon and the rarity.")
+   (read-prefix "a \"Max Health Power-up\" item that sets your health to 100. Customize the icon and the rarity.")
    'health-3
-   (read-prefix "with 2 health items: the first one should increase your health, the second one should restore all your health. Make custom icons for both.")
+   (read-prefix "2 health items: the first one should increase your health, the second one should restore all your health. Make custom icons for both.")
 
 
    'boost-1
-   (read-prefix "with a \"Damage Boost\" item that temporarily increases the damage of your weapon and customize the icon.")
+   (read-prefix "a \"Damage Boost\" item that temporarily increases the damage of your weapon and customize the icon.")
    'boost-2
-   (read-prefix "with a \"Speed Boost\" item that temporarily boosts your speed and customize the icon.")
+   (read-prefix "a \"Speed Boost\" item that temporarily boosts your speed and customize the icon.")
    'boost-3
    (read-prefix "that has both a Damage and a Speed Boost defined items.")
 
@@ -243,27 +242,27 @@
    'shield-1
    (read-prefix "that has an item that increases your shield by 50.")
    'shield-2
-   (read-prefix "that has an item that recovers your shield to 100.")
+   (read-prefix "a \"Max Shield Power-up\" item that sets your shield to 100 and customize the icon.")
    'shield-3
    (read-prefix "that has both a Shield and Max Shield defined items.")
    
 
    'force-field-1
-   (read-prefix "with a \"Force Field\" item.")
+   (read-prefix "a \"Force Field\" item.")
    'force-field-2
-   (read-prefix "with a \"Force Field\" item that has a custom duration and customize the icon.")
+   (read-prefix "a \"Force Field\" item that has a custom duration and customize the icon.")
    'force-field-3
-   (read-prefix "with a \"Force Field\" item that has a custom icon. Customize the duration and allow the player to shoot out of it.")
+   (read-prefix "a \"Force Field\" item that has a custom icon. Customize the duration and allow the player to shoot out of it.")
 
    
    'level-design-1
-   (read-prefix "with a forest background that has world objects.")
+   (read-prefix "a forest background that has world objects.")
    'level-design-2
-   (read-prefix "with a forest background filled with high definition trees.")
+   (read-prefix "a forest background filled with high definition trees.")
    'level-design-3
-   (read-prefix "with a pink background that has two randomly-colored types of trees in high definition.")
+   (read-prefix "a pink background that has two randomly-colored types of trees in high definition.")
    'level-design-4
-   (read-prefix "with 3 world objects with customized position, tile, size, and/or hue.")
+   (read-prefix "3 world objects with customized position, tile, size, and/or hue.")
 
    
    ))
