@@ -9,10 +9,11 @@
          ASSET-PATH
          CURRENT-LANGUAGE
          FILTER-BY-COLLECTION
-         LANGUAGE-COLOR)
+         LANGUAGE-COLOR
+         LANGUAGE-SHAPE)
 
 (require pict
-         (only-in 2htdp/image image? image-width image-height)
+         (only-in 2htdp/image image? image-width image-height star triangle)
          (only-in pict/code codeblock-pict)
          (only-in game-engine animated-sprite? render)
          "../common.rkt"
@@ -20,6 +21,7 @@
          "./special-forms.rkt")
 
 (define LANGUAGE-COLOR (make-parameter "white"))
+(define LANGUAGE-SHAPE (make-parameter 'circle))
 
 (define (id->thing id)
   (dynamic-require (CURRENT-LANGUAGE) id))
@@ -190,10 +192,18 @@
 
     (flatten (map list fronts backs))))
 
+(define (has-sprite-in-id? id)
+  (string-contains? (~a id) "sprite"))
+
+(define (has-bg-in-id? id)
+  (string-contains? (~a id) "-BG"))
+
 (define (lang->asset-list l)
   (parameterize ([CURRENT-LANGUAGE l])
     (define ids 
-      (filter (resolves-to? animated-sprite?)
+      (filter (or/c (resolves-to? (or/c animated-sprite?))
+                    has-sprite-in-id?
+                    has-bg-in-id?)
               (get-asset-ids)))
     (define backs  (map id->back ids))
     (define fronts (map id->front ids))
@@ -263,10 +273,17 @@
         (colorize
           (vc-append (default-meta i)
                      (hc-append 3 
-                                (colorize
-                                  (filled-ellipse 10 10 )
-                                  (LANGUAGE-COLOR))
-                       (text (~a "(require " (CURRENT-LANGUAGE) ")")))
+                                (cond [(eq? (LANGUAGE-SHAPE) 'circle) (colorize
+                                                                       (filled-ellipse 10 10 )
+                                                                       (LANGUAGE-COLOR))]
+                                      [(eq? (LANGUAGE-SHAPE) 'square) (colorize
+                                                                       (filled-rectangle 10 10 )
+                                                                       (LANGUAGE-COLOR))]
+                                      [(eq? (LANGUAGE-SHAPE) 'triangle) (triangle 10 'solid (LANGUAGE-COLOR))]
+                                      [(eq? (LANGUAGE-SHAPE) 'star) (star 10 'solid (LANGUAGE-COLOR))]
+                                      [else (error "Not a valid language shape")])
+                                      
+                                (text (~a "(require " (CURRENT-LANGUAGE) ")")))
                      (text folder))
           "gray")))
 
