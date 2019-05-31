@@ -23,21 +23,21 @@
 @(render custom-skin-katas)
 
 @section{Food Katas}
-@(render food-katas)
+@(render food-and-crafter-katas)
 
-@section{Ore Katas}
-@(render ore-katas)
+@section{Mob & Entity Katas}
+@(render mob-and-entity-katas)
 
-@section{Mob Katas}
-@(render mob-katas)
+@section{Ore & Weapons Katas}
+@(render ore-and-weapon-crafter-katas)
 
-@section{Crafter Katas}
-@(render crafter-katas)
+@section{Biome Katas}
+@(render biome-and-sky-katas)
 
-@section{Extra Katas}
-@(render entity-katas)
-@(render biome-katas)
-@(render sky-katas)
+@;section{Extra Katas}
+@;(render entity-katas)
+@;(render biome-katas)
+@;(render sky-katas)
 
 @;(include-section ts-camp-materials/scribblings/half-day-schedule)
 @(include-section ts-camp-materials/scribblings/gameshow-minecraft)

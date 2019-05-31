@@ -5,7 +5,7 @@
 (require ts-kata-util/katas/main)
 
 (define (read-template noun)
-  (read (~a "Make a survival game with " noun)))
+  (read (~a "Code a game with " noun)))
 
 (define stimuli
   (list
@@ -25,85 +25,86 @@
    (read-template "an avatar with a custom sprite, speed, WASD key-mode, and 200 health and max-health.")
    
    'food-1
-   (read-template "an avatar and some custom food.")
+   (read-template "food.")
    'food-2
-   (read-template "an avatar and exactly two custom foods that heal you by 20.")
+   (read-template "exactly two custom foods that heal you by 20.")
    'food-3
-   (read-template "an avatar and exactly two apples that heal you by 20.")
+   (read-template "a couple apples with extra healing power.")
    'food-4
-   (read-template "an avatar, 2 apples (heals by 20 and respawns), and 1 cherry (heals by 50 and doesn't respawn).")
+   (read-template "2 different food types: common apples with low healing power and one very rare cherry with high healing power.")
    'food-5
-   (read-template "an avatar, 20 cherries that heal by 50, and a starvation rate of 100.")
+   (read-template "lots of cherries with high healing power but a very fast starvation rate.")
    'food-6
-   (read-template "an avatar, 10 cherries, 5 smores that heal by -10, and a carrot in the 4th tile that heals by 100 and doesn't respawn.")
+   (read-template "3 food types: common cherries, trick smores that deplete your health, and a single high-healing carrot that spawns, only once, on a specific tile.")
    
    'enemy-1
-   (read-template "an avatar and an enemy.")
+   (read-template "an enemy.")
    'enemy-2
-   (read-template "an avatar and 10  enemies.")
+   (read-template "10 random enemies.")
    'enemy-3
-   (read-template "an avatar and 5 bat enemies with medium AI.")
+   (read-template "5 bat enemies with medium AI.")
    'enemy-4
-   (read-template "an avatar, 5 easy slime enemies, and 5 medium bat enemies that only come out at night.")
+   (read-template "10 total mobs: half are not-smart slime, and half are smarter bats who only appear at night.")
    'enemy-5
-   (read-template "an avatar and 5 hard bat enemies that spit acid with 50 damage.")
+   (read-template "5 hard bat enemies that spit acid with 50 damage.")
    'enemy-6
-   (read-template "an avatar, 5 slimes with 'easy ai, 3 snakes with 'medium ai, and 1 bat with 'hard ai that only shows up at night and does 50 damage.")
+   (read-template "5 slimes with 'easy ai, 3 snakes with 'medium ai, and 1 bat with 'hard ai that only shows up at night and does 50 damage.")
 
    'coin-1
-   (read-template "an avatar and a basic collectable coin.")
+   (read-template "collectible coins.")
    'coin-2
-   (read-template "an avatar and a collectable coin worth 500.")
+   (read-template "very valuable collectible coins.")
    'coin-3
-   (read-template "an avatar and 20 silver coins worth 500.")
+   (read-template "many valuable silver coins.")
    'coin-4
-   (read-template "an avatar, a silver coin, and a single epic gold coin that never respawns and is worth 1000.")
+   (read-template "a silver coin, and a single, extremely valuable gold coin that only appears once.")
    'coin-5
-   (read-template "an avatar, a basic coin, 5 silver coins worth 500, and a single gold coin that never respawns and is worth 1000.")
+   (read-template "3 collectible coins: a basic coin; a rarer, more valuable silver coin; and an extremely rare and valuable gold coin.")
 
    'crafter-1
-   (read-template "an avatar and a basic crafter.")
+   (read-template "a basic crafter.")
    'crafter-2
-   (read-template "an avatar, carrots, and a crafter that makes carrot stew from carrots.")
+   (read-template "carrots, and a crafter that makes carrot stew from carrots.")
    'crafter-3
-   (read-template "an avatar, fish, and a crafter that makes fish stew that heals you by 50.")
+   (read-template "fish, and a crafter that makes fish stew with high healing power.")
    'crafter-4
-   (read-template "an avatar, carrots, fish, and a crafter on tile 2 (posn 200 200) that makes both carrot-stew and fish-stew.")
+   (read-template "carrots, fish, and a crafter on tile 2 (posn 200 200) that makes both carrot-stew and fish-stew.")
    
    'sky-1
-   (read-template "an avatar and a slow changing sky.")
+   (read-template "a very long day/night cycle.")
    'sky-2
-   (read-template "an avatar and a fast changing sky with max-darkness.")
+   (read-template "a short day/night cycle where it gets pitch-black at midnight.")
    'sky-3
-   (read-template "an avatar and a darkmagenta night-sky with 150 darkness.")
+   (read-template "a custom-colored night sky with a moderately-dark midnight.")
    'sky-4
-   (read-template "an avatar, a very short night-time, and an enemy that only comes out at night.")
+   (read-template "a long day and a very short night, and an enemy that only comes out at night.")
+
 
    'starvation-rate
    (read-template "an avatar and the fastest starvation rate.")
 
    'npc-1
-   (read-template "an avatar and a basic npc.")
+   (read-template "a basic npc.")
    'npc-2
-   (read-template "an avatar and a witch npc with a name.")
+   (read-template "a named witch npc.")
    'npc-3
-   (read-template "an avatar and a witch npc with a name, starting tile, and follow mode.")
+   (read-template "an npc with custom dialog.")
    'npc-4
-   (read-template "an avatar and an npc with custom dialog.")
+   (read-template "a witch npc who follows you. Give them a name and a specific start tile.")
    'npc-5
-   (read-template "an avatar and two npcs with custom dialog and two other customizations.")
+   (read-template "2 npcs with custom dialog and two additional customizations each.")
 
    'bg-1
-   (read-template "an avatar and a custom background.")
+   (read-template "a custom background.")
    'bg-2
-   (read-template "an avatar and a desert background.")
+   (read-template "a desert background.")
    'bg-3
-   (read-template "an avatar and a lava background with a 2 by 2 grid.")
+   (read-template "a lava background with a 2 by 2 grid.")
    'bg-4
-   (read-template "an avatar and a lava background with a 2 by 2 grid that starts on tile 3.")
+   (read-template "a lava background with a 2 by 2 grid that starts on tile 3.")
 
    'level-design-1
-   (read-template "a forest background filled with trees.")   
+   (read-template "a forest background with world objects.")   
    'level-design-2
    (read-template "a forest background filled with high definition trees.")   
    'level-design-3
@@ -112,10 +113,10 @@
    (read-template "3 world objects with customized position, tile, size, and/or hue.")
 
    'weapon-crafter-1
-   (read-template "an avatar and a crafter that makes swords.")
+   (read-template "a crafter that builds swords.")
    'weapon-crafter-2
-   (read-template "an avatar and a crafter that makes a Heavy Sword with 100 damage.")
+   (read-template "a crafter that slowly builds a high-damage sword.")
    'weapon-crafter-3
-   (read-template "an avatar, coins, and a crafter that makes fire-magic with speed 5 and needs 100 gold to build.")
+   (read-template "coins, and a wood table crafter that quickly builds faster fire-magic for 100 gold.")
 
    ))
