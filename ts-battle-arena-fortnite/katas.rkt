@@ -54,10 +54,10 @@
   homing-repeater-katas)
 
 (define-kata-collection selected-weapon-katas
-  (first (kata-collection-katas sword-katas))
+  ;(first (kata-collection-katas sword-katas))
   (second (kata-collection-katas spear-katas))
   (third (kata-collection-katas fire-magic-katas))
-  (fourth (kata-collection-katas fire-magic-katas))
+  ;(fourth (kata-collection-katas fire-magic-katas))
   (second (kata-collection-katas single-shot-katas))
   (second (kata-collection-katas spread-shot-katas))
   (second (kata-collection-katas homing-repeater-katas)))

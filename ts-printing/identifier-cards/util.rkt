@@ -75,13 +75,12 @@
     programs   
     (do-collection-filter programs)))
 
-(define (get-asset-ids (path 
-                         (or
-                           (ASSET-PATH)
-                           (string->symbol (~a (CURRENT-LANGUAGE) "/assets")))))
+(define (get-asset-ids [path (or
+                              (ASSET-PATH)
+                              (string->symbol (~a (CURRENT-LANGUAGE) "/assets")))])
   (dynamic-require path #f)
   
-  (define-values (vars stxs) 
+  (define-values (vars stxs)
     (module->exports path))
 
   (map first

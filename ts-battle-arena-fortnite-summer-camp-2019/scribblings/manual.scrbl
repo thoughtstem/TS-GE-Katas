@@ -35,15 +35,15 @@
 @section{Tower Katas}
 @(render selected-tower-katas)
 
-@section{Extra Katas}
-@(render background-katas)
-@(render level-design-katas)
-@(render force-field-katas)
-@(render lava-pit-katas)
-@(render spike-mine-katas)
-@(render armor-katas)
-@(render dagger-tower-katas)
-@(render rocket-tower-katas)
+@;section{Extra Katas}
+@;(render background-katas)
+@;(render level-design-katas)
+@;(render force-field-katas)
+@;(render lava-pit-katas)
+@;(render spike-mine-katas)
+@;(render armor-katas)
+@;(render dagger-tower-katas)
+@;(render rocket-tower-katas)
 
 @;(include-section ts-camp-materials/scribblings/half-day-schedule)
 @(include-section ts-camp-materials/scribblings/gameshow-fortnite)

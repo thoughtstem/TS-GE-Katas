@@ -14,16 +14,15 @@
   (second (kata-collection-katas shield-katas))
   (first (kata-collection-katas boost-katas))
   (second (kata-collection-katas boost-katas))
-  (first (kata-collection-katas size-katas))
-  (second (kata-collection-katas size-katas))
-  )
+  (first (kata-collection-katas size-katas)))
 
 (define-kata-collection selected-tower-katas
   (kata-collection-katas spear-tower-katas)
-  (kata-collection-katas repeater-tower-katas))
+  (drop (kata-collection-katas repeater-tower-katas) 1))
 
 (define-kata-collection selected-enemy-katas
   (first (kata-collection-katas enemy-katas))
   (third (kata-collection-katas enemy-katas))
   (fourth (kata-collection-katas enemy-katas))
-  (kata-collection-katas enemy-weapon-katas))
+  (first (kata-collection-katas enemy-weapon-katas))
+  (third (kata-collection-katas enemy-weapon-katas)))
