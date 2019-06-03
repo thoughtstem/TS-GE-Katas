@@ -117,6 +117,6 @@
    'weapon-crafter-2
    (read-template "a crafter that slowly builds a high-damage sword.")
    'weapon-crafter-3
-   (read-template "coins, and a wood table crafter that quickly builds faster fire-magic for 100 gold.")
+   (read-template "coins, and a wood table crafter that instantly builds fast-moving fire-magic for 100 gold.")
 
    ))
