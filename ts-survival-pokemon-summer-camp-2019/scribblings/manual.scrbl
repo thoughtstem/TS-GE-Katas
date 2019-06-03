@@ -31,7 +31,7 @@
 @section{Friend & Trainer Katas}
 @(render friend-and-trainer-katas)
 
-@section{Town Katas}
+@section{Town & Sky Katas}
 @(render town-level-and-sky-katas)
 
 @;section{Extra Katas}

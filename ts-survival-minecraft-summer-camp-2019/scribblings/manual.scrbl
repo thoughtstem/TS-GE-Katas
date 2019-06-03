@@ -31,7 +31,7 @@
 @section{Ore & Weapons Katas}
 @(render ore-and-weapon-crafter-katas)
 
-@section{Biome Katas}
+@section{Biome & Sky Katas}
 @(render biome-and-sky-katas)
 
 @;section{Extra Katas}
