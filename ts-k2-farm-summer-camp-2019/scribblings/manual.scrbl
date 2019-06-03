@@ -21,10 +21,10 @@
 @section{Food Katas}
 @(render day-one)
 
-@section{Coin Katas}
+@section{Food & Coin Katas}
 @(render day-two)
 
-@section{More Coin Katas}
+@section{Coin Katas}
 @(render day-three)
 
 @section{Enemy Katas}
