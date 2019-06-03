@@ -18,7 +18,7 @@
   (take (drop (kata-collection-katas farm) 13) 6))
 
 (define-kata-collection day-four
-  (take (drop (kata-collection-katas farm) 17) 6))
+  (take (drop (kata-collection-katas farm) 19) 6))
 
 (define-kata-collection day-five
   (drop (kata-collection-katas farm) 25)) 
