@@ -59,7 +59,7 @@
    'fire-magic-2
    (read-prefix "that has fire magic with 20 damage.")
    'fire-magic-3
-   (read-prefix "a more powerful, faster fire magic that has a high rarity. Customize the icon and the name.")
+   (read-prefix "a powerful, fast fire magic that has a high rarity. Customize the icon and the name.")
    'fire-magic-4
    (read-prefix "that has a 'legendary fire magic with a customized sprite, damage, speed, and range.")
 
@@ -79,7 +79,7 @@
    'avatar-2
    (read-prefix "a constructor as the avatar.")
    'avatar-3
-   (read-prefix "a fast-moving ninja as the hero that has a large backpack, and different movement keys.")
+   (read-prefix "a fast-moving ninja with a large backpack whom you control with the arrow keys.")
    'avatar-4
    (read-prefix "a fast-moving pirate, a large backpack, and double the health and shield values.")
 
@@ -88,11 +88,11 @@
    'enemy-2
    (read-prefix "10 random enemies")
    'enemy-3
-   (read-prefix "several Dark knight enemies who are challenging to defeat.")
+   (read-prefix "several dark knight enemies with moderate intelligence.")
    'enemy-4
-   (read-prefix "8 enemies: 5 weak with easy ai, and 3 strong with medium ai. Choose your own sprites.")
+   (read-prefix "8 enemies: 5 weak with low intelligence, and 3 strong with moderate intelligence. Choose your own sprites.")
    'enemy-5
-   (read-prefix "that has 5 'hard pirategirl enemies using a custom-weapon with 50 damage.")
+   (read-prefix "that has 5 'hard pirate girl enemies using a custom-weapon with 50 damage.")
    
 
    'magic-balance-1
@@ -130,7 +130,7 @@
    'spike-mine-1
    (read-prefix "a spike mine.")   
    'spike-mine-2
-   (read-prefix "a spike mine that uses fast, long ranged darts.")
+   (read-prefix "a spike mine that uses fast, long-ranged darts.")
    'spike-mine-3
    (read-prefix "that has a weapon that deploys a spike mine with a large range and speed, high damage, and custom sprite.")
 
@@ -138,9 +138,9 @@
    'spear-tower-1
    (read-prefix "a spear tower.")
    'spear-tower-2
-   (read-prefix "a tower that shoots faster spears that have a longer range.")
+   (read-prefix "a tower that shoots fast, long-ranged spears.")
    'spear-tower-3
-   (read-prefix "a tower that shoots faster, more powerful, gold-colored spears that have a longer range.")
+   (read-prefix "a tower that shoots fast, powerful, gold-colored spears that have a long range.")
 
 
    'enemy-weapon-1
@@ -148,7 +148,7 @@
    'enemy-weapon-2
    (read-prefix "that has an enemy, give it a custom weapon and customize it.")   
    'enemy-weapon-3
-   (read-prefix "an enemy that uses a weak and slow repeater that shoots long ranged darts.")
+   (read-prefix "an enemy that uses a weak and slow repeater that shoots long-ranged darts.")
 
      
    'repeater-armor-1
@@ -178,9 +178,9 @@
    'repeater-tower-1
    (read-prefix "that has a weapon that deploys a Repeater Tower.")
    'repeater-tower-2
-   (read-prefix "a tower that shoots fast-moving darts at a faster rate.")
+   (read-prefix "a tower that quickly shoots fast-moving darts.")
    'repeater-tower-3
-   (read-prefix "a tower that shoots very powerful, fast-moving, long-range darts at a very slow rate.")
+   (read-prefix "a tower that shoots extremely powerful, fast-moving, long-ranged darts at a very slow rate.")
 
 
    'dagger-tower-1
@@ -194,7 +194,7 @@
    'single-shot-1
    (read-prefix "a weapon that fires only once each click.")
    'single-shot-2
-   (read-prefix "a more powerful, faster repeater that shoots a single dart with a medium range. Customize the icon and the name.")
+   (read-prefix "a powerful, fast repeater that shoots a single dart with a medium range. Customize the icon and the name.")
    'single-shot-3
    (read-prefix "a 'rare single-shot weapon that fires a dart with customized sprite, damage, speed, and range.")
 
@@ -202,7 +202,7 @@
    'spread-shot-1
    (read-prefix "a spread-shot weapon.")
    'spread-shot-2
-   (read-prefix "a more powerful, faster repeater that shoots multiple darts. Customize the name and the icon.")
+   (read-prefix "a powerful, fast repeater that shoots multiple darts. Customize the name and the icon.")
    'spread-shot-3
    (read-prefix "a 'rare spread-shot weapon that fires darts with customized sprite, damage, durability, and speed.")
 
@@ -210,13 +210,13 @@
    'homing-repeater-1
    (read-prefix "a weapon that fires homing darts.")
    'homing-repeater-2
-   (read-prefix "a more powerful, slower repeater that shoots homing darts. Customize the name and the icon.")
+   (read-prefix "a powerful, slow repeater that shoots homing darts. Customize the name and the icon.")
    'homing-repeater-3
-   (read-prefix "a 'rare weapon that fires homing darts with customized sprite, damage, speed, and range.")
+   (read-prefix "a rare weapon that fires homing darts with customized sprite, damage, speed, and range.")
 
 
    'size-1
-   (read-prefix "a \"Grow Power-up\" item that makes you bigger and customize the icon.")
+   (read-prefix "a \"Grow Power-up\" item that makes you bigger. Customize the icon.")
    'size-2
    (read-prefix "an item that makes you shrink, name it and customize the icon.")
    'size-3
@@ -232,9 +232,9 @@
 
 
    'boost-1
-   (read-prefix "a \"Damage Boost\" item that temporarily increases the damage of your weapon and customize the icon.")
+   (read-prefix "a \"Damage Boost\" item that temporarily increases the damage of your weapon. Customize the icon.")
    'boost-2
-   (read-prefix "a \"Speed Boost\" item that temporarily boosts your speed and customize the icon.")
+   (read-prefix "a temporary \"Speed Boost\" item with a custom icon.")
    'boost-3
    (read-prefix "that has both a Damage and a Speed Boost defined items.")
 
@@ -242,7 +242,7 @@
    'shield-1
    (read-prefix "that has an item that increases your shield by 50.")
    'shield-2
-   (read-prefix "a \"Max Shield Power-up\" item that sets your shield to 100 and customize the icon.")
+   (read-prefix "a \"Max Shield Power-up\" item that sets your shield to 100. Customize the icon.")
    'shield-3
    (read-prefix "that has both a Shield and Max Shield defined items.")
    
@@ -250,7 +250,7 @@
    'force-field-1
    (read-prefix "a \"Force Field\" item.")
    'force-field-2
-   (read-prefix "a \"Force Field\" item that has a custom duration and customize the icon.")
+   (read-prefix "a \"Force Field\" item that has a custom duration. Customize the icon.")
    'force-field-3
    (read-prefix "a \"Force Field\" item that has a custom icon. Customize the duration and allow the player to shoot out of it.")
 

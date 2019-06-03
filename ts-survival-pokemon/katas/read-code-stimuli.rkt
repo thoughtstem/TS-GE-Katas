@@ -20,9 +20,9 @@
    'avatar-3
    (read-template "a fast Charmander as your playable character.")
    'avatar-4
-   (read-template "a faster Armored Mewtwo whom you control with the WASD keys.")
+   (read-template "a fast Armored Mewtwo whom you control with the WASD keys.")
    'avatar-5
-   (read-template "a faster, stronger Pokemon whom you control with the WASD keys. Choose any sprite.")
+   (read-template "a fast, strong Pokemon whom you control with the WASD keys. Choose any sprite.")
  
 
    'coin-1
@@ -43,9 +43,9 @@
    'enemy-3
    (read-template "5 James with medium AI.")
    'enemy-4
-   (read-template "5 very smart Red Girl trainers armed with high-damage pokeballs.")
+   (read-template "5 highly intelligent Red Girl trainers armed with high-damage pokeballs.")
    'enemy-5
-   (read-template "10 total trainers: half are moderately intelligent Green Boy trainers, and half are very smart Team Rocket trainers who only appear at night.")
+   (read-template "10 total trainers: half are moderately intelligent Green Boy trainers, and half highly intelligent smart Team Rocket trainers who only appear at night.")
    'enemy-6
    (read-template "5 Green Boy trainers with 'easy ai, 3 Red Girl trainers with 'medium ai, and Team Rocket trainer with 'hard ai that only shows up at night and does 50 damage.")
 

@@ -19,7 +19,7 @@
    'avatar-2
    (read-prefix "Thor as the hero.")
    'avatar-3
-   (read-prefix "a fast-moving Hulk as the hero.")
+   (read-prefix "a fast-moving Hulk hero.")
    'avatar-4
    (read-prefix "a fast-moving Drax hero, a large backpack, and double the health and shield values.")
 
@@ -29,35 +29,35 @@
    'background-2
    (read-prefix "a lava planet.")
    'background-4
-   (read-prefix "a high definition lava planet, fewer tiles, and different starting tile.")
+   (read-prefix "a high-definition lava planet, fewer tiles, and different starting tile.")
 
 
    'level-design-1
    (read-prefix "a forest planet that has world objects.")
    'level-design-3
-   (read-prefix "a pink planet that has two randomly-colored types of trees in high definition.")
+   (read-prefix "a pink planet that has 2 randomly-colored types of trees in high-definition.")
 
    
    'enemy-1
    (read-prefix "a villain.")
    'enemy-3
-   (read-prefix "several Loki villains who are challenging to defeat, that have double heatlh and shield.")
+   (read-prefix "several moderately intelligent Loki villains and have double health and shield.")
    'enemy-4
-   (read-prefix "8 enemies: 5 weak with easy ai, and 3 strong with hard ai. Choose your own sprites.")
+   (read-prefix "8 enemies: 5 weak with low intellegence, and 3 strong with high intellence. Choose your own sprites.")
 
    
    'enemy-weapon-1
    (read-prefix "a villain that uses an energy blast of a custom color.")
    'enemy-weapon-3
-   (read-prefix "Mandarin as the villain that uses a more powerful, faster, custom colored ring of fire that lasts longer.")
+   (read-prefix "Mandarin as the villain who uses a powerful, fast, custom-colored ring of fire that lasts a while.")
 
    
    'power-2
-   (read-prefix "a more powerful, custom colored energy blast.")
+   (read-prefix "a powerful, custom-colored energy blast.")
    'power-3
-   (read-prefix "more powerful, faster, custom colored star bit with high rarity.")
+   (read-prefix "powerful, fast, custom-colored star bit with high rarity.")
    'power-4
-   (read-prefix "2 weapons: 1 powerful, faster magic orb with spread and single-click shooting mode; and 1 powerful, faster hammer with a custom color and high rarity.")
+   (read-prefix "2 weapons: 1 powerful, fast magic orb with spread and single-click shooting mode; and 1 powerful, fast hammer with a custom color and high rarity.")
 
    'boost-1
    (read-prefix "a \"Damage Boost\" item that temporarily increases the damage of your power and customize the icon.")
@@ -65,9 +65,9 @@
    
    
    'drone-2
-   (read-prefix "an energy drone that uses a spread shot energy blast of a custom color.")
+   (read-prefix "an energy drone that uses a spread-shot energy blast of a custom color.")
    'drone-3
-   (read-prefix "an energy drone that uses a more powerful, faster-shooting, homing energy blast of a custom color.")
+   (read-prefix "an energy drone that uses a powerful, fast-shooting, homing energy blast of a custom color.")
 
 
    'armor-1

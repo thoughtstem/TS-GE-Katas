@@ -21,7 +21,7 @@
    'avatar-4
    (read-template "a fast, Alex-skinned hero.")
    'avatar-5
-   (read-template "a faster Steve-skinned avatar whom you control with the WASD keys.")
+   (read-template "a fast Steve-skinned avatar whom you control with the WASD keys.")
    'avatar-6
    (read-template "a fast, stronger hero whom you control with the WASD keys. Choose any sprite.")
   
