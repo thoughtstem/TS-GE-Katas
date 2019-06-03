@@ -163,22 +163,22 @@
                  [FRONT-BG-COLOR    googly-red]
                  [FRONT-FG-COLOR clear-white]
                  [FRONT-TITLE    (title "(skin)")]) 
-               ((collection-apply (curryr try-take 5) food-katas) 
+               ((collection-apply (curryr try-take 5) food-and-crafter-katas) 
                  [FRONT-BG-COLOR    googly-orange]
                  [FRONT-FG-COLOR clear-white]
                  [FRONT-TITLE    (title "(food)")]) 
-               ((collection-apply (curryr try-take 5) ore-katas )
+               ((collection-apply (curryr try-take 5) mob-and-entity-katas )
                  [FRONT-BG-COLOR    googly-yellow]
                  [FRONT-FG-COLOR clear-white]
-                 [FRONT-TITLE    (title "(ore)")]) 
-               ((collection-apply (curryr try-take 5) mob-katas)
+                 [FRONT-TITLE    (title "(mob)")]) 
+               ((collection-apply (curryr try-take 5) ore-and-weapon-crafter-katas)
                  [FRONT-BG-COLOR    googly-green]
                  [FRONT-FG-COLOR clear-white]
-                 [FRONT-TITLE    (title "(mob)")]) 
-               ((collection-apply (curryr try-take 5) crafter-katas)
+                 [FRONT-TITLE    (title "(ore)")]) 
+               ((collection-apply (curryr try-take 5) biome-and-sky-katas)
                  [FRONT-BG-COLOR    googly-blue]
                  [FRONT-FG-COLOR clear-white]
-                 [FRONT-TITLE    (title "(crafter)")]))))
+                 [FRONT-TITLE    (title "(biome)")]))))
 
 (define (ts-survival-pokemon-summer-camp-2019->Desktop)
   (local-require ts-survival-pokemon-summer-camp-2019/katas)
@@ -189,22 +189,22 @@
                 [FRONT-BG-COLOR googly-red]
                 [FRONT-FG-COLOR clear-white]
                 [FRONT-TITLE    (title "(pokemon)")]) 
-               ((collection-apply (curryr try-take 5) food-katas )
+               ((collection-apply (curryr try-take 5) food-and-crafter-katas )
                 [FRONT-BG-COLOR    googly-orange]
                 [FRONT-FG-COLOR clear-white]
                 [FRONT-TITLE    (title "(food)")]) 
-               ((collection-apply (curryr try-take 5) trainer-katas )
+               ((collection-apply (curryr try-take 5) stone-katas )
                 [FRONT-BG-COLOR    googly-yellow]
                 [FRONT-FG-COLOR clear-white]
-                [FRONT-TITLE    (title "(trainer)")]) 
-               ((collection-apply (curryr try-take 5) crafter-katas )
+                [FRONT-TITLE    (title "(stone)")]) 
+               ((collection-apply (curryr try-take 5) friend-and-trainer-katas )
                 [FRONT-BG-COLOR    googly-green] 
                 [FRONT-FG-COLOR clear-white]
-                [FRONT-TITLE    (title "(crafter)")]) 
-               ((collection-apply (curryr try-take 5) friend-katas ) 
+                [FRONT-TITLE    (title "(friend)")]) 
+               ((collection-apply (curryr try-take 5) town-level-and-sky-katas ) 
                 [FRONT-BG-COLOR    googly-blue]
                 [FRONT-FG-COLOR clear-white]
-                [FRONT-TITLE    (title "(friend)")]) )))
+                [FRONT-TITLE    (title "(town)")]) )))
 
 ;----- ADVENTURE
 #|(define (ts-adventure-asp-2019->Desktop)

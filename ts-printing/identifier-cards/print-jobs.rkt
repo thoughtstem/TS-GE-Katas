@@ -3,7 +3,7 @@
 (require "./main.rkt"
          ts-kata-util/katas/main)
 
-(define (battlearena->Desktop)
+#|(define (battlearena->Desktop)
   (local-require ts-battle-arena-asp-2019/katas)
 
   (begin-identifier-job "battlearena"
@@ -89,7 +89,7 @@
   (battlearena-starwars->Desktop)
   (survival-minecraft->Desktop)
   (survival-pokemon->Desktop))
-
+|#
 
 #;
 (all->Desktop)
