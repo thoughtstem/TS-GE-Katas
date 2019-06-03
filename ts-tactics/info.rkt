@@ -1,6 +1,6 @@
 #lang info
 (define collection "ts-tactics")
-(define deps '("base"))
+(define deps '("base" "pprint"))
 (define build-deps '("scribble-lib" "racket-doc" "rackunit-lib"))
 (define scribblings '(("scribblings/ts-tactics.scrbl" ())))
 (define pkg-desc "Description Here")

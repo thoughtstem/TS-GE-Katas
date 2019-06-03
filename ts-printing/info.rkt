@@ -3,7 +3,6 @@
 (define collection "ts-printing")
 
 (define deps '("base"
-               "pprint"
                "ts-kata-util"
                "ts-battle-arena"
                "ts-battle-arena-asp-2019"
