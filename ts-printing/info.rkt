@@ -3,6 +3,7 @@
 (define collection "ts-printing")
 
 (define deps '("base"
+               "pprint"
                "ts-kata-util"
                "ts-battle-arena"
                "ts-battle-arena-asp-2019"
@@ -18,7 +19,6 @@
                "ts-k2-sea-summer-camp-2019"
                "ts-k2-hero-summer-camp-2019"
                "ts-k2-zoo-summer-camp-2019"
-               pprint
                ))
 
 (define build-deps '("scribble-lib" "racket-doc" "rackunit-lib"))
