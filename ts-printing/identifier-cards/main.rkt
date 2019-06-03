@@ -15,6 +15,7 @@
 (require pict
          (only-in 2htdp/image image? image-width image-height star triangle)
          (only-in pict/code codeblock-pict)
+         (only-in racket/draw make-color)
          (only-in game-engine animated-sprite? render)
          "../common.rkt"
          "./util.rkt"
@@ -84,7 +85,7 @@
   (define thing (id->thing id))
   (define arity (procedure-arity thing)) 
   (define-values 
-    (req-kws kws)   (procedure-keywords thing)) 
+    (req-kws kws)   (procedure-keywords thing))
 
   (define kw-dummies
     (apply ~a
@@ -261,6 +262,16 @@
                          2))))
     ...))
 
+(define (make-rounded-icon pict)
+  (inset/clip
+   (cc-superimpose
+    (filled-rounded-rectangle 16 16 -0.25
+                              #:color "DimGray" ;(make-color 128 128 128)
+                              #:border-color "Black"
+                              )
+    pict
+    ) 2))
+
 (define-syntax-rule (begin-asset-job folder
                                      (lang [k v] ...)
                                      ...)
@@ -274,13 +285,13 @@
           (vc-append (default-meta i)
                      (hc-append 3 
                                 (cond [(eq? (LANGUAGE-SHAPE) 'circle) (colorize
-                                                                       (filled-ellipse 10 10 )
+                                                                       (make-rounded-icon (filled-ellipse 10 10 ))
                                                                        (LANGUAGE-COLOR))]
                                       [(eq? (LANGUAGE-SHAPE) 'square) (colorize
-                                                                       (filled-rectangle 10 10 )
+                                                                       (make-rounded-icon (filled-rectangle 10 10 ))
                                                                        (LANGUAGE-COLOR))]
-                                      [(eq? (LANGUAGE-SHAPE) 'triangle) (triangle 10 'solid (LANGUAGE-COLOR))]
-                                      [(eq? (LANGUAGE-SHAPE) 'star) (star 10 'solid (LANGUAGE-COLOR))]
+                                      [(eq? (LANGUAGE-SHAPE) 'triangle) (make-rounded-icon (triangle 10 'solid (LANGUAGE-COLOR)))]
+                                      [(eq? (LANGUAGE-SHAPE) 'star) (make-rounded-icon (star 8 'solid (LANGUAGE-COLOR)))]
                                       [else (error "Not a valid language shape")])
                                       
                                 (text (~a "(require " (CURRENT-LANGUAGE) ")")))

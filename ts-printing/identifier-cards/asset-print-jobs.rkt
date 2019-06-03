@@ -24,21 +24,8 @@
                       [LANGUAGE-COLOR "black"])
                    )
 
-  #;(begin-asset-job "base-asset-cards"
-                   (battlearena
-                     [LANGUAGE-COLOR "black"]
-                     [LANGUAGE-SHAPE 'square])
-                   (survival
-                     [LANGUAGE-COLOR "black"]
-                     [LANGUAGE-SHAPE 'star])
-                   (adventure
-                     [LANGUAGE-COLOR "black"]
-                     [LANGUAGE-SHAPE 'triangle]))
-
   (begin-asset-job "battlearena-asset-cards"   ;square or light red box
-                   (battlearena
-                     [LANGUAGE-COLOR "black"]
-                     [LANGUAGE-SHAPE 'square])
+                   
                    (battlearena-fortnite
                      [LANGUAGE-COLOR "red"]
                      [LANGUAGE-SHAPE 'square])
@@ -52,9 +39,7 @@
                    
 
   (begin-asset-job "survival-asset-cards"       ;star or light green box
-                   (survival
-                     [LANGUAGE-COLOR "black"]
-                     [LANGUAGE-SHAPE 'star])
+                   
                    (survival-minecraft
                      [LANGUAGE-COLOR "green"]
                      [LANGUAGE-SHAPE 'star])
@@ -64,9 +49,7 @@
                    )
 
   (begin-asset-job "adventure-asset-cards"     ;triangle or light blue box
-                   (adventure
-                     [LANGUAGE-COLOR "black"]
-                     [LANGUAGE-SHAPE 'triangle])
+                   
                    (adventure-harrypotter
                      [LANGUAGE-COLOR "cyan"]
                      [LANGUAGE-SHAPE 'triangle])
