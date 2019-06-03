@@ -11,83 +11,83 @@
   (list
 
    'hello-world-1
-   (read "Make an Mario game")
+   (read "Code a basic Mario game.")
 
    ;Character Stimuli
    'avatar-1
-   (read-prefix "with a character. Customize the speed.")
+   (read-prefix "with a fast Mario as your playable character.")
 
    'avatar-2
-   (read-prefix "with a strong and fast character.")
+   (read-prefix "with a strong, fast Luigi character.")
 
    'avatar-3
-   (read-prefix "with a fast character and an intro cutscene. Customize the cutscene with a sprite and some text.")
+   (read-prefix "with a fast Princess Peach and an intro cutscene. Customize the cutscene with a sprite and some text.")
 
    'avatar-4
-   (read-prefix "with a character and an into cutscene. Customize the cutscene with two pages: one with some text and another with a sprite and some text.")
+   (read-prefix "with Toad and an intro cutscene. Customize the cutscene with two pages: the 1st with text and the 2nd with a sprite and text.")
 
    ;Coin Stimuli
    'coin-1
-   (read-prefix "with 20 gold coins that do not respawn. Make each coin worth 100.")
+   (read-prefix "with 20 vaulable gold coins that do not respawn.")
 
    'coin-2
-   (read-prefix "with a copper, silver, and gold coin. Make the coins worth 1, 25, and 50 respectively.")
+   (read-prefix "with cheap copper coins, more valuable silver coins, and very valuable gold coins.")
 
    'coin-3
-   (read-prefix "with a trick gold coin that doesn't respawn. Make the coin worth -1000 and when it's picked up it spawns an enemy.")
+   (read-prefix "with a very rare, trick gold coin. Make the coin worth -1000 and spawn an enemy when picked up.")
 
    'coin-4
-   (read-prefix "with a valuable gold coin that doesn't respawn. When the coin is picked up spawn a cutscene with a gold coin and some text.")
+   (read-prefix "with a extremely rare and valuable gold coin. When the coin is picked up, spawn a cutscene with a gold coin and some text.")
 
    'coin-5
-   (read-prefix "with 15 coins that do not respawn and an npc with a coin collect quest. In the quest the player has to collect 100 worth of coins for a reward.")
+   (read-prefix "with 15 coins that do not respawn and an NPC with a collect quest where you have to collect 100 points for a reward.")
 
    ;Level Design Stimuli
    'level-design-1
-   (read-prefix "with a forest level.")
+   (read-prefix "with a forest level that has world objects.")
 
    'level-design-2
-   (read-prefix "with a candy level that has a pink brackground and two types of randomly colored, HD trees.")
+   (read-prefix "with a candy level and 2 types of randomly-colored, high-definition trees.")
 
    'level-design-3
-   (read-prefix "with an HD forest level and some HD bricks and fences.")
+   (read-prefix "with a forest level filled with bricks and fences. Make everything high-definition.")
 
    'level-design-4
-   (read-prefix "with an intro cutscene and a Mario in a desert with HD blocks and pipes. Give the cutscene two pages, each with some text and one with a Mario.")
+   (read-prefix "with Mario and a desert level filled with high-definition blocks and pipes. Add an intro cutscene with two pages.")
 
    'level-design-5
-   (read-prefix "with a big question block, a brick house, and a low quality pipe all at set positions and set tiles. Make the hue of the brick house random.")
+   (read-prefix "with a big question block, a randomly-colored brick house, and a low-quality pipe. Manually set positions and tiles of all these entities.")
 
    ;Fetch Quest Stimuli
    'fetch-quest-1
-   (read-prefix "with an NPC with a fetch quest and a lost Yoshi NPC. The quest is to find Yoshi.")
+   (read-prefix "with an NPC who has a fetch quest to find their lost Yoshi.")
 
    'fetch-quest-2
-   (read-prefix "with an NPC with a fetch quest and a lost Cheep NPC. Give the quest an ending cutscene with the Cheep and some text.")
+   (read-prefix "with an NPC who has a quest to find their lost Cheep. Give the quest an ending cutscene including the Cheep and some text.")
 
    'fetch-quest-3
-   (read-prefix "with a green muchroom, a red mushroom, and an NPC with a fetch quest that has two quests. The quests are to find and return the muchrooms.")
+   (read-prefix "with an NPC who has two quests. The quests are to find and return 2 different mushrooms.")
 
    'fetch-quest-4
-   (read-prefix "with a lost Goomba and an NPC with a fetch quest who's dialog changes once the quest is complete.")
+   (read-prefix "with an NPC who has a quest to find their lost Goomba. The NPC's dialog changes once the quest is complete.")
 
    'fetch-quest-5
-   (read-prefix "with a Lakitu with a fetch quest and a lost Spiny item. Give the Spiny a pickup and drop cutscene. The drop cutscene only happens if it is dropped away from Lakitu. Give the quest a big reward and an ending cutscene.")
+   (read-prefix "with a Lakitu NPC who has a high-reward quest to find their lost Spiny. Give the Spiny pickup and drop cutscenes (the drop cutscene only happens if dropped away from Lakitu).")
 
    ;Enemy Stimuli
    'enemy-1
-   (read-prefix "with 10 strong, nocturnal enemies.")
+   (read-prefix "with 10 strong, nocturnal enemies with low intelligence.")
 
    'enemy-2
-   (read-prefix "with 4 dumb Goomba, 2 average Piranha, and a smart nocturnal Bowser.")
+   (read-prefix "with 4 low intelligence Goomba, 2 moderately intelligent Piranha, and a highly intelligent, nocturnal Bowser.")
 
    'enemy-3
-   (read-prefix "with a spear, some easy enemies, and 3 hard enemies that drop gold coins.")
+   (read-prefix "with a spear and 3 highly intelligent enemies that drop gold coins.")
 
    'enemy-4
-   (read-prefix "with a Princess Peach, a spear, a game over cutscene, and 3 hard enemies that shoot fireballs. Give the game over cutscene a downward facing Peach and some text.")
+   (read-prefix "with Princess Peach, a spear, and 3 hard enemies that shoot fireballs. Include a creative game over cutscene.")
 
    'enemy-5
-   (read-prefix "with an NPC with a hunt quest, a game over cutscene, a fireball powerup, and 10 random enemies. The quest is to hunt enemies and the reward is 50 coins and a sword.")
+   (read-prefix "with an NPC who has a high-reward quest to slay all enemies. Include 10 random enemies, a fireball powerup, and a game over cutscene.")
    
 ))
