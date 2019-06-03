@@ -18,7 +18,6 @@
                "ts-k2-sea-summer-camp-2019"
                "ts-k2-hero-summer-camp-2019"
                "ts-k2-zoo-summer-camp-2019"
-               pprint
                ))
 
 (define build-deps '("scribble-lib" "racket-doc" "rackunit-lib"))
