@@ -13,7 +13,8 @@
          LANGUAGE-SHAPE)
 
 (require pict
-         (only-in 2htdp/image image? image-width image-height star triangle)
+         (only-in 2htdp/image image? image-width image-height star triangle overlay)
+         (prefix-in 2h: (only-in 2htdp/image rectangle))
          (only-in pict/code codeblock-pict)
          (only-in racket/draw make-color)
          (only-in game-engine animated-sprite? render)
@@ -48,6 +49,12 @@
   (back-side
    (special-image-for id)))
 
+(define (pad image amt)
+    (overlay image
+             (2h:rectangle (+ (* 2 amt) (image-width image))
+                           (+ (* 2 amt) (image-height image))
+                           'solid
+                           'transparent)))
 
 (define (asset->back id)
   (define thing (id->thing id))
@@ -61,7 +68,8 @@
           (displayln id)
           (blank))]))
 
-  (back-side (special-scale image)) )
+  (back-side (special-scale (pad image 2) )))
+
 
 
 ;Good for scaling pixel art.  Sharper edges.
@@ -266,7 +274,7 @@
   (inset/clip
    (cc-superimpose
     (filled-rounded-rectangle 16 16 -0.25
-                              #:color "DimGray" ;(make-color 128 128 128)
+                              #:color (make-color 150 150 150)
                               #:border-color "Black"
                               )
     pict
