@@ -30,7 +30,7 @@
                       [LANGUAGE-COLOR "black"])
                    )
 
-  (begin-asset-job "battlearena-asset-cards"   ;square or light red box
+  (begin-asset-job "battlearena-asset-cards"   ;square
                    
                    (battlearena-fortnite
                      [LANGUAGE-COLOR "red"]
@@ -44,7 +44,7 @@
                    )
                    
 
-  (begin-asset-job "survival-asset-cards"       ;star or light green box
+  (begin-asset-job "survival-asset-cards"       ;star
                    
                    (survival-minecraft
                      [LANGUAGE-COLOR "green"]
@@ -54,7 +54,7 @@
                      [LANGUAGE-SHAPE 'star])
                    )
 
-  (begin-asset-job "adventure-asset-cards"     ;triangle or light blue box
+  (begin-asset-job "adventure-asset-cards"     ;triangle
                    
                    (adventure-harrypotter
                      [LANGUAGE-COLOR "cyan"]
@@ -66,4 +66,4 @@
 
   )
 
-;(assets->Desktop)
+(assets->Desktop)
