@@ -16,13 +16,13 @@
    'avatar-1
    (read-template "a Pokemon.")
    'avatar-2
-   (read-template "a Bulbasaur Pokemon as your playable character.")
+   (read-template "a Bulbasaur as your playable character.")
    'avatar-3
-   (read-template "a fast Charmander Pokemon as your playable character.")
+   (read-template "a fast Charmander as your playable character.")
    'avatar-4
-   (read-template "a faster Armored Mewtwo Pokemon whom you control with the WASD keys.")
+   (read-template "a fast Armored Mewtwo whom you control with the WASD keys.")
    'avatar-5
-   (read-template "a fast, stronger Pokemon whom you control with the WASD keys. Choose any sprite.")
+   (read-template "a fast, strong Pokemon whom you control with the WASD keys. Choose any sprite.")
  
 
    'coin-1
@@ -43,9 +43,9 @@
    'enemy-3
    (read-template "5 James with medium AI.")
    'enemy-4
-   (read-template "5 very smart Red Girl trainers armed with high-damage pokeballs.")
+   (read-template "5 highly intelligent Red Girl trainers armed with high-damage pokeballs.")
    'enemy-5
-   (read-template "10 trainers: half are moderately intelligent Green Boy trainers, and half are very smart Team Rocket trainers who only appear at night.")
+   (read-template "10 total trainers: half are moderately intelligent Green Boy trainers, and half highly intelligent smart Team Rocket trainers who only appear at night.")
    'enemy-6
    (read-template "5 Green Boy trainers with 'easy ai, 3 Red Girl trainers with 'medium ai, and Team Rocket trainer with 'hard ai that only shows up at night and does 50 damage.")
 
@@ -59,7 +59,7 @@
    'npc-3
    (read-template "a Pokemon friend with custom dialog.")
    'npc-4
-   (read-template "a Wartortle Pokemon friend who follows you. Give them a name and a specific tile location.")
+   (read-template "a Wartortle friend who follows you. Give them a name and a specific tile location.")
    'npc-5
    (read-template "2 friends with custom dialog and two additional customizations each.")
 
@@ -78,7 +78,7 @@
    'level-design-1
    (read-template "a forest town with world objects.")   
    'level-design-2
-   (read-template "a forest town filled with 2 types of high definition trees.")   
+   (read-template "a forest town filled with 2 types of high-definition trees.")   
    'level-design-3
    (read-template "random color candy-cane-trees and snow-pine-trees.")   
    'level-design-4

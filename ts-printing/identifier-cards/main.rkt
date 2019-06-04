@@ -13,8 +13,10 @@
          LANGUAGE-SHAPE)
 
 (require pict
-         (only-in 2htdp/image image? image-width image-height star triangle)
+         (only-in 2htdp/image image? image-width image-height star triangle overlay)
+         (prefix-in 2h: (only-in 2htdp/image rectangle))
          (only-in pict/code codeblock-pict)
+         (only-in racket/draw make-color)
          (only-in game-engine animated-sprite? render)
          "../common.rkt"
          "./util.rkt"
@@ -47,6 +49,12 @@
   (back-side
    (special-image-for id)))
 
+(define (pad image amt)
+    (overlay image
+             (2h:rectangle (+ (* 2 amt) (image-width image))
+                           (+ (* 2 amt) (image-height image))
+                           'solid
+                           'transparent)))
 
 (define (asset->back id)
   (define thing (id->thing id))
@@ -60,7 +68,8 @@
           (displayln id)
           (blank))]))
 
-  (back-side (special-scale image)) )
+  (back-side (special-scale (pad image 2) )))
+
 
 
 ;Good for scaling pixel art.  Sharper edges.
@@ -84,7 +93,7 @@
   (define thing (id->thing id))
   (define arity (procedure-arity thing)) 
   (define-values 
-    (req-kws kws)   (procedure-keywords thing)) 
+    (req-kws kws)   (procedure-keywords thing))
 
   (define kw-dummies
     (apply ~a
@@ -261,6 +270,16 @@
                          2))))
     ...))
 
+(define (make-rounded-icon pict)
+  (inset/clip
+   (cc-superimpose
+    (filled-rounded-rectangle 16 16 -0.25
+                              #:color (make-color 150 150 150)
+                              #:border-color "Black"
+                              )
+    pict
+    ) 2))
+
 (define-syntax-rule (begin-asset-job folder
                                      (lang [k v] ...)
                                      ...)
@@ -274,13 +293,13 @@
           (vc-append (default-meta i)
                      (hc-append 3 
                                 (cond [(eq? (LANGUAGE-SHAPE) 'circle) (colorize
-                                                                       (filled-ellipse 10 10 )
+                                                                       (make-rounded-icon (filled-ellipse 10 10 ))
                                                                        (LANGUAGE-COLOR))]
                                       [(eq? (LANGUAGE-SHAPE) 'square) (colorize
-                                                                       (filled-rectangle 10 10 )
+                                                                       (make-rounded-icon (filled-rectangle 10 10 ))
                                                                        (LANGUAGE-COLOR))]
-                                      [(eq? (LANGUAGE-SHAPE) 'triangle) (triangle 10 'solid (LANGUAGE-COLOR))]
-                                      [(eq? (LANGUAGE-SHAPE) 'star) (star 10 'solid (LANGUAGE-COLOR))]
+                                      [(eq? (LANGUAGE-SHAPE) 'triangle) (make-rounded-icon (triangle 10 'solid (LANGUAGE-COLOR)))]
+                                      [(eq? (LANGUAGE-SHAPE) 'star) (make-rounded-icon (star 8 'solid (LANGUAGE-COLOR)))]
                                       [else (error "Not a valid language shape")])
                                       
                                 (text (~a "(require " (CURRENT-LANGUAGE) ")")))

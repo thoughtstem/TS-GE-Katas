@@ -53,27 +53,27 @@
   (local-require ts-battle-arena-avengers-summer-camp-2019/katas)
 
   (set-fg-texture "bg002.jpg" 
-    (begin-job "battlearena"
-               ((collection-apply (curryr try-take 4) hero-katas) 
-                 [FRONT-BG-COLOR    googly-red]
-                 [FRONT-FG-COLOR clear-white]
-                 [FRONT-TITLE    (title "(hero)")]) 
-               ((collection-apply (curryr try-take 5) planet-design-katas)  
-                 [FRONT-BG-COLOR    googly-orange]
-                 [FRONT-FG-COLOR clear-white]
-                 [FRONT-TITLE    (title "(planet-design)")]) 
-               ((collection-apply (curryr try-take 5) villain-with-power-katas)
-                 [FRONT-BG-COLOR    googly-yellow]
-                 [FRONT-FG-COLOR clear-white]
-                 [FRONT-TITLE    (title "(villain)")]) 
-               ((collection-apply (curryr try-take 5) hero-power-katas)
-                 [FRONT-BG-COLOR    googly-green]
-                 [FRONT-FG-COLOR clear-white]
-                 [FRONT-TITLE    (title "(power)")]) 
-               ((collection-apply (curryr try-take 5) powerup-katas)
-                 [FRONT-BG-COLOR    googly-blue]
-                 [FRONT-FG-COLOR clear-white]
-                 [FRONT-TITLE    (title "(power-up)")]))))
+                  (begin-job "battlearena-avengers"
+                             ((collection-apply (curryr try-take 4) hero-katas) 
+                              [FRONT-BG-COLOR    googly-red]
+                              [FRONT-FG-COLOR clear-white]
+                              [FRONT-TITLE    (title "(hero)")]) 
+                             ((collection-apply (curryr try-take 5) planet-design-katas)  
+                              [FRONT-BG-COLOR    googly-orange]
+                              [FRONT-FG-COLOR clear-white]
+                              [FRONT-TITLE    (title "(planet-design)")]) 
+                             ((collection-apply (curryr try-take 5) villain-with-power-katas)
+                              [FRONT-BG-COLOR    googly-yellow]
+                              [FRONT-FG-COLOR clear-white]
+                              [FRONT-TITLE    (title "(villain)")]) 
+                             ((collection-apply (curryr try-take 5) hero-power-katas)
+                              [FRONT-BG-COLOR    googly-green]
+                              [FRONT-FG-COLOR clear-white]
+                              [FRONT-TITLE    (title "(power)")]) 
+                             ((collection-apply (curryr try-take 5) powerup-katas)
+                              [FRONT-BG-COLOR    googly-blue]
+                              [FRONT-FG-COLOR clear-white]
+                              [FRONT-TITLE    (title "(power-up)")]))))
 
 (define (ts-battle-arena-fortnite-summer-camp-2019->Desktop)
   (local-require ts-battle-arena-fortnite-summer-camp-2019/katas)
@@ -170,15 +170,15 @@
                ((collection-apply (curryr try-take 5) mob-and-entity-katas )
                  [FRONT-BG-COLOR    googly-yellow]
                  [FRONT-FG-COLOR clear-white]
-                 [FRONT-TITLE    (title "(mob)")]) 
+                 [FRONT-TITLE    (title "(mob/entity)")]) 
                ((collection-apply (curryr try-take 5) ore-and-weapon-crafter-katas)
                  [FRONT-BG-COLOR    googly-green]
                  [FRONT-FG-COLOR clear-white]
-                 [FRONT-TITLE    (title "(ore)")]) 
+                 [FRONT-TITLE    (title "(ore/weapon)")]) 
                ((collection-apply (curryr try-take 5) biome-and-sky-katas)
                  [FRONT-BG-COLOR    googly-blue]
                  [FRONT-FG-COLOR clear-white]
-                 [FRONT-TITLE    (title "(biome)")]))))
+                 [FRONT-TITLE    (title "(biome/sky)")]))))
 
 (define (ts-survival-pokemon-summer-camp-2019->Desktop)
   (local-require ts-survival-pokemon-summer-camp-2019/katas)
@@ -200,11 +200,11 @@
                ((collection-apply (curryr try-take 5) friend-and-trainer-katas )
                 [FRONT-BG-COLOR    googly-green] 
                 [FRONT-FG-COLOR clear-white]
-                [FRONT-TITLE    (title "(friend)")]) 
+                [FRONT-TITLE    (title "(friend/trainer)")]) 
                ((collection-apply (curryr try-take 5) town-level-and-sky-katas ) 
                 [FRONT-BG-COLOR    googly-blue]
                 [FRONT-FG-COLOR clear-white]
-                [FRONT-TITLE    (title "(town)")]) )))
+                [FRONT-TITLE    (title "(town/sky)")]) )))
 
 ;----- ADVENTURE
 #|(define (ts-adventure-asp-2019->Desktop)
@@ -298,11 +298,11 @@
                              ((collection-apply (curryr try-take 5) day-two) 
                               [FRONT-BG-COLOR    bright-orange]
                               [FRONT-FG-COLOR    clear-white]
-                              [FRONT-TITLE       (title "(coin)")])
+                              [FRONT-TITLE       (title "(food/coin)")])
                              ((collection-apply (curryr try-take 5) day-three) 
                               [FRONT-BG-COLOR    bright-yellow]
                               [FRONT-FG-COLOR    clear-white]
-                              [FRONT-TITLE       (title "(more-coin)")])
+                              [FRONT-TITLE       (title "(coin)")])
                              ((collection-apply (curryr try-take 5) day-four)
                               [FRONT-BG-COLOR    bright-green]
                               [FRONT-FG-COLOR    clear-white]
@@ -376,11 +376,11 @@
                              ((collection-apply (curryr try-take 5) day-two) 
                               [FRONT-BG-COLOR    bright-orange]
                               [FRONT-FG-COLOR    clear-white]
-                              [FRONT-TITLE       (title "(coin)")])
+                              [FRONT-TITLE       (title "(more-food)")])
                              ((collection-apply (curryr try-take 5) day-three) 
                               [FRONT-BG-COLOR    bright-yellow]
                               [FRONT-FG-COLOR    clear-white]
-                              [FRONT-TITLE       (title "(more-coin)")])
+                              [FRONT-TITLE       (title "(coin)")])
                              ((collection-apply (curryr try-take 5) day-four)
                               [FRONT-BG-COLOR    bright-green]
                               [FRONT-FG-COLOR    clear-white]

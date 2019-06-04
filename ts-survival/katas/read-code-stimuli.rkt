@@ -11,7 +11,7 @@
   (list
 
    'hello-world-1
-   (read "Make the basic survival game!")
+   (read "Code the basic survival game.")
    
    'avatar-1
    (read-template "a basic avatar.")
@@ -29,11 +29,11 @@
    'food-2
    (read-template "exactly two custom foods that heal you by 20.")
    'food-3
-   (read-template "a couple apples with extra healing power.")
+   (read-template "a couple of apples with extra healing power.")
    'food-4
-   (read-template "2 different food types: common apples with low healing power and one very rare cherry with high healing power.")
+   (read-template "2 different food types: common apples with low-healing power and one very rare cherry with high-healing power.")
    'food-5
-   (read-template "lots of cherries with high healing power but a very fast starvation rate.")
+   (read-template "a very fast starvation rate and lots of cherries with high-healing power.")
    'food-6
    (read-template "3 food types: common cherries, trick smores that deplete your health, and a single high-healing carrot that spawns, only once, on a specific tile.")
    
@@ -66,18 +66,18 @@
    'crafter-2
    (read-template "carrots, and a crafter that makes carrot stew from carrots.")
    'crafter-3
-   (read-template "fish, and a crafter that makes fish stew with high healing power.")
+   (read-template "fish, and a crafter that makes fish stew with high-healing power.")
    'crafter-4
    (read-template "carrots, fish, and a crafter on tile 2 (posn 200 200) that makes both carrot-stew and fish-stew.")
    
    'sky-1
    (read-template "a very long day/night cycle.")
    'sky-2
-   (read-template "a short day/night cycle where it gets pitch-black at midnight.")
+   (read-template "a custom-colored night sky.")
    'sky-3
-   (read-template "a custom-colored night sky with a moderately-dark midnight.")
+   (read-template "a short day/night cycle where it gets pitch-black at midnight.")
    'sky-4
-   (read-template "a long day and a very short night, and an enemy that only comes out at night.")
+   (read-template "a long day, a short night, and an enemy that only comes out at night.")
 
 
    'starvation-rate
@@ -117,6 +117,6 @@
    'weapon-crafter-2
    (read-template "a crafter that slowly builds a high-damage sword.")
    'weapon-crafter-3
-   (read-template "coins, and a wood table crafter that quickly builds faster fire-magic for 100 gold.")
+   (read-template "coins, and a wood table crafter that instantly builds fast-moving fire-magic for 100 gold.")
 
    ))

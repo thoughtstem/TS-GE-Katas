@@ -20,19 +20,19 @@
    'avatar-1
    (read-prefix "a rebel.")
    'avatar-2
-   (read-prefix "a Yoda as the rebel.")
+   (read-prefix "Yoda as the rebel.")
    'avatar-3
-   (read-prefix "a fast-moving Obiwan as the rebel.")
+   (read-prefix "a fast-moving Obiwan rebel.")
    'avatar-4
    (read-prefix "a fast-moving Obiwan rebel, a large backpack, and double the health and shield values.")
 
    
    'enemy-1
-   (read-prefix "that has an imperial.")
+   (read-prefix "an imperial.")
    'enemy-3
-   (read-prefix "several Darth Maul imperials who are challenging to defeat, that have double heatlh and shield.")
+   (read-prefix "several moderatly intelligent Darth Maul imperials with double health and shield.")
    'enemy-4
-   (read-prefix "6 imperials: 5 weak with easy ai, and 1 strong with hard ai. Choose your own sprites.")
+   (read-prefix "6 imperials: 5 weak with low intelligence, and 1 strong with high intelligence. Choose your own sprites.")
 
 
    'enemy-weapon-2
@@ -64,23 +64,23 @@
    'lightsaber-2
    (read-prefix "a lightsaber that has a custom icon and high rarity.")
    'lightsaber-3
-   (read-prefix "a more powerful, custom colored lightsaber with a high rarity and a custom icon.")
+   (read-prefix "a powerful, custom-colored lightsaber with high rarity and a custom icon.")
 
 
    'blaster-2
    (read-prefix "a blaster that has a custom icon and high rarity.")
    'blaster-3
-   (read-prefix "a more powerful, faster, more durable, longer ranged, custom colored blaster with high rarity, a custom name and icon.")
+   (read-prefix "a powerful, fast, long-ranged blaster that can go through 3 imperials with one shot. Add 5 imperials.")
 
 
    'lightsaber-droid-1
    (read-prefix "a lightsaber droid.")
    'lightsaber-droid-3
-   (read-prefix "a lightsaber droid that uses custom colored, more powerful, more durable lightsabers that move faster.")
+   (read-prefix "a lightsaber droid that uses a custom-colored, powerful, fast-moving lightsaber.")
 
 
    'blaster-droid-2
-   (read-prefix "a blaster droid that shoots a more powerful, custom colored, spread energy blast.")   
+   (read-prefix "a blaster droid that shoots multiple, powerful, custom-colored energy blasts.")   
 
    
    'blaster-armor-1

@@ -8,7 +8,7 @@
   (list
 
    'hello-world-1
-   (read "Make a basic Battle Arena game.")
+   (read "Make a basic adventure game.")
 
 
    ))

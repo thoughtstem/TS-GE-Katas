@@ -11,83 +11,83 @@
   (list
    ;Initial stimuli
    'hello-world-1
-   (read "Make a Harry Potter game.")
+   (read "Code a basic Harry Potter game.")
    
    ;Wizard stimuli
    'avatar-1
-   (read-prefix "with a wizard. Customize the sprite and the speed.")
+   (read-prefix "with a fast Harry Potter wizard.")
 
    'avatar-2
    (read-prefix "with a strong, fast, Harry Potter wizard.")
 
    'avatar-3
-   (read-prefix "with a wizard and an intro cutscene. Give the wizard a sprite and make them fast. Customize the cutscene to have a sprite and some text.")
+   (read-prefix "with a fast wizard and an intro cutscene. Customize the cutscene to have a sprite and some text.")
 
    'avatar-4
-   (read-prefix "with a wizard and a 2 part intro cutscene: the first with some text, and the second with a sprite and more text.")
+   (read-prefix "with a wizard and an intro cutscene. Customize the cutscene with 2 pages: the 1st with text and the 2nd with a sprite and text.")
 
    ;Potion stimuli
    'food-1
-   (read-prefix "with a potion. Customize the name, the amount of potions in-game, and the health gained.")
+   (read-prefix "with several strong healing potions.")
 
    'food-2
-   (read-prefix "with 2 custom potions. Give the potions different colors, different health regained, and prevent one of the potions from respawning.")
+   (read-prefix "with 2 types of potions: a common, green, weak healing potion; and a very rare, orange, powerful healing potion.")
 
    'food-3
-   (read-prefix "with a potion and a half health wizard. Make the potion restore half of the wizard's health, give it a yellow potion sprite, and give it a cutscene with a sprite and some text.")
+   (read-prefix "with a wizard who starts at half health. Add a powerful yellow potion that spawns a cutscene on pickup. The cutscene includes the potion sprite and text.")
 
    'food-4
-   (read-prefix "with a potion that doesn't respawn, a recipe to make the potion, and 10 ingredients for the recipie.")
+   (read-prefix "with several pumpkins and a cauldron that produces a pumpkin potion.")
 
    'food-5
-   (read-prefix "with a potion, a recipe, and an NPC. Give the NPC dialog and a quest to craft the potion.")
+   (read-prefix "with an NPC and a cauldron that produces a carrot potion. Give the NPC dialog and a quest to brew that potion.")
 
    ;Loot quest stimuli
    'loot-quest-1
-   (read-prefix "with an NPC that has a loot quest, and a deatheater that drops the stolen item.")
+   (read-prefix "with an NPC who has a loot quest to retrieve their stolen chest.  Collect the chest by defeating the deatheater who stole it.")
 
    'loot-quest-2
-   (read-prefix "with a loot quest NPC, a stolen cat NPC, a high damage spell, and a deatheater that drops the stolen cat. Give both NPCs dialog.")
+   (read-prefix "with an NPC who has a quest to retrieve their stolen cat from a deatheater. Include a high-damage spell.")
 
    'loot-quest-3
-   (read-prefix "with an loot quest NPC, a spell, and a deatheater that drops the stolen food. Give the player a reward after completing the quest.")
+   (read-prefix "with an NPC who has a rewarded quest to retrieve their stolen food. Include a wand.")
 
    'loot-quest-4
-   (read-prefix "with a spell, a loot quest NPC, and a deatheater that drops a stolen pumpkin. Give the quest completion dialog.")
+   (read-prefix "with an NPC who has a quest to retrieve their stolen pumpkin. Add quest-complete dialog and a spell.")
 
    'loot-quest-5
-   (read-prefix "with a loot quest NPC and a deatheater that drops a stolen flying book. Make the flying book spawn a cutscene on pickup.")
+   (read-prefix "with an NPC who has a quest to retrieve their stolen book. Add a pickup cutscene to the flying book.")
 
    ;NPC stimuli
    'npc-1
-   (read-prefix "with a wizard and an NPC. The NPC will follow the wizard in a pre-set tile.")
+   (read-prefix "with a wizard and a witch NPC that follows you. Give her a name and a specific tile location.")
 
    'npc-2
-   (read-prefix "with a wizard, a polite and NPC, and a rude NPC. Give the NPCs names and multiple lines of dialog.")
+   (read-prefix "with a wizard and 2 NPCs. Give both NPCs names and multiple lines of dialog.")
 
    'npc-3
-   (read-prefix "with a wizard and an NPC. Give the wizard and NPC dialog and responses.")
+   (read-prefix "with a wizard and a named NPC. Give the wizard 3 questions and the NPC 3 responces.")
 
    'npc-4
    (read-prefix "with a wizard and 2 NPCs. Give the wizard and NPCs random dialog and responses.")
    
    'npc-5
-   (read-prefix "with a wizard and an NPC that has a quest to fetch a wand. Give the NPC new dialog after the quest is complete.")
+   (read-prefix "with a wizard and an NPC who has a quest to fetch their lost wand. Give the NPC new dialog after the quest is complete.")
 
    ;Spell stimuli
    'weapon-1
-   (read-prefix "with a spell. Customize the name, speed, damage, and rarity of the spell.")
+   (read-prefix "with a powerful, rare wand. Customize the name and the icon.")
 
    'weapon-2
-   (read-prefix "with an spell, a wand, and 5 deatheaters. Make the wand very rare and high damage. Make the spell shoot multiple fire darts at a time.")
+   (read-prefix "with a powerful, rare wand; a red Fire Dart spell; and several deatheaters. The spell fires multiple darts at once.")
 
    'weapon-3
-   (read-prefix "with a hologram shooter spell, a wizard, and 5 deatheaters. Make the spell fire a random sprite with high damage but slow speed and short range.")
+   (read-prefix "with a patronus spell, a wizard, and several deatheaters. The patronus spell fires an animal sprite with high damage but slow speed and short range.")
 
    'weapon-4
-   (read-prefix "with 2 spells, a wizard, and 10 deatheaters. Give the spells high damage and pickup cutscenes.")
+   (read-prefix "with 2 different spells, a wizard, and many deatheaters. Add pickup cutscenes to both spells.")
 
    'weapon-5
-   (read-prefix "with a wand and a deatheater. Give the wand a cutscene on pickup and drop. Give the deatheater a cutscene on despawn with a downward facing sprite and a message.")
+   (read-prefix "with a deatheater and a powerful wand that has pickup and drop cutscenes. Give the deatheater a creative death cutscene.")
    
  ))
