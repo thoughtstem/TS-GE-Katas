@@ -5,10 +5,6 @@
 
 ;TODO: Finish mafia instructions (add in discussion phase?)
 
-;TODO: Begin organizing helper code (e.g. randomly select members)
-;      Copy card to whiteboard... 
-;      Other common sequences...
-
 ;TODO: Move mafia and disintegrating-code into their own files
 ;      Add docs
 
@@ -128,7 +124,7 @@
                                 (award-points 0 'Hackers)
                                 (award-points 1 'Hackers)))
 
-                 (vote-into-group
+                 (vote-member-into-new-group
                    coach
                    (not-in 'Jail)
                    'Jail)))))
@@ -141,41 +137,7 @@
                                           (shake-hands-with 'Hackers)))))))
 
 
-(define (select-secret-subgroup selector main-group sub-group-name)
-  (list
-    (instruction main-group
-                 (close-eyes))
 
-    (instruction selector
-                 (announce (~a "If I tap your head, you are in the group: " sub-group-name)))
-
-    (instruction selector
-                 (tap-heads
-                   (random-members-of main-group)))))
-
-;Specifically for when a group is chosing one of its own members to join another group
-(define (vote-into-group announcer 
-                         voting-group 
-                         target-group)
-  (phase 'Vote
-         (list
-
-           ;TODO: Discussion phase?
-
-           (instruction announcer
-                        (announce (~a "The upcoming \"finger vote\" will decide who goes in [" target-group"].")))
-
-           (instruction voting-group
-                        (place-hands-on-head))
-
-           (instruction announcer
-                        (announce (~a "Everyone freeze.  I now will count down from 3 to 1.  On 1, you must point at someone who currently has their hands on their head.  3... 2... 1!")))
-
-           (instruction voting-group
-                        (finger-vote target-group))
-
-           (instruction announcer
-                        (finish-the-vote)))))
 
 
 
