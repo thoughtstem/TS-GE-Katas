@@ -84,18 +84,17 @@
     [(instruction subject verb)
      (pp:nest indentation-level
               (pp:v-append
-                (pp:text (~a "Step " n )) 
-                (pp:nest indentation-level
-                         (pp:v-append
-                           (pp:h-append
-                             (print-subject (instruction-subject i))  
-                             (pp:text ":"))
-                           (print-verb (instruction-verb i))))))]
+                (pp:v-append
+                  (pp:h-append
+                    (print-subject (instruction-subject i))  
+                    (pp:text ":"))
+                  (print-verb (instruction-verb i)))
+                ))]
 
     [(phase name instructions) 
      (pp:nest indentation-level
               (pp:v-append
-                (pp:text (~a name ":"))
+                (pp:text (~a "<" name " Phase>"))
                 (print-instructions instructions)))]
 
     [(until predicate instructions) 
