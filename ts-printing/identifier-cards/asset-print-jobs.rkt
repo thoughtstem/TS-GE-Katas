@@ -13,6 +13,9 @@
                       [LANGUAGE-COLOR "black"]))
 
   (begin-asset-job "core-asset-cards"         ;circle
+                   (game-engine-rpg/lang/avatar-assets
+                      [ASSET-PATH 'game-engine-rpg/lang/avatar-assets]
+                      [LANGUAGE-COLOR "black"])
                    (game-engine-rpg/lang/assets
                       [ASSET-PATH 'game-engine-rpg/lang/assets]
                       [LANGUAGE-COLOR "black"])
