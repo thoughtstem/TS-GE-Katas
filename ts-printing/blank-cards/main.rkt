@@ -7,7 +7,8 @@
 
 (require pict
          (only-in 2htdp/image image? image-width image-height)
-         "../common.rkt")
+         "../common.rkt"
+         racket/draw)
 
 (define (duplicate n thing)
   (flatten
@@ -18,7 +19,8 @@
 
 (define (paren-card)
   (list
-    (front-side (text "(")) 
+    (front-side (vc-append (text "(")
+                           (circle 3 #:border-color (make-color 0 0 0 0) )))
     (back-side (blank))))
 
 (define (keyword-card)
@@ -46,7 +48,7 @@
 
     (VERSION "")
     (HEIGHT 800)
-    (WIDTH  400)
+    (WIDTH  800)
     (FRONT-META-FUNCTION
       (lambda (i)
         (blank)))
