@@ -23,7 +23,7 @@
    (short-template "Gamora as the hero.")
    
    'hero-003
-   (short-template "Gamora as the hero, and Nebula as the enemy.")
+   (short-template "Gamora as the hero and Nebula as the enemy.")
 
    'hero-004
    (short-template "Hulk battling Loki, Redskull, and Mandarin.")
@@ -44,10 +44,10 @@
    (short-template "Gamora using a Magic Orb battling Nebula using an Energy Blast.")
 
    'hero-010
-   (short-template "Loki using an Energy Blast battling Thor using a Hammer, and Star-Lord using Star Bit.")
+   (short-template "Loki using an Energy Blast battling Thor using a Hammer, and Star-Lord using a Star Bit.")
 
    'hero-011
-   (short-template "Nebula using an Energy Blast battling Rocket Raccoon and Gamora, both using Star Bit, and Drax and Star-Lord, both using Magic Orb.")
+   (short-template "Nebula using an Energy Blast battling Rocket Raccoon and Gamora (both using Star Bit), and Drax and Star-Lord (both using Magic Orb).")
 
    'hero-012
    (short-template "Thor using a random power battling Loki, Malekith, Mandarin, and Nebula all using random powers.")
@@ -59,13 +59,13 @@
    (short-template "Loki using a YELLOW Energy Blast battling Thor using an ORANGE Hammer, and Star-Lord using a PURPLE Star Bit.")
 
    'hero-015
-   (short-template "Nebula using a GREEN Energy Blast battling Rocket Raccoon and Gamora, both using a RED Star Bit, and Drax and Starlord, both using a RED Magic Orb.")
+   (short-template "Nebula using a GREEN Energy Blast battling Rocket Raccoon and Gamora (both using a RED Star Bit), and Drax and Starlord (both using a RED Magic Orb).")
 
    'hero-016
    (short-template "Loki using a Star Bit battling 6 Thors, each with a different colored Hammer.")
 
    'hero-017
-   (short-template "Gamora using a RED power battling Nebula using a ORANGE power, and Mandarin using a YELLOW power.")
+   (short-template "Gamora using a RED power battling Nebula using an ORANGE power, and Mandarin using a YELLOW power.")
 
    'hero-018
    (short-template "Star-Lord using a power of any color battling Rocket Racoon, Drax, and Gamora each using a power of any color.")
@@ -74,40 +74,40 @@
    (short-template "Drax using an Energy Blast battling Loki using a Magic Orb and Thor using a Hammer.")
 
    'hero-020
-   (short-template "Iron Man using a RED Magic Orb battling 2 Mandarins. One using an ORANGE Energy Blast, the other one a power of any color.")
+   (short-template "Iron Man using a RED Magic Orb battling 2 Mandarins: one using an ORANGE Energy Blast, the other one a power of any color.")
    
    'hero-021
    (short-template "Iron Man using a Star Bit battling Nebula using a Magic Orb, and Loki using an Energy Blast. Include Health and Force Field Power-ups.")
 
    'hero-022
-   (short-template "Thor using a BLUE Hammer battling Loki and Mandarin each using a power of any color. Include Grow, Shrink and Speed Power-ups.")
+   (short-template "Thor using a BLUE Hammer battling Loki and Mandarin, each using a power of any color. Include Grow, Shrink, and Speed Power-ups.")
 
    'hero-023
-   (short-template "Nebula using a Star Bit of any color battling Black Widow using a RED power, Iron Man using a BLUE Energy Blast. Include Health and Speed Power-ups.")
+   (short-template "Nebula using a Star Bit of any color battling Black Widow using a RED power and Iron Man using a BLUE Energy Blast. Include Health and Speed Power-ups.")
 
    'hero-024
    (short-template "Iron Man using a RED Magic Orb battling 3 other Iron Mans each with a power of any color.")
 
    'hero-025
-   (short-template "Drax using a power of any color battling Loki, Malekith, Mandarin, and Nebula all with a power of any color. Include Health, Grow, Shrink, Speed, and Force Field Power-ups.")
+   (short-template "Drax using a power of any color battling Loki, Malekith, Mandarin, and Nebula, all with a power of any color. Include Health, Grow, Shrink, Speed, and Force Field Power-ups.")
 
    'hero-026
    (short-template (~a "2 levels: the 1st with Thor using a Hammer battling 2 Lokis, each with a different power; "
-                       "the 2nd with a color for every power."))
+                       "the 2nd level with a color for every power."))
 
    'hero-027
    (short-template (~a "3 levels: the 1st with Iron Man using a GREEN Magic Orb battling Mandarin using a RED Magic Orb; "
-                       "the 2nd with 2 villains using powers; the 3rd with with 3 villains using powers."))
+                       "the 2nd level with 2 villains using powers; the 3rd level with 3 villains using powers."))
 
    'hero-028
    (short-template (~a "3 levels: the 1st with Black Widow battling Nebula, both using a power of any color; "
-                       "the 2nd with another Nebula using a power of any color; "
+                       "the 2nd level with another Nebula using a power of any color; "
                        "the 3rd with Health and Speed Power-ups."))
 
    'hero-029
    (short-template (~a "3 levels: the 1st with a hero battling a villain, both using a power of any color; "
-                       "the 2nd with 2 villains using a power of any color; "
-                       "the 3rd with 2 villains using a power of any color and 2 power-ups."))
+                       "the 2nd level with 2 villains using a power of any color; "
+                       "the 3rd level with 2 villains using a power of any color, include 2 power-ups."))
 
    'hero-030
    (read-multi-game-template "The 1st game with Iron Man battling Loki, both using a power of any color; include a Health Power-Up.
@@ -187,7 +187,7 @@
    (short-template "a horse eating peppers and kiwi, collecting silver and gold coins, and avoiding a dog and a wolf.")
 
    'farm-023
-   (short-template "an animal eating 3 apples and 5 other foods, collecting silver and another coin, and avoiding an wild animal.")
+   (short-template "an animal eating 3 apples and 5 other foods, collecting silver and another coin, and avoiding a wild animal.")
 
    'farm-024
    (short-template "a wolf eating apples and 10 grapes, collecting kiwi and peppers, and avoiding a sheep and cow.")
@@ -277,13 +277,13 @@
    (short-template "a starfish healing an octopus.")
 
    'sea-020
-   (short-template "a jellyfish healing a green fish, an orange fish and a red fish.")
+   (short-template "a jellyfish healing a green fish, an orange fish, and a red fish.")
 
    'sea-021
    (short-template "a shark healing 2 yellow fish and 2 ghost fish.")
 
    'sea-022
-   (short-template "a crab healing a RED crab, a GREEN crab and a PURPLE crab.")
+   (short-template "a crab healing a RED crab, a GREEN crab, and a PURPLE crab.")
 
    'sea-023
    (short-template "an animal healing 5 friends and eating pineapples and broccoli.")
@@ -293,21 +293,21 @@
                               The 2nd game has an avatar healing 4 yellow fish and 4 more friends, and eating 4 BLUE apples.")
 
    'sea-025
-   (short-template "an animal healing a yellow fish and a BLUE shark and two other friends.")
+   (short-template "an animal healing a yellow fish, a BLUE shark and two other friends.")
 
    'sea-026
    (short-template "a ghost fish healing 5 PURPLE friends, eating 5 ORANGE mushrooms, and avoiding a shark.")
 
    'sea-027
    (short-template (~a "2 levels: the 1st with an animal healing a starfish and an orange fish; "
-                       "the 2nd with an animal healing a crab, a green fish, a red fish, and a jellyfish."))
+                       "the 2nd level with an animal healing a crab, a green fish, a red fish, and a jellyfish."))
 
    'sea-028
    (short-template (~a "2 levels: the 1st with an animal healing 4 GREEN octopi, eating 4 kiwi, and avoiding 4 crabs; "
-                       "the 2nd with an animal healing 4 GREEN friends, eating 4 foods, and avoiding 4 wild animals."))
+                       "the 2nd level with an animal healing 4 GREEN friends, eating 4 foods, and avoiding 4 wild animals."))
 
    'sea-029
-   (short-template "an animal healing RED, ORANGE and YELLOW friends, eating 3 foods, and avoiding GREEN, BLUE and PURPLE wild animals.")
+   (short-template "an animal healing RED, ORANGE, and YELLOW friends; eating 3 foods; and avoiding GREEN, BLUE, and PURPLE wild animals.")
 
    'sea-030
    (read-multi-game-template "The 1st game has an avatar healing an ORANGE starfish and ORANGE crab, eating ORANGE broccoli and ORANGE kiwi, and avoiding an ORANGE shark and ORANGE jellyfish.
