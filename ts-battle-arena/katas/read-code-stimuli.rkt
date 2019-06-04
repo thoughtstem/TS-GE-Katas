@@ -59,7 +59,7 @@
    'fire-magic-2
    (read-prefix "that has fire magic with 20 damage.")
    'fire-magic-3
-   (read-prefix "a powerful, fast fire magic that has a high rarity. Customize the icon and the name.")
+   (read-prefix "a powerful, fast fire magic that has a high rarity.")
    'fire-magic-4
    (read-prefix "that has a 'legendary fire magic with a customized sprite, damage, speed, and range.")
 
@@ -140,7 +140,7 @@
    'spear-tower-2
    (read-prefix "a tower that shoots fast, long-ranged spears.")
    'spear-tower-3
-   (read-prefix "a tower that shoots fast, powerful, gold-colored spears that have a long range.")
+   (read-prefix "a tower that shoots fast, powerful, gold-colored spears with a long range.")
 
 
    'enemy-weapon-1
@@ -148,7 +148,7 @@
    'enemy-weapon-2
    (read-prefix "that has an enemy, give it a custom weapon and customize it.")   
    'enemy-weapon-3
-   (read-prefix "an enemy that uses a weak and slow repeater that shoots long-ranged darts.")
+   (read-prefix "an enemy that uses a weak and slow repeater that shoots short-ranged darts.")
 
      
    'repeater-armor-1
@@ -194,7 +194,7 @@
    'single-shot-1
    (read-prefix "a weapon that fires only once each click.")
    'single-shot-2
-   (read-prefix "a powerful, fast repeater that shoots a single dart with a medium range. Customize the icon and the name.")
+   (read-prefix "a powerful, fast repeater that shoots a single dart with short range. Customize the icon and the name.")
    'single-shot-3
    (read-prefix "a 'rare single-shot weapon that fires a dart with customized sprite, damage, speed, and range.")
 
@@ -228,7 +228,7 @@
    'health-2
    (read-prefix "a \"Max Health Power-up\" item that sets your health to 100. Customize the icon and the rarity.")
    'health-3
-   (read-prefix "2 health items: the first one should increase your health, the second one should restore all your health. Make custom icons for both.")
+   (read-prefix "2 health items: the first one should increase your health, the second one should fully restore your health. Make custom icons for both.")
 
 
    'boost-1
@@ -250,7 +250,7 @@
    'force-field-1
    (read-prefix "a \"Force Field\" item.")
    'force-field-2
-   (read-prefix "a \"Force Field\" item that has a custom duration. Customize the icon.")
+   (read-prefix "a \"Force Field\" item that lasts for a long time. Customize the icon.")
    'force-field-3
    (read-prefix "a \"Force Field\" item that has a custom icon. Customize the duration and allow the player to shoot out of it.")
 
