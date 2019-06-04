@@ -167,11 +167,11 @@
     (syntax-case stx ()
       [(_ lang kata-name expr ...)
        #'(lambda () 
-           (local-require lang)
            expr 
            ...)]))
 
 
+  ;This one is the newer better way
   (syntax-case stx ()
     [(_ #:with-test (test-module test) lang kata-name expr ...)
      #`(begin
