@@ -9,6 +9,7 @@
          (rename-out [define-example-code define-kata-code])
 
          run-example
+         test-example
          eval-example
 
          language-mappings
@@ -20,6 +21,8 @@
          define/contract/doc
 
          test-all-examples-as-games
+
+         game-test
 
          GAME-JAM-VID)
 
@@ -116,6 +119,18 @@
                (string-mappings))))))
 
 
+(define-syntax (test-example stx)
+  (syntax-case stx ()
+    [(_ kata-name
+        test)
+     (with-syntax ([run:kata-name
+                    (format-id #'kata-name "run:~a" #'kata-name)])
+
+
+       #`(begin
+           (test
+             (run:kata-name)) ))]))
+
 (define-syntax (run-example stx)
   (syntax-case stx ()
     [(_ kata-name)
@@ -148,19 +163,47 @@
       [(_ lang kata-name expr ...)
        #'(module kata-name lang expr ...)]))
 
+  (define run-the-code
+    (syntax-case stx ()
+      [(_ lang kata-name expr ...)
+       #'(lambda () 
+           (local-require lang)
+           expr 
+           ...)]))
+
 
   (syntax-case stx ()
+    [(_ #:with-test (test-module test) lang kata-name expr ...)
+     #`(begin
+         (define-example-code lang kata-name expr ...) 
+
+         (module+ test-module
+           (with-handlers ([exn:fail? (lambda (e)
+                                        (displayln (~a "Error running test for kata " 'kata-name))
+                                        (error e))])
+             (test-example kata-name test))))]
+
     [(_ lang kata-name expr ...)
      (with-syntax ([syntax:kata-name
-                    (format-id #'kata-name "syntax:~a" #'kata-name)])
+                     (format-id #'kata-name "syntax:~a" #'kata-name)]
+                   [run:kata-name
+                     (format-id #'kata-name "run:~a" #'kata-name)]
+                   )
 
 
        #`(begin
 
            (provide syntax:kata-name)
+           (provide run:kata-name)
 
            (define syntax:kata-name
-             (syntax #,captured-module))))]))
+             (syntax #,captured-module))
+
+
+           (define run:kata-name
+             #,run-the-code)
+
+           ))]))
 
 
 (provide define-example-code/from*)
@@ -195,6 +238,15 @@
                     )))
 
 
+
+
+(define-syntax-rule (game-test g)
+  (let ()
+    (local-require game-engine)
+    (local-require rackunit)
+    (define to-test (headless g)) 
+    (define ticked-g (tick to-test #:ticks 10)) 
+    (check-pred game? ticked-g)))
 
 
 (define-syntax (test-all-examples-as-games stx)
