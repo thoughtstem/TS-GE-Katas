@@ -250,7 +250,7 @@
    'force-field-1
    (read-prefix "a \"Force Field\" item.")
    'force-field-2
-   (read-prefix "a \"Force Field\" item that has a custom duration. Customize the icon.")
+   (read-prefix "a \"Force Field\" item that lasts for a long time. Customize the icon.")
    'force-field-3
    (read-prefix "a \"Force Field\" item that has a custom icon. Customize the duration and allow the player to shoot out of it.")
 
