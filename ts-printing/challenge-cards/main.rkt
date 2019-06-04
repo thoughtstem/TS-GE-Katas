@@ -16,7 +16,7 @@
                   color-red
                   color-green
                   color-blue)
-         (only-in racket/draw color%))
+         (only-in racket/draw color% make-color))
 
 (require "../common.rkt"
          "./pretty-printing.rkt")
@@ -36,10 +36,13 @@
     (blank-bg))
 
   (define text-bg
-    (colorize
-      (filled-rectangle (WIDTH) (pict-height content-pict))
-      (pictify 
-        (FRONT-FG-COLOR))))
+    (filled-rectangle (WIDTH) (+ 4 (pict-height content-pict))
+                      #:color (pictify 
+                               (FRONT-FG-COLOR))
+                      ;#:border-color (make-color 105 105 105 0.4)
+                      ;#:border-width 8
+                      #:draw-border? #f
+    ))
 
   (define main
     (cc-superimpose
@@ -50,11 +53,21 @@
 
   (define with-title
     (pin-over main
-              (- (/ (WIDTH) 2)
-                 (/ (pict-width 
-                      (FRONT-TITLE)) 2))
+              0
+              ;(- (/ (WIDTH) 2)
+              ;   (/ (pict-width 
+              ;        (FRONT-TITLE)) 2))
               (FRONT-MARGIN) 
-              (FRONT-TITLE)))
+              (cc-superimpose
+               (filled-rectangle (WIDTH) 40 
+                                 #:color (make-color 255 255 255 0.4)
+                                 ;#:border-color (make-color 255 255 255 0.4)
+                                 ;#:border-width 8
+                                 #:draw-border? #f
+                                 )
+               (FRONT-TITLE)
+               )
+              ))
 
   (front-side #:fit-mode 'crop
     with-title))
@@ -111,7 +124,16 @@
     folder-path))
 
 
-
+(define (make-rounded-bg pict)
+  (cc-superimpose
+   (filled-rectangle (WIDTH) 60 
+                     #:color (make-color 255 255 255 0.4)
+                     ;#:border-color (make-color 255 255 255 0.4)
+                     ;#:border-width 8
+                     #:draw-border? #f
+                     )
+    pict
+    ))
 
 (define-syntax-rule (begin-job folder 
                       (collection [k v] ...) 
@@ -123,8 +145,8 @@
 
     (FRONT-META-FUNCTION
       (lambda (i)
-        (vc-append (default-meta i)
-                   (text folder))))
+        (make-rounded-bg (vc-append (default-meta i)
+                                    (text folder)))))
 
     ;Need a crazy margin to make it work with
     ; the hex cards.

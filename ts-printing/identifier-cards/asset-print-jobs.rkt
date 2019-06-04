@@ -16,6 +16,9 @@
                    (game-engine-rpg/lang/avatar-assets
                       [ASSET-PATH 'game-engine-rpg/lang/avatar-assets]
                       [LANGUAGE-COLOR "black"])
+                   (game-engine-rpg/lang/assets
+                      [ASSET-PATH 'game-engine-rpg/lang/assets]
+                      [LANGUAGE-COLOR "black"])
                    (game-engine-rpg/lang/crafting
                       [ASSET-PATH 'game-engine-rpg/lang/crafting]
                       [LANGUAGE-COLOR "black"])
