@@ -64,13 +64,13 @@
    'lightsaber-2
    (read-prefix "a lightsaber that has a custom icon and high rarity.")
    'lightsaber-3
-   (read-prefix "a powerful, custom-colored lightsaber with high rarity and a custom icon.")
+   (read-prefix "a powerful, custom-colored lightsaber with high rarity. Customize the name and icon.")
 
 
    'blaster-2
    (read-prefix "a blaster that has a custom icon and high rarity.")
    'blaster-3
-   (read-prefix "a powerful, fast, long-ranged blaster that can go through 3 imperials with one shot. Add 5 imperials.")
+   (read-prefix "a powerful, fast blaster that can go through 3 imperials with one shot. Add 5 imperials.")
 
 
    'lightsaber-droid-1
