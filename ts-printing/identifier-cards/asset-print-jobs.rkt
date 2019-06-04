@@ -25,9 +25,6 @@
                    (game-engine-rpg/lang/weapon
                       [ASSET-PATH 'game-engine-rpg/lang/weapon]
                       [LANGUAGE-COLOR "black"])
-                   (game-engine-rpg/lang/assets
-                      [ASSET-PATH 'game-engine-rpg/lang/assets]
-                      [LANGUAGE-COLOR "black"])
                    )
 
   (begin-asset-job "battlearena-asset-cards"   ;square
