@@ -1,4 +1,4 @@
-#lang racket
+ #lang racket
 
 (provide stimuli)
 
@@ -77,22 +77,22 @@
    'sky-3
    (read-template "a short day/night cycle where it gets pitch-black at midnight.")
    'sky-4
-   (read-template "a long day, a short night, and an enemy that only comes out at night.")
+   (read-template "a short night, and many nocturnal enemies.")
 
 
    'starvation-rate
    (read-template "an avatar and the fastest starvation rate.")
 
    'npc-1
-   (read-template "a basic npc.")
+   (read-template "a basic NPC.")
    'npc-2
-   (read-template "a named witch npc.")
+   (read-template "a named witch NPC.")
    'npc-3
-   (read-template "an npc with custom dialog.")
+   (read-template "an NPC with custom dialog.")
    'npc-4
-   (read-template "a witch npc who follows you. Give them a name and a specific start tile.")
+   (read-template "a witch NPC who follows you. Give them a name and a specific start tile.")
    'npc-5
-   (read-template "2 npcs with custom dialog and two additional customizations each.")
+   (read-template "2 NPCs with custom dialog and two additional customizations each.")
 
    'bg-1
    (read-template "a custom background.")
@@ -115,7 +115,7 @@
    'weapon-crafter-1
    (read-template "a crafter that builds swords.")
    'weapon-crafter-2
-   (read-template "a crafter that slowly builds a high-damage sword.")
+   (read-template "a wood table crafter that slowly builds a high-damage sword.")
    'weapon-crafter-3
    (read-template "coins, and a wood table crafter that instantly builds fast-moving fire-magic for 100 gold.")
 

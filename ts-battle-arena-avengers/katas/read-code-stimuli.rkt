@@ -41,9 +41,9 @@
    'enemy-1
    (read-prefix "a villain.")
    'enemy-3
-   (read-prefix "several moderately intelligent Loki villains and have double health and shield.")
+   (read-prefix "several moderately intelligent Loki villains who have double health and shield.")
    'enemy-4
-   (read-prefix "8 enemies: 5 weak with low intellegence, and 3 strong with high intellence. Choose your own sprites.")
+   (read-prefix "8 enemies: 5 weak with low intellegence, and 3 strong with high intelligence. Choose your own sprites.")
 
    
    'enemy-weapon-1

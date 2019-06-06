@@ -354,7 +354,7 @@
    (short-template "a penguin eating 3 GREEN fish and 5 RED fish.")
 
    'zoo-012
-   (short-template "an avatar eating a food and collecting 5 GREEN gold coins.")
+   (short-template "an animal eating 5 BLUE foods and 5 GREEN foods.")
 
    
    'zoo-013
@@ -371,7 +371,7 @@
 
    'zoo-017
    (short-template (~a "2 levels: the 1st with a monkey eating 10 bananas; "
-                       "in the 2nd, add 10 silver coins."))
+                       "in the 2nd level, add 10 silver coins."))
 
    'zoo-018
    (read-multi-game-template "The 1st game has an avatar eating 2 foods and collecting 5 copper coins.
@@ -407,11 +407,11 @@
    (short-template "a zookeeper healing 4 RED, 4 GREEN, and 4 BLUE animals.")
 
    'zoo-028
-   (short-template "a zookeeper healing 5 monkeys, 5 hippos, and eating 5 apples and 5 bananas.")
+   (short-template "a zookeeper healing 5 monkeys and 5 hippos; and eating 5 apples and 5 bananas.")
 
    'zoo-029
    (short-template (~a "2 levels: the 1st with a zookeeper healing 4 RED, 4 BLUE, and 4 GREEN monkeys; "
-                       "the 2nd with a zookeeper healing 4 ORANGE, 4 YELLOW, and 4 PURPLE giraffes."))
+                       "the 2nd level with a zookeeper healing 4 ORANGE, 4 YELLOW, and 4 PURPLE giraffes."))
 
    'zoo-030
    (read-multi-game-template "The 1st game has a zookeeper healing 2 monkeys and 2 bananas.

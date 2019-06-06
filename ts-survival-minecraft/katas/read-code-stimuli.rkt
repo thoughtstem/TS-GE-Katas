@@ -32,17 +32,17 @@
    'enemy-3
    (read-template "5 moderately intelligent skeleton mobs.")
    'enemy-4
-   (read-template "10 total mobs: half are low intelligence creepers, and half are moderately intelligent skeletons who only appear at night.")
+   (read-template "10 total mobs: half are creepers with low intelligence, and half are moderately intelligent, nocturnal skeletons.")
    'enemy-5
-   (read-template "2 types of mobs: a few moderately intelligent skeletons, and highly intelligent ghasts with a high-damage attack that only appear at night.")
+   (read-template "2 types of mobs: a few moderately intelligent skeletons, and several highly intelligent, nocturnal ghasts with a high-damage attack.")
    'enemy-6
    (read-template "5 hard mobs that spit acid with 50 damage.")
    
 
    'coin-1
-   (read-template "a basic iron ore.")
+   (read-template "a basic ore.")
    'coin-2
-   (read-template "valuable iron ore.")
+   (read-template "valuable ore.")
    'coin-3
    (read-template "many valuable gold ore blocks.")
    'coin-4
@@ -55,7 +55,7 @@
    (read-template "ore, and a wood table crafter that instantly builds fast-spinning fire magic for 100 ore.")
 
    'sky-4
-   (read-template "a long day, a short night, and a mob that only comes out at night.")
+   (read-template "a short night, and many nocturnal mobs.")
    
    'npc-1
    (read-template "a basic entity.")

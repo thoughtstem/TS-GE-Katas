@@ -16,7 +16,7 @@
    'avatar-1
    (read-template "a Pokemon.")
    'avatar-2
-   (read-template "a Bulbasaur as your playable character.")
+   (read-template "Bulbasaur as your playable character.")
    'avatar-3
    (read-template "a fast Charmander as your playable character.")
    'avatar-4
@@ -45,7 +45,7 @@
    'enemy-4
    (read-template "5 highly intelligent Red Girl trainers armed with high-damage pokeballs.")
    'enemy-5
-   (read-template "10 total trainers: half are moderately intelligent Green Boy trainers, and half highly intelligent smart Team Rocket trainers who only appear at night.")
+   (read-template "10 total trainers: half are moderately intelligent Green Boy trainers, and half are highly intelligent, nocturnal Team Rocket trainers.")
    'enemy-6
    (read-template "5 Green Boy trainers with 'easy ai, 3 Red Girl trainers with 'medium ai, and Team Rocket trainer with 'hard ai that only shows up at night and does 50 damage.")
 
