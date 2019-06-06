@@ -7,7 +7,7 @@
   vote-member-into-new-group
   )
 
-(require "../base.rkt"
+(require "../base/base.rkt"
          "./basic-actions.rkt")
 
 (define (finger-vote new-group-name)

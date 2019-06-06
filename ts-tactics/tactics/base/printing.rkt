@@ -6,7 +6,7 @@
          (prefix-in pp: pprint)) 
 
 
-(define indentation-level 3)
+(define indentation-level 6)
 
 (define (print-predicate p)
   (match p
@@ -35,7 +35,7 @@
        (pp:nest indentation-level
                 (pp:v-append
                   (pp:hs-append 
-                    (pp:text "If")
+                    (pp:text "⇶ If")
                     (print-predicate predicate))
                   (print-verb true-verb)
                   (print-verb false-verb))))]
@@ -66,6 +66,11 @@
                 (print-verb verb)
                 (pp:text (~a english ))
                 (print-object object)))]
+    [(adverb verb english)
+     (pp:nest indentation-level
+              (pp:hs-append 
+                (print-verb verb)
+                (pp:text (~a english))))]
     [_ (print-uninterpreted v)]))
 
 
@@ -77,51 +82,82 @@
        (pp:text " ")
        (print-object object))]
     [_ 
-      (print-uninterpreted d)]))
+      (if (string? d)
+        (pp:text d)
+        (print-uninterpreted d))]))
 
-(define (print-instruction n i)
-  (match i
-    [(instruction subject verb)
-     (pp:nest indentation-level
-              (pp:v-append
+(define (print-instruction i)
+  (if (list? i)
+    (print-instructions i)
+    (match i
+      [(go-sub call)
+       (pp:text (~a "GO SUB: " 
+                    call
+                    #;
+                    (first call)))]
+      [(instruction subject verb)
+       (pp:nest indentation-level
                 (pp:v-append
                   (pp:h-append
-                    (print-subject (instruction-subject i))  
-                    (pp:text ":"))
-                  (print-verb (instruction-verb i)))
-                ))]
+                    (pp:h-append
+                      (print-subject (instruction-subject i))  
+                      (pp:text " ⇒ "))
+                    (print-verb (instruction-verb i)))
+                  ))]
 
-    [(phase name instructions) 
-     (pp:nest indentation-level
-              (pp:v-append
-                (pp:text (~a "<" name " Phase>"))
-                (print-instructions instructions)))]
+      [(phase name instructions) 
+       (pp:nest indentation-level
+                (pp:v-append
+                  (pp:text (string-upcase (~a "" name "")))
+                  (print-instructions instructions)))]
 
-    [(until predicate instructions) 
-     (pp:nest indentation-level
-              (pp:v-append
-                (pp:text (~a "until:"))
-                (print-predicate predicate)
-                (print-instructions instructions)))]))
+      [(until predicate instructions) 
+       (pp:nest indentation-level
+                (pp:v-append
+                  (pp:hs-append
+                    (pp:text (~a "⮔  Do Until"))
+                    (print-predicate predicate))
+                  (print-instructions instructions)))])))
 
 (define/contract (print-instructions is)
-  (-> list? pp:doc?)
+  (-> (or/c list? instruction?) pp:doc?)
 
-  (apply pp:v-append
-    (map print-instruction 
-         (range 1 (add1 (length is))) 
-         is)))
+  (if (instruction? is)
+    (print-instruction is)
+    (apply pp:v-append
+           (map print-instruction 
+                is))))
 
 (define/contract (print-subject s)
   (-> any/c pp:doc?)
   (match s
+    [(group subjects)
+     (if (empty? subjects)
+       (pp:text "")
+       (pp:h-append  
+         (print-subject (first subjects))
+         (pp:text " AND ")
+         (print-subject (rest subjects))))]
+
+    [(group-add a b)
+       (pp:h-append  
+         (print-subject a)
+         (pp:text " AND ")
+         (print-subject b)) ]
+
+    [(group-subtract a b)
+       (pp:h-append  
+         (print-subject a)
+         (pp:text " EXCLUDING ")
+         (print-subject b)) ]
+
     [(adjective english object) 
      (pp:h-append  
-       (pp:text english) 
+       (pp:text (~a "👤 " english)) 
        (pp:text " ")
        (print-object object))]
 
-    [_ (pp:text (~a s))]))
+    [_ (pp:text (~a "👤 " s))]))
 
 
 (define (print-uninterpreted x)

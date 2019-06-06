@@ -7,9 +7,8 @@
   group-fully-contains?
   select-secret-subgroup)
 
-(require "../base.rkt"
-         "./basic-actions.rkt"
-         )
+(require "../base/base.rkt"
+         "./basic-actions.rkt")
 
 (define (group-fully-contains? group other-group )
   (predicate (~a "contains all of the people in [" other-group "]")

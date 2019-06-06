@@ -7,14 +7,12 @@
 (require "base/base.rkt"
          "base/printing.rkt" )
 
-(provide 
-  (all-from-out
+(provide (all-from-out
     "mechanics/timer.rkt"
     "mechanics/points.rkt"
     "mechanics/voting.rkt"
     "mechanics/groups.rkt"
     "mechanics/coding.rkt"
-    "mechanics/circle-play.rkt"
     "mechanics/basic-actions.rkt"
     "mechanics/basic-adverbs.rkt"
     "mechanics/basic-things.rkt"))
@@ -25,7 +23,6 @@
   "mechanics/voting.rkt"
   "mechanics/groups.rkt"
   "mechanics/coding.rkt"
-  "mechanics/circle-play.rkt"
   "mechanics/basic-actions.rkt"
   "mechanics/basic-adverbs.rkt"
   "mechanics/basic-things.rkt")

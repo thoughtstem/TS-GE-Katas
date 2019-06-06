@@ -7,7 +7,7 @@
   top-half-of
   bottom-half-of)
 
-(require "../base.rkt")
+(require "../base/base.rkt")
 
 (define (contents-of object)
   (object-part "the contents of" object))
