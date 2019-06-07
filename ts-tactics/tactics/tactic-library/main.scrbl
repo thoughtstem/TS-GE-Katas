@@ -11,10 +11,11 @@ Welcome!  This handbook contains learning "tactics" -- i.e. algorithms, games, a
 
 If you're a coach, you should use these tactics to teach your students two things:
 
-@itemlist[@item{How to code}
+@itemlist[#:style 'ordered
+          @item{How to code}
           @item{How to use the learning tactics on their own}]
 
-This is a subtle but incredibly important point: You are not just teaching coding; you are teaching people how to learn coding.  You're not just playing games with students; you're teaching them how to play the games without your help.  You're not just being a coach; you're teaching them how to be coaches.  You're not just being a teacher; you're teaching them how to be teachers.   You're not just being a leader; you're teaching them how to lead.
+This second point is subtle but incredibly important: You are not just teaching coding; you are teaching people how to learn coding.  You're not just playing games with students; you're teaching them how to play the games without your help.  You're not just being a coach; you're teaching them how to be coaches.  You're not just being a teacher; you're teaching them how to be teachers.   You're not just being a leader; you're teaching them how to lead.
 
 What all this means is: as students become more and more skilled at doing these tactics, you should be giving them more and more responsibility for helping you run the tactics. 
 
@@ -27,9 +28,9 @@ What all this means is: as students become more and more skilled at doing these 
 
 Students will only experience this growth in self-driven learning and leadership if you encourage them to begin taking on leadership roles as soon as possible.
 
-@emph{Don't: Just use this book to teach coding}
+@centered[@emph{Don't: Just use this book to teach coding}]
 
-@emph{Do: Teach them how to use this book}
+@centered[@emph{Do: Teach them how to use this book}]
 
 To make that very concrete: In this book, you will see many tactics that give an instruction to you, the coach.  For example:
 
@@ -45,9 +46,7 @@ A novice coach might see this instruction and immediately begin writing on the w
 
 But let me ask you, who is "the coach"?  Remember, it isn't just you.  Your students are coaches-in-training from day 1.  
 
-Ask @emph{them} to write code on the board.  Ask @emph{them} to interpret the instructions for you.  Ask @emph{them} to step into your shoes and lead for a few seconds.  A few minutes.  A full tactic.  Two tactics in a row.  And so on.
-
-The sooner they can lead their own tactics without help, the sooner you can help them at a much deeper level: i.e. helping them analyze their own strengths and weaknesses, selecting tactics that nurture those strengths and target those weaknesses.
+Ask @emph{them} to interpret the instructions for you.  Ask @emph{them} to write code on the board.  Ask @emph{them} to step into your shoes and lead for a few seconds.  A few minutes.  A full tactic.  Two tactics in a row.  And so on.
 
 This can take time.  Have patience.  But believe in your students.  And believe in yourself. 
 
@@ -74,7 +73,7 @@ The most basic thing that can be considered a "Language Learning Loop" is this, 
       (body-action "do tactic together"))
 
      (instruction 'Team
-      (body-action "take Kata test on challenge-card"))))))
+      (body-action "take Kata Test on challenge-card"))))))
 
 A Language Learning Loop is any teaching/learning algorithm that has these 5 essential qualities:
 
@@ -134,7 +133,7 @@ Some coaches do not like to see students fail.  That's understandable.  This is 
        (body-action "do tactic together")))
 
      (instruction 'Team
-      (body-action "test on challenge-card"))))))
+      (body-action "take Kata Test on challenge-card"))))))
 
 This Language Learning Loop is good for novice students (who tend to be sensitive to failure).   The drawback is that it takes longer to get to the test.  But that's also kind of the point -- to delay getting there until students are ready.
 
@@ -196,7 +195,7 @@ This is a great loop for advanced students because it gives them more agency ove
      (instruction 'Coach
       (body-action "pick challenge-card"))
 
-     (until (predicate "decides to move on" "team")
+     (until (predicate "decides they are ready for test" "team")
 
       (instruction 'Coach
        (discuss "Which tactic should we do next?"))
@@ -212,13 +211,13 @@ This is a great loop for advanced students because it gives them more agency ove
       (body-action "test on challenge-card"))))))
 
 
-This works best with students who know a variety of tactics and who have developmed enough metacognitive ability to know which tactics will help them and their team learn most effectively. 
+This works best with students who know a variety of tactics and who have developed enough metacognitive ability to know which tactics will help them and their team learn most effectively. 
 
 It is also a perfect example of the fundamental principle of this handbook: Teach students how to learn.  The more you involve them as active participants in their own learning, the better.
 
-The drawbacks are that you will need to know when to override the team's decisions if their educational insights are flawed.
+The challenges are that you will need to know when to override the team's decisions if their educational insights are flawed:
 
-@itemlist[@item{If they tend to keep picking the same comfortable tactics over and over, you will need to encourage them to explore new ones and to embrance discomfort.}
+@itemlist[@item{If they tend to keep picking the same comfortable tactics over and over, you will need to encourage them to explore new ones and to embrace discomfort.}
           @item{If they tend to be reluctant to test themselves, you may need to encourage them to stop doing tactics and take the test -- teaching them that failing a test is not something to be afraid of.}
           @item{If they tend to be too focused on taking tests and earning badges as fast as possible, you may need to slow them down and point out that the goal is to learn deeply, not quickly.}]
 
