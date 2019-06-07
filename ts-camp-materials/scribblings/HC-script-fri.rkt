@@ -3,7 +3,9 @@
 @(require "script-util.rkt")
 
 @title{Friday Head Coach Script}
+@key
 
+@section{Check In}
 @(header-block check-in
                "8:45am-9:00am"
                "12:45pm-1:00pm"
@@ -23,6 +25,8 @@
           @item["Once TL returns, " @bold{confirm attendance} " on backend is
                 accurate with HQ over Slack"]]
 
+
+@section{Coding Warmup}
 @(header-block coding-warmup
                "9:00am-9:15am"
                "1:00pm-1:15pm"
@@ -33,7 +37,8 @@
           @item["With loose guidance from TLs, " @bold{students review} " katas."]
           @item[@bold{Step in} " for TL who is waiting at check-in"]]
 
-          
+
+@section{Final Katas -- Practice and Review}
 @(header-block final-katas
                "9:15am-10:00am"
                "1:15pm-2:00pm"
@@ -44,11 +49,11 @@
           @item["Team Leaders introduce the last katas and/or review as they see fit --
                 this is the " @bold{last learning/practice before the jam} "."]
           @item["Monitor and assist TLs."]
-          @item[@bold{PM ONLY} " -- take " @bold{YOUR 30 min lunch break} " from "
-                @bold{1:20-1:50}]]
+          @item[@important-note[@bold{PM ONLY} " -- take " @bold{YOUR 30 min lunch break}
+                          " from " @bold{1:20-1:50}]]]
 
 
-
+@section{Snack Break}
 @(header-block snack-break
                "10:00am-10:15am"
                "2:00pm-2:15pm"
@@ -63,7 +68,7 @@
           @item["Monitor all students and keep it " @bold{safe and sane}]]
 
 
-
+@section{Game Time}
 @(header-block game-time-15
                "10:15am-10:30am"
                "2:15pm-2:30pm"
@@ -93,6 +98,7 @@
                      "8 player min."))]
 
 
+@section{Game Jam Intro}
 @(header-block game-jam-intro
                "10:30am-10:45am"
                "2:30pm-2:45pm"
@@ -122,6 +128,7 @@
                           @item["Are " @bold{PUMPED} "!!!"]]]]
 
 
+@section{Game Jam}
 @(header-block game-jam
                "10:45am-11:30am"
                "2:45pm-3:30pm"
@@ -135,6 +142,7 @@
           @item["Ensure all students get a " @bold{working game} " by the end of jam."]]
 
 
+@section{Scoring & Market}
 @(header-block scoring-market
                "11:30am-12:00(ish)pm"
                "3:30pm-4:00(ish)pm"
@@ -156,6 +164,7 @@
           @item["PM only -- ensure you finish with enough time to travel to check-out
                 location by 4pm"]]
 
+@section{Lunch -- AM only}
 @lunch-block
 
 @time-warning @bold{10, 5 and 2 min} warnings
@@ -166,6 +175,7 @@
           @item["Keep lunch time " @bold{safe and organized}]]
 
 
+@section{Check Out}
 @(header-block check-out
                "12:45pm-1:10pm"
                "4:00pm-4:10pm"
@@ -177,5 +187,35 @@
           @item[@bold{Assign} " specific jobs to all TLs"]
           @item["Alert HQ of any students awaiting pickup at " @bold{ten past}
                 " (1:10pm/4:10pm) and keep HQ up to date when picked up"]
-          @item[@bold{PM ONLY} " -- dismiss TLs ASAP and clock out. "
+          @item[@bold{PM ONLY} " -- review and complete EOW (end of week) checklist, below,
+                with assitance from TLs before dismissing TLs ASAP and clock out"
                 @bold{Have a great weekend!}]]
+
+
+@section{EOW Checklist -- PM only}
+
+Staff to complete (with assistance from students as appropriate) during Market/Wrap Up.
+TL(s) continue as needed during checkout. Complete before dismissing TLs and clocking out.
+@bold{Disregard this list if final week, please refer to pack-up instructions.}
+
+@itemlist[#:style 'compact
+          @item[@bold{Power down} " all chromebooks."]
+          @item["In most locations, please leave the following " @bold{set up} ":"
+                @itemlist[#:style 'compact
+                          @item{Extension cords, power strips & power cords}
+                          @item{Market setup (DO organize and tidy)}
+                          @item{Tables & Chairs}
+                          @item{Schedule poster}]]
+          @item["In " @italic{all} " locations, please " @bold{neatly store}
+                " the following in the " @bold{correctly labeled bins} ":"
+                @itemlist[#:style 'compact
+                          @item{Market items}
+                          @item{Lanyards, badge holders and kata cards}
+                          @item{Teaching kit materials}
+                          @item{Head Coach bag materials}
+                          @item{Extra markers, scrap paper, etc.}
+                          @item{Mice}
+                          @item{Chromebooks (unless location has charging locker,
+                                where chromebooks should stay)}]]
+          @item[@bold{Tidy} " the room (leave it how you would like to find it!)."]
+          @item[@bold{Inform HQ} " of any equipment issues/needs."]]

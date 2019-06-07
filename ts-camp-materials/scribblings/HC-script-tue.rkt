@@ -3,7 +3,9 @@
 @(require "script-util.rkt")
 
 @title{Tuesday Head Coach Script}
+@key
 
+@section{Check In}
 @(header-block check-in
                "8:45am-9:00am"
                "12:45pm-1:00pm"
@@ -21,6 +23,7 @@
           @item["Once TL returns, " @bold{confirm attendance} " on backend is
                 accurate with HQ over Slack"]]
 
+@section{Coding Warmup}
 @(header-block coding-warmup
                "9:00am-9:15am"
                "1:00pm-1:15pm"
@@ -34,7 +37,7 @@
           @item[@bold{Step in} " for TL who is waiting at check-in"]]
 
 
-          
+@section{Katas}          
 @(header-block katas
                "9:15am-10:00am"
                "1:15pm-2:00pm"
@@ -48,11 +51,11 @@
                           @item[@bold{New Katas} " today!"]
                           @item["So " @bold{listen up} " to TLs"]]]
           @item["Monitor and assist TLs as they work on the " @bold{next section katas}]
-          @item[@bold{PM ONLY} " -- take " @bold{YOUR 30 min lunch break} " from "
-                @bold{1:20-1:50}]]
+          @item[@important-note[@bold{PM ONLY} " -- take " @bold{YOUR 30 min lunch break}
+                          " from " @bold{1:20-1:50}]]]
 
 
-
+@section{Snack Break}
 @(header-block snack-break
                "10:00am-10:15am"
                "2:00pm-2:15pm"
@@ -68,7 +71,7 @@
           @item["Monitor all students and keep it " @bold{safe and sane}]]
 
 
-
+@section{Game Time}
 @(header-block game-time-30
                "10:15am-10:45am"
                "2:15pm-2:45pm"
@@ -106,7 +109,7 @@
                      "5 player min."))]
 
 
-
+@section{Nerd Out}
 @(header-block nerd-out
                "10:45am-11:00am"
                "2:45pm-3:00pm"
@@ -124,6 +127,7 @@
           @item["Monitor camp groups, inspiring further discussion as needed"]]
 
 
+@section{Kata Practice}
 @(header-block kata-practice
                "11:00am-11:30am"
                "3:00pm-3:30pm"
@@ -139,6 +143,7 @@
           @item["Monitor camp groups, assisting TLs as needed"]]
 
 
+@section{Game Show}
 @(header-block game-show
                "11:30am-11:45am"
                "3:30pm-3:45pm"
@@ -166,6 +171,7 @@
                 game show questions"]]
 
 
+@section{Market/Wrap Up}
 @(header-block market-wrap-up
                "11:45am-12:00(ish)pm"
                "3:45am-4:00(ish)pm"
@@ -176,12 +182,12 @@
                 location by 4pm"]
           @item["Assign yourself or a TL to be " @bold{Market Cashier}]
           @item["Students " @bold{tidy their camp table} " before allowed to go to
-                market"]
+                market (see EOD checklist for PM todo list)"]
           @item["Welcome camp teams " @bold{one at a time} " to visit market"]
           @item["Students done with market collect their things for lunch/home and line
                 up by door"]]
 
-
+@section{Lunch -- AM only}
 @lunch-block
 
 @time-warning @bold{10, 5 and 2 min} warnings
@@ -198,6 +204,7 @@
           @item["Keep lunch time " @bold{safe and organized}]]
 
 
+@section{Check Out}
 @(header-block check-out
                "12:45pm-1:10pm"
                "4:00pm-4:10pm"
@@ -208,4 +215,22 @@
           @item[@bold{Assign} " specific jobs to all TLs"]
           @item["Alert HQ of any students awaiting pickup at " @bold{ten past}
                 " (1:10pm/4:10pm) and keep HQ up to date when picked up"]
-          @item[@bold{PM ONLY} " -- dismiss TLs ASAP and clock out"]]
+          @item[@bold{PM ONLY} " -- review and complete EOD checklist, below,
+                with assitance from TLs before dismissing TLs ASAP and clock out"]]
+
+
+@section{EOD Checklist -- PM only}
+
+Staff to complete (with assistance from students as appropriate) during Market/Wrap Up.
+TL(s) continue as needed during checkout.
+@bold{Complete before dismissing TLs and clocking out.}
+
+@itemlist[#:style 'compact
+          @item[@bold{Power down} " all chromebooks."]
+          @item[@bold{Properly store} " all chromebooks, mice, and other equipment as the
+                location requires."]
+          @item[@bold{Divide lanyards} " into AM and PM groups. Be sure to put all-day
+                campers' lanyards back with AM."]
+          @item[@bold{Tidy} " market, coach kits, tables, general room as needed."]
+          @item[@bold{Lights out} " and " @bold{lock up} " according to your location's
+                protocol."]]
