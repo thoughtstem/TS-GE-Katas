@@ -1,5 +1,7 @@
 #lang racket
 
+(provide disintegrating-code)
+
 (require "../lang.rkt")
 
 (define (disintegrating-code coach 

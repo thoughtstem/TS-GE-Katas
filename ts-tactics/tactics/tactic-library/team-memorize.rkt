@@ -6,17 +6,19 @@
 
 ;TODO: Start on docs.  They will help a lot.  Plus, much of that can go directly into the handbook.
 
-(define (pass-and-memorize challenge-card)
+(define (pass-and-memorize time)
   (list
-    (instruction (owner-of challenge-card)
-                 (within-seconds 10
+    (instruction (owner-of 'the-challenge-card)
+                 (within-seconds time
                                  (memorize 
                                    (contents-of
                                      (back-of
-                                       challenge-card))))) 
-    (transfer-ownership-of challenge-card
-                           (owner-of challenge-card)
+                                       'the-challenge-card))))) 
+
+    (transfer-ownership-of 'the-challenge-card
+                           (owner-of 'the-challenge-card)
                            (person-right-of you))))   
+
 
 (define (timer-holder-talks-to-scribe timer whiteboard)
   (list
@@ -137,11 +139,12 @@
   (displayln "\n")
 
   (print-tactic
-    (team-memorize 'Coach
-                   'Team
-                   'Team-Computers
-                   'the-challenge-card
-                   'the-timer
-                   'the-whiteboard
-                   'the-markers)))
+    (team-memorize 
+      'Coach
+      'Team
+      'Team-Computers
+      'the-challenge-card
+      'the-timer
+      'the-whiteboard
+      'the-markers)))
 
