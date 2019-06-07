@@ -1,5 +1,7 @@
 #lang racket
 
+(provide disintegrating-code)
+
 (require "../lang.rkt")
 
 (define (disintegrating-code coach 
@@ -27,19 +29,17 @@
            (list
              (until (blank? (bottom-half-of whiteboard))  
                     (list
+                      (instruction coach  
+                                   (remove-some-identifiers
+                                     (bottom-half-of whiteboard)))
 
                       (instruction students
                                    (erase-all-from computers))
 
                       (instruction students
-                                   (type-up 
-                                     (contents-of (bottom-half-of whiteboard))
-                                     computers))
+                                   (body-action "write a program that fits the requirements written on the top half of the whiteboard"))
 
-                      (instruction coach  
-                                   (remove-some-identifiers
-                                     (contents-of 
-                                       (bottom-half-of whiteboard))))))))))
+                      ))))))
 
 (module+ test
   (print-tactic

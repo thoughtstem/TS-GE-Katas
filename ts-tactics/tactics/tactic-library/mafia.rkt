@@ -1,5 +1,6 @@
 #lang racket
 
+(provide mafia)
 
 (require "../lang.rkt")
 

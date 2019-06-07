@@ -1,6 +1,7 @@
 #lang racket
 
-(provide print-tactic)
+(provide print-tactic
+         tactic->string)
 
 (require "base-base.rkt"  ;Should only ever require base.  That's how we manage the complexity.  Adding new base forms requires adding new printing.  We shoudl avoid that as much as possible.  Adding to a language above base.rkt gives all thse printing facilities for free
          (prefix-in pp: pprint)) 
@@ -167,6 +168,12 @@
   (displayln
     (pp:pretty-format
       (print-instructions t))))
+
+
+
+(define (tactic->string t)
+  (pp:pretty-format
+    (print-instructions t)))
 
 
 

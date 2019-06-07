@@ -1,11 +1,11 @@
 #lang racket
 
 (provide
+  vote-on
   finger-vote
   begin-the-vote
   finish-the-vote
-  vote-member-into-new-group
-  )
+  vote-member-into-new-group)
 
 (require "../base/base.rkt"
          "./basic-actions.rkt")
@@ -42,3 +42,10 @@
 
            (instruction announcer
                         (finish-the-vote)))))
+
+(define (vote-on on)
+  (directed-action
+    (body-action "vote")
+    "on"
+    on))
+
