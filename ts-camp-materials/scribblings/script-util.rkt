@@ -62,25 +62,27 @@
 (define-runtime-path check-in "img/check-in.png")
 (define-runtime-path check-out "img/check-out.png")
 
-(define-runtime-path bring-together-icon "img/together-icon.png")
-(define-runtime-path breakout-teams-icon "img/breakout-icon.png")
+(define-runtime-path bring-together-icon "img/together-icon-purple.png")
+(define-runtime-path breakout-teams-icon "img/breakout-icon-teal.png")
 (define-runtime-path AM-icon-path "img/sun-am.png")
 (define-runtime-path PM-icon-path "img/sun-pm.png")
 (define-runtime-path clock-icon "img/clock.png")
 (define-runtime-path outside-icon "img/outside-icon.png")
 
-(define time-warning (image clock-icon #:scale .75))
-(define together     (image bring-together-icon #:scale .5))
-(define breakout     (image breakout-teams-icon #:scale .5))
-
-(define AM-icon (image AM-icon-path #:scale .25))
-(define PM-icon (image PM-icon-path #:scale .25))
+(define time-warning-img  (image clock-icon #:scale .5))
+(define together          (image bring-together-icon #:scale .6))
+(define breakout          (image breakout-teams-icon #:scale .65))
+(define AM-icon           (image AM-icon-path #:scale .25))
+(define PM-icon           (image PM-icon-path #:scale .25))
 
 (define small-break (ghost (rectangle 5 5)))
 (define med-break   (ghost (rectangle 10 10)))
 
 (define pict-orange (make-color 240 130 0))
 (define pict-blue   (make-color 15 100 230))
+
+(define (time-warning . s)
+  (apply (curry elem time-warning-img #:style (style "grey" (list (color-property (list 100 100 100))))) s))
 
 (define/contract (am-time t)
   (-> string? pict?)
@@ -101,13 +103,13 @@
   (->* (any/c string? string?) (#:camp-type org-type? #:outside? boolean?) pict?)
 
   (define together-pict
-    (scale (bitmap bring-together-icon) .3))
+    (scale (bitmap bring-together-icon) .6))
 
   (define breakout-pict
-    (scale (bitmap breakout-teams-icon) .3))
+    (scale (bitmap breakout-teams-icon) .65))
 
   (define outside-pict
-    (scale (bitmap outside-icon) .5))
+    (scale (bitmap outside-icon) .6))
    
   (define org-img
     (cond [(eq? org-type 'together)       (vl-append med-break
@@ -157,7 +159,7 @@
 (define pm-style
   (style "blue" (list (color-property (list 15 100 230)))))
 (define green-style
-  (style "green" (list (color-property (list 0 135 15)))))
+  (style "green" (list (color-property (list 0 150 20)))))
 
 (define (important-note . s)
   (apply (curry elem #:style red-style) s))
@@ -176,26 +178,26 @@
   (tabular #:style (style "color" (list (background-color-property '(245 245 255))))
            #:row-properties '(bottom-border)
            #:sep (hspace 1)
-           (list (list "" (bold "SCRIPT KEY") "")
-                 (list (scale (bitmap AM-icon-path) .15)
+           (list (list  "" "" (bold "SCRIPT KEY") "")
+                 (list "" (scale (bitmap AM-icon-path) .15)
                        " = AM camp"
                        (am-note "AM camp only notes"))
-                 (list (scale (bitmap PM-icon-path) .15)
+                 (list "" (scale (bitmap PM-icon-path) .15)
                        " = PM camp"
                        (pm-note "PM camp only notes"))
-                 (list (scale (bitmap outside-icon) .5)
+                 (list "" (scale (bitmap outside-icon) .5)
                        " = move outside for this block (if possible)"
                        'cont)
-                 (list (scale (bitmap bring-together-icon) .3)
+                 (list "" (scale (bitmap bring-together-icon) .5)
                        "= entire camp is together/mixed for this block"
                        'cont)
-                 (list (scale (bitmap breakout-teams-icon) .3)
+                 (list "" (scale (bitmap breakout-teams-icon) .5)
                        "= breakout into individual camp teams for this block"
                        'cont)
-                 (list ""
+                 (list "" ""
                        (important-note "Really important notes!")
                        'cont)
-                 (list ""
+                 (list "" ""
                        (new-note "New notes for this day only/this day forward")
                        'cont))))
 

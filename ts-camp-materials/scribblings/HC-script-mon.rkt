@@ -1,9 +1,6 @@
 #lang scribble/manual
 
-@(require "script-util.rkt"
-          ;pict
-          ;racket/draw
-          )
+@(require "script-util.rkt")
 
 @title{Monday Head Coach Script}
 @key
@@ -29,7 +26,7 @@
                "12:45pm-1:30pm"
                #:camp-type 'together)
 
-@time-warning @bold{5 and 2 min} warnings
+@time-warning{@bold{5 and 2 min} warnings}
 
 @itemlist[#:style 'compact
           @item["Arrive at the check in location at " @bold{quarter of} " ("
@@ -50,7 +47,7 @@
                "1:30pm-2:15pm"
                #:camp-type 'start-together)
 
-@time-warning @bold{15, 10, 5 and 2 min} warnings
+@time-warning{@bold{15, 10, 5 and 2 min} warnings}
 
 @itemlist[#:style 'compact
           @item[@bold{Announce to all students:}
@@ -72,7 +69,7 @@
                #:camp-type 'together
                #:outside? #t)
 
-@time-warning @bold{5 and 2 min} warnings
+@time-warning{@bold{5 and 2 min} warnings}
 
 @itemlist[#:style 'compact
           @item[@important-note[@bold{Dismiss TLs for break} " -- TLs should LEAVE the camp space so they
@@ -87,7 +84,7 @@
                #:camp-type 'together
                #:outside? #t)
 
-@time-warning @bold{5 and 2 min} warnings
+@time-warning{@bold{5 and 2 min} warnings}
 
 @itemlist[#:style 'compact
           @item[@bold{Choose game(s)} " from chart below. Consider expected interest
@@ -124,7 +121,7 @@
                "2:45pm-3:00pm"
                #:camp-type 'breakout)
 
-@time-warning @bold{5 and 2 min} warnings
+@time-warning{@bold{5 and 2 min} warnings}
 
 @itemlist[#:style 'compact
           @item["Announce today's mission:"
@@ -138,7 +135,7 @@
                "3:00pm-3:30pm"
                #:camp-type 'breakout)
 
-@time-warning @bold{10, 5 and 2 min} warnings
+@time-warning{@bold{10, 5 and 2 min} warnings}
 
 @itemlist[#:style 'compact
           @item[@bold{Transition annoucement:}
@@ -153,7 +150,7 @@
                "3:30pm-3:45pm"
                #:camp-type 'start-together)
 
-@time-warning @bold{5 and 2 min} warnings
+@time-warning{@bold{5 and 2 min} warnings}
 
 @itemlist[#:style 'compact
           @item["Bring camp " @bold{all together}]
@@ -185,7 +182,7 @@
                          location by 4pm"]]
           @item["Assign yourself or a TL to be " @bold{Market Cashier}]
           @item["Students " @bold{tidy their camp table} " before allowed to go to
-                market (see EOD checklist for PM todo list)"]
+                market" @pm-note{(see EOD Checklist below for PM todo list)}]
           @item["Welcome camp teams " @bold{one at a time} " to visit market"]
           @item["Students done with market collect their things for lunch/home and line
                 up by door"]]
@@ -193,7 +190,7 @@
 @section{Lunch -- AM only}
 @lunch-block
 
-@time-warning @bold{10, 5 and 2 min} warnings
+@time-warning{@bold{10, 5 and 2 min} warnings}
 
 @itemlist[#:style 'compact
           @item[@am-note[@bold{Announce to all students} " the rules of lunch:"]

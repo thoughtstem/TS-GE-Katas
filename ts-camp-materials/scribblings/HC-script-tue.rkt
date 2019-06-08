@@ -12,16 +12,17 @@
                #:camp-type 'together)
 
 @itemlist[#:style 'compact
-          @item["Arrive at the check-in location at " @bold{quarter of}
-                " (8:45am/12:45pm)."]
+          @item["Arrive at the check in location at " @bold{quarter of} " ("
+                @am-note{8:45am} "/" @pm-note{12:45pm} ")."]
           @item[@bold{Assign} " specific jobs to all TLs"]
-          @item["Head to camp room " @bold{on the hour} " (9am/1pm)"]
-          @item["Assign " @bold{One TL} " to wait for any late students"
-                @itemlist[@item{TL keeps tablet}
-                          @item{TL returns to camp room when all students arrive or
-                                at quarter past (9:15am/1:15pm)}]]
-          @item["Once TL returns, " @bold{confirm attendance} " on backend is
-                accurate with HQ over Slack"]]
+          @item["Head to camp room " @bold{on the hour} " (" @am-note{9am} "/"
+                @pm-note{1pm} ")"]
+          @item[@new-note["Assign " @bold{One TL} " to wait for any late students"]
+                @itemlist[@item[@new-note{TL keeps tablet}]
+                          @item[@new-note["TL returns to camp room when all students arrive or
+                                at quarter past (" @am-note{9:15am} "/" @pm-note{1:15pm} ")"]]]]
+          @item[@new-note["Once TL returns, " @bold{confirm attendance} " on backend is
+                accurate with HQ over Slack"]]]
 
 @section{Coding Warmup}
 @(header-block coding-warmup
@@ -29,7 +30,7 @@
                "1:00pm-1:15pm"
                #:camp-type 'breakout)
 
-@time-warning @bold{5 and 2 min} warnings
+@time-warning{@bold{5 and 2 min} warnings}
 
 @itemlist[#:style 'compact
           @item["With loose guidance from TLs, " @bold{students review} " katas from
@@ -43,17 +44,16 @@
                "1:15pm-2:00pm"
                #:camp-type 'breakout)
 
-@time-warning @bold{15, 10, 5 and 2 min} warnings
+@time-warning{@bold{15, 10, 5 and 2 min} warnings}
 
 @itemlist[#:style 'compact
-          @item[@bold{Transision announcement:}
-                @itemlist[@item["Welcome back!"]
-                          @item[@bold{New Katas} " today!"]
-                          @item["So " @bold{listen up} " to TLs"]]]
+          @item[@new-note[@bold{Transision announcement:}]
+                @itemlist[@item[@new-note["Welcome back!"]]
+                          @item[@new-note[@bold{New Katas} " today!"]]
+                          @item[@new-note["So " @bold{listen up} " to TLs"]]]]
           @item["Monitor and assist TLs as they work on the " @bold{next section katas}]
-          @item[@important-note[@bold{PM ONLY} " -- take " @bold{YOUR 30 min lunch break}
+          @item[@pm-note[@bold{PM ONLY}]  @important-note[" -- take " @bold{YOUR 30 min lunch break}
                           " from " @bold{1:20-1:50}]]]
-
 
 @section{Snack Break}
 @(header-block snack-break
@@ -62,11 +62,11 @@
                #:camp-type 'together
                #:outside? #t)
 
-@time-warning @bold{5 and 2 min} warnings
+@time-warning{@bold{5 and 2 min} warnings}
 
 @itemlist[#:style 'compact
-          @item[@bold{Dismiss TLs for break} " -- TLs should LEAVE the camp space so they
-                can actually relax/check phones/not be interrupted by students"]
+          @item[@important-note[@bold{Dismiss TLs for break} " -- TLs should LEAVE the camp space so they
+                can actually relax/check phones/not be interrupted by students"]]
           @item["All students are " @bold{off computers} " for the entire break"]
           @item["Monitor all students and keep it " @bold{safe and sane}]]
 
@@ -78,14 +78,14 @@
                #:camp-type 'together
                #:outside? #t)
 
-@time-warning @bold{5 and 2 min} warnings
+@time-warning{@bold{5 and 2 min} warnings}
 
 @itemlist[#:style 'compact
           @item[@bold{Choose game(s)} " from chart below. Consider expected interest
                 of the group, any play space restraints, and what has been already
                 played when choosing."]
           @item[@bold{If both groups will be playing the same game} ", introduce the
-                game first, then split up." @bold{Otherwise} " split first, and have
+                game first, then split up. " @bold{Otherwise} " split first, and have
                 TLs help you in explaining/playing the games."]
           @item["When splitting into game groups, consider age recommendations,
                 student safety (physical size of students), and actual student
@@ -116,14 +116,14 @@
                #:camp-type 'breakout
                #:outside? #t)
 
-@time-warning @bold{5 and 2 min} warnings
+@time-warning{@bold{5 and 2 min} warnings}
 
 @itemlist[#:style 'compact
           @item["Announce today's mission:"
-                @itemlist[@item["3rd-10th camps --"@bold{What do you like about your
-                                fandom? Why do you think this fandom is so popular?}]
-                          @item["K-2nd camps -- " @bold{What is your favorite animal?
-                                What animals do you think a lot of people like? Why?}]]]
+                @itemlist[@item[@new-note["3rd-10th camps --"@bold{What do you like about your
+                                fandom? Why do you think this fandom is so popular?}]]
+                          @item[@new-note["K-2nd camps -- " @bold{What is your favorite animal?
+                                What animals do you think a lot of people like? Why?}]]]]
           @item["Monitor camp groups, inspiring further discussion as needed"]]
 
 
@@ -133,7 +133,7 @@
                "3:00pm-3:30pm"
                #:camp-type 'breakout)
 
-@time-warning @bold{10, 5 and 2 min} warnings
+@time-warning{@bold{10, 5 and 2 min} warnings}
 
 @itemlist[#:style 'compact
           @item[@bold{Transition annoucement:}
@@ -149,7 +149,7 @@
                "3:30pm-3:45pm"
                #:camp-type 'start-together)
 
-@time-warning @bold{5 and 2 min} warnings
+@time-warning{@bold{5 and 2 min} warnings}
 
 @itemlist[#:style 'compact
           @item["Bring camp " @bold{all together}]
@@ -157,16 +157,16 @@
                 @itemlist[@item{TLs as buzzers or raised hands}
                           @item{Wait to be called on, no shouting out!}
                           @item{TS dollars/other reward?}]]
-          @item["Today's Whole Camp Daily Game Show Questions:"
-                @itemlist[@item[@bold{What is the most important keys/characters when coding in Dr Racket?}
-                                @italic{ Open and closing parentheses ( )}]
-                          @item[@bold{What is Game Jam?}
-                                @italic{ A race to create the best game you can using the skills you learn over this week.}]
-                          @item[@bold{Everyone -- cover your nametags. Who can tell me the name of everyone in their camp team?}]
-                          @item[@bold{How many tiles are there in the games we are making?}
-                                @italic{ K-2: 4 (2x2) 3-10: 9 (3x3)}]
-                          @item[@bold{Who can tell me 1 of the reasons that your team brainstormed for why your fandom is popular? K2 -- what animals are popular?}
-                                @italic{ (1 answer per camp team)}]]]
+          @item[@new-note["Today's Whole Camp Daily Game Show Questions:"]
+                @itemlist[@item[@new-note[@bold{What is the most important keys/characters when coding in Dr Racket?}
+                                @italic{ Open and closing parentheses ( )}]]
+                          @item[@new-note[@bold{What is Game Jam?}
+                                @italic{ A race to create the best game you can using the skills you learn over this week.}]]
+                          @item[@new-note[@bold{Everyone -- cover your nametags. Who can tell me the name of everyone in their camp team?}]]
+                          @item[@new-note[@bold{How many tiles are there in the games we are making?}
+                                @italic{ K-2: 4 (2x2) 3-10: 9 (3x3)}]]
+                          @item[@new-note[@bold{Who can tell me 1 of the reasons that your team brainstormed for why your fandom is popular? K2 -- what animals are popular?}
+                                @italic{ (1 answer per camp team)}]]]]
           @item["Breakout into " @bold{camp teams} " for TLs to lead camp-specific
                 game show questions"]]
 
@@ -178,11 +178,11 @@
                #:camp-type 'start-breakout)
 
 @itemlist[#:style 'compact
-          @item["PM only -- ensure you finish with enough time to travel to check-out
-                location by 4pm"]
+          @item[@pm-note{PM only -- ensure you finish with enough time to travel to check-out
+                location by 4pm}]
           @item["Assign yourself or a TL to be " @bold{Market Cashier}]
           @item["Students " @bold{tidy their camp table} " before allowed to go to
-                market (see EOD checklist for PM todo list)"]
+                market" @pm-note{(see EOD checklist for PM todo list)}]
           @item["Welcome camp teams " @bold{one at a time} " to visit market"]
           @item["Students done with market collect their things for lunch/home and line
                 up by door"]]
@@ -190,18 +190,18 @@
 @section{Lunch -- AM only}
 @lunch-block
 
-@time-warning @bold{10, 5 and 2 min} warnings
+@time-warning{@bold{10, 5 and 2 min} warnings}
 
 @itemlist[#:style 'compact
-          @item[@bold{Remind all students} " the rules of lunch:"
-                @itemlist[@item{Absolutely no running}
-                          @item{Be courteous and polite to staff/other diners}
-                          @item{One dessert per day}
-                          @item{Clean up correctly}
-                          @item{Sit together}]]
-          @item["Ensure you finish with enough time to travel to check-out
-                location by 12:45pm"]
-          @item["Keep lunch time " @bold{safe and organized}]]
+          @item[@am-note[@bold{Remind all students} " the rules of lunch:"]
+                @itemlist[@item[@am-note{Absolutely no running}]
+                          @item[@am-note{Be courteous and polite to staff/other diners}]
+                          @item[@am-note{One dessert per day}]
+                          @item[@am-note{Clean up correctly}]
+                          @item[@am-note{Sit together}]]]
+          @item[@am-note["Ensure you finish with enough time to travel to check-out
+                location by 12:45pm"]]
+          @item[@am-note["Keep lunch time " @bold{safe and organized}]]]
 
 
 @section{Check Out}
@@ -214,23 +214,23 @@
           @item["Arrive at the check-out location " @bold{on time}]
           @item[@bold{Assign} " specific jobs to all TLs"]
           @item["Alert HQ of any students awaiting pickup at " @bold{ten past}
-                " (1:10pm/4:10pm) and keep HQ up to date when picked up"]
-          @item[@bold{PM ONLY} " -- review and complete EOD checklist, below,
-                with assitance from TLs before dismissing TLs ASAP and clock out"]]
+                " ("@am-note{1:10pm} "/" @pm-note{4:10pm} ") and keep HQ up to date when picked up"]
+          @item[@pm-note[@bold{PM ONLY} " -- review and complete EOD checklist, below,
+                with assitance from TLs before dismissing TLs ASAP and clock out"]]]
 
 
 @section{EOD Checklist -- PM only}
 
-Staff to complete (with assistance from students as appropriate) during Market/Wrap Up.
-TL(s) continue as needed during checkout.
-@bold{Complete before dismissing TLs and clocking out.}
+@pm-note["Staff to complete (with assistance from students as appropriate) during Market/Wrap Up.
+TL(s) continue as needed during checkout. "
+@bold{Complete before dismissing TLs and clocking out.}]
 
 @itemlist[#:style 'compact
-          @item[@bold{Power down} " all chromebooks."]
-          @item[@bold{Properly store} " all chromebooks, mice, and other equipment as the
-                location requires."]
-          @item[@bold{Divide lanyards} " into AM and PM groups. Be sure to put all-day
-                campers' lanyards back with AM."]
-          @item[@bold{Tidy} " market, coach kits, tables, general room as needed."]
-          @item[@bold{Lights out} " and " @bold{lock up} " according to your location's
-                protocol."]]
+          @item[@pm-note[@bold{Power down} " all chromebooks."]]
+          @item[@pm-note[@bold{Properly store} " all chromebooks, mice, and other equipment as the
+                location requires."]]
+          @item[@pm-note[@bold{Divide lanyards} " into AM and PM groups. Be sure to put all-day
+                campers' lanyards back with AM."]]
+          @item[@pm-note[@bold{Tidy} " market, coach kits, tables, general room as needed."]]
+          @item[@pm-note[@bold{Lights out} " and " @bold{lock up} " according to your location's
+                protocol."]]]

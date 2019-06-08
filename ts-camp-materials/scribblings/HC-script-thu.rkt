@@ -12,14 +12,15 @@
                #:camp-type 'together)
 
 @itemlist[#:style 'compact
-          @item["Arrive at the check-in location at " @bold{quarter of}
-                " (8:45am/12:45pm)."]
+          @item["Arrive at the check in location at " @bold{quarter of} " ("
+                @am-note{8:45am} "/" @pm-note{12:45pm} ")."]
           @item[@bold{Assign} " specific jobs to all TLs"]
-          @item["Head to camp room " @bold{on the hour} " (9am/1pm)"]
+          @item["Head to camp room " @bold{on the hour} " (" @am-note{9am} "/"
+                @pm-note{1pm} ")"]
           @item["Assign " @bold{One TL} " to wait for any late students"
                 @itemlist[@item{TL keeps tablet}
-                          @item{TL returns to camp room when all students arrive or
-                                at quarter past (9:15am/1:15pm)}]]
+                          @item["TL returns to camp room when all students arrive or
+                                at quarter past (" @am-note{9:15am} "/" @pm-note{1:15pm} ")"]]]
           @item["Once TL returns, " @bold{confirm attendance} " on backend is
                 accurate with HQ over Slack"]]
 
@@ -30,7 +31,7 @@
                "1:00pm-1:15pm"
                #:camp-type 'breakout)
 
-@time-warning @bold{5 and 2 min} warnings
+@time-warning{@bold{5 and 2 min} warnings}
 
 @itemlist[#:style 'compact
           @item["With loose guidance from TLs, " @bold{students review} " katas."]
@@ -43,12 +44,12 @@
                "1:15pm-2:00pm"
                #:camp-type 'breakout)
 
-@time-warning @bold{15, 10, 5 and 2 min} warnings
+@time-warning{@bold{15, 10, 5 and 2 min} warnings}
 
 @itemlist[#:style 'compact
           @item["Transision from independant review to learning new katas"]
           @item["Monitor and assist TLs as they work on the " @bold{next section katas}]
-          @item[@important-note[@bold{PM ONLY} " -- take " @bold{YOUR 30 min lunch break}
+          @item[@pm-note[@bold{PM ONLY}]  @important-note[" -- take " @bold{YOUR 30 min lunch break}
                           " from " @bold{1:20-1:50}]]]
 
 
@@ -59,11 +60,10 @@
                #:camp-type 'together
                #:outside? #t)
 
-@time-warning @bold{5 and 2 min} warnings
+@time-warning{@bold{5 and 2 min} warnings}
 
 @itemlist[#:style 'compact
-          @item[@bold{Dismiss TLs for break} " -- TLs should LEAVE the camp space so they
-                can actually relax/check phones/not be interrupted by students"]
+          @item[@important-note[@bold{Dismiss TLs for break} " -- TLs should LEAVE the camp space."]]
           @item["All students are " @bold{off computers} " for the entire break"]
           @item["Monitor all students and keep it " @bold{safe and sane}]]
 
@@ -75,7 +75,7 @@
                #:camp-type 'together
                #:outside? #t)
 
-@time-warning @bold{5 and 2 min} warnings
+@time-warning{@bold{5 and 2 min} warnings}
 
 @tabular[#:style 'boxed
          #:sep @hspace[1]
@@ -103,16 +103,16 @@
                #:camp-type 'breakout
                #:outside? #t)
 
-@time-warning @bold{5 and 2 min} warnings
+@time-warning{@bold{5 and 2 min} warnings}
 
 @itemlist[#:style 'compact
           @item["Announce today's mission:"
-                @itemlist[@item[@bold{Design a game! Think about the games you have been making
+                @itemlist[@item[@new-note[@bold{Design a game! Think about the games you have been making
                                 so far. In preparation for game jam, design a game that you could
-                                make with this language.}]
-                          @item{Make sure all teams have half-sheet paper, pens/pencils.}
-                          @item{A prompt to inspire the students: "In this game you play as a
-                                _____ your objective is ______ and the challenges are _______."}]]
+                                make with this language.}]]
+                          @item[@new-note{Make sure all teams have half-sheet paper, pens/pencils.}]
+                          @item[@new-note{A prompt to inspire the students: "In this game you play as a
+                                _____ your objective is ______ and the challenges are _______."}]]]
           @item["Monitor camp groups, inspiring further discussion as needed"]]
 
 
@@ -122,13 +122,10 @@
                "3:00pm-3:30pm"
                #:camp-type 'breakout)
 
-@time-warning @bold{10, 5 and 2 min} warnings
+@time-warning{@bold{10, 5 and 2 min} warnings}
 
 @itemlist[#:style 'compact
-          @item[@bold{Transition annoucement:}
-                @itemlist[@item{Wrap up discussion}
-                          @item{Back to katas}
-                          @item{Earn more katas or extra challenges from TLs!}]]
+          @item[@bold{Transition} " to computers and Katas"]
           @item["Monitor camp groups, assisting TLs as needed"]]
 
 
@@ -138,19 +135,19 @@
                "3:30pm-3:45pm"
                #:camp-type 'start-together)
 
-@time-warning @bold{5 and 2 min} warnings
+@time-warning{@bold{5 and 2 min} warnings}
 
 @itemlist[#:style 'compact
           @item["Bring camp " @bold{all together}]
           @item["Review "@bold{rules & rewards} " of the game show as needed."]
-          @item["Today's Whole Camp Daily Game Show Questions:"
-                @itemlist[@item[@bold{What are our Core Values?}
-                                @italic{ It's not about my code, it's about what I CAN code. It's not about me, it't about my TEAM.}]
-                          @item[@bold{(Without looking at any keyboards) How do you type an open parenthesis? Closed?}
-                                @italic{ Shift+9 and shift+0}]
-                          @item[@bold{Who can tell us about the game they designed today?}
-                                @italic{ (1 answer per camp team)}]
-                          @item[@bold{EVERYONE -- cover your nametags. Who can name the most people in the WHOLE camp??}]]]
+          @item[@new-note["Today's Whole Camp Daily Game Show Questions:"]
+                @itemlist[@item[@new-note[@bold{What are our Core Values?}
+                                @italic{ It's not about my code, it's about what I CAN code. It's not about me, it't about my TEAM.}]]
+                          @item[@new-note[@bold{(Without looking at any keyboards) How do you type an open parenthesis? Closed?}
+                                @italic{ Shift+9 and shift+0}]]
+                          @item[@new-note[@bold{Who can tell us about the game they designed today?}
+                                @italic{ (1 answer per camp team)}]]
+                          @item[@new-note[@bold{EVERYONE -- cover your nametags. Who can name the most people in the WHOLE camp??}]]]]
           @item["Breakout into " @bold{camp teams} " for TLs to lead camp-specific
                 game show questions"]]
 
@@ -175,12 +172,12 @@
 @section{Lunch -- AM only}
 @lunch-block
 
-@time-warning @bold{10, 5 and 2 min} warnings
+@time-warning{@bold{10, 5 and 2 min} warnings}
 
 @itemlist[#:style 'compact
-          @item["Ensure you finish with enough time to travel to check-out
-                location by 12:45pm"]
-          @item["Keep lunch time " @bold{safe and organized}]]
+          @item[@am-note["Ensure you finish with enough time to travel to check-out
+                location by 12:45pm"]]
+          @item[@am-note["Keep lunch time " @bold{safe and organized}]]]
 
 
 @section{Check Out}
@@ -193,23 +190,23 @@
           @item["Arrive at the check-out location " @bold{on time}]
           @item[@bold{Assign} " specific jobs to all TLs"]
           @item["Alert HQ of any students awaiting pickup at " @bold{ten past}
-                " (1:10pm/4:10pm) and keep HQ up to date when picked up"]
-          @item[@bold{PM ONLY} " -- review and complete EOD checklist, below,
-                with assitance from TLs before dismissing TLs ASAP and clock out"]]
+                " ("@am-note{1:10pm} "/" @pm-note{4:10pm} ") and keep HQ up to date when picked up"]
+          @item[@pm-note[@bold{PM ONLY} " -- review and complete EOD checklist, below,
+                with assitance from TLs before dismissing TLs ASAP and clock out"]]]
 
 
 @section{EOD Checklist -- PM only}
 
-Staff to complete (with assistance from students as appropriate) during Market/Wrap Up.
-TL(s) continue as needed during checkout.
-@bold{Complete before dismissing TLs and clocking out.}
+@pm-note["Staff to complete (with assistance from students as appropriate) during Market/Wrap Up.
+TL(s) continue as needed during checkout. "
+@bold{Complete before dismissing TLs and clocking out.}]
 
 @itemlist[#:style 'compact
-          @item[@bold{Power down} " all chromebooks."]
-          @item[@bold{Properly store} " all chromebooks, mice, and other equipment as the
-                location requires."]
-          @item[@bold{Divide lanyards} " into AM and PM groups. Be sure to put all-day
-                campers' lanyards back with AM."]
-          @item[@bold{Tidy} " market, coach kits, tables, general room as needed."]
-          @item[@bold{Lights out} " and " @bold{lock up} " according to your location's
-                protocol."]]
+          @item[@pm-note[@bold{Power down} " all chromebooks."]]
+          @item[@pm-note[@bold{Properly store} " all chromebooks, mice, and other equipment as the
+                location requires."]]
+          @item[@pm-note[@bold{Divide lanyards} " into AM and PM groups. Be sure to put all-day
+                campers' lanyards back with AM."]]
+          @item[@pm-note[@bold{Tidy} " market, coach kits, tables, general room as needed."]]
+          @item[@pm-note[@bold{Lights out} " and " @bold{lock up} " according to your location's
+                protocol."]]]
