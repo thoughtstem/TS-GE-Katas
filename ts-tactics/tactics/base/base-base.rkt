@@ -15,6 +15,7 @@
   (struct-out change)
   (struct-out body-action) 
   (struct-out branching-verb) 
+  verb
 
   ;Adjectives
   (struct-out adjective)
@@ -86,6 +87,8 @@
               [b-pred : Query]) #:transparent)
 
 (struct body-action ([english : String]) #:transparent)
+
+(define verb body-action)
 
 ;A special verb.
 ;   Expresses that "subject" must perform "predicate", which is a query verb (true or false result), and then perform either the true or false branch (which are also verbs)

@@ -1,12 +1,14 @@
 #lang racket
 
-(provide team-memorize)
+(provide team-memorize
+         pass-and-memorize
+         all-correct-post-mortem)
 
 (require "../lang.rkt")
 
 ;TODO: Start on docs.  They will help a lot.  Plus, much of that can go directly into the handbook.
 
-(define (pass-and-memorize time)
+(define (pass-and-memorize (time 10))
   (list
     (instruction (owner-of 'the-challenge-card)
                  (within-seconds time
@@ -20,7 +22,7 @@
                            (person-right-of you))))   
 
 
-(define (timer-holder-talks-to-scribe timer whiteboard)
+(define (timer-holder-talks-to-scribe)
   (list
     (instruction (owner-of timer)
                  (set-timer-for-seconds 30 timer))
@@ -38,15 +40,15 @@
                              "(skipping the whiteboard holder)"       
                              (person-right-of you)))))
 
-(define (all-correct-post-mortem coach students computers)
-  (instruction (group-add coach students)
+(define (all-correct-post-mortem)
+  (instruction (group-add coach team)
 
                (branching-verb
                  (is-bug-free?
                    ;Code on?
                    (contents-of computers))
                  (announce "We are the winners!")
-                 (announce "We shall now discuss our strategy for next time."))))
+                 (discuss "strategy for next time"))))
 
 (define (team-memorize coach 
                        students 
@@ -77,7 +79,7 @@
 
            (until (rounds-completed 1)
                   (sub-routine 
-                    (pass-and-memorize challenge-card))))
+                    (pass-and-memorize 10))))
 
     (phase 'One-Talker
            (instruction coach
@@ -98,7 +100,7 @@
 
            (until (rounds-completed 1) 
                   (sub-routine 
-                    (timer-holder-talks-to-scribe timer whiteboard))))
+                    (timer-holder-talks-to-scribe))))
 
     (phase 'Testing
            (instruction coach
@@ -119,8 +121,7 @@
                         (announce "The [Scoring] phase has now begun.   If the code on EACH computer is correct, we all win."))
 
            (sub-routine
-             (all-correct-post-mortem
-               coach students computers)))))
+             (all-correct-post-mortem)))))
 
 (module+ test
   ;TODO: Note that subroutines need to be printed, which means they need to have been called with all of the same inputs as the calling function (otherwise bindings and labelings and context won't match up).
@@ -128,14 +129,14 @@
 
   (displayln "SUB ROUTINE, pass-and-memorize")
   (print-tactic
-    (pass-and-memorize 'the-challenge-card))
+    (pass-and-memorize 10))
 
   (displayln "SUB ROUTINE, timer-holder-talks-to-scribe")
   (print-tactic
-    (timer-holder-talks-to-scribe 'the-timer 'the-whiteboard)) 
+    (timer-holder-talks-to-scribe))
   (displayln "SUB ROUTINE, all-correct-post-mortem")
   (print-tactic
-    (all-correct-post-mortem 'Coach 'Team 'Team-Computers))
+    (all-correct-post-mortem))
   (displayln "\n")
 
   (print-tactic

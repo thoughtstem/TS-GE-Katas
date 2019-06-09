@@ -8,6 +8,7 @@
   vote-member-into-new-group)
 
 (require "../base/base.rkt"
+         "./basic-things.rkt" 
          "./basic-actions.rkt")
 
 (define (finger-vote new-group-name)
@@ -20,9 +21,12 @@
   (body-action "count the votes and take any implied actions"))
 
 ;Specifically for when a group is chosing one of its own members to join another group
-(define (vote-member-into-new-group announcer 
+(define (vote-member-into-new-group 
                                     voting-group 
-                                    target-group)
+                                    target-group
+
+                                    (announcer coach))
+
   (phase 'Vote
          (list
 

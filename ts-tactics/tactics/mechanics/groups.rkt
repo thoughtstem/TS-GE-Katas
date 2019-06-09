@@ -8,6 +8,7 @@
   select-secret-subgroup)
 
 (require "../base/base.rkt"
+         "./basic-things.rkt"
          "./basic-actions.rkt")
 
 (define (group-fully-contains? group other-group )
@@ -31,7 +32,10 @@
     "people not in"
     group))
 
-(define (select-secret-subgroup selector main-group sub-group-name)
+(define (select-secret-subgroup sub-group-name
+                                (main-group team)
+                                (selector coach))
+
   (list
     (instruction main-group
                  (close-eyes))

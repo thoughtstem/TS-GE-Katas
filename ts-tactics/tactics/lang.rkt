@@ -2,10 +2,14 @@
 
 (provide 
   (all-from-out "base/base.rkt"
-                "base/printing.rkt"))
+                "base/printing.rkt"
+                "base/scribble.rkt"
+                ))
 
 (require "base/base.rkt"
-         "base/printing.rkt" )
+         "base/printing.rkt" 
+         "base/scribble.rkt" 
+         )
 
 (provide 
   (all-from-out

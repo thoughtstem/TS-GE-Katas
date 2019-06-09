@@ -1,10 +1,11 @@
 #lang racket
 
-(provide mafia)
+(provide mafia
+         collaboratively-debug)
 
 (require "../lang.rkt")
 
-(define (collaboratively-debug coach team timer whiteboard)
+(define (collaboratively-debug)
   (instruction coach
                (set-timer-for 5 timer))
 
@@ -30,7 +31,7 @@
                           (tell-story 
                             "You're a game development company.  The big release is a few days away!  The code keeps breaking in the night..."))
 
-             (sub-routine (select-secret-subgroup coach team 'Hackers))  
+             (sub-routine (select-secret-subgroup 'Hackers))  
              (instruction coach  
                           (hand-write 
                             (contents-of 
@@ -55,7 +56,7 @@
                                 (introduce-subtle-bugs 
                                   (contents-of whiteboard)))))
           (phase 'Day
-                 (sub-routine (collaboratively-debug coach team timer whiteboard)))
+                 (sub-routine (collaboratively-debug)))
 
           (phase 'End-of-Day
                  (list
@@ -69,7 +70,6 @@
 
                    (sub-routine
                      (vote-member-into-new-group
-                       coach
                        (not-in 'Jail)
                        'Jail)))))))
 
