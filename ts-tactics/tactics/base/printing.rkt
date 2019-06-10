@@ -36,7 +36,7 @@
        (pp:nest indentation-level
                 (pp:v-append
                   (pp:hs-append 
-                    (pp:text "⇶ If")
+                    (pp:text "If")
                     (print-predicate predicate))
                   (print-verb true-verb)
                   (print-verb false-verb))))]
@@ -102,7 +102,7 @@
                   (pp:h-append
                     (pp:h-append
                       (print-subject (instruction-subject i))  
-                      (pp:text " ⇒ "))
+                      (pp:text " -> "))
                     (print-verb (instruction-verb i)))
                   ))]
 
@@ -116,7 +116,7 @@
        (pp:nest indentation-level
                 (pp:v-append
                   (pp:hs-append
-                    (pp:text (~a "⮔  Do Until"))
+                    (pp:text (~a "Do Until"))
                     (print-predicate predicate))
                   (print-instructions instructions)))])))
 
@@ -154,11 +154,11 @@
 
     [(adjective english object) 
      (pp:h-append  
-       (pp:text (~a "👤 " english)) 
+       (pp:text (~a "" english)) 
        (pp:text " ")
        (print-object object))]
 
-    [_ (pp:text (~a "👤 " s))]))
+    [_ (pp:text (~a "" s))]))
 
 
 (define (print-uninterpreted x)

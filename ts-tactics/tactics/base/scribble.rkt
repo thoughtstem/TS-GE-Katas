@@ -17,7 +17,7 @@
 
 (define (gray . ss)
   (elem #:style 
-        (style #f (list (color-property "gray")))
+        (style #f (list (color-property (list 100 100 100))))
         ss))
 
 (define (object->scribble d)
@@ -88,11 +88,11 @@
 
     [(adjective english object) 
      (list
-       (~a "👤 " english)   
+       (~a "" english)   
        " "
        (object->scribble object))]
 
-    [_ (~a "👤 " s)]))
+    [_ (~a "" s)]))
 
 
 (define (verb->scribble v)
