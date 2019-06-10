@@ -239,9 +239,8 @@ After just one hour of coaching, you can self-assess with some of these question
           @item{@bold{Do your students know what a Language Learning Loop is?  Do they know what a tactic is?}  If not, why not?  Weren't you doing a Language Learning Loop with them?  (You should have been!  That's your job as a coach.)  If you were, then why weren't you calling it the "Language Learning Loop"?  Use the vocabulary from this book as you lead activities and structure the educational experience.  Your students should know these words: "tactic", "challenge card", "Language Learning Loop", etc.  They should know these terms because you've been using them the whole time!}
           @item{@bold{Would your students be able to lead a tactic on their own?}  If not, that's okay.  This can take time for some students.  But ask yourself, what can you do next time to challenge them to take on even more of a leadership role? }]
 
-@section{Tactics}
 
-@subsection{Disintegrating Code}
+@section{Disintegrating Code}
 
 @(require "../tactics/tactic-library/disintegrating-code.rkt")
 
@@ -253,7 +252,7 @@ After just one hour of coaching, you can self-assess with some of these question
                          'the-whiteboard
                          'the-markers))
 
-@subsection{Code Anatomy}
+@section{Code Anatomy}
 
 @(require "../tactics/tactic-library/code-anatomy.rkt")
 
@@ -265,23 +264,23 @@ After just one hour of coaching, you can self-assess with some of these question
      'the-whiteboard
      'the-markers))
 
-@subsection{???}
+@section{???}
 
 TODO
 
-@subsection{???}
+@section{???}
 
 TODO
 
-@subsection{???}
+@section{???}
 
 TODO
 
-@subsection{???}
+@section{???}
 
 TODO
 
-@subsection{???}
+@section{???}
 
 TODO
 
@@ -307,7 +306,7 @@ Whenever you see one of these, someone on the team must type in the program show
 
 Doing tactics with subroutines requires keeping track of where you were in the tactic before you started doing the subroutine (because you'll need to come back there when the subroutine is finished).  It is the team's responsibility to keep these things in mind -- which is why these tactics are for advanced teams.
 
-@subsection{Mafia}
+@section{Mafia}
 
 @(require "../tactics/tactic-library/mafia.rkt")
 
@@ -321,7 +320,7 @@ Doing tactics with subroutines requires keeping track of where you were in the t
            'the-timer))
 
 
-@subsection{Team Memorize}
+@section{Team Memorize}
 
 @(require "../tactics/tactic-library/team-memorize.rkt")
 
@@ -335,16 +334,16 @@ Doing tactics with subroutines requires keeping track of where you were in the t
      'the-whiteboard
      'the-markers))
 
-@subsection{???}
+@section{???}
 
 TODO
 
 
-@subsection{???}
+@section{???}
 
 TODO
 
-@subsection{???}
+@section{???}
 
 TODO
 
