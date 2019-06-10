@@ -1,6 +1,7 @@
 #lang racket
 
 (provide
+  write-code
   blank?
   type-up
   hand-write
@@ -10,7 +11,7 @@
   is-bug-free?
   debug)
 
-(require "../base.rkt"
+(require "../base/base.rkt"
          "./basic-things.rkt")
 
 (define (introduce-subtle-bugs dest)
@@ -43,4 +44,7 @@
 
 (define (type-up info dest)
   (information-move "type up" info dest))
+
+(define (write-code)
+  (body-action "write code"))
 

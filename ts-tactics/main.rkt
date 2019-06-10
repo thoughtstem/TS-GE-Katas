@@ -1,17 +1,23 @@
 #lang racket
 
-(provide 
-  (all-from-out
-    "./base.rkt" 
-    "./util.rkt"
-    "./activity.rkt"
-    "./material.rkt"
-    "./simulate-room.rkt"
-    "./rendering.rkt"))
+(module reader syntax/module-reader
+  ts-tactics/main)
 
-(require "./base.rkt" 
-         "./util.rkt"
-         "./activity.rkt"
-         "./material.rkt"
-         "./simulate-room.rkt"
-         "./rendering.rkt")
+(define-syntax-rule (module-begin expr ...)
+  (#%module-begin
+
+   (print-tactic expr)
+   ...  ))
+
+(provide 
+  (except-out (all-from-out racket/base)
+              #%module-begin)
+  (rename-out [module-begin #%module-begin])
+  (all-from-out
+    "./tactics/lang.rkt"
+    "./tactics/tactic-library/team-memorize.rkt"))
+
+(require racket/base
+         "./tactics/tactic-library/team-memorize.rkt"
+         "./tactics/lang.rkt")
+

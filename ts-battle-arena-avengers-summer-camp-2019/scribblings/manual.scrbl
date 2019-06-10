@@ -1,9 +1,7 @@
 #lang scribble/manual
 
 
-@(require ;ts-kata-util/katas/main
-          ;ts-kata-util/katas/rendering
-          ts-kata-util/badge-maker/main
+@(require ts-kata-util/badge-maker/main
           "../katas.rkt"
           "../rendering.rkt"
           (except-in racket read do) 

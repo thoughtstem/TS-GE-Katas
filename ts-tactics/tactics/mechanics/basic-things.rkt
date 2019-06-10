@@ -1,13 +1,27 @@
 #lang racket
 
 (provide
+  team
+  computers
+  coach
+  timer
+  whiteboard
+  challenge-card
+
   contents-of
   front-of
   back-of
   top-half-of
   bottom-half-of)
 
-(require "../base.rkt")
+(require "../base/base.rkt")
+
+(define whiteboard 'Whiteboard)
+(define timer 'Timer)
+(define team 'Team)
+(define computers 'Team-Computers)
+(define coach 'Coach)
+(define challenge-card 'Challenge-Card)
 
 (define (contents-of object)
   (object-part "the contents of" object))

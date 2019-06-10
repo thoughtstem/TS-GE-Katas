@@ -5,7 +5,7 @@
   award-points
   group-has-points?)
 
-(require "../base.rkt")
+(require "../base/base.rkt")
 
 (define (group-has-points? group num-points)
   (predicate (~a "have exactly " num-points " points")
