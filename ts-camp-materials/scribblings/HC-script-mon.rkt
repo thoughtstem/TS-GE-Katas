@@ -60,7 +60,7 @@
           @item["Monitor and assist TLs as they work on katas, starting with "
                 @bold{Hello World kata}]
           @item[@pm-note[@bold{PM ONLY}]  @important-note[" -- take " @bold{YOUR 30 min lunch break}
-                          " from " @bold{1:20-1:50}]]]
+                          " from " @bold{1:45-2:15}]]]
 
 @section{Snack Break}
 @(header-block snack-break
@@ -74,7 +74,8 @@
 @itemlist[#:style 'compact
           @item[@important-note[@bold{Dismiss TLs for break} " -- TLs should LEAVE the camp space so they
                 can actually relax/check phones/not be interrupted by students"]]
-          @item["All students are " @bold{off computers} " for the entire break"]
+          @item["Unstructured break time! Students should snack, chat, play (non-computer) games, etc.
+                Students " @bold{cannot be on computers, phones, other devices (theirs or ours)}]
           @item["Monitor all students and keep it " @bold{safe and sane}]]
 
 @section{Game Time}
@@ -182,7 +183,7 @@
                          location by 4pm"]]
           @item["Assign yourself or a TL to be " @bold{Market Cashier}]
           @item["Students " @bold{tidy their camp table} " before allowed to go to
-                market" @pm-note{(see EOD Checklist below for PM todo list)}]
+                market " @pm-note{(see EOD Checklist below for PM todo list)}]
           @item["Welcome camp teams " @bold{one at a time} " to visit market"]
           @item["Students done with market collect their things for lunch/home and line
                 up by door"]]
@@ -215,8 +216,8 @@
           @item[@bold{Assign} " specific jobs to all TLs"]
           @item["Alert HQ of any students awaiting pickup at " @bold{ten past}
                 " ("@am-note{1:10pm} "/" @pm-note{4:10pm} ") and keep HQ up to date when picked up"]
-          @item[@pm-note[@bold{PM ONLY} " -- review and complete EOD (end of day) checklist,
-                         below, with assitance from TLs before dismissing TLs ASAP and clock out"]]]
+          @item[@pm-note[@bold{PM ONLY} " -- review and (if needed) finish EOD (end of day) checklist,
+                         below, with assistance from TLs, before dismissing TLs and clocking out"]]]
 
 @section{EOD (End Of Day) Checklist -- PM only}
 

@@ -177,7 +177,7 @@ in the middle, who then shares.
           @item{Remind students that this can be a quick game, but it is always a
                 SAFE game. No need to run.}
           @item{Everyone should go at least once. If someone ends up in the
-                middle twice, have all students who haven'g gone raise their hand,
+                middle twice, have all students who haven't gone raise their hand,
                 and the middle student pick someone to swap with.}
           @item{If someone gets stuck, prompt them with questions about
                 themselves (have you traveled somewhere interesting? Have you

@@ -47,7 +47,7 @@
 @time-warning{@bold{15, 10, 5 and 2 min} warnings}
 
 @itemlist[#:style 'compact
-          @item[@new-note[@bold{Transision announcement:}]
+          @item[@new-note[@bold{Transition announcement:}]
                 @itemlist[@item[@new-note["Welcome back!"]]
                           @item[@new-note[@bold{New Katas} " today!"]]
                           @item[@new-note["So " @bold{listen up} " to TLs"]]]]

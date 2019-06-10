@@ -67,7 +67,7 @@ Older Students (3rd-10th):
 
 @section{Selfie Scavenger Hunt}
 
-@bold{Recommended for: K-2, 3-5, 6-10}
+@bold{Recommended for: K-2nd, 3rd-6th, 7th-10th}
 
 @bold{NEED:}
 
@@ -157,7 +157,7 @@ You know how to play this game. Be safe!
 
 @section{Follow the Leader}
 
-@bold{Recommended for: K-2nd, 3-5}
+@bold{Recommended for: K-2nd, 3rd-6th}
 
 @bold{NEED:}
 
@@ -186,7 +186,7 @@ Detective guesses correctly, or has three incorrect guesses.
 
 @section{Shark Attack}
 
-@bold{Recommended for: K-2nd, 3-5, 6-10}
+@bold{Recommended for: K-2nd, 3rd-6th, 7th-10th}
 
 @bold{NEED:}
 
@@ -224,7 +224,7 @@ is over.
 
 @section{Ultimate Rock Paper Scissors}
 
-@bold{Recommended for: K-2nd, 3-5}
+@bold{Recommended for: K-2nd, 3rd-6th}
 
 @bold{NEED:}
 
@@ -251,7 +251,7 @@ ultimate winner! Play this game a couple times.
 
 @section{Captain's Coming}
 
-@bold{Recommended for: K-2nd, 3-5, 6-10}
+@bold{Recommended for: K-2nd, 3rd-6th, 7th-10th}
 
 @bold{NEED:}
 
@@ -333,7 +333,7 @@ out.
 
 @section{Bippity Bippity Bop}
 
-@bold{Recommended for: 3-5, 6-10}
+@bold{Recommended for: 3rd-6th, 7th-10th}
 
 @bold{NEED:}
 
@@ -385,7 +385,7 @@ attention!)
 
 @section{Wax Museum}
 
-@bold{Recommended for: K-2, 3-5}
+@bold{Recommended for: K-2nd, 3rd-6th}
 
 @bold{NEED:}
 
@@ -426,7 +426,7 @@ and match in your game:
 
 @section{Wah}
 
-@bold{Recommended for: 3-5, 6-10}
+@bold{Recommended for: 3rd-6th, 7th-10th}
 
 @bold{NEED:}
 
@@ -456,7 +456,7 @@ eliminating anyone who misses their cue or is off beat.
 
 @section{Human Knot}
 
-@bold{Recommended for: 3-5, 6-10}
+@bold{Recommended for: 3rd-6th, 7th-10th}
 
 @bold{NEED:}
 
@@ -484,7 +484,7 @@ open their eyes and attempt to untangle themselves without letting go of hands.
 
 @section{Zoo Keeper}
 
-@bold{Recommended for: 3-5, 6-10}
+@bold{Recommended for: 3rd-6th, 7th-10th}
 
 @bold{NEED:}
 
@@ -519,7 +519,7 @@ one player up by the Keeper when the keys disappear, well, it's pretty easy to g
 
 @section{Mafia}
 
-@bold{Recommended for: 3-5, 6-10}
+@bold{Recommended for: 3rd-6th, 7th-10th}
 
 There are a billion different variations on this game, including the card game " Ultimate
 Werewolf." This happens to be my favorite version. 
@@ -576,7 +576,7 @@ the Mafia are jailed or there are no innocents left!
 
 @section{Jedi Mind Tricks}
 
-@bold{Recommended for: 3-5, 6-10}
+@bold{Recommended for: 3rd-6th, 7th-10th}
 
 @bold{NEED:}
 
@@ -613,7 +613,8 @@ middle.
 
 @section{Ninja}
 
-@bold{Recommended for: 6-10 (3-5 need a lot of coaching to get the rules of the game!)}
+@bold{Recommended for: 7th-10th (3rd-6th need a lot of coaching to get the rules of the game,
+ but they do love it!)}
 
 @bold{NEED:}
 
@@ -650,7 +651,7 @@ the game. Game continues until there is only one champion ninj left!
 
 @section{What's the Difference? -- Partners}
 
-@bold{Recommended for: K-2nd, 3-5, 6-10}
+@bold{Recommended for: K-2nd, 3rd-6th, 7th-10th}
 
 @bold{NEED:}
 
@@ -661,7 +662,7 @@ the game. Game continues until there is only one champion ninj left!
 
 This game can be played standing or sitting. Players pair up and pick one of the two to guess
 first. The Guesser has 15-30 seconds to visually memorize their partner. Once the
-time is up, Guessers close their eyes, and thier partner now changes one thing about their
+time is up, Guessers close their eyes, and their partner now changes one thing about their
 appearance: remove an earring, put their watch on the other wrist,
 untie their shoelaces on one shoe, cuff their pants...
 
@@ -683,7 +684,7 @@ When they guess correct, the roles swap and the game begins again.
 
 @section{What's the Difference? -- Group}
 
-@bold{Recommended for: K-2nd, 3-5, 6-10}
+@bold{Recommended for: K-2nd, 3rd-6th, 7th-10th}
 
 @bold{NEED:}
 
@@ -714,7 +715,7 @@ next.
 
 @section{Hand Game}
 
-@bold{Recommended for: 3-5, 6-10}
+@bold{Recommended for: 3rd-6th, 7th-10th}
 
 @bold{NEED:}
 
@@ -723,7 +724,7 @@ next.
 
 @bold{HOW TO PLAY:}
 
-Recommended Instructional Video: @(hyperlink "Hand Game Video" "https://youtu.be/DHMxfA2OivI")
+Recommended Instructional Video: @(hyperlink "https://youtu.be/DHMxfA2OivI" "Hand Game Video")
 
 Everyone circles up. All players put
 their hands, palms down, on the ground in front of them. Everyone lifts their right hand and
@@ -741,7 +742,8 @@ player can do instead of a single tap on their turn:
 @itemlist[#:style 'compact
           @item{Double-tap -- tapping two times (quickly!) reverses the direction of the slaps}
           @item{Fist -- tapping the ground with a closed, upright fist (pinky down) SKIPS the
-                next hand. Play continues in the same direction to the next hand in order.}]
+                next hand. Play continues in the @italic{same} direction to the hand @italic{right after}
+                the skipped hand.}]
 
 @bold{TIPS & TRICKS:}
 
@@ -755,7 +757,7 @@ player can do instead of a single tap on their turn:
 
 @section{Who Am I?}
 
-@bold{Recommended for: K-2, 3-5, 6-10}
+@bold{Recommended for: K-2nd, 3rd-6th, 7th-10th}
 
 @bold{NEED:}
 
@@ -777,7 +779,7 @@ asking @bold{yes or no} questions of the other players (Example questions: "Am I
 "Am I liked?" "Do I act in movies?" etc). Make sure they turn around to show off who they are
 first! In turn, they will answer questions for
 other players trying to figure out who they are! Once a player has successfully guessed, they can
-move their paper off their back (stick it on the front of their shirt?) and continue to help
+move their paper off their back, place it on the front of their shirt and continue to help
 other players by answering their questions.
 
 @bold{Variation for younger players} -- Instead of characters, use animals. Questions adjust to
@@ -818,7 +820,7 @@ gets the name they wrote.
 
 @section{Blind Emoji Artist}
 
-@bold{Recommended for: 3-5, 6-10}
+@bold{Recommended for: K-2nd, 3rd-6th, 7th-10th}
 
 @bold{NEED:}
 
@@ -832,7 +834,7 @@ gets the name they wrote.
 
 Pair up all players; have each pair decide who is the artist first and who is the designer. The
 artist gets a pencil/pen and paper and the designer gets a chromebook with a browser open to
-@(hyperlink "byrdseed.com/emoji" "byrdseed.com/emoji"). The partners sit back to back, and the
+@(hyperlink "http://www.byrdseed.com/emoji/" "byrdseed.com/emoji"). The partners sit back to back, and the
 designer clicks the "start over" button to generate a new emoji.
 
 Head Coach starts a timer for 2 minutes. The designer describes to the best of their ability
@@ -847,12 +849,12 @@ away from the screen. Designer can pick any one of the images on display to desc
 
 Alternate random image generators:
 @itemlist[#:style 'compact
-          @item[@(hyperlink "Another Random Emoji Generator"
-                            "https://www.bestrandoms.com/random-emoji")]
-          @item[@(hyperlink "Random Pokemon Generator"
-                            "https://www.bestrandoms.com/random-pokemon")]
-          @item[@(hyperlink "Random Flag Generator"
-                            "https://www.bestrandoms.com/random-flag")]]
+          @item[@(hyperlink "https://www.bestrandoms.com/random-emoji"
+                            "Another Random Emoji Generator")]
+          @item[@(hyperlink "https://www.bestrandoms.com/random-pokemon"
+                            "Random Pokemon Generator")]
+          @item[@(hyperlink "https://www.bestrandoms.com/random-flag"
+                            "Random Flag Generator")]]
 
 @bold{TIPS & TRICKS:}
 
@@ -872,7 +874,7 @@ youngest students into their own group for safety and to have a balanced game th
 
 @subsection{Elbow Tag}
 
-@bold{Recommended for: K-2, 3-5, 6-10}
+@bold{Recommended for: K-2nd, 3rd-6th, 7th-10th}
 
 @bold{NEED:}
 
@@ -904,7 +906,7 @@ and rest!
 
 @subsection{Amoeba Tag}
 
-@bold{Recommended for: 3-5, 6-10}
+@bold{Recommended for: 3rd-6th, 7th-10th}
 
 @bold{NEED:}
 
@@ -932,7 +934,7 @@ larger until every player has been tagged!
 
 @subsection{Sharks and Minnows Tag}
 
-@bold{Recommended for: K-2, 3-5}
+@bold{Recommended for: K-2nd, 3rd-6th}
 
 @bold{NEED:}
 
@@ -977,7 +979,7 @@ across or been tagged, Shark(s) call everyone to cross again!
 
 @subsection{What Time Is It, Mr. Wolf? Tag}
 
-@bold{Recommended for: K-2, 3-5}
+@bold{Recommended for: K-2nd, 3rd-6th}
 
 @bold{NEED:}
 
@@ -1004,7 +1006,7 @@ Wolf is successful, a new Mr. Wolf is chosen from the players tagged.
 
 @subsection{Clam Free Tag}
 
-@bold{Recommended for: K-2, 3-5}
+@bold{Recommended for: K-2nd, 3rd-6th}
 
 @bold{NEED:}
 
@@ -1032,7 +1034,7 @@ shouting "CLAM FREE!"
 
 @subsection{Bring Home the Bacon Tag}
 
-@bold{Recommended for: 3-5, 6-10}
+@bold{Recommended for: 3rd-6th, 7th-10th}
 
 @bold{NEED:}
 
