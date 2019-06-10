@@ -48,7 +48,22 @@
          (bold "every") " time you have to include the original Black Widow and Nebula." )
    
    ;;Sea
-   
+   'sea-004 ;; 2.4
+   (list "The Question Mark icon means students can choose any sprite.")
+   'sea-005 ;; 2.5
+   (list "The "
+         (bold "Question Mark") " can also be used to get a random sprite.")
+   'sea-008 ;; 3.2
+   (list "Instead of putting 5 potato icons, you can simply put the number 5 after the icon.")
+   'sea-011 ;; 3.5
+   (list "All " (bold "sprites do the same thing") ". So you can have a fruit eating fish just by swapping the sprites.")
+   'sea-018 ;; 4.6
+   (list "To start one game right after another, just code it directly after the first game.")
+   'sea-019 ;; 5.1
+   (list "The code you write depends on the " (bold "#lang") ". In this case the second parameter is "
+         (bold "friends") ". In the last #lang it was coins.")
+   'sea-028 ;; 6.4
+   (list "It is always good to write " (bold "readable code") ".")
 
    ;;Zoo
    'zoo-001 ;; 2.1
