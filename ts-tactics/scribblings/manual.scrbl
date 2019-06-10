@@ -11,10 +11,11 @@ Welcome!  This handbook contains learning "tactics" -- i.e. algorithms, games, a
 
 If you're a coach, you should use these tactics to teach your students two things:
 
-@itemlist[@item{How to code}
+@itemlist[#:style 'ordered
+          @item{How to code}
           @item{How to use the learning tactics on their own}]
 
-This is a subtle but incredibly important point: You are not just teaching coding; you are teaching people how to learn coding.  You're not just playing games with students; you're teaching them how to play the games without your help.  You're not just being a coach; you're teaching them how to be coaches.  You're not just being a teacher; you're teaching them how to be teachers.   You're not just being a leader; you're teaching them how to lead.
+This second point is subtle but incredibly important: You are not just teaching coding; you are teaching people how to learn coding.  You're not just playing games with students; you're teaching them how to play the games without your help.  You're not just being a coach; you're teaching them how to be coaches.  You're not just being a teacher; you're teaching them how to be teachers.   You're not just being a leader; you're teaching them how to lead.
 
 What all this means is: as students become more and more skilled at doing these tactics, you should be giving them more and more responsibility for helping you lead the tactics. 
 
@@ -72,7 +73,7 @@ The most basic thing that can be considered a "Language Learning Loop" is this, 
       (body-action "do tactic together"))
 
      (instruction 'Team
-      (body-action "take Kata test on challenge-card")))))
+      (body-action "take Kata Test on challenge-card")))))
 
 A Language Learning Loop is any teaching/learning algorithm that has these 5 essential qualities:
 
@@ -131,7 +132,7 @@ Some coaches do not like to see students fail.  That's understandable.  This is 
        (body-action "do tactic together")))
 
      (instruction 'Team
-      (body-action "test on challenge-card"))))
+      (body-action "take Kata Test on challenge-card"))))
 
 This Language Learning Loop is good for novice students (who tend to be sensitive to failure).   The drawback is that it takes longer to get to the test.  (Then again, the "drawback" also the whole point -- to delay getting there until students are ready.)
 
@@ -190,7 +191,7 @@ This is a great loop for advanced students because it gives them more agency ove
      (instruction 'Coach
       (body-action "pick challenge-card"))
 
-     (until (predicate "decides to move on" "team")
+     (until (predicate "decides they are ready for test" "team")
 
       (instruction 'Coach
        (discuss "Which tactic should we do next?"))
@@ -210,7 +211,7 @@ This works best with students who know a variety of tactics and who have develop
 
 It is also a perfect example of the fundamental principle of this handbook: Teach students how to learn.  The more you involve them as active participants in their own learning, the better.
 
-The drawbacks are that you will need to know when to override the team's decisions if their educational insights are flawed.
+The challenges are that you will need to know when to override the team's decisions if their educational insights are flawed:
 
 @itemlist[@item{If they tend to keep picking the same comfortable tactics over and over, you will need to encourage them to explore new ones and to embrace discomfort.}
           @item{If they tend to be reluctant to test themselves, you may need to encourage them to stop doing tactics and take the test -- teaching them that failing a test is not something to be afraid of.}

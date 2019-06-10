@@ -18,7 +18,8 @@
                        (front-of whiteboard)))))))
 
 (define (mafia coach 
-               team computers
+               team
+               computers
                challenge-card 
                whiteboard 
                markers

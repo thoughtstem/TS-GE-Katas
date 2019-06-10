@@ -3,12 +3,23 @@
 (require racket/runtime-path
          racket/contract
          pict
-         scribble/manual)
+         scribble/manual
+         (only-in scribble/core
+                  style
+                  color-property
+                  background-color-property)
+         (only-in racket/draw
+                  make-color))
 
 (provide header-block
          time-warning
          lunch-block
+         important-note
+         am-note
+         pm-note
+         new-note
          
+         key
          check-in-icebreakers
          intro-starter-katas 
          snack-break 
@@ -27,7 +38,10 @@
          scoring-market
          check-in
          check-out
-         outside-icon)
+         
+         outside-icon
+         AM-icon
+         PM-icon)
 
 (define-runtime-path check-in-icebreakers "img/check-in-icebreakers.png")
 (define-runtime-path intro-starter-katas "img/intro-starter-katas.png")
@@ -48,29 +62,39 @@
 (define-runtime-path check-in "img/check-in.png")
 (define-runtime-path check-out "img/check-out.png")
 
-(define-runtime-path bring-together-icon "img/together-icon.png")
-(define-runtime-path breakout-teams-icon "img/breakout-icon.png")
-(define-runtime-path AM-icon "img/sun-am.png")
-(define-runtime-path PM-icon "img/sun-pm.png")
+(define-runtime-path bring-together-icon "img/together-icon-purple.png")
+(define-runtime-path breakout-teams-icon "img/breakout-icon-teal.png")
+(define-runtime-path AM-icon-path "img/sun-am.png")
+(define-runtime-path PM-icon-path "img/sun-pm.png")
 (define-runtime-path clock-icon "img/clock.png")
 (define-runtime-path outside-icon "img/outside-icon.png")
 
-(define time-warning (image clock-icon #:scale .75))
-(define together (image bring-together-icon #:scale .5))
-(define breakout (image breakout-teams-icon #:scale .5))
+(define time-warning-img  (image clock-icon #:scale .5))
+(define together          (image bring-together-icon #:scale .6))
+(define breakout          (image breakout-teams-icon #:scale .65))
+(define AM-icon           (image AM-icon-path #:scale .25))
+(define PM-icon           (image PM-icon-path #:scale .25))
 
+(define small-break (ghost (rectangle 5 5)))
+(define med-break   (ghost (rectangle 10 10)))
+
+(define pict-orange (make-color 240 130 0))
+(define pict-blue   (make-color 15 100 230))
+
+(define (time-warning . s)
+  (apply (curry elem time-warning-img #:style (style "grey" (list (color-property (list 100 100 100))))) s))
 
 (define/contract (am-time t)
   (-> string? pict?)
-  (hc-append (scale (bitmap AM-icon) .15)
-             (ghost (rectangle 5 5))
-             (text t null 20)))
+  (hc-append (scale (bitmap AM-icon-path) .15)
+             small-break
+             (text t (cons pict-orange 'default) 20)))
 
 (define/contract (pm-time t)
   (-> string? pict?)
-  (hc-append (scale (bitmap PM-icon) .15) 
-             (ghost (rectangle 5 5))
-             (text t null 20)))
+  (hc-append (scale (bitmap PM-icon-path) .15) 
+             small-break
+             (text t (cons pict-blue 'default) 20)))
 
 (define org-type?
   (or/c 'together 'breakout 'start-together 'start-breakout 'none))
@@ -79,28 +103,28 @@
   (->* (any/c string? string?) (#:camp-type org-type? #:outside? boolean?) pict?)
 
   (define together-pict
-    (scale (bitmap bring-together-icon) .3))
+    (scale (bitmap bring-together-icon) .6))
 
   (define breakout-pict
-    (scale (bitmap breakout-teams-icon) .3))
+    (scale (bitmap breakout-teams-icon) .65))
 
   (define outside-pict
-    (scale (bitmap outside-icon) .5))
+    (scale (bitmap outside-icon) .6))
    
   (define org-img
-    (cond [(eq? org-type 'together)       (vl-append (ghost (rectangle 10 10))
+    (cond [(eq? org-type 'together)       (vl-append med-break
                                                      together-pict)]
-          [(eq? org-type 'breakout)       (vl-append (ghost (rectangle 10 10))
+          [(eq? org-type 'breakout)       (vl-append med-break
                                                      breakout-pict)]
-          [(eq? org-type 'start-together) (vl-append (ghost (rectangle 10 10))
+          [(eq? org-type 'start-together) (vl-append med-break
                                                      (hc-append
                                                       together-pict
-                                                      (ghost (rectangle 10 10))
+                                                      med-break
                                                       breakout-pict))]
-          [(eq? org-type 'start-breakout) (vl-append (ghost (rectangle 10 10))
+          [(eq? org-type 'start-breakout) (vl-append med-break
                                                      (hc-append
                                                       breakout-pict
-                                                      (ghost (rectangle 10 10))
+                                                      med-break
                                                       together-pict))]
           [(eq? org-type 'none)           (ghost (rectangle 0 0))]))
 
@@ -109,7 +133,7 @@
 
   (define icons
     (hc-append org-img
-               (ghost (rectangle 10 10))
+               med-break
                maybe-outside-icon))
    
   (hc-append (scale (bitmap i) .5)
@@ -123,7 +147,57 @@
   (hc-append (scale (bitmap lunch) .5)
              (ghost (rectangle 20 20))
              (vl-append
-              (text "AM CAMP ONLY" null 20)
+              (text "AM CAMP ONLY" (cons pict-orange 'default) 20)
               (am-time "12:00pm-12:45(ish)pm")
-              (ghost (rectangle 10 10))
+              med-break
               (scale (bitmap bring-together-icon) .3))))
+
+(define red-style
+  (style "red" (list (color-property "red"))))
+(define am-style
+  (style "orange" (list (color-property (list 240 130 0)))))
+(define pm-style
+  (style "blue" (list (color-property (list 15 100 230)))))
+(define green-style
+  (style "green" (list (color-property (list 0 150 20)))))
+
+(define (important-note . s)
+  (apply (curry elem #:style red-style) s))
+
+(define (am-note . s)
+  (apply (curry elem #:style am-style) s))
+
+(define (pm-note . s)
+  (apply (curry elem #:style pm-style) s))
+
+(define (new-note . s)
+  (apply (curry elem #:style green-style) s))
+
+
+(define key
+  (tabular #:style (style "color" (list (background-color-property '(245 245 255))))
+           #:row-properties '(bottom-border)
+           #:sep (hspace 1)
+           (list (list  "" "" (bold "SCRIPT KEY") "")
+                 (list "" (scale (bitmap AM-icon-path) .15)
+                       " = AM camp"
+                       (am-note "AM camp only notes"))
+                 (list "" (scale (bitmap PM-icon-path) .15)
+                       " = PM camp"
+                       (pm-note "PM camp only notes"))
+                 (list "" (scale (bitmap outside-icon) .5)
+                       " = move outside for this block (if possible)"
+                       'cont)
+                 (list "" (scale (bitmap bring-together-icon) .5)
+                       "= entire camp is together/mixed for this block"
+                       'cont)
+                 (list "" (scale (bitmap breakout-teams-icon) .5)
+                       "= breakout into individual camp teams for this block"
+                       'cont)
+                 (list "" ""
+                       (important-note "Really important notes!")
+                       'cont)
+                 (list "" ""
+                       (new-note "New notes for this day only/this day forward")
+                       'cont))))
+
