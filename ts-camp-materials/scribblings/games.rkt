@@ -4,15 +4,25 @@
 
 Games to play during camp game time!
 
+@section{Entire Games List by Age Recommendation:}
+
 All Ages:
 @itemlist[#:style 'compact
+          @item[@secref["Who_Am_I_"
+                        #:doc '(lib "ts-camp-materials/scribblings/manual.scrbl")]]
           @item[@secref["Selfie_Scavenger_Hunt"
                         #:doc '(lib "ts-camp-materials/scribblings/manual.scrbl")]]
           @item[@secref["Bippity_Bippity_Bop"
                         #:doc '(lib "ts-camp-materials/scribblings/manual.scrbl")]]
           @item[@secref["Captain_s_Coming"
                         #:doc '(lib "ts-camp-materials/scribblings/manual.scrbl")]]
+          @item[@secref["What_s_the_Difference__--_Partners"
+                        #:doc '(lib "ts-camp-materials/scribblings/manual.scrbl")]]
+          @item[@secref["What_s_the_Difference__--_Group"
+                        #:doc '(lib "ts-camp-materials/scribblings/manual.scrbl")]]
           @item[@secref["Shark_Attack"
+                        #:doc '(lib "ts-camp-materials/scribblings/manual.scrbl")]]
+          @item[@secref["Elbow_Tag"
                         #:doc '(lib "ts-camp-materials/scribblings/manual.scrbl")]]]
 
 Younger Students (K-5th):
@@ -24,6 +34,12 @@ Younger Students (K-5th):
           @item[@secref["Ultimate_Rock_Paper_Scissors"
                         #:doc '(lib "ts-camp-materials/scribblings/manual.scrbl")]]
           @item[@secref["Wax_Museum"
+                        #:doc '(lib "ts-camp-materials/scribblings/manual.scrbl")]]
+          @item[@secref["Sharks_and_Minnows_Tag"
+                        #:doc '(lib "ts-camp-materials/scribblings/manual.scrbl")]]
+          @item[@secref["What_Time_Is_It__Mr__Wolf__Tag"
+                        #:doc '(lib "ts-camp-materials/scribblings/manual.scrbl")]]
+          @item[@secref["Clam_Free_Tag"
                         #:doc '(lib "ts-camp-materials/scribblings/manual.scrbl")]]]
 
 Older Students (3rd-10th):
@@ -39,6 +55,14 @@ Older Students (3rd-10th):
           @item[@secref["Jedi_Mind_Tricks"
                         #:doc '(lib "ts-camp-materials/scribblings/manual.scrbl")]]
           @item[@secref["Ninja"
+                        #:doc '(lib "ts-camp-materials/scribblings/manual.scrbl")]]
+          @item[@secref["Hand_Game"
+                        #:doc '(lib "ts-camp-materials/scribblings/manual.scrbl")]]
+          @item[@secref["Blind_Emoji_Artist"
+                        #:doc '(lib "ts-camp-materials/scribblings/manual.scrbl")]]
+          @item[@secref["Amoeba_Tag"
+                        #:doc '(lib "ts-camp-materials/scribblings/manual.scrbl")]]
+          @item[@secref["Bring_Home_the_Bacon_Tag"
                         #:doc '(lib "ts-camp-materials/scribblings/manual.scrbl")]]]
 
 @section{Selfie Scavenger Hunt}
@@ -77,7 +101,7 @@ As teams return, HC checks the photos; looking for every team member in each pho
 that they got everything on the list. Celebrate every team as they return!
 
 @bold{EXAMPLE LISTS:}
-Aim for 5-10 items on the list, depedning on how much time you are allowing for the hunt.
+Aim for 5-10 items on the list, depending on how much time you are allowing for the hunt.
 Leave some open ended items, where the thing to found might be different for everyone
 (like "A Beautiful View") and include some riddles for extra fun!
 
@@ -146,8 +170,8 @@ You know how to play this game. Be safe!
 
 One student is the "detective" and leaves the area (keep in mind, they need to be
 accompanied but shouldn't be alone with an adult). The teacher picks one of the remaining
-students to be the Leader. The Leader starts a simple movement (tapping head, clapping
-hands, drumming fingers, etc) and the rest of the circle copies it. The Detective student
+players to be the Leader. The Leader starts a simple movement (tapping head, clapping
+hands, drumming fingers, etc) and the rest of the circle copies it. The Detective player
 returns, and stands in the middle of the circle. Their job is to try and figure out who is
 the Leader. Meanwhile, everyone is trying to follow the Leader as they change up the
 movement, without giving away who the Leader is to the Detective. The round ends when the
@@ -155,7 +179,7 @@ Detective guesses correctly, or has three incorrect guesses.
 
 @bold{TIPS & TRICKS:}
 
-@itemlist[@item{May have to remind students not to directly stare at the Leader, but rather
+@itemlist[@item{May have to remind players not to directly stare at the Leader, but rather
                 use their peripheral vision, or pay attention to someone else and match
                 them!}]
 
@@ -174,12 +198,12 @@ Detective guesses correctly, or has three incorrect guesses.
 @bold{HOW TO PLAY:}
 
 Staff spread out papers on the ground throughout the space, starting with as many papers as
-there are students. Head Coach instructs students to "swim" around the space, while
+there are players. Head Coach instructs players to "swim" around the space, while
 explaining that they are on a tropical vacation, swimming amongst these plentiful islands
-(the papers). Then all of a sudden there is a "SHARK ATTACK" and all students must safely
+(the papers). Then all of a sudden there is a "SHARK ATTACK" and all players must safely
 get on an island.
 
-Once everyone has gotten to safety, tell the students that the shark has gone away and it
+Once everyone has gotten to safety, tell the players that the shark has gone away and it
 is safe to swim again. As they are swimming, remove one piece of paper from the playing
 space. Another "SHARK ATTACK" comes, and everyone must still get to safety -- someone is
 going to have to share their island. Explain that the point is to save as many of your
@@ -194,7 +218,7 @@ is over.
 @itemlist[#:style 'compact
           @item{This game is about teamwork, not competition. Kids aren't as used to that,
                 and they may need some reminding that they want to save everyone!}
-          @item{As usual, the more that the staff gets into the game, the more the students
+          @item{As usual, the more that the staff gets into the game, the more the players
                 will play along!}]
 
 
@@ -209,9 +233,9 @@ is over.
 @bold{HOW TO PLAY:}
 
 First, review the game of rock paper scissors, especially when you reveal your pick (on
-"scissors" or "shoot?"). Students wander the room and find an opponent. They play RPS. The
-student who loses becomes the winner's cheerleader; chanting their name and otherwise
-cheering them on as they go on to find their next opponent. So it goes, with the student
+"scissors" or "shoot?"). Players wander the room and find an opponent. They play RPS. The
+player who loses becomes the winner's cheerleader; chanting their name and otherwise
+cheering them on as they go on to find their next opponent. So it goes, with the player
 who loses and all their cheerleaders joining the winner's cheer team until you have an
 ultimate winner! Play this game a couple times.
 
@@ -232,21 +256,22 @@ ultimate winner! Play this game a couple times.
 @bold{NEED:}
 
 @itemlist[#:style 'compact
-          @item{Largish space for students to be able move around safely}
+          @item{Medium to large amount of space where players can run/move quickly!}
+          @item{Boundaries to the play space}
           @item{List of commands and responses}]
 
 @bold{HOW TO PLAY:}
 
-Head Coach is the captain of the ship and students are their crew. A good crew follows their
+Head Coach is the captain of the ship and players are their crew. A good crew follows their
 Captain's instructions to a tee! Start with the four directions (see list below) adding on new
-commands as the students become comfortable -- introducing the command, demonstrating the
+commands as the players become comfortable -- introducing the command, demonstrating the
 response, and practicing it a few times.
 
-This may be played as an elimination game or not. If you play "with outs" have the students who
+This may be played as an elimination game or not. If you play "with outs" have the players who
 are out of the game join the Captain's team and help judge. Remind them that the Captain (and
 other team leaders) are the final judges, and they are assisting. Captain can ask suggestions for
 what command to say next, or they can continue to play the game behind the Captain to keep them
-engaged. Students can get out by doing the wrong instruction, breaking "Captain's Coming" for
+engaged. Players can get out by doing the wrong instruction, breaking "Captain's Coming" for
 anything but "At Ease" and, if they get advance enough for numbered commands, being the odd one(s)
 out.
 
@@ -299,7 +324,7 @@ out.
 @itemlist[#:style 'compact
           @item{Many kids will have played these types of games before and might try "correcting"
            you on the commands. Remind them that this is YOUR version and you know all the rules. ;)}
-          @item{The more "Captain-y" and "Pirate-y" the Head Coach can be, the more the students
+          @item{The more "Captain-y" and "Pirate-y" the Head Coach can be, the more the players
            will get into it.}
           @item{If you are feeling creative and can give this game a computer science flavor
            (instead of Captain and Crew. It's Programmer and Computer?) and come up with related
@@ -317,33 +342,33 @@ out.
 
 @bold{HOW TO PLAY:}
 
-Everyone circles up with the Head Coach in the middle. The HC goes to individual students on the
+Everyone circles up with the Head Coach in the middle. The HC goes to individual players on the
 outside of the circle giving them different prompts. This game works best when teaching the
 prompts in levels. For each level you can go around to each person in the circle and/or do it
-“popcorn style” -- picking our students at random. Eventually you want to make it as random and
-unpredictable as possible (I particularly like calling out the students who aren’t paying
+“popcorn style” -- picking out players at random. Eventually you want to make it as random and
+unpredictable as possible (I particularly like calling out the players who aren’t paying
 attention!)
 
 @bold{PROMPTS:}
 @itemlist[#:style 'compact
           @item[@bold{Level One}
                 @itemlist[#:style 'compact
-                          @item{HC says “bippity bippity bop.” Student must say “bop” before HC
+                          @item{HC says “bippity bippity bop.” Player must say “bop” before HC
                                                      finishes speaking.}
-                          @item{HC says “bop!” Student must not say anything!}]]
+                          @item{HC says “bop!” Player must not say anything!}]]
           @item[@bold{Level Two}
                 @itemlist[#:style 'compact
-                          @item{HC says “hippity hippity hop.” Student must say hop in place
+                          @item{HC says “hippity hippity hop.” Player must say hop in place
                                                      before HC finishes speaking.}
-                          @item{HC says “hop!” Student must not do anything!}]]
+                          @item{HC says “hop!” Player must not do anything!}]]
           @item[@bold{Level Three}
                 @itemlist[#:style 'compact
-                          @item{HC says “drippity drippity drop.” Student must say drop safely to
+                          @item{HC says “drippity drippity drop.” Player must say drop safely to
                                                      a crouch before HC finishes speaking.}
-                          @item{HC says “drop!” Student must not do anything!}]]
-          @item["Bonus - There are lots of crazy shapes that students can make when you give them
-           prompts, for example, elephant (student you point to becomes the trunk, students on
-           either side become the ears) or charlie’s angels (student you point to and the ones on
+                          @item{HC says “drop!” Player must not do anything!}]]
+          @item["Bonus - There are lots of crazy shapes that players can make when you give them
+           prompts, for example, elephant (player you point to becomes the trunk, players on
+           either side become the ears) or charlie’s angels (player you point to and the ones on
            either side strike the charlie’s angels pose and say “Hi Charlie!”). These are usually
            given a time limit (5 or ten seconds to complete). You can find a lot of these prompts
            online, for example here: "
@@ -353,14 +378,14 @@ attention!)
 @bold{TIPS & TRICKS:}
 
 @itemlist[#:style 'compact
-          @item{Teach students how to “drop” safely to a crouch, not collapse onto the floor.
+          @item{Teach players how to “drop” safely to a crouch, not collapse onto the floor.
            Trust me. It shouldn’t have to be said but it does.}
           @item{Can be played for elimination, though I would not recommend it for the first time!}]
 
 
 @section{Wax Museum}
 
-@bold{Recommended for: K-2?, 3-5}
+@bold{Recommended for: K-2, 3-5}
 
 @bold{NEED:}
 
@@ -369,7 +394,7 @@ attention!)
 
 @bold{HOW TO PLAY:}
 
-The Head Coach uses student input to decide on a theme for the museum (Examples: Animals of the
+The Head Coach uses player input to decide on a theme for the museum (Examples: Animals of the
 Desert, Winter Sports, Greatest Models through History, Aliens....). One person is the "security
 guard," everyone else is a statue in their museum. The guard closes their eyes and counts to 5 --
 during which time, all statues are getting into a starting pose. The goal of the guard is to catch
@@ -397,7 +422,7 @@ and match in your game:
 
 @itemlist[@item{Most kids will have played a variation on this game. Be sure to introduce it as
            your version, which may be different than theirs, but also feel free to adapt the game
-           to what the students know, or make new rules!}]
+           to what the players know, or make new rules!}]
 
 @section{Wah}
 
@@ -439,8 +464,8 @@ eliminating anyone who misses their cue or is off beat.
 
 @bold{HOW TO PLAY:}
 
-The Head Coach should demonstrate this game to all students before splitting off into individual
-groups. They can even play the game with all team leaders in front of the students! Players stand
+The Head Coach should demonstrate this game to all players before splitting off into individual
+groups. They can even play the game with all team leaders in front of the players! Players stand
 in a circle with their group. All close their eyes, reach into the middle of the circle one hand
 at a time and find another hand to hold. When everyone is holding hands in one crazy knot, they
 open their eyes and attempt to untangle themselves without letting go of hands.
@@ -449,12 +474,12 @@ open their eyes and attempt to untangle themselves without letting go of hands.
 
 @itemlist[#:style 'compact
           @item{Play in groups of 6-10, with larger groups obviously making things more challenging}
-          @item{Before the game begins, go over with students the importance of being careful with
+          @item{Before the game begins, go over with players the importance of being careful with
            each other’s bodies. Demonstrate how to hold hands, that it’s okay to rotate grip, what
            to do with something hurts (say “STOP” loudly. Everyone must stop).}
           @item{Team Leaders should stay out of the knot and help guide, specifically the
            "grabbing hands" bit! Keep an eye on safety but don't do the work for them!}
-          @item{Encourage teamwork, and discourage one student taking charge.}
+          @item{Encourage teamwork, and discourage one player taking charge.}
           @item{For increased difficulty, try it silently!}]
 
 @section{Zoo Keeper}
@@ -471,10 +496,10 @@ open their eyes and attempt to untangle themselves without letting go of hands.
 
 @bold{HOW TO PLAY:}
 
-All students start at the starting line. The Head Coach or "Zoo Keeper" "locks all those crazy
+All players start at the starting line. The Head Coach or "Zoo Keeper" "locks all those crazy
 animals up for the night" then walks a good distance
 away. They drop the keys at their feet and turn their back. Think Red Light, Green Light -- the
-students try to approach the Zoo Keeper but freeze anytime the Zoo Keeper turns around. If they
+players try to approach the Zoo Keeper but freeze anytime the Zoo Keeper turns around. If they
 are caught moving, they are sent back to the starting line.
 
 Now here is how it differs from Red Light, Green Light. Once someone reaches the keys, the goal is
@@ -483,12 +508,12 @@ Keeper has one guess to try and find who has the keys. If they guess correctly, 
 -- everyone back to the start ans the keys go back to the Keeper. It will take a couple tries to
 realize, but this is not a
 racing game. They are most successful when they move as a group and stick together! If there is
-one student up by the Keeper when the keys disappear, well, it's pretty easy to guess.
+one player up by the Keeper when the keys disappear, well, it's pretty easy to guess.
 
 @bold{TIPS & TRICKS:}
 
 @itemlist[#:style 'compact
-          @item{For an additional challenge, every student must hold the keys once on the way
+          @item{For an additional challenge, every player must hold the keys once on the way
            back to the starting line.}]
 
 
@@ -506,7 +531,7 @@ Werewolf." This happens to be my favorite version.
 @bold{HOW TO PLAY:}
 
 @bold{Prep:} Everyone sits in a circle, starting with their eyes closed ("asleep"). The Head Coach
-is the Narrator, and they secretly assign students roles by silently tapping heads. They assign
+is the Narrator, and they secretly assign players roles by silently tapping heads. They assign
 2-3 people to be Mafia, and 1-2 people to be the Doctor(s). It is imperative that all these
 assignments are top secret!
 
@@ -536,9 +561,9 @@ the Mafia are jailed or there are no innocents left!
 @bold{TIPS & TRICKS:}
 
 @itemlist[#:style 'compact
-          @item{Warning, this is one of those games that once played, students might always beg to
+          @item{Warning, this is one of those games that once played, players might always beg to
            play every spare second.}
-          @item{Students can become the Narrator, but it tends to be a very desirable role, so you
+          @item{Players can become the Narrator, but it tends to be a very desirable role, so you
            may get a lot of disappointment if not everyone gets their turn.}
           @item{Narrator can give the jailed folks a chance for "last words" -- to reveal if they
            were actually Mafia or not. Or it can stay a secret until the end!}
@@ -581,7 +606,7 @@ middle.
 
 @itemlist[#:style 'compact
           @item{Groups of 10-15 work best for this game. More advanced groups can do larger games!}
-          @item{Remind students of safety! Be aware of other bodies, do not run into anyone, etc.}
+          @item{Remind players of safety! Be aware of other bodies, do not run into anyone, etc.}
           @item{You may want to explicitly ban swapping with the person directly next to you if
                 it keeps happening. It just takes the fun out of it!}]
 
@@ -620,7 +645,424 @@ the game. Game continues until there is only one champion ninj left!
           @item{When starting out, the Head Coach may need to guide who's turn it is. Eventually,
                 it's nice to stop explaining this, as the element of surprise becomes part of
                 the game!}
-          @item{If students start moving too far away from the game, you can establish a boundary.}]
+          @item{If players start moving too far away from the game, you can establish a boundary.}]
 
 
+@section{What's the Difference? -- Partners}
+
+@bold{Recommended for: K-2nd, 3-5, 6-10}
+
+@bold{NEED:}
+
+@itemlist[#:style 'compact
+          @item{Nothing! Well, players, I suppose.}]
+
+@bold{HOW TO PLAY:}
+
+This game can be played standing or sitting. Players pair up and pick one of the two to guess
+first. The Guesser has 15-30 seconds to visually memorize their partner. Once the
+time is up, Guessers close their eyes, and thier partner now changes one thing about their
+appearance: remove an earring, put their watch on the other wrist,
+untie their shoelaces on one shoe, cuff their pants...
+
+At their partner's OK, Guessers open their eyes and try to find what their partner has changed.
+When they guess correct, the roles swap and the game begins again.
+
+@bold{TIPS & TRICKS:}
+
+@itemlist[#:style 'compact
+          @item{Decide if this is a 2D or 3D game -- can partners change something on their back?
+                If so, guesser should circle all around their partner when observing/guessing.
+                Game can also be simplified to just be face-to-face observations/changes only.}
+          @item{A Head Coach can lead this game all together, giving specific instructions on
+                when to observe/change/guess/swap OR the game can be played at each pairs' own
+                pace.}
+          @item["See "  @secref["What_s_the_Difference__--_Group" #:doc '(lib "ts-camp-materials/scribblings/manual.scrbl")]
+                " for a group version of this game."]]
+
+
+@section{What's the Difference? -- Group}
+
+@bold{Recommended for: K-2nd, 3-5, 6-10}
+
+@bold{NEED:}
+
+@itemlist[#:style 'compact
+          @item{Nothing! Well, players, I suppose.}]
+
+@bold{HOW TO PLAY:}
+
+One player is "it;" this player gets up in front of everyone else where they can be seen by the
+rest of the players (other players are now the "guessers"). Guessers has 30 seconds to visually
+memorize this person. Once the time is up, Guessers close their eyes or turn around (no peeking!),
+and the "it" player now changes one thing about their appearance: remove an earring, put their
+watch on the other wrist, untie their shoelaces on one shoe, cuff their pants...
+
+When the "it" player is all set, they give the OK. Guessers open their eyes/turn around and try
+to be the first to find what the player has changed. Whomever guesses correctly first is "it"
+next.
+
+@bold{TIPS & TRICKS:}
+
+@itemlist[#:style 'compact
+          @item{Instigate a hand-raising rule for guesses if needed.}
+          @item{Whatever the "it" player changes about their appearance, it must be visable to
+                all guessers -- nothing on their back!}
+          @item{Head Coach or staff should keep the game moving and monitor for any peeking!}
+          @item["See "  @secref["What_s_the_Difference__--_Partners" #:doc '(lib "ts-camp-materials/scribblings/manual.scrbl")]
+                " for a partnered version of this game"]]
+
+@section{Hand Game}
+
+@bold{Recommended for: 3-5, 6-10}
+
+@bold{NEED:}
+
+@itemlist[#:style 'compact
+          @item{Medium amount of space; enough space for group(s) to circle up.}]
+
+@bold{HOW TO PLAY:}
+
+Recommended Instructional Video: @(hyperlink "Hand Game Video" "https://youtu.be/DHMxfA2OivI")
+
+Everyone circles up. All players put
+their hands, palms down, on the ground in front of them. Everyone lifts their right hand and
+places it on the other side of the left hand of the person directly to their right -- ending up
+with everyone's arms overlapping and criss-crossed.
+
+Starting player taps their right hand on the ground. The taps continue clockwise around the
+circle in the order of hands on the ground, not players! Any player who taps their hand out of
+order, or is too delayed in realizing it is their turn to tap, pulls that hand from the circle.
+When both of a player's hands are pulled out, they are out. Play continues until there is one (or
+a couple) winners remaining!
+
+In addition to tapping hands clockwise, there are a couple ways to change the flow that any
+player can do instead of a single tap on their turn:
+@itemlist[#:style 'compact
+          @item{Double-tap -- tapping two times (quickly!) reverses the direction of the slaps}
+          @item{Fist -- tapping the ground with a closed, upright fist (pinky down) SKIPS the
+                next hand. Play continues in the same direction to the next hand in order.}]
+
+@bold{TIPS & TRICKS:}
+
+@itemlist[#:style 'compact
+          @item{As with any eliminiation-style game, play a few practice rounds before adding
+                "outs"}
+          @item{With shorter attention-spans, divide into smaller groups so there is less
+                "downtime" for any individual player. Also games finish faster this way and
+                everyone can hop back in for another round!}]
+
+
+@section{Who Am I?}
+
+@bold{Recommended for: K-2, 3-5, 6-10}
+
+@bold{NEED:}
+
+@itemlist[#:style 'compact
+          @item{Slips of paper, either blank (see variation for older students), or with names
+                of animals (see younger variation) characters, or famous figures.}
+          @item{Tape}
+          @item{Pens/Markers, potentially}]
+
+@bold{HOW TO PLAY:}
+
+@bold{Standard Version} -- Head Coach tapes a slip of paper with the a famous name that everyone
+should know (fictional character, historical figure, modern celebrity) to the back of every
+player. @bold{Players should not know what has been taped to their own back!} Once all players
+have a name, the game starts:
+
+All players are trying to guess "who they are". They get clues by
+asking @bold{yes or no} questions of the other players (Example questions: "Am I alive today?"
+"Am I liked?" "Do I act in movies?" etc). Make sure they turn around to show off who they are
+first! In turn, they will answer questions for
+other players trying to figure out who they are! Once a player has successfully guessed, they can
+move their paper off their back (stick it on the front of their shirt?) and continue to help
+other players by answering their questions.
+
+@bold{Variation for younger players} -- Instead of characters, use animals. Questions adjust to
+"Do I live on land?" "Do I walk on 4 legs?" "Do people have me as a pet?"
+
+@bold{Variation for older players} -- Have the players write the names instead of prepping them
+beforehand. Give them parameters (at the least: something everyone will know. Can be more
+specific, characters from movies, historical figures, another specific category). Make sure no one
+gets the name they wrote.
+
+@bold{Example Names:}
+@itemlist[#:style 'compact
+          @item{Mickey Mouse}
+          @item{Sherlock Holmes}
+          @item{George Washington}
+          @item{Lady Gaga}
+          @item{Winnie the Pooh}
+          @item{Tinkerbell}
+          @item{Mario}
+          @item{Taylor Swift}
+          @item{Rosa Parks}]
+
+@bold{TIPS & TRICKS:}
+
+@itemlist[#:style 'compact
+          @item{If you are looking for names, Google is your friend! Try "historical figures"
+                "famous people" "famous fictional characters" etc.}
+          @item{Players can have a question limit per person -- must ask 3 questions each before
+                finding a new partner. Instate this rule if players are not naturally swapping
+                partners.}
+          @item{Names can be taped to the foreheads of players instead of their backs, depending
+                on the size of the paper!}
+          @item{If playing multiple times, it is a great opportunity for all ages to add their
+                own names/animals to the pile, once they have seen the kind of things to write.
+                Plus, it means less prep for you!}]
+
+
+
+@section{Blind Emoji Artist}
+
+@bold{Recommended for: 3-5, 6-10}
+
+@bold{NEED:}
+
+@itemlist[#:style 'compact
+          @item{Paper -- 1 piece per pair, per round}
+          @item{Pencils/Pens -- 1 per pair}
+          @item{Chromebooks connected to wifi}
+          @item{An even number of players}]
+
+@bold{HOW TO PLAY:}
+
+Pair up all players; have each pair decide who is the artist first and who is the designer. The
+artist gets a pencil/pen and paper and the designer gets a chromebook with a browser open to
+@(hyperlink "byrdseed.com/emoji" "byrdseed.com/emoji"). The partners sit back to back, and the
+designer clicks the "start over" button to generate a new emoji.
+
+Head Coach starts a timer for 2 minutes. The designer describes to the best of their ability
+what the emoji looks like -- getting as detailed as possible (not just "sad face emoji"!). At
+the end of the time, the art and emoji are revealed, laughter and/or celebration is had, and
+roles are swapped for the next round.
+
+@bold{Variation with a Projector} -- if there is a projector available, give this version a try!
+Head Coach projects up one of the pages listed below, with several random images displayed.
+The designer partner sits facing the screen and the artist partner sits at their back, facing
+away from the screen. Designer can pick any one of the images on display to describe.
+
+Alternate random image generators:
+@itemlist[#:style 'compact
+          @item[@(hyperlink "Another Random Emoji Generator"
+                            "https://www.bestrandoms.com/random-emoji")]
+          @item[@(hyperlink "Random Pokemon Generator"
+                            "https://www.bestrandoms.com/random-pokemon")]
+          @item[@(hyperlink "Random Flag Generator"
+                            "https://www.bestrandoms.com/random-flag")]]
+
+@bold{TIPS & TRICKS:}
+
+@itemlist[#:style 'compact
+          @item{If students have their own computers they are working with, make sure staff is
+                monitoring to keep students on topic.}
+          @item{After the time is up, it can be fun to share with other pairs to see who got
+                closest.}
+          @item{If projecting, Head Coach can randomize a few times to make sure none of the
+                options are too easy!}]
+
+
+@section{Tag Games!}
+Great for getting out a lot of energy, these tag variations are best played in a grassy outdoor
+space with easily defined boundaries. While (most!) are fun for all ages, be sure to split
+youngest students into their own group for safety and to have a balanced game thats fun for all!
+
+@subsection{Elbow Tag}
+
+@bold{Recommended for: K-2, 3-5, 6-10}
+
+@bold{NEED:}
+
+@itemlist[#:style 'compact
+          @item{Large amount of space safe for running -- with defined boundaries!}
+          @item{An even number of players}]
+
+@bold{HOW TO PLAY:}
+
+All players pair up, finding a spot in the playspace to stand side-by-side, elbows linked. Head
+Coach picks a single person to start as "it" and that person's partner better run! Everyone else
+is safe from the "it" player; when you are linked with one other person you are safe and must
+remain in place.
+
+The Runner can become "safe" at any time by linking on to the end of a pair. But this immediately
+"kicks-out" the partner on the @italic{other} end of the pair, who is now on the run! The "it"
+player is attempting to tag whomever is solo at the moment (even if they haven't realized they
+are yet!). If tagged, the Runner becomes "it" and "it" becomes the Runner, who can now link up
+and rest!
+
+@bold{TIPS & TRICKS:}
+
+@itemlist[#:style 'compact
+          @item{Some players might need coaching to link up and pass the Runner role on to another
+                player. The game works best when these switch overs happen frequently!}
+          @item{Usually ends up with some/all "safe" players hollering at the Runner to "link up
+                here!" so they get a chance to run, or boot out their current partner!}]
+
+
+@subsection{Amoeba Tag}
+
+@bold{Recommended for: 3-5, 6-10}
+
+@bold{NEED:}
+
+@itemlist[#:style 'compact
+          @item{Large amount of space safe for running -- with defined boundaries!}]
+
+@bold{HOW TO PLAY:}
+
+Two players start as "it." They hold hands and run as a team, attempting to tag other players
+with their free hands. When they are successful, the tagged player joins hands with them and
+becomes part of the "it amoeba." Only the members at the end of the line, the most recently
+tagged, can tag people with their free hands, but the rest of the team can help surround and trap
+the players they are chasing! The game continues, with the "it amoeba" becoming larger and
+larger until every player has been tagged!
+
+
+@bold{TIPS & TRICKS:}
+
+@itemlist[#:style 'compact
+          @item{The amoeba must keep hands together at all times! If the hands break apart, they
+                must stop and "reattach" before continuing.}
+          @item{When playing with younger players, make sure to remind players about being safe
+                and careful with eachother's bodies -- don't pull people around!}]
+
+
+@subsection{Sharks and Minnows Tag}
+
+@bold{Recommended for: K-2, 3-5}
+
+@bold{NEED:}
+
+@itemlist[#:style 'compact
+          @item{Large amount of space safe for running -- with defined boundaries!}
+          @item{Defined "end zones" on opposing sides of the playspace}]
+
+@bold{HOW TO PLAY:}
+
+One or two players start as "it" -- or in this case, the Shark(s)! The rest of the players, the
+Minnows, split between the two end zones. When the Shark(s) cries out "Fishy fishy, cross my ocean,"
+all Minnows run from their end zone to the other, while the Shark(s) tries to tag them. If they are
+tagged, they becomes Seaweed -- stays exactly where they were tagged, with feet planted, and tries
+to tag other Minnows as they "swim by" without moving their feet. Once everyone has made it
+across or been tagged, Shark(s) call everyone to cross again! 
+
+@bold{VARIATIONS:}
+
+@itemlist[#:style 'compact
+          @item{When the Shark says "Fishy Fishy, cross my ocean," Minnows start by WALKING
+                calmly across the ocean. Shark cannot tag anyone until they shout "Shark attack!"
+                at which point, all Minnows run to get to safety!}
+          @item{All Seaweed can sit instead of stand, making it easier to limit mobility.}
+          @item["Variations can be played where only certain Minnows cross at a time. This can be
+                done in a few ways:"
+                @itemlist[#:style 'compact
+                          @item{Every Minnow picks their favorite color. Shark calls for all red
+                                fish to cross, at which point anyone whose favorite color is red,
+                                must run across. Might need to narrow down to certain generic color
+                                choices to prevent infinite choices.}
+                          @item{Similar things can be down with favorite sea animal, or any animal
+                                if you change the theme.}
+                          @item{Shark calls for all fish of a certain color to "cross [their] ocean".
+                                If a Minnow is wearing that color, they must cross!}]]]
+
+@bold{TIPS & TRICKS:}
+
+@itemlist[#:style 'compact
+          @item{Declare a group of winners if the game is going on too long with only a couple
+                students left.}]
+
+
+@subsection{What Time Is It, Mr. Wolf? Tag}
+
+@bold{Recommended for: K-2, 3-5}
+
+@bold{NEED:}
+
+@itemlist[#:style 'compact
+          @item{Large amount of space safe for running -- with defined boundaries!}
+          @item{A defined starting line}]
+
+@bold{HOW TO PLAY:}
+
+One player is "it" -- or "Mr. Wolf." This player stands a good distance from the starting line with
+their back to the line. All other players collect on the starting line. All together, the players
+ask "What time is it, Mr. Wolf?" Mr. Wolf responds with any time -- ending with "o'clock." The
+players take that number of steps forward, towards Mr. Wolf (example: 5 steps for "five o'clock").
+
+At any time, Mr. Wolf can reply with "DINNER TIME!" at which point, they will turn around and
+chase all players back to the starting line, trying to tag them before they get there. If Mr.
+Wolf is successful, a new Mr. Wolf is chosen from the players tagged.
+
+@bold{TIPS & TRICKS:}
+
+@itemlist[#:style 'compact
+          @item{This can be a good tag game if you don't have quite enough space for other tags!}]
+
+
+@subsection{Clam Free Tag}
+
+@bold{Recommended for: K-2, 3-5}
+
+@bold{NEED:}
+
+@itemlist[#:style 'compact
+          @item{Large amount of space safe for running -- with defined boundaries!}]
+
+@bold{HOW TO PLAY:}
+
+One or two players are "it" -- or the "Clam Diggers". Played like freeze tag -- when the other
+players are tagged they must freeze in place and wait to be freed. Additionally, they signal that
+they need to be freed by communicating to their fellow clams with the offical clam-help signal:
+bringing both hands up to shoulder-level, making puppet-mouths and saying, in a very high-pitched
+voice "help-me-help-me-help-me!" until help arrives!
+
+Stuck clams are freed when two of their fellow clams grab hands around them, lift their hand up
+shouting "CLAM FREE!"
+
+@bold{TIPS & TRICKS:}
+
+@itemlist[#:style 'compact
+          @item{This game is extra silly; the Head Coach and staff should jump in to the
+                silliness -- demoing the very highest-pitched, silliest clam cries when explaining
+                the game!}]
+
+
+@subsection{Bring Home the Bacon Tag}
+
+@bold{Recommended for: 3-5, 6-10}
+
+@bold{NEED:}
+
+@itemlist[#:style 'compact
+          @item{Large amount of space safe for running -- with defined boundaries!}
+          @item{Defined "homes" on opposing sides of the playspace}
+          @item{An even number of players}
+          @item{"Bacon" -- an item that can be grabbed from the center. This can be a ball, a
+                shoe, a lunch bag, etc.}]
+
+@bold{HOW TO PLAY:}
+
+Divide the players into two teams and assign each member of the team a number -- there should be
+one of each number on each team. Teams line up on opposing sides of the playing space at their
+"home." The "bacon" -- a random grabbable object -- is placed in the center of the
+playspace.
+
+Head Coach calls out a number. The players on both teams assigned to that number race to the
+center to grab the "bacon." Whomever gets it first races back to their "home" while the other
+player tries to tag them. If the player manages to bring home the bacon without getting tagged,
+they earn their team a point! If they get tagged, no one earns a point. Reset and call out a
+new number.
+
+@bold{TIPS & TRICKS:}
+
+@itemlist[#:style 'compact
+          @item{Head Coach can also call out groups of numbers -- such as all evens, odds, 3 and
+                under, 2 and over, etc.}
+          @item{If you are feeling extra tricky, add some math! Call out "all numbers divisible
+                by 3" etc.}
+          @item{Bring along a white board to keep score!}
+          @item{Can play to 10 points or to the highest score by the end of game time.}]
 

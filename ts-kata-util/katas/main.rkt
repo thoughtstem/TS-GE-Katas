@@ -46,6 +46,12 @@
          define-kata
          define-kata-collection
          sort-katas-by-difficulty
+
+         ->code?
+         response-lang=?
+         filter-by-response-lang
+
+         collection-apply
          )
 
 ;(require scribble/manual)
@@ -93,6 +99,10 @@
 (struct response:code response () #:transparent)
 (struct response:say  response () #:transparent)
 (struct response:do   response () #:transparent)
+
+(define (->code? k)
+  (response:code?
+    (kata-response k)))
 
 (define (set-id i k )
   (struct-copy kata k
@@ -290,10 +300,41 @@
           mappings)))
 
 
+(define (first-line s)
+  (first 
+    (string-split s "\n")))
+
+(define (get-lang s)
+  (string->symbol
+    (regexp-replace #px"#lang " (first-line s) "")))
+
+(define (response-lang k)
+  (define kd (expression-data
+               (response-data (kata-response k))))
+
+  ;Hack for k2
+  (when (list? kd) ;This needs to get formalized better.
+    (set! kd (expression-data (first kd))))
+
+  (get-lang kd))
+
+(define (filter-by-response-lang l kc)
+  (filter-collection
+    (curryr response-lang=? l)
+    kc))
+
+(define (response-lang=? k l)
+  (define kl (response-lang k))
+  (eq? l kl))
+
 (define (filter-collection pred kc)
   ;Use lenses?
   (kata-collection
    (filter pred (kata-collection-katas kc))))
+
+(define (collection-apply f kc)
+  (kata-collection
+    (f (kata-collection-katas kc))))
 
 ;TODO: Rewrite to be less stringy and more rackety
 ;  Read, parse into datum?

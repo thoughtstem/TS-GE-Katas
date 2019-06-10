@@ -9,10 +9,10 @@
 
   ;/unlisted.html data
   ( 
-    (ts-survival "SURVIVAL")
-    (ts-battle-arena "BATTLE-ARENA")
-    ;(ts-coach "COACH TRAINING KATAS")
-    (ts-kata-util "Docs for ts-kata-util")
+    (ts-survival       "SURVIVAL")
+    (ts-battle-arena   "BATTLE-ARENA")
+    ;(ts-coach         "COACH TRAINING KATAS")
+    (ts-kata-util      "KATA UTIL")
     (ts-camp-materials "COACH RESOURCES")
 
     (ts-k2-farm-summer-camp-2019               "FARM")
@@ -26,7 +26,7 @@
     (ts-survival-minecraft-summer-camp-2019    "MINECRAFT")
     (ts-survival-pokemon-summer-camp-2019      "POKEMON")
     (ts-adventure-mario-summer-camp-2019       "MARIO")
-    (ts-adventure-harrypotter-summer-camp-2019       "HARRY POTTER")
+    (ts-adventure-harrypotter-summer-camp-2019 "HARRY POTTER")
     
   )
 )

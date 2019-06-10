@@ -19,7 +19,21 @@ To use these katas in another collection do:
 @table-of-contents[]
 
 @section{Intro Katas}
-
 @(render hello-world-katas)
+
+@section{Wizard Katas}
+@(render wizard-katas)
+
+@section{Potion Katas}
+@(render potion-katas)
+
+@section{Loot Quest Katas}
+@(render loot-quest-katas)
+
+@section{NPC Katas}
+@(render npc-katas)
+
+@section{Spell Katas}
+@(render spell-katas)
 
 @(include-section adventure-harrypotter/scribblings/assets-library)

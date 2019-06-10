@@ -11,6 +11,8 @@ All Ages:
           @item[@secref["Four_Corners"
                          #:doc '(lib "ts-camp-materials/scribblings/manual.scrbl")]]
           @item[@secref["The_Red_Wind_Blows___"
+                        #:doc '(lib "ts-camp-materials/scribblings/manual.scrbl")]]
+          @item[@secref["Who_Am_I_"
                         #:doc '(lib "ts-camp-materials/scribblings/manual.scrbl")]]]
 
 3rd and up:

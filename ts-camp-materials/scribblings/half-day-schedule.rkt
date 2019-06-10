@@ -43,9 +43,10 @@ all staff and students stay at the pick up location until all students arrive, o
 staff go to the camp room at 9am, and one Team Leader will stay at the pick up
 location until all students have arrived or 9:15 -- whichever comes first.
 
-In most locations, parents should be staying in their cars during drop off.The
-one exception to this rule is on Day One: when parents need to stay with their
-student until the Head Coach confirms that ThoughtSTEM has all paperwork required.
+In most locations, parents should be staying in their cars during drop off.
+No need t enforce this on Day One, when many parents may want to walk
+their student up the the camp. Staff should tell parents that for pick-up and
+future check-ins that they can stay in their car.
 
 To run a smooth and successful check-in, each coach should take over a specific
 job in the check in process:
@@ -138,7 +139,9 @@ slightly different jobs:
                 pick up list with each parent/guardian as they drop off their
                 student.}
           @item{There also may be additional paperwork to hand out to parents.}
-          @item{Team Leader Assignments -- Runners and Traffic
+          @item{Parents are welcome to either wait in the pickup line or park and
+                walk their student up every day.}
+          @item{Team Leader Assignments -- Traffic
                 Cop may shift to assist Head Coach or to HB Managers.}]
 
 @bold{Del Mar Unified School District}
@@ -307,6 +310,15 @@ safe and fun environment. TLs also should step in to remind individual students 
 listen or participate, as needed, so HC can focus on the larger group. Sometimes a HC
 will ask TLs to lead a game, especially if the group is splitting up and playing two
 different games.
+
+@bold{"But I don't want to play"} -- if a student does not want to participate, try
+to encourage them or find a way they can participate in another way. But if they are
+just not having it, that's okay! They can sit out with a Team Leader for company.
+@bold{However, no one can be on computers during this time}. Make sure the student
+sitting out is not distracting the students who actually want to play and be mindful
+of how "fun" not participating looks -- it's always easier NOT do things, and if it
+looks like it's easy AND fun to sit out instead of play, you are going to fighting an
+uphill battle to get students to stay long enough to even learn the game!
 
 Here are a whole bunch of @secref["Camp_Games" #:doc '(lib "ts-camp-materials/scribblings/manual.scrbl")]
 with instructions!

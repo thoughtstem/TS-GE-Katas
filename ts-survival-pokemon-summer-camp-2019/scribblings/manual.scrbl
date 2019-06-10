@@ -23,22 +23,22 @@
 @(render pokemon-katas)
 
 @section{Food Katas}
-@(render food-katas)
+@(render food-and-crafter-katas)
 
-@section{Trainer Katas}
-@(render trainer-katas)
-
-@section{Crafter Katas}
-@(render crafter-katas)
-
-@section{Friend Katas}
-@(render friend-katas)
-
-@section{Extra Katas}
+@section{Stone Katas}
 @(render stone-katas)
-@(render sky-katas)
-@(render level-design-katas)
-@(render town-katas)
+
+@section{Friend & Trainer Katas}
+@(render friend-and-trainer-katas)
+
+@section{Town & Sky Katas}
+@(render town-level-and-sky-katas)
+
+@;section{Extra Katas}
+@;(render stone-katas)
+@;(render sky-katas)
+@;(render level-design-katas)
+@;(render town-katas)
 
 @;(include-section ts-camp-materials/scribblings/half-day-schedule)
 @(include-section ts-camp-materials/scribblings/gameshow-pokemon)

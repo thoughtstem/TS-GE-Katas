@@ -32,6 +32,7 @@
                      @image[,p]}
                    ))
 
+       #;
        (displayln (~a "Defining assets " ',i))
 
        
@@ -66,6 +67,7 @@
                      @image[,p]}
                    ))
 
+       #;
        (displayln (~a "Defining icons " ',i))
 
        

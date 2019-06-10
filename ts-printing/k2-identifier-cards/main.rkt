@@ -1,85 +1,99 @@
 #lang racket
 
-(provide begin-k2-identifier-job)
+(provide begin-k2-identifier-job
+         FILTER-BY-COLLECTION
+         CURRENT-LANGUAGE-EXAMPLES)
 
 (require ratchet
-         pict
-         (only-in pict/code codeblock-pict)
-         "./double-size.rkt"
-         "../challenge-cards/main.rkt")
-
-(define HEIGHT 600)
-(define WIDTH HEIGHT)
+         pict 
+         "../identifier-cards/main.rkt"
+         "../common.rkt")
 
 
-;Use this design: https://www.makeplayingcards.com/design/custom-small-square-cards.html
+;Keep current visual language...
+(define CURRENT-VISUAL-LANGUAGE
+  (make-parameter #f))
+
+(define (lookup-mapping id)
+  (findf (lambda (im)
+           (eq? id (identifier-mapping-main im)))
+         (visual-language-mappings (CURRENT-VISUAL-LANGUAGE))))
+
+(define (lookup-icon id)
+  (define m (lookup-mapping id))
+
+  (when (not m)
+    (displayln (CURRENT-VISUAL-LANGUAGE))
+    (error (~a "No mapping found for: " id)))
+
+  (define p 
+    (identifier-mapping-original m)) 
+
+  (scale-to-fit
+    (double-size
+      (double-size
+        (pict->bitmap p))) 
+    100 100))
 
 
-(define bg 
-  (colorize 
-    (filled-rectangle WIDTH HEIGHT)
-    "white"))
-
-(define (front-side i)
-  (cc-superimpose bg 
-                  i))
-
-(define (back-side i)
-  (cc-superimpose bg
-                  i)) 
-
-(define (identifier->back-side im)
-  (define p  (identifier-mapping-original im)) 
-
-  (front-side 
-    (scale-to-fit
-      (double-size 
-        (double-size 
-          (pict->bitmap p)))
-      200 200)))
-
-
-(define (identifier->front-side im)
-  (define id (identifier-mapping-main im)) 
- 
-  (back-side
-    (scale 
-      (codeblock-pict (~a id))
-      3)))
-
-(define (identifier->sides i)
-  (list
-    (identifier->front-side i) 
-    (identifier->back-side i)))
-
-
-(define (lang->folder v-lang folder-path)
-  (define ims (visual-language-mappings v-lang))
-
-  (list->folder folder-path
-                (flatten
-                  (map identifier->sides ims))))
-
-
-
-(define (lang->Desktop v-lang folder-name)
-  (lang->folder v-lang
-                (build-path (find-system-path 'home-dir)
-                             "Desktop"
-                             folder-name)))
-
-(define-syntax-rule (begin-k2-identifier-job folder 
-                      (lang [k v] ...) 
-                      ...)
+(define-syntax-rule (begin-k2-identifier-job folder
+                                          (lang [k v] ...)
+                                          ...)
   (begin
+    (ID->CODE-PICT lookup-icon)
+    (ID->SUMMARY   (const (blank)))
+    (VERSION git-hash)
+    (HEIGHT 800)
+    (WIDTH  800)
+    (FRONT-MARGIN 100)
+    (BACK-MARGIN 100)
+
+    (FRONT-META-FUNCTION
+      (lambda (i)
+        (colorize
+          (vc-append (default-meta i)
+                     (text (~a "#lang " (CURRENT-LANGUAGE)))
+                     (text folder))
+          "gray")))
+
+    (define card-hash
+      (make-hash 
+        (list
+          (cons 
+            'lang 
+            (parameterize ([CURRENT-LANGUAGE 'lang]
+                           [CURRENT-LANGUAGE-EXAMPLES 'k2/examples]    
+                           [CURRENT-VISUAL-LANGUAGE
+                             (dynamic-require '(submod lang ratchet) 'vis-lang)]
+                           [k v] ...)
+              (lang->list 'lang)))
+          ...)))
+
+    (TOTAL (/ (length (flatten (hash-values card-hash)))
+              2))
+
     (define counter 0)
 
     (parameterize ([k v] ...
-                   [STARTING-CARD-NUMBER counter]
-                   [META-TRANSFORM (curryr colorize "gray")])
-      (lang->Desktop lang folder)
-      (set! counter (+ counter 
-                       (length 
-                         (visual-language-mappings lang))))) 
-    ...))
+                   [CURRENT-LANGUAGE 'lang] 
+                   [STARTING-CARD-NUMBER counter])
+
+      (define cards (hash-ref card-hash 'lang))
+
+      (displayln (~a "Printing job: " folder))
+      (displayln 'lang)
+      (displayln (~a "(" (/ (length cards) 2) " cards)"))
+
+      (list->folder cards folder)
+      
+      (set! counter (+ counter
+                       (/
+                         (length
+                           cards)
+                         2))))
+    ...)
+  
+  )
+
+
 

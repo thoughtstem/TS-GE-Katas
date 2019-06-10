@@ -18,7 +18,11 @@
 
 (define (special-image-for id)
   (with-handlers ([exn:fail? (thunk*
-                               (raise (~a "You need to define a function to handle how that special form is displayed on a card: " id)))])
+
+                               (displayln (~a "You need to define a function to handle how that special form is displayed on a card (" id ").  Returning blank."))
+                               
+                               (blank)
+                               )])
                  (eval
                    `(,(string->symbol (~a id "->image")))
                    ns)))
