@@ -47,7 +47,7 @@
 @time-warning{@bold{15, 10, 5 and 2 min} warnings}
 
 @itemlist[#:style 'compact
-          @item["Transision from independant review to learning new katas"]
+          @item["Transition from independant review to learning new katas"]
           @item["Monitor and assist TLs as they work on the " @bold{next section katas}]
           @item[@pm-note[@bold{PM ONLY}]  @important-note[" -- take " @bold{YOUR 30 min lunch break}
                           " from " @bold{1:20-1:50}]]]
@@ -139,7 +139,6 @@
 @time-warning{@bold{5 and 2 min} warnings}
 
 @itemlist[#:style 'compact
-          @item["Bring camp " @bold{all together}]
           @item["Review "@bold{rules & rewards} " of the game show as needed."]
           @item[@new-note["Today's Whole Camp Daily Game Show Questions:"]
                 @itemlist[@item[@new-note[@bold{Name three different non-computer games we have played so far?}
@@ -149,7 +148,7 @@
                           @item[@new-note[@bold{Who can tell me 1 thing about the Original Character they created today?}
                                 @italic{ (1 answer per camp team)}]]
                           @item[@new-note[@bold{Team Leaders (and self!) -- cover your nametags. Who can name ALL camp staff??}]]]]
-          @item["Breakout into " @bold{camp teams} " for TLs to lead camp-specific
+          @item[@breakout-note " for TLs to lead camp-specific
                 game show questions"]]
 
 
@@ -190,8 +189,8 @@
           @item[@bold{Assign} " specific jobs to all TLs"]
           @item["Alert HQ of any students awaiting pickup at " @bold{ten past}
                 " ("@am-note{1:10pm} "/" @pm-note{4:10pm} ") and keep HQ up to date when picked up"]
-          @item[@pm-note[@bold{PM ONLY} " -- review and complete EOD checklist, below,
-                with assitance from TLs before dismissing TLs ASAP and clock out"]]]
+          @item[@pm-note[@bold{PM ONLY} " -- review and (if needed) finish EOD checklist,
+                         below, with assistance from TLs, before dismissing TLs and clocking out"]]]
 
 @section{EOD Checklist -- PM only}
 

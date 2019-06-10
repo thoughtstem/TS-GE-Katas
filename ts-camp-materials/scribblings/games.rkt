@@ -101,8 +101,9 @@ As teams return, HC checks the photos; looking for every team member in each pho
 that they got everything on the list. Celebrate every team as they return!
 
 @bold{EXAMPLE LISTS:}
-Aim for 5-10 items on the list, depending on how much time you are allowing for the hunt.
-Leave some open ended items, where the thing to found might be different for everyone
+Aim for 5-10 items on the list, depending on how much time you are allowing for the hunt
+(5 items if you only have 10 min or so, 10 items for 20 min or so).
+Leave some open ended items, where the thing to find might be different for everyone
 (like "A Beautiful View") and include some riddles for extra fun!
 
 Here were 2 seperate lists created for an old camp location at UCSD. Notes (not given to
@@ -585,22 +586,25 @@ the Mafia are jailed or there are no innocents left!
 
 @bold{HOW TO PLAY:}
 
-Everyone is in a circle except the Head Coach, who is in the middle. The goal for the person in
-the middle to get a spot on the outside. The goal for everyone else is to switch places with
-someone else in the circle without losing their spot to the middle person! The people on the
-outside must use silent ways of communicating to negotiate a switch, so they don't give away their
-plan to the middle person. There are two ways of playing this game from here:
+Everyone is in a circle except the Starter, who is in the middle. The goal for the Starter
+is to get a spot in the circle. The goal for everyone else is to switch places with
+anyone else in the circle without getting stuck in the middle! The players in the
+circle must use silent ways of communicating to negotiate a switch (or else they risk alerting
+the Starter to the switch!). When the Starter successfully steals a spot in the circle from
+another player, that new player is now in the middle and takes on that role.
+
+There are 2 variations regarding what the person in the middle does while trying to get a spot:
 
 @itemlist[@item{BEGINNER VERSION: The person in the middle has to spend their time going up to
            people on the outside asking them "May I have your spot?" to which the outside person
            replies "No, go ask (name of someone else in the circle)." This distracts the middle
            person and gives them something to do while waiting! Also doubles as a name-learning
            game.}
-          @item{ADVANCED GROUPS: The person in the middle  tries to keep an eye on everyone and
-           attempts to stealspots whenever they see or hear movement.}]
+          @item{ADVANCED VERSION: The player in the middle has no other "job," other than
+           trying to keep an eye on everyone and steal a spot! This makes the other players' job
+           of swapping spots much more challenging, since the middle player is not distracted
+           with another task in the meantime!}]
 
-When the middle person successfully snags a spot in the circle, whoever is stranded, is now in the
-middle.
 
 @bold{TIPS & TRICKS:}
 
@@ -879,7 +883,7 @@ youngest students into their own group for safety and to have a balanced game th
 @bold{NEED:}
 
 @itemlist[#:style 'compact
-          @item{Large amount of space safe for running -- with defined boundaries!}
+          @item{Large amount of safe space for running -- with defined boundaries!}
           @item{An even number of players}]
 
 @bold{HOW TO PLAY:}
@@ -911,7 +915,7 @@ and rest!
 @bold{NEED:}
 
 @itemlist[#:style 'compact
-          @item{Large amount of space safe for running -- with defined boundaries!}]
+          @item{Large amount of safe space for running -- with defined boundaries!}]
 
 @bold{HOW TO PLAY:}
 
@@ -939,7 +943,7 @@ larger until every player has been tagged!
 @bold{NEED:}
 
 @itemlist[#:style 'compact
-          @item{Large amount of space safe for running -- with defined boundaries!}
+          @item{Large amount of safe space for running -- with defined boundaries!}
           @item{Defined "end zones" on opposing sides of the playspace}]
 
 @bold{HOW TO PLAY:}
@@ -984,7 +988,7 @@ across or been tagged, Shark(s) call everyone to cross again!
 @bold{NEED:}
 
 @itemlist[#:style 'compact
-          @item{Large amount of space safe for running -- with defined boundaries!}
+          @item{Large amount of safe space for running -- with defined boundaries!}
           @item{A defined starting line}]
 
 @bold{HOW TO PLAY:}
@@ -1011,7 +1015,7 @@ Wolf is successful, a new Mr. Wolf is chosen from the players tagged.
 @bold{NEED:}
 
 @itemlist[#:style 'compact
-          @item{Large amount of space safe for running -- with defined boundaries!}]
+          @item{Large amount of safe space for running -- with defined boundaries!}]
 
 @bold{HOW TO PLAY:}
 
@@ -1039,7 +1043,7 @@ shouting "CLAM FREE!"
 @bold{NEED:}
 
 @itemlist[#:style 'compact
-          @item{Large amount of space safe for running -- with defined boundaries!}
+          @item{Large amount of safe space for running -- with defined boundaries!}
           @item{Defined "homes" on opposing sides of the playspace}
           @item{An even number of players}
           @item{"Bacon" -- an item that can be grabbed from the center. This can be a ball, a

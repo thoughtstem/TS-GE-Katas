@@ -152,7 +152,7 @@
 @time-warning{@bold{5 and 2 min} warnings}
 
 @itemlist[#:style 'compact
-          @item["Bring camp " @bold{all together}]
+          @item[@together-note]
           @item["Review "@bold{rules & rewards} " of the game show:"
                 @itemlist[@item{TLs as buzzers or raised hands}
                           @item{Wait to be called on, no shouting out!}
@@ -167,7 +167,7 @@
                                 @italic{ K-2: 4 (2x2) 3-10: 9 (3x3)}]]
                           @item[@new-note[@bold{Who can tell me 1 of the reasons that your team brainstormed for why your fandom is popular? K2 -- what animals are popular?}
                                 @italic{ (1 answer per camp team)}]]]]
-          @item["Breakout into " @bold{camp teams} " for TLs to lead camp-specific
+          @item[@breakout-note " for TLs to lead camp-specific
                 game show questions"]]
 
 
@@ -215,8 +215,8 @@
           @item[@bold{Assign} " specific jobs to all TLs"]
           @item["Alert HQ of any students awaiting pickup at " @bold{ten past}
                 " ("@am-note{1:10pm} "/" @pm-note{4:10pm} ") and keep HQ up to date when picked up"]
-          @item[@pm-note[@bold{PM ONLY} " -- review and complete EOD checklist, below,
-                with assitance from TLs before dismissing TLs ASAP and clock out"]]]
+          @item[@pm-note[@bold{PM ONLY} " -- review and (if needed) finish EOD checklist,
+                         below, with assistance from TLs, before dismissing TLs and clocking out"]]]
 
 
 @section{EOD Checklist -- PM only}

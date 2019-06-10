@@ -50,13 +50,14 @@
 @time-warning{@bold{15, 10, 5 and 2 min} warnings}
 
 @itemlist[#:style 'compact
+          @item[@together-note]
           @item[@bold{Announce to all students:}
                 @itemlist[@item["Welcome! " @bold{Introduce} " self and TLs"]
                           @item["Explain " @bold{Game Jam}]
                           @item["Explain " @bold{Katas}]
                           @item["Explain " @bold{Kata Cards, ThoughtSTEM Dollars, Market & Badges}]]]
           @item["Teach all students the " @bold{Core Values kata}]
-          @item["Breakout into " @bold{camp teams}]
+          @item[@breakout-note]
           @item["Monitor and assist TLs as they work on katas, starting with "
                 @bold{Hello World kata}]
           @item[@pm-note[@bold{PM ONLY}]  @important-note[" -- take " @bold{YOUR 30 min lunch break}
@@ -154,7 +155,7 @@
 @time-warning{@bold{5 and 2 min} warnings}
 
 @itemlist[#:style 'compact
-          @item["Bring camp " @bold{all together}]
+          @item[@together-note]
           @item["Announce "@bold{rules & rewards} " of the game show:"
                 @itemlist[@item{TLs as buzzers or raised hands}
                           @item{Wait to be called on, no shouting out!}
@@ -169,7 +170,7 @@
                           @item[@new-note[@bold{Team Leaders -- cover your nametags. Who can tell me their Team Leader's name?}]]
                           @item[@new-note[@bold{What is the program we are coding in?}
                                           @italic{ DrRacket}]]]]
-          @item["Breakout into " @bold{camp teams} " for TLs to lead camp-specific
+          @item[@breakout-note " for TLs to lead camp-specific
                 game show questions"]]
 
 @section{Market/Wrap Up}
