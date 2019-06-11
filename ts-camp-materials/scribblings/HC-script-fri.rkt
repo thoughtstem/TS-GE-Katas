@@ -154,7 +154,7 @@
                           @item[@new-note{TLs assist in checking scores}]
                           @item[@new-note{TLs award final $$$ & badge}]]]
           @item[@new-note["For " @bold{K-2nd camps} ", TLs lead scoring as you lead 3rd-10th."]]
-          @item[@new-note["As awarding is finishing up, open the market."]]
+          @item[@new-note["As TLs finish up awarding dollars/badges, open the market."]]
           @item["Assign yourself or a TL to be " @bold{Market Cashier}]
           @item["Students " @bold{tidy their camp table} " before allowed to go to
                 market" @pm-note{(check EOW Checklist below for PM todo list)}]
@@ -187,9 +187,9 @@
           @item[@bold{Assign} " specific jobs to all TLs"]
           @item["Alert HQ of any students awaiting pickup at " @bold{ten past}
                 " ("@am-note{1:10pm} "/" @pm-note{4:10pm} ") and keep HQ up to date when picked up"]
-          @item[@pm-note[@bold{PM ONLY} " -- review and complete EOW (end of week) checklist, below,
-                with assitance from TLs before dismissing TLs ASAP and clock out. "
-                @bold{Have a great weekend!}]]]
+          @item[@pm-note[@bold{PM ONLY} " -- review and (if needed) finish EOW (end of week) checklist,
+                         below, with assistance from TLs, before dismissing TLs and clocking out"]
+                @new-note[@bold{Have a great weekend!}]]]
 
 
 @section{EOW Checklist -- PM only}

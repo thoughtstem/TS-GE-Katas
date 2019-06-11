@@ -18,6 +18,8 @@
          am-note
          pm-note
          new-note
+         together-note
+         breakout-note
          
          key
          check-in-icebreakers
@@ -70,8 +72,8 @@
 (define-runtime-path outside-icon "img/outside-icon.png")
 
 (define time-warning-img  (image clock-icon #:scale .5))
-(define together          (image bring-together-icon #:scale .6))
-(define breakout          (image breakout-teams-icon #:scale .65))
+;(define together          (image bring-together-icon #:scale .6))
+;(define breakout          (image breakout-teams-icon #:scale .6))
 (define AM-icon           (image AM-icon-path #:scale .25))
 (define PM-icon           (image PM-icon-path #:scale .25))
 
@@ -106,7 +108,7 @@
     (scale (bitmap bring-together-icon) .6))
 
   (define breakout-pict
-    (scale (bitmap breakout-teams-icon) .65))
+    (scale (bitmap breakout-teams-icon) .6))
 
   (define outside-pict
     (scale (bitmap outside-icon) .6))
@@ -150,7 +152,7 @@
               (text "AM CAMP ONLY" (cons pict-orange 'default) 20)
               (am-time "12:00pm-12:45(ish)pm")
               med-break
-              (scale (bitmap bring-together-icon) .3))))
+              (scale (bitmap bring-together-icon) .6))))
 
 (define red-style
   (style "red" (list (color-property "red"))))
@@ -160,6 +162,10 @@
   (style "blue" (list (color-property (list 15 100 230)))))
 (define green-style
   (style "green" (list (color-property (list 0 150 20)))))
+(define teal-style
+  (style "teal" (list (color-property (list 0 221 162)))))
+(define purple-style
+  (style "purple" (list (color-property (list 179 106 226)))))
 
 (define (important-note . s)
   (apply (curry elem #:style red-style) s))
@@ -172,6 +178,12 @@
 
 (define (new-note . s)
   (apply (curry elem #:style green-style) s))
+
+(define together-note
+  (elem "Bring camp " (bold "all together") #:style purple-style))
+
+(define breakout-note
+  (elem "Breakout into " (bold "camp teams") #:style teal-style))
 
 
 (define key
