@@ -91,7 +91,7 @@ them.
 At some point, you'll want to release your kata collection's beautiful
 web page to the rest of the world.
 
-To do so, in the root of `TS-Kata-Collections`:
+To do so, first update `TS-HomeSite`, and then in the root of `TS-Kata-Collections`:
 
 ```
 raco rebuild-index
