@@ -258,15 +258,23 @@ After just one hour of coaching, you can self-assess with some of these question
 
   @(tactic->scribble
     (code-anatomy 'Coach
-     'Team
-     'Team-Computers
-     'the-challenge-card
-     'the-whiteboard
-     'the-markers))
+                  'Team
+                  'Team-Computers
+                  'the-challenge-card
+                  'the-whiteboard
+                  'the-markers))
 
-@section{???}
+@section{Step-by-Step Translation}
 
-TODO
+@(require "../tactics/tactic-library/translation-steps.rkt")
+
+  @(tactic->scribble
+    (translation-steps 'Coach
+                      'Team
+                      'Team-Computers
+                      'the-challenge-card
+                      'the-whiteboard
+                      'the-markers))
 
 @section{???}
 

@@ -9,7 +9,8 @@
   remove-some-identifiers
   introduce-subtle-bugs
   is-bug-free?
-  debug)
+  debug
+  copy-paste)
 
 (require "../base/base.rkt"
          "./basic-things.rkt")
@@ -47,4 +48,7 @@
 
 (define (write-code)
   (body-action "write code"))
+
+(define (copy-paste info source dest)
+  (body-action (~a "copy and paste " info " from " source " into " dest)))
 
