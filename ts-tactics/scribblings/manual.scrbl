@@ -2,6 +2,23 @@
 
 @(require "../tactics/lang.rkt")
 
+@(define (about #:title title
+                #:summary summary
+                #:science (science "")
+                #:key-metacognitive-concepts (metacognition '())
+                #:short-term-outcomes (short-term '())
+                #:long-term-outcomes (long-term '())
+                )
+   (list
+     (subsection "About " title)
+     (para (bold "Summary.") " " (italic summary))
+     (para (bold "Scientific Grounding.") " " science)
+     (bold "Key meta-cognitive concepts")
+     (itemize (map item metacognition))
+     (bold "Short-term cognitive outcomes")
+     (itemize (map item short-term))
+     (bold "Long-term cognitive outcomes")
+     (itemize (map item long-term))))
 
 @title{ThoughtSTEM Language Learning Handbook}
 
@@ -20,11 +37,10 @@ This second point is subtle but incredibly important: You are not just teaching 
 What all this means is: as students become more and more skilled at doing these tactics, you should be giving them more and more responsibility for helping you lead the tactics. 
 
 @itemlist[@item{A @bold{brand new student} might simply follow along as you lead a tactic. That's fine.  But...}
-
           @item{A @bold{first-day student} who has done a few tactics already should be capable of helping to explain those tactics to others.}
           @item{A @bold{new student} with a few days of class under their belt should be able to help you out as an assistant coach in various ways.}
           @item{@bold{Intermediate students} should be able to lead a few easy learning tactics from memory and a few advanced ones if they are referencing this book.} 
-          @item{@bold{Advanced students} should be able to lead many tactics on their own from memroy and any tactic if they use this book.}]
+          @item{@bold{Advanced students} should be able to lead many tactics on their own from memory and any tactic if they use this book.}]
 
 Students will only experience this growth in self-driven learning and leadership if you encourage them to begin taking on leadership roles as soon as possible.
 
@@ -234,10 +250,11 @@ Are they learning coding?  Are they learning how to coach themselves and others?
 
 After just one hour of coaching, you can self-assess with some of these questions:
 
-@itemlist[@item{@bold{Do your students know about this handbook?}  If not, why were you hiding it from them?  The first step to helping them to become better coaches is to reveal the resources that @bold{you} use.  Help them understand how t @bold{they} can use those same resources.}
-          @item{@bold{Have your students seen you use this handbook to lead a Language Learning Loop and at least one tactic?}  It's fine if you have the contents of this book memorized (the more you coach, the more tactics you'll memoriz) -- but you still need to teach "out of the book".  Why?  Because it implicitly teaches students how @bold{they} can teach.  If they see you using the handbook, they will be less shy about using it themselves when you hand it over to them and ask them to lead an activity.  Use the book -- and let your team see you using it.  It is a mark of an experienced coach if you can simultaneously: 1) teach coding and 2) teach your teaching process.}
+@itemlist[@item{@bold{Do your students know about this handbook?}  If not, why were you hiding it from them?  The first step to helping them to become better coaches is to reveal the resources that @bold{you} use.  Help them understand how @bold{they} can use those same resources.}
+          @item{@bold{Have your students seen you use this handbook to lead a Language Learning Loop and at least one tactic?}  It's fine if you have the contents of this book memorized (the more you coach, the more tactics you'll memorize) -- but you still need to teach "out of the book".  Why?  Because it implicitly teaches students how @bold{they} can teach.  If they see you using the handbook, they will be less shy about using it themselves when you hand it over to them and ask them to lead an activity.  Use the book -- and let your team see you using it.  It is a mark of an experienced coach if you can simultaneously: 1) teach coding and 2) teach your teaching process.}
           @item{@bold{Do your students know what a Language Learning Loop is?  Do they know what a tactic is?}  If not, why not?  Weren't you doing a Language Learning Loop with them?  (You should have been!  That's your job as a coach.)  If you were, then why weren't you calling it the "Language Learning Loop"?  Use the vocabulary from this book as you lead activities and structure the educational experience.  Your students should know these words: "tactic", "challenge card", "Language Learning Loop", etc.  They should know these terms because you've been using them the whole time!}
           @item{@bold{Would your students be able to lead a tactic on their own?}  If not, that's okay.  This can take time for some students.  But ask yourself, what can you do next time to challenge them to take on even more of a leadership role? }]
+
 
 
 @section{Disintegrating Code}
@@ -252,6 +269,25 @@ After just one hour of coaching, you can self-assess with some of these question
                          'the-whiteboard
                          'the-markers))
 
+
+@(about #:title   "Disintegrating Code"
+        #:summary "Students begin by copying code verbatim and end by writing it from memory."
+        #:science "This is a type of \"Faded Worked Example\" -- an activity in which the educator gradually removes pedagogical scaffolding until there is none left."
+        #:key-metacognitive-concepts (list "Don't let students believe that real programmers memorize and regurgitate."
+                                           "Make it clear that the goal is fluency and language mastery."
+                                           "Make it clear that memorization is just a power tool for language learning (similar to memorizing a Spanish story if you were in Spanish class.)"
+                                           "Make it clear that in the grand scheme of things, it's less about what they are memorizing and more about the act of memorization itself, and how that trains your brain to be a better programmer."
+                                           (list "Tell them it's okay if they forget it -- as long as they remember " (bold "how") " to memorise it again.")
+                                           "Make it clear that they are training a powerful abstract skill: The ability to translate from English into code." 
+                                           "Make it clear that this is critical for being a software developer, and that it will take many years to become an expert at this cognitive process.")
+        #:short-term-outcomes (list "Introduces specification (front of card) and implementation (back of card)." 
+                                    "Introduces students to the Fundamental Cognitive Act of Software Development: the translation from specification to implementation.")
+        #:long-term-outcomes  (list "Trains pattern matching (\"code vision\")"
+                                    "Trains recall and recognition for language identifiers (\"knowledge acquisition\")"
+                                    "Trains general memory skills for abstract grammars (\"chunking\")"
+                                    "Trains grammatical intuitions for the language at hand (\"syntactic and semantic intuition\")"
+                                    "Frees working memory for creativity and design by reducing cognitive load caused by lack of language fluency."))
+
 @section{Code Anatomy}
 
 @(require "../tactics/tactic-library/code-anatomy.rkt")
@@ -264,7 +300,32 @@ After just one hour of coaching, you can self-assess with some of these question
                   'the-whiteboard
                   'the-markers))
 
-@section{Step-by-Step Translation}
+@(about #:title   "Code Anatomy"
+        #:summary "Students tie appropritate technical vocabulary to syntactic structures"
+        #:science "Although individuals can learn a language's grammar implicitly (Krashen's \"Input Hypothesis\"), having a common technical vocabulary is critical for discussing code with other developers -- i.e. collaboration.  It also provides names for the syntactic constructs that developers tend to \"chunk\" -- which can help students detect and talk about the parts of the code that they too should be learning to chunk.  This meta-language learning is the key part of this tactic."
+        #:key-metacognitive-concepts (list
+                                        "Make it clear that software developers use technical language daily."
+                                        "Make it clear that learning the names for things is critical for communicating with other developers."
+                                        "Make it clear that learning the names for things makes it easier to assess one's own learning (you now have a vocabulary for expressing what you know and don't know)."
+                                        "Make it clear that just covering the vocabulary once is not the point.  The point is to gain a kind of instantaneous, fluent recall over these concepts, such that when you see certain syntactic strucutres, you think of their names automatically."
+                                        "Make it clear that, with practice, students will move from recognition, to recall, to automaticity with all named concepts."
+                                        (list "Make it clear that knowing the names for things does not mean you can write or read code.  It is just an aid to " (bold "becoming") " fluent, not something that makes you fluent automatically.")
+                                        (list "Make it clear that this tactic isn't just to " (bold "cover") " the vocabulary -- but to build greater and greater " (bold "fluency") " over time.  It should still be done even after students know the vocabulary.")
+                                        "Make it clear that the speed at which students can complete this tactic is the main indicator of their fluent retrieval of key information.  As always, help them aspire to be faster and more fluent.") 
+        #:short-term-outcomes (list
+                                 "Exposes students to key coding vocabulary"
+                                 "Exposes students to the systematic deconstruction of code into its parts"
+                                 "Helps students analyze code independently of its specification: structural analysis."
+                                 "Aids memory regarding the code at hand") 
+        #:long-term-outcomes  (list
+                                 "Students gain a structured methodology for deconstructing code into its nameable parts"
+                                 "Students gain a structured methodology for \"chunking\" their understanding of code"
+                                 "First: Students gain recognition over key vocabulary"
+                                 "Second: Students gain recall over key vocabulary"
+                                 "Third: Students gain fluency regarding key vocabulary"))
+
+
+@section{Make it More Precise, then Make it More Precise}
 
 @(require "../tactics/tactic-library/translation-steps.rkt")
 
@@ -276,27 +337,28 @@ After just one hour of coaching, you can self-assess with some of these question
                       'the-whiteboard
                       'the-markers))
 
-@section{???}
-
-TODO
-
-@section{???}
-
-TODO
-
-@section{???}
-
-TODO
-
-@section{???}
-
-TODO
+@(about #:title   "Make it More Precise, then Make it More Precise"
+        #:summary "Students translate from English to more and more technical and precise English prior to writing the implementation"
+        #:science "The translation from abstract English specification to more precise English has been studied under the name \"Abstraction Transition Taxonomy\" and found to facilitate learning of programming at the college level.  This tactic expands upon this by providing more cognitive scaffolding for the English to English translation process.  The tactic is also firmly grounded in industry-relevant 21st-century coding skills: Software developers rarely have the luxury of implementing a specification without also helping to write that specification more clearly.  Software developers need to be skilled at all linguistic levels: from highly abstract English ideas, to extremely concrete executable code, and the myriad of linguistic levels in between."
+        #:key-metacognitive-concepts (list
+                                        "Make it clear that real software developers do precisely this activity: clarifying specifications before implementing."
+                                        "Make it clear that software developers need to be masters of their native language, and masters of how to use their native language to express ideas very precisely."
+                                        "Make it clear that your ability to communicate precisely and your ability to think precisely go hand in hand."
+)
+        #:short-term-outcomes (list
+                                 "Demonstrates an abstract problem solving process that can be used across a range of problems"
+                                 "Makes students aware of the Fundamental Cognitive Act of Software Development and helps isolate its essential quality: iteratively adding clarity and precision to an idea that previously lacked both."
+                                 "Helps students realize that they (as speakers and writers of English) already have key cognitive tools that they will use as software developers.") 
+        #:long-term-outcomes  (list
+                                 "Students gain a structured methodology for implementing code from a specification"
+                                 "Students gain a structured methodology for making any idea more clear then it previously was" 
+                                 "First: Students gain recognition over English phrases that can be clarified"
+                                 "Second: Students gain recall over standard techniques for phrasing things more precisely"
+                                 "Third: Students gain fluency in English to English translation, able to effortlessly rephrase ideas for technical audience or a non-technical audience, as well as to translate a specification into a structured implementation plan."))
 
 @section{Advanced Tactics}
 
-These are tactics that are longer and more complex.  If students have done many smaller tactics, they are ready for these.  If they cannot do smaller tactics quickly and efficiently, though, they are probably not ready. 
-
-There's no harm in trying.  But if it takes too long to get your team to understand how to do these tactics, then they simply need more practice.  Do some easier ones and come back to these on a different day.
+These are tactics that are longer and more complex -- and a bit more like "games".  If students have done many simpler tactics, they are ready for these.  You can use them as a reward for students that are becoming more adept.
 
 Note that the instructions in these tactics may make use of @bold{subroutines} -- which are instructions that aren't printed in the tactic itself.  It'll look something like this:
 
@@ -313,6 +375,12 @@ How many instructions are in the tactic above?  It may seem that there are just 
 Whenever you see one of these, someone on the team must type in the program shown.  This will print out further instructions to be followed.  When all of those instructions are followed to completion, only then should the instructions after the subroutine be followed -- i.e. @tactic->scribble[(instruction team (verb "Do something at the end"))]
 
 Doing tactics with subroutines requires keeping track of where you were in the tactic before you started doing the subroutine (because you'll need to come back there when the subroutine is finished).  It is the team's responsibility to keep these things in mind -- which is why these tactics are for advanced teams.
+
+@bold{IMPORTANT:}
+
+You will need to install/update the @racket[ts-tactics] package to run these tactics.
+
+In DrRacket: @verbatim{File > Install Package...}
 
 @section{Mafia}
 
@@ -342,68 +410,16 @@ Doing tactics with subroutines requires keeping track of where you were in the t
      'the-whiteboard
      'the-markers))
 
-@section{???}
 
-TODO
+@section{The End}
 
+This handbook is a living document.  If you have ideas for more tactics, let us know.  We'll be adding more.
 
-@section{???}
-
-TODO
-
-@section{???}
-
-TODO
-
-@section{Subroutines}
-
-Subroutines must be run on the computer, because they will print out differently depending on what arguments you supply.  However, we will print some examples here so that you can get a sense of what certain common subtroutines will look like. 
-
-@subsection{Pass And Memorize}
-
-@(tactic->scribble
-  (pass-and-memorize))
-
-@subsection{Post Mortem}
-
-@(tactic->scribble
-  (all-correct-post-mortem))
-
-
-@subsection{Select Secret Subgroup}
-
-Here's an example of what you get with
-
-@codeblock{
-  #lang ts-tactics
-
-  (select-secret-subgroup 'Hackers)
-}
-
-@(tactic->scribble
-  (select-secret-subgroup 'Hackers))
-
-
-@subsection{Collaboratively Debug}
-
-@(tactic->scribble
-  (collaboratively-debug))
-
-
-@subsection{Vote Member Into New Group}
-
-Here's an example of what you get with
-
-@codeblock{
-  #lang ts-tactics
-
-  (vote-member-into-new-group (not-in 'Jail) 'Jail)
-}
-
-@(tactic->scribble
-  (vote-member-into-new-group (not-in 'Jail) 'Jail))
+Any and all suggestions for improvement are welcome.  Email: @verbatim{contact@"@"thoughtstem.com}
 
 
 
+
+@;include-section["./sub-routines.scrbl"]
 
 
