@@ -264,21 +264,33 @@ After just one hour of coaching, you can self-assess with some of these question
                   'the-whiteboard
                   'the-markers))
 
-@section{Step-by-Step Translation}
+@section{Translation Challenge}
 
-@(require "../tactics/tactic-library/translation-steps.rkt")
+@(require "../tactics/tactic-library/translation-challenge.rkt")
 
-  @(tactic->scribble
-    (translation-steps 'Coach
-                      'Team
-                      'Team-Computers
-                      'the-challenge-card
-                      'the-whiteboard
-                      'the-markers))
+@(tactic->scribble
+  (translation-challenge 'Coach
+                         'Team
+                         'Team-Computers
+                         'the-challenge-card
+                         'the-whiteboard
+                         'the-markers
+                         'five-minutes
+                         'timer))
 
-@section{???}
+@section{Reverse Engineering}
 
-TODO
+@(require "../tactics/tactic-library/reverse-engineer.rkt")
+
+@(tactic->scribble
+  (reverse-engineer 'Coach
+                    'Team
+                    'Coach-Computer
+                    'Team-Computers
+                    'the-challenge-card
+                    'the-kata-page
+                    'the-whiteboard
+                    'the-markers))
 
 @section{???}
 

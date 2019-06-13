@@ -4,6 +4,8 @@
 
 (require "../lang.rkt")
 
+;needs editing before use -- replaced by translation-challenge
+
 (define (translation-steps coach 
                            students
                            computers
@@ -13,12 +15,11 @@
 
   (list
     (phase 'Setup
-           (list
              (instruction coach  
                           (hand-write 
                             (contents-of 
                               (front-of challenge-card)) 
-                            (top-half-of whiteboard))))) 
+                            (top-half-of whiteboard))))
 
     (phase 'Main
            (list
@@ -57,3 +58,6 @@
                       'the-challenge-card
                       'the-whiteboard
                       'the-markers)))
+
+
+
