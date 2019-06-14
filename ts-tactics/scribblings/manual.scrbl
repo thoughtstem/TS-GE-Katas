@@ -439,6 +439,8 @@ All expressions have a @bold{nesting depth}.
 
 These are tactics that are longer and more complex -- and a bit more like "games".  If the team members have done many simpler tactics, they are ready for these.  You can use them as a reward for becoming more adept.
 
+These tactics, due to the complex team dynamics they call for, help to build higher-level skills -- i.e. communication, collaboration, leadership, and teaching skills.  
+
 Note that the instructions in these tactics may make use of @bold{subroutines} -- which are instructions that aren't printed in the tactic itself.  It'll look something like this:
 
 @tactic->scribble[
