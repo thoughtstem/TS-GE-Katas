@@ -455,9 +455,7 @@ Doing tactics with subroutines requires keeping track of where you were in the t
 
 @bold{IMPORTANT:}
 
-You will need to install/update the @racket[ts-tactics] package to run these tactics.
-
-In DrRacket: @verbatim{File > Install Package...}
+You will need to install/update the @racket[ts-tactics] package to run these tactics.  In DrRacket: @italic{File > Install Package...}
 
 @section{Mafia}
 
