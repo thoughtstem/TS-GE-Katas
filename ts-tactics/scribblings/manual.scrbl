@@ -327,15 +327,17 @@ After just one hour of coaching, you can self-assess with some of these question
 
 @section{Make it More Precise, then Make it More Precise}
 
-@(require "../tactics/tactic-library/translation-steps.rkt")
+@(require "../tactics/tactic-library/translation-challenge.rkt")
 
-  @(tactic->scribble
-    (translation-steps 'Coach
-                      'Team
-                      'Team-Computers
-                      'the-challenge-card
-                      'the-whiteboard
-                      'the-markers))
+@(tactic->scribble
+  (translation-challenge 'Coach
+                         'Team
+                         'Team-Computers
+                         'the-challenge-card
+                         'the-whiteboard
+                         'the-markers
+                         'five-minutes
+                         'timer))
 
 @(about #:title   "Make it More Precise, then Make it More Precise"
         #:summary "Students translate from English to more and more technical and precise English prior to writing the implementation"
@@ -355,6 +357,20 @@ After just one hour of coaching, you can self-assess with some of these question
                                  "First: Students gain recognition over English phrases that can be clarified"
                                  "Second: Students gain recall over standard techniques for phrasing things more precisely"
                                  "Third: Students gain fluency in English to English translation, able to effortlessly rephrase ideas for technical audience or a non-technical audience, as well as to translate a specification into a structured implementation plan."))
+
+@section{Reverse Engineering}
+
+@(require "../tactics/tactic-library/reverse-engineer.rkt")
+
+@(tactic->scribble
+  (reverse-engineer 'Coach
+                    'Team
+                    'Coach-Computer
+                    'Team-Computers
+                    'the-challenge-card
+                    'the-kata-page
+                    'the-whiteboard
+                    'the-markers))
 
 @section{Advanced Tactics}
 
