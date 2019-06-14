@@ -302,11 +302,7 @@ After just one hour of coaching, you can self-assess with some of these question
 
 If your students forget, here are a some reminders you can show them.
 
-@bold{Here is an example lang line}:
-
-@codeblock{
-  #lang some-cool-language
-}
+The @bold{#lang line} always comes first and should be self-explanatory.
 
 Here is an example @bold{definition} (anything that starts with @racket[define]).
 You would put a box around the whole thing (from the parenthesis before @racket[define] to the matching one).
@@ -318,7 +314,7 @@ You would put a box around the whole thing (from the parenthesis before @racket[
 
 Here is a @bold{top-level expression}.  You can recognize it because it doesn't start with @racket[define], and is not
 wrapped up inside more code.  Below, the @racket[(basic-avatar)] is not a top-level expression, but the containing
-@racket[(start-game #:avatar (basic-avatar))] is):
+@racket[(start-game #:avatar (basic-avatar))] is:
 
 @codeblock{
   (start-game 
