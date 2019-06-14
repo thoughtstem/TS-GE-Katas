@@ -258,19 +258,39 @@ After just one hour of coaching, you can self-assess with some of these question
 
   @(tactic->scribble
     (code-anatomy 'Coach
-     'Team
-     'Team-Computers
-     'the-challenge-card
-     'the-whiteboard
-     'the-markers))
+                  'Team
+                  'Team-Computers
+                  'the-challenge-card
+                  'the-whiteboard
+                  'the-markers))
 
-@section{???}
+@section{Translation Challenge}
 
-TODO
+@(require "../tactics/tactic-library/translation-challenge.rkt")
 
-@section{???}
+@(tactic->scribble
+  (translation-challenge 'Coach
+                         'Team
+                         'Team-Computers
+                         'the-challenge-card
+                         'the-whiteboard
+                         'the-markers
+                         'five-minutes
+                         'timer))
 
-TODO
+@section{Reverse Engineering}
+
+@(require "../tactics/tactic-library/reverse-engineer.rkt")
+
+@(tactic->scribble
+  (reverse-engineer 'Coach
+                    'Team
+                    'Coach-Computer
+                    'Team-Computers
+                    'the-challenge-card
+                    'the-kata-page
+                    'the-whiteboard
+                    'the-markers))
 
 @section{???}
 
