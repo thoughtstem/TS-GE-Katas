@@ -305,7 +305,7 @@ If your students forget, here are a some reminders you can show them.
 @bold{Here is an example lang line}:
 
 @codeblock{
-  #lang battlearena
+  #lang some-cool-language
 }
 
 Here is an example @bold{definition} (anything that starts with @racket[define]).
