@@ -261,9 +261,7 @@ Note that students never "lose points" for making coding errors during the test.
 
 @subsubsection{Assessing a Communicator}
 
-Note that @Communicators must be assessed in pairs.  The reason for this should be obvious.  Each of the following @Communicator tests involve communication with a partner.  An individual being assessed (which we'll refer to as @racket[Communicator-A]) may bring a partner, or the assessor may supply one (or take on the role of the partner).  
-
-@margin-note{In cases where high accuracy is important -- e.g. for scientific publications -- the individual should be assessed with many @Communicators across a range of @Expertise levels.}
+Note that @Communicators must be assessed in pairs.  The reason for this should be obvious.  Each of the following @Communicator tests involve communication with a partner.  An individual being assessed (which we'll refer to as @racket[Communicator-A]) may bring a partner, or the assessor may supply one (or take on the role of the partner).  In cases where high accuracy is important -- e.g. for scientific publications -- the individual should be assessed with many @Communicators across a range of @Expertise levels.
 
 In many cases, the evaluation criteria is whether both partners' code, at the end of the test, is @bold{isomorphic}.
 
@@ -331,9 +329,7 @@ The rubric is as follows:
    (verb "Evaluate according to rubric"))))
 ]
 
-@margin-note{
-  Code communication is a broad-spectrum skill that involves the ability to communicate about specifications, implementations, and running programs in a variety of ways: verbally, visually, and in writing.  We will add more tests here if and when it becomes important to be able to assess other parts of this communication spectrum.  For now, we leverage the fact that fluent verbal communication is a strong indicator of the ability to communicate in other ways.
-}
+@bold{Note:} Code communication is a broad-spectrum skill that involves the ability to communicate about specifications, implementations, and running programs in a variety of ways: verbally, visually, and in writing.  We will add more tests here if and when it becomes important to be able to assess other parts of this communication spectrum.  For now, we leverage the fact that fluent verbal communication is a strong indicator of the ability to communicate in other ways.
 
 
 @subsubsection{Assessing a Collaborator}
@@ -421,11 +417,9 @@ Depending on the age of the student, our expectations are different -- but the f
 
 @subsection{Expectations: Kindergarten through 2nd Grade}
 
-@margin-note{
-  @bold{Disclaimer:} These are our minimum expectations.  Many students can and do surpass the minimum skill levels discussed here.
+@bold{Disclaimer:} These are our minimum expectations.  Many students can and do surpass the minimum skill levels discussed here.
 
-  @bold{Disclaimer:} The estimation of "1 year" assumes that students have been taking ThoughtSTEM classes and camps for a year -- with minimal work outside of class.
-}
+@bold{Disclaimer:} The estimation of "1 year" assumes that students have been taking ThoughtSTEM classes and camps for a year -- with minimal work outside of class.
 
 For example, a student who begins in Kindergarten and trains for one year is expected to have the following levels:
 
@@ -445,11 +439,9 @@ We can see the expected trend for the above hypothetical student better if we co
 
 @subsection{Expections: 3rd through 5th Grade}
 
-@margin-note{
-  @bold{Disclaimer:} These are our minimum expectations.  Many students can and do surpass the minimum skill levels discussed here.
+@bold{Disclaimer:} These are our minimum expectations.  Many students can and do surpass the minimum skill levels discussed here.
 
-  @bold{Disclaimer:} The estimation of "1 year" assumes that students have been taking ThoughtSTEM classes and camps for a year -- with minimal work outside of class.
-}
+@bold{Disclaimer:} The estimation of "1 year" assumes that students have been taking ThoughtSTEM classes and camps for a year -- with minimal work outside of class.
 
 For 3rd through 5th graders (compared with younger ages), we expect that they will learn faster, and that they will have achieved sufficient cognitive development to be able to focus on higher level coding skills.
 
@@ -471,11 +463,9 @@ Comparison across all three years:
 
 @subsection{Expectations: 6th through 8th grade}
 
-@margin-note{
-  @bold{Disclaimer:} These are our minimum expectations.  Many students can and do surpass the minimum skill levels discussed here.
+@bold{Disclaimer:} These are our minimum expectations.  Many students can and do surpass the minimum skill levels discussed here.
 
-  @bold{Disclaimer:} The estimation of "1 year" assumes that students have been taking ThoughtSTEM classes and camps for a year -- with minimal work outside of class.
-}
+@bold{Disclaimer:} The estimation of "1 year" assumes that students have been taking ThoughtSTEM classes and camps for a year -- with minimal work outside of class.
 
 At the 6th through 8th grade level (compared with younger ages), we expect significantly more growth as @Leaders and @Teachers, as well as greater overall growth at the end of the three years.
 
