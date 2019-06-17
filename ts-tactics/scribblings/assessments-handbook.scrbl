@@ -358,10 +358,9 @@ A truly @Expert collaborator, by definition, can enhance @emph{any} team they ar
 However, it is much easier for a student to do in a ThoughtSTEM class -- where they are routinely being placed in different teams with diverse members.   
 
 @margin-note{
-@bold{Discussion Topic:} How can a ThoughtSTEM student actively seek out growth opportunities as a @Collaborator in class?}
+  @bold{Discussion Topic:} How can a ThoughtSTEM student actively seek out growth opportunities as a @Collaborator in class?
 
-@margin-note{
-@bold{Discussion Topic:} How can ThoughtSTEM coaches actively nurture @Collaborators in class?}
+  @bold{Discussion Topic:} How can ThoughtSTEM coaches actively nurture @Collaborators in class?}
 
 @subsubsection{Assessing a Leader}
 
@@ -377,10 +376,9 @@ Still, students in ThoughtSTEM classes are naturally presented with many opportu
 
 @margin-note{
   @bold{Discussion Topic:} How can a ThoughtSTEM student actively seek out growth opportunities as a @Leader in class?
-}
 
-@margin-note{
-@bold{Discussion Topic:} How can ThoughtSTEM coaches actively nurture @Leaders in class?}
+  @bold{Discussion Topic:} How can ThoughtSTEM coaches actively nurture @Leaders in class?
+}
 
 @subsubsection{Assessing a Teacher}
 
@@ -392,10 +390,10 @@ Still, students in ThoughtSTEM classes are naturally presented with many opportu
 
 
 @margin-note{
-@bold{Discussion Topic:} How can a ThoughtSTEM student actively seek out growth opportunities as a @Teacher in class?}  
+  @bold{Discussion Topic:} How can a ThoughtSTEM student actively seek out growth opportunities as a @Teacher in class?}  
 
-@margin-note{
-@bold{Discussion Topic:} How can ThoughtSTEM coaches actively nurture @Teachers in class?}
+  @bold{Discussion Topic:} How can ThoughtSTEM coaches actively nurture @Teachers in class?}
+}
 
 @subsubsection{Assessing an Architect}
 
@@ -408,16 +406,14 @@ Still, students in ThoughtSTEM classes are naturally presented with many opportu
 @Architect skills are the most advanced coding skills -- a level to which most developers aspire, but many never reach.  For students who are @emph{extremely} ambitious, there are ways to begin acquiring such skills, at a young age.  However, this can only happen if students are willing to work both in and outside of class.
 
 @margin-note{
-@bold{Discussion Topic:} How can a ThoughtSTEM student actively seek out growth opportunities as an @Architect in class?}  
+@bold{Discussion Topic:} How can a ThoughtSTEM student actively seek out growth opportunities as an @Architect in class? 
 
-@margin-note{
-@bold{Discussion Topic:} How can a ThoughtSTEM student actively seek out growth opportunities as an @Architect outside of class?}  
+@bold{Discussion Topic:} How can a ThoughtSTEM student actively seek out growth opportunities as an @Architect outside of class?
 
-@margin-note{
-@bold{Discussion Topic:} How can ThoughtSTEM coaches actively nurture @Architects in class?}
+@bold{Discussion Topic:} How can ThoughtSTEM coaches actively nurture @Architects in class?
 
-@margin-note{
-@bold{Discussion Topic:} How can ThoughtSTEM coaches actively nurture @Architects outside of class?}
+@bold{Discussion Topic:} How can ThoughtSTEM coaches actively nurture @Architects outside of class?
+}
 
 
 @subsection{Assessment Benchmarks}
@@ -441,9 +437,7 @@ Depending on the age of the student, our expectations are different -- but the f
 
 @margin-note{
   @bold{Disclaimer:} These are our minimum expectations.  Many students can and do surpass the minimum skill levels discussed here.
-}
 
-@margin-note{
   @bold{Disclaimer:} The estimation of "1 year" assumes that students have been taking ThoughtSTEM classes and camps for a year -- with minimal work outside of class.
 }
 
@@ -467,9 +461,7 @@ We can see the expected trend for the above hypothetical student better if we co
 
 @margin-note{
   @bold{Disclaimer:} These are our minimum expectations.  Many students can and do surpass the minimum skill levels discussed here.
-}
 
-@margin-note{
   @bold{Disclaimer:} The estimation of "1 year" assumes that students have been taking ThoughtSTEM classes and camps for a year -- with minimal work outside of class.
 }
 
@@ -495,9 +487,7 @@ Comparison across all three years:
 
 @margin-note{
   @bold{Disclaimer:} These are our minimum expectations.  Many students can and do surpass the minimum skill levels discussed here.
-}
 
-@margin-note{
   @bold{Disclaimer:} The estimation of "1 year" assumes that students have been taking ThoughtSTEM classes and camps for a year -- with minimal work outside of class.
 }
 
@@ -523,9 +513,7 @@ Comparison across three years:
 
 @margin-note{
   @bold{Disclaimer:} These are our minimum expectations.  Many students can and do surpass the minimum skill levels discussed here.
-}
 
-@margin-note{
   @bold{Disclaimer:} The estimation of "1 year" assumes that students have been taking ThoughtSTEM classes and camps for a year -- with minimal work outside of class.
 }
 
