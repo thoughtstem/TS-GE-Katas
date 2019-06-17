@@ -8,15 +8,18 @@
 
 @section{Introduction}
 
-Welcome!  This handbook discusses the theory and practice of assessments at ThoughtSTEM.  It also articulates general expectations for how students should grow as software developers.  This document can be used to guide assessments.
+Welcome!  This handbook discusses the theory and practice of assessments at ThoughtSTEM.  It also articulates general expectations for how students should grow as software developers.
 
-As a gentle introduction, this is an example assessment:
+As a gentle introduction, what an assessment seeks to do is quantify
+the skill level of a single programmer across six different dimensions.
+The example assessment chart below shows a hypothetical student that 
+is a @level-1 @Architect, @Teacher, and @Leader; they are a @level-2 @Coder, @Communicator, and @Collaborator; and they have been assessed on 3 languages.
 
 @(skill-plot (report (k-2-year-1)))
 
-This document is intended to explain what such assessments mean, how they can be performed, and the science that provides the groundwork for them.
+This document is intended to explain what such assessments charts mean, how assessments can be performed, and the science that provides the groundwork for them.
 
-Assessments are critical for identifying a student's strengths and weaknesses.  They can also be used to set expectations and to determine if students are meeting those expectations.  Our assessment model has been designed to allows us to  comparisons of individuals with diverse backgrounds.  For example, here is a comparative assessment of the expected skill level of an second grader who has been training for 3 years to the expected skill level of a 9th grader who has been training for 1 year. 
+Assessments are critical for identifying a student's strengths and weaknesses.  They can also be used to set expectations and to determine if students are meeting those expectations.  Our assessment model has been designed to allow us to make comparisons of individuals with diverse backgrounds.  For example, here is a comparative assessment of the expected skill level of an 2nd grader who has been training for 3 years to the expected skill level of a 9th grader who has been training for 1 year. 
 
 @(compare-two
   #:title "9th-grader vs 2nd-grader"
@@ -24,7 +27,7 @@ Assessments are critical for identifying a student's strengths and weaknesses.  
   (k-2-year-3)
   (9th-12th-year-1))
 
-The major sections of this book cover the core concepts of assessments, step-by-step processes for performing those assessments, and some benchmarks assessments (e.g. the skill expectations for ThoughtSTEM students after various years of training).
+The major sections of this book cover the core concepts of assessments, step-by-step processes for performing those assessments, and some benchmark assessment charts (i.e. the skill expectations for ThoughtSTEM students after various years of training).
 
 @section{Assessments in Theory}
 
@@ -36,7 +39,7 @@ Educational assessments always have two components:
 ]
 
 First, we'll discuss the underlying theory of assessments, then we'll discuss how assessments are actually done in practice. 
-The theory is key to actually understanding the results of the assessment done in practice -- which is why we start with the theory. 
+The theory is key to actually understanding the charts resulting from the assessment -- which is why we start with the theory. 
 
 @subsection{The Six Roles}
 
@@ -63,7 +66,7 @@ There are 5 skill levels:
 Our model of expertise is a modification of the well-known Dreyfus Model.  When it comes to the Dreyfus Model, it's imperative to remember that the distance between @level-1 and @level-5 is gigantic.  
 
 @margin-note{
-It is, in fact, much larger than most @Novice @Coders realize.  This is why we uses badges and other symbols to mark student progress during class.  These can be given out more regularly and can help sustain motivation better than levels in the above model.  
+It is, in fact, much larger than most @Novice @Coders realize.  This is why ThoughtSTEM uses badges and other symbols to mark student progress during class.  These can be given out more regularly and can help sustain motivation better the above model.  
 }
 
 Students can become disheartened when they realize hard truths, such as: it may take a year or more to go from @level-1 to @level-2; and that becoming an @Expert may take many years of hard work and deliberate practice.  
@@ -108,19 +111,19 @@ For example, if we were assessing pianists, we might choose as assessment parame
 @item{@bold{Cannon in F#, A#, B#, and E# major}}
 ]
 
-Asking a pianist to learn and perform these songs is a good way to assess their skill level.  But the results must be interpreted as incomplete.  Someone who performs all three songs at an @Expert level might @emph{only} be able to perform those three songs -- which would not qualify them to be a true @Expert, but merely an @Expert on the chosen parameters.  Still, this is better than trying to test someone on all possible songs -- which would take an infinite amount of time. 
+Asking a pianist to learn and perform these songs is a good way to assess their skill level.  But the results must always be interpreted as incomplete: Someone who performs all three songs at an @Expert level might @emph{only} be able to perform those three songs -- which would not qualify them to be a true @Expert, but merely an @Expert on the chosen parameters.  Still, this is better than trying to test someone on all possible songs -- which would take an infinite amount of time. 
 
-To make it clear that all measures of @Expertise are really measures of @Parameterized-Expertise, we always include when discussing assessments.  They are part of the complete story.  That is why you'll always see "langs: X" printed on the bottom bar of a coding assessment:
+To make it clear that all measures of @Expertise are really measures of @Parameterized-Expertise, we always include when discussing assessments.  They are part of the complete story.  That is why you'll always see "langs: X" printed on the bottom bar of an assessment chart:
 
 @(skill-plot (report (9th-12th-year-1)))
 
-The lang number gives a sense of how to interpret the assessment data.  An even deeper sense can be derived by examining the details of the languages on which the student was assessed.
+The lang number gives a sense of how to interpret the assessment chart.  An even deeper sense can be derived by examining the details of the languages on which the student was assessed.
 
-In other words, being aware of the parameters of an assessment helps to bridge the qualitative/quantitative gap.  The raw number (e.g. @level-3) give us a quantitative level of expertise as an average across all of the assessed parameters (in this case, languages); the parameters themselves help tell us qualitatively what sorts of things the individual's raw score pertains to.
+In other words, being aware of the parameters of an assessment helps to bridge the qualitative/quantitative gap.  The raw number -- e.g. @level-3 -- gives us a quantitative level of expertise as an average across all of the assessed parameters.  Likewise, knowledge of the parameters themselves help tell us qualitatively what the individual's expertise might be regarding.
 
 @subsection{Assessment Theory, in Conclusion}
 
-To sum up the above, there is a theoretical model that provides the foundation for the @Expertise assessments in the following section:
+To sum up the above, there is a theoretical model that provides the foundation for the @Expertise assessments in this document.
 
 @itemize[
   @item{For any give domain (music, chess, coding, for example) there is a model of expertise known as the Dreyfus Model, which identifies 5 major milestones on the road to expert: @Novice, @Advanced-Beginner, @Competent, @Proficient, @Expert .}
@@ -132,7 +135,7 @@ To sum up the above, there is a theoretical model that provides the foundation f
 
 @section{Assessments In Practice}
 
-When assessing any student for the first time, the assessment begins by assigning a @level-1 in each of the major categories.  In pictographic form: 
+When assessing any student for the first time, the assessment begins by assigning a @level-1 in each of the major categories.  In chart form: 
 
 @(skill-plot (report (total-novice)))
 
@@ -166,13 +169,13 @@ The high level assessment loop is as follows:
   (until (predicate "is reached" "desired confidence")
     (instruction 'Assessor (directed-action
                              (verb "Pick a role type to assess")
-                             ":"
+                             "--"
                              "Coder, Communicator, Collaborator, Leader, Teacher, Architect"))
 
-    (instruction 'Assessor (verb "go to the appropriate section and run the test algorithm to get a number between 1 and 5"))
+    (instruction 'Assessor (verb "go to the appropriate section of this document and run the test algorithm to get a number between 1 and 5"))
     (instruction 'Assessor (branching-verb
                              (predicate "was the first for the current role type" "this test")
-                             (verb "this number is the assessed skill level for the current role type")
+                             (verb "this number now is the assessed skill level for the current role type")
                              (verb "average this number with the assessed skill level for the current role type")))
     ))
 ]
@@ -211,7 +214,7 @@ The rubric is simple:
 @itemize[
   @item{If the student looks at the code on the back of the card, the assessment is automatically @bold{1 (Novice)}.}
   @item{If the student produces code that matches the specification but takes longer than 10 minutes, the assessment is @bold{2 (Advanced Beginner)}}
-  @item{If if the code at the end does not match the specification, the test must be thrown out.  A new card must be chosen.}
+  @item{If the code at the end does not match the specification, the test must be thrown out.  A new card must be chosen.}
   @item{If the student produces code that matches the specification but takes less than 10 minutes, the test must be thrown out.  Do the @bold{3-card} test next time.}
 ]
 
@@ -243,24 +246,24 @@ The rubric is simple:
 The rubric is:
 
 @itemize[
-  @item{If the student looks at the code on the back of any cards, the assessment is automatically @bold{1 (Novice)}.  The next test should be the 1-card test.}
+  @item{If the student looks at the code on the back of any cards, the assessment is automatically @bold{1 (Novice)}.  The next test should be the @bold{1-card} test.}
   @item{If the student produces code that matches the specifications but takes longer than 10 minutes, the assessment is @bold{3 (Competent)}}
-  @item{If if the code at the end does not match the specifications, the test must be thrown out.  The next test should be the 1-card test.}
+  @item{If the code at the end does not match the specifications, the test must be thrown out.  The next test should be the @bold{1-card} test.}
   @item{If the student produces code that matches the specifications in less than 10 minutes, the "Effortless Talking Rule" is applied to distinguish between @bold{Proficient} and @bold{Expert}.}
-  @item{The Effortless Talking Rule is this: The assessment is @bold{Expert} if the student can make it look easy and effortless to both talk and code at the same time.  The talking can be about anything; however, it is most common (and perfectly acceptable) for the student to explain what they are doing while they are doing it -- i.e. thinking aloud.  Note that the talking must be at a comfortable conversational pace, without lulls, sentence fragments, evidence of vocal stress, or other such evidence of cognitive load.  After all, that's what the Effortless Talking Rule is testing -- whether or not the student has achieved automatic, effortless, and fluent recall of the target language.}
+  @item{@bold{The Effortless Talking Rule:} The assessment is @bold{Expert} if the student can make it look easy and effortless to both talk and code at the same time.  The talking can be about anything; however, it is most common (and perfectly acceptable) for the student to explain what they are doing while they are doing it -- i.e. thinking aloud.  Note that the talking must be at a comfortable conversational pace, without lulls, sentence fragments, evidence of vocal stress, or other such evidence of cognitive load.  The Effortless Talking Rule tests whether or not the student has achieved automatic, effortless, and fluent recall of the target language -- such that they scarsely need to think about it at all.}
 ]
 
 Note that students never "lose points" for making coding errors during the test.  Experts who are demonstrating expertise are free to make mistakes and even to talk about them as they are fixing them -- as long as they can do so effortlessly, and as long as they can deliver a correct program within 10 minutes.  You're not grading their coding process; you are grading their cognitive load, as evidenced by their ability to verbally multitask while coding.
 
 @margin-note{
-  Note that this makes ThoughtSTEM assessments considerably more rigorous than assessments in traditional education.  College-level computer science classes almost exclusively assess students on their output -- not on how effortlessly the student produced that output.  This leaves a major gap in the assessment model currently used in higher education.  At ThougtSTEM we close that gap when assessing @Coders .
+  Note that this makes ThoughtSTEM assessments considerably more rigorous than assessments in traditional education.  College-level computer science classes almost exclusively assess students on their output -- not on how effortlessly the student produced that output.  This leaves a major gap in the assessment model currently used in higher education.  At ThoughtSTEM we close that gap when assessing @Coders .
 }
 
 @subsubsection{Assessing a Communicator}
 
-Note that @Communicators must be assessed in pairs.  The reason for this should be obvious.  Each of the following @Communicator tests involve communication with a partner.  An individual being assessed (which we'll refer to as @racket[Communicator-A]) may bring a partner, or the assessor may supply one or take on the role of the partner.  
+Note that @Communicators must be assessed in pairs.  The reason for this should be obvious.  Each of the following @Communicator tests involve communication with a partner.  An individual being assessed (which we'll refer to as @racket[Communicator-A]) may bring a partner, or the assessor may supply one (or take on the role of the partner).  
 
-@margin-note{In cases where accuracy is important -- e.g. for scientific publications -- the individual should be assessed with many @Coders across a range of @Expertise levels.}
+@margin-note{In cases where high accuracy is important -- e.g. for scientific publications -- the individual should be assessed with many @Communicators across a range of @Expertise levels.}
 
 In many cases, the evaluation criteria is whether both partners' code, at the end of the test, is @bold{isomorphic}.
 
@@ -285,7 +288,7 @@ Two pieces of code are @bold{isomorphic} if:
    "to"
    'Communicator-A))
   (instruction 'Assessor 
-   (say "I'd like you to both implement the code from the specification written on the card.  You may both communicate at any time, using any spoke words you wish -- but you may not use any means of visual communication.  I will be grading your verbal communication according to the rubric in this handbook.  Would you like to review it with me before we begin?."))
+   (say "I'd like you both to implement the code from the specification written on the card.  You may both communicate at any time, using any spoke words you wish -- but you may not use any means of visual communication.  I will be grading your verbal communication according to the rubric in this handbook.  Would you like to review it with me before we begin?"))
   (instruction (group-add 'Assessor 'Communicators)
    (verb "discuss the rubric as necessary"))
   (instruction 'Communicator-A
@@ -299,7 +302,7 @@ The rubric is as follows:
 
 @itemize[
   @item{If either individual ever dictates individual characters to be typed (e.g. "type a parenthesis"), the assessment for both of them is automatically @level-1}
-  @item{If the pair produces code that matches the specification and is identical but takes longer than 10 minutes, the assessment is @level-2} 
+  @item{If the pair produces @bold{isomorphic} code that matches the specification, but they take longer than 10 minutes, the assessment is @level-2} 
   @item{If if the code at the end does not match the specification or the code on each computer is not @bold{isomorphic}, the test must be thrown out.  A new card must be chosen.}
   @item{If the pair produces code that matches the specification and is @bold{isomorphic} but takes less than 10 minutes, the test must be thrown out.  Do the @bold{3-card} test next time.}
 ]
@@ -319,9 +322,9 @@ The rubric is as follows:
    "to"
    'Communicator-A))
   (instruction 'Assessor 
-   (say "I'd like you to both implement the code from the specification written on the card.  You may both communicate at any time, using any spoke words you wish -- but you may not use any means of visual communication.  I will be grading your verbal communication according to the rubric in this handbook.  Would you like to review it with me before we begin?."))
+   (say "I'd like you both to implement the code from the specification written on the card.  You may both communicate at any time, using any spoke words you wish -- but you may not use any means of visual communication.  I will be grading your verbal communication according to the rubric in this handbook.  Would you like to review it with me before we begin?"))
   (instruction (group-add 'Assessor 'Coder)
-   (verb "discus the rubric as necessary"))
+   (verb "discuss the rubric as necessary"))
   (instruction 'Communicator-A
    (verb "implement code from the given specification and communicate with your partner at will."))
   (instruction 'Assessor
@@ -348,17 +351,17 @@ To facilitate such discussions and/or the design of future assessments, we provi
   (collaborator-definition))
 }
 
-@bold{Why is this hard to assess?}  It all comes down to basic math.  There are many languages -- which already makes it difficult to assess someone's skill as a @Coder .  When assessing a @Communicator, the assessment becomes trickier -- due to the fact that the @Communicator must be assessed with a partner @Communicator (and there can be many possible partner @Communicators).    But when assessing a @Collaborator, there are @emph{even more} parameters -- that is, the various team of @Communicators the individual might be placed on.  Someone who excells on a team of @Expert @Communicators might flounder in a team of @Advanced-Beginner @Communicators or a mixed team of @Expert @Communicators and @Novice @Communicators, and so on.  Likewise, a student might excell in teams of two but struggle in teams of four.
+@bold{Why is this hard to assess?}  It all comes down to basic math.  There are many languages -- which already makes it difficult to assess someone's skill as a @Coder .  When assessing a @Communicator, the assessment becomes trickier -- due to the fact that the @Communicator must be assessed with a partner @Communicator (and there can be many possible partner @Communicators).    But when assessing a @Collaborator, there are @emph{even more} parameters -- that is, the various teams of @Communicators the individual might be placed on.  Someone who excels in a team of @Expert @Communicators might flounder in a team of @Advanced-Beginner @Communicators or a mixed team of @Expert @Communicators and @Novice @Communicators, and so on.  Likewise, a student might excel in teams of two but struggle in teams of four.
 
 A truly @Expert collaborator, by definition, can enhance @emph{any} team they are a part of, large or small, skilled or unskilled, or mixed.  This means that a good laboratory assessment would require placing the individual on many different teams and running multiple assessments.  This is nearly impossible to do in a lab, due to the number of people required.
 
 However, it is much easier for a student to do in a ThoughtSTEM class -- where they are routinely being placed in different teams with diverse members.   
 
 @margin-note{
-@bold{Discussion Topic:} How can a ThoughtSTEM student actively seek out growth opportunities as a @Collaborator ?}
+@bold{Discussion Topic:} How can a ThoughtSTEM student actively seek out growth opportunities as a @Collaborator in class?}
 
 @margin-note{
-@bold{Discussion Topic:} How can ThoughtSTEM coaches actively actively nurture @Collaborators ?}
+@bold{Discussion Topic:} How can ThoughtSTEM coaches actively nurture @Collaborators in class?}
 
 @subsubsection{Assessing a Leader}
 
@@ -370,14 +373,14 @@ However, it is much easier for a student to do in a ThoughtSTEM class -- where t
 
 This is hard to assess, for the same reason that @Collaborators are hard to assess.  There are many kinds of teams, and to assess the true @Expertise of a @Leader, they need to be assessed on many teams.  
 
-Still, students in ThoughtSTEM classes are naturally presented with many opportunities for leadership.  Ambitious student who wish to grow as @Leaders more quickly can be encouraged to seek out more such opportunities, actively guiding the growth of their @leadership skills.
+Still, students in ThoughtSTEM classes are naturally presented with many opportunities for leadership.  Ambitious students who wish to grow as @Leaders more quickly can be encouraged to seek out more such opportunities, actively guiding the growth of their own @leadership skills.
 
 @margin-note{
-  @bold{Discussion Topic: How can a ThoughtSTEM student actively seek out growth opportunities as a @Leader ?}  
+  @bold{Discussion Topic:} How can a ThoughtSTEM student actively seek out growth opportunities as a @Leader in class?
 }
 
 @margin-note{
-@bold{Discussion Topic:} How can ThoughtSTEM coaches actively actively nurture @Leaders ?}
+@bold{Discussion Topic:} How can ThoughtSTEM coaches actively nurture @Leaders in class?}
 
 @subsubsection{Assessing a Teacher}
 
@@ -389,10 +392,10 @@ Still, students in ThoughtSTEM classes are naturally presented with many opportu
 
 
 @margin-note{
-@bold{Discussion Topic:} How can a ThoughtSTEM student actively seek out growth opportunities as a @Teacher ?}  
+@bold{Discussion Topic:} How can a ThoughtSTEM student actively seek out growth opportunities as a @Teacher in class?}  
 
 @margin-note{
-@bold{Discussion Topic:} How can ThoughtSTEM coaches actively actively nurture @Teachers ?}
+@bold{Discussion Topic:} How can ThoughtSTEM coaches actively nurture @Teachers in class?}
 
 @subsubsection{Assessing an Architect}
 
@@ -402,29 +405,37 @@ Still, students in ThoughtSTEM classes are naturally presented with many opportu
   (architect-definition))
 }
 
-@margin-note{
-@bold{Discussion Topic:} How can a ThoughtSTEM student actively seek out growth opportunities as an @Architect ?}  
+@Architect skills are the most advanced coding skills -- a level to which most developers aspire, but many never reach.  For students who are @emph{extremely} ambitious, there are ways to begin acquiring such skills, at a young age.  However, this can only happen if students are willing to work both in and outside of class.
 
 @margin-note{
-@bold{Discussion Topic:} How can ThoughtSTEM coaches actively actively nurture @Architects ?}
-}
+@bold{Discussion Topic:} How can a ThoughtSTEM student actively seek out growth opportunities as an @Architect in class?}  
 
-@subsection{Assesesment Benchmarks}
+@margin-note{
+@bold{Discussion Topic:} How can a ThoughtSTEM student actively seek out growth opportunities as an @Architect outside of class?}  
 
-Historically, coding education has focused exclusinvely on coding.  In a few short decades since the rise of the internet, however, the discipline of software development has become intensely collaborative -- with greater and greater communication expectations placed on working programmers.  This has left education in a tricky position -- where many educators (even at the college level) are literally training students for the wrong job.   
+@margin-note{
+@bold{Discussion Topic:} How can ThoughtSTEM coaches actively nurture @Architects in class?}
+
+@margin-note{
+@bold{Discussion Topic:} How can ThoughtSTEM coaches actively nurture @Architects outside of class?}
+
+
+@subsection{Assessment Benchmarks}
+
+Historically, coding education has focused exclusively on coding.  In a few short decades since the rise of the internet, however, the discipline of software development has become intensely collaborative -- with greater and greater communication expectations placed on working programmers.  This has left education in a tricky position -- where many educators (even at the college level) are literally training students for the wrong job.   
 
 The root of the problem is that many teachers and students erroneously believe that their goal is to create @Coders that look like this: 
 
 @(skill-plot (report (bad-expert-coder)))
 
-This is the ficticious assessment of a supposedly "expert" coder -- who knows one language well, but who has no formal training in any other skills.  There are two major problems with this instructional philosophy:
+This is the ficticious assessment chart of a supposedly "expert" coder -- who knows one language well, but who has no formal training in any other skills.  There are two major problems with this instructional philosophy:
 
 @itemize[
-  @item{@bold{First, it's inefficient.}  There's a wealth of scientific research that shows that people, across almost every field of study, learn faster when they learn to communicate, collaborate, lead, and teach.  (The National Research Council's report "How People Learn" is a fantastic resource on the subject of how the science of how people learn can be leveraged to design better educational environments.)}
-  @item{@bold{Second, it's immoral.}  Attempting to train students in this way hurts them and everyone they will ever work with for the rest of their careers (until they finally, hopefully acquire the skills on their own).  It stunts cognitive growth and is terrible for the economy.  Collaborative skills are simply too important to withhold.  The same is true for is the ability to learn and master many languages, not just one.}
+  @item{@bold{First, it's inefficient.}  There's a wealth of scientific research that shows that people, across almost every field of study, learn faster when they learn to communicate, collaborate, lead, and teach.  (The National Research Council's report "How People Learn" is a fantastic resource on the subject of how the science learning can be leveraged to design better educational environments.)}
+  @item{@bold{Second, it's immoral.}  Attempting to train students in this way hurts them and everyone they will ever work with for the rest of their careers (until they finally, hopefully acquire the skills on their own).  It stunts cognitive growth and is terrible for the economy.  Collaborative skills are simply too important to withhold.  The same is true for the ability to learn and master many languages, not just one.}
 ]
 
-Depending on the age of the student, our expectations are different -- but the fundamental philosophy is the same: To train @Expert @Coders, @Communicators, @Collaborators, @Leaders, @Teachers, and @Architects .
+Depending on the age of the student, our expectations are different -- but the fundamental philosophy is the same: To train @Coders, @Communicators, @Collaborators, @Leaders, @Teachers, and @Architects .
 
 @subsection{Expectations: Kindergarten through 2nd Grade}
 
@@ -444,7 +455,7 @@ After another year, we expect students to have mastered additional languages and
 
 @(skill-plot (report (k-2-year-2)))
 
-Finally, after another year, we expect students to have mastered additional languages and closed the gap between their @Collaborator skills and their @Communicator skills.
+Finally, after another year, we expect students to have mastered additional languages and to have closed the gap between their @Collaborator skills and their @Communicator skills.
 
 @(skill-plot (report (k-2-year-3)))
 
@@ -462,21 +473,21 @@ We can see the expected trend for the above hypothetical student better if we co
   @bold{Disclaimer:} The estimation of "1 year" assumes that students have been taking ThoughtSTEM classes and camps for a year -- with minimal work outside of class.
 }
 
-For 3rd through 5th graders, we expect that they will learn faster, and that they will have achieved sufficient cognitive development to be able to focus on higher level coding skills.
+For 3rd through 5th graders (compared with younger ages), we expect that they will learn faster, and that they will have achieved sufficient cognitive development to be able to focus on higher level coding skills.
 
-3rd grade:
+By the end of 3rd grade:
 
 @(skill-plot (report (3rd-5th-year-1)))
 
-4th grade:
+By the end of 4th grade:
 
 @(skill-plot (report (3rd-5th-year-2)))
 
-5th grade:
+By the end of 5th grade:
 
 @(skill-plot (report (3rd-5th-year-3)))
 
-Comparision across all three years:
+Comparison across all three years:
 
 @(compare-3rd-5th-years)
 
@@ -490,17 +501,17 @@ Comparision across all three years:
   @bold{Disclaimer:} The estimation of "1 year" assumes that students have been taking ThoughtSTEM classes and camps for a year -- with minimal work outside of class.
 }
 
-At the 6th through 8th grade level, we expect significantly more growth as @Leaders and @Teachers, as well as greater overall growth at the end of the three years.
+At the 6th through 8th grade level (compared with younger ages), we expect significantly more growth as @Leaders and @Teachers, as well as greater overall growth at the end of the three years.
 
-6th grade:
+By the end of 6th grade:
 
 @(skill-plot (report (6th-8th-year-1)))
 
-7th grade:
+By the end of 7th grade:
 
 @(skill-plot (report (6th-8th-year-2)))
 
-8th grade:
+By the end of 8th grade:
 
 @(skill-plot (report (6th-8th-year-3)))
 
@@ -518,28 +529,31 @@ Comparison across three years:
   @bold{Disclaimer:} The estimation of "1 year" assumes that students have been taking ThoughtSTEM classes and camps for a year -- with minimal work outside of class.
 }
 
-At the 8th through 12th grade level, we expect significantly more growth as @Leaders and @Teachers, and moderate growth as an @Architect .  We also expect greater overall growth after 4 years.
+At the 9th through 12th grade levels (compared with younger ages), we expect significantly more growth as @Leaders and @Teachers, and moderate growth as an @Architect .  We also expect greater overall growth after 4 years.
 
-9th grade:
+By the end of 9th grade:
 
 @(skill-plot (report (9th-12th-year-1)))
 
-10th grade:
+By the end of 10th grade:
 
 @(skill-plot (report (9th-12th-year-2)))
 
-11th grade:
+By the end of 11th grade:
+
 @(skill-plot (report (9th-12th-year-3)))
 
-11th grade:
+By the end of 12th grade:
+
 @(skill-plot (report (9th-12th-year-4)))
 
 Comparison across all 4 years:
+
 @(compare-9th-12th-years) 
 
 @subsection{Comparisons across ages}
 
-This section slices the data from the previous sections differently.  It shows how our expectations how students that begin at different ages will progress.
+This section slices the data from the previous sections differently.  It shows how our expectations of how students that begin at different ages will progress.
 
 Beginners' skills after 1 year are expected to look as follows, depending on the age of the student:
 

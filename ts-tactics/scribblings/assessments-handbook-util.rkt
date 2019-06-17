@@ -85,20 +85,20 @@
 (define (coder-definition)
   (list
     Coders
-    " are skilled at writing code -- specifically with regard to translating from high-level specifications into code.  Usually, that means translating from English to code.  Modern coders have mastery over many languages, and many families of languages: from general purpose languages to domain specific languages.  They are also skilled at learning new languages and they embrace the challenge of adopting and mastering new technologies, thriving in a world whose software ecosystems are in constant flux -- where the lightning-fast release of disruptive technologies is the norm, not the exception."))
+    " are skilled at writing code -- specifically with regard to translating from high-level specifications into code (called the \"implementation\").  Usually, that means translating from English to code.  Modern coders have mastery over many languages, and many families of languages: from general purpose languages to domain specific languages.  They are also skilled at learning new languages and they embrace the challenge of adopting and mastering new technologies, thriving in a world whose software ecosystems are in constant flux -- where the lightning-fast release of disruptive technologies is the norm, not the exception."))
 
 (define (communicator-definition)
               (list
                 Communicators
                 " are " Coders 
-                " who are skilled at communicating with and about code, both with coders and non-coders.  This includes one's ability to communicate visually as well as verbally and in writing -- i.e. drawing high-level \"whiteboard\" diagrams of code, producing visual communication aids, speaking articulately about code and its specifications, using appropriate technical vocabulary (when necessary), and avoiding technical vocabluary (when necessary), and to verbally explain one's thought process while writing and maintaining software.  Increasingly, in the 21st century, there is a new word for coders who cannot communicate.  The word is: \"unemployed\"."))
+                " who are skilled at communicating with and about code, both with coders and non-coders.  This includes one's ability to communicate visually, verbally, in writing -- i.e. drawing high-level \"whiteboard\" diagrams of code, producing visual communication aids, speaking articulately about code and its specifications, using appropriate technical vocabulary (when necessary), and avoiding technical vocabluary (when necessary), and verbally explaining one's thought process while writing and maintaining software.  Increasingly, in the 21st century, there is a new word for coders who cannot communicate.  The word is: \"unemployed\"."))
 
 (define (collaborator-definition)
   (list
     Collaborators
     " are " Coders " who are also " Communicators
-    " who have mastered additional skills, allowing them to work on teams with other " Coder "/" Communicators ". "
-    "They know how to distribute work equally and fairly amongst team members, take direction, self-organize, and finish projects in a timely manner without over- or under- working any member of the team.  They understand how to collaboratively build systems of tremendous complexity, while maintaining a unity of vision amongst fellow developers.  They understand how to work together with coders who know more than them and also with coders who know less than them.  They understand how to be effective on teams whose members have diverse skillsets.  They understand themselves, others, and coding itself well enough to enhance any team they are a part of."))
+    " who have mastered additional skills, allowing them to work in teams with other " Coder "/" Communicators ". "
+    "They know how to distribute work equally and fairly amongst team members, take direction, self-organize, and finish projects in a timely manner without over- or under- working any member of the team.  They understand how to collaboratively build systems of tremendous complexity, while maintaining a unity of vision amongst fellow developers.  They understand how to work together with coders who know more than them and also with coders who know less than them.  They understand how to be effective in teams whose members have diverse skillsets.  They understand themselves, others, and software design well enough to enhance any team they are a part of."))
 
 
 
@@ -120,7 +120,7 @@
 (define (architect-definition)
   (list
     Architects
-    " are expert " Coders ", " Communicators ", " Collaborators ", " Leaders ", and " Teachers ".  However, they match these skills with tremendous creativity, vision, design skills, and passion for creating large, complex systems that solve problems that have not been solved before.  This requires an ability to design and build large systems over a long period of time, often while working with more than one team of coders.  It includes being able to build systems that help real people, to convince those people that your system can help them, and to teach them how to use your system.  Above all, it requires writing clear, concise, and complete documentation of software systems for various stakeholders.  Architects must also so thoroughly undrstand the implementation process that they can clearly articulate both what the system will do when complete, as well as how to build it.  These are the coders who have learned how to maximize their impact upon the world, by maximizing the impacts of everyone who works with them."))
+    " are expert " Coders ", " Communicators ", " Collaborators ", " Leaders ", and " Teachers ".  However, they match these skills with tremendous creativity, vision, design skills, and passion for creating large, complex systems that solve problems that have not been solved before.  This requires an ability to design and build large systems over a long period of time, often while working with more than one team of coders.  It includes being able to build systems that help real people, to convince those people that your system can help them, and to teach them how to use your system.  Above all, it requires writing clear, concise, and complete documentation of software systems for various stakeholders.  Architects must so thoroughly undrstand the implementation process that they can clearly articulate both what the system will do when complete, as well as how to build it.  These are the " Coders " who have learned how to maximize their impact upon the world, by maximizing the impacts of everyone around them."))
 
 
 
