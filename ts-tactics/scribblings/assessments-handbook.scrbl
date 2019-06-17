@@ -421,19 +421,7 @@ Depending on the age of the student, our expectations are different -- but the f
 
 @bold{Disclaimer:} The estimation of "1 year" assumes that students have been taking ThoughtSTEM classes and camps for a year -- with minimal work outside of class.
 
-For example, a student who begins in Kindergarten and trains for one year is expected to have the following levels:
-
-@(skill-plot (report (k-2-year-1)))
-
-After another year, we expect students to have mastered additional languages and continued to gain @Expertise as @Coder / @Communicators .
-
-@(skill-plot (report (k-2-year-2)))
-
-Finally, after another year, we expect students to have mastered additional languages and to have closed the gap between their @Collaborator skills and their @Communicator skills.
-
-@(skill-plot (report (k-2-year-3)))
-
-We can see the expected trend for the above hypothetical student better if we compare all three years on one chart:
+We can see the expected trend for a hypothetical student who begins in kindergarten if we compare the end of year expectations on one chart:
 
 @(compare-k-2-years)
 
@@ -444,18 +432,6 @@ We can see the expected trend for the above hypothetical student better if we co
 @bold{Disclaimer:} The estimation of "1 year" assumes that students have been taking ThoughtSTEM classes and camps for a year -- with minimal work outside of class.
 
 For 3rd through 5th graders (compared with younger ages), we expect that they will learn faster, and that they will have achieved sufficient cognitive development to be able to focus on higher level coding skills.
-
-By the end of 3rd grade:
-
-@(skill-plot (report (3rd-5th-year-1)))
-
-By the end of 4th grade:
-
-@(skill-plot (report (3rd-5th-year-2)))
-
-By the end of 5th grade:
-
-@(skill-plot (report (3rd-5th-year-3)))
 
 Comparison across all three years:
 
@@ -469,18 +445,6 @@ Comparison across all three years:
 
 At the 6th through 8th grade level (compared with younger ages), we expect significantly more growth as @Leaders and @Teachers, as well as greater overall growth at the end of the three years.
 
-By the end of 6th grade:
-
-@(skill-plot (report (6th-8th-year-1)))
-
-By the end of 7th grade:
-
-@(skill-plot (report (6th-8th-year-2)))
-
-By the end of 8th grade:
-
-@(skill-plot (report (6th-8th-year-3)))
-
 Comparison across three years:
 
 @(compare-6th-8th-years) 
@@ -492,22 +456,6 @@ Comparison across three years:
   @bold{Disclaimer:} The estimation of "1 year" assumes that students have been taking ThoughtSTEM classes and camps for a year -- with minimal work outside of class.
 
 At the 9th through 12th grade levels (compared with younger ages), we expect significantly more growth as @Leaders and @Teachers, and moderate growth as an @Architect .  We also expect greater overall growth after 4 years.
-
-By the end of 9th grade:
-
-@(skill-plot (report (9th-12th-year-1)))
-
-By the end of 10th grade:
-
-@(skill-plot (report (9th-12th-year-2)))
-
-By the end of 11th grade:
-
-@(skill-plot (report (9th-12th-year-3)))
-
-By the end of 12th grade:
-
-@(skill-plot (report (9th-12th-year-4)))
 
 Comparison across all 4 years:
 
