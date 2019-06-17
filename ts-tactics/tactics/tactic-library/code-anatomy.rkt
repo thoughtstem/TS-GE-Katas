@@ -18,14 +18,14 @@
                    (bottom-half-of whiteboard)))
 
     (instruction coach  
-                 (body-action "label the lang line"))
+                 (body-action "put a box around the #lang line"))
 
     (instruction coach
-                 (body-action "label all definitions"))
+                 (body-action "put a box around all definitions"))
 
 
     (instruction coach
-                 (body-action "label all non-definition code"))
+                 (body-action "put a box around all top-level expressions"))
 
     (instruction coach
                  (body-action "circle all key-words")) 
@@ -40,8 +40,7 @@
                  (body-action "write up the total number of expressions"))
 
     (instruction coach
-                 (body-action "above each expression dot, write the expression's depth level"))
-
+                 (body-action "above each expression dot, write the expression's nesting depth"))
     ))
 
 (module+ test
