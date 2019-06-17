@@ -357,10 +357,9 @@ A truly @Expert collaborator, by definition, can enhance @emph{any} team they ar
 
 However, it is much easier for a student to do in a ThoughtSTEM class -- where they are routinely being placed in different teams with diverse members.   
 
-@margin-note{
-  @bold{Discussion Topic:} How can a ThoughtSTEM student actively seek out growth opportunities as a @Collaborator in class?
+@bold{Discussion Topic:} How can a ThoughtSTEM student actively seek out growth opportunities as a @Collaborator in class?
 
-  @bold{Discussion Topic:} How can ThoughtSTEM coaches actively nurture @Collaborators in class?}
+@bold{Discussion Topic:} How can ThoughtSTEM coaches actively nurture @Collaborators in class?
 
 @subsubsection{Assessing a Leader}
 
@@ -374,11 +373,9 @@ This is hard to assess, for the same reason that @Collaborators are hard to asse
 
 Still, students in ThoughtSTEM classes are naturally presented with many opportunities for leadership.  Ambitious students who wish to grow as @Leaders more quickly can be encouraged to seek out more such opportunities, actively guiding the growth of their own @leadership skills.
 
-@margin-note{
-  @bold{Discussion Topic:} How can a ThoughtSTEM student actively seek out growth opportunities as a @Leader in class?
+@bold{Discussion Topic:} How can a ThoughtSTEM student actively seek out growth opportunities as a @Leader in class?
 
-  @bold{Discussion Topic:} How can ThoughtSTEM coaches actively nurture @Leaders in class?
-}
+@bold{Discussion Topic:} How can ThoughtSTEM coaches actively nurture @Leaders in class?
 
 @subsubsection{Assessing a Teacher}
 
@@ -389,11 +386,9 @@ Still, students in ThoughtSTEM classes are naturally presented with many opportu
 }
 
 
-@margin-note{
   @bold{Discussion Topic:} How can a ThoughtSTEM student actively seek out growth opportunities as a @Teacher in class?}  
 
   @bold{Discussion Topic:} How can ThoughtSTEM coaches actively nurture @Teachers in class?}
-}
 
 @subsubsection{Assessing an Architect}
 
@@ -405,16 +400,7 @@ Still, students in ThoughtSTEM classes are naturally presented with many opportu
 
 @Architect skills are the most advanced coding skills -- a level to which most developers aspire, but many never reach.  For students who are @emph{extremely} ambitious, there are ways to begin acquiring such skills, at a young age.  However, this can only happen if students are willing to work both in and outside of class.
 
-@margin-note{
-@bold{Discussion Topic:} How can a ThoughtSTEM student actively seek out growth opportunities as an @Architect in class? 
-
-@bold{Discussion Topic:} How can a ThoughtSTEM student actively seek out growth opportunities as an @Architect outside of class?
-
-@bold{Discussion Topic:} How can ThoughtSTEM coaches actively nurture @Architects in class?
-
-@bold{Discussion Topic:} How can ThoughtSTEM coaches actively nurture @Architects outside of class?
-}
-
+@bold{Discussion topic: How can a student begin to build their own learning environment at home, so that they can begin gaining skills that pertain to working on long-term projects?}
 
 @subsection{Assessment Benchmarks}
 
@@ -511,11 +497,9 @@ Comparison across three years:
 
 @subsection{Expectations: 9th through 12th grade}
 
-@margin-note{
   @bold{Disclaimer:} These are our minimum expectations.  Many students can and do surpass the minimum skill levels discussed here.
 
   @bold{Disclaimer:} The estimation of "1 year" assumes that students have been taking ThoughtSTEM classes and camps for a year -- with minimal work outside of class.
-}
 
 At the 9th through 12th grade levels (compared with younger ages), we expect significantly more growth as @Leaders and @Teachers, and moderate growth as an @Architect .  We also expect greater overall growth after 4 years.
 
