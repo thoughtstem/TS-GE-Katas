@@ -80,6 +80,8 @@
     #:legend-anchor 'top-right
     #:y-label "Skill"
     #:x-label "Level" 
+    #:width 350
+    #:height 350
     charts))
 
 (define (compare-two 
