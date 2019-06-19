@@ -1,0 +1,1 @@
+scribble --dest doc/ scribblings/assessments-handbook.scrbl && xdg-open doc/assessments-handbook.html

@@ -7,7 +7,7 @@ Use these questions during Game Show time. You can ask any/all the questions in 
 @section{Monday}
 
 @itemlist[@item{@bold{What keys make your character move?}
-                    @itemlist[@item{@italic{WASD keys.}}]}
+                    @itemlist[@item{@italic{Arrow keys.}}]}
           @item{@bold{What is the keyword to add a character to your game?}
                     @itemlist[@item{@italic{#:character}}]}
           @item{@bold{What is the keyword to change what your character looks like?}

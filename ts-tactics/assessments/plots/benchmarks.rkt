@@ -25,9 +25,20 @@
          9th-12th-year-3 
          9th-12th-year-4
          
-         total-novice)
+         total-novice
+         bad-expert-coder)
 
 (require "./lang.rkt")
+
+(define (bad-expert-coder)
+  (student-data
+    #:langs 1
+    #:coder expert
+    #:communicator novice
+    #:collaborator novice
+    #:leader novice
+    #:teacher novice
+    #:architect novice))
 
 (define (total-novice)
   (student-data
@@ -167,7 +178,7 @@
     #:collaborator expert
     #:leader expert
     #:teacher expert
-    #:architect expert))
+    #:architect advanced-beginner))
 
 
 

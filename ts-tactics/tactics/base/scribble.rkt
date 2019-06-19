@@ -175,6 +175,7 @@
          (predicate->scribble predicate)
          (hspace 1)
          (bold (string-upcase "Do"))  
+         (linebreak)
          (instructions->scribble instructions)) ])))
 
 

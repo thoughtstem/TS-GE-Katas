@@ -25,7 +25,7 @@
     (phase 'Translation
            
            (instruction coach
-                        (announce "Your goal is to all write the EXACT same code on your own computer, silently and independantly."))
+                        (announce "Your goal is to all write the EXACT same code on your own computer, silently and independently."))
 
 
            (instruction coach
@@ -51,7 +51,7 @@
                         (directed-action
                          (directed-action
                           (write-code)
-                          "independantly on" computers)
+                          "independently on" computers)
                          "using" (contents-of whiteboard))))
            )
 

@@ -80,6 +80,8 @@
     #:legend-anchor 'top-right
     #:y-label "Skill"
     #:x-label "Level" 
+    #:width 350
+    #:height 350
     charts))
 
 (define (compare-two 
@@ -90,17 +92,17 @@
     #:title title
     (report
       #:color 1
-      #:x-min 0
-      #:skip 2.5
-      #:label  (second labels)
-      b)
-
-    (report
-      #:color 2
       #:x-min 1
       #:skip 2.5
       #:label  (first labels)
-      a)))
+      a)
+
+    (report
+      #:color 2
+      #:x-min 0
+      #:skip 2.5
+      #:label  (second labels)
+      b)))
 
 (define (compare-three 
           #:title (title #f)
@@ -110,10 +112,10 @@
     #:title title
     (report
       #:color 1
-      #:x-min 0
+      #:x-min 2
       #:skip 3.5
-      #:label  (third labels)
-      c)
+      #:label  (first labels)
+      a)
 
     (report
       #:color 2
@@ -124,10 +126,10 @@
 
     (report
       #:color 3
-      #:x-min 2
+      #:x-min 0
       #:skip 3.5
-      #:label  (first labels)
-      a)))
+      #:label  (third labels)
+      c)))
 
 (define (compare-four 
           #:title (title #f)
@@ -137,31 +139,31 @@
     #:title title
     (report
       #:color 1
-      #:x-min 0
+      #:x-min 3
       #:skip 4.5
-      #:label  (fourth labels)
-      d)
+      #:label  (first labels)
+      a)
 
     (report
       #:color 2
-      #:x-min 1
-      #:skip 4.5
-      #:label  (third labels)
-      c)
-
-    (report
-      #:color 3
       #:x-min 2
       #:skip 4.5
       #:label  (second labels)
       b)
 
     (report
-      #:color 4
-      #:x-min 3
+      #:color 3
+      #:x-min 1
       #:skip 4.5
-      #:label  (first labels)
-      a)))
+      #:label  (third labels)
+      c)
+
+    (report
+      #:color 4
+      #:x-min 0
+      #:skip 4.5
+      #:label  (fourth labels)
+      d)))
 
 
 (module+ test
