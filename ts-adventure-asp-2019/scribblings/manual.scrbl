@@ -26,29 +26,22 @@ This is for students and coaches participating in their local scholastic game ja
 
 @(sections-for kata-section
                avatar-katas
-               coin-katas
-               level-design-katas
-               fetch-quest-katas
                enemy-katas
+               npc-katas
                food-katas
-               crafter-katas
-               weapon-crafter-katas
-               sky-katas
-               bg-katas
-               npc-katas)
+               fetch-quest-katas
+               )
 
 @section{Extra Katas}
+
+@(render level-design-katas)
+@(render coin-katas)
+@(render crafter-katas)
+@(render weapon-crafter-katas)
+@(render sky-katas)
+@(render bg-katas)
 
 
 @include-section["practice-game-jam.scrbl"]
 
 @(include-section adventure/scribblings/assets-library)
-
-@section{Kata Card}
-
-Full Size Kata Card design for this course:
-
-@(kata-card)
-
-To print -- Save image and print @bold{9 per page}.
-
