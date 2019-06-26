@@ -417,6 +417,105 @@
    (read-multi-game-template "The 1st game has a zookeeper healing 2 monkeys and 2 bananas.
                               The 2nd game has a zookeeper healing 4 penguins and 4 fish.
                               The 3rd game has a zookeeper healing 6 hippos and 6 apples.")
-   ))
+
+
+   'animal-000
+   (read "Code a basic animal game.")
+
+   'animal-001
+   (short-template "a dog.")
+
+   'animal-002
+   (short-template "a cat eating apples.")
+
+   'animal-003
+   (short-template "an onion eating a cat and another random food.")
+
+   'animal-004
+   (short-template "a potato eating 5 potatoes.")
+
+   'animal-005
+   (short-template "an avatar eating 3 different foods.")
+
+   'animal-006
+   (short-template "a dog eating 3 potatos and 3 onions.")
+
+   'animal-007
+   (short-template "a cat eating 5 apples and another random food.")
+
+   'animal-008
+   (short-template "an avatar eating 10 muchrooms and 2 apples.")
+
+   'animal-009
+   (read-multi-game-template "The 1st game has a dog eating 4 onions and 2 apples.
+                              The 2nd game has an onion eating 5 dogs.")
+
+   'animal-010
+   (short-template "a cat eating 5 apples and 3 of another food.")
+
+   'animal-011
+   (short-template "a dog eating a green apple and another food.")
+
+   'animal-012
+   (short-template "a cat eating 4 blue apples, and collecting gold coins.")
+
+   'animal-013
+   (short-template "a silver eating 5 red dogs, and collecting 10 mushrooms.")
+
+   'animal-014
+   (short-template "a random avatar eating a red mushroom, a green potato, and 2 apples, and collecting  10 copper, 5 silver, and 2 gold coins.")
+
+   'animal-015
+   (short-template "a dog eating 5 apples, and collecting copper, silver, and gold coins.")
+
+   'animal-016
+   (short-template "an avatar eating a purple potato, and collecting 4 green gold coins.")
+
+   'animal-017
+   (short-template "a random avatar eating 3 different random foods, and collecting 3 different random coins.")
+
+   'animal-018
+   (short-template "a mushroom eating 5 green cats  and 2 yellow dogs, and collecting a gold coin and 10 silver coins.")
+
+   'animal-019
+   (short-template "an avatar eating 10 purple apples, and collecting a purple gold, 3 silver, and 5 copper coins.")
+
+   'animal-020
+   (short-template "a cat eating 3 green foods, and collecting 4 gold coins.")
+
+   'animal-021
+   (short-template "a horse eating 8 apples, collecting 10 copper coins, and avoiding a wolf.")
+
+   'animal-022
+   (short-template "a rabbit eating 4 green wolves, collecting 3 yellow wolves, and avoiding 5 red wolves.")
+
+   'animal-023
+   (short-template "a random avatar eating a random food, collecting 2 different random coins, and avoiding 3 different random enemies.")
+
+   'animal-024
+   (read-multi-game-template "The 1st game has a dog eating 2 green apples, collecting gold and copper coins, and avoiding a turkey.
+                              The 2nd game has a cat eating 3 rabbits, collecting 3 silver coins, and avoiding 3 dogs.")
+
+   'animal-025
+   (read-multi-game-template "The 1st game has a random avatar eating 3 different foods, collecting 3 different coins, and avoiding 3 different enemies.
+                              The 2nd game has a wolf eating a turkey, a rabbit, and a cat, collecting an orange onion and a purple mushroom, and avoiding gold, silver, and copper.")
+
+   'animal-026
+   (short-template "a copper eating 5 blue copper, collecting 3 green copper, and avoiding a purple copper.")
+
+   'animal-027
+   (read-multi-game-template "The 1st game has a rabbit eating 5 red mushrooms, collecting 5 copper and 5 silver, and avoiding 5 red rabbits.
+                              The 2nd game has an onion eating 2 different random foods, collecting 2 different random coins, and avoiding 2 random enemies.")
+
+   'aniaml-028
+   (read-multi-game-template "The 1st game has an avatar eating a food.
+                              The 2nd game has an avatar eating a food, and collecting a coin.
+                              The 3rd game has an avatar eating a food, collecting a coin, and avoiding an enemy.")
+
+   'animal-029
+   (read-multi-game-template "The 1st game has a cat eating 4 green apples and 3 mushrooms, collecting copper, silver, and gold, and avoiding  4 turkey and 6 wolves.
+                              The 2nd game has a dog eating 4 onions, 2 red potatos, and another random food, collecting 10 gold, and avoiding a cat, a horse, a rabbit, a turkey, and a wolf.
+                              The 3rd game has a mushroom eating 4 mushrooms, collecting 3 red potatos and 2 orange apples, and avoiding gold, silver, and copper.")
+))
 
   
