@@ -1,0 +1,41 @@
+#lang scribble/manual
+
+@(require ;ts-kata-util/katas/main
+          ;ts-kata-util/katas/rendering
+          ts-kata-util/badge-maker/main
+          (prefix-in f: ts-fundamentals/katas)
+          "../katas.rkt"
+          "../rendering.rkt"
+          (except-in racket read do))
+
+@title{Adventures in Coding and Animals: K-2nd}
+
+ANIMAL BADGES HERE
+@;k2-farm-badges
+
+@table-of-contents[]
+
+@section{Intro Katas}
+@(render f:core-values)
+@;(render intro-kata)
+
+@section{1? Katas}
+@;(render day-one)
+
+@section{2? Katas}
+@;(render day-two)
+
+@section{3? Katas}
+@;(render day-three)
+
+@section{4? Katas}
+@;(render day-four)
+
+@section{5? Katas}
+@;(render day-five)
+
+@include-section["practice-game-jam.scrbl"]
+
+@section{All Animal Katas}
+@;(render animal)
+
