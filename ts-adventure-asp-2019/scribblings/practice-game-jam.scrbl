@@ -7,14 +7,16 @@
 @(require 2htdp/image)
 
 @;====== PRACTICE JAM KATAS =======
-@title{Practice Game Jam Katas}@; - @italic{(Day 7)}}
+@title{Practice Game Jam}@; - @italic{(Day 7)}}
 
+@;modify this to specify what the teacher has to do to make game jam happen
 @section{Ready to run a Jam? (Or pratice jam?)}
 
-Remember that a Jam is just a kata that takes about 1 hour
-to run.
+Remember that a Jam is just a kata that takes up the whole class time.
 
-Here are some katas that require students to synthesize
-skills gained from other katas.
-
-@(render game-jam)
+Here are some tips:
+@itemlist[#:style 'compact
+          @item["A"]
+          @item["B"]
+          @item["C"]
+          @item["D"]]

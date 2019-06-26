@@ -25,7 +25,8 @@
   enemy-katas
 
   food-katas
-  crafter-katas
+  (crafter-katas
+   (not/c (curryr name-contains? "Weapon")))
   weapon-crafter-katas
   sky-katas
   bg-katas
