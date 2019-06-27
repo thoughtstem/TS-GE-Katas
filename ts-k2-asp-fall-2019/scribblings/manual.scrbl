@@ -17,25 +17,25 @@ ANIMAL BADGES HERE
 
 @section{Intro Katas}
 @(render f:core-values)
-@;(render intro-kata)
+@(render intro-kata)
 
-@section{1? Katas}
-@;(render day-one)
+@section{Food Katas}
+@(render day-one)
 
-@section{2? Katas}
-@;(render day-two)
+@section{More Food Katas}
+@(render day-two)
 
-@section{3? Katas}
-@;(render day-three)
+@section{Coin Katas}
+@(render day-three)
 
-@section{4? Katas}
-@;(render day-four)
+@section{More Coin Katas}
+@(render day-four)
 
-@section{5? Katas}
-@;(render day-five)
+@section{Enemy Katas}
+@(render day-five)
 
 @include-section["practice-game-jam.scrbl"]
 
 @section{All Animal Katas}
-@;(render animal)
+@(render animal)
 

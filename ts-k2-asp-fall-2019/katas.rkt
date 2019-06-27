@@ -4,7 +4,7 @@
 
 (require ts-kata-util/katas/main
          ts-k2/katas)
-#|
+
 (define-kata-collection intro-kata
   (first (kata-collection-katas animal)))
 
@@ -22,4 +22,3 @@
 
 (define-kata-collection day-five
   (drop (kata-collection-katas animal) 20))
-|#
