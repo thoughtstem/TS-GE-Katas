@@ -36,7 +36,7 @@
 
 
    'npc-1 ;; 5.1
-   (list "The NPC modes are " (bold "'still") ", " (bold "'follow") ", " (bold "'wander") " (the default), and" (bold "'pace") ".")
+   (list "The NPC modes are " (bold "'still") ", " (bold "'follow") ", " (bold "'wander") " (the default), and " (bold "'pace") ".")
    'npc-3 ;; 5.3
    (list "Try taking the NPC's response outside of the game function!")  
    'npc-5 ;; 5.5

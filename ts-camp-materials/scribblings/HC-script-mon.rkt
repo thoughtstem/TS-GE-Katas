@@ -9,6 +9,8 @@
 
 @AM-icon
 @itemlist[#:style 'compact
+          @item[@am-note[@bold{Adjust Camp Tables} " for week's enrollments -- add or remove
+                         chairs/tables."]]
           @item[@am-note[@bold{Team Leaders} " create kata cards/lanyards for their camps "
                          @bold{AM and PM}]]
           @item[@am-note[@bold{TLs} " put their AM and PM " @bold{challenge cards}
