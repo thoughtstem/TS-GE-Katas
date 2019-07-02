@@ -121,21 +121,26 @@
 
 (define (get-example-syntax pkg-name kata-name)
   (define stx
-    (dynamic-require (string->symbol
-                     (~a pkg-name "/examples"))
+    (dynamic-require `(submod ,(string->symbol
+                                (~a pkg-name "/examples"))
+                              syntaxes)
                     (string->symbol
-                     (~a "syntax:" kata-name))))
+                      (~a "syntax:" kata-name))))
   stx)
 
 (define (get-example-names pkg-name)
-
-  (dynamic-require (string->symbol
-                    (~a pkg-name "/examples"))
-                   #f)
+  (dynamic-require
+    `(submod ,(string->symbol
+                (~a pkg-name "/examples"))
+             syntaxes)
+    #f)
 
   (define-values (important not-important)
-    (module->exports (string->symbol
-                      (~a pkg-name "/examples"))))
+    (module->exports 
+      `(submod 
+        ,(string->symbol
+          (~a pkg-name "/examples"))
+        syntaxes)))
 
   (define exported-ids
     (map first
