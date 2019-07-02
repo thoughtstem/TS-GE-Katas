@@ -99,10 +99,10 @@
 
 
 (define (module->example-ids m)
-  (dynamic-require m #f)
+  (dynamic-require `(submod ,m syntaxes) #f)
   
   (define-values (raw-example-ids dont-care)
-    (module->exports m))
+    (module->exports `(submod ,m syntaxes) ))
 
   (define example-ids
     (map first (rest (first raw-example-ids))))

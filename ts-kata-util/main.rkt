@@ -226,7 +226,8 @@
 
   (define mappings
     (dynamic-require
-      '(submod "./lang/main.rkt" mappings) 'mappings))
+      '(submod "./lang/main.rkt" mappings) 
+      'mappings))
 
   (define define/transform/provides
     (map
@@ -241,11 +242,10 @@
       syntax-ids))
 
   (datum->syntax stx
-                 `(begin
-                    (require (prefix-in other: ,lang/examples))
+                 `(module+ syntaxes
+                    (require (prefix-in other: (submod ,lang/examples syntaxes)))
 
-                    ,@define/transform/provides
-                    )))
+                    ,@define/transform/provides)))
 
 
 (define-syntax (wrap-if-not-define stx)
@@ -255,8 +255,7 @@
     ((_ wrap (other ...)) 
       #'(wrap (other ...)))
     ((_ wrap other) 
-     #'(wrap other))
-    ))
+     #'(wrap other))))
 
 
 (define-syntax-rule (game-test expr ... g)
@@ -288,9 +287,7 @@
 
                       (define ticked-g (tick g #:ticks 10))
 
-                      (check-pred game? ticked-g)
-
-                      )
+                      (check-pred game? ticked-g))
 
                     (map test
                          (get-example-names ,lang-id)))))
