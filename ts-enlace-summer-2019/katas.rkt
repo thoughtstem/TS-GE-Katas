@@ -3,15 +3,27 @@
 (provide katas)
 
 (require ts-kata-util/katas/main
-         ts-fundamentals/katas)
+         "./katas/read-code-stimuli.rkt"
+         ts-fundamentals/katas
+         (prefix-in fundamentals: (submod fundamentals/examples stimuli))
+         )
+
+
+(define proto-katas
+  (merge-collections
+    (lang->kata-collection 'fundamentals)
+    (lang->kata-collection 'data-sci)))
+
+
 
 (define katas
-  (merge-collections
-    ;Many katas begin by pulling in examples
-    ; from some TS-Language
-    (lang->kata-collection 'fundamentals)
+  (apply fill-in-stimuli
+    (apply fill-in-stimuli proto-katas stimuli)
+    fundamentals:stimuli))
 
-    (lang->kata-collection 'data-sci)))
+
+
+
 
 
 
