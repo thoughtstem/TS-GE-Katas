@@ -11,4 +11,8 @@
 
    'avatar-3
    (list "The default speed is " (bold "10") ".")
+
+   'npc-1
+   (list "To customize the " (bold "#:tile") " you must also customize the "
+         (bold "#:position"))
 ))
