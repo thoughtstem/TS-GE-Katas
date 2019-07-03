@@ -1,4 +1,5 @@
 *.rkt~
+*.swp
 *.dep
 *.zo
 *.bak
