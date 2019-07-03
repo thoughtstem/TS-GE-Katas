@@ -6,9 +6,9 @@
           "../rendering.rkt"
           (except-in racket read do))
 
-@title{ENLACE}
+@title{Data Science}
 
-The goal?  Make Tijuana into the next Silicon Valley.
+The goal?  Make the San Diego / Tijuana area into the next Silicon Valley by providing scientifically grounded coding education for everyone.
 
 @table-of-contents[]
 
