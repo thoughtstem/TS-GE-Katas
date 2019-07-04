@@ -22,7 +22,15 @@
     fundamentals:stimuli))
 
 
-
+(define-sub-collections katas
+                        data-sci-pict
+                        data-sci-plots
+                        data-sci-histograms
+                        data-sci-3d-histograms
+                        data-sci-data-stories
+                        (data-sci-data (not/c (curryr name-contains? "stories")))
+                        func-defs 
+                        images)
 
 
 

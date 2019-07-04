@@ -18,4 +18,4 @@
 (require (only-in scribble/manual image para subsection))
 
 (define (kata->title level k)
-  (level (~a (kata-name k) " Kata")))
+  (level (~a (kata-name k))))

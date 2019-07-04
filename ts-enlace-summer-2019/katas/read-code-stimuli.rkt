@@ -41,9 +41,7 @@
    (read "Procedurally generate an image of text inside a green box.")
 
    'data-sci-pict-011
-   (read "Procedurally generate a column of four boxes with text inside.  Make the first and third box green and the second and fourth box red.")
-
-   ))
+   (read "Procedurally generate a column of four boxes with text inside.  Make the first and third box green and the second and fourth box red.") ))
 
 
 
