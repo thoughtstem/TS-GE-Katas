@@ -4,7 +4,9 @@
          hero
          farm
          sea
-         zoo)
+         zoo
+         animal
+         )
 
 (require ts-kata-util/katas/main
          ;ts-fundamentals/katas
@@ -60,5 +62,7 @@
   hero
   farm
   sea
-  zoo)
+  zoo
+  animal
+  )
 

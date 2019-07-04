@@ -173,35 +173,45 @@
 
   ;This one is the newer better way
   (syntax-case stx ()
-    [(_ #:with-test (test-module test) lang kata-name expr ...)
+    [(_ #:with-test (test-module test) lang kata-name expr ... last-expr)
+
+
      #`(begin
-         (define-example-code lang kata-name expr ...) 
+
+         (define-example-code lang kata-name expr ... last-expr) 
 
          (module+ test-module
+           (require lang)
+           
            (with-handlers ([exn:fail? (lambda (e)
                                         (displayln (~a "Error running test for kata " 'kata-name))
                                         (error e))])
-             (test-example kata-name test))))]
+                          (test
+                           expr ...
+                           last-expr))))]
 
     [(_ lang kata-name expr ...)
      (with-syntax ([syntax:kata-name
                      (format-id #'kata-name "syntax:~a" #'kata-name)]
                    [run:kata-name
-                     (format-id #'kata-name "run:~a" #'kata-name)]
-                   )
+                     (format-id #'kata-name "run:~a" #'kata-name)])
 
 
        #`(begin
 
-           (provide syntax:kata-name)
-           (provide run:kata-name)
+           ;Put these in a separate module so we can access the syntaxes from scribble without having to load the lang (which can cause errors with racket/gui/base being required a second time.)
 
-           (define syntax:kata-name
-             (syntax #,captured-module))
+           (module+ syntaxes
+             (provide syntax:kata-name)
 
+             (define syntax:kata-name
+               (syntax #,captured-module)))
 
-           (define run:kata-name
-             #,run-the-code)
+           (module+ programs
+             (require lang)
+             (provide run:kata-name)
+             (define run:kata-name
+               #,run-the-code))  
 
            ))]))
 
@@ -213,37 +223,47 @@
 
   (define syntax-ids
     (module->example-ids lang/examples))
-  
+
   (define mappings
     (dynamic-require
-     '(submod "./lang/main.rkt" mappings) 'mappings))
+      '(submod "./lang/main.rkt" mappings) 
+      'mappings))
 
   (define define/transform/provides
     (map
-     (λ(id)
-       `(begin
-          (provide ,id)
-          
-          (define ,id
-            (parameterize [(string-mappings ',mappings)]
-              (transform-mappings ,(string->symbol (~a "other:" id)))))
-          (void)))
-     syntax-ids))
-  
+      (λ(id)
+        `(begin
+           (provide ,id)
+
+           (define ,id
+             (parameterize [(string-mappings ',mappings)]
+               (transform-mappings ,(string->symbol (~a "other:" id)))))
+           (void)))
+      syntax-ids))
+
   (datum->syntax stx
-                 `(begin
-                    (require (prefix-in other: ,lang/examples))
+                 `(module+ syntaxes
+                    (require (prefix-in other: (submod ,lang/examples syntaxes)))
 
-                    ,@define/transform/provides
-                    )))
-
+                    ,@define/transform/provides)))
 
 
+(define-syntax (wrap-if-not-define stx)
+  (syntax-case stx (define)
+    ((_ wrap (define stuff ...)) 
+      #`(define stuff ...)) 
+    ((_ wrap (other ...)) 
+      #'(wrap (other ...)))
+    ((_ wrap other) 
+     #'(wrap other))))
 
-(define-syntax-rule (game-test g)
+
+(define-syntax-rule (game-test expr ... g)
   (let ()
     (local-require game-engine)
     (local-require rackunit)
+    (wrap-if-not-define headless expr)
+    ...
     (define to-test (headless g)) 
     (define ticked-g (tick to-test #:ticks 10)) 
     (check-pred game? ticked-g)))
@@ -256,20 +276,18 @@
                     (require rackunit)
                     (define-namespace-anchor a)
                     (define ns (namespace-anchor->namespace a))
-  
+
                     (define (test id)
                       (define g
                         (headless
-                         (eval-example
-                          (get-example-syntax ,lang-id
-                                              id)
-                          ns)))
+                          (eval-example
+                            (get-example-syntax ,lang-id
+                                                id)
+                            ns)))
 
                       (define ticked-g (tick g #:ticks 10))
 
-                      (check-pred game? ticked-g)
-
-                      )
+                      (check-pred game? ticked-g))
 
                     (map test
                          (get-example-names ,lang-id)))))
