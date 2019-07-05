@@ -17,7 +17,7 @@
    (ts-camp-materials        "COACH RESOURCES")
    
    (ts-battle-arena-asp-2019 "WEEKEND WORKSHOPS -- BATTLE-ARENA")
-   (ts-enlace-summer-2019    "ENLACE / UCSD -- DATA SCIENCE")
+   (ts-enlace-summer-2019    "DATA SCIENCE")
    )
 
   ;/unlisted.html data
