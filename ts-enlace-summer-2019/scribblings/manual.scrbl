@@ -8,11 +8,20 @@
 
 @title{Data Science}
 
-This training set is for those interested in increasing their data science fluency.  Topics include data manipulation and visualization. 
+This training set is for those interested in increasing their data science fluency.  Major topics include data manipulation and visualization. 
+
+Data science is a broad-spectrum field requiring a variety of coding skillsets -- making this an advanced training set.  This set is intended to strengthen recall, recognition, and fluency over a variety of topics:
+
+@itemize{
+ @item{@bold{Primitive data.} Strings, numbers, booleans.}
+ @item{@bold{Compound data.} Lists.}
+ @item{@bold{Data manipulation.} Use of @racket[map] and @racket[apply], as well as other higher-order functions.}
+ @item{@bold{Plotting data.} Both interactive and static plots.}
+ @item{@bold{Procedurally generated images.} Scaling, rotation, combination of images.  Manipulation of static plots as images.}}
 
 @table-of-contents[]
 
-@section{Fundamentals}
+@section{Coding Fundamentals}
 
 @(render func-defs)
 
@@ -24,11 +33,9 @@ This training set is for those interested in increasing their data science fluen
 
 @(render data-sci-plots)
 
-
 @section{Data Visualization - Basic 2D Histograms}
 
 @(render data-sci-histograms)
-
 
 @section{Data Visualization - Basic 3D Histograms}
 
