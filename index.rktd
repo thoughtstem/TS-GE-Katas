@@ -27,6 +27,7 @@
     (ts-adventure      "ADVENTURE BASE")
     ;(ts-coach         "COACH TRAINING KATAS")
     (ts-kata-util      "KATA UTIL")
+    (ts-fundamentals-in-school-2019 "IN-SCHOOL FUNDAMENTALS")
 
 
   )
