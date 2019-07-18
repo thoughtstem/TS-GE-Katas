@@ -52,7 +52,7 @@
 
 
    'weapon-crafter-3
-   (read-template "ore, and a wood table crafter that instantly builds fast-spinning fire magic for 100 ore.")
+   (read-template "ore, and a wood table crafter that instantly builds fast-moving fire magic for 100 ore.")
 
    'sky-4
    (read-template "a short night, and many nocturnal mobs.")
