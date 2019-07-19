@@ -22,11 +22,13 @@
 
   ;/unlisted.html data
   ( 
-    (ts-survival       "SURVIVAL BASE")
-    (ts-battle-arena   "BATTLE-ARENA BASE")
-    (ts-adventure      "ADVENTURE BASE")
-    ;(ts-coach         "COACH TRAINING KATAS")
-    (ts-kata-util      "KATA UTIL")
+    (ts-survival           "SURVIVAL BASE")
+    (ts-battle-arena       "BATTLE-ARENA BASE")
+    (ts-adventure          "ADVENTURE BASE")
+    (ts-adventure-asp-2019 "ADVENTURE ASP FALL")
+    (ts-k2-asp-fall-2019   "K2 ASP FALL")
+    ;(ts-coach             "COACH TRAINING KATAS")
+    (ts-kata-util          "KATA UTIL")
 
 
   )
