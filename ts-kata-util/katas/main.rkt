@@ -231,11 +231,8 @@
 
 (define (lang->kata-collection lang)
   (kata-collection
-   ;(sort
     (map (curry example->kata lang)
-         (get-example-names lang))
-   ;kata-size>?)
-    ))
+         (get-example-names lang))))
 
 (define (alt-kata? k)
   (string-prefix?
