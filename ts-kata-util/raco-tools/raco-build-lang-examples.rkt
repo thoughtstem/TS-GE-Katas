@@ -15,7 +15,7 @@
               " && "
               "raco setup --fast-clean " ts-language-name 
               " && "
-              "raco setup  " ts-language-name "/assets" "&&"
+              ;"raco setup  " ts-language-name "/assets" "&&"
               "raco setup  " ts-language-name 
               ))
 

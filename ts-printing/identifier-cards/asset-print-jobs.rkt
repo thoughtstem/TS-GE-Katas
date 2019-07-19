@@ -12,7 +12,7 @@
                       [ASSET-PATH 'k2/assets/animal]
                       [LANGUAGE-COLOR "black"]))
 
-  (begin-asset-job "core-asset-cards"         ;circle
+  #;(begin-asset-job "core-asset-cards"         ;circle
                    (game-engine-rpg/lang/avatar-assets
                       [ASSET-PATH 'game-engine-rpg/lang/avatar-assets]
                       [LANGUAGE-COLOR "black"])
@@ -41,7 +41,7 @@
                    )
                    
 
-  (begin-asset-job "survival-asset-cards"       ;star
+  #;(begin-asset-job "survival-asset-cards"       ;star
                    
                    (survival-minecraft
                      [LANGUAGE-COLOR "green"]
@@ -51,7 +51,7 @@
                      [LANGUAGE-SHAPE 'star])
                    )
 
-  (begin-asset-job "adventure-asset-cards"     ;triangle
+  #;(begin-asset-job "adventure-asset-cards"     ;triangle
                    
                    (adventure-harrypotter
                      [LANGUAGE-COLOR "cyan"]
