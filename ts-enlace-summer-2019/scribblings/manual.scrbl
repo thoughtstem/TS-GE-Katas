@@ -33,23 +33,13 @@ Data science is a broad-spectrum field requiring a variety of coding skillsets -
 
 @(render data-sci-plots)
 
-@section{Data Visualization - Basic 2D Histograms}
-
-@(render data-sci-histograms)
-
-@section{Data Visualization - Basic 3D Histograms}
-
-@(render data-sci-3d-histograms)
-
-
-@section[#:tag "data-manip"]{Data Visualization - Basic Data Manipulation}
+@section[#:tag "data-manip-basic"]{Data Manipulation - Basic Tools}
 
 @(render data-sci-data)
 
-@section[#:tag "data-stories"]{Data Visualization - Infographics and Data Stories}
+@section[#:tag "data-manip-real-sets"]{Data Manipulation - Real Data Sets}
 
-@(render data-sci-data-stories)
-
+@(render data-sci-real-data)
 
 
 

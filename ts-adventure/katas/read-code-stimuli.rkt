@@ -11,15 +11,15 @@
   (list
 
    'hello-world-1
-   (read "Make a basic adventure game.")
+   (read "Code a basic adventure game.")
 
 
    ;Avatar Stimuli
    'avatar-1
-   (read-prefix "with a fast Light Elf avatar.")
+   (read-prefix "with a fast wizard avatar.")
 
    'avatar-2
-   (read-prefix "with a fast Dark Knight avatar.")
+   (read-prefix "with a fast, strong pirate avatar.")
 
    'avatar-3
    (read-prefix "with a fast avatar and an intro cutscene. Customize the cutscene to have a sprite and some text.")
@@ -64,48 +64,48 @@
    (read-prefix "with an NPC who has a fetch quest to find their lost cat.")
 
    'fetch-quest-2
-   (read-prefix "with an NPC who has a quest to find their lost cat. Give the quest an ending cutscene including the cat and some text.")
+   (read-prefix "with an NPC who has a quest to find their lost sword. Give the quest an ending cutscene including the NPC sprite and some text.")
 
    'fetch-quest-3
-   (read-prefix "with an NPC who has 2 quests. The quests are to find and return a cat and some buttons; add a reward to both of the quests.")
+   (read-prefix "with an NPC who has 2 quests to return 2 different pets. Add a reward to both of the quests.")
 
    'fetch-quest-4
-   (read-prefix "with an NPC who has a rewarded quest to find their lost cat. The NPC's dialog changes once the quest is complete.")
+   (read-prefix "with an NPC who has a rewarded quest to find their antique bowl. The NPC's dialog changes once the quest is complete.")
 
    'fetch-quest-5
-   (read-prefix "with an NPC who has a high-reward quest to find their lost cat. Give the cat pickup and drop cutscenes (the drop cutscene only happens if dropped away from the NPC).")
+   (read-prefix "with an NPC who has a high-reward quest to find their lost cat. Give the quest a completion cutscene. Give the cat pickup and drop cutscenes (the drop cutscene only happens if dropped away from the NPC).")
 
    ;Enemy Stimuli
    'enemy-1
-   (read-prefix "with 10 strong, nocturnal enemies with moderate intelligence.")
+   (read-prefix "with 10 strong, nocturnal enemies with moderate intelligence and a random sprite.")
 
    'enemy-2
-   (read-prefix "with 4 low intelligence slime, 2 moderately intelligent bats, and a highly intelligent, nocturnal snake.")
+   (read-prefix "with several enemies: 4 low intelligence slime, 2 moderately intelligent bats, and a highly intelligent, nocturnal snake.")
 
    'enemy-3
-   (read-prefix "with a spear and 3 highly intelligent enemies that drop gold coins.")
+   (read-prefix "with a spear and 3 highly intelligent enemies that drop valuable gold coins.")
 
    'enemy-4
    (read-prefix "with an avatar, a spear, and 3 highly intelligent enemies that shoot fireballs. Include a creative game over cutscene.")
 
    'enemy-5
-   (read-prefix "with an NPC who has a quest to slay all enemies; the quest has a point and item reward. Include 10 random enemies, a fireball power, and a game over cutscene.")
+   (read-prefix "with an NPC who has a quest to slay several enemies; the quest has a point and item reward. Include 10 random enemies, a fireball power, and a game over cutscene.")
 
    ;Food Stimuli
    'food-1
    (read-prefix "with several hearty foods.")
 
    'food-2
-   (read-prefix "with 2 types of foods: a common, apple; and a very rare, hearty cherry.")
+   (read-prefix "with 2 types of food: a common apple; and a very rare, hearty cherry.")
 
    'food-3
-   (read-prefix "with an avatar who starts at half health. Add a hearty steak that spawns a cutscene on pickup. The cutscene includes the steak sprite and text.")
+   (read-prefix "with an avatar who starts at half-health. Add a hearty steak that spawns a cutscene on pickup. The cutscene includes the steak sprite and text.")
 
    'food-4
    (read-prefix "with several fish and a crafter that produces a hearty fish stew.")
 
    'food-5
-   (read-prefix "with an NPC and a crafter that produces a carrot stew. Give the NPC dialog and a quest to make carrot stew.")
+   (read-prefix "with an NPC and a crafter that produces a carrot stew. Give the NPC dialog and a quest to make the carrot stew.")
 
    ;Crafter Stimuli
    'crafter-1
@@ -167,18 +167,18 @@
 
    ;NPC Stimuli
    'npc-1
-   (read-prefix "a witch NPC who follows you. Give her a name and a specific tile location.")
+   (read-prefix "with a witch NPC who follows you. Give her a name and a start location.")
 
    'npc-2
-   (read-prefix "2 NPCs. Give both NPCs names and multiple lines of dialog.")
+   (read-prefix "with 2 NPCs. Give both NPCs names and multiple lines of dialog.")
 
    'npc-3
    (read-prefix "with an avatar and a named NPC. Give the avatar 3 questions and the NPC 3 responses.")
 
    'npc-4
-   (read-prefix "with an avatar and 2 NPCs. Give the avatar and NPCs random dialog and responses.")
+   (read-prefix "with an avatar who has random dialog and 2 NPCs with random responses.")
    
    'npc-5
-   (read-prefix "an NPC who has a quest to fetch their lost spear. Give the NPC new dialog after the quest is complete.")
+   (read-prefix "with an NPC who has a quest to fetch their lost spear. Give the NPC new dialog after the quest is complete.")
 
    ))

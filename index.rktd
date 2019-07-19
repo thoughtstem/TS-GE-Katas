@@ -29,7 +29,5 @@
     (ts-k2-asp-fall-2019   "K2 ASP FALL")
     ;(ts-coach             "COACH TRAINING KATAS")
     (ts-kata-util          "KATA UTIL")
-
-
   )
 )
