@@ -435,26 +435,26 @@
    (short-template "an onion eating a cat and another food.")
 
    'animal-004
-   (short-template "a potato eating 5 potatoes.")
+   (short-template "a rabbit eating 5 potatoes.")
 
    'animal-005
    (short-template "an avatar eating 3 different foods.")
 
    'animal-006
-   (short-template "a dog eating 3 potatos and 3 onions.")
+   (short-template "a dog eating 3 potatos and 3 strawberries.")
 
    'animal-007
-   (short-template "a cat eating 5 apples and another food.")
+   (short-template "a horse eating 5 bananas and another food.")
 
    'animal-008
-   (short-template "an avatar eating 10 mushrooms and 2 apples.")
+   (short-template "an avatar eating 10 kiwis and 2 tomatoes.")
 
    'animal-009
    (read-multi-game-template "The 1st game has a dog eating 4 onions and 2 apples.
                               The 2nd game has an onion eating 5 dogs.")
 
    'animal-010
-   (read-multi-game-template "The 1st game has an apple eating a mushroom, an apple, and 2 other foods.
+   (read-multi-game-template "The 1st game has an goat eating a mushroom, an apple, and 2 other foods.
                               The 2nd game has an avatar eating 5 of a food and an onion.")
    
    'animal-011
@@ -470,19 +470,19 @@
    (short-template "a silver coin eating 5 RED dogs, while collecting 10 mushrooms.")
 
    'animal-015
-   (short-template "an avatar eating a RED mushroom, a GREEN potato, and 2 apples, while collecting  10 copper, 5 silver, and 2 gold coins.")
+   (short-template "an avatar eating a RED mushroom, a GREEN pineapple, and 2 apples, while collecting  10 copper, 5 silver, and 2 gold coins.")
 
    'animal-016
    (short-template "a dog eating 5 apples, while collecting copper, silver, and gold coins.")
 
    'animal-017
-   (short-template "an avatar eating a PURPLE potato, while collecting 5 GREEN coins.")
+   (short-template "an avatar eating a PURPLE pineapple, while collecting 5 GREEN coins.")
 
    'animal-018
    (short-template "an avatar eating 3 different foods, while collecting 3 different coins.")
 
    'animal-019
-   (short-template "a mushroom eating 5 GREEN cats and 2 YELLOW dogs, while collecting 10 silver and 4 gold coins.")
+   (short-template "a mushroom eating 5 GREEN rabbits and 2 YELLOW wolves, while collecting 10 silver and 4 gold coins.")
 
    'animal-020
    (short-template "an avatar eating 10 PURPLE apples, while collecting a 5 copper, 3 silver, and PURPLE coins.")
@@ -521,8 +521,8 @@
 
    'animal-030
    (read-multi-game-template "The 1st game has a cat eating 4 GREEN apples and 3 mushrooms, collecting copper, silver, and gold coins, and avoiding  4 turkey and 6 wolves.
-                              The 2nd game has a dog eating 4 onions, 2 RED potatos, and another food, collecting 10 gold coins, and avoiding a cat, a horse, a rabbit, a turkey, and a wolf.
-                              The 3rd game has a mushroom eating 4 mushrooms, collecting 3 RED potatos and 2 ORANGE apples, while avoiding copper, silver, and gold coins.")
+                              The 2nd game has a dog eating 4 onions, 2 RED peppers, and another food, collecting 10 gold coins, and avoiding a cat, a horse, a rabbit, a turkey, and a wolf.
+                              The 3rd game has a mushroom eating 4 mushrooms, collecting 3 RED peppers and 2 ORANGE apples, while avoiding copper, silver, and gold coins.")
 ))
 
   
