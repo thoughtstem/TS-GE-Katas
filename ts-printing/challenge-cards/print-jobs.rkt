@@ -206,7 +206,7 @@
                 [FRONT-BG-COLOR    googly-blue]
                 [FRONT-FG-COLOR clear-white]
                 [FRONT-TITLE    (title "(town/sky)")]) )))
-
+|#
 ;----- ADVENTURE
 (define (ts-adventure-asp-2019->Desktop)
   (local-require ts-adventure-asp-2019/katas)
@@ -234,7 +234,7 @@
                 [FRONT-FG-COLOR clear-white] 
                 [FRONT-TITLE    (title "(?)")]) )))
 
-
+#|
 (define (ts-adventure-mario-summer-camp-2019->Desktop)
   (local-require ts-adventure-mario-summer-camp-2019/katas)
 
