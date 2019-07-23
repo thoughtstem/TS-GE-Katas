@@ -73,11 +73,11 @@
    (read-prefix "with an NPC who has a rewarded quest to find their antique bowl. The NPC's dialog changes once the quest is complete.")
 
    'fetch-quest-5
-   (read-prefix "with an NPC who has a high-reward quest to find their lost cat. Give the quest a completion cutscene. Give the cat pickup and drop cutscenes (the drop cutscene only happens if dropped away from the NPC).")
+   (read-prefix "with an NPC who has a high-reward quest to find their lost cat. Give the cat pickup and drop cutscenes (the drop cutscene only happens if dropped away from the NPC).")
 
    ;Enemy Stimuli
    'enemy-1
-   (read-prefix "with 10 strong, nocturnal enemies with moderate intelligence and a random sprite.")
+   (read-prefix "with 10 strong, nocturnal enemies with moderate intelligence and each with a random sprite.")
 
    'enemy-2
    (read-prefix "with several enemies: 4 low intelligence slime, 2 moderately intelligent bats, and a highly intelligent, nocturnal snake.")
