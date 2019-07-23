@@ -12,7 +12,8 @@
    'avatar-3
    (list "The default speed is " (bold "10") ".")
 
-   'npc-1
-   (list "To customize the " (bold "#:tile") " you must also customize the "
-         (bold "#:position"))
+  'npc-1 
+   (list "The NPC modes are " (bold "'still") ", " (bold "'follow") ", " (bold "'wander")
+         " (the default), and " (bold "'pace") ".")
+
 ))
