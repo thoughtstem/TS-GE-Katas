@@ -21,4 +21,4 @@
   (take (drop (kata-collection-katas animal) 16) 5))
 
 (define-kata-collection day-five
-  (drop (kata-collection-katas animal) 20))
+  (drop (kata-collection-katas animal) 21))
