@@ -500,16 +500,17 @@
                        "the 2nd level with an ORANGE horse eating 2 peppers, healing 3 rabbits and avoiding a dog."))
 
    'animal-023
-   (short-template (~a "2nd level: the 1st with a sheep eating 2 RED bananas and 3 PURPLE kiwis, healing a sheep, a BLUE wolf, and 2 RED turkeys, and avoiding an enemy; "
+   (short-template (~a "2 levels: the 1st with a sheep eating 2 RED bananas and 3 PURPLE kiwis, healing a sheep, a BLUE wolf, and 2 RED turkeys, and avoiding an enemy; "
                        "the 2nd level with an animal eating 2 different foods, healing 3 different friends, and avoiding 4 different enemies"))
 
    'animal-024
+   (short-template (~a "2 levels: the 1st with a horse eating 2 GREEN horses, healing 3 YELLOW horses, and avoiding a RED horse; "
+                       "the 2nd level with a banana eating 2 ORANGE bananas, healing 3 GREEN bananas and avoiding 4 RED bananas."))
+
+   'animal-025
    (short-template (~a "3 levels: the 1st with a goat eating 2 YELLOW mushrooms; "
                        "the 2nd level with a goat eating bananas and healing 4 GREEN wolves; "
                        "and the 3rd level with a goat eating apples, healing a sheep and avoiding a 3 RED dogs."))
 
-   'animal-025
-   (short-template (~a "3 levels: the 1st with a horse eating 2 GREEN horses, healing 3 YELLOW horses, and avoiding a RED horse; "
-                       "the 2nd level with a wolf eating 4 PURPLE wolves, healing 2 BLUE wolves, and avoiding 3 ORANGE wolves; "
-                       "the 3rd level with a banana eating 2 ORANGE bananas, healing 3 GREEN bananas and avoiding 4 RED bananas."))
+
    ))
