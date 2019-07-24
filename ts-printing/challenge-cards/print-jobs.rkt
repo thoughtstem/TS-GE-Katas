@@ -365,7 +365,7 @@
                               [FRONT-BG-COLOR    bright-blue]
                               [FRONT-FG-COLOR    clear-white]
                               [FRONT-TITLE       (title "(multi-level)")]))))
-|#
+
 (define (ts-k2-zoo-summer-camp-2019->Desktop)
   (local-require ts-k2-zoo-summer-camp-2019/katas)
 
@@ -391,7 +391,7 @@
                               [FRONT-BG-COLOR    bright-blue]
                               [FRONT-FG-COLOR    clear-white]
                               [FRONT-TITLE       (title "(more-friend)")]))))
-
+|#
 (define (ts-k2-asp-fall-2019->Desktop)
   (local-require ts-k2-asp-fall-2019/katas)
 
