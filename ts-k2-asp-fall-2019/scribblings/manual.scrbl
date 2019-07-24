@@ -33,7 +33,7 @@
 @section{Enemy Katas}
 @(render day-five)
 
-@include-section["practice-game-jam.scrbl"]
+@include-section["k2-game-jam.scrbl"]
 
 @section{All Animal Katas}
 @(render animal)
