@@ -10,8 +10,7 @@
 
 @title{Adventures in Coding and Animals: K-2nd}
 
-ANIMAL BADGES HERE
-@;k2-farm-badges
+@k2-animal-badges
 
 @table-of-contents[]
 
