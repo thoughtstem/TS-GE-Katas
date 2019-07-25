@@ -424,7 +424,8 @@
    
    'animal-000
    (read "Code a basic animal game.")
-
+   
+   ;(food)
    'animal-001
    (short-template "a dog.")
 
@@ -435,94 +436,81 @@
    (short-template "an onion eating a cat and another food.")
 
    'animal-004
-   (short-template "a rabbit eating 5 potatoes.")
+   (short-template "a rabbit eating potatoes, kiwi, and tomatoes.")
 
    'animal-005
-   (short-template "an avatar eating 3 different foods.")
+   (short-template "an animal eating 3 different foods.")
+   
 
+   ;(friends)
    'animal-006
-   (short-template "a dog eating 3 potatos and 3 strawberries.")
+   (short-template "a dog eating potatoes and healing a goat friend.")
 
    'animal-007
-   (short-template "a horse eating 5 bananas and another food.")
+   (short-template "a horse eating mushrooms and onions; and healing a rabbit and a sheep.")
 
    'animal-008
-   (short-template "an avatar eating 10 kiwis and 2 tomatoes.")
+   (short-template "a PURPLE horse eating kiwi, broccoli, and healing cats.")
 
    'animal-009
-   (read-multi-game-template "The 1st game has a dog eating 4 onions and 2 apples.
-                              The 2nd game has an onion eating 5 dogs.")
+   (short-template "a GREEN sheep eating onions, apples, and healing turkeys and another friend.")
 
    'animal-010
-   (read-multi-game-template "The 1st game has an goat eating a mushroom, an apple, and 2 other foods.
-                              The 2nd game has an avatar eating 5 of a food and an onion.")
-   
+   (short-template "an ORANGE animal eating 2 different foods and healing 3 different friends.")
+
+   ;(more-friends)
    'animal-011
-   (short-template "a cat eating 5 apples and 3 of another food.")
+   (short-template "a turkey eating 5 apples and healing 5 goats.")
 
    'animal-012
-   (short-template "a dog eating a GREEN apple and another food.")
+   (short-template "a BLUE dog eating a GREEN apple and healing a RED horse.")
 
    'animal-013
-   (short-template "a cat eating 4 BLUE apples, while collecting copper coins.")
+   (short-template "a cat eating 4 BLUE apples, 2 RED potatoes, and healing 3 GREEN turkeys.")
 
    'animal-014
-   (short-template "a silver coin eating 5 RED dogs, while collecting 10 mushrooms.")
+   (short-template "an apple eating 5 RED broccoli and healing 3 kiwi and an ORANGE mushroom.")
 
    'animal-015
-   (short-template "an avatar eating a RED mushroom, a GREEN pineapple, and 2 apples, while collecting  10 copper, 5 silver, and 2 gold coins.")
+   (short-template "a PURPLE animal eating a RED mushroom, a GREEN potato, 2 apples, and healing 2 goats and another BLUE friend.")
 
+   ;(enemies)
    'animal-016
-   (short-template "a dog eating 5 apples, while collecting copper, silver, and gold coins.")
+   (short-template "a cat eating 5 apples, healing 5 sheep and avoiding a wolf enemy.")
 
    'animal-017
-   (short-template "an avatar eating a PURPLE pineapple, while collecting 5 GREEN coins.")
+   (short-template "an animal eating a RED banana, healing 2 wolves and avoiding 3 turkeys.")
 
    'animal-018
-   (short-template "an avatar eating 3 different foods, while collecting 3 different coins.")
+   (short-template "a GREEN dog eating 3 different foods, healing 2 different friends and avoiding an enemy.")
 
    'animal-019
-   (short-template "a mushroom eating 5 GREEN rabbits and 2 YELLOW wolves, while collecting 10 silver and 4 gold coins.")
+   (short-template "a mushroom eating 5 YELLOW peppers and 5 GREEN peppers, healing a kiwi and a banana, and avoiding 3 RED onions.")
 
    'animal-020
-   (short-template "an avatar eating 10 PURPLE apples, while collecting a 5 copper, 3 silver, and PURPLE coins.")
+   (short-template "an animal eating 5 PURPLE apples, healing 5 BLUE apples and avoiding 5 ORANGE apples")
 
+   ;(levels)
    'animal-021
-   (short-template "a cat eating 3 of a GREEN food, while collecting 4 gold coins.")
+   (short-template (~a "2 levels: the 1st with a cat eating 3 a GREEN apples; "
+                       "the 2nd level with a cat eating 5 YELLOW apples and healing 3 wolves."))
 
    'animal-022
-   (short-template "a horse eating 8 apples, collecting 10 copper coins, and avoiding a wolf.")
+   (short-template (~a "2 levels: the 1st with a BLUE horse eating 8 peppers and healing a rabbit; "
+                       "the 2nd level with an ORANGE horse eating 2 peppers, healing 3 rabbits and avoiding a dog."))
 
    'animal-023
-   (short-template "a rabbit eating 4 GREEN wolves, collecting 3 YELLOW wolves, and avoiding 5 RED wolves.")
+   (short-template (~a "2 levels: the 1st with a sheep eating 2 RED bananas and 3 PURPLE kiwis, healing a sheep, a BLUE wolf, and 2 RED turkeys, and avoiding an enemy; "
+                       "the 2nd level with an animal eating 2 different foods, healing 3 different friends, and avoiding 4 different enemies"))
 
    'animal-024
-   (short-template "an avatar eating a food, collecting 2 different coins, and avoiding 3 different enemies.")
+   (short-template (~a "2 levels: the 1st with a horse eating 2 GREEN horses, healing 3 YELLOW horses, and avoiding a RED horse; "
+                       "the 2nd level with a banana eating 2 ORANGE bananas, healing 3 GREEN bananas and avoiding 4 RED bananas."))
 
    'animal-025
-   (read-multi-game-template "The 1st game has a dog eating 2 GREEN apples, collecting copper and gold coins, and avoiding a turkey.
-                              The 2nd game has a cat eating 3 rabbits, collecting 3 silver coins, and avoiding 3 dogs.")
+   (short-template (~a "3 levels: the 1st with a goat eating 2 YELLOW mushrooms; "
+                       "the 2nd level with a goat eating bananas and healing 4 GREEN wolves; "
+                       "and the 3rd level with a goat eating apples, healing a sheep and avoiding a 3 RED dogs."))
 
-   'animal-026
-   (read-multi-game-template "The 1st game has an avatar eating 3 different foods, collecting 3 different coins, and avoiding 3 different enemies.
-                              The 2nd game has a wolf eating a turkey, a rabbit, and a cat, collecting an ORANGE onion and a PURPLE mushroom, while avoiding copper, silver, and gold coins.")
 
-   'animal-027
-   (short-template "a copper coin eating 5 BLUE coins, collecting 3 GREEN coins, and avoiding a PURPLE coin.")
-
-   'animal-028
-   (read-multi-game-template "The 1st game has a rabbit eating 5 RED mushrooms, collecting 5 copper and 5 silver coins, and avoiding 5 RED rabbits.
-                              The 2nd game has an onion eating 2 different foods, collecting 2 different coins, and avoiding 2 enemies.")
-
-   'animal-029
-   (read-multi-game-template "The 1st game has an avatar eating a food.
-                              The 2nd game has an avatar collecting a coin.
-                              The 3rd game has an avatar avoiding an enemy.")
-
-   'animal-030
-   (read-multi-game-template "The 1st game has a cat eating 4 GREEN apples and 3 mushrooms, collecting copper, silver, and gold coins, and avoiding  4 turkey and 6 wolves.
-                              The 2nd game has a dog eating 4 onions, 2 RED peppers, and another food, collecting 10 gold coins, and avoiding a cat, a horse, a rabbit, a turkey, and a wolf.
-                              The 3rd game has a mushroom eating 4 mushrooms, collecting 3 RED peppers and 2 ORANGE apples, while avoiding copper, silver, and gold coins.")
-))
-
-  
+   ))

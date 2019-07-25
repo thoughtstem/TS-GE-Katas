@@ -12,12 +12,14 @@
                "ts-survival-asp-2019"
                "ts-survival-minecraft-summer-camp-2019"
                "ts-survival-pokemon-summer-camp-2019"
+               "ts-adventure-asp-2019"
                "ts-adventure-mario-summer-camp-2019"
                "ts-adventure-harrypotter-summer-camp-2019"
                "ts-k2-farm-summer-camp-2019"
                "ts-k2-sea-summer-camp-2019"
                "ts-k2-hero-summer-camp-2019"
                "ts-k2-zoo-summer-camp-2019"
+               "ts-k2-asp-fall-2019"
                ))
 
 (define build-deps '("scribble-lib" "racket-doc" "rackunit-lib"))

@@ -10,8 +10,7 @@
 
 @title{Adventures in Coding and Animals: K-2nd}
 
-ANIMAL BADGES HERE
-@;k2-farm-badges
+@k2-animal-badges
 
 @table-of-contents[]
 
@@ -34,7 +33,7 @@ ANIMAL BADGES HERE
 @section{Enemy Katas}
 @(render day-five)
 
-@include-section["practice-game-jam.scrbl"]
+@include-section["k2-game-jam.scrbl"]
 
 @section{All Animal Katas}
 @(render animal)

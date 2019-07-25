@@ -40,6 +40,10 @@
                                (hexagon-triad superman-icon black-widow-icon lightning-icon 
                                               bright-blue bright-purple bright-red))
 
+                (define-badges k2-animal-badges  
+                               (hexagon-triad rabbit-icon cat-icon wolf-icon 
+                                              bright-yellow bright-red bright-blue))
+
 
 
                 (define-badges survival-badges
@@ -73,7 +77,7 @@
                                               googly-orange googly-green googly-purple))
 
                 (define-badges adventure-badges
-                               (hexagon-triad heal-icon bow-icon spear-icon
+                               (hexagon-triad scroll-icon bow-icon key-icon
                                               googly-red googly-green googly-blue))
 
                 (define-badges lotr-badges

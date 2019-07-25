@@ -206,7 +206,7 @@
                 [FRONT-BG-COLOR    googly-blue]
                 [FRONT-FG-COLOR clear-white]
                 [FRONT-TITLE    (title "(town/sky)")]) )))
-
+|#
 ;----- ADVENTURE
 (define (ts-adventure-asp-2019->Desktop)
   (local-require ts-adventure-asp-2019/katas)
@@ -216,24 +216,25 @@
                ((collection-apply (curryr try-take 4) avatar-katas)
                 [FRONT-BG-COLOR googly-red]
                 [FRONT-FG-COLOR clear-white]
-                [FRONT-TITLE    (title "(?)")])
+                [FRONT-TITLE    (title "(avatar)")])
                ((collection-apply (curryr try-take 5) enemy-katas)
                 [FRONT-BG-COLOR googly-orange]
                 [FRONT-FG-COLOR clear-white] 
-                [FRONT-TITLE    (title "(?)")])
+                [FRONT-TITLE    (title "(enemy)")])
                ((collection-apply (curryr try-take 5) npc-katas)
                 [FRONT-BG-COLOR googly-yellow]
                 [FRONT-FG-COLOR clear-white] 
-                [FRONT-TITLE    (title "(?)")])
+                [FRONT-TITLE    (title "(npc)")])
                ((collection-apply (curryr try-take 5) food-katas)
                 [FRONT-BG-COLOR googly-green]
                 [FRONT-FG-COLOR clear-white] 
-                [FRONT-TITLE    (title "(?)")])
+                [FRONT-TITLE    (title "(food)")])
                ((collection-apply (curryr try-take 5) fetch-quest-katas)
                 [FRONT-BG-COLOR googly-purple]
                 [FRONT-FG-COLOR clear-white] 
-                [FRONT-TITLE    (title "(?)")]) )))
+                [FRONT-TITLE    (title "(fetch-quest)")]) )))
 
+#|
 (define (ts-adventure-mario-summer-camp-2019->Desktop)
   (local-require ts-adventure-mario-summer-camp-2019/katas)
 
@@ -390,7 +391,7 @@
                               [FRONT-BG-COLOR    bright-blue]
                               [FRONT-FG-COLOR    clear-white]
                               [FRONT-TITLE       (title "(more-friend)")]))))
-
+|#
 (define (ts-k2-asp-fall-2019->Desktop)
   (local-require ts-k2-asp-fall-2019/katas)
 
@@ -417,7 +418,7 @@
                               [FRONT-FG-COLOR    clear-white]
                               [FRONT-TITLE       (title "(enemy)")]))))
 
-(define (all->Desktop)
+;(define (all->Desktop)
   ;(ts-battle-arena-asp-2019->Desktop)
   ;(ts-battle-arena-avengers-summer-camp-2019->Desktop)
   ;(ts-battle-arena-fortnite-summer-camp-2019->Desktop)
@@ -427,7 +428,7 @@
   ;(ts-survival-minecraft-summer-camp-2019->Desktop)
   ;(ts-survival-pokemon-summer-camp-2019->Desktop)
 
-  (ts-adventure-asp-2019->Desktop)
+  ;(ts-adventure-asp-2019->Desktop)
   ;(ts-adventure-mario-summer-camp-2019->Desktop)
   ;(ts-adventure-harrypotter-summer-camp-2019->Desktop)
 
@@ -435,9 +436,9 @@
   ;(ts-k2-sea-summer-camp-2019->Desktop)
   ;(ts-k2-hero-summer-camp-2019->Desktop)
   ;(ts-k2-zoo-summer-camp-2019->Desktop)
-  (ts-k2-asp-fall-2019->Desktop)
-  )
+  ;(ts-k2-asp-fall-2019->Desktop)
+;)
 
-|#
+
 ;(all->Desktop)
 
