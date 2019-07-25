@@ -17,16 +17,16 @@
    (ts-camp-materials        "COACH RESOURCES")
    
    (ts-battle-arena-asp-2019 "WEEKEND WORKSHOPS -- BATTLE-ARENA")
+   (ts-adventure-asp-2019 "ADVENTURE")
+   (ts-k2-asp-fall-2019   "K2 ANIMAL (ASP FALL)")
    (ts-enlace-summer-2019    "DATA SCIENCE")
    )
 
   ;/unlisted.html data
   ( 
     (ts-survival           "SURVIVAL BASE")
-    (ts-battle-arena       "BATTLE-ARENA BASE")
+    (ts-battle-arena       "BATTLEARENA BASE")
     (ts-adventure          "ADVENTURE BASE")
-    (ts-adventure-asp-2019 "ADVENTURE ASP FALL")
-    (ts-k2-asp-fall-2019   "K2 ASP FALL")
     ;(ts-coach             "COACH TRAINING KATAS")
     (ts-kata-util          "KATA UTIL")
   )
