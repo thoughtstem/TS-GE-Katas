@@ -351,7 +351,7 @@
    (short-template "a hippopotamus eating 5 PURPLE foods.")
 
    'zoo-011
-   (short-template "a penguin eating 3 GREEN fish and 5 RED fish.")
+   (short-template "a monkey eating 3 GREEN fish and 5 RED fish.")
 
    'zoo-012
    (short-template "an animal eating 5 BLUE foods and 5 GREEN foods.")
