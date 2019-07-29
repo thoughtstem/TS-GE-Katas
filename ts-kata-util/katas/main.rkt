@@ -16,6 +16,7 @@
          set-stimulus
          
          kata-name
+         kata-complete-name
          name-contains?
          
          (struct-out response)
@@ -509,8 +510,22 @@
      " ")
     "")))
 
+(define (kata-id->kata-complete-name s)
+  (string-titlecase
+   ;(regexp-replace*
+    ;#rx"[0-9]*"
+    (regexp-replace*
+     #rx"-"
+     (~a s)
+     " ")
+    ;"")
+  ))
+
 (define (kata-name k)
   (kata-id->kata-name (kata-id k)))
+
+(define (kata-complete-name k)
+  (kata-id->kata-complete-name (kata-id k)))
 
 
 (define (name-contains? k s)

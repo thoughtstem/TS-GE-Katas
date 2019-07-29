@@ -21,7 +21,7 @@
 (require (only-in scribble/manual image para subsection))
 
 (define (kata->title k)
-  (subsection (~a (kata-name k) " Kata")))
+  (subsection (~a (kata-complete-name k) " Kata")))
 
 (define (kata->tip k)
   (define tip (kata-tip k))
