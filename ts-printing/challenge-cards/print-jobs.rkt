@@ -404,19 +404,19 @@
                              ((collection-apply (curryr try-take 5) day-two) 
                               [FRONT-BG-COLOR    bright-orange]
                               [FRONT-FG-COLOR    clear-white]
-                              [FRONT-TITLE       (title "(more-food)")])
+                              [FRONT-TITLE       (title "(friend)")])
                              ((collection-apply (curryr try-take 5) day-three) 
                               [FRONT-BG-COLOR    bright-yellow]
                               [FRONT-FG-COLOR    clear-white]
-                              [FRONT-TITLE       (title "(coin)")])
+                              [FRONT-TITLE       (title "(more-friend)")])
                              ((collection-apply (curryr try-take 5) day-four)
                               [FRONT-BG-COLOR    bright-green]
                               [FRONT-FG-COLOR    clear-white]
-                              [FRONT-TITLE       (title "(more-coin)")])
+                              [FRONT-TITLE       (title "(enemy)")])
                              ((collection-apply (curryr try-take 5) day-five)
                               [FRONT-BG-COLOR    bright-blue]
                               [FRONT-FG-COLOR    clear-white]
-                              [FRONT-TITLE       (title "(enemy)")]))))
+                              [FRONT-TITLE       (title "(more-enemy)")]))))
 
 ;(define (all->Desktop)
   ;(ts-battle-arena-asp-2019->Desktop)
