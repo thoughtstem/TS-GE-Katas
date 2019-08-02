@@ -16,9 +16,9 @@
     
    (ts-camp-materials        "COACH RESOURCES")
    
-   (ts-battle-arena-asp-2019 "WEEKEND WORKSHOPS -- BATTLE-ARENA")
-   (ts-adventure-asp-2019 "ADVENTURE")
-   (ts-k2-asp-fall-2019   "K2 ANIMAL (ASP FALL)")
+   ;(ts-battle-arena-asp-2019 "WEEKEND WORKSHOPS -- BATTLE-ARENA")
+   (ts-adventure-asp-2019 "ADVENTURE GAME")
+   (ts-k2-asp-fall-2019   "K2 ANIMAL GAME")
    (ts-enlace-summer-2019    "DATA SCIENCE")
    )
 

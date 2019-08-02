@@ -43,7 +43,7 @@
         (range (kata->num-dollars k)))))
 
 (define (kata->title k)
-  (subsection (~a (kata-name k) " "
+  (subsection (~a (kata-complete-name k) " "
                   "Kata "
                   "(difficulty = " (kata->difficulty k) ")")))
 

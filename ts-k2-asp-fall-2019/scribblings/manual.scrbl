@@ -21,20 +21,20 @@
 @section{Food Katas}
 @(render day-one)
 
-@section{More Food Katas}
+@section{Friends Katas}
 @(render day-two)
 
-@section{Coin Katas}
+@section{More Friends Katas}
 @(render day-three)
 
-@section{More Coin Katas}
+@section{Enemies Katas}
 @(render day-four)
 
-@section{Enemy Katas}
+@section{More Enemies Katas}
 @(render day-five)
 
 @include-section["k2-game-jam.scrbl"]
 
-@section{All Animal Katas}
-@(render animal)
+@;section{All Animal Katas}
+@;(render animal)
 
