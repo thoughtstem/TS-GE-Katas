@@ -1,0 +1,29 @@
+\documentclass{article}
+\usepackage{lipsum}
+
+\newlength{\bottomMargin}
+\setlength{\bottomMargin}{1mm}
+
+% paper size
+\setlength{\paperwidth}{10cm}
+\setlength{\paperheight}{15cm}
+\setlength{\pdfpagewidth}{\paperwidth}
+\setlength{\pdfpageheight}{\paperheight}
+% horizontal dimensions
+\setlength{\oddsidemargin}{-1in}
+\setlength{\evensidemargin}{\oddsidemargin}
+\setlength{\textwidth}{\paperwidth}
+% vertical dimension
+\setlength{\topmargin}{-1in}
+\setlength{\headheight}{0pt}
+\setlength{\headsep}{0pt}
+%\setlength{\topskip}{10pt}   if you are about new class
+%\setlength\footskip{30pt} if you want a footer, here no place for footer
+\setlength{\textheight}{\paperheight}
+\addtolength{\textheight}{-\bottomMargin}
+
+
+
+\begin{document}
+\lipsum
+\end{document}
