@@ -1,0 +1,37 @@
+% set variables for margins
+\newlength{\topBottomMargin}
+\setlength{\topBottomMargin}{0.5in}
+
+\newlength{\sideMargin}
+\setlength{\sideMargin}{0.5in}
+
+% remove header
+\setlength{\headheight}{0pt}
+\setlength{\headsep}{0pt}
+
+% zero out and set top margin
+\setlength{\topmargin}{-1in}
+\addtolength{\topmargin}{\topBottomMargin}
+
+% zero out and set side margins
+\setlength{\oddsidemargin}{-1in}
+\addtolength{\oddsidemargin}{\sideMargin}
+\setlength{\evensidemargin}{\oddsidemargin}
+
+% set new paper width and height
+\setlength{\paperwidth}{8.5in}
+\setlength{\paperheight}{11in}
+\setlength{\pdfpagewidth}{\paperwidth}
+\setlength{\pdfpageheight}{\paperheight}
+
+% set new text width
+%\setlength{\topskip}{10pt}   if you are about new class
+\setlength\footskip{30pt}
+\setlength{\textwidth}{\paperwidth}
+\addtolength{\textwidth}{-\sideMargin}
+\addtolength{\textwidth}{-\sideMargin}
+
+% set new text height
+\setlength{\textheight}{\paperheight}
+\addtolength{\textheight}{-\topBottomMargin}
+\addtolength{\textheight}{-\topBottomMargin}
