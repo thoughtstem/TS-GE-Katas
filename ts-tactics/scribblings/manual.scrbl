@@ -3,7 +3,8 @@
 @(require "../tactics/lang.rkt"
           scribble/core
           scribble/html-properties
-          scribble/latex-properties)
+          scribble/latex-properties
+          racket/runtime-path)
 
 @(define (about #:title title
                 #:summary summary
@@ -23,10 +24,13 @@
      (bold "Long-term cognitive outcomes")
      (itemize (map item long-term))))
 
+@(define-runtime-path tactics-doc-css-path "./tactics-doc.css")
+@(define-runtime-path tactics-doc-tex-path "./tactics-doc.tex")
+
 @(define pdf-style
    (make-style "pdf-style"
-          (list (css-addition "tactics-doc.css")
-                (tex-addition "tactics-doc.tex")
+          (list (css-addition tactics-doc-css-path)
+                (tex-addition tactics-doc-tex-path)
                 )))
 
 @title[#:style pdf-style]{ThoughtSTEM Language Learning Handbook}
