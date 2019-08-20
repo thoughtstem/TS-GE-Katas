@@ -14,27 +14,32 @@
     ;tell
     supplies
     phase
-    until)
+    until
+    body-action)
   (rename-out
     ;(make-tell tell)
     (make-supplies supplies)
     (make-phase phase)
     (make-until until)
-    ))
+    (make-body-action body-action)
+    )
+  )
 
 (require "base-base.rkt")
 
 ;VERBS
 
 (define (information-move english information destination)
-  (move english information destination))
+  (move (string-titlecase-first english) information destination))
 
 (define (information-edit english info)
-  (change english info))
+  (change (string-titlecase-first english) info))
 
 (define (information-check english info)
   (predicate english info))
 
+(define (make-body-action english)
+  (body-action (string-titlecase-first english)))
 
 ;ADJECTIVES
 

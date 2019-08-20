@@ -35,7 +35,10 @@
   ;Set theory
   (struct-out group)
   (struct-out group-add)
-  (struct-out group-subtract))
+  (struct-out group-subtract)
+
+  string-titlecase-first
+  string-downcase-first)
 
 (define-type Top-form (U instruction phase until go-sub tell))
 (define-type Thing    (U Symbol String Modified-Thing)) ;Allow Strings because things can be sentences...
@@ -147,6 +150,16 @@
 
 (struct go-sub
   ([call : Any]))
+
+(define (string-titlecase-first str)
+  (define str-list (string-split (~a str)))
+  (string-join (cons (string-titlecase (first str-list))
+                     (rest str-list))))
+
+(define (string-downcase-first str)
+  (define str-list (string-split (~a str)))
+  (string-join (cons (string-downcase (first str-list))
+                     (rest str-list))))
 
 
 

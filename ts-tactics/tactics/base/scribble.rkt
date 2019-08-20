@@ -131,7 +131,7 @@
     ;Like a "store" operation -- var dest = info 
     [(move english info dest) 
      (list
-       (bold (string-titlecase (first (string-split (~a english )))))
+       (bold (first (string-split (~a english ))))
        " "
        (string-join (rest (string-split (~a english))))
        " "
@@ -144,14 +144,14 @@
     ;Verb is some arbitrary function
     [(change verb dest)
      (list
-       (bold (string-titlecase (first (string-split (~a verb )))))
+       (bold (first (string-split (~a verb ))))
        " "
        (string-join (rest (string-split (~a verb))))
        " "
        (object->scribble dest))]
     [(body-action english)
      (list
-       (bold (string-titlecase (first (string-split (~a english )))))
+       (bold (first (string-split (~a english ))))
        " "
        (string-join (rest (string-split (~a english)))))]
     [(directed-action verb english object)
@@ -179,6 +179,22 @@
 (define phase-name-style
   (style "PhaseName"
          '()))
+
+(define (verb-downcase-first v)
+  (cond [(move? v)         (let ([str (move-english v)])
+                             (struct-copy move v
+                                          [english (string-downcase-first str)]))]
+        [(change? v)       (let ([str (change-english v)])
+                             (struct-copy change v
+                                          [english (string-downcase-first str)]))]
+        [(set-object? v)   (let ([str (set-object-english v)])
+                             (struct-copy set-object v
+                                          [english (string-downcase-first str)]))]
+        [(body-action? v)  (let ([str (body-action-english v)])
+                             (struct-copy body-action v
+                                          [english (string-downcase-first str)]))]
+        [(predicate? v) v]
+        [else (error "That wasn't a known verb.")]))
 
 (define (instruction->scribble i)
   (if (list? i)
@@ -208,7 +224,7 @@
          " "
          (object->scribble subject)
          " to "
-         (verb->scribble verb))]
+         (verb->scribble (verb-downcase-first verb)))]
 
       [(phase name instructions) 
        ;(elem #:style 
@@ -218,7 +234,7 @@
          (elem #:style phase-name-style (string-upcase (string-replace (~a name ) "-" " ")))
          (nest (apply (curry itemlist #:style (if (= (length instructions) 1)
                                                   #f
-                                                  'ordered))
+                                                  (style 'ordered (list (attributes (list (cons 'start "1"))))))) ;starting index doesn't work for pdf
                       (map item (instructions->scribble instructions))))) ]
       
       [(supplies items)
