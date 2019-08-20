@@ -11,11 +11,16 @@
   ;Syntactic sugarings
   (except-out
     (all-from-out "base-base.rkt")
+    ;tell
+    supplies
     phase
     until)
-  (rename-out 
+  (rename-out
+    ;(make-tell tell)
+    (make-supplies supplies)
     (make-phase phase)
-    (make-until until)))
+    (make-until until)
+    ))
 
 (require "base-base.rkt")
 
@@ -36,6 +41,8 @@
 (define (object-part english other-object)
   (adjective english other-object))
 
+(define (make-supplies . items)
+  (supplies items))
 
 (define (make-phase name . instructions)
   (phase name 

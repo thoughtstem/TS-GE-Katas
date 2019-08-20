@@ -5,43 +5,49 @@
 (require "../lang.rkt")
 
 (define (code-anatomy coach 
-                             students computers
-                             challenge-card 
-                             whiteboard 
-                             markers)
+                      students computers
+                      challenge-card 
+                      whiteboard 
+                      markers)
 
   (list
-    (instruction coach  
-                 (hand-write 
-                   (contents-of 
-                     (back-of challenge-card)) 
-                   (bottom-half-of whiteboard)))
+   (supplies computers
+             whiteboard
+             markers
+             challenge-card)
+   (phase 'Actions
+          (list
+           (instruction coach  
+                        (hand-write 
+                         (contents-of 
+                          (back-of challenge-card)) 
+                         (bottom-half-of whiteboard)))
 
-    (instruction coach  
-                 (body-action "put a box around the #lang line"))
+           (instruction coach  
+                        (body-action "put a box around the #lang line"))
 
-    (instruction coach
-                 (body-action "put a box around all definitions"))
+           (instruction coach
+                        (body-action "put a box around all definitions"))
 
 
-    (instruction coach
-                 (body-action "put a box around all top-level expressions"))
+           (instruction coach
+                        (body-action "put a box around all top-level expressions"))
 
-    (instruction coach
-                 (body-action "circle all key-words")) 
+           (instruction coach
+                        (body-action "circle all key-words")) 
 
-    (instruction coach
-                 (body-action "write the total number of key words")) 
+           (instruction coach
+                        (body-action "write the total number of key words")) 
 
-    (instruction coach
-                 (body-action "put a dot at the beginning of all parenthesized expressions"))
+           (instruction coach
+                        (body-action "put a dot at the beginning of all parenthesized expressions"))
 
-    (instruction coach
-                 (body-action "write up the total number of expressions"))
+           (instruction coach
+                        (body-action "write up the total number of expressions"))
 
-    (instruction coach
-                 (body-action "above each expression dot, write the expression's nesting depth"))
-    ))
+           (instruction coach
+                        (body-action "above each expression dot, write the expression's nesting depth"))
+           ))))
 
 (module+ test
   (print-tactic

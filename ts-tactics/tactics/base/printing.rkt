@@ -112,6 +112,24 @@
                   (pp:text (string-upcase (~a "" name "")))
                   (print-instructions instructions)))]
 
+      [(supplies items)
+       (pp:nest indentation-level
+                (pp:v-append
+                 (pp:text "SUPPLIES")
+                 (apply pp:v-append
+                       (map (compose pp:text
+                                     ~a) items))))]
+
+      [(tell subject verb)
+       (pp:nest indentation-level
+                (pp:v-append
+                 (pp:h-append
+                  (pp:h-append (pp:text "Tell ")
+                               (print-subject (tell-subject i))
+                               (pp:text " to "))
+                  (print-verb (tell-verb i)))
+                 ))]
+
       [(until predicate instructions) 
        (pp:nest indentation-level
                 (pp:v-append

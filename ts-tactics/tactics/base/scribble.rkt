@@ -4,9 +4,12 @@
 
 (require "base-base.rkt"
          scribble/base
+         scribble/html-properties
+         scribble/latex-properties
          (only-in scribble/core
                   style
-                  color-property)
+                  color-property
+                  background-color-property)
          (only-in scribble/manual
                   codeblock)
          pict)
@@ -20,6 +23,16 @@
         (style #f (list (color-property (list 100 100 100))))
         ss))
 
+(define (orange . ss)
+  (elem #:style 
+        (style #f (list (color-property (list 210 106 51))))
+        ss))
+
+(define (blue . ss)
+  (elem #:style 
+        (style #f (list (color-property (list 88 90 252))))
+        ss))
+
 (define (object->scribble d)
   (match d
     [(adjective english object) 
@@ -30,9 +43,9 @@
     [_ 
       (if (string? d)
         (if (regexp-match #px"\"" d)
-         (gray d)
+         (orange d)
          d)
-        (gray
+        (orange
           (~a "[" d "]")))]))
 
 (define (predicate->scribble p)
@@ -55,8 +68,16 @@
            " "
            (predicate->scribble that))))]))
 
+(define run-kata-challenge
+  (phase 'Kata-Challenge
+          (list (instruction 'tactics-master
+                             (body-action (~a "Call in the coach when you and the rest of the players are ready for your kata"
+                                              " challenge. Pass the challenge to earn your kata!"))))))
+
 (define (tactic->scribble t)
-  (instruction->scribble t))
+  (if (list? t)
+      (instruction->scribble (append t (list run-kata-challenge)))
+      (instruction->scribble (list t run-kata-challenge))))
 
 (define (subject->scribble s)
   (match s
@@ -99,7 +120,7 @@
   (match v
     ;Like an assertion 
     [(branching-verb predicate true-verb false-verb)
-     (nest
+     (list
        (list
          (bold (string-upcase "If"))
          (hspace 1)
@@ -110,7 +131,9 @@
     ;Like a "store" operation -- var dest = info 
     [(move english info dest) 
      (list
-       (~a english )   
+       (bold (string-titlecase (first (string-split (~a english )))))
+       " "
+       (string-join (rest (string-split (~a english))))
        " "
        (object->scribble info) 
        " "
@@ -121,12 +144,16 @@
     ;Verb is some arbitrary function
     [(change verb dest)
      (list
-       (~a verb )   
+       (bold (string-titlecase (first (string-split (~a verb )))))
+       " "
+       (string-join (rest (string-split (~a verb))))
        " "
        (object->scribble dest))]
     [(body-action english)
      (list
-       (~a english))]
+       (bold (string-titlecase (first (string-split (~a english )))))
+       " "
+       (string-join (rest (string-split (~a english)))))]
     [(directed-action verb english object)
      (list
        (verb->scribble verb)
@@ -134,6 +161,14 @@
        english
        " " 
        (object->scribble object))]
+    [(set-object object english thing)
+     (list (bold "Set")
+           " "
+           (object->scribble object)
+           " "
+           english
+           " "
+           thing)]
     [(adverb verb english)
      (list 
        (verb->scribble verb)
@@ -141,6 +176,9 @@
     [_ 
       (~a v)]))
 
+(define phase-name-style
+  (style "PhaseName"
+         '()))
 
 (define (instruction->scribble i)
   (if (list? i)
@@ -153,23 +191,46 @@
            "#lang ts-tactics\n\n"
            (substring (~v call) 1)))]
       [(instruction subject verb)
-       (nest
-         (list
-           (bold
-             (subject->scribble subject))
-           " "
-           (arrow 10 0)
-           " "
-           (verb->scribble verb)))]
+       (list
+           ;(bold
+           ;  (subject->scribble subject))
+           ;" "
+           ;(arrow 10 0)
+           ;(arrowhead 10 0)
+           ;" "
+           (verb->scribble verb))]
+
+      [(tell subject verb)
+       (list
+         ;(arrowhead 10 0)
+         ;" "
+         (bold "Tell")
+         " "
+         (object->scribble subject)
+         " to "
+         (verb->scribble verb))]
 
       [(phase name instructions) 
-
+       ;(elem #:style 
+        ;(style #f (list (color-property (list 100 100 100))))
+        ;ss))
        (list ;nested #:style 'code-inset
-         (bold (string-upcase (~a name )))
-         (instructions->scribble instructions)) ]
-
+         (elem #:style phase-name-style (string-upcase (string-replace (~a name ) "-" " ")))
+         (nest (apply (curry itemlist #:style (if (= (length instructions) 1)
+                                                  #f
+                                                  'ordered))
+                      (map item (instructions->scribble instructions))))) ]
+      
+      [(supplies items)
+       (list
+        (elem #:style phase-name-style "SUPPLIES")
+        (nest (apply itemlist (map (compose item
+                                            string-titlecase
+                                            (curryr string-replace "-" " ")
+                                            (curryr string-trim "the-")
+                                             ~a) items))))]
       [(until predicate instructions) 
-       (nest
+       (list
          (bold (string-upcase "Until"))  
          (hspace 1)
          (predicate->scribble predicate)
@@ -182,7 +243,8 @@
 (define (instructions->scribble i)
   (if (instruction? i)
     (instruction->scribble i)
-    (map instruction->scribble i)))
+    (map instruction->scribble i)
+    ))
 
 
 
