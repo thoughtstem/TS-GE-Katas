@@ -46,6 +46,7 @@
                   'the-challenge-card
                   'the-whiteboard
                   'the-markers
+                  'the-timer
                   ))
 
 @;{

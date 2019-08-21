@@ -6,6 +6,7 @@
   type-up
   hand-write
   erase-all-from
+  erase-all-code-from
   remove-some-identifiers
   erase-some-identifiers
   introduce-subtle-bugs
@@ -41,6 +42,12 @@
 (define (erase-all-from dest)
   (information-edit "erase all from" 
                     (contents-of dest)))
+
+(define (erase-all-code-from dest #:clause [clause #f])
+  (information-edit (~a "erase all code"
+                        (if clause (~a clause " ") " ")
+                        "from")
+                    dest))
 
 
 (define (blank? dest)

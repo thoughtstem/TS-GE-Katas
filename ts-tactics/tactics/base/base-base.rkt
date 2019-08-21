@@ -5,10 +5,11 @@
   you
 
   ;Top levels
+  (struct-out tactic-section)
   (struct-out supplies)
   (struct-out instruction)
   (struct-out tell)
-  (struct-out phase) 
+  (struct-out phase)
   (struct-out until)
   (struct-out go-sub)
 
@@ -40,7 +41,7 @@
   string-titlecase-first
   string-downcase-first)
 
-(define-type Top-form (U instruction phase until go-sub tell))
+(define-type Top-form (U tactic-section instruction phase until go-sub tell))
 (define-type Thing    (U Symbol String Modified-Thing)) ;Allow Strings because things can be sentences...
 (define-type Person   (U Symbol Modified-Person))
 (define-type Place    (U Symbol Modified-Place))
@@ -73,6 +74,10 @@
 (struct instruction ([subject : Subject] 
                      [verb : Verb])
   #:transparent)
+
+(struct tactic-section ([name : Symbol] 
+                 [instructions : (Listof Top-form)]) #:transparent
+  )
 
 (struct phase ([name : Symbol] 
                [instructions : (Listof Top-form)]) #:transparent

@@ -109,6 +109,12 @@
       [(phase name instructions) 
        (pp:nest indentation-level
                 (pp:v-append
+                  (pp:text (string-titlecase (~a "" name "")))
+                  (print-instructions instructions)))]
+
+      [(tactic-section name instructions) 
+       (pp:nest indentation-level
+                (pp:v-append
                   (pp:text (string-upcase (~a "" name "")))
                   (print-instructions instructions)))]
 

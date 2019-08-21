@@ -9,7 +9,7 @@
   challenge-card
 
   contents-of
-  stimuli-of
+  stimulus-of
   code-of
   code-on
   front-of
@@ -29,8 +29,8 @@
 (define (contents-of object)
   (object-part "the contents of" object))
 
-(define (stimuli-of object)
-  (object-part "the stimuli of" object))
+(define (stimulus-of object)
+  (object-part "the stimulus of" object))
 
 (define (code-of object)
   (object-part "the code of" object))

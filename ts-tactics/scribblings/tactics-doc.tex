@@ -36,11 +36,14 @@
 \addtolength{\textheight}{-\topBottomMargin}
 \addtolength{\textheight}{-\topBottomMargin}
 
-% set PhaseName style
+% set SectionName style
 \usepackage{xcolor}
 \definecolor{tacticsGreen}{HTML}{BCDEA0}
 \setlength{\fboxsep}{2mm}
-\newcommand{\PhaseName}[1]{\fcolorbox{black}{tacticsGreen}{#1}}
+\newcommand{\TacticSectionName}[1]{\fcolorbox{black}{tacticsGreen}{#1}}
+
+\definecolor{tacticsBlue}{HTML}{585AFC}
+\newcommand{\PhaseName}[1]{\fcolorbox{black}{tacticsBlue}{#1}}
 
 % set sans serif font as default
 \renewcommand{\familydefault}{\sfdefault}

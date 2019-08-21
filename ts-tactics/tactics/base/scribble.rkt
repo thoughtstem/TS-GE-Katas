@@ -69,10 +69,10 @@
            (predicate->scribble that))))]))
 
 (define run-kata-challenge
-  (phase 'Kata-Challenge
-          (list (instruction 'tactics-master
-                             (body-action (~a "Call in the coach when you and the rest of the players are ready for your kata"
-                                              " challenge. Pass the challenge to earn your kata!"))))))
+  (tactic-section 'Kata-Challenge
+                  (list (instruction 'tactics-master
+                                     (body-action (~a "Call in the coach when you and the rest of the players are ready for your kata"
+                                                      " challenge. Pass the challenge to earn your kata!"))))))
 
 (define (tactic->scribble t)
   (if (list? t)
@@ -137,7 +137,7 @@
        " "
        (object->scribble info) 
        " "
-       "on"     
+       "onto"     
        " "
        (object->scribble dest))]
     ;Like an "update" operation -- var dest = (verb dest)
@@ -178,6 +178,10 @@
 
 (define phase-name-style
   (style "PhaseName"
+         '()))
+
+(define tactic-section-name-style
+  (style "TacticSectionName"
          '()))
 
 (define (verb-downcase-first v)
@@ -231,15 +235,25 @@
         ;(style #f (list (color-property (list 100 100 100))))
         ;ss))
        (list ;nested #:style 'code-inset
-         (elem #:style phase-name-style (string-upcase (string-replace (~a name ) "-" " ")))
+         (italic (string-titlecase (string-replace (~a name) "-" " ")))
          (nest (apply (curry itemlist #:style (if (= (length instructions) 1)
                                                   #f
                                                   (style 'ordered (list (attributes (list (cons 'start "1"))))))) ;starting index doesn't work for pdf
                       (map item (instructions->scribble instructions))))) ]
+
+      [(tactic-section name instructions)
+       (list
+        (elem #:style tactic-section-name-style (string-upcase (string-replace (~a name) "-" " ")))
+        (if ((listof instruction?) instructions)
+            (nest (apply (curry itemlist #:style (if (= (length instructions) 1)
+                                                     #f
+                                                     (style 'ordered (list (attributes (list (cons 'start "1"))))))) ;starting index doesn't work for pdf
+                         (map item (instructions->scribble instructions))))
+            (nest (instructions->scribble instructions)))) ] ;don't nest if its a phase/ not instructions
       
       [(supplies items)
        (list
-        (elem #:style phase-name-style "SUPPLIES")
+        (elem #:style tactic-section-name-style "SUPPLIES")
         (nest (apply itemlist (map (compose item
                                             string-titlecase
                                             (curryr string-replace "-" " ")

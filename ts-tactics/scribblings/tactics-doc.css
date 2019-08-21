@@ -32,9 +32,20 @@ span{
 	font-family: Arial;
 }
 
-.PhaseName{
+.TacticSectionName{
 	font-family: Arial;
 	background-color: #BCDEA0;
+	border: 2px solid black;
+	border-radius: 8px;
+	padding-left: 8px;
+	padding-right: 8px;
+	padding-top: 4px;
+	padding-bottom: 4px;
+}
+
+.PhaseName{
+	font-family: Arial;
+	background-color: #585AFC;
 	border: 2px solid black;
 	border-radius: 8px;
 	padding-left: 8px;

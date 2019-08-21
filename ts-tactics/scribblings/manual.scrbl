@@ -313,7 +313,8 @@ After just one hour of coaching, you can self-assess with some of these question
                   'Team-Computers
                   'the-challenge-card
                   'the-whiteboard
-                  'the-markers))
+                  'the-markers
+                  'the-timer))
 
 If your students forget, here are a some reminders you can show them.
 

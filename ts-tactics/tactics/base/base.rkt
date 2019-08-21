@@ -11,13 +11,14 @@
   ;Syntactic sugarings
   (except-out
     (all-from-out "base-base.rkt")
-    ;tell
+    tactic-section
     supplies
     phase
     until
     body-action)
   (rename-out
     ;(make-tell tell)
+    (make-tactic-section tactic-section)
     (make-supplies supplies)
     (make-phase phase)
     (make-until until)
@@ -51,6 +52,10 @@
 
 (define (make-phase name . instructions)
   (phase name 
+         (flatten instructions)))
+
+(define (make-tactic-section name . instructions)
+  (tactic-section name 
          (flatten instructions)))
 
 
