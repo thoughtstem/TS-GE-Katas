@@ -1,6 +1,10 @@
 #lang scribble/manual
 
-@(require "../tactics/lang.rkt")
+@(require "../tactics/lang.rkt"
+          scribble/core
+          scribble/html-properties
+          scribble/latex-properties
+          racket/runtime-path)
 
 @(define (about #:title title
                 #:summary summary
@@ -20,7 +24,16 @@
      (bold "Long-term cognitive outcomes")
      (itemize (map item long-term))))
 
-@title{ThoughtSTEM Language Learning Handbook}
+@(define-runtime-path tactics-doc-css-path "./tactics-doc.css")
+@(define-runtime-path tactics-doc-tex-path "./tactics-doc.tex")
+
+@(define pdf-style
+   (make-style "pdf-style"
+          (list (css-addition tactics-doc-css-path)
+                (tex-addition tactics-doc-tex-path)
+                )))
+
+@title[#:style pdf-style]{ThoughtSTEM Language Learning Handbook}
 
 @section{Introduction}
 
@@ -185,7 +198,8 @@ a loop where the coach writes code on the whiteboard and removes parts from it u
                          'Team-Computers
                          'the-challenge-card
                          'the-whiteboard
-                         'the-markers))
+                         'the-markers
+                         'the-timer))
 
 By the time the tactic is complete, the team members have written the entire code without any prompting -- which is precisely what the
 official test requires them to do.  Thus, the test can be skipped (since they did it during the tactic).  No need to test the team twice!
@@ -267,7 +281,8 @@ After just one hour of coaching, you can self-assess with some of these question
                          'Team-Computers
                          'the-challenge-card
                          'the-whiteboard
-                         'the-markers))
+                         'the-markers
+                         'the-timer))
 
 
 @(about #:title   "Disintegrating Code"
@@ -298,7 +313,8 @@ After just one hour of coaching, you can self-assess with some of these question
                   'Team-Computers
                   'the-challenge-card
                   'the-whiteboard
-                  'the-markers))
+                  'the-markers
+                  'the-timer))
 
 If your students forget, here are a some reminders you can show them.
 

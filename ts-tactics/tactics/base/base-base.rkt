@@ -5,14 +5,18 @@
   you
 
   ;Top levels
+  (struct-out tactic-section)
+  (struct-out supplies)
   (struct-out instruction)
-  (struct-out phase) 
+  (struct-out tell)
+  (struct-out phase)
   (struct-out until)
   (struct-out go-sub)
 
   ;Verbs
   (struct-out move)
   (struct-out change)
+  (struct-out set-object)
   (struct-out body-action) 
   (struct-out branching-verb) 
   verb
@@ -32,9 +36,12 @@
   ;Set theory
   (struct-out group)
   (struct-out group-add)
-  (struct-out group-subtract))
+  (struct-out group-subtract)
 
-(define-type Top-form (U instruction phase until go-sub))
+  string-titlecase-first
+  string-downcase-first)
+
+(define-type Top-form (U tactic-section instruction phase until go-sub tell))
 (define-type Thing    (U Symbol String Modified-Thing)) ;Allow Strings because things can be sentences...
 (define-type Person   (U Symbol Modified-Person))
 (define-type Place    (U Symbol Modified-Place))
@@ -52,14 +59,25 @@
 (define-type Verb     (U Alter Query Modified-Verb))
 (define-type Modified-Verb (U adverb directed-action))
 
-(define-type Alter   (U move change 
+(define-type Alter   (U move change set-object
                         body-action 
                         branching-verb))
-(define-type Query   (U predicate either both)) 
+(define-type Query   (U predicate either both))
+
+(struct supplies ([items : (Listof Thing)]) #:transparent)
+
+(struct tell ([subject : Subject]
+              [verb : Verb])
+  #:transparent)
+             
 
 (struct instruction ([subject : Subject] 
                      [verb : Verb])
   #:transparent)
+
+(struct tactic-section ([name : Symbol] 
+                 [instructions : (Listof Top-form)]) #:transparent
+  )
 
 (struct phase ([name : Symbol] 
                [instructions : (Listof Top-form)]) #:transparent
@@ -76,6 +94,11 @@
 
 (struct change ([english : String] 
                 [thing : Noun]) #:transparent)
+
+; Set timer for 5 minutes. 
+(struct set-object ([object : Noun]
+                    [english : String]
+                    [thing : Noun]) #:transparent)
 
 (struct predicate ([english : String] 
                    [thing : Noun]) #:transparent)
@@ -132,6 +155,16 @@
 
 (struct go-sub
   ([call : Any]))
+
+(define (string-titlecase-first str)
+  (define str-list (string-split (~a str)))
+  (string-join (cons (string-titlecase (first str-list))
+                     (rest str-list))))
+
+(define (string-downcase-first str)
+  (define str-list (string-split (~a str)))
+  (string-join (cons (string-downcase (first str-list))
+                     (rest str-list))))
 
 
 
