@@ -45,5 +45,12 @@
 \definecolor{tacticsBlue}{HTML}{585AFC}
 \newcommand{\PhaseName}[1]{\fcolorbox{black}{tacticsBlue}{#1}}
 
+% set TacticKey style
+\usepackage{wrapfig}
+\definecolor{tacticsLightGray}{HTML}{DCDCDC}
+\newcommand{\TacticKey}[1]{\begin{wrapfigure}[6]{o}[-0.5in]{0.3\textwidth}
+								\scalebox{0.75}{\fcolorbox{black}{tacticsLightGray}{#1}}
+							\end{wrapfigure}}
+
 % set sans serif font as default
 \renewcommand{\familydefault}{\sfdefault}

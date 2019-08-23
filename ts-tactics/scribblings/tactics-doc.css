@@ -53,3 +53,12 @@ span{
 	padding-top: 4px;
 	padding-bottom: 4px;
 }
+
+.TacticKey{
+	float: right;
+	width: auto;
+	background-color: #DCDCDC;
+	border: 2px solid black;
+	border-radius: 20px;
+	padding: 4px;
+}
