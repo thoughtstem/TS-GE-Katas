@@ -2,7 +2,11 @@
 
 (provide code-anatomy)
 
-(require "../lang.rkt")
+(require "../lang.rkt"
+         racket/runtime-path)
+
+(define-runtime-path code-labels-3-6 "./img/code-anatomy-3-6.png")
+(define-runtime-path code-labels-k-2 "./img/code-anatomy-K-2.png")
 
 (define (code-anatomy coach 
                       students computers
@@ -11,6 +15,7 @@
                       markers
                       timer)
   (list
+   (tactic-key "1+" "10-15" "K+" "2/5" "<10" "lvl 1")
    (supplies computers
              whiteboard
              markers
@@ -23,25 +28,9 @@
                                       (code-of challenge-card) whiteboard))
                         (instruction coach  
                                      (body-action "Label and define the parts of the code with help from the players"))
-                        #|(instruction coach
-                                     (body-action "put a box around all definitions"))
-                        (instruction coach
-                                     (body-action "put a box around all top-level expressions"))
-                        (instruction coach
-                                     (body-action "circle all key-words")) 
-
-                        (instruction coach
-                                     (body-action "write the total number of key words")) 
-
-                        (instruction coach
-                                     (body-action "put a dot at the beginning of all parenthesized expressions"))
-
-                        (instruction coach
-                                     (body-action "write up the total number of expressions"))
-
-                        (instruction coach
-                                     (body-action "above each expression dot, write the expression's nesting depth"))|#
                         ))
+           (image-group (tactic-image code-labels-3-6 #:scale 0.40)
+                        (tactic-image code-labels-k-2 #:scale 0.40))
            (phase 'fill-in-the-blanks
                   (list (instruction coach
                                      (erase-all-code-from whiteboard #:clause ", leaving the labels," ))
@@ -49,7 +38,6 @@
                               (body-action "write the code back in, working together"))
                         (instruction coach
                                      (body-action "Repeat this phase until players have succedded without help twice"))))
-     
            (phase 'final-quiz
                   (list (instruction coach
                                      (erase-all-code-from whiteboard #:clause " again, leaving the labels,"))

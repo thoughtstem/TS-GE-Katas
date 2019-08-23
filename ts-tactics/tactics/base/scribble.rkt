@@ -12,7 +12,53 @@
                   background-color-property)
          (only-in scribble/manual
                   codeblock)
-         pict)
+         pict
+         racket/runtime-path
+         racket/draw
+         )
+
+; =========== TACTICS KEY ============
+(define-runtime-path clock-icon-path "./img/clock-icon.png")
+(define-runtime-path people-icon-path "./img/people-icon.png")
+(define-runtime-path grad-cap-icon-path "./img/grad-cap-icon.png")
+(define-runtime-path challenge-icon-path "./img/challenge-icon.png")
+(define-runtime-path lines-of-code-icon-path "./img/lines-of-code-icon.png")
+(define-runtime-path stairs-icon-path "./img/stairs-icon.png")
+
+(define clock-icon (inset (scale-to-fit (bitmap clock-icon-path) 30 30) 2))
+(define people-icon (inset (scale-to-fit (bitmap people-icon-path) 30 30) 2))
+(define grad-cap-icon (inset (scale-to-fit (bitmap grad-cap-icon-path) 30 30) 2))
+(define challenge-icon (inset (scale-to-fit (bitmap challenge-icon-path) 30 30) 2))
+(define lines-of-code-icon (inset (scale-to-fit (bitmap lines-of-code-icon-path) 30 30) 2))
+(define stairs-icon (inset (scale-to-fit (bitmap stairs-icon-path) 30 30) 2))
+
+(define (key-line icon value unit #:color [color (make-color 0 200 0)])
+  (hc-append 10
+             icon
+             (colorize (text (~a value #:min-width 5 #:align 'left) (cons 'bold 'modern) 20) color)
+             (text unit 'default 16)))
+
+(define tactics-light-gray (make-color 220 220 220))
+(define tactics-green      (make-color 188 222 160))
+(define tactics-dark-green (make-color 0 150 0))
+(define tactics-orange     (make-color 210 106 51))
+(define tactics-blue       (make-color 88 90 252))
+
+(define (draw-tactic-key players minutes grade difficulty lines student-level)
+  (define contents (vl-append (key-line people-icon        players       "players"           #:color tactics-orange )
+                              (key-line clock-icon         minutes       "minutes"           #:color tactics-orange )
+                              (key-line grad-cap-icon      grade         "grade level"       #:color tactics-orange )
+                              (key-line challenge-icon     difficulty    "TM difficulty"     #:color tactics-orange )
+                              (key-line lines-of-code-icon lines         "lines"             #:color tactics-orange )
+                              (key-line stairs-icon        student-level "player difficulty" #:color tactics-orange )
+                              ))
+  (define W (pict-width contents))
+  (define H (pict-height contents))
+  (inset (cc-superimpose ;(filled-rounded-rectangle (+ 16 W) (+ 16 H) -0.1 #:color tactics-light-gray #:border-width 2)
+                         contents
+                         ) 4))
+
+; ========= END OF TACTICS KEY =========
 
 (define (nest . ss)
   (nested #:style 'inset
@@ -200,10 +246,26 @@
         [(predicate? v) v]
         [else (error "That wasn't a known verb.")]))
 
+(define tactic-key-style
+  (style "TacticKey"
+         '()))
+
+(define (render-tactic-image ti)
+  (image (tactic-image-path ti)
+         #:scale (tactic-image-scale ti)
+         ))
+
 (define (instruction->scribble i)
   (if (list? i)
     (instructions->scribble i)
     (match i
+      [(tactic-key players minutes grade difficulty lines student-level)
+       (let ([key (draw-tactic-key players minutes grade difficulty lines student-level)])
+         (elem #:style tactic-key-style key))]
+      [(image-group images)
+       (apply centered (map render-tactic-image images))]
+      [(tactic-image path scale)
+       (centered (image path #:scale scale))]
       [(go-sub call)
        (nest 
          (bold (string-upcase "GO SUB: ")) 

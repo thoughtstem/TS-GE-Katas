@@ -11,6 +11,7 @@
                              markers
                              timer)
   (list
+   (tactic-key "1+" "10-20" "K+" "1/5" "<10" "lvl 1")
    (supplies computers
              whiteboard
              markers

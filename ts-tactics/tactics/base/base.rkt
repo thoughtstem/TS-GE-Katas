@@ -11,6 +11,8 @@
   ;Syntactic sugarings
   (except-out
     (all-from-out "base-base.rkt")
+    image-group
+    tactic-image
     tactic-section
     supplies
     phase
@@ -18,6 +20,8 @@
     body-action)
   (rename-out
     ;(make-tell tell)
+    (make-image-group image-group)
+    (make-tactic-image tactic-image)
     (make-tactic-section tactic-section)
     (make-supplies supplies)
     (make-phase phase)
@@ -67,3 +71,9 @@
 (define-syntax-rule (sub-routine exp)
   (go-sub 'exp))
 
+;Todo: add image formating options
+(define (make-image-group . images)
+  (image-group images))
+
+(define (make-tactic-image path #:scale [scale 1.0])
+  (tactic-image path scale))

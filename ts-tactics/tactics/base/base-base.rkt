@@ -5,7 +5,10 @@
   you
 
   ;Top levels
+  (struct-out tactic-key)
   (struct-out tactic-section)
+  (struct-out tactic-image)
+  (struct-out image-group)
   (struct-out supplies)
   (struct-out instruction)
   (struct-out tell)
@@ -41,7 +44,7 @@
   string-titlecase-first
   string-downcase-first)
 
-(define-type Top-form (U tactic-section instruction phase until go-sub tell))
+(define-type Top-form (U tactic-section instruction phase until go-sub tell tactic-image image-group))
 (define-type Thing    (U Symbol String Modified-Thing)) ;Allow Strings because things can be sentences...
 (define-type Person   (U Symbol Modified-Person))
 (define-type Place    (U Symbol Modified-Place))
@@ -64,6 +67,16 @@
                         branching-verb))
 (define-type Query   (U predicate either both))
 
+(define-type Value (U String Symbol Number))
+
+(struct tactic-key ([players : Value]
+                    [minutes : Value]
+                    [grade : Value]
+                    [difficulty : Value]
+                    [lines : Value]
+                    [student-level : Value])
+  #:transparent)
+
 (struct supplies ([items : (Listof Thing)]) #:transparent)
 
 (struct tell ([subject : Subject]
@@ -76,8 +89,13 @@
   #:transparent)
 
 (struct tactic-section ([name : Symbol] 
-                 [instructions : (Listof Top-form)]) #:transparent
+                        [instructions : (Listof Top-form)]) #:transparent
   )
+
+(struct tactic-image ([path : Path-String]
+                      [scale : Number]) #:transparent)
+
+(struct image-group ([images : (Listof tactic-image)]) #:transparent)
 
 (struct phase ([name : Symbol] 
                [instructions : (Listof Top-form)]) #:transparent

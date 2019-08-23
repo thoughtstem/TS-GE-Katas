@@ -96,6 +96,28 @@
                     call
                     #;
                     (first call)))]
+      [(supplies items)
+       (pp:nest indentation-level
+                (pp:v-append
+                 (pp:text "SUPPLIES")
+                 (apply pp:v-append
+                       (map (compose pp:text
+                                     ~a) items))))]
+      [(tactic-key players minutes grade difficulty lines student-level)
+       (pp:nest indentation-level
+                (pp:v-append
+                 (pp:text "TACTIC KEY")
+                 (pp:v-append
+                  (pp:text (~a "Players:    " players))
+                  (pp:text (~a "Minutes:    " minutes))
+                  (pp:text (~a "Grade:      " grade))
+                  (pp:text (~a "Difficulty: " difficulty))
+                  (pp:text (~a "Lines:      " lines))
+                  (pp:text (~a "Player Lvl: " student-level)))))]
+      [(image-group images)
+       (apply pp:h-append (map (λ(img) (pp:text "[IMG]")) images))]
+      [(tactic-image path scale)
+       (pp:text "[IMG]")]
       [(instruction subject verb)
        (pp:nest indentation-level
                 (pp:v-append
