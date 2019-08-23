@@ -12,9 +12,16 @@
 
 (define-kata core-values
   (recite
-   #:in "What are our core values?"
-   #:out (list "It's not about my code, it's about what I can code!"  
-               "It's not about me; it's about my team!")))
+   #:in "Code of Awesomeness"
+   #:out (list "1. CONQUER THE UNKNOWN: To boldly go where no one has gone before.
+                                        To infinity and beyond!
+                                        CHARGE!" 
+               "2. BE A BUG HUNTER: Bug found? Don’t frown!
+                                    SMUSH!
+                                    Gotta catch 'em all!"
+               "3. ENERGIZE THE TEAM: Coders Assemble!
+                                      Teamwork makes the dream work.
+                                      Be the lightning!")))
 
 
 
