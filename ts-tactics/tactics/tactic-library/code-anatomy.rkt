@@ -47,7 +47,8 @@
                               (body-action "type up the code independently from memory"))
                         (instruction coach
                                      (body-action "Repeat this phase if needed"))))
-           ))))
+           ))
+   run-kata-challenge))
 
 (module+ test
   (print-tactic

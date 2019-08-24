@@ -11,6 +11,7 @@
   ;Syntactic sugarings
   (except-out
     (all-from-out "base-base.rkt")
+    instruction
     image-group
     tactic-image
     tactic-section
@@ -19,7 +20,7 @@
     until
     body-action)
   (rename-out
-    ;(make-tell tell)
+    (make-instruction instruction)
     (make-image-group image-group)
     (make-tactic-image tactic-image)
     (make-tactic-section tactic-section)
@@ -28,9 +29,13 @@
     (make-until until)
     (make-body-action body-action)
     )
+  run-kata-challenge
   )
 
 (require "base-base.rkt")
+
+(define (make-instruction subject verb #:figure [figure #f])
+  (instruction subject verb figure))
 
 ;VERBS
 
@@ -77,3 +82,9 @@
 
 (define (make-tactic-image path #:scale [scale 1.0])
   (tactic-image path scale))
+
+(define run-kata-challenge
+  (tactic-section 'Kata-Challenge
+                  (list (make-instruction 'tactics-master
+                                          (body-action (~a "Call in the coach when you and the rest of the players are ready for your kata"
+                                                           " challenge. Pass the challenge to earn your kata!"))))))

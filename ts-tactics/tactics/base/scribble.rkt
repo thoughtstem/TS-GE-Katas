@@ -114,16 +114,10 @@
            " "
            (predicate->scribble that))))]))
 
-(define run-kata-challenge
-  (tactic-section 'Kata-Challenge
-                  (list (instruction 'tactics-master
-                                     (body-action (~a "Call in the coach when you and the rest of the players are ready for your kata"
-                                                      " challenge. Pass the challenge to earn your kata!"))))))
-
 (define (tactic->scribble t)
-  (if (list? t)
-      (instruction->scribble (append t (list run-kata-challenge)))
-      (instruction->scribble (list t run-kata-challenge))))
+  (if (instruction? t)
+      (nest (itemlist (item (instruction->scribble t))))
+      (instruction->scribble t)))
 
 (define (subject->scribble s)
   (match s
@@ -244,7 +238,13 @@
                              (struct-copy body-action v
                                           [english (string-downcase-first str)]))]
         [(predicate? v) v]
+        [(directed-action? v) (struct-copy directed-action v
+                                           [action (verb-downcase-first (directed-action-action v))])]
         [else (error "That wasn't a known verb.")]))
+
+(define pict-style
+  (style "Pict"
+         '()))
 
 (define tactic-key-style
   (style "TacticKey"
@@ -256,80 +256,77 @@
          ))
 
 (define (instruction->scribble i)
-  (if (list? i)
-    (instructions->scribble i)
-    (match i
-      [(tactic-key players minutes grade difficulty lines student-level)
-       (let ([key (draw-tactic-key players minutes grade difficulty lines student-level)])
-         (elem #:style tactic-key-style key))]
-      [(image-group images)
-       (apply centered (map render-tactic-image images))]
-      [(tactic-image path scale)
-       (centered (image path #:scale scale))]
-      [(go-sub call)
-       (nest 
-         (bold (string-upcase "GO SUB: ")) 
-         (codeblock
-           "#lang ts-tactics\n\n"
-           (substring (~v call) 1)))]
-      [(instruction subject verb)
-       (list
-           ;(bold
-           ;  (subject->scribble subject))
-           ;" "
-           ;(arrow 10 0)
-           ;(arrowhead 10 0)
-           ;" "
-           (verb->scribble verb))]
+  (cond [(list? i) (instructions->scribble i)]
+        [(pict? i) (centered (elem #:style pict-style i))]
+        [else (match i
+                [(tactic-key players minutes grade difficulty lines student-level)
+                 (let ([key (draw-tactic-key players minutes grade difficulty lines student-level)])
+                   (elem #:style tactic-key-style key))]
+                [(image-group images)
+                 (apply centered (map render-tactic-image images))]
+                [(tactic-image path scale)
+                 (centered (image path #:scale scale))]
+                [(go-sub call)
+                 (nest 
+                  (bold (string-upcase "GO SUB: ")) 
+                  (codeblock
+                   "#lang ts-tactics\n\n"
+                   (substring (~v call) 1)))]
+                [(instruction subject verb figure)
+                 (if figure
+                     (list (verb->scribble verb)
+                           (centered (elem #:style pict-style figure)))
+                     (list (verb->scribble verb)))]
+                [(tell subject verb)
+                 (list
+                  ;(arrowhead 10 0)
+                  ;" "
+                  (bold "Tell")
+                  " "
+                  (object->scribble subject)
+                  " to "
+                  (verb->scribble (verb-downcase-first verb)))]
 
-      [(tell subject verb)
-       (list
-         ;(arrowhead 10 0)
-         ;" "
-         (bold "Tell")
-         " "
-         (object->scribble subject)
-         " to "
-         (verb->scribble (verb-downcase-first verb)))]
+                [(phase name instructions) 
+                 ;(elem #:style 
+                 ;(style #f (list (color-property (list 100 100 100))))
+                 ;ss))
+                 (list ;nested #:style 'code-inset
+                  (italic (string-titlecase (string-replace (~a name) "-" " ")))
+                  (nest (apply (curry itemlist #:style (if (= (length instructions) 1)
+                                                           #f
+                                                           (style 'ordered (list (attributes (list (cons 'start "1"))))))) ;starting index doesn't work for pdf
+                               (map item (instructions->scribble instructions))))) ]
 
-      [(phase name instructions) 
-       ;(elem #:style 
-        ;(style #f (list (color-property (list 100 100 100))))
-        ;ss))
-       (list ;nested #:style 'code-inset
-         (italic (string-titlecase (string-replace (~a name) "-" " ")))
-         (nest (apply (curry itemlist #:style (if (= (length instructions) 1)
-                                                  #f
-                                                  (style 'ordered (list (attributes (list (cons 'start "1"))))))) ;starting index doesn't work for pdf
-                      (map item (instructions->scribble instructions))))) ]
-
-      [(tactic-section name instructions)
-       (list
-        (elem #:style tactic-section-name-style (string-upcase (string-replace (~a name) "-" " ")))
-        (if ((listof instruction?) instructions)
-            (nest (apply (curry itemlist #:style (if (= (length instructions) 1)
-                                                     #f
-                                                     (style 'ordered (list (attributes (list (cons 'start "1"))))))) ;starting index doesn't work for pdf
-                         (map item (instructions->scribble instructions))))
-            (nest (instructions->scribble instructions)))) ] ;don't nest if its a phase/ not instructions
+                [(tactic-section name instructions)
+                 (list
+                  (elem #:style tactic-section-name-style (string-upcase (string-replace (~a name) "-" " ")))
+                  (if ((listof instruction?) instructions)
+                      (nest (apply (curry itemlist #:style (if (= (length instructions) 1)
+                                                               #f
+                                                               (style 'ordered (list (attributes (list (cons 'start "1"))))))) ;starting index doesn't work for pdf
+                                   (map item (instructions->scribble instructions))))
+                      (nest (instructions->scribble instructions)))) ]
       
-      [(supplies items)
-       (list
-        (elem #:style tactic-section-name-style "SUPPLIES")
-        (nest (apply itemlist (map (compose item
-                                            string-titlecase
-                                            (curryr string-replace "-" " ")
-                                            (curryr string-trim "the-")
-                                             ~a) items))))]
-      [(until predicate instructions) 
-       (list
-         (bold (string-upcase "Until"))  
-         (hspace 1)
-         (predicate->scribble predicate)
-         (hspace 1)
-         (bold (string-upcase "Do"))  
-         (linebreak)
-         (instructions->scribble instructions)) ])))
+                [(supplies items)
+                 (list
+                  (elem #:style tactic-section-name-style "SUPPLIES")
+                  (nest (apply itemlist (map (compose item
+                                                      string-titlecase
+                                                      (curryr string-replace "-" " ")
+                                                      (curryr string-trim "the-")
+                                                      ~a) items))))]
+                [(until predicate instructions) 
+                 (list
+                  (bold (string-upcase "Until"))  
+                  (hspace 1)
+                  (predicate->scribble predicate)
+                  (hspace 1)
+                  (bold (string-upcase "Do"))  
+                  (linebreak)
+                  (nest (apply itemlist (map item (instructions->scribble instructions))))) ]
+                )]
+        ))
 
 
 (define (instructions->scribble i)

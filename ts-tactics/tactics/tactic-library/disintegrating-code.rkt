@@ -47,13 +47,14 @@
                             (instruction coach
                                          (body-action (~a "Repeat 'Round 1', erasing more code each time until you are"
                                                           " left with only symbols. Then erase those too!")))))
-                    ))))
+                    ))
+   run-kata-challenge))
 
 (module+ test
   (print-tactic
-   (disintegrating-code 'Tactics-Master
-                        'Players
-                        'Team-Computers
+   (disintegrating-code 'the-tactics-master
+                        'the-players
+                        'the-chromebooks
                         'the-challenge-card
                         'the-whiteboard
                         'the-markers

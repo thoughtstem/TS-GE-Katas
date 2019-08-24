@@ -59,6 +59,15 @@ span{
 	width: auto;
 	background-color: #DCDCDC;
 	border: 2px solid black;
-	border-radius: 20px;
+	border-radius: 8px;
 	padding: 4px;
+}
+
+.Pict{
+	display: inline-block;
+	width: auto;
+	background-color: #F0F0F0;
+	border: 1px solid black;
+	border-radius: 8px;
+	padding: 8px;
 }

@@ -7,6 +7,7 @@
   hand-write
   erase-all-from
   erase-all-code-from
+  erase-some
   remove-some-identifiers
   erase-some-identifiers
   introduce-subtle-bugs
@@ -29,6 +30,9 @@
 (define (debug dest)
   (information-edit "remove bugs from" 
                     (contents-of dest)))
+
+(define (erase-some things dest)
+  (information-edit (~a "erase some " things " from") dest))
 
 (define (remove-some-identifiers dest)
   (information-edit "remove some identifiers from" (contents-of dest)))

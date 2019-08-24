@@ -44,7 +44,9 @@
   string-titlecase-first
   string-downcase-first)
 
-(define-type Top-form (U tactic-section instruction phase until go-sub tell tactic-image image-group))
+(require typed/pict)
+
+(define-type Top-form (U tactic-section instruction phase until go-sub tell tactic-image image-group pict))
 (define-type Thing    (U Symbol String Modified-Thing)) ;Allow Strings because things can be sentences...
 (define-type Person   (U Symbol Modified-Person))
 (define-type Place    (U Symbol Modified-Place))
@@ -85,7 +87,8 @@
              
 
 (struct instruction ([subject : Subject] 
-                     [verb : Verb])
+                     [verb : Verb]
+                     [figure : (U pict #f)])
   #:transparent)
 
 (struct tactic-section ([name : Symbol] 
