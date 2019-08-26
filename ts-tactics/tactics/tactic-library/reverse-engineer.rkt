@@ -4,20 +4,25 @@
 
 (require "../lang.rkt")
 
-(define (reverse-engineer coach 
-                          students
-                          coach-computer
-                          team-computers
+(define (reverse-engineer tactics-master 
+                          players
+                          master-computer
+                          player-computers
                           challenge-card
                           kata-website 
                           whiteboard
                           markers
                           timer)
-
+  (define tactics-master-str (string-titlecase (remove-the-from tactics-master)))
+  (define player-str (unpluralize players))
+  (define players-str (remove-the-from players))
+  (define computer-str (unpluralize player-computers))
+  (define computers-str (remove-the-from player-computers))
+  
   (list
-    (tactic-key "1+" "15-25" "K+" "4/5" "10+" "lvl 2")
-    (supplies coach-computer
-              team-computers
+    (tactic-key "1+" "15-25" "K+" "4/5" "10+" "lvl 2" #:players-string players-str)
+    (supplies (supply-item master-computer (~a " (1 for the " tactics-master-str ")"))
+              (supply-item player-computers (~a " (1 per " player-str ")"))
               whiteboard
               markers
               challenge-card
@@ -25,41 +30,41 @@
     (tactic-section 'ACTIONS
                     (list (phase 'deconstruct-the-game
                                  (list
-                                  (instruction coach  
+                                  (instruction tactics-master  
                                                (type-up
                                                 (code-of challenge-card)
-                                                coach-computer))
-                                  (instruction coach
-                                               (body-action "run the game and show it to the players, while hiding the code"))
-                                  (tell students
+                                                master-computer))
+                                  (instruction tactics-master
+                                               (body-action (~a "run the game and show it to the " players-str ", while hiding the code")))
+                                  (tell players
                                         (hand-write "a list of all the elements in the game" whiteboard))
-                                  (tell students
+                                  (tell players
                                         (body-action "mark any elements they have forgotten or don't know how to code"))))
                           (phase 'match-elements-to-code
                                  (list
-                                  (instruction coach
-                                               (give-to students challenge-card))
-                                  (tell students
+                                  (instruction tactics-master
+                                               (give-to players challenge-card))
+                                  (tell players
                                         (body-action "match each element on their list to the code that creates that element and to also add any missing elements"))
-                                  (tell students
+                                  (tell players
                                         (hand-write "any hints for the unknown elements" whiteboard))
-                                  (instruction coach
+                                  (instruction tactics-master
                                                (take-back challenge-card))))
                           (phase 'round-1
                                  (list
-                                  (instruction coach
+                                  (instruction tactics-master
                                                (set-timer-for "as many minutes as there are lines of code" timer))
-                                  (tell students
+                                  (tell players
                                         (body-action "type the code using just the list with hints"))
-                                  (instruction coach
+                                  (instruction tactics-master
                                                (erase-some "hints" whiteboard))
-                                  (tell students
-                                        (erase-all-code-from team-computers))))
+                                  (tell players
+                                        (erase-all-code-from player-computers))))
                           (phase 'repeat!
                                  (list
-                                  (instruction coach
-                                               (body-action "Repeat 'Round 1' until no hints remain and the players succeed!"))))))
-    run-kata-challenge))
+                                  (instruction tactics-master
+                                               (body-action (~a "Repeat 'Round 1' until no hints remain and the " players-str " succeed!")))))))
+    (run-kata-challenge #:players-string players-str)))
 
 (module+ test
   (print-tactic

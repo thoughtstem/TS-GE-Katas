@@ -44,13 +44,14 @@
 (define tactics-orange     (make-color 210 106 51))
 (define tactics-blue       (make-color 88 90 252))
 
-(define (draw-tactic-key players minutes grade difficulty lines student-level)
-  (define contents (vl-append (key-line people-icon        players       "players"           #:color tactics-orange )
+(define (draw-tactic-key players minutes grade difficulty lines student-level players-string)
+  (define contents (vl-append (key-line people-icon        players       players-string      #:color tactics-orange )
                               (key-line clock-icon         minutes       "minutes"           #:color tactics-orange )
                               (key-line grad-cap-icon      grade         "grade level"       #:color tactics-orange )
                               (key-line challenge-icon     difficulty    "TM difficulty"     #:color tactics-orange )
                               (key-line lines-of-code-icon lines         "lines"             #:color tactics-orange )
-                              (key-line stairs-icon        student-level "player difficulty" #:color tactics-orange )
+                              (key-line stairs-icon        student-level (~a (unpluralize players-string)
+                                                                             " difficulty")  #:color tactics-orange )
                               ))
   (define W (pict-width contents))
   (define H (pict-height contents))
@@ -255,12 +256,18 @@
          #:scale (tactic-image-scale ti)
          ))
 
+(define (thing->supply thing)
+  ((compose string-titlecase
+            (curryr string-replace "-" " ")
+            (curryr string-trim "the-")
+            ~a) thing))
+
 (define (instruction->scribble i)
   (cond [(list? i) (instructions->scribble i)]
         [(pict? i) (centered (elem #:style pict-style i))]
         [else (match i
-                [(tactic-key players minutes grade difficulty lines student-level)
-                 (let ([key (draw-tactic-key players minutes grade difficulty lines student-level)])
+                [(tactic-key players minutes grade difficulty lines student-level players-string)
+                 (let ([key (draw-tactic-key players minutes grade difficulty lines student-level players-string)])
                    (elem #:style tactic-key-style key))]
                 [(image-group images)
                  (apply centered (map render-tactic-image images))]
@@ -311,11 +318,12 @@
                 [(supplies items)
                  (list
                   (elem #:style tactic-section-name-style "SUPPLIES")
-                  (nest (apply itemlist (map (compose item
-                                                      string-titlecase
-                                                      (curryr string-replace "-" " ")
-                                                      (curryr string-trim "the-")
-                                                      ~a) items))))]
+                  (nest (apply itemlist (map (λ (thing)
+                                               (if (supply-item? thing)
+                                                   (item (~a (thing->supply (supply-item-item thing))
+                                                             (supply-item-clause thing)))
+                                                   (item (thing->supply thing))))
+                                               items))))]
                 [(until predicate instructions) 
                  (list
                   (bold (string-upcase "Until"))  

@@ -15,6 +15,7 @@
   (struct-out phase)
   (struct-out until)
   (struct-out go-sub)
+  (struct-out supply-item)
 
   ;Verbs
   (struct-out move)
@@ -42,7 +43,9 @@
   (struct-out group-subtract)
 
   string-titlecase-first
-  string-downcase-first)
+  string-downcase-first
+  remove-the-from
+  unpluralize)
 
 (require typed/pict)
 
@@ -76,10 +79,14 @@
                     [grade : Value]
                     [difficulty : Value]
                     [lines : Value]
-                    [student-level : Value])
+                    [student-level : Value]
+                    [players-string : String])
   #:transparent)
 
-(struct supplies ([items : (Listof Thing)]) #:transparent)
+(struct supplies ([items : (Listof (U Thing supply-item))]) #:transparent)
+
+(struct supply-item ([item : Thing]
+                     [clause : String]) #:transparent)
 
 (struct tell ([subject : Subject]
               [verb : Verb])
@@ -186,6 +193,15 @@
   (define str-list (string-split (~a str)))
   (string-join (cons (string-downcase (first str-list))
                      (rest str-list))))
+
+(define (remove-the-from thing)
+  (string-replace (string-trim (~a thing) "the-")
+                  "-" " "))
+            
+(define (unpluralize thing)
+  (string-replace (string-trim (string-trim (~a thing) "s" #:left? #f)
+                               "the-")
+                  "-" " "))
 
 
 

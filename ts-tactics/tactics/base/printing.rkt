@@ -89,6 +89,12 @@
         (pp:text d)
         (print-uninterpreted d))]))
 
+(define (thing->supply thing)
+  ((compose string-titlecase
+            (curryr string-replace "-" " ")
+            (curryr string-trim "the-")
+            ~a) thing))
+
 (define (print-instruction i)
   (cond [(list? i) (print-instructions i)]
         [(pict? i) (pp:text "[PICT]")]
@@ -103,14 +109,17 @@
                           (pp:v-append
                            (pp:text "SUPPLIES")
                            (apply pp:v-append
-                                  (map (compose pp:text
-                                                ~a) items))))]
-                [(tactic-key players minutes grade difficulty lines student-level)
+                                  (map (λ (thing)
+                                         (if (supply-item? thing)
+                                             (pp:text (~a (thing->supply (supply-item-item thing))
+                                                          (supply-item-clause thing)))
+                                             (pp:text (thing->supply (~a thing))))) items))))]
+                [(tactic-key players minutes grade difficulty lines student-level player-string)
                  (pp:nest indentation-level
                           (pp:v-append
                            (pp:text "TACTIC KEY")
                            (pp:v-append
-                            (pp:text (~a "Players:    " players))
+                            (pp:text (~a (string-titlecase player-string) ":    " players))
                             (pp:text (~a "Minutes:    " minutes))
                             (pp:text (~a "Grade:      " grade))
                             (pp:text (~a "Difficulty: " difficulty))
@@ -129,27 +138,16 @@
                      (pp:nest indentation-level
                           (pp:v-append))
                      )]
-
                 [(phase name instructions) 
                  (pp:nest indentation-level
                           (pp:v-append
                            (pp:text (string-titlecase (~a "" name "")))
                            (print-instructions instructions)))]
-
                 [(tactic-section name instructions) 
                  (pp:nest indentation-level
                           (pp:v-append
                            (pp:text (string-upcase (~a "" name "")))
                            (print-instructions instructions)))]
-
-                [(supplies items)
-                 (pp:nest indentation-level
-                          (pp:v-append
-                           (pp:text "SUPPLIES")
-                           (apply pp:v-append
-                                  (map (compose pp:text
-                                                ~a) items))))]
-
                 [(tell subject verb)
                  (pp:nest indentation-level
                           (pp:v-append

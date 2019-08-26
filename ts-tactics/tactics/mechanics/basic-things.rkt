@@ -10,6 +10,7 @@
 
   contents-of
   stimulus-of
+  stimuli-of
   code-of
   code-on
   front-of
@@ -31,6 +32,9 @@
 
 (define (stimulus-of object)
   (object-part "the stimulus of" object))
+
+(define (stimuli-of object)
+  (object-part "the stimuli of" object))
 
 (define (code-of object)
   (object-part "the code of" object))

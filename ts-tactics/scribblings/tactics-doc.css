@@ -71,3 +71,9 @@ span{
 	border-radius: 8px;
 	padding: 8px;
 }
+
+.LogoStyle{
+	display: inline-block;
+	width: 400px;
+	height: auto;
+}

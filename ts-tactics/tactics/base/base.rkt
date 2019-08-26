@@ -14,8 +14,10 @@
     instruction
     image-group
     tactic-image
+    tactic-key
     tactic-section
     supplies
+    supply-item
     phase
     until
     body-action)
@@ -23,8 +25,10 @@
     (make-instruction instruction)
     (make-image-group image-group)
     (make-tactic-image tactic-image)
+    (make-tactic-key tactic-key)
     (make-tactic-section tactic-section)
     (make-supplies supplies)
+    (make-supply-item supply-item)
     (make-phase phase)
     (make-until until)
     (make-body-action body-action)
@@ -59,9 +63,21 @@
 (define (make-supplies . items)
   (supplies items))
 
+(define (make-supply-item item [clause ""])
+  (supply-item item clause))
+
 (define (make-phase name . instructions)
   (phase name 
          (flatten instructions)))
+
+(define (make-tactic-key players
+                         minutes
+                         grade
+                         difficulty
+                         lines
+                         student-level
+                         #:players-string [players-string "players"])
+  (tactic-key players minutes grade difficulty lines student-level players-string))
 
 (define (make-tactic-section name . instructions)
   (tactic-section name 
@@ -83,8 +99,9 @@
 (define (make-tactic-image path #:scale [scale 1.0])
   (tactic-image path scale))
 
-(define run-kata-challenge
+(define (run-kata-challenge #:players-string [players-string "players"])
   (tactic-section 'Kata-Challenge
                   (list (make-instruction 'tactics-master
-                                          (body-action (~a "Call in the coach when you and the rest of the players are ready for your kata"
+                                          (body-action (~a "Call in the coach when you and the rest of the " players-string
+                                                           " are ready for your kata"
                                                            " challenge. Pass the challenge to earn your kata!"))))))

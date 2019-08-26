@@ -30,10 +30,14 @@
                      challenge-card
                      whiteboard
                      markers)
+  (define player-str (unpluralize players))
+  (define players-str (remove-the-from players))
+  (define computer-str (unpluralize computers))
+  (define computers-str (remove-the-from computers))
 
   (list
-    (tactic-key "1+" "10-20" "3+" "3/5" "10+" "lvl 2")
-    (supplies computers
+    (tactic-key "1+" "10-20" "3+" "3/5" "10+" "lvl 2" #:players-string players-str)
+    (supplies (supply-item computers (~a " (1 per " player-str ")"))
               whiteboard
               markers
               challenge-card)
@@ -59,13 +63,13 @@
                                                          "on"
                                                          whiteboard))))
                           ))
-    run-kata-challenge))
+    (run-kata-challenge #:players-string players-str)))
 
 (module+ test
   (print-tactic
    (building-up 'the-tactics-master
-                     'the-players
-                     'the-chromebooks
-                     'the-challenge-card
-                     'the-whiteboard
-                     'the-markers)))
+                'the-players
+                'the-chromebooks
+                'the-challenge-card
+                'the-whiteboard
+                'the-markers)))

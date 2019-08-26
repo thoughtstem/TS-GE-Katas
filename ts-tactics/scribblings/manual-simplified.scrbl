@@ -8,6 +8,7 @@
 
 @(define-runtime-path tactics-doc-css-path "./tactics-doc.css")
 @(define-runtime-path tactics-doc-tex-path "./tactics-doc.tex")
+@(define-runtime-path ts-logo-path "../tactics/base/img/ts-tree.png")
 
 @(define pdf-style
    (make-style "pdf-style"
@@ -15,7 +16,13 @@
                 (tex-addition tactics-doc-tex-path)
                 )))
 
+@(define logo-style
+   (make-style "LogoStyle"
+               '()))
+
 @title[#:style pdf-style]{ThoughtSTEM Language Learning Tactics}
+
+@(centered (image ts-logo-path #:style logo-style))
 
 @section{Disintegrating Code}
 
@@ -71,8 +78,22 @@
                'the-players
                'the-chromebooks
                'the-challenge-card
-               'the-whiteboard
-               'the-markers))
+               'the-whiteboard/paper
+               'the-markers/pen))
+
+@section{Code Carousel}
+
+@(require "../tactics/tactic-library/code-carousel.rkt")
+
+@(para (italic "Players pair up and try to code a game, while rotating computers every 45 seconds!"))
+@(tactic->scribble
+  (code-carousel 'the-tactics-master
+                 'the-players
+                 'the-chromebooks
+                 'the-challenge-cards
+                 'the-whiteboard/paper
+                 'the-markers/pen
+                 'the-timer))
 
 
 @;{
