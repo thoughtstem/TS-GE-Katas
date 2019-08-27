@@ -4,64 +4,76 @@
 
 (require "../lang.rkt")
 
-;WIP
-(define (reverse-engineer coach 
-                          students
-                          coach-computer
-                          team-computers
+(define (reverse-engineer tactics-master 
+                          players
+                          master-computer
+                          player-computers
                           challenge-card
                           kata-website 
                           whiteboard
-                          markers)
-
+                          markers
+                          timer)
+  (define tactics-master-str (string-titlecase (remove-the-from tactics-master)))
+  (define player-str (unpluralize players))
+  (define players-str (remove-the-from players))
+  (define computer-str (unpluralize player-computers))
+  (define computers-str (remove-the-from player-computers))
+  
   (list
-    (phase 'Setup
-           (list
-             (instruction coach
-                          (find challenge-card "on" kata-website))
-             
-             (instruction coach  
-                          (copy-paste 
-                            "code"
-                            kata-website
-                            coach-computer))
-             
-             (instruction coach
-                          (body-action "run the game")))) 
-
-    (phase 'Main
-           (list
-              (instruction coach
-                           (body-action "show the running game to the team (hide code)"))
-            
-              (instruction coach
-                           (discuss "What are the code-able features of this game?"))
-
-              (instruction team
-                           (hand-write "list of code-able features" whiteboard))
-
-              (instruction team
-                            (verb "circle the code-able features they don't know how to code"))
-
-              (until (predicate "has hints for all unknown code-able features" team)
-                     (instruction team
-                                  (directed-action
-                                   (verb "write hint next to unknown code-able features")
-                                   "using" (back-of challenge-card))))
-
-              (instruction team
-                           (directed-action
-                            (body-action "write the code to create the game")
-                            "on" team-computers))
-            ))))
+    (tactic-key "1+" "15-25" "K+" "4/5" "10+" "lvl 2" #:players-string players-str)
+    (supplies (supply-item master-computer (~a " (1 for the " tactics-master-str ")"))
+              (supply-item player-computers (~a " (1 per " player-str ")"))
+              whiteboard
+              markers
+              challenge-card
+              timer)
+    (tactic-section 'ACTIONS
+                    (list (phase 'deconstruct-the-game
+                                 (list
+                                  (instruction tactics-master  
+                                               (type-up
+                                                (code-of challenge-card)
+                                                master-computer))
+                                  (instruction tactics-master
+                                               (body-action (~a "run the game and show it to the " players-str ", while hiding the code")))
+                                  (tell players
+                                        (hand-write "a list of all the elements in the game" whiteboard))
+                                  (tell players
+                                        (body-action "mark any elements they have forgotten or don't know how to code"))))
+                          (phase 'match-elements-to-code
+                                 (list
+                                  (instruction tactics-master
+                                               (give-to players challenge-card))
+                                  (tell players
+                                        (body-action "match each element on their list to the code that creates that element and to also add any missing elements"))
+                                  (tell players
+                                        (hand-write "any hints for the unknown elements" whiteboard))
+                                  (instruction tactics-master
+                                               (take-back challenge-card))))
+                          (phase 'round-1
+                                 (list
+                                  (instruction tactics-master
+                                               (set-timer-for "as many minutes as there are lines of code" timer))
+                                  (tell players
+                                        (body-action "type the code using just the list with hints"))
+                                  (instruction tactics-master
+                                               (erase-some "hints" whiteboard))
+                                  (tell players
+                                        (erase-all-code-from player-computers))))
+                          (phase 'repeat!
+                                 (list
+                                  (instruction tactics-master
+                                               (body-action (~a "Repeat 'Round 1' until no hints remain and the " players-str " succeed!")))))))
+    (run-kata-challenge #:players-string players-str)))
 
 (module+ test
   (print-tactic
-   (reverse-engineer 'Coach
-                     'Team
-                     'Coach-Computer
-                     'Team-Computers
+   (reverse-engineer 'the-tactics-master
+                     'the-players
+                     'the-master-chromebook
+                     'the-player-chromebooks
                      'the-challenge-card
                      'the-kata-page
                      'the-whiteboard
-                     'the-markers)))
+                     'the-markers
+                     'the-timer)))

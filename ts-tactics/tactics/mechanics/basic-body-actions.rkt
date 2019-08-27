@@ -8,7 +8,8 @@
   close-eyes
   nod
   place-hands-on-head  
-  place-hands-behind-back)
+  place-hands-behind-back
+  take-back)
 
 (require "../base/base.rkt")
 
@@ -44,6 +45,11 @@
     "to"
     person))
 
+(define (take-back thing)
+  (directed-action
+   (body-action "take back")
+   ""
+   thing))
 
 (define (hide thing)
   (directed-action

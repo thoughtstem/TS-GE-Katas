@@ -41,9 +41,10 @@ Welcome!  This handbook contains learning "tactics" -- i.e. algorithms, games, a
 
 If you're a coach, you should use these tactics to do two things:
 
-@itemlist[#:style 'ordered
+@nested[#:style 'inset
+        @itemlist[#:style 'ordered
           @item{Help help team members learn to code}
-          @item{Help team members use the learning tactics in this book, to learn to code}]
+          @item{Help team members use the learning tactics in this book, to learn to code}]]
 
 This second point is subtle but incredibly important: You are not just teaching coding; you are teaching people how to learn.  This manifests in many ways.  You're not just playing games with team; you're teaching them how to play the games.  You're not just being a coach; you're teaching them how to coach themselves.  You're not just being a teacher; you're teaching them how to teach.   You're not just being a leader; you're teaching them how to lead.
 
@@ -63,11 +64,11 @@ Your team will only experience this growth in self-driven learning and leadershi
 Here's one concrete way you can do that: In this book, you will see tactics that give an instruction to you, the coach.  For example:
 
 @(tactic->scribble
-   (instruction 'Coach
-          (hand-write
-            (contents-of
-              (back-of 'Challenge-Card))
-            (bottom-half-of 'The-Whiteboard))))
+  (instruction 'Coach
+               (hand-write
+                (contents-of
+                 (back-of 'Challenge-Card))
+                (bottom-half-of 'The-Whiteboard))))
 
 A novice coach might see this instruction and immediately begin writing on the whiteboard. 
 
@@ -427,7 +428,8 @@ All expressions have a @bold{nesting depth}.
                     'the-challenge-card
                     'the-kata-page
                     'the-whiteboard
-                    'the-markers))
+                    'the-markers
+                    'the-timer))
 
 @(about #:title   "Reverse Engineering"
         #:summary "Learners must reverse engineer the specifications from a running program, without seeing the original specifications or the code itself."

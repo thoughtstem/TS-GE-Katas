@@ -8,6 +8,7 @@
 
 @(define-runtime-path tactics-doc-css-path "./tactics-doc.css")
 @(define-runtime-path tactics-doc-tex-path "./tactics-doc.tex")
+@(define-runtime-path ts-logo-path "../tactics/base/img/ts-tree.png")
 
 @(define pdf-style
    (make-style "pdf-style"
@@ -15,39 +16,85 @@
                 (tex-addition tactics-doc-tex-path)
                 )))
 
+@(define logo-style
+   (make-style "LogoStyle"
+               '()))
+
 @title[#:style pdf-style]{ThoughtSTEM Language Learning Tactics}
+
+@(centered (image ts-logo-path #:style logo-style))
 
 @section{Disintegrating Code}
 
 @(require "../tactics/tactic-library/disintegrating-code.rkt")
-  @(para (italic "Players write code from the whiteboard; each round more and more code disappears!"))
-  @(tactic->scribble
-    (disintegrating-code 'the-tactics-master
-                         'the-players
-                         'the-chromebooks
-                         'the-challenge-card
-                         'the-whiteboard
-                         'the-markers
-                         'the-timer))
-
-@;#:summary "Learners begin by copying code verbatim and end by writing it from memory."
-
-
+@(para (italic "Players write code from the whiteboard; each round more and more code disappears!"))
+@(tactic->scribble
+  (disintegrating-code 'the-tactics-master
+                       'the-players
+                       'the-chromebooks
+                       'the-challenge-card
+                       'the-whiteboard
+                       'the-markers
+                       'the-timer))
 
 @section{Code Anatomy}
 
 @(require "../tactics/tactic-library/code-anatomy.rkt")
 
-  @(para (italic "Label and define the different parts of the code, then use the labels as a guideline to rebuild the code as a team."))
-  @(tactic->scribble
-    (code-anatomy 'the-tactics-master
-                  'the-players
-                  'the-chromebooks
-                  'the-challenge-card
-                  'the-whiteboard
-                  'the-markers
-                  'the-timer
-                  ))
+@(para (italic "Label and define the different parts of the code, then use the labels as a guideline to rebuild the code as a team."))
+@(tactic->scribble
+  (code-anatomy 'the-tactics-master
+                'the-players
+                'the-chromebooks
+                'the-challenge-card
+                'the-whiteboard
+                'the-markers
+                'the-timer
+                ))
+
+@section{Reverse Engineering}
+
+@(require "../tactics/tactic-library/reverse-engineer.rkt")
+
+@(para (italic "Starting with the finished game, players evaluate the elements of the game and how to code it."))
+@(tactic->scribble
+  (reverse-engineer 'the-tactics-master
+                    'the-players
+                    'the-master-chromebook
+                    'the-player-chromebooks
+                    'the-challenge-card
+                    'the-kata-page
+                    'the-whiteboard
+                    'the-markers
+                    'the-timer))
+
+@section{Building Up!}
+
+@(require "../tactics/tactic-library/building-up.rkt")
+
+@(para (italic "Break down the process of building a more complex game into easy steps before coding it."))
+@(tactic->scribble
+  (building-up 'the-tactics-master
+               'the-players
+               'the-chromebooks
+               'the-challenge-card
+               'the-whiteboard/paper
+               'the-markers/pen))
+
+@section{Code Carousel}
+
+@(require "../tactics/tactic-library/code-carousel.rkt")
+
+@(para (italic "Players pair up and try to code a game, while rotating computers every 45 seconds!"))
+@(tactic->scribble
+  (code-carousel 'the-tactics-master
+                 'the-players
+                 'the-chromebooks
+                 'the-challenge-cards
+                 'the-whiteboard/paper
+                 'the-markers/pen
+                 'the-timer))
+
 
 @;{
 If your students forget, here are a some reminders you can show them.
@@ -113,16 +160,16 @@ All expressions have a @bold{nesting depth}.
 @section{Reverse Engineering}
 
 @(require "../tactics/tactic-library/reverse-engineer.rkt")
-
-@(tactic->scribble
-  (reverse-engineer 'Coach
-                    'Team
-                    'Coach-Computer
-                    'Team-Computers
-                    'the-challenge-card
-                    'the-kata-page
-                    'the-whiteboard
-                    'the-markers))
+ @(para (italic "Starting with the finished game, players evaluate the elements of the game and how to code it."))
+ @(tactic->scribble
+   (reverse-engineer 'Coach
+                     'Team
+                     'Coach-Computer
+                     'Team-Computers
+                     'the-challenge-card
+                     'the-kata-page
+                     'the-whiteboard
+                     'the-markers))
 
 @; #:summary "Learners must reverse engineer the specifications from a running program, without seeing the original specifications or the code itself."
 
