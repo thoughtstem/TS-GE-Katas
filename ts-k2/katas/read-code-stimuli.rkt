@@ -421,6 +421,9 @@
 
 
 
+
+   'hello-world
+   (read "Code a basic animal game.")
    
    'animal-000
    (read "Code a basic animal game.")
