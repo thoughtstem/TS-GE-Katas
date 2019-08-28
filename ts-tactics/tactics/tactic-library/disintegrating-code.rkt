@@ -19,8 +19,7 @@
   (list
    (tactic-key "1+" "10-20" "K+" "1/5" "< 10" "lvl 1" #:players-string players-str)
    (supplies (supply-item computers (~a " (1 per " player-str ")"))
-             whiteboard
-             markers
+             (supply-item whiteboard " and Markers")
              challenge-card
              timer)
    (tactic-section 'ACTIONS
@@ -38,7 +37,7 @@
                             (instruction tactics-master
                                          (set-timer-for "as many minutes as there are lines of code" timer))
                             (tell players
-                                  (type-up (code-of whiteboard) computers))))
+                                  (type-up (code-from whiteboard) computers))))
                     (phase 'round-1
                            (list
                             (instruction tactics-master  
@@ -47,12 +46,12 @@
                             (tell players
                                   (erase-all-code-from computers))
                             (tell players
-                                  (body-action "type up the code again, using their memory to fill in the blanks!"))))
+                                  (body-action "type up the code again, using their memory to fill in the blanks"))))
                     (phase 'repeat!
                            (list
                             (instruction tactics-master
-                                         (body-action (~a "Repeat 'Round 1', erasing more code each time until you are"
-                                                          " left with only symbols. Then erase those too!")))))
+                                         (repeat 'round-1 (~a ", erasing more code each time until you are"
+                                                              " left with only symbols; then erase those too")))))
                     ))
    (run-kata-challenge #:players-string players-str)))
 

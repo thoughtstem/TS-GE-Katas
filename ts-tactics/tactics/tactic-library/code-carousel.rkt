@@ -21,7 +21,7 @@
     (supplies (supply-item computers (~a " (1 per pair of " players-str ")"))
               whiteboard
               markers
-              (supply-item challenge-cards " (3 of them that do not contradict)")
+              (supply-item challenge-cards " (3 that do not contradict)")
               )
     (tactic-section 'ACTIONS
       (list (phase 'get-started
@@ -31,17 +31,17 @@
                     (instruction tactics-master
                                  (body-action (~a "Pair up all " players-str
                                                   ". If there are an odd number of " players-str
-                                                  ", create a trio or a solo coder.")))
+                                                  ", create a trio or a solo coder")))
                     ))
             (phase 'round-1
                    (list
                     (tell players
-                          (body-action (~a "code a game that fits all three stimuli, working with their partner on one " computer-str)))
+                          (body-action (~a "code a game that fits all three stimuli, working together with their partner on one " computer-str)))
                     (instruction tactics-master
-                                 (set-timer-for (~a "45 seconds and start is as soon as the " players-str " start coding")
+                                 (set-timer-for (~a "45 seconds and start it as soon as the " players-str " start coding")
                                                 timer))
                     ))
-            (phase 'rotate-and-round-2
+            (phase 'rotate-&-round-2
                    (list
                     (instruction tactics-master
                                  (body-action (~a "Stop all " players-str " from coding as soon as the timer ends")))
@@ -56,11 +56,11 @@
             (phase 'repeat!
                    (list
                     (instruction tactics-master
-                                 (body-action (~a "Repeat 'Rotate And Round 2' until all " computers-str
-                                                  " have a running game that fits the stimuli")))
+                                 (repeat 'rotate-&-round-2 (~a " until all " computers-str
+                                                               " have a running game that fits the stimuli")))
                     (instruction tactics-master
                                  (body-action (~a "Encourage " players-str " who have a completed game to add extra features until the round is over"
-                                                  " or the last step is achieved!")))))
+                                                  " or the goal is achieved")))))
             ))
     (run-kata-challenge #:players-string players-str)))
 

@@ -25,7 +25,7 @@
 (define (brainstorm s)
   (directed-action
    (body-action "lead a brainstorm")
-   "about"
+   "with this prompt:"
    (maybe-add-quotes s)))
 
 (define (announce s)

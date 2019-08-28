@@ -34,7 +34,7 @@
                        'the-chromebooks
                        'the-challenge-card
                        'the-whiteboard
-                       'the-markers
+                       'the-whiteboard-markers
                        'the-timer))
 
 @section{Code Anatomy}
@@ -48,7 +48,7 @@
                 'the-chromebooks
                 'the-challenge-card
                 'the-whiteboard
-                'the-markers
+                'the-whiteboard-markers
                 'the-timer
                 ))
 
@@ -65,7 +65,7 @@
                     'the-challenge-card
                     'the-kata-page
                     'the-whiteboard
-                    'the-markers
+                    'the-whiteboard-markers
                     'the-timer))
 
 @section{Building Up!}
@@ -79,7 +79,7 @@
                'the-chromebooks
                'the-challenge-card
                'the-whiteboard/paper
-               'the-markers/pen))
+               'the-whiteboard-markers/pen))
 
 @section{Code Carousel}
 
@@ -92,7 +92,7 @@
                  'the-chromebooks
                  'the-challenge-cards
                  'the-whiteboard/paper
-                 'the-markers/pen
+                 'the-whiteboard-markers/pen
                  'the-timer))
 
 
@@ -151,7 +151,7 @@ All expressions have a @bold{nesting depth}.
                          'Team-Computers
                          'the-challenge-card
                          'the-whiteboard
-                         'the-markers
+                         'the-whiteboard-markers
                          'five-minutes
                          'timer))
 
@@ -169,7 +169,7 @@ All expressions have a @bold{nesting depth}.
                      'the-challenge-card
                      'the-kata-page
                      'the-whiteboard
-                     'the-markers))
+                     'the-whiteboard-markers))
 
 @; #:summary "Learners must reverse engineer the specifications from a running program, without seeing the original specifications or the code itself."
 
@@ -209,7 +209,7 @@ You will need to install/update the @racket[ts-tactics] package to run these tac
            'Team-Computers
            'the-challenge-card
            'the-whiteboard
-           'the-markers
+           'the-whiteboard-markers
            'the-timer))
 
 
@@ -225,7 +225,7 @@ You will need to install/update the @racket[ts-tactics] package to run these tac
      'the-challenge-card
      'the-timer
      'the-whiteboard
-     'the-markers))
+     'the-whiteboard-markers))
 
 
 @section{The End}

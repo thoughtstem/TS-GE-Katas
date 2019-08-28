@@ -22,7 +22,8 @@
   (struct-out change)
   (struct-out set-object)
   (struct-out body-action) 
-  (struct-out branching-verb) 
+  (struct-out branching-verb)
+  (struct-out repeat)
   verb
 
   ;Adjectives
@@ -64,7 +65,7 @@
 
 (define-type Group    (U group group-add group-subtract))
 
-(define-type Verb     (U Alter Query Modified-Verb))
+(define-type Verb     (U Alter Query Modified-Verb repeat))
 (define-type Modified-Verb (U adverb directed-action))
 
 (define-type Alter   (U move change set-object
@@ -103,7 +104,8 @@
   )
 
 (struct tactic-image ([path : Path-String]
-                      [scale : Number]) #:transparent)
+                      [scale : Number]
+                      [draw-border? : Boolean]) #:transparent)
 
 (struct image-group ([images : (Listof tactic-image)]) #:transparent)
 
@@ -127,6 +129,10 @@
 (struct set-object ([object : Noun]
                     [english : String]
                     [thing : Noun]) #:transparent)
+
+(struct repeat ([phase : Symbol]
+                [clause : String]) #:transparent)
+
 
 (struct predicate ([english : String] 
                    [thing : Noun]) #:transparent)

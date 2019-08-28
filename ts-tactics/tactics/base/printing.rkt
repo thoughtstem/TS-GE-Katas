@@ -127,7 +127,7 @@
                             (pp:text (~a "Player Lvl: " student-level)))))]
                 [(image-group images)
                  (apply pp:h-append (map (λ(img) (pp:text "[IMG]")) images))]
-                [(tactic-image path scale)
+                [(tactic-image path scale draw-border?)
                  (pp:text "[IMG]")]
                 [(instruction subject verb figure)
                  (if figure

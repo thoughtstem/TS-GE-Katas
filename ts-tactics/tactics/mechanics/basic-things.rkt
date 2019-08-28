@@ -13,6 +13,7 @@
   stimuli-of
   code-of
   code-on
+  code-from
   front-of
   back-of
   top-half-of
@@ -41,6 +42,9 @@
 
 (define (code-on object)
   (object-part "the code on" object))
+
+(define (code-from object)
+  (object-part "the code from" object))
 
 (define (back-of object)
   (object-part "the back of" object))

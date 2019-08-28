@@ -49,7 +49,7 @@
                               (key-line clock-icon         minutes       "minutes"           #:color tactics-orange )
                               (key-line grad-cap-icon      grade         "grade level"       #:color tactics-orange )
                               (key-line challenge-icon     difficulty    "TM difficulty"     #:color tactics-orange )
-                              (key-line lines-of-code-icon lines         "lines"             #:color tactics-orange )
+                              (key-line lines-of-code-icon lines         "lines of code"             #:color tactics-orange )
                               (key-line stairs-icon        student-level (~a (unpluralize players-string)
                                                                              " difficulty")  #:color tactics-orange )
                               ))
@@ -210,6 +210,11 @@
            english
            " "
            thing)]
+    [(repeat phase clause)
+     (list (bold "Repeat")
+           " "
+           (italic (string-titlecase (string-replace (~a phase) "-" " ")))
+           clause)]
     [(adverb verb english)
      (list 
        (verb->scribble verb)
@@ -243,6 +248,8 @@
                                            [action (verb-downcase-first (directed-action-action v))])]
         [else (error "That wasn't a known verb.")]))
 
+
+
 (define pict-style
   (style "Pict"
          '()))
@@ -251,9 +258,16 @@
   (style "TacticKey"
          '()))
 
+(define image-border-style
+  (style "ImageBorder"
+         '()))
+
 (define (render-tactic-image ti)
   (image (tactic-image-path ti)
          #:scale (tactic-image-scale ti)
+         #:style (if (tactic-image-draw-border? ti)
+                     image-border-style
+                     #f)
          ))
 
 (define (thing->supply thing)
@@ -271,8 +285,12 @@
                    (elem #:style tactic-key-style key))]
                 [(image-group images)
                  (apply centered (map render-tactic-image images))]
-                [(tactic-image path scale)
-                 (centered (image path #:scale scale))]
+                [(tactic-image path scale draw-border?)
+                 (centered (image path
+                                  #:scale scale
+                                  #:style (if draw-border?
+                                              image-border-style
+                                              #f)))]
                 [(go-sub call)
                  (nest 
                   (bold (string-upcase "GO SUB: ")) 
@@ -282,8 +300,10 @@
                 [(instruction subject verb figure)
                  (if figure
                      (list (verb->scribble verb)
+                           "."
                            (centered (elem #:style pict-style figure)))
-                     (list (verb->scribble verb)))]
+                     (list (verb->scribble verb)
+                           "."))]
                 [(tell subject verb)
                  (list
                   ;(arrowhead 10 0)
@@ -292,7 +312,8 @@
                   " "
                   (object->scribble subject)
                   " to "
-                  (verb->scribble (verb-downcase-first verb)))]
+                  (verb->scribble (verb-downcase-first verb))
+                  ".")]
 
                 [(phase name instructions) 
                  ;(elem #:style 

@@ -20,7 +20,8 @@
     supply-item
     phase
     until
-    body-action)
+    body-action
+    repeat)
   (rename-out
     (make-instruction instruction)
     (make-image-group image-group)
@@ -32,6 +33,7 @@
     (make-phase phase)
     (make-until until)
     (make-body-action body-action)
+    (make-repeat repeat)
     )
   run-kata-challenge
   )
@@ -54,6 +56,9 @@
 
 (define (make-body-action english)
   (body-action (string-titlecase-first english)))
+
+(define (make-repeat phase [clause ""])
+  (repeat phase clause))
 
 ;ADJECTIVES
 
@@ -83,11 +88,9 @@
   (tactic-section name 
          (flatten instructions)))
 
-
 (define (make-until pred . instructions)
   (until pred 
          (flatten instructions)))
-
 
 (define-syntax-rule (sub-routine exp)
   (go-sub 'exp))
@@ -96,12 +99,12 @@
 (define (make-image-group . images)
   (image-group images))
 
-(define (make-tactic-image path #:scale [scale 1.0])
-  (tactic-image path scale))
+(define (make-tactic-image path #:scale [scale 1.0] #:draw-border? [draw-border? #f])
+  (tactic-image path scale draw-border?))
 
 (define (run-kata-challenge #:players-string [players-string "players"])
   (tactic-section 'Kata-Challenge
                   (list (make-instruction 'tactics-master
                                           (body-action (~a "Call in the coach when you and the rest of the " players-string
                                                            " are ready for your kata"
-                                                           " challenge. Pass the challenge to earn your kata!"))))))
+                                                           " challenge. Pass the challenge to earn your kata"))))))

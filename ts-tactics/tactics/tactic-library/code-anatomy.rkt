@@ -22,27 +22,26 @@
   (list
    (tactic-key "1+" "10-15" "K+" "2/5" "<10" "lvl 1" #:players-string players-str)
    (supplies (supply-item computers (~a " (1 per " player-str ")"))
-             whiteboard
-             markers
+             (supply-item whiteboard " and Markers")
              challenge-card
              timer)
    (tactic-section 'ACTIONS
-     (list (phase 'label-and-define
+     (list (phase 'label-&-define
                   (list (instruction tactics-master  
                                      (hand-write 
                                       (code-of challenge-card) whiteboard))
                         (instruction tactics-master  
                                      (body-action (~a "Label and define the parts of the code with help from the " players-str)))
                         ))
-           (image-group (tactic-image code-labels-3-6 #:scale 0.40)
-                        (tactic-image code-labels-k-2 #:scale 0.40))
+           (image-group (tactic-image code-labels-3-6 #:scale 0.42 #:draw-border? #t)
+                        (tactic-image code-labels-k-2 #:scale 0.42 #:draw-border? #t))
            (phase 'fill-in-the-blanks
                   (list (instruction tactics-master
                                      (erase-all-code-from whiteboard #:clause ", leaving the labels," ))
                         (tell players
-                              (body-action "write the code back in, working together"))
+                              (body-action "write the code back in, working as a team"))
                         (instruction tactics-master
-                                     (body-action (~a "Repeat this phase until " players-str " have succedded without help twice")))))
+                                     (body-action (~a "Repeat this phase until " players-str " have succeeded without help twice")))))
            (phase 'final-quiz
                   (list (instruction tactics-master
                                      (erase-all-code-from whiteboard #:clause " again, leaving the labels,"))

@@ -42,7 +42,7 @@
               markers
               challenge-card)
     (tactic-section 'ACTIONS
-                    (list (phase 'define-the-step-by-step-process
+                    (list (phase 'define-the-process
                                  (list
                                   (instruction tactics-master
                                                (read-aloud (stimulus-of challenge-card)))
@@ -52,7 +52,7 @@
                                   (instruction tactics-master
                                                (hand-write "the first step" whiteboard))
                                   (instruction tactics-master
-                                               (hand-write "more steps (until the resulting game would meet the stimulus)" whiteboard)
+                                               (hand-write "additional steps (until the resulting game would meet the stimulus)" whiteboard)
                                                #:figure (tactic-example-pict-2))
                                   ))
                           (phase 'coding-step-by-step
