@@ -56,7 +56,7 @@
   (define W (pict-width contents))
   (define H (pict-height contents))
   (inset (cc-superimpose ;(filled-rounded-rectangle (+ 16 W) (+ 16 H) -0.1 #:color tactics-light-gray #:border-width 2)
-                         contents
+                         (scale contents 0.95)
                          ) 4))
 
 ; ========= END OF TACTICS KEY =========
