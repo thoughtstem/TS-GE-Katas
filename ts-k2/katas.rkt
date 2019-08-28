@@ -6,21 +6,24 @@
          sea
          zoo
          animal
+         hello-world
          )
 
 (require ts-kata-util/katas/main
-         ;ts-fundamentals/katas
+         ts-fundamentals/katas
          "./katas/read-code-stimuli.rkt"
          "./katas/read-code-tips.rkt" 
          "./katas/ratchet-helpers.rkt")
 
 (define _k2-katas
-  (lang->kata-collection 'k2))
+  (lang->kata-collection 'k2)
+  )
 
 (define katas
-  (katas-map
-   add-ratchet-output-to-response
-   _k2-katas))
+  (merge-collections (katas-map
+                      add-ratchet-output-to-response
+                      _k2-katas)
+                     code-values-all))
 
 ;Social games
 
@@ -58,6 +61,8 @@
          tips))
 
 (define-sub-collections k2-katas
+  code-value-katas
+  hello-world
   fish
   hero
   farm

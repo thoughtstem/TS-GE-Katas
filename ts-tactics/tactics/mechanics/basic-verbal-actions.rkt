@@ -5,7 +5,9 @@
   announce
   discuss
   tell-story
-  say) 
+  say
+  brainstorm
+  read-aloud) 
 
 (require "../base/base.rkt")
 
@@ -19,6 +21,12 @@
     (body-action "lead a discussion")
     "about"
     (maybe-add-quotes s)))
+
+(define (brainstorm s)
+  (directed-action
+   (body-action "lead a brainstorm")
+   "with this prompt:"
+   (maybe-add-quotes s)))
 
 (define (announce s)
   (directed-action
@@ -40,6 +48,12 @@
 
 (define (communicate)
   (body-action "communicate"))
+
+(define (read-aloud s)
+  (directed-action
+   (body-action "read aloud")
+   ""
+   (maybe-add-quotes s)))
 
 
 

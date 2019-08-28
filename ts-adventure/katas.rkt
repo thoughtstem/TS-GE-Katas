@@ -4,11 +4,13 @@
          adventure-proto-katas)
 
 (require ts-kata-util/katas/main
+         ts-fundamentals/katas
          "./katas/read-code-stimuli.rkt"
          "./katas/read-code-tips.rkt")
 
 (define adventure-proto-katas
-  (lang->kata-collection 'adventure))
+  (merge-collections (lang->kata-collection 'adventure)
+                     code-values-all))
 
 (define adventure-katas
   (apply fill-in-tips
@@ -16,6 +18,7 @@
          tips))
 
 (define-sub-collections adventure-katas
+  code-value-katas
   hello-world-katas
   
   avatar-katas

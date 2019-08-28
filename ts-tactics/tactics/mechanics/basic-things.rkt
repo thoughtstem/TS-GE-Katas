@@ -9,6 +9,11 @@
   challenge-card
 
   contents-of
+  stimulus-of
+  stimuli-of
+  code-of
+  code-on
+  code-from
   front-of
   back-of
   top-half-of
@@ -25,6 +30,21 @@
 
 (define (contents-of object)
   (object-part "the contents of" object))
+
+(define (stimulus-of object)
+  (object-part "the stimulus of" object))
+
+(define (stimuli-of object)
+  (object-part "the stimuli of" object))
+
+(define (code-of object)
+  (object-part "the code of" object))
+
+(define (code-on object)
+  (object-part "the code on" object))
+
+(define (code-from object)
+  (object-part "the code from" object))
 
 (define (back-of object)
   (object-part "the back of" object))

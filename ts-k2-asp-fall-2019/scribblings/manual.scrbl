@@ -3,7 +3,7 @@
 @(require ;ts-kata-util/katas/main
           ;ts-kata-util/katas/rendering
           ts-kata-util/badge-maker/main
-          (prefix-in f: ts-fundamentals/katas)
+          ;(prefix-in f: ts-fundamentals/katas)
           "../katas.rkt"
           "../rendering.rkt"
           (except-in racket read do))
@@ -15,8 +15,8 @@
 @table-of-contents[]
 
 @section{Intro Katas}
-@(render f:core-values)
-@(render intro-kata)
+@(render code-value-katas)
+@(render hello-world-kata)
 
 @section{Food Katas}
 @(render day-one)

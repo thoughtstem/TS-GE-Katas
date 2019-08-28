@@ -20,7 +20,7 @@ This is for students and coaches participating in their local scholastic game ja
 
 @section{Intro Katas}
 
-@(render core-values)
+@(render code-value-katas)
 @(render game-jam)
 @(render hello-world-katas)
 

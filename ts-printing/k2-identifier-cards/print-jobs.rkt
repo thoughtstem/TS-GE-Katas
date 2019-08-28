@@ -6,7 +6,7 @@
          (only-in pict text))
 
 
-(define (farm->Desktop)
+#|(define (farm->Desktop)
   (local-require ts-k2-farm-summer-camp-2019/katas)
 
   (define farm-foods (filter-by-response-lang 'k2/lang/farm/foods farm))
@@ -81,6 +81,7 @@
   (sea->Desktop)
   (farm->Desktop))
 
-#;
+
 (all->Desktop)
+|#
 

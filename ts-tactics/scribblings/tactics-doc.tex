@@ -1,0 +1,102 @@
+% set variables for margins
+\newlength{\topBottomMargin}
+\setlength{\topBottomMargin}{0.5in}
+
+\newlength{\sideMargin}
+\setlength{\sideMargin}{0.5in}
+
+% remove header
+\setlength{\headheight}{0pt}
+\setlength{\headsep}{0pt}
+
+% zero out and set top margin
+\setlength{\topmargin}{-1in}
+\addtolength{\topmargin}{\topBottomMargin}
+
+% zero out and set side margins
+\setlength{\oddsidemargin}{-1in}
+\addtolength{\oddsidemargin}{\sideMargin}
+\setlength{\evensidemargin}{\oddsidemargin}
+
+% set new paper width and height
+\setlength{\paperwidth}{8.5in}
+\setlength{\paperheight}{11in}
+\setlength{\pdfpagewidth}{\paperwidth}
+\setlength{\pdfpageheight}{\paperheight}
+
+% set new text width
+%\setlength{\topskip}{10pt}   if you are about new class
+\setlength\footskip{30pt}
+\setlength{\textwidth}{\paperwidth}
+\addtolength{\textwidth}{-\sideMargin}
+\addtolength{\textwidth}{-\sideMargin}
+
+% set new text height
+\setlength{\textheight}{\paperheight}
+\addtolength{\textheight}{-\topBottomMargin}
+\addtolength{\textheight}{-\topBottomMargin}
+
+\usepackage{longfbox}
+\usepackage{xcolor}
+
+\definecolor{tacticsGreen}{HTML}{BCDEA0}
+\definecolor{tacticsBlue}{HTML}{585AFC}
+\definecolor{tacticsLightGray}{HTML}{DCDCDC}
+\definecolor{tacticsLighterGray}{HTML}{F0F0F0}
+
+\newfboxstyle{roundedImageBox}{text-align=center,
+							   height-align=middle,
+							   margin=2px,
+							   border-width=0.6px,
+							   background-color=white,
+							   border-radius=6px,
+							   padding=6px}
+							   
+\newfboxstyle{roundedPictBox}{text-align=left,
+							  height-align=middle,
+							  background-color=tacticsLighterGray,
+							  border-width=0.75px,
+							  border-radius=6px,
+							  padding=6px}
+								 
+\newfboxstyle{roundedKeyBox}{text-align=center,
+							 height-align=middle,
+							 background-color=tacticsLightGray,
+							 border-width=1.6px,
+							 border-radius=6px,
+							 padding=4px}
+								 
+\newfboxstyle{roundedNameBox}{text-align=center,
+							  height-align=middle,
+							  background-color=tacticsGreen,
+							  border-width=1.2px,
+							  border-radius=4px,
+							  padding-left=8px,
+							  padding-right=8px,
+							  padding-top=4px,
+							  padding-bottom=4px}
+
+% set SectionName style
+\setlength{\fboxsep}{2mm}
+\newcommand{\TacticSectionName}[1]{\lfbox[roundedNameBox]{#1}}
+
+\newcommand{\PhaseName}[1]{\fcolorbox{black}{tacticsBlue}{#1}}
+
+							 
+% set TacticKey style
+\usepackage{wrapfig}
+\newcommand{\TacticKey}[1]{\begin{wrapfigure}[6]{o}[-0.5in]{0.3\textwidth}
+								\scalebox{0.75}{\lfbox[roundedKeyBox]{#1}}
+							\end{wrapfigure}}
+
+% set Pict style
+\newcommand{\Pict}[1]{\scalebox{0.8}{\lfbox[roundedPictBox]{\texttt{#1}}}}
+
+% set Image Border Style
+\newcommand{\ImageBorder}[1]{\lfbox[roundedImageBox]{#1}}
+
+% set Logo style
+\newcommand{\LogoStyle}[1]{\scalebox{1.5}{#1}}
+% set sans serif font as default
+
+\renewcommand{\familydefault}{\sfdefault}

@@ -13,11 +13,7 @@
     timer))
 
 (define (set-timer-for n timer)
-  (directed-action
-    (body-action (~a "set " n " minutes"))
-    "on"
-    timer))
-
+  (set-object timer "for" (~a n)))
 
 (define (set-timer-for-seconds n timer)
   (directed-action

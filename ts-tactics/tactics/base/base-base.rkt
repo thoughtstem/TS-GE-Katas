@@ -5,16 +5,25 @@
   you
 
   ;Top levels
+  (struct-out tactic-key)
+  (struct-out tactic-section)
+  (struct-out tactic-image)
+  (struct-out image-group)
+  (struct-out supplies)
   (struct-out instruction)
-  (struct-out phase) 
+  (struct-out tell)
+  (struct-out phase)
   (struct-out until)
   (struct-out go-sub)
+  (struct-out supply-item)
 
   ;Verbs
   (struct-out move)
   (struct-out change)
+  (struct-out set-object)
   (struct-out body-action) 
-  (struct-out branching-verb) 
+  (struct-out branching-verb)
+  (struct-out repeat)
   verb
 
   ;Adjectives
@@ -32,9 +41,16 @@
   ;Set theory
   (struct-out group)
   (struct-out group-add)
-  (struct-out group-subtract))
+  (struct-out group-subtract)
 
-(define-type Top-form (U instruction phase until go-sub))
+  string-titlecase-first
+  string-downcase-first
+  remove-the-from
+  unpluralize)
+
+(require typed/pict)
+
+(define-type Top-form (U tactic-section instruction phase until go-sub tell tactic-image image-group pict))
 (define-type Thing    (U Symbol String Modified-Thing)) ;Allow Strings because things can be sentences...
 (define-type Person   (U Symbol Modified-Person))
 (define-type Place    (U Symbol Modified-Place))
@@ -49,17 +65,49 @@
 
 (define-type Group    (U group group-add group-subtract))
 
-(define-type Verb     (U Alter Query Modified-Verb))
+(define-type Verb     (U Alter Query Modified-Verb repeat))
 (define-type Modified-Verb (U adverb directed-action))
 
-(define-type Alter   (U move change 
+(define-type Alter   (U move change set-object
                         body-action 
                         branching-verb))
-(define-type Query   (U predicate either both)) 
+(define-type Query   (U predicate either both))
+
+(define-type Value (U String Symbol Number))
+
+(struct tactic-key ([players : Value]
+                    [minutes : Value]
+                    [grade : Value]
+                    [difficulty : Value]
+                    [lines : Value]
+                    [student-level : Value]
+                    [players-string : String])
+  #:transparent)
+
+(struct supplies ([items : (Listof (U Thing supply-item))]) #:transparent)
+
+(struct supply-item ([item : Thing]
+                     [clause : String]) #:transparent)
+
+(struct tell ([subject : Subject]
+              [verb : Verb])
+  #:transparent)
+             
 
 (struct instruction ([subject : Subject] 
-                     [verb : Verb])
+                     [verb : Verb]
+                     [figure : (U pict #f)])
   #:transparent)
+
+(struct tactic-section ([name : Symbol] 
+                        [instructions : (Listof Top-form)]) #:transparent
+  )
+
+(struct tactic-image ([path : Path-String]
+                      [scale : Number]
+                      [draw-border? : Boolean]) #:transparent)
+
+(struct image-group ([images : (Listof tactic-image)]) #:transparent)
 
 (struct phase ([name : Symbol] 
                [instructions : (Listof Top-form)]) #:transparent
@@ -76,6 +124,15 @@
 
 (struct change ([english : String] 
                 [thing : Noun]) #:transparent)
+
+; Set timer for 5 minutes. 
+(struct set-object ([object : Noun]
+                    [english : String]
+                    [thing : Noun]) #:transparent)
+
+(struct repeat ([phase : Symbol]
+                [clause : String]) #:transparent)
+
 
 (struct predicate ([english : String] 
                    [thing : Noun]) #:transparent)
@@ -132,6 +189,25 @@
 
 (struct go-sub
   ([call : Any]))
+
+(define (string-titlecase-first str)
+  (define str-list (string-split (~a str)))
+  (string-join (cons (string-titlecase (first str-list))
+                     (rest str-list))))
+
+(define (string-downcase-first str)
+  (define str-list (string-split (~a str)))
+  (string-join (cons (string-downcase (first str-list))
+                     (rest str-list))))
+
+(define (remove-the-from thing)
+  (string-replace (string-trim (~a thing) "the-")
+                  "-" " "))
+            
+(define (unpluralize thing)
+  (string-replace (string-trim (string-trim (~a thing) "s" #:left? #f)
+                               "the-")
+                  "-" " "))
 
 
 

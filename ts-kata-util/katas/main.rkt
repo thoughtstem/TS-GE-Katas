@@ -29,6 +29,8 @@
          set-id
          within
          recite
+         recite-codes
+         recite-each-code
          read
 
          say
@@ -100,6 +102,7 @@
 (struct response:code response () #:transparent)
 (struct response:say  response () #:transparent)
 (struct response:do   response () #:transparent)
+(struct response:pick-one  response () #:transparent)
 
 (define (->code? k)
   (response:code?
@@ -130,6 +133,12 @@
   (stimulus:read (expression l c)))
 
 (define (say s)
+  (response:say s))
+
+(define (pick-one s)
+  (response:pick-one s))
+
+(define (say-codes . s)
   (response:say s))
 
 (define (do s)
@@ -186,6 +195,28 @@
    (say  p)
    #f
    '()))
+
+(define (recite-codes #:in  kw
+                      #:codes p
+                      #:responses r)
+  (kata
+   'TODO-id
+   (hear kw)
+   (say-codes  (list (first p)  (first r))
+               (list (second p) (second r))
+               (list (third p)  (third r)))
+   #f
+   '()))
+
+(define (recite-each-code #:in  kw
+                          #:out r)
+  (kata
+   'TODO-id
+   (hear kw)
+   (pick-one r)
+   #f
+   '()))
+
 
 (define/contract (within #:minutes (minutes #f)
                          #:seconds (seconds #f)
