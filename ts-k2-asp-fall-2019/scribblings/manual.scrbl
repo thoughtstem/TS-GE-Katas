@@ -16,7 +16,7 @@
 
 @section{Intro Katas}
 @(render code-value-katas)
-@(render intro-kata)
+@(render hello-world-kata)
 
 @section{Food Katas}
 @(render day-one)

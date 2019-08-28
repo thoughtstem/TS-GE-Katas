@@ -15,10 +15,25 @@
 (define (render #:level (level subsection) kc)
   (kata-collection->scribble
    #:befores (list kata->title
+                   kata->dollar-icons
                    kata->tip)
    kc))
 
 (require (only-in scribble/manual image para subsection))
+
+(define dollar-icon
+  (image "scribblings/img/ts-dollar.png"
+         #:scale .15))
+
+(define (kata->num-dollars k)
+  1
+  ;haha, okay we just give one dollar always now :)
+  )
+
+(define (kata->dollar-icons k)
+  (para
+   (map (thunk* dollar-icon)
+        (range (kata->num-dollars k)))))
 
 (define (kata->title k)
   (subsection (~a (kata-complete-name k) " Kata")))

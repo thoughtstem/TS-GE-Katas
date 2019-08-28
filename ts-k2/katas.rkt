@@ -6,6 +6,7 @@
          sea
          zoo
          animal
+         hello-world
          )
 
 (require ts-kata-util/katas/main
@@ -61,6 +62,7 @@
 
 (define-sub-collections k2-katas
   code-value-katas
+  hello-world
   fish
   hero
   farm

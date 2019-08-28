@@ -5,8 +5,11 @@
 (require ts-kata-util/katas/main
          ts-k2/katas)
 
-(define-kata-collection intro-kata
-  (first (kata-collection-katas animal)))
+(define-kata-collection hello-world-kata
+  (kata-collection-katas hello-world))
+
+;(define-kata-collection intro-kata
+;  (first (kata-collection-katas animal)))
 
 (define-kata-collection day-one
   (take (drop (kata-collection-katas animal) 1) 5))

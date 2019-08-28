@@ -1,6 +1,7 @@
 '(
   ;/index.html data
   (
+   (ts-tactics "LEARNING TACTICS")
    (ts-adventure-asp-2019 "ADVENTURE GAME")
    (ts-k2-asp-fall-2019   "K2 ANIMAL GAME")
    (ts-enlace-summer-2019    "DATA SCIENCE")
