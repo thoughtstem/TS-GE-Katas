@@ -453,10 +453,10 @@
    (short-template "a horse eating mushrooms and onions; and healing a rabbit and a sheep.")
 
    'animal-008
-   (short-template "a PURPLE horse eating kiwi, broccoli, and healing cats.")
+   (short-template "a PURPLE horse eating kiwi, broccoli, and healing a cat.")
 
    'animal-009
-   (short-template "a GREEN sheep eating onions, apples, and healing turkeys and another friend.")
+   (short-template "a GREEN turkey eating onions, apples, and healing sheep and another friend.")
 
    'animal-010
    (short-template "an ORANGE animal eating 2 different foods and healing 3 different friends.")
