@@ -1,4 +1,4 @@
-# TS-Kata-Collections
+# TS-GE-Katas
 
 [![Build Status](https://travis-ci.com/thoughtstem/TS-Kata-Collections.svg?branch=master)](https://travis-ci.com/thoughtstem/TS-Kata-Collections)
 
@@ -9,7 +9,7 @@ stuff in here that ought to be public on the web.)
 
 The common package between kata collections is `ts-kata-util`, which
 contains utilities for making the documentation of katas faster.  It can
-be required in any TS-Kata-Collection or any TS-Language.  It can serve
+be required in any TS-GE-Katas or any TS-GE-Language.  It can serve
 as a bridge or interface between language and kata collection.
 
 # Installation
@@ -23,12 +23,12 @@ raco pkg config --set git-checkout-credentials "GITHUB-NAME:GITHUB-PASSWORD"
 raco pkg install
 ```
 
-If you're going to be working on any `TS-Languages`, get that repo and install 
+If you're going to be working on any `TS-VR-Languages`, get that repo and install 
 all of them:
 
 ```
-git clone https://github.com/thoughtstem/TS-Languages.git
-cd TS-Languages
+git clone https://github.com/thoughtstem/TS-VR-Languages.git
+cd TS-VR-Languages
 raco install-all-here
 ```
 
