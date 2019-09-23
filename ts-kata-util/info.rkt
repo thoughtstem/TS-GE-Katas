@@ -4,7 +4,8 @@
 
 (define deps '("base" 
                "lang-file"
-               "colors"))
+               "colors"
+               "define-assets-from"))
 
 (define build-deps '("scribble-lib" "racket-doc" "rackunit-lib"))
 (define scribblings '(("scribblings/manual.scrbl" ())))
