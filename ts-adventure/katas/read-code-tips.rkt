@@ -2,8 +2,8 @@
 
 (provide tips)
 
-(require ts-kata-util/katas/main)
-(require ts-kata-util/katas/rendering/scribble)
+;(require ts-kata-util/katas/main)
+;(require ts-kata-util/katas/rendering/scribble)
 (require scribble/manual)
 
 (define tips
