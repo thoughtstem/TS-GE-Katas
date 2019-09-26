@@ -94,4 +94,8 @@
    'zoo-029 ;; 6.5
    (list "To start one game right after another, just code it directly after the first game.")
 
+   ;;Animal
+   'animal-009 ;; 3.4 8/24
+   (list "Different code than on the " (bold "challenge card") ". Challenge card colors a SHEEP"
+         " which does not display color changes.")
    ))

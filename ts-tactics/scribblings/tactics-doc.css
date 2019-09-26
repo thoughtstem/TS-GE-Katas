@@ -18,6 +18,7 @@ body{
 
 blockquote{
 	font-family: Arial;
+	font-size: 95%;
 }
 
 li{
@@ -34,24 +35,26 @@ span{
 
 .TacticSectionName{
 	font-family: Arial;
+	font-size: 95%;
 	background-color: #BCDEA0;
 	border: 2px solid black;
 	border-radius: 8px;
 	padding-left: 8px;
 	padding-right: 8px;
-	padding-top: 4px;
-	padding-bottom: 4px;
+	padding-top: 2px;
+	padding-bottom: 2px;
 }
 
 .PhaseName{
 	font-family: Arial;
+	font-size: 95%;
 	background-color: #585AFC;
 	border: 2px solid black;
 	border-radius: 8px;
 	padding-left: 8px;
 	padding-right: 8px;
-	padding-top: 4px;
-	padding-bottom: 4px;
+	padding-top: 2px;
+	padding-bottom: 2px;
 }
 
 .TacticKey{

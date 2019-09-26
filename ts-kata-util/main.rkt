@@ -23,6 +23,7 @@
          test-all-examples-as-games
 
          game-test
+         vr-test
 
          GAME-JAM-VID)
 
@@ -268,6 +269,16 @@
     (define ticked-g (tick to-test #:ticks 10)) 
     (check-pred game? ticked-g)))
 
+; === TODO: Make vr-test work
+(define-syntax-rule (vr-test expr ... g)
+  (let ()
+    (local-require vr-engine)
+    (local-require rackunit)
+    (wrap-if-not-define headless expr)
+    ...
+    (define to-test (headless g)) 
+    (define ticked-g (tick to-test #:ticks 10)) 
+    (check-pred game? ticked-g)))
 
 (define-syntax (test-all-examples-as-games stx)
   (define lang-id (second (syntax->datum stx)))

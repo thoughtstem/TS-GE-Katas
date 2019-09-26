@@ -26,8 +26,14 @@ organized.
 
   @racket[example-name] can be anything, but should be unique across examples.
 
-  Defining an example will define and provide a syntax called @racket[syntax:example-name] that can be imported into kata collections.  Examples cal also be run with @racket[(run-example example-name)].
+  Defining an example will store the syntax in an identifier @racket[syntax:example-name] provided from a @racket[syntaxes] submodule.  This is what gets imported into kata collections.  
 
+  It will also define a function to run the example called @racket[run:example-name] provided from a @racket[programs] submodule.  If you want to test one:
+
+  @codeblock{
+    (require (submod "./examples.rkt" programs))
+    (run:example-name)
+  }
   
 
 }
