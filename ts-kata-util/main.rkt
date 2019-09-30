@@ -6,7 +6,8 @@
          "./langs/main.rkt"
          "./kata-card/main.rkt")
 
-(provide (all-from-out "./kata-card/main.rkt")
+(provide (except-out (all-from-out "./kata-card/main.rkt")
+                     iconify-img)
          define-example-code
          (rename-out [define-example-code define-kata-code])
 
