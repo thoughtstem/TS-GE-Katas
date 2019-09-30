@@ -137,10 +137,10 @@
 
 (module+ test 
   ;(displayln "default test")
-  ;(kata-card)
+  (kata-card)
 
-  (printable-kata-card am-camp)
-  (printable-kata-card pm-camp)
+  ;(printable-kata-card am-camp)
+  ;(printable-kata-card pm-camp)
   
 
   ;(displayln "another icon test")
