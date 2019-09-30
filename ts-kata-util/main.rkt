@@ -4,10 +4,11 @@
          scribble/manual
          2htdp/image
          "./langs/main.rkt"
-         "./kata-card/main.rkt")
+         ;"./kata-card/main.rkt"
+         )
 
-(provide (except-out (all-from-out "./kata-card/main.rkt")
-                     iconify-img)
+(provide ;TODO provide this for kata printing
+         ;(all-from-out "./kata-card/main.rkt")
          define-example-code
          (rename-out [define-example-code define-kata-code])
 
