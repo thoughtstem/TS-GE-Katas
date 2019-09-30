@@ -1,13 +1,14 @@
 #lang scribble/manual
 
 @(require ts-kata-util/katas/rendering
-          ts-kata-util/katas/main
+          ;ts-kata-util/katas/main
           ts-kata-util/badge-maker/main
-          ts-kata-util/kata-card/main
+          ;ts-kata-util/kata-card/main
           "../katas.rkt"
           "../rendering.rkt"
           (except-in racket read do)
-          pict)
+          ;pict
+          )
 
 @title{Adventure Games}
 

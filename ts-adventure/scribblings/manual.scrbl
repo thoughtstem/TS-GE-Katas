@@ -4,7 +4,7 @@
           ts-kata-util/katas/main
            "../katas.rkt"
            "../rendering.rkt"
-           ts-kata-util
+           ;ts-kata-util
            (except-in racket read do))
 
 @title{Adventure Katas}
