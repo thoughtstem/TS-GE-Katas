@@ -2,14 +2,9 @@
 
 (require 2htdp/image
          (prefix-in p: pict)
-         (only-in "./rgb-hsb.rkt"
-                  tint-img
-                  change-img-hue
-                  mask-pixel
-                  name->color))
+         image-colors)
 
-(provide iconify-img
-         rainbow-set
+(provide rainbow-set
          kata-card
          printable-kata-cards)
 
