@@ -97,20 +97,21 @@
         (p:pin-over
          (p:pin-over
           (p:pin-over
-           (p:pin-over background 45 35 (first ls))
-           145 35 (second ls))
-          245 35 (third ls))
-         345 35 (fourth ls))
-        445 35 (fifth ls))
-       155 370 (sixth ls))
-      255 370 (seventh ls))
-     355 370 (eighth ls))
-    455 370 (ninth ls))
-   555 370 (tenth ls))
+           (p:pin-over background 25 15 (first ls))
+           125 15 (second ls))
+          225 15 (third ls))
+         325 15 (fourth ls))
+        425 15 (fifth ls))
+       135 350 (sixth ls))
+      235 350 (seventh ls))
+     335 350 (eighth ls))
+    435 350 (ninth ls))
+   535 350 (tenth ls))
   )
 
+
 (define bg-camera
-  (p:pin-over bg 35 380 (p:scale-to-fit camera 70 70)))
+  (p:pin-over bg 15 360 (p:scale-to-fit camera 70 70)))
 
 
 (define/contract (kata-card [icon default-icon]
@@ -136,11 +137,11 @@
 ;======= TESTS =======
 
 (module+ test 
-  ;(displayln "default test")
+  (displayln "default test")
   (kata-card)
 
   ;(printable-kata-card am-camp)
-  ;(printable-kata-card pm-camp)
+  (printable-kata-card pm-camp)
   
 
   ;(displayln "another icon test")
