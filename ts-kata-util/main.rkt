@@ -3,9 +3,11 @@
 (require (for-syntax racket/syntax racket "./langs/main.rkt")
          scribble/manual
          2htdp/image
-         "./langs/main.rkt")
+         "./langs/main.rkt"
+         "./kata-card/main.rkt")
 
-(provide define-example-code
+(provide (all-from-out "./kata-card/main.rkt")
+         define-example-code
          (rename-out [define-example-code define-kata-code])
 
          run-example
