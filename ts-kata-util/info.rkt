@@ -6,7 +6,7 @@
                "lang-file"
                "colors"
                "define-assets-from"
-               "image-colors"))
+               "image-coloring"))
 
 (define build-deps '("scribble-lib" "racket-doc" "rackunit-lib"))
 (define scribblings '(("scribblings/manual.scrbl" ())))
