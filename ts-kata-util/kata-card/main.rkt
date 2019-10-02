@@ -2,7 +2,7 @@
 
 (require 2htdp/image
          (prefix-in p: pict)
-         image-colors)
+         image-coloring)
 
 (provide rainbow-set
          kata-card
