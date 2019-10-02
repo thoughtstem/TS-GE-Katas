@@ -1,15 +1,13 @@
 #lang racket
 
-(provide kata->dollar-icons
-         
+(provide kata->dollar-icons         
          kata->title
-
          render
          kata-section)
 
 (require ts-kata-util/katas/rendering
          ts-kata-util/katas/main
-         ts-kata-util/main
+         ;ts-kata-util/main
          scribble/manual
          scribble/core)
 

@@ -1,102 +1,35 @@
 #lang racket
 
-(module+ test
-  (require rackunit))
-
-
-(module+ test
-  ;; Tests to be run with raco test
-  )
-
-
-
-(require (for-syntax racket/syntax racket)
+(require (for-syntax racket/syntax racket "./langs/main.rkt")
          scribble/manual
-         2htdp/image)
+         2htdp/image
+         "./langs/main.rkt")
 
-(provide define-kata-code
-         (rename-out [define-kata-code define-example-code])  ;This is technically correct.  Examples are in TS-Languages, Katas are in TS-Kata-Collections
+(provide define-example-code
+         (rename-out [define-example-code define-kata-code])
 
+         run-example
+         test-example
+         eval-example
+
+         language-mappings
          
-         show-kata-code
-         (rename-out [show-kata-code show-example-code]) ;This is technically correct.  Examples are in TS-Languages, Katas are in TS-Kata-Collections
-
-         
-         kata
-         side-note
-         student-should-translate
-         student-should-know-difference-between
+         get-example-code
+         get-example-names
+         get-example-syntax
 
          define/contract/doc
-         )
 
-(define (student-should-know-difference-between . things)
-  (define (show-thing t)
-    (item (bold (first t)) ": "
-          (second t)))
-  
-  (list
-   (para "Students should be able to recite the following definitions from memory:")
-   (apply itemlist (map show-thing things))))
+         test-all-examples-as-games
+
+         game-test
+
+         GAME-JAM-VID)
 
 
-
-(define (student-should-translate #:english sentence
-                                  #:code    kata-code-name
-                                  #:lang    lang)
-
-  (list
-   (para "Students should be able to translate any sentence of this type:")
-   (para (italic sentence))
-   (para "To corresponding code of this type:")
-   (show-kata-code lang kata-code-name)))
-
-(define difficulties
-  (hash 'air    (text "AIR" 24 'cyan)
-        'stone    (text "STONE" 24 'gray)
-        'bronze (text "BRONZE" 24 'orange)
-        'silver (text "SILVER" 24 'darkgray)
-        'gold   (text "GOLD" 24 'gold)
-        'platnum   (text "PLATNUM" 24 'blue)))
-
-(define (kata #:document-level (level subsubsection)
-              #:difficulty (difficulty 'bronze)
-              #:title (title "Avatar")
-
-              #:time-limit (time-limit 10)
-              . body)
-
-  (define (render-difficulty d)
-    (string-titlecase (~a d))
-    
-    ;Not working
-    #;(if (hash-has-key? difficulties d)
-        (hash-ref difficulties d)
-        (string-titlecase (~a d))))
-
-  (list
-   
-   (level 
-          (~a (render-difficulty difficulty)
-              " "
-              title
-              " Kata "
-              "(" time-limit " minutes)"))
-   body))
-
-
-(define (side-note header . body)
-  ;@margin-note*{@bold{Review/Introduce:} meaning of #lang ts-camp-jam-1, battle-arena-game, avatar, keyword.}
-
-  (list
-   (margin-note* (bold (~a header ": "))
-                 body)
-
-   )
-
-  )
 
 (require scribble/srcdoc)
+
 
 (define-for-syntax (extract-defaults arguments)
   (define (keyword? d)
@@ -108,169 +41,264 @@
 
   (datum->syntax #f no-keywords))
 
+
+(require (for-syntax syntax/parse))
 ;For in a TS-Lang.  Automates documentation.
 (define-syntax (define/contract/doc stx)
+
+  (define temp/defaults (syntax-parse stx
+                          [(_ (f-name args ...) contract doc body ...)
+                           (extract-defaults #'(args ...))]
+                          [(_ (f-name args ... . rest) contract doc body ...)
+                           (extract-defaults #'(args ...))]))
+  
   (syntax-case stx ()
     ([_ (f-name args ... . rest) contract doc body ...]
-     (with-syntax ([temp/defaults (extract-defaults #'(args ...))])
-       #'(begin
-           (provide (proc-doc
-                     f-name
-                     contract
-                     temp/defaults ;Fix this.  docs out...
-                     doc)) 
+     #`(begin
+        (provide (proc-doc
+                   f-name
+                   contract
+                   #,temp/defaults ;Fix this.  docs out...
+                   doc)) 
          
-           (define/contract (f-name args ... . rest)
-             contract
-             body ...))))
+         (define/contract (f-name args ... . rest)
+           contract
+           body ...)))
     ([_ (f-name args ... ) contract doc body ...]
-     (with-syntax ([temp/defaults (extract-defaults #'(args ...))])
-       #'(begin
-           (provide (proc-doc
+     #`(begin
+         (provide (proc-doc
                      f-name
                      contract
-                     temp/defaults ;Fix this.  docs out...
+                     #,temp/defaults ;Fix this.  docs out...
                      doc)) 
          
            (define/contract (f-name args ... )
              contract
-             body ...))))))
+             body ...)))))
 
 
-;Takes something like: 'battle-arena 'rocket-tower-1
-(define/contract (show-kata-code pkg-name kata-name)
-  (-> symbol? symbol? any/c)
+(define-for-syntax (not-kw sym)
+  (not
+   (string-prefix? (~a sym) "#:")))
 
-  (local-require pkg/lib)
-  (define folder (pkg-directory (~a pkg-name)))
-  
-  (define kata-file
-    (build-path folder "examples" "compiled-kata-data" (~a kata-name ".rkt")))
-
-  (typeset-code #:keep-lang-line? #t (kata-file->code-string kata-file)))
-
-(define example-file-exists?
-  (flat-contract-with-explanation
-   (λ (val)
-     (cond
-       [(file-exists? val) #t]
-       [else
-        (λ (blame)
-          (define pkg-name (list-ref (reverse (explode-path val)) 3))
-          (define file-name (list-ref (reverse (explode-path val)) 0))
-
-          ;Should we actually run the file and generate the example instead
-          ; of just telling peole they need to do it manually?
-          
-          (define more-information
-            (~a "Make sure you've pulled the latest code from " pkg-name
-                ".  And either run 'raco setup " pkg-name
-                "'.  Or open the file " file-name
-                " and run it to generate the missing example file."))
-          (raise-blame-error blame val
-                             '(expected: "an example file" given: "a path to a file that doesn't exist: ~e"
-                                         "\n\n~a")
-                             val more-information))])))
-  )
-
-(define/contract (kata-file->code-string file)
-  (-> example-file-exists? string?)
-
-  (file->string file))
-
-(define-syntax (define-kata-code stx)
-
+(define-syntax (language-mappings stx)
   (syntax-case stx ()
-    [(define-kata-code lang kata-name expr ... (run-game-with entity ...))
-     (with-syntax ([run:kata-name (format-id #'kata-name "run:~a" #'kata-name)]
-                   [syntaxes:kata-name (format-id #'kata-name "syntaxes:~a" #'kata-name)]
-                   [code-image:kata-name (format-id #'kata-name "code-image:~a" #'kata-name)]
-                   [initial-game:kata-name (format-id #'kata-name "initial-game:~a" #'kata-name)]
-                   [screenshot:kata-name (format-id #'kata-name "screenshot:~a" #'kata-name)]
-                   [lang-req (format-id #'lang "~a/jam-lang" #'lang)]
-                   [req #'(require (only-in game-engine tick draw-entities game-entities game-has-entity-named/c))]
-                   [full stx]
-                   [save-path (apply build-path
-                                     (append
-                                      (reverse (rest (reverse (explode-path (syntax-source stx)))))
-                                      (list "compiled-kata-data")))])
+    [(_ src-lang tgt-lang [from to] ...)
+     (begin
        #`(begin
-           (require lang-req)
-           req
+           (provide (all-from-out src-lang))
+           (module+ #,(datum->syntax stx 'mappings )
+             (provide mappings)
+             (define mappings
+               '((src-lang tgt-lang)
+                 (from to)
+                 ...)))))]))
+
+
+
+(provide string-mappings)
+(define string-mappings (make-parameter (list )))
+
+(define (replace* s subs)
+  (foldl
+   (λ(next accum)
+     (define find    (first next))
+     (define replace (second next))
+     (regexp-replace* (regexp (~a "([ \\(])" find "([\\) ])"))
+                      accum
+                      (~a "\\1" replace "\\2")))
+   s
+   subs))
+
+(provide transform-mappings)
+(define (transform-mappings stx)
+  (datum->syntax stx
+   (read
+    (open-input-string
+     (replace* (~s (syntax->datum stx))
+               (string-mappings))))))
+
+
+(define-syntax (test-example stx)
+  (syntax-case stx ()
+    [(_ kata-name
+        test)
+     (with-syntax ([run:kata-name
+                    (format-id #'kata-name "run:~a" #'kata-name)])
+
+
+       #`(begin
+           (test
+             (run:kata-name)) ))]))
+
+(define-syntax (run-example stx)
+  (syntax-case stx ()
+    [(_ kata-name)
+     (with-syntax ([syntax:kata-name
+                    (format-id #'kata-name "syntax:~a" #'kata-name)])
+
+
+       #`(begin
+           (define-namespace-anchor a)
+           (define ns (namespace-anchor->namespace a))
            
-           (provide run:kata-name
-                    syntaxes:kata-name
-                    code-image:kata-name
-                    initial-game:kata-name
-                    screenshot:kata-name)
-
-           (define syntaxes:kata-name (drop (syntax-e #,(syntax #'full)) 3) )
-           
-           (define (code-image:kata-name)
-             (local-require pict pict/code )
-             (apply (curry vl-append 10)
-                    (codeblock-pict (~a "#lang " 'lang))
-                    (map typeset-code syntaxes:kata-name)))
-
-           (define (run:kata-name)
-             
-             expr ...
-             (run-game-with entity ...))
-
-           (define (initial-game:kata-name)
-             
-             expr ...
-             (run-game-with #:headless #t
-                            entity ...))
-
-           (define (screenshot:kata-name #:after (ticks 20))
-             
-             (draw-entities
-              (game-entities
-               (tick #:ticks ticks
-                     (initial-game:kata-name)))))
-
-
-
-           
-
-
-           ;And some basic unit testing
-           (module+ test
-             (require rackunit
-                      (only-in 2htdp/image save-image)
-                      (only-in pict pict->bitmap))
-             
-
-             (check-pred (game-has-entity-named/c "player")
-                         (initial-game:kata-name))
-             (displayln "Basic test pass")
-
-             
-             ;Saves out some data for docs whenever tests pass
-             (begin
-               (displayln "Saving out compiled data...")
-             
-               (make-directory* save-path)
-
-               (require syntax/to-string)
-             
-               (define f-name (build-path save-path (~a (symbol->string 'kata-name) ".rkt")))
-
-               (with-output-to-file f-name #:exists 'replace 
-                 (thunk*
-                  (displayln (~a "#lang " 'lang))
-                  (displayln #;(syntax->string #'full)
-                             (string-join (map (compose (λ(s) (~a "(" s ")")) syntax->string)
-                                               syntaxes:kata-name) "\n\n"))))))
-           
+           (eval-example syntax:kata-name ns)
            ))]))
 
 
+(define (eval-example stx ns)
+
+  (with-handlers [(exn:fail?
+                   (lambda(e)
+                     (error (~a "Error running example! " stx "\n\n" e))))]
+    (begin
+        (define d (syntax->datum stx))
+        (eval `(begin ,@(drop d 3)) ns))))
 
 
+(define-syntax (define-example-code stx)
+
+  (define captured-module
+    (syntax-case stx ()
+      [(_ lang kata-name expr ...)
+       #'(module kata-name lang expr ...)]))
+
+  (define run-the-code
+    (syntax-case stx ()
+      [(_ lang kata-name expr ...)
+       #'(lambda () 
+           expr 
+           ...)]))
 
 
+  ;This one is the newer better way
+  (syntax-case stx ()
+    [(_ #:with-test (test-module test) lang kata-name expr ... last-expr)
 
+
+     #`(begin
+
+         (define-example-code lang kata-name expr ... last-expr) 
+
+         (module+ test-module
+           (require lang)
+           
+           (with-handlers ([exn:fail? (lambda (e)
+                                        (displayln (~a "Error running test for kata " 'kata-name))
+                                        (error e))])
+                          (test
+                           expr ...
+                           last-expr))))]
+
+    [(_ lang kata-name expr ...)
+     (with-syntax ([syntax:kata-name
+                     (format-id #'kata-name "syntax:~a" #'kata-name)]
+                   [run:kata-name
+                     (format-id #'kata-name "run:~a" #'kata-name)])
+
+
+       #`(begin
+
+           ;Put these in a separate module so we can access the syntaxes from scribble without having to load the lang (which can cause errors with racket/gui/base being required a second time.)
+
+           (module+ syntaxes
+             (provide syntax:kata-name)
+
+             (define syntax:kata-name
+               (syntax #,captured-module)))
+
+           (module+ programs
+             (require lang)
+             (provide run:kata-name)
+             (define run:kata-name
+               #,run-the-code))  
+
+           ))]))
+
+
+(provide define-example-code/from*)
+(define-syntax (define-example-code/from* stx)
+  (define d (syntax->datum stx))
+  (define lang/examples (second d))
+
+  (define syntax-ids
+    (module->example-ids lang/examples))
+
+  (define mappings
+    (dynamic-require
+      '(submod "./lang/main.rkt" mappings) 
+      'mappings))
+
+  (define define/transform/provides
+    (map
+      (λ(id)
+        `(begin
+           (provide ,id)
+
+           (define ,id
+             (parameterize [(string-mappings ',mappings)]
+               (transform-mappings ,(string->symbol (~a "other:" id)))))
+           (void)))
+      syntax-ids))
+
+  (datum->syntax stx
+                 `(module+ syntaxes
+                    (require (prefix-in other: (submod ,lang/examples syntaxes)))
+
+                    ,@define/transform/provides)))
+
+
+(define-syntax (wrap-if-not-define stx)
+  (syntax-case stx (define)
+    ((_ wrap (define stuff ...)) 
+      #`(define stuff ...)) 
+    ((_ wrap (other ...)) 
+      #'(wrap (other ...)))
+    ((_ wrap other) 
+     #'(wrap other))))
+
+
+(define-syntax-rule (game-test expr ... g)
+  (let ()
+    (local-require game-engine)
+    (local-require rackunit)
+    (wrap-if-not-define headless expr)
+    ...
+    (define to-test (headless g)) 
+    (define ticked-g (tick to-test #:ticks 10)) 
+    (check-pred game? ticked-g)))
+
+(define-syntax-rule (vr-test expr ... g)
+  (let ()
+    (local-require game-engine)
+    (local-require rackunit)
+    (wrap-if-not-define headless expr)
+    ...
+    (define to-test (headless g)) 
+    (define ticked-g (tick to-test #:ticks 10)) 
+    (check-pred game? ticked-g)))
+
+(define-syntax (test-all-examples-as-games stx)
+  (define lang-id (second (syntax->datum stx)))
+  (datum->syntax stx
+                 `(module+ test
+                    (require rackunit)
+                    (define-namespace-anchor a)
+                    (define ns (namespace-anchor->namespace a))
+
+                    (define (test id)
+                      (define g
+                        (headless
+                          (eval-example
+                            (get-example-syntax ,lang-id
+                                                id)
+                            ns)))
+
+                      (define ticked-g (tick g #:ticks 10))
+
+                      (check-pred game? ticked-g))
+
+                    (map test
+                         (get-example-names ,lang-id)))))
 
 

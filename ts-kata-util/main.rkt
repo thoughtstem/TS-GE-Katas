@@ -3,9 +3,13 @@
 (require (for-syntax racket/syntax racket "./langs/main.rkt")
          scribble/manual
          2htdp/image
-         "./langs/main.rkt")
+         "./langs/main.rkt"
+         ;"./kata-card/main.rkt"
+         )
 
-(provide define-example-code
+(provide ;TODO provide this for kata printing
+         ;(all-from-out "./kata-card/main.rkt")
+         define-example-code
          (rename-out [define-example-code define-kata-code])
 
          run-example
@@ -23,6 +27,7 @@
          test-all-examples-as-games
 
          game-test
+         vr-test
 
          GAME-JAM-VID)
 
@@ -267,6 +272,16 @@
     (define ticked-g (tick to-test #:ticks 10)) 
     (check-pred game? ticked-g)))
 
+; === TODO: Make vr-test work
+(define-syntax-rule (vr-test expr ... g)
+  (let ()
+    (local-require vr-engine)
+    (local-require rackunit)
+    (wrap-if-not-define headless expr)
+    ...
+    (define to-test (headless g)) 
+    (define ticked-g (tick to-test #:ticks 10)) 
+    (check-pred game? ticked-g)))
 
 (define-syntax (test-all-examples-as-games stx)
   (define lang-id (second (syntax->datum stx)))

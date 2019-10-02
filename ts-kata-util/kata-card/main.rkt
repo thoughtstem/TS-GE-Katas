@@ -2,15 +2,11 @@
 
 (require 2htdp/image
          (prefix-in p: pict)
-         (only-in "./rgb-hsb.rkt"
-                  tint-img
-                  change-img-hue
-                  mask-pixel
-                  name->color))
+         image-colors)
 
-(provide iconify-img
-         rainbow-set
-         kata-card)
+(provide rainbow-set
+         kata-card
+         printable-kata-cards)
 
 (define camera
   (bitmap "img/camera-icon.png"))
@@ -97,36 +93,40 @@
         (p:pin-over
          (p:pin-over
           (p:pin-over
-           (p:pin-over background 45 35 (first ls))
-           145 35 (second ls))
-          245 35 (third ls))
-         345 35 (fourth ls))
-        445 35 (fifth ls))
-       155 370 (sixth ls))
-      255 370 (seventh ls))
-     355 370 (eighth ls))
-    455 370 (ninth ls))
-   555 370 (tenth ls))
+           (p:pin-over background 25 15 (first ls))
+           125 15 (second ls))
+          225 15 (third ls))
+         325 15 (fourth ls))
+        425 15 (fifth ls))
+       135 350 (sixth ls))
+      235 350 (seventh ls))
+     335 350 (eighth ls))
+    435 350 (ninth ls))
+   535 350 (tenth ls))
   )
 
+
 (define bg-camera
-  (p:pin-over bg 35 380 (p:scale-to-fit camera 70 70)))
+  (p:pin-over bg 15 360 (p:scale-to-fit camera 70 70)))
 
 
-(define/contract (kata-card [icon default-icon]
+(define/contract (kata-card #:icon    [i default-icon]
                             #:pastel? [pastel? #f]
                             #:camera? [camera? #t])
-  (->* () (image? #:pastel? boolean? #:camera? boolean?) p:pict?)
+  (->* () (#:icon image?
+           #:pastel? boolean?
+           #:camera? boolean?)
+       p:pict?)
   
   (define rainbowed-icons
-    (rainbow-set icon #:pastel? pastel?))
+    (rainbow-set i #:pastel? pastel?))
   
   (define shrunk-icons (map shrink-to-icon rainbowed-icons))
 
   (place-icons shrunk-icons #:camera? camera?))
 
-(define (printable-kata-card i)
-  (define img (p:pict->bitmap (kata-card i)))
+(define (printable-kata-cards #:icon [i default-icon])
+  (define img (p:pict->bitmap (kata-card #:icon i)))
   
   (above
    (beside img img img)
@@ -139,8 +139,9 @@
   ;(displayln "default test")
   ;(kata-card)
 
-  (printable-kata-card am-camp)
-  (printable-kata-card pm-camp)
+  ;(printable-kata-cards am-camp)
+  (printable-kata-cards #:icon pm-camp)
+  (printable-kata-cards)
   
 
   ;(displayln "another icon test")
