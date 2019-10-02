@@ -6,7 +6,7 @@
                "lang-file"
                "colors"
                "define-assets-from"
-               "https://github.com/thoughtstem/image-coloring"))
+               "https://github.com/thoughtstem/image-coloring.git"))
 
 (define build-deps '("scribble-lib" "racket-doc" "rackunit-lib"))
 (define scribblings '(("scribblings/manual.scrbl" ())))
