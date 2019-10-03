@@ -5,7 +5,8 @@
 (define deps '("base" 
                "lang-file"
                "colors"
-               "define-assets-from"
+               "https://github.com/thoughtstem/define-assets-from.git"))
+               "https://github.com/thoughtstem/ratchet.git"))
                "https://github.com/thoughtstem/image-coloring.git"))
 
 (define build-deps '("scribble-lib" "racket-doc" "rackunit-lib"))
