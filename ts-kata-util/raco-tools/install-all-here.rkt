@@ -29,7 +29,9 @@
   (displayln (~s "Installing " s ". Multi? " (multi? s)))
 
   (if (multi? s)
-    (pkg-install-command #:skip-installed #t (~a "./" s))
+    (pkg-install-command #:skip-installed #t 
+                         #:update-deps #t #:deps 'search-auto
+                         (~a "./" s))
     (pkg-install-command #:no-setup 
                          (no-docs)
                          #:link #t 
