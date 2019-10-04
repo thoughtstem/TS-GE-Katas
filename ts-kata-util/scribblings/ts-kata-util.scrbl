@@ -36,6 +36,7 @@ organized.
     (syntax->pict syntax:ground-objects-3)
   }
 
+  Or if you have a kata, you can convert it to a syntax with @racket[kata->syntax] and then into a pict with @racket[syntax->pict] (TODO: Document these functions).
 
   Note that @racket[define-example-code] will also define a function to run the example called @racket[run:example-name] provided from a @racket[programs] submodule.  If you want to test one:
 
