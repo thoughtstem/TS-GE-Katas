@@ -19,8 +19,7 @@
                   color-blue)
          (only-in racket/draw color% make-color))
 
-(require "../common.rkt"
-         "./pretty-printing.rkt")
+(require "../common.rkt")
 
 (define FRONT-FG-COLOR (make-parameter "white"))
 (define FRONT-TITLE    (make-parameter (blank)))
