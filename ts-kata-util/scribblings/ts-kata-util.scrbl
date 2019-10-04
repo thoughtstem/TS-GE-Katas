@@ -28,7 +28,16 @@ organized.
 
   Defining an example will store the syntax in an identifier @racket[syntax:example-name] provided from a @racket[syntaxes] submodule.  This is what gets imported into kata collections.  
 
-  It will also define a function to run the example called @racket[run:example-name] provided from a @racket[programs] submodule.  If you want to test one:
+  You can turn a syntax into a pict (e.g. for printing, gamification, etc.), for example:
+
+  @codeblock{
+    #lang racket
+    (require (submod 3d-exploration/examples syntaxes))
+    (syntax->pict syntax:ground-objects-3)
+  }
+
+
+  Note that @racket[define-example-code] will also define a function to run the example called @racket[run:example-name] provided from a @racket[programs] submodule.  If you want to test one:
 
   @codeblock{
     (require (submod "./examples.rkt" programs))

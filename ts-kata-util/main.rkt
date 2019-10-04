@@ -5,10 +5,11 @@
          2htdp/image
          "./langs/main.rkt"
          ;"./kata-card/main.rkt"
+         "./util/syntax-to-pict.rkt"
          )
 
-(provide ;TODO provide this for kata printing
-         ;(all-from-out "./kata-card/main.rkt")
+(provide 
+         (all-from-out "./util/syntax-to-pict.rkt")
          define-example-code
          (rename-out [define-example-code define-kata-code])
 
@@ -165,7 +166,11 @@
   (define captured-module
     (syntax-case stx ()
       [(_ lang kata-name expr ...)
-       #'(module kata-name lang expr ...)]))
+       (syntax/loc 
+         #'lang
+         (module kata-name lang 
+             expr 
+             ...))]))
 
   (define run-the-code
     (syntax-case stx ()
@@ -182,7 +187,13 @@
 
      #`(begin
 
-         (define-example-code lang kata-name expr ... last-expr) 
+         #,(syntax/loc #'lang
+                       (define-example-code 
+                              lang 
+                              kata-name 
+                              expr 
+                              ... 
+                              last-expr))
 
          (module+ test-module
            (require lang)

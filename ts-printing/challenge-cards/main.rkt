@@ -6,6 +6,7 @@
          begin-job)
 
 (require ts-kata-util/katas/rendering/pict
+         (only-in ts-kata-util syntax->pict)
          (except-in ts-kata-util/katas/main read))
 
 (require pict 
@@ -85,6 +86,10 @@
   (define content-pict 
     (cond 
       [(string? content) ;Works for 3rd-5th katas
+
+       (syntax->pict 
+         (kata->syntax k))
+       #;
        (codeblock-pict #:keep-lang-line? #t   
                        (reformat-program content))]
       [else ;For now, assume it's a K-2

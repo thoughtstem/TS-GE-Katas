@@ -1,4 +1,4 @@
-#lang racket
+#lang at-exp racket
 
 (provide reformat-program)
 
@@ -43,7 +43,6 @@
 
 
 (define (post-process s) 
-  ;The fixes for things like posn and make-icon are defined in special-printing-forms
   (collapse-leaves s))
 
 (define (pretty-format-datum d)
@@ -107,15 +106,51 @@
     (substring s (cdr p))))
 
 
+(define MAX-COLS 10)
+(define MAX-ROWS 10)
+
 (define (string-area s)
-  (* (string-rows s)
-     (string-cols s)))
+  (cond 
+    [(> (string-cols s) MAX-COLS) +inf.0]
+    [(> (string-rows s) MAX-ROWS) +inf.0]
+    [else
+      (* (string-rows s)
+         (string-cols s))]))
 
 (define (string-rows s)
   (length (string-split s "\n")))
 
 (define (string-cols s)
   (apply max (map string-length (string-split s "\n"))))
+
+
+
+(module+ test
+  (require rackunit)
+
+  (check-equal? 
+    (string-cols "abc\ndef")
+    3) 
+  (check-equal? 
+    (string-rows "abc\ndef")
+    2) 
+  (check-equal? 
+    (string-area "abc\ndef")
+    6) 
+
+  (define s1
+    @~a{
+    (exploration-scene
+      #:sky-objects (list
+                      (basic-particles #:hex-color "#ff0000,#00ff00,#0000ff"
+                                       #:speed 20
+                                       #:size 5
+                                       #:age 2)))})
+
+  (displayln (reformat-program s1))
+  )
+
+
 
 ;This constructs a string->string function that will fix any substring "(form ...)" that is split over multiple lines.  It will be converted to a one-liner instead.
 (define (one-liner form)

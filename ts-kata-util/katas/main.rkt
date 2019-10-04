@@ -2,6 +2,7 @@
 
 ;Split out kata lang, and kata collection name
 (provide example->kata
+         kata->syntax
          lang->kata-collection
          remap-ids
          collapse-alts
@@ -84,6 +85,17 @@
 (define (make-kata s r [t #f])
   (kata 'TODO-id
         s r t '()))
+
+(define (kata->syntax k)
+  (define id (kata-id k))
+  (define lang (kata-lang k))
+
+  (get-example-syntax lang id))
+
+(define (kata-lang k)
+  (expression-language
+    (response-data 
+      (kata-response k))))
 
 (struct expression (language data) #:transparent)
 
