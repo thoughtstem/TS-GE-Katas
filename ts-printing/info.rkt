@@ -20,6 +20,7 @@
                ;"ts-k2-hero-summer-camp-2019"
                ;"ts-k2-zoo-summer-camp-2019"
                "ts-k2-asp-fall-2019"
+               "ts-3d-exploration-asp-2020"
                ))
 
 (define build-deps '("scribble-lib" "racket-doc" "rackunit-lib"))

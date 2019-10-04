@@ -206,7 +206,7 @@
                 [FRONT-BG-COLOR    googly-blue]
                 [FRONT-FG-COLOR clear-white]
                 [FRONT-TITLE    (title "(town/sky)")]) )))
-|#
+
 ;----- ADVENTURE
 (define (ts-adventure-asp-2019->Desktop)
   (local-require ts-adventure-asp-2019/katas)
@@ -232,7 +232,7 @@
                ((collection-apply (curryr try-take 5) fetch-quest-katas)
                 [FRONT-BG-COLOR googly-purple]
                 [FRONT-FG-COLOR clear-white] 
-                [FRONT-TITLE    (title "(fetch-quest)")]) )))
+                [FRONT-TITLE    (title "(fetch-quest)")]) )))|#
 
 #|
 (define (ts-adventure-mario-summer-camp-2019->Desktop)
@@ -391,7 +391,7 @@
                               [FRONT-BG-COLOR    bright-blue]
                               [FRONT-FG-COLOR    clear-white]
                               [FRONT-TITLE       (title "(more-friend)")]))))
-|#
+
 (define (ts-k2-asp-fall-2019->Desktop)
   (local-require ts-k2-asp-fall-2019/katas)
 
@@ -416,9 +416,36 @@
                              ((collection-apply (curryr try-take 5) day-five)
                               [FRONT-BG-COLOR    bright-blue]
                               [FRONT-FG-COLOR    clear-white]
-                              [FRONT-TITLE       (title "(more-enemy)")]))))
+                              [FRONT-TITLE       (title "(more-enemy)")]))))|#
 
-;(define (all->Desktop)
+(define (ts-3d-exploration-asp-2020->Desktop)
+  (local-require ts-3d-exploration-asp-2020/katas)
+
+  (set-fg-texture "bg016.jpg"
+    (begin-job "ts-3d-exploration-asp-2020-cards"     
+               ((collection-apply (curryr try-take 4) environment-katas)
+                [FRONT-BG-COLOR googly-red]
+                [FRONT-FG-COLOR clear-white]
+                [FRONT-TITLE    (title "(environment)")])
+               ((collection-apply (curryr try-take 5) ground-objects-katas)
+                [FRONT-BG-COLOR googly-orange]
+                [FRONT-FG-COLOR clear-white] 
+                [FRONT-TITLE    (title "(ground-objects)")])
+               ((collection-apply (curryr try-take 5) sky-objects-katas)
+                [FRONT-BG-COLOR googly-yellow]
+                [FRONT-FG-COLOR clear-white] 
+                [FRONT-TITLE    (title "(sky-objects)")])
+               ((collection-apply (curryr try-take 5) particles-katas)
+                [FRONT-BG-COLOR googly-green]
+                [FRONT-FG-COLOR clear-white] 
+                [FRONT-TITLE    (title "(particles)")])
+               ((collection-apply (curryr try-take 5) animations-katas)
+                [FRONT-BG-COLOR googly-blue]
+                [FRONT-FG-COLOR clear-white] 
+                [FRONT-TITLE    (title "(animations)")])
+               )))
+
+(define (all->Desktop)
   ;(ts-battle-arena-asp-2019->Desktop)
   ;(ts-battle-arena-avengers-summer-camp-2019->Desktop)
   ;(ts-battle-arena-fortnite-summer-camp-2019->Desktop)
@@ -437,8 +464,9 @@
   ;(ts-k2-hero-summer-camp-2019->Desktop)
   ;(ts-k2-zoo-summer-camp-2019->Desktop)
   ;(ts-k2-asp-fall-2019->Desktop)
-;)
+  (ts-3d-exploration-asp-2020->Desktop)
+)
 
 
-;(all->Desktop)
+(all->Desktop)
 
