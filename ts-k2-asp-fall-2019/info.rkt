@@ -3,7 +3,7 @@
 (define scribblings '(("scribblings/manual.scrbl" (multi-page))))
 
 (define deps '(
-  "ts-kata-util"
-  "ts-k2"
+  "https://github.com/thoughtstem/TS-GE-Katas.git?path=ts-kata-util"
+  "https://github.com/thoughtstem/TS-GE-Katas.git?path=ts-k2"
   ))
 

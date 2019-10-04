@@ -3,24 +3,12 @@
 (define collection "ts-printing")
 
 (define deps '("base"
-               "ts-kata-util"
-               ;"ts-battle-arena"
-               "ts-battle-arena-asp-2019"
-               ;"ts-battle-arena-avengers-summer-camp-2019"
-               ;"ts-battle-arena-fortnite-summer-camp-2019"
-               ;"ts-battle-arena-starwars-summer-camp-2019"
-               "ts-survival-asp-2019"
-               ;"ts-survival-minecraft-summer-camp-2019"
-               ;"ts-survival-pokemon-summer-camp-2019"
-               "ts-adventure-asp-2019"
-               ;"ts-adventure-mario-summer-camp-2019"
-               ;"ts-adventure-harrypotter-summer-camp-2019"
-               ;"ts-k2-farm-summer-camp-2019"
-               ;"ts-k2-sea-summer-camp-2019"
-               ;"ts-k2-hero-summer-camp-2019"
-               ;"ts-k2-zoo-summer-camp-2019"
-               "ts-k2-asp-fall-2019"
-               "ts-3d-exploration-asp-2020"
+               "https://github.com/thoughtstem/TS-GE-Katas.git?path=ts-kata-util"
+               "https://github.com/thoughtstem/TS-GE-Katas.git?path=ts-battle-arena-asp-2019"
+               "https://github.com/thoughtstem/TS-GE-Katas.git?path=ts-survival-asp-2019"
+               "https://github.com/thoughtstem/TS-GE-Katas.git?path=ts-adventure-asp-2019"
+               "https://github.com/thoughtstem/TS-GE-Katas.git?path=ts-k2-asp-fall-2019"
+               "https://github.com/thoughtstem/TS-GE-Katas.git?path=ts-3d-exploration-asp-2020"
                ))
 
 (define build-deps '("scribble-lib" "racket-doc" "rackunit-lib"))
