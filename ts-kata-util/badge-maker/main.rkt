@@ -98,9 +98,9 @@
                   (hexagon-triad forest-icon 3d-objects-icon particles-icon
                                  googly-green googly-red googly-orange))
                 
-                (define-badges k2-slime-badges
-                  (hexagon-triad hexagon-icon hexagon-icon hexagon-icon
-                                 googly-green googly-red googly-orange))
+                (define-badges k2-cartoon-badges
+                  (hexagon-triad saturn-icon castle-icon clouds-icon  ;saturn castle clouds
+                                 bright-yellow bright-green bright-blue))
                 )
 
 
