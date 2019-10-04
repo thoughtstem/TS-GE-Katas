@@ -23,9 +23,32 @@
    (get-deps path root)))
 
 (define (get-deps path (root (current-directory)))
-  (map ~a
-       (extract-pkg-dependencies
-        (get-info/full (build-path root path)))))
+  (map extract-pkg-name-if-github
+       (map ~a
+            (extract-pkg-dependencies
+              (get-info/full (build-path root path))))))
+
+(define (extract-pkg-name-if-github s)
+  (if (not (string-contains? s "github"))
+    s
+    (if (string-contains? s "path=")
+      (second (regexp-match #px"path=(.*)" s))
+      (second (regexp-match #px"https://github.com/.*/(.*).git" s)))))
+
+(module+ test
+  (require rackunit) 
+
+  (check-equal?
+    (extract-pkg-name-if-github "something") 
+    "something")
+
+  (check-equal?
+    (extract-pkg-name-if-github "https://github.com/thoughtstem/TS-K2-Languages.git?path=healer-lib") 
+    "healer-lib")
+
+  (check-equal?
+    (extract-pkg-name-if-github "https://github.com/thoughtstem/ratchet.git")
+    "ratchet"))
 
 (define (find-independent root paths)
   (define (independent? path)

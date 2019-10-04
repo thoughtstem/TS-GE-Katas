@@ -20,15 +20,29 @@
 (displayln (~a "Found collections: " collections))
 (displayln (~a "Sorted by dependencies: " sorted-collections))
 
+
+(define (multi? s)
+  (string-contains? (file->string (~a s "/info.rkt"))
+                    "collection 'multi"))
+
 (define (install s) 
-  (pkg-install-command #:no-setup (no-docs) #:link #t #:update-deps #t #:deps 'search-auto #:skip-installed #t s)
+  (displayln (~s "Installing " s ". Multi? " (multi? s)))
+
+  (if (multi? s)
+    (pkg-install-command #:skip-installed #t 
+                         #:update-deps #t #:deps 'search-auto
+                         (~a "./" s))
+    (pkg-install-command #:no-setup 
+                         (no-docs)
+                         #:link #t 
+                         #:update-deps #t #:deps 'search-auto #:skip-installed #t s))
 
   s)
 
 (define (maybe-setup s)
-  (when (no-docs)
+  (when (and (no-docs) 
+             (not (multi? s)))
           (begin 
-            (displayln "DOING A SETUP WITHOUT DOCS")
             (setup #:collections (list (list s))
                    ;Some things to make it faster...
                    #:jobs (processor-count)
