@@ -16,7 +16,9 @@
 (for ([c sorted-collections])
   (define example-file (build-path original c "examples.rkt"))
   (define success (if (file-exists? example-file) 
-                    (system (~a "raco test " example-file))
+                    (begin
+                      (displayln (~a "raco test " example-file))
+                      (system (~a "raco test " example-file)))
                     #t))
   
   (and (not success)
