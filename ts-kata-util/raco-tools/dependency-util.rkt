@@ -34,7 +34,7 @@
     s
     (begin
       (when (and (string-contains? s "github")
-                 (not (string-contains? s "\\.git")))
+                 (not (string-contains? s ".git")))
         (displayln s)
         (error "Remember: Github dependencies must have a .git in the URL"))
       (if (string-contains? s "path=")
