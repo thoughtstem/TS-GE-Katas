@@ -29,11 +29,17 @@
               (get-info/full (build-path root path))))))
 
 (define (extract-pkg-name-if-github s)
+
   (if (not (string-contains? s "github"))
     s
-    (if (string-contains? s "path=")
-      (second (regexp-match #px"path=(.*)" s))
-      (second (regexp-match #px"https://github.com/.*/(.*).git" s)))))
+    (begin
+      (when (and (string-contains? s "github")
+                 (not (string-contains? s "\\.git")))
+        (displayln s)
+        (error "Remember: Github dependencies must have a .git in the URL"))
+      (if (string-contains? s "path=")
+        (second (regexp-match #px"path=(.*)" s))
+        (second (regexp-match #px"https://github.com/.*/(.*).git" s))))))
 
 (module+ test
   (require rackunit) 
