@@ -7,7 +7,8 @@
 
 (provide rainbow-set
          kata-card
-         printable-kata-cards)
+         printable-kata-cards
+         ts-logo)
 
 (define camera
   (bitmap "img/camera-icon.png"))
@@ -24,25 +25,9 @@
 (define mc-text (bitmap "img/text-MC.png"))
 (define ts-kc-text (bitmap "img/text-TS-kata-card.png"))
 (define mc-kc-text (bitmap "img/text-MC-kata-card.png"))
+(define kc-text (bitmap "img/text-kata-card.png"))
 
 ;======= HELPER FUNCTIONS =========
-
-
-;useful function! provide out or put elsewhere
-;creates silhouettes of an image -- turning every pixel
-;that is not 100% transparent to one solid color
-(define (iconify-img img [t-color 'black])
-  
-  (define target-color (if (color? t-color)
-                           t-color
-                           (name->color t-color)))
-  
-  (define (maybe-color-pixel original-color)
-  (mask-pixel original-color target-color))
-  
-  (define original-list (image->color-list img))
-  (define final-list (map maybe-color-pixel original-list))
-  (color-list->bitmap final-list (image-width img) (image-height img)))
 
 
 ;creates a bg with border and logo for the card
@@ -50,7 +35,7 @@
                  #:width  [w 620]
                  #:border-color  [border-c (make-object color% 20 170 0)]
                  #:border-width  [bw 7.5]
-                 #:bg-color      [bg-c (make-object color% 255 255 255)] 
+                 #:bg-color      [bg-c "white"] 
                  #:logo [logo ts-logo])
   (p:cc-superimpose
    (p:lbl-superimpose 
@@ -72,18 +57,12 @@
           0
           (- (image-width logo) indent-image-width)
           (image-height logo)
-          logo)) 
-  (define smaller-logo
-    (p:scale-to-fit cropped-logo 350 350)) 
+          logo))
+
   (define faded-logo
-    (p:cc-superimpose
-     smaller-logo
-     (p:filled-rectangle (p:pict-width smaller-logo)
-                         (p:pict-height smaller-logo)
-                         #:draw-border? #f
-                         #:color (make-object color% 255 255 255 .75))
-     ))
-  faded-logo)
+    (change-alpha -150 cropped-logo))
+
+  (p:scale-to-fit faded-logo 350 350))
 
 
 ;takes one image and returns a list of 10 versions of that image, each a different color
@@ -166,8 +145,8 @@
 ;best x and y 525 25
 (define (add-title-text text-type bg x y)
   (-> (or/c 'thoughtstem 'thoughtstem-kata-card
-                'metacoders 'metacoders-kata-card
-                #f)
+            'metacoders 'metacoders-kata-card
+            'kata-card #f)
        p:pict? real? real?
       p:pict?)
   (define text-img
@@ -175,7 +154,8 @@
           [(equal? text-type 'thoughtstem-kata-card) ts-kc-text]
           [(equal? text-type 'metacoders) mc-text]
           [(equal? text-type 'metacoders-kata-card) mc-kc-text]
-          [(equal? text-type #f) p:blank]))
+          [(equal? text-type 'kata-card) kc-text]
+          [(equal? text-type #f) (p:ghost (p:rectangle 1 1))]))
 
   (p:pin-over bg x y text-img))
 
@@ -191,24 +171,31 @@
                             #:card-width   [w 620]
                             #:border-color [border-color (make-object color% 20 170 0)]
                             #:border-width [border-width 7.5]
-                            #:bg-color     [bg-color (make-object color% 255 255 255)]
-                            #:text-option  [text 'metacoders-kata-card]
-                            #:text-x  [text-x 525]
-                            #:text-y  [text-y 30])
-  (->* () (#:icon image?
+                            #:bg-color     [bg-color "white"]
+                            #:text-option  [text 'metacoders-kata-card])
+  (->* () (#:icon (or/c #f image?)
            #:pastel? boolean?
            #:camera? boolean?
-           #:logo image?
+           #:logo (or/c #f image?)
            #:card-height positive?
            #:card-width positive?
            #:border-color (or/c #f string? (is-a?/c color%))
            #:border-width real?
            #:bg-color (or/c #f string? (is-a?/c color%))
            #:text-option (or/c 'thoughtstem 'thoughtstem-kata-card
-                               'metacoders 'metacoders-kata-card #f)
-           #:text-x real?
-           #:text-y real?)
+                               'metacoders 'metacoders-kata-card
+                               'kata-card #f))
        p:pict?)
+
+  (define actual-icon
+    (if i
+        i
+        empty-image))
+
+  (define actual-logo
+    (if logo
+        logo
+        empty-image))
 
   (define background
     (make-bg #:height h
@@ -216,10 +203,10 @@
              #:border-color  border-color
              #:border-width  border-width
              #:bg-color      bg-color 
-             #:logo logo))
+             #:logo actual-logo))
   
   (define rainbowed-icons
-    (rainbow-set i #:pastel? pastel?))
+    (rainbow-set actual-icon #:pastel? pastel?))
   
   (define shrunk-icons (map shrink-to-icon rainbowed-icons))
 
@@ -227,7 +214,7 @@
                                  background
                                  #:camera? camera?))
   
-  (add-title-text text iconed-bg text-x text-y))
+  (add-title-text text iconed-bg 525 30))
 
 ;creates a 3x3 sheet of kata cards for printing
 (define (printable-kata-cards #:icon [i default-icon]
@@ -238,7 +225,8 @@
                               #:card-width   [w 620]
                               #:border-color [border-color (make-object color% 20 170 0)]
                               #:border-width [border-width 7.5]
-                              #:bg-color     [bg-color (make-object color% 255 255 255)])
+                              #:bg-color     [bg-color (make-object color% 255 255 255)]
+                              #:text-option  [text 'metacoders-kata-card])
   (define img (p:pict->bitmap (kata-card #:icon i
                                          #:pastel? pastel?
                                          #:camera? camera?
@@ -257,12 +245,12 @@
 ;======= TESTS =======
 
 (module+ test 
-  ;(displayln "default test")
-  ;(kata-card)
+  (displayln "default test")
+  (kata-card)
 
   ;(printable-kata-cards am-camp)
-  (printable-kata-cards #:icon pm-camp)
-  (printable-kata-cards)
+  ;(printable-kata-cards #:icon pm-camp)
+  ;(printable-kata-cards)
   
 
   ;(displayln "another icon test")
