@@ -25,7 +25,7 @@
 (define ts-kc-text (bitmap "img/text-TS-kata-card.png"))
 (define mc-kc-text (bitmap "img/text-MC-kata-card.png"))
 
-;======= FUNCTIONS =========
+;======= HELPER FUNCTIONS =========
 
 
 ;useful function! provide out or put elsewhere
@@ -54,8 +54,8 @@
                  #:logo [logo ts-logo])
   (p:cc-superimpose
    (p:lbl-superimpose 
-                      (p:filled-rectangle (+ w bw)
-                                          (+ h bw)
+                      (p:filled-rectangle (+ w (- bw 1))
+                                          (+ h (- bw 1))
                                           #:color bg-c
                                           #:draw-border? #f)
                       (edit-logo logo))
@@ -84,7 +84,6 @@
                          #:color (make-object color% 255 255 255 .75))
      ))
   faded-logo)
-
 
 
 ;takes one image and returns a list of 10 versions of that image, each a different color
@@ -117,7 +116,7 @@
             (change-img-hue 288 base)
             (change-img-hue 324 base))))
 
-;turns all images into picts :(
+;this turns all images into picts :(
 (define/contract (shrink-to-icon img)
   (-> (or/c image? p:pict?) p:pict?)
   (p:scale-to-fit img 80 80))
@@ -180,6 +179,9 @@
 
   (p:pin-over bg x y text-img))
 
+
+;============ FINAL FUNCTIONS =========
+
 ;creates a single card
 (define/contract (kata-card #:icon    [i default-icon]
                             #:pastel? [pastel? #f]
@@ -189,7 +191,10 @@
                             #:card-width   [w 620]
                             #:border-color [border-color (make-object color% 20 170 0)]
                             #:border-width [border-width 7.5]
-                            #:bg-color     [bg-color (make-object color% 255 255 255)])
+                            #:bg-color     [bg-color (make-object color% 255 255 255)]
+                            #:text-option  [text 'metacoders-kata-card]
+                            #:text-x  [text-x 525]
+                            #:text-y  [text-y 30])
   (->* () (#:icon image?
            #:pastel? boolean?
            #:camera? boolean?
@@ -198,7 +203,11 @@
            #:card-width positive?
            #:border-color (or/c #f string? (is-a?/c color%))
            #:border-width real?
-           #:bg-color (or/c #f string? (is-a?/c color%)))
+           #:bg-color (or/c #f string? (is-a?/c color%))
+           #:text-option (or/c 'thoughtstem 'thoughtstem-kata-card
+                               'metacoders 'metacoders-kata-card #f)
+           #:text-x real?
+           #:text-y real?)
        p:pict?)
 
   (define background
@@ -214,9 +223,11 @@
   
   (define shrunk-icons (map shrink-to-icon rainbowed-icons))
 
-  (place-icons shrunk-icons
-               background
-               #:camera? camera?))
+  (define iconed-bg (place-icons shrunk-icons
+                                 background
+                                 #:camera? camera?))
+  
+  (add-title-text text iconed-bg text-x text-y))
 
 ;creates a 3x3 sheet of kata cards for printing
 (define (printable-kata-cards #:icon [i default-icon]
