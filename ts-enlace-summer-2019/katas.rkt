@@ -4,6 +4,7 @@
 
 (require ts-kata-util/katas/main
          "./katas/read-code-stimuli.rkt"
+         "./katas/read-code-tips.rkt"
          ts-fundamentals/katas
          (prefix-in fundamentals: (submod fundamentals/examples stimuli))
          (prefix-in data-sci: (submod data-sci/examples stimuli))
@@ -15,8 +16,6 @@
     (lang->kata-collection 'fundamentals)
     (lang->kata-collection 'data-sci)))
 
-
-
 (define katas
   (apply fill-in-stimuli
          (apply fill-in-stimuli
@@ -24,8 +23,11 @@
                 fundamentals:stimuli)
          stimuli))
 
+(define data-sci-katas
+  (apply fill-in-tips katas tips))
 
-(define-sub-collections katas
+
+(define-sub-collections data-sci-katas
                         data-sci-pict
                         data-sci-plots
                         data-sci-histograms
