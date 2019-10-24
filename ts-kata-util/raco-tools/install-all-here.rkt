@@ -1,6 +1,6 @@
 #lang racket
 
-(require "./dependency-util.rkt" pkg setup/setup)
+(require "./dependency-util.rkt" pkg pkg/lib setup/setup)
 
 (define no-docs
   (make-parameter #f))
@@ -32,10 +32,18 @@
     (pkg-install-command #:skip-installed #t 
                          #:update-deps #t #:deps 'search-auto
                          (~a "./" s))
-    (pkg-install-command #:no-setup 
+    (if (and (member s (installed-pkg-names #:scope 'user))
+             (not (eq? 'link (first (pkg-info-orig-pkg (hash-ref (installed-pkg-table #:scope 'user) s))))))
+        (pkg-update-command #:no-setup 
+                             (no-docs)
+                             #:link #t 
+                             #:update-deps #t #:deps 'search-auto s)
+        (pkg-install-command #:no-setup 
                          (no-docs)
                          #:link #t 
-                         #:update-deps #t #:deps 'search-auto #:skip-installed #t s))
+                         #:update-deps #t #:deps 'search-auto #:skip-installed #t s)
+        )
+    )
 
   s)
 
