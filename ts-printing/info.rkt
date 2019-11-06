@@ -9,6 +9,7 @@
                "https://github.com/thoughtstem/TS-GE-Katas.git?path=ts-adventure-asp-2019"
                "https://github.com/thoughtstem/TS-GE-Katas.git?path=ts-k2-asp-fall-2019"
                "https://github.com/thoughtstem/TS-VR-Katas.git?path=ts-3d-exploration-asp-2020"
+               "https://github.com/thoughtstem/TS-K2-Katas.git?path=ts-k2-clicker-asp-2020"
                ))
 
 (define build-deps '("scribble-lib" "racket-doc" "rackunit-lib"))

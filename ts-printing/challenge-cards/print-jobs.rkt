@@ -211,7 +211,7 @@
 (define (ts-adventure-asp-2019->Desktop)
   (local-require ts-adventure-asp-2019/katas)
 
-  (set-fg-texture "bg008.jpg"
+  (set-fg-texture "adventure-bg.jpg"
     (begin-job "ts-adventure-asp-2019-cards"     
                ((collection-apply (curryr try-take 4) avatar-katas)
                 [FRONT-BG-COLOR googly-red]
@@ -238,7 +238,7 @@
 (define (ts-adventure-mario-summer-camp-2019->Desktop)
   (local-require ts-adventure-mario-summer-camp-2019/katas)
 
-  (set-fg-texture "bg009.jpg"
+  (set-fg-texture "adventure-mario-bg.jpg"
     (begin-job "adventure-mario"
                ((collection-apply (curryr try-take 4) character-katas)
                 [FRONT-BG-COLOR googly-red]
@@ -264,7 +264,7 @@
 (define (ts-adventure-harrypotter-summer-camp-2019->Desktop)
   (local-require ts-adventure-harrypotter-summer-camp-2019/katas)
 
-  (set-fg-texture "bg010.jpg"
+  (set-fg-texture "adventure-harrypotter-bg.jpg"
     (begin-job "adventure-harrypotter"
                ((collection-apply (curryr try-take 4) wizard-katas)
                 [FRONT-BG-COLOR googly-red]
@@ -291,7 +291,7 @@
 (define (ts-k2-farm-summer-camp-2019->Desktop)
   (local-require ts-k2-farm-summer-camp-2019/katas)
 
-  (set-fg-texture "bg011.jpg"
+  (set-fg-texture "k2-farm-bg.jpg"
                   (begin-job "ts-k2-farm-summer-camp-2019"
                              ((collection-apply (curryr try-take 4) day-one) 
                               [FRONT-BG-COLOR    bright-red]
@@ -317,7 +317,7 @@
 (define (ts-k2-sea-summer-camp-2019->Desktop)
   (local-require ts-k2-sea-summer-camp-2019/katas)
 
-  (set-fg-texture "bg012.jpg" 
+  (set-fg-texture "k2-sea-bg.jpg" 
                    (begin-job "ts-k2-sea-summer-camp-2019"
                               ((collection-apply (curryr try-take 4) food-katas) 
                                [FRONT-BG-COLOR    bright-red]
@@ -343,7 +343,7 @@
 (define (ts-k2-hero-summer-camp-2019->Desktop)
   (local-require ts-k2-hero-summer-camp-2019/katas)
 
-  (set-fg-texture "bg013.jpg"
+  (set-fg-texture "k2-hero-bg.jpg"
                   (begin-job "ts-k2-hero-summer-camp-2019"
                              ((collection-apply (curryr try-take 4) day-one) 
                               [FRONT-BG-COLOR    bright-red]
@@ -369,7 +369,7 @@
 (define (ts-k2-zoo-summer-camp-2019->Desktop)
   (local-require ts-k2-zoo-summer-camp-2019/katas)
 
-  (set-fg-texture "bg014.jpg"
+  (set-fg-texture "k2-zoo-bg.jpg"
                   (begin-job "ts-k2-zoo-summer-camp-2019"
                              ((collection-apply (curryr try-take 4) day-one) 
                               [FRONT-BG-COLOR    bright-red]
@@ -395,7 +395,7 @@
 (define (ts-k2-asp-fall-2019->Desktop)
   (local-require ts-k2-asp-fall-2019/katas)
 
-  (set-fg-texture "bg015.jpg"
+  (set-fg-texture "k2-animal-bg.jpg"
                   (begin-job "ts-k2-asp-fall-2019"
                              ((collection-apply (curryr try-take 4) day-one) 
                               [FRONT-BG-COLOR    bright-red]
@@ -421,7 +421,7 @@
 (define (ts-3d-exploration-asp-2020->Desktop)
   (local-require ts-3d-exploration-asp-2020/katas)
 
-  (set-fg-texture "bg016.jpg"
+  (set-fg-texture "3d-exploration-bg.jpg"
     (begin-job "3d-exploration"     
                ((collection-apply (curryr try-take 4) environment-katas)
                 [FRONT-BG-COLOR googly-red]
