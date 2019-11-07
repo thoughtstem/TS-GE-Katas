@@ -36,10 +36,11 @@ This is for students and coaches participating in their local scholastic game ja
 
 @(render powerup-katas)
 
-@section{Extra Katas}
+@section{Level Design Katas}
 
-@(render background-katas)
-@(render level-design-katas)
+@(render bg-and-level-design-katas)
+
+@section{Extra Katas}
 @(render repeater-armor-katas)
 @(render sword-armor-katas)
 

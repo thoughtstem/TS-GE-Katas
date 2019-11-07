@@ -28,24 +28,13 @@ This is for students and coaches participating in their local scholastic game ja
                enemy-katas
                crafter-katas)
 
+@section{Level Design}
+@(render bg-and-level-design-katas)
+
 @section{Extra Katas}
-
-@subsection{BG Katas}
-@(render bg-katas)
-
-@subsection{Level Design Katas}
-@(render level-design-katas)
-
-@subsection{Coin Katas}
 @(render coin-katas)
-
-@subsection{Weapon Crafter Katas}
 @(render weapon-crafter-katas)
-
-@subsection{Sky Katas}
 @(render sky-katas)
-
-@subsection{NPC Katas}
 @(render npc-katas)
 
 @include-section["practice-game-jam.scrbl"]
