@@ -30,7 +30,7 @@
      ("enemy-(\\d*)" "mob-\\1")
      ("coin-(\\d*)" "ore-\\1")
      ("npc-(\\d*)" "entity-\\1")
-     ("bg-(\\d*)" "biome-\\1")
+     ("background-(\\d*)" "biome-\\1")
      )
    survival-minecraft-proto-katas))
 

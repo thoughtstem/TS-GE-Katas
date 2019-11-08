@@ -19,7 +19,7 @@
    'spear-2
    (read-prefix "a strong spear. Customize the name.")
    'spear-3
-   (read-prefix "that has an 'epic rarity spear with 50 damage.")
+   (read-prefix "an epic rarity spear that does 50 damage.")
    'spear-4
    (read-prefix "that has a 'blue 'legendary spear with 100 damage, 20 speed, and 10 range.")
 
@@ -27,7 +27,7 @@
    'sword-1
    (read-prefix "that has a sword.")
    'sword-2
-   (read-prefix "that has a sword that does 50 damage.")
+   (read-prefix "a sword that does 50 damage.")
    'sword-3
    (read-prefix "that has an 'epic sword that does 50 damage.")
    'sword-4
@@ -57,11 +57,11 @@
    'fire-magic-1
    (read-prefix "that has fire magic in it.")
    'fire-magic-2
-   (read-prefix "that has fire magic with 20 damage.")
+   (read-prefix "fire magic that does 20 damage.")
    'fire-magic-3
    (read-prefix "a powerful, fast fire magic that has a high rarity.")
    'fire-magic-4
-   (read-prefix "that has a 'legendary fire magic with a customized sprite, damage, speed, and range.")
+   (read-prefix "a legendary fire magic with a customized sprite, damage, speed, and range.")
 
 
    'ice-magic-1
@@ -77,22 +77,22 @@
    'avatar-1
    (read-prefix "an avatar.")
    'avatar-2
-   (read-prefix "a constructor as the avatar.")
+   (read-prefix "an avatar that has a custom sprite.")
    'avatar-3
-   (read-prefix "a fast-moving ninja with a large backpack whom you control with the arrow keys.")
+   (read-prefix "a fast-moving sprite.")
    'avatar-4
-   (read-prefix "a fast-moving pirate, a large backpack, and double the health and shield values.")
+   (read-prefix "a fast-moving sprite, a large backpack, and double the health and shield values.")
 
    'enemy-1
    (read-prefix "an enemy.")
    'enemy-2
    (read-prefix "10 random enemies")
    'enemy-3
-   (read-prefix "several dark knight enemies with moderate intelligence.")
+   (read-prefix "several enemies that have moderate intelligence.")
    'enemy-4
    (read-prefix "8 enemies: 5 weak with low intelligence, and 3 strong with moderate intelligence. Choose your own sprites.")
    'enemy-5
-   (read-prefix "that has 5 'hard pirate girl enemies using a custom-weapon with 50 damage.")
+   (read-prefix "5 high intelligence enemies that have a weapon that does 50 damage.")
    
 
    'magic-balance-1
@@ -192,7 +192,7 @@
 
    
    'single-shot-1
-   (read-prefix "a weapon that fires only once each click.")
+   (read-prefix "a weapon that fires only once per click.")
    'single-shot-2
    (read-prefix "a powerful, fast repeater that shoots a single dart with short range. Customize the icon and the name.")
    'single-shot-3

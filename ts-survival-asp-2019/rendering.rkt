@@ -51,28 +51,6 @@
                   "Kata "
                   "(difficulty = " (kata->difficulty k) ")")))
 
-#;(define (kata->title level k)
-  (level (~a (kata-name k) " Kata")))
-
-#;(define (bronze? k)
-  (string=? "Bronze" (kata->difficulty-name k)))
-
-#;(define (silver? k)
-  (string=? "Silver" (kata->difficulty-name k)))
-
-#;(define (gold? k)
-  (string=? "Gold" (kata->difficulty-name k)))
-
-#;(define (platinum? k)
-  (string=? "Platinum" (kata->difficulty-name k)))
-
-#;(define (kata->difficulty-name k)
-  (cond [(string-suffix? (~a (kata-id k)) "-1")     "Bronze"]
-        [(string-suffix? (~a (kata-id k)) "-2")     "Silver"]
-        [(string-suffix? (~a (kata-id k)) "-3")     "Gold"]
-        [(string-suffix? (~a (kata-id k)) "-4")     "Platinum"]
-        [else            ""]))
-
 (define (kata-section kind collection)
   (list
    (section (kata-id->kata-name kind))

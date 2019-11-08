@@ -29,7 +29,7 @@
   sky-katas
   level-design-katas
   starvation-rate-katas
-  bg-katas
+  background-katas
   npc-katas
   game-jam-katas)
 

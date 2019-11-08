@@ -19,5 +19,5 @@
   (kata-collection-katas weapon-crafter-katas))
 
 (define-kata-collection bg-and-level-design-katas
-  (take (kata-collection-katas bg-katas) 3)
+  (take (kata-collection-katas background-katas) 3)
   (take (drop (kata-collection-katas level-design-katas) 2) 2))
