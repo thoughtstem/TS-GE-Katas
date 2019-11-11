@@ -15,7 +15,7 @@
 
 @section{Intro Katas}
 
-@(render core-values)
+@(render code-value-katas)
 @(render game-jam)
 @(render hello-world-katas)
 
@@ -34,7 +34,7 @@
 @(render sky-katas)
 @(render npc-katas)
 
-@include-section["practice-game-jam.scrbl"]
+@include-section["game-jam.scrbl"]
 
 @(include-section survival/scribblings/assets-library)
  

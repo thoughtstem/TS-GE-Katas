@@ -5,13 +5,13 @@
          stimuli)
 
 (require ts-kata-util/katas/main
+         ts-fundamentals/katas
          "./katas/read-code-stimuli.rkt"
-         "./katas/read-code-tips.rkt"
-         ts-fundamentals/katas)
-
+         "./katas/read-code-tips.rkt")
 
 (define survival-proto-katas
-  (lang->kata-collection 'survival))
+  (merge-collections (lang->kata-collection 'survival)
+                     code-values-all))
 
 (define survival-katas 
   (apply fill-in-tips
@@ -19,6 +19,7 @@
          tips))
 
 (define-sub-collections survival-katas
+  code-value-katas
   hello-world-katas
   avatar-katas
   food-katas
