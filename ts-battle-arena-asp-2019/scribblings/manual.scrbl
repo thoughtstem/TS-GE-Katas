@@ -17,7 +17,7 @@
 
 @section{Intro Katas}
 
-@(render core-values)
+@(render code-value-katas)
 @(render game-jam)
 @(render hello-world-katas)
 
@@ -41,7 +41,7 @@
 @(render repeater-armor-katas)
 @(render sword-armor-katas)
 
-@include-section["practice-game-jam.scrbl"]
+@include-section["game-jam.scrbl"]
 
 @(include-section battlearena/scribblings/assets-library)
 
