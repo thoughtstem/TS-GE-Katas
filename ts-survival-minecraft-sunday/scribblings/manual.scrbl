@@ -9,7 +9,6 @@
           )
 
 @title{Survival Minecraft Game}
-@larger[@larger{Coding for Minecraft Fans}]  
 
 @minecraft-badges
 
