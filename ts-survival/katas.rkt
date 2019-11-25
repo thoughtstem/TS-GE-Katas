@@ -19,7 +19,7 @@
          tips))
 
 (define-sub-collections survival-katas
-  code-value-katas
+  code-of-awesomeness-katas
   hello-world-katas
   avatar-katas
   food-katas

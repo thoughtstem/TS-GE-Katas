@@ -18,7 +18,7 @@
          tips))
 
 (define-sub-collections adventure-katas
-  code-value-katas
+  code-of-awesomeness-katas
   hello-world-katas
   
   avatar-katas

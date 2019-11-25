@@ -26,7 +26,7 @@
 ;Now we just slice up the kata collection in a bunch of ways
 ;  Gives us a variety of ways to present the information later
 (define-sub-collections battle-arena-katas
-  code-value-katas
+  code-of-awesomeness-katas
   hello-world-katas
   background-katas
   level-design-katas
