@@ -88,6 +88,7 @@
 
        (syntax->pict 
          (kata->syntax k))
+
        #;
        (codeblock-pict #:keep-lang-line? #t   
                        (reformat-program content))]

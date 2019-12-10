@@ -87,10 +87,10 @@
         s r t '()))
 
 (define (kata->syntax k)
-  (define id (kata-id k))
-  (define lang (kata-lang k))
-
-  (get-example-syntax lang id))
+  (with-handlers ([exn:fail? (thunk* #f)])
+    (define id (kata-id k))
+    (define lang (kata-lang k))
+    (get-example-syntax lang id)))
 
 (define (kata-lang k)
   (expression-language
