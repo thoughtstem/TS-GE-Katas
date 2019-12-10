@@ -18,7 +18,7 @@
 
 @section{Intro Katas}
 
-@(render code-value-katas)
+@(render code-of-awesomeness-katas)
 @(render game-jam)
 @(render hello-world-katas)
 
