@@ -29,4 +29,9 @@
   (take  (kata-collection-katas boost-katas) 2)
   (first (kata-collection-katas size-katas))
   (drop (kata-collection-katas force-field-katas) 1))
+
+(define-kata-collection bg-and-level-design-katas
+  (take (kata-collection-katas background-katas) 3)
+  (take (drop (kata-collection-katas level-design-katas) 2) 2))
+
   

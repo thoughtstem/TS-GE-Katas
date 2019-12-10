@@ -11,16 +11,13 @@
 
 @title{Battle Arena Games}
 
-Welcome to the kata collection for @bold{Battle Arena Games}.
-This is for students and coaches participating in their local scholastic game jams for Spring 2019.
-
 @battlearena-badges
 
 @table-of-contents[]
 
 @section{Intro Katas}
 
-@(render core-values)
+@(render code-value-katas)
 @(render game-jam)
 @(render hello-world-katas)
 
@@ -36,14 +33,15 @@ This is for students and coaches participating in their local scholastic game ja
 
 @(render powerup-katas)
 
-@section{Extra Katas}
+@section{Level Design Katas}
 
-@(render background-katas)
-@(render level-design-katas)
+@(render bg-and-level-design-katas)
+
+@section{Extra Katas}
 @(render repeater-armor-katas)
 @(render sword-armor-katas)
 
-@include-section["practice-game-jam.scrbl"]
+@include-section["game-jam.scrbl"]
 
 @(include-section battlearena/scribblings/assets-library)
 

@@ -31,7 +31,7 @@
      ("enemy-(\\d*)" "trainer-\\1")
      ("coin-(\\d*)" "stone-\\1")
      ("npc-(\\d*)" "friend-\\1")
-     ("bg-(\\d*)" "town-\\1")
+     ("background-(\\d*)" "town-\\1")
      ("weapon-(\\d*)" "attack-\\1")
      )
    survival-proto-katas

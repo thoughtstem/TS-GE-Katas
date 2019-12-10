@@ -4,13 +4,15 @@
          battle-arena-proto-katas)
 
 (require ts-kata-util/katas/main
+         ts-fundamentals/katas
          "./katas/read-code-stimuli.rkt"
          "./katas/read-code-tips.rkt")
 
 ;Katas start as examples in some langauge.
 ;  "Proto katas" we could call them.
 (define battle-arena-proto-katas
-  (lang->kata-collection 'battlearena))
+  (merge-collections (lang->kata-collection 'battlearena)
+                     code-values-all))
 
 ;The main thing these "proto katas" are missing
 ;  is a clear stimulus.  (The response is simply "write the code")
@@ -24,6 +26,7 @@
 ;Now we just slice up the kata collection in a bunch of ways
 ;  Gives us a variety of ways to present the information later
 (define-sub-collections battle-arena-katas
+  code-value-katas
   hello-world-katas
   background-katas
   level-design-katas

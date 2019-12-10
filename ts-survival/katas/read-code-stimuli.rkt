@@ -16,18 +16,18 @@
    'avatar-1
    (read-template "a basic avatar.")
    'avatar-2
-   (read-template "an avatar with a sprite picked from the assets library.")
+   (read-template "an avatar that has a custom sprite.")
    'avatar-3
-   (read-template "an avatar with a custom sprite and speed of 20.")
+   (read-template "an avatar that has a custom sprite and speed.")
    'avatar-4
-   (read-template "an avatar with a custom sprite, speed and WASD key-mode.")
+   (read-template "an avatar that has a custom sprite, speed and WASD key-mode.")
    'avatar-5
-   (read-template "an avatar with a custom sprite, speed, WASD key-mode, and 200 health and max-health.")
+   (read-template "an avatar that has a custom sprite, speed, WASD key-mode, and 200 health and max-health.")
    
    'food-1
-   (read-template "food.")
+   (read-template "10 food items in the world.")
    'food-2
-   (read-template "exactly two custom foods that heal you by 20.")
+   (read-template "exactly 2 custom foods that heal you by 20.")
    'food-3
    (read-template "a couple of apples with extra healing power.")
    'food-4
@@ -68,7 +68,7 @@
    'crafter-3
    (read-template "fish, and a crafter that makes fish stew with high-healing power.")
    'crafter-4
-   (read-template "carrots, fish, and a crafter on tile 2 (posn 200 200) that makes both carrot-stew and fish-stew.")
+   (read-template "carrots, fish, and a crafter that makes both carrot-stew and fish-stew.")
    
    'sky-1
    (read-template "a very long day/night cycle.")
@@ -94,13 +94,13 @@
    'npc-5
    (read-template "2 NPCs with custom dialog and two additional customizations each.")
 
-   'bg-1
+   'background-1
    (read-template "a custom background.")
-   'bg-2
+   'background-2
    (read-template "a desert background.")
-   'bg-3
+   'background-3
    (read-template "a lava background with a 2 by 2 grid.")
-   'bg-4
+   'background-4
    (read-template "a lava background with a 2 by 2 grid that starts on tile 3.")
 
    'level-design-1

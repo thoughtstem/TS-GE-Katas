@@ -6,3 +6,5 @@
 *.scrbl~
 *.DS_Store
 doc/
+*.bak
+*.html

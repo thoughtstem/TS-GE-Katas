@@ -12,9 +12,6 @@
 
 @title{Adventure Games}
 
-Welcome to the kata collection for @bold{Adventure Games}.
-This is for students and coaches participating in their local scholastic game jams for Fall 2019.
-
 @adventure-badges
 
 @table-of-contents[]
