@@ -1,8 +1,7 @@
 #lang racket
 
-
-(require "../../assets/main.rkt")
+(require define-assets-from)
 
 ;Provides pngs in ./images as identifiers
-(define-icons-from "images")
+(define-assets-from "images")
 
