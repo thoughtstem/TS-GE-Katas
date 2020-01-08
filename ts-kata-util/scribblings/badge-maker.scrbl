@@ -54,9 +54,15 @@ Here are some tools for creating new badges:
 
 
 @(require scribble/extract)
-
-@(include-extracted ts-kata-util/badge-maker/icons/main)
 @(include-extracted ts-kata-util/badge-maker/main)
+
+@(let ()
+  (local-require 
+      define-assets-from
+      (submod ts-kata-util/badge-maker/icons/main asset-docs))
+
+  (doc-all 
+     (submod ts-kata-util/badge-maker/icons/main asset-docs)))
 
 
 @section{Colors}
