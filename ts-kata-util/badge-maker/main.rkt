@@ -4,7 +4,6 @@
 (require (for-doc (only-in pict pict?)
                   (submod "..")))
 
-
 (provide 
   ;Note that all define-badge defs are provided. You just can't see them because of macro magic.
   badge-grid
