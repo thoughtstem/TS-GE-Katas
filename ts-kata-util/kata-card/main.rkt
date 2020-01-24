@@ -293,7 +293,7 @@
   (kata-card #:card-width (* 620 1.25)
              #:card-height (* 430 1.25))
 
-  (scale (kata-card) 1.25)
+  (scale 1.25 (kata-card))
 
   ;(printable-kata-cards #:logo mc-logo
   ;                      #:center? #t
