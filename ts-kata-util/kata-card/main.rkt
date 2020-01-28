@@ -280,7 +280,7 @@
 
 ;======= TESTS =======
 
-(module+ test 
+#;(module+ test 
   ;(displayln "default test")
   ;(kata-card #:icon #f
   ;           #:logo blank
@@ -293,7 +293,7 @@
   (kata-card #:card-width (* 620 1.25)
              #:card-height (* 430 1.25))
 
-  (scale 1.25 (kata-card))
+  (scale 1.25 (p:pict->bitmap (kata-card)))
 
   ;(printable-kata-cards #:logo mc-logo
   ;                      #:center? #t
