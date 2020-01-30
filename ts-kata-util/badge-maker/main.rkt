@@ -107,7 +107,7 @@
                                  googly-blue googly-purple  googly-orange))
                 
                 (define-badges k2-pokemon-badges
-                  (hexagon-triad pokeball-pin-icon electric-icon trainer-icon
+                  (hexagon-triad pokeball-icon electric-icon pokemon-trainer-icon
                                  bright-red        bright-yellow bright-blue ))
                 )
 
