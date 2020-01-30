@@ -98,8 +98,17 @@
                                  googly-green googly-red googly-orange))
                 
                 (define-badges k2-cartoon-badges
-                  (hexagon-triad saturn-icon castle-icon clouds-icon  ;saturn castle clouds
+                  (hexagon-triad saturn-icon castle-icon clouds-icon
                                  bright-yellow bright-green bright-blue))
+
+                ;ASP Spring 20
+                (define-badges 3d-orbit-badges
+                  (hexagon-triad orbit-icon   blackhole-icon spaceship-icon
+                                 googly-blue googly-purple  googly-orange))
+                
+                (define-badges k2-pokemon-badges
+                  (hexagon-triad pokeball-pin-icon electric-icon trainer-icon
+                                 bright-red        bright-yellow bright-blue ))
                 )
 
 
