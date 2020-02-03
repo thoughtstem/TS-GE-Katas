@@ -19,7 +19,12 @@
 (define am-camp (bitmap "img/sun-am.png"))
 (define pm-camp (bitmap "img/sun-pm.png"))
 
+(define blank (bitmap "img/blank.png"))
 (define ts-logo (bitmap "img/thoughtstem logo.png"))
+(define mc-logo (bitmap "img/metacoders-logo.png"))
+(define mc-long-logo (bitmap "img/mc-long-logo.png"))
+
+(define mc-nametag (bitmap "img/mc-nametag.png"))
 
 (define ts-text (bitmap "img/text-TS.png"))
 (define mc-text (bitmap "img/text-MC.png"))
@@ -31,24 +36,35 @@
 
 
 ;creates a bg with border and logo for the card
-(define (make-bg #:height [h 430]
-                 #:width  [w 620]
+(define (make-bg #:height        [h 430]
+                 #:width         [w 620]
                  #:border-color  [border-c (make-object color% 20 170 0)]
                  #:border-width  [bw 7.5]
                  #:bg-color      [bg-c "white"] 
-                 #:logo [logo ts-logo])
+                 #:logo          [logo ts-logo]
+                 #:center?      [center? #f]
+                 #:offset-logo?  [offset-logo? #t])
   (p:cc-superimpose
-   (p:lbl-superimpose 
+   (if center?
+       (p:cc-superimpose
                       (p:filled-rectangle (+ w (- bw 1))
                                           (+ h (- bw 1))
                                           #:color bg-c
                                           #:draw-border? #f)
-                      (edit-logo logo))
+                      
+                          (edit-logo logo offset-logo?))
+       (p:lbl-superimpose
+                      (p:filled-rectangle (+ w (- bw 1))
+                                          (+ h (- bw 1))
+                                          #:color bg-c
+                                          #:draw-border? #f)
+                      
+                          (edit-logo logo offset-logo?)))
    (p:rectangle w h #:border-color border-c
                     #:border-width bw)))
 
 ;edits image to be correct size, crop and fade for use as BG of card
-(define (edit-logo logo) 
+(define (edit-logo logo offset?) 
   (define indent-image-width
     (/ (image-width logo) 5))
   
@@ -60,7 +76,9 @@
           logo))
 
   (define faded-logo
-    (change-alpha -150 cropped-logo))
+    (change-alpha -150 (if offset?
+                           cropped-logo
+                           logo)))
 
   (p:scale-to-fit faded-logo 350 350))
 
@@ -146,7 +164,7 @@
 (define (add-title-text text-type bg x y)
   (-> (or/c 'thoughtstem 'thoughtstem-kata-card
             'metacoders 'metacoders-kata-card
-            'kata-card #f)
+            'kata-card 'mc-long-logo #f)
        p:pict? real? real?
       p:pict?)
   (define text-img
@@ -155,6 +173,7 @@
           [(equal? text-type 'metacoders) mc-text]
           [(equal? text-type 'metacoders-kata-card) mc-kc-text]
           [(equal? text-type 'kata-card) kc-text]
+          [(equal? text-type 'mc-long-logo) mc-long-logo]
           [(equal? text-type #f) (p:ghost (p:rectangle 1 1))]))
 
   (p:pin-over bg x y text-img))
@@ -167,6 +186,8 @@
                             #:pastel? [pastel? #f]
                             #:camera? [camera? #t]
                             #:logo    [logo ts-logo]
+                            #:offset-logo? [offset-logo? #t]
+                            #:center?      [center? #f]
                             #:card-height  [h 430]
                             #:card-width   [w 620]
                             #:border-color [border-color (make-object color% 20 170 0)]
@@ -177,6 +198,8 @@
            #:pastel? boolean?
            #:camera? boolean?
            #:logo (or/c #f image?)
+           #:offset-logo? boolean?
+           #:center? boolean?
            #:card-height positive?
            #:card-width positive?
            #:border-color (or/c #f string? (is-a?/c color%))
@@ -184,7 +207,7 @@
            #:bg-color (or/c #f string? (is-a?/c color%))
            #:text-option (or/c 'thoughtstem 'thoughtstem-kata-card
                                'metacoders 'metacoders-kata-card
-                               'kata-card #f))
+                               'kata-card 'mc-long-logo #f))
        p:pict?)
 
   (define actual-icon
@@ -203,7 +226,9 @@
              #:border-color  border-color
              #:border-width  border-width
              #:bg-color      bg-color 
-             #:logo actual-logo))
+             #:logo actual-logo
+             #:center? center?
+             #:offset-logo? offset-logo?))
   
   (define rainbowed-icons
     (rainbow-set actual-icon #:pastel? pastel?))
@@ -221,6 +246,8 @@
                               #:pastel? [pastel? #f]
                               #:camera? [camera? #t]
                               #:logo    [logo ts-logo]
+                              #:offset-logo? [offset-logo? #t]
+                              #:center?      [center? #f]
                               #:card-height  [h 430]
                               #:card-width   [w 620]
                               #:border-color [border-color (make-object color% 20 170 0)]
@@ -231,6 +258,8 @@
                                          #:pastel? pastel?
                                          #:camera? camera?
                                          #:logo    logo
+                                         #:offset-logo? offset-logo?
+                                         #:center? center?
                                          #:card-height  h
                                          #:card-width   w
                                          #:border-color border-color
@@ -242,13 +271,33 @@
    (beside img img img)
    (beside img img img)))
 
+(define (mc-printable-nametags)
+  (define img (frame mc-nametag))
+  (above
+   (beside img img img)
+   (beside img img img)
+   (beside img img img)))
+
 ;======= TESTS =======
 
-(module+ test 
-  (displayln "default test")
+#;(module+ test 
+  ;(displayln "default test")
+  ;(kata-card #:icon #f
+  ;           #:logo blank
+  ;           #:center? #t
+  ;           #:offset-logo? #f
+  ;           #:text-option 'mc-long-logo)
+
   (kata-card)
 
-  ;(printable-kata-cards am-camp)
+  (kata-card #:card-width (* 620 1.25)
+             #:card-height (* 430 1.25))
+
+  (scale 1.25 (p:pict->bitmap (kata-card)))
+
+  ;(printable-kata-cards #:logo mc-logo
+  ;                      #:center? #t
+  ;                      #:offset-logo? #f)
   ;(printable-kata-cards #:icon pm-camp)
   ;(printable-kata-cards)
   

@@ -36,7 +36,7 @@
 (require scribble/srcdoc)
 
 
-(define-for-syntax (extract-defaults arguments)
+(define-for-syntax (extract-defaults stx arguments)
   (define (keyword? d)
     (string-prefix? (~a d) "#:"))
   
@@ -44,7 +44,7 @@
 
   (define no-keywords (map second (filter-not keyword? args-datums)))
 
-  (datum->syntax #f no-keywords))
+  (datum->syntax #f no-keywords stx))
 
 
 (require (for-syntax syntax/parse))
@@ -53,9 +53,9 @@
 
   (define temp/defaults (syntax-parse stx
                           [(_ (f-name args ...) contract doc body ...)
-                           (extract-defaults #'(args ...))]
+                           (extract-defaults stx #'(args ...))]
                           [(_ (f-name args ... . rest) contract doc body ...)
-                           (extract-defaults #'(args ...))]))
+                           (extract-defaults stx #'(args ...))]))
   
   (syntax-case stx ()
     ([_ (f-name args ... . rest) contract doc body ...]
