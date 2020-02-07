@@ -1,8 +1,6 @@
 #lang racket
 
-(provide survival-minecraft-katas
-         ;survival-minecraft-proto-katas
-         )
+(provide survival-minecraft-katas)
 
 (require ts-kata-util/katas/main
          ts-fundamentals/katas
@@ -18,7 +16,9 @@
          (apply fill-in-tips
                 (apply fill-in-stimuli
                        (apply fill-in-stimuli (collapse-alts
-                                               (lang->kata-collection 'survival-minecraft))
+                                               (merge-collections
+                                                (lang->kata-collection 'survival-minecraft)
+                                                code-values-all))
                               stimuli)
                        new:stimuli)
                 tips)
@@ -35,6 +35,7 @@
    survival-minecraft-proto-katas))
 
 (define-sub-collections survival-minecraft-katas
+  code-of-awesomeness-katas
   hello-world-katas
   custom-skin-katas
   food-katas
