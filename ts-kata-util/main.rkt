@@ -38,11 +38,13 @@
 
 (define-for-syntax (extract-defaults stx arguments)
   (define (keyword? d)
-    (string-prefix? (~a d) "#:"))
+    (string-prefix? (~a (syntax->datum d)) "#:"))
   
-  (define args-datums (syntax->datum arguments))
+  (define args-datums (syntax-e arguments))
 
-  (define no-keywords (map second (filter-not keyword? args-datums)))
+  (define not-keywords (filter-not keyword? args-datums))
+  
+  (define no-keywords (map (compose second syntax-e) not-keywords))
 
   (datum->syntax #f no-keywords stx))
 
