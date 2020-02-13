@@ -5,6 +5,7 @@
 (require ts-kata-util/katas/main
          ts-battle-arena/katas/read-code-stimuli
          ts-battle-arena/katas/read-code-tips
+         ts-fundamentals/katas
          (prefix-in new: "./katas/read-code-stimuli.rkt")
          (prefix-in new: "./katas/read-code-tips.rkt")
          )
@@ -17,7 +18,9 @@
          (apply fill-in-tips
                 (apply fill-in-stimuli
                        (apply fill-in-stimuli (collapse-alts
-                                               (lang->kata-collection 'battlearena-avengers))
+                                               (merge-collections
+                                                (lang->kata-collection 'battlearena-avengers)
+                                                code-values-all))
                               stimuli)
                        new:stimuli)
                 tips)
@@ -39,6 +42,7 @@
   )
 
 (define-sub-collections battlearena-avengers-katas
+  code-of-awesomeness-katas
   hello-world-katas
   hero-katas
   (villain-katas

@@ -5,6 +5,7 @@
 (require ts-kata-util/katas/main
          ts-survival/katas/read-code-stimuli
          ts-survival/katas/read-code-tips
+         ts-fundamentals/katas
          (prefix-in new: "./katas/read-code-stimuli.rkt")
          (prefix-in new: "./katas/read-code-tips.rkt")
          )
@@ -17,7 +18,9 @@
          (apply fill-in-tips
                 (apply fill-in-stimuli
                        (apply fill-in-stimuli (collapse-alts
-                                               (lang->kata-collection 'survival-pokemon))
+                                               (merge-collections
+                                                (lang->kata-collection 'survival-pokemon)
+                                                code-values-all))
                               stimuli)
                        new:stimuli)
                 tips)
@@ -42,6 +45,7 @@
 
 
 (define-sub-collections survival-pokemon-katas
+  code-of-awesomeness-katas
   hello-world-katas
   pokemon-katas
   food-katas

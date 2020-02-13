@@ -5,6 +5,7 @@
 (require ts-kata-util/katas/main
          ts-adventure/katas/read-code-stimuli
          ts-adventure/katas/read-code-tips
+         ts-fundamentals/katas
          (prefix-in new: "./katas/read-code-stimuli.rkt")
          (prefix-in new: "./katas/read-code-tips.rkt")
          )
@@ -17,7 +18,9 @@
          (apply fill-in-tips
                 (apply fill-in-stimuli
                        (apply fill-in-stimuli (collapse-alts
-                                               (lang->kata-collection 'adventure-harrypotter))
+                                               (merge-collections
+                                                (lang->kata-collection 'adventure-harrypotter)
+                                                code-values-all))
                               stimuli)
                        new:stimuli)
                 tips)
@@ -38,6 +41,7 @@
   )
 
 (define-sub-collections adventure-harrypotter-katas
+  code-of-awesomeness-katas
   hello-world-katas
   wizard-katas
   potion-katas
