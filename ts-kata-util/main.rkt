@@ -44,7 +44,9 @@
 
   (define not-keywords (filter-not keyword? args-datums))
   
-  (define no-keywords (map (compose second syntax-e) not-keywords))
+  (define no-keywords (map (compose second syntax-e)
+                           (filter (λ(arg) (list? (syntax-e arg))) not-keywords)
+                           ))
 
   (datum->syntax #f no-keywords stx))
 
